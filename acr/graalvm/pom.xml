@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>examples.azure.acr</groupId>
+        <artifactId>project</artifactId>
+        <version>1-SNAPSHOT</version>
+    </parent>
+    <artifactId>graalvm</artifactId>
+    <packaging>jar</packaging>
+    <name>Create a GraalVM application using a Docker image and push it to Azure Container Registry</name>
+    <build>
+        <finalName>graalvm</finalName>
+        <plugins>
+            <plugin>
+                <groupId>com.microsoft.azure</groupId>
+                <artifactId>azure-webapp-maven-plugin</artifactId>
+                <configuration>
+                    <schemaVersion>V2</schemaVersion>
+                    <resourceGroup>${resourceGroup}</resourceGroup>
+                    <appName>${appName}</appName>
+                    <appServicePlanName>${appServicePlanName}</appServicePlanName>
+                    <runtime>
+                        <os>docker</os>
+                        <image>${image}</image>
+                        <serverId>${serverId}</serverId>
+                        <registryUrl>${registryUrl}</registryUrl>
+                    </runtime>
+                    <appSettings>
+                        <property>
+                            <name>PORT</name>
+                            <value>8080</value>
+                        </property>
+                    </appSettings>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <profile>
+            <id>graalvm</id>
+            <build>
+                <plugins>            
+                    <plugin>
+                        <groupId>org.graalvm.nativeimage</groupId>
+                        <artifactId>native-image-maven-plugin</artifactId>
+                        <version>20.0.0</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>native-image</goal>
+                                </goals>
+                                <phase>package</phase>
+                                <configuration>
+                                    <buildArgs>--enable-http --no-fallback</buildArgs>
+                                    <mainClass>examples.azure.acr.graalvm.GraalVMApplication</mainClass>
+                                    <imageName>graalvm</imageName>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+</project>

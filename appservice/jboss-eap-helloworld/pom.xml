@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>examples.azure.appservice</groupId>
+        <artifactId>project</artifactId>
+        <version>1-SNAPSHOT</version>
+    </parent>
+    <artifactId>appservice-jboss-eap-helloworld</artifactId>
+    <packaging>war</packaging>
+    <name>Deploy a web application on a managed JBoss EAP</name>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.microsoft.azure</groupId>
+                <artifactId>azure-webapp-maven-plugin</artifactId>
+                <configuration>
+                    <schemaVersion>v2</schemaVersion>
+                    <appName>${appName}</appName>
+                    <appServicePlanName>${appServicePlan}</appServicePlanName>
+                    <region>${region}</region>
+                    <runtime>
+                        <os>linux</os>
+                        <javaVersion>${javaVersion}</javaVersion>
+                        <webContainer>${webContainer}</webContainer>
+                    </runtime>
+                    <deployment>
+                        <resources>
+                            <resource>
+                                <directory>${project.basedir}/target</directory>
+                                <includes>
+                                    <include>*.war</include>
+                                </includes>
+                            </resource>
+                        </resources>
+                    </deployment>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-web-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    <properties>
+        <appName>helloworld-jboss-eap-${postfix}</appName>
+        <appServicePlan>azure-examples-appserviceplan</appServicePlan>
+        <javaVersion>jre8</javaVersion>
+        <region>westus2</region>
+        <webContainer>JbossEAP 7.2</webContainer>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+</project>
+

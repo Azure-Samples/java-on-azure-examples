@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Azure-Samples/java-on-azure-examples.git
+          default-label: spring-cloud-config-server
