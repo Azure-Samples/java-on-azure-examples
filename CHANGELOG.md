@@ -1,13 +1,5 @@
-## [project-title] Changelog
+## Java on Azure Examples Changelog
 
-<a name="x.y.z"></a>
-# x.y.z (yyyy-mm-dd)
-
-*Features*
-* ...
-
-*Bug Fixes*
-* ...
-
-*Breaking Changes*
-* ...
+This GitHub repository is a living repository that does not do releases, but 
+adds new relevant content to running Java on Azure whenever applicable, and it
+removes content that is no longer relevant.

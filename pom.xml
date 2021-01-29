@@ -9,7 +9,7 @@
     <artifactId>project</artifactId>
     <version>1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Azure Examples Project</name>
+    <name>Java on Azure Examples Project</name>
     <build>
         <pluginManagement>
             <plugins>
@@ -75,6 +75,14 @@
         <module>spring-cloud</module>
         <module>storage</module>
     </modules>
+    <profiles>
+        <profile>
+            <id>functions></id>
+            <modules>
+                <module>functions</module>
+            </modules>
+        </profile>
+    </profiles>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

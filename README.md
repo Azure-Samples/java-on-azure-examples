@@ -1,4 +1,4 @@
-# Azure on Java Examples
+# Java on Azure Examples
 
 This GitHub repository contains a set of Azure examples specifically for Java 
 developers to quickly get started with Azure. Please use the issue tracker to
@@ -12,9 +12,6 @@ follow the steps below.
 
 _Note logging in and setting your default subscription needs to be done once per
  terminal session._
-
-_Note if you are a Windows user, please use WSL 2 with Ubuntu or any other 
-flavor of Linux._
 
 ### Install Azure CLI
 
