@@ -29,7 +29,7 @@ Get the ACR password
 
 ```shell
   export ACR_PASSWORD=`az acr credential show --name $ACR \
-    --resource-group $RESOURCE_GROUP --query passwords[0].value --output tsv`
+    --resource-group $RESOURCE_GROUP --query 'passwords[0].value' --output tsv`
 ```
 
 Set the SETTINGS_XML variable
