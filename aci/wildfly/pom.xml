@@ -7,9 +7,9 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>wildfly</artifactId>
+    <artifactId>aci-deploy-wildfly</artifactId>
     <packaging>pom</packaging>
-    <name>Deploy a custom WildFly to Azure Container Instances</name>
+    <name>Deploy WildFly</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

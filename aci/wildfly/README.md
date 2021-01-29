@@ -20,11 +20,11 @@ To deploy WildFly use the following command line:
   az container create \
     --resource-group $RESOURCE_GROUP \
     --name $ACI_WILDFLY \
-    --image $ACR.azurecr.io/acr-wildfly:latest \
+    --image $ACR.azurecr.io/$ACR_WILDFLY_IMAGE \
     --registry-login-server $ACR.azurecr.io \
     --registry-username $ACR_PULL_SERVICE_PRINCIPAL_ID \
     --registry-password $ACR_PULL_SERVICE_PRINCIPAL_PASSWORD \
-    --dns-name-label $ACI_WILDFLY_NAME \
+    --dns-name-label $ACI_WILDFLY \
     --ports 8080
 
   echo `az container show \
