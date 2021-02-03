@@ -19,7 +19,7 @@ spec:
         "beta.kubernetes.io/os": linux
       containers:
       - name: wildfly
-        image: ACR.azurecr.io/acr-wildfly:latest
+        image: ACR.azurecr.io/wildfly:latest
         ports:
         - containerPort: 8080
           name: http
