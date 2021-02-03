@@ -1,5 +1,5 @@
 
-# Create a Spring Boot application and deploy it to an Azure Kubernetes Service cluster
+# Deploy a Spring Boot application
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ To run the example locally use the following Maven command line.
 ## Push the Docker image to your Azure Container Registry
 
 ````shell
- az acr build --registry $ACR --image example-springboot:latest .
+ az acr build --registry $ACR --image springboot:latest .
 ````
 
 ## Deploying to the AKS cluster
