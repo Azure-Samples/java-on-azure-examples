@@ -25,16 +25,20 @@ cd appservice/tomcat-helloworld
 
 ## Deploy the web application on the managed Tomcat
 
+Setup the application name environment variable using the command line below:
+
+```shell
+  export APPSERVICE_TOMCAT_HELLOWORLD=appservice-tomcat-helloworld-$RANDOM
+```
+
 To deploy the example use the following Maven command line.
 
-````shell
-  export APPSERVICE_TOMCAT_HELLOWORLD=appservice-tomcat-helloworld-$RANDOM
-
+```shell
   mvn azure-webapp:deploy \
     -DappName=$APPSERVICE_TOMCAT_HELLOWORLD \
     -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP
-````
+```
 
 <!-- workflow.run()
 
