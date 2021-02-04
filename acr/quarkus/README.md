@@ -66,7 +66,7 @@ fi
 
 ## Cleanup
 
-Do NOT forget to remove the App Service and its associated resources once you are
-done running the example.
+Do NOT forget to remove the resources you created once you are done running the
+example.
 
 4m
