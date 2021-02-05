@@ -44,6 +44,27 @@ Set your default subscription for this session using the subscription id from th
 exit 0
   -->
 
+## Azure App Service examples
+
+1. [Deploy a web application on a managed Tomcat](appservice/tomcat-helloworld/)
+1. [Create an App Service Plan](appservice/create-plan/)
+1. [Delete an App Service Plan](appservice/delete-plan/)
+1. [Scale your App Service Plan manually](appservice/scale-manually/)
+1. [Delete your web application](appservice/delete-webapp/)
+1. [List your web applications](appservice/list-webapp/)
+1. [Create a deployment slot](appservice/create-a-deployment-slot/)
+1. [Deploy to a deployment slot](appservice/deploy-to-deployment-slot/)
+1. [Deploy Tomcat using a Docker image](appservice/docker-tomcat/)
+1. [Deploy Jetty using a Docker image](appservice/docker-jetty/)
+1. [Deploy Payara using a Docker image](appservice/docker-payara/)
+1. [Deploy Glassfish using a Docker image](appservice/docker-glassfish/)
+1. [Deploy a Spring Boot application using managed JavaSE](appservice/javase-springboot/)
+1. [Deploy WildFly using a Docker image](appservice/docker-wildfly/)
+1. [Deploy a Quarkus application using managed JavaSE](appservice/javase-quarkus/)
+1. [Deploy a GraalVM application using a Docker image](appservice/docker-graalvm/)
+1. [Swap a deployment slot](appservice/swap-deployment-slot/)
+1. [Deploy a web application on a managed JBoss EAP](appservice/jboss-eap-helloworld/)
+
 ## Azure Container Instances examples
 
 1. [Deploy a Quarkus application](aci/quarkus/)
@@ -73,27 +94,6 @@ exit 0
 1. [Open MySQL server firewall to your IP address](mysql/open-firewall-to-your-ip/)
 1. [Load your MySQL database with data](mysql/load-your-mysql-database-with-data/)
 
-## Azure App Service examples
-
-1. [Deploy a web application on a managed Tomcat](appservice/tomcat-helloworld/)
-1. [Create an App Service Plan](appservice/create-plan/)
-1. [Delete an App Service Plan](appservice/delete-plan/)
-1. [Scale your App Service Plan manually](appservice/scale-manually/)
-1. [Delete your web application](appservice/delete-webapp/)
-1. [List your web applications](appservice/list-webapp/)
-1. [Create a deployment slot](appservice/create-a-deployment-slot/)
-1. [Deploy to a deployment slot](appservice/deploy-to-deployment-slot/)
-1. [Deploy Tomcat using a Docker image](appservice/docker-tomcat/)
-1. [Deploy Jetty using a Docker image](appservice/docker-jetty/)
-1. [Deploy Payara using a Docker image](appservice/docker-payara/)
-1. [Deploy Glassfish using a Docker image](appservice/docker-glassfish/)
-1. [Deploy a Spring Boot application using managed JavaSE](appservice/javase-springboot/)
-1. [Deploy WildFly using a Docker image](appservice/docker-wildfly/)
-1. [Deploy a Quarkus application using managed JavaSE](appservice/javase-quarkus/)
-1. [Deploy a GraalVM application using a Docker image](appservice/docker-graalvm/)
-1. [Swap a deployment slot](appservice/swap-deployment-slot/)
-1. [Deploy a web application on a managed JBoss EAP](appservice/jboss-eap-helloworld/)
-
 ## Azure Functions examples
 
 1. [Install Azure Functions Core Tools](functions/install-tools/)
@@ -110,7 +110,6 @@ exit 0
 1. [Create an Azure Kubernetes Service cluster](aks/create/)
 1. [Create a Kube config file using admin access](aks/create-kube-config/)
 1. [Deploy Tiller using Helm 2](aks/deploy-tiller/)
-1. [Deploy an NGINX Ingress Controller using Helm 2](aks/deploy-nginx-ingress-controller/)
 1. [Update your cluster to use your Azure Container Registry](aks/use-your-acr/)
 1. [Deploy a Spring Boot application](aks/springboot/)
 1. [Deploy Tomcat](aks/tomcat/)
