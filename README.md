@@ -107,6 +107,7 @@ exit 0
 1. [Create a self-signed certificate](keyvault/create-self-signed-certificate/)
 1. [Create a Spring Boot application with server-side mTLS](keyvault/spring-boot-mtls-server-side/)
 1. [Create a Spring Boot application with client-side mTLS](keyvault/spring-boot-mtls-client-side/)
+1. [Create a sever-side SSL Spring Boot application](keyvault/spring-boot-ssl-server-side/)
 
 ## Azure Kubernetes Service examples
 
