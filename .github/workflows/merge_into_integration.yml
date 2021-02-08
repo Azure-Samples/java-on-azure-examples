@@ -1,0 +1,19 @@
+name: merge_into_integration
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout sources
+      uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.GIT_PASSWORD }}
+    - name: Merge into integration branch
+      run: |
+        git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
+        git checkout integration
+        git merge main
+        git push
