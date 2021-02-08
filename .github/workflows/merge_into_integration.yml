@@ -13,6 +13,7 @@ jobs:
         token: ${{ secrets.GIT_PASSWORD }}
     - name: Merge into integration branch
       run: |
+        git config pull.rebase false
         git pull --all --tags --prune
         git checkout integration
         git merge main
