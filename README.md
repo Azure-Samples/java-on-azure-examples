@@ -104,6 +104,7 @@ exit 0
 
 1. [Create an Azure Key Vault](keyvault/create/)
 1. [Add a Secret to an Azure Key Vault](keyvault/add-secret/)
+1. [Create a self-signed certificate](keyvault/create-self-signed-certificate/)
 1. [Create a Spring Boot application with server-side mTLS](keyvault/spring-boot-mtls-server-side/)
 1. [Create a Spring Boot application with client-side mTLS](keyvault/spring-boot-mtls-client-side/)
 
