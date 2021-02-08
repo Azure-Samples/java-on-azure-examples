@@ -13,7 +13,7 @@ jobs:
         token: ${{ secrets.GIT_PASSWORD }}
     - name: Merge into integration branch
       run: |
-        git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
+        git pull --all --tags --prune
         git checkout integration
         git merge main
         git push
