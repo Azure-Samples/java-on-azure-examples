@@ -17,6 +17,7 @@
     <modules>
         <module>create</module>
         <module>add-secret</module>
+        <module>spring-boot-mtls-server-side</module>
         <module>spring-boot-mtls-client-side</module>
     </modules>
 </project>

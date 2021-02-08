@@ -1,5 +1,5 @@
 
-# Create a Spring Boot mTLS client-side application
+# Create a Spring Boot mTLS server-side application
 
 ## Prerequisites
 
@@ -10,7 +10,6 @@ This example assumes you have previously completed the following examples.
 1. Create a self-signed certificate
 1. Create a 'read-only' Service Principal
 1. Create an access policy
-1. [Create a Spring Boot mTLS server-side application](../spring-boot-mtls-server-side/)
 
 ## Build the example
 
@@ -22,20 +21,11 @@ To build the JAR file use the following Maven command line.
 
 ## Run example
 
-To run the example locally use the following Maven command line.
+To run the example use the following Maven command line.
 
 <!-- workflow.skip() -->
 ```shell
   mvn spring-boot:run
-```
-
-You can verify the application works by using your browser and going
-to http://localhost:8080/hello
-
-It should show you the following:
-
-```text
-Hello mTLS
 ```
 
 ## Cleanup
