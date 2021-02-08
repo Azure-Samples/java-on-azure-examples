@@ -15,5 +15,5 @@ jobs:
     - name: Merge into integration branch
       run: |
         git checkout integration
-        git merge main
+        git merge main || true
         git push
