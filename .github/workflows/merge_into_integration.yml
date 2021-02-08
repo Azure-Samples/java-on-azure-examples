@@ -10,11 +10,10 @@ jobs:
     - name: Checkout sources
       uses: actions/checkout@v2
       with:
+        fetch-depth: 0
         token: ${{ secrets.GIT_PASSWORD }}
     - name: Merge into integration branch
       run: |
-        git config pull.rebase false
-        git pull --all --tags --prune
         git checkout integration
         git merge main
         git push
