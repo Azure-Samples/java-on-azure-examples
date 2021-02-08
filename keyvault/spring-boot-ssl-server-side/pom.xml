@@ -9,8 +9,8 @@
         <version>1-SNAPSHOT</version>
     </parent>
     <groupId>examples.azure.keyvault</groupId>
-    <artifactId>spring-boot-mtls-client-side</artifactId>
-    <name>Spring Boot mTLS client-side application</name>
+    <artifactId>spring-boot-ssl-server-side</artifactId>
+    <name>Spring Boot SSL server-side application</name>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -23,11 +23,6 @@
             <groupId>com.azure.spring</groupId>
             <artifactId>azure-spring-boot-starter-keyvault-certificates</artifactId>
             <version>3.0.0-beta.4</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.13</version>
         </dependency>
     </dependencies>
     <dependencyManagement>

@@ -20,5 +20,6 @@
         <module>create-self-signed-certificate</module>
         <module>spring-boot-mtls-server-side</module>
         <module>spring-boot-mtls-client-side</module>
+        <module>spring-boot-ssl-server-side</module>
     </modules>
 </project>

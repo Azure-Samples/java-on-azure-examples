@@ -9,7 +9,7 @@
         <version>1-SNAPSHOT</version>
     </parent>
     <groupId>examples.azure.keyvault</groupId>
-    <artifactId>spring-boot-server-side</artifactId>
+    <artifactId>spring-boot-mtls-server-side</artifactId>
     <name>Spring Boot mTLS server-side application</name>
     <properties>
         <java.version>1.8</java.version>
