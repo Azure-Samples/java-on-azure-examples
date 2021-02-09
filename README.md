@@ -113,7 +113,6 @@ exit 0
 
 1. [Create an Azure Kubernetes Service cluster](aks/create/)
 1. [Create a Kube config file using admin access](aks/create-kube-config/)
-1. [Deploy Tiller using Helm 2](aks/deploy-tiller/)
 1. [Update your cluster to use your Azure Container Registry](aks/use-your-acr/)
 1. [Deploy a Spring Boot application](aks/springboot/)
 1. [Deploy Tomcat](aks/tomcat/)
