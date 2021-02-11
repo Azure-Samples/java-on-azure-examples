@@ -1,0 +1,37 @@
+on: 
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+name: generate_workflows
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout sources
+      uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.GIT_PASSWORD }}
+    - uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Install Azure Functions Core Tools
+      run: |
+        curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+        sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+        sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-$(lsb_release -cs)-prod $(lsb_release -cs) main" > /etc/apt/sources.list.d/dotnetdev.list'
+        sudo apt-get update
+        sudo apt-get install azure-functions-core-tools-3
+        func
+    - name: Build with Maven
+      run: mvn -B clean install
+    - name: Run GitHub Workflow Generator
+      run: |
+        rm -rf .github/workflows/*_md.yml
+        curl -L https://repo1.maven.org/maven2/com/manorrock/parrot/parrot/21.2.11/parrot-21.2.11.jar -o parrot.jar
+        java -jar parrot.jar --baseDirectory ../../.. --outputDirectory ../../../.github/workflows
+        cd ../../..
+        git config --global user.email "noreply@microsoft.com"
+        git config --global user.name "Automated workflow"
+        git add .
+        git commit -a -m "Committing workflows" || true
+        git push
