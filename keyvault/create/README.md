@@ -22,3 +22,8 @@ To create the Azure Key Vault use the following command lines:
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+## Reference material
+
+1. [Azure CLI](https://docs.microsoft.com/cli/azure/keyvault)
+1. [Azure Key Vault - documentation](https://docs.microsoft.com/azure/key-vault/)

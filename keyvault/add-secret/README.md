@@ -22,3 +22,8 @@ To add a Secret to the Azure Key Vault use the command line below:
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+## Reference material
+
+1. [Azure CLI](https://docs.microsoft.com/cli/azure/keyvault/secret)
+1. [Azure Key Vault Secrets - documentation](https://docs.microsoft.com/azure/key-vault/secrets)

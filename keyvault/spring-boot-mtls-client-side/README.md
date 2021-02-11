@@ -41,3 +41,10 @@ Hello mTLS
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+## Reference material
+
+1. [Azure Key Vault Certificates Spring Boot starter](https://github.com/Azure/azure-sdk-for-java/tree/master/sdk/spring/azure-spring-boot-starter-keyvault-certificates)
+1. [Maven](https://maven.apache.org/)
+1. [Spring Boot Maven Plugin](https://docs.spring.io/spring-boot/docs/current/maven-plugin/reference/htmlsingle/)
+1. [Spring Boot](https://spring.io/projects/spring-boot)
