@@ -15,5 +15,7 @@ jobs:
     - name: Merge into integration branch
       run: |
         git checkout integration
+        git config --global user.email "noreply@microsoft.com"
+        git config --global user.name "Automated workflow"
         git merge main || true
         git push
