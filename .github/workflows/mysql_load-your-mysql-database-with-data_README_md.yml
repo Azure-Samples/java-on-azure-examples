@@ -1,0 +1,25 @@
+on: 
+  workflow_dispatch: 
+
+name: 'mysql/load-your-mysql-database-with-data/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          export MYSQL_DNS_NAME=`az mysql server show \
+          --resource-group $RESOURCE_GROUP \
+          --name $MYSQL_NAME \
+          --query fullyQualifiedDomainName \
+          --output tsv`
+          
+          export MYSQL_CLIENT_USERNAME="$MYSQL_USERNAME@$MYSQL_NAME"
+          
+          mysql -h $MYSQL_DNS_NAME -u $MYSQL_CLIENT_USERNAME --password $MYSQL_PASSWORD
+          source load.sql;
+          \q

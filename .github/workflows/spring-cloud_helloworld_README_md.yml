@@ -1,0 +1,33 @@
+on: 
+  workflow_dispatch: 
+
+name: 'spring-cloud/helloworld/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          mvn package
+          az spring-cloud app create \
+          --name helloworld \
+          --service ${SPRING_CLOUD_NAME} \
+          --resource-group ${RESOURCE_GROUP} \
+          --is-public true
+          
+          az spring-cloud app deploy \
+          --name helloworld \
+          --service ${SPRING_CLOUD_NAME} \
+          --resource-group ${RESOURCE_GROUP} \
+          --jar-path ./target/springcloud-helloworld.jar
+          
+          az spring-cloud app show \
+          --name helloworld \
+          --service ${SPRING_CLOUD_NAME} \
+          --resource-group ${RESOURCE_GROUP} \
+          --query properties.url \
+          --output tsv

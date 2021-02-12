@@ -1,0 +1,64 @@
+on: 
+  schedule: 
+    - cron: '0 3 * * 1'
+  workflow_dispatch: 
+
+name: 'servicebus/receive-jms-message/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          fi
+          export REGION=westus2
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export DELETE_AFTER=$(( `date +%s` + 7200))
+          az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
+          export SERVICE_BUS=service-bus-$RANDOM
+          az servicebus namespace create \
+          --resource-group $RESOURCE_GROUP \
+          --name $SERVICE_BUS \
+          --sku Premium \
+          --location $REGION
+          if [[ -z $SERVICE_BUS_QUEUE ]]; then
+          export SERVICE_BUS_QUEUE=service-bus-queue-$RANDOM
+          fi
+          az servicebus queue create \
+          --resource-group $RESOURCE_GROUP \
+          --namespace-name $SERVICE_BUS \
+          --name $SERVICE_BUS_QUEUE
+          export SERVICE_BUS_QUEUE_CONNECTION_STRING=$(az servicebus namespace authorization-rule keys list \
+          --resource-group $RESOURCE_GROUP --namespace-name $SERVICE_BUS --name RootManageSharedAccessKey \
+          --query primaryConnectionString --output tsv)
+          
+          cd servicebus/send-jms-message
+          
+          mvn clean package
+          java -jar target/send-jms-message.jar
+          
+          cd ../..
+          
+          export SERVICE_BUS_QUEUE_CONNECTION_STRING=$(az servicebus namespace authorization-rule keys list \
+          --resource-group $RESOURCE_GROUP --namespace-name $SERVICE_BUS --name RootManageSharedAccessKey \
+          --query primaryConnectionString --output tsv)
+          
+          cd servicebus/receive-jms-message
+          
+          mvn clean package
+          java -jar target/receive-jms-message.jar
+          
+          cd ../..
+          
+          
+          export RESULT=$(az servicebus queue show --resource-group $RESOURCE_GROUP --namespace $SERVICE_BUS --name $SERVICE_BUS_QUEUE --query countDetails.activeMessageCount --output tsv)
+          az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ "$RESULT" != "0" ]]; then
+          exit 1
+          fi

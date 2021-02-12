@@ -1,0 +1,19 @@
+on: 
+  workflow_dispatch: 
+
+name: 'keyvault/create/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          KEYVAULT_NAME="keyvault-$RANDOM"
+          
+          az keyvault create \
+          --resource-group $RESOURCE_GROUP \
+          --name $KEYVAULT_NAME

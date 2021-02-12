@@ -1,0 +1,56 @@
+on: 
+  workflow_dispatch: 
+
+name: 'aci/quarkus/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          fi
+          export REGION=westus2
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export DELETE_AFTER=$(( `date +%s` + 7200))
+          az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
+          if [[ -z $ACR ]]; then
+          export ACR=acr$RANDOM
+          fi
+          az acr create \
+          --name $ACR \
+          --resource-group $RESOURCE_GROUP \
+          --sku Basic \
+          --admin-enabled true
+          
+          cd acr/quarkus
+          
+          mvn package
+          export ACR_QUARKUS_IMAGE=quarkus:latest
+          
+          az acr build --registry $ACR --image $ACR_QUARKUS_IMAGE .
+          
+          cd ../..
+          
+          export ACI_QUARKUS=aci-quarkus-$RANDOM
+          
+          az container create \
+          --resource-group $RESOURCE_GROUP \
+          --name $ACI_QUARKUS \
+          --image $ACR.azurecr.io/$ACR_QUARKUS_IMAGE \
+          --registry-login-server $ACR.azurecr.io \
+          --registry-username $ACR_PULL_SERVICE_PRINCIPAL_ID \
+          --registry-password $ACR_PULL_SERVICE_PRINCIPAL_PASSWORD \
+          --dns-name-label $ACI_QUARKUS \
+          --ports 8080
+          
+          echo `az container show \
+          --resource-group $RESOURCE_GROUP \
+          --name $ACI_QUARKUS \
+          --query ipAddress.fqdn \
+          --output tsv`:8080

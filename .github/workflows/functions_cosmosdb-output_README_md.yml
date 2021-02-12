@@ -1,0 +1,51 @@
+on: 
+  schedule: 
+    - cron: '0 1 * * 2'
+  workflow_dispatch: 
+
+name: 'functions/cosmosdb-output/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          
+          curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+          sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+          sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-$(lsb_release -cs)-prod $(lsb_release -cs) main" > /etc/apt/sources.list.d/dotnetdev.list'
+          sudo apt-get update
+          sudo apt-get install azure-functions-core-tools-3
+          func
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          fi
+          export REGION=westus2
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export DELETE_AFTER=$(( `date +%s` + 7200))
+          az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
+          export COSMOSDB_NAME=cosmosdb-$RANDOM
+          
+          az cosmosdb create \
+          --name $COSMOSDB_NAME \
+          --resource-group $RESOURCE_GROUP
+          
+          cd functions/cosmosdb-output
+          
+          export FUNCTIONS_COSMOSDB=functions-cosmosdb-$RANDOM
+          export FUNCTIONS_COSMOSDB_CONNECTION_STRING="$(az cosmosdb keys list --resource-group $RESOURCE_GROUP --name $COSMOSDB_NAME --type connection-strings --query connectionStrings[0].connectionString --output tsv)"
+          mvn -P local validate
+          mvn -DresourceGroup=$RESOURCE_GROUP -DappName=$FUNCTIONS_COSMOSDB  package
+          mvn -DappName=$FUNCTIONS_COSMOSDB  -DresourceGroup=$RESOURCE_GROUP \
+          -DcosmosDBConnectionString="$FUNCTIONS_COSMOSDB_CONNECTION_STRING" \
+          clean package azure-functions:deploy
+          
+          cd ../..
+          
+          
+          az group delete --name $RESOURCE_GROUP --yes || true

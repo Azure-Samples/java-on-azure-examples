@@ -1,0 +1,31 @@
+on: 
+  workflow_dispatch: 
+
+name: 'aci/wildfly/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          export ACI_WILDFLY=aci-wildfly-$RANDOM
+          
+          az container create \
+          --resource-group $RESOURCE_GROUP \
+          --name $ACI_WILDFLY \
+          --image $ACR.azurecr.io/$ACR_WILDFLY_IMAGE \
+          --registry-login-server $ACR.azurecr.io \
+          --registry-username $ACR_PULL_SERVICE_PRINCIPAL_ID \
+          --registry-password $ACR_PULL_SERVICE_PRINCIPAL_PASSWORD \
+          --dns-name-label $ACI_WILDFLY \
+          --ports 8080
+          
+          echo `az container show \
+          --resource-group $RESOURCE_GROUP \
+          --name $ACI_WILDFLY \
+          --query ipAddress.fqdn \
+          --output tsv`:8080

@@ -1,0 +1,18 @@
+on: 
+  workflow_dispatch: 
+
+name: 'spring-cloud/config-server/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          az spring-cloud config-server set \
+          --config-file application.yml \
+          --name ${SPRING_CLOUD_NAME} \
+          --resource-group ${RESOURCE_GROUP}

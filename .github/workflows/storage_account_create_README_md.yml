@@ -1,0 +1,21 @@
+on: 
+  workflow_dispatch: 
+
+name: 'storage/account/create/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          export STORAGE_ACCOUNT_NAME=storage$RANDOM
+          
+          az storage account create \
+          --name $STORAGE_ACCOUNT_NAME \
+          --resource-group $RESOURCE_GROUP \
+          --sku Standard_LRS \
+          --kind StorageV2
