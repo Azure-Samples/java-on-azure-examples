@@ -124,8 +124,9 @@ exit 0
 
 ## Azure Resource Group examples
 
-1. [Create an Azure Resource Group](group/create/)
-1. [Delete an Azure Resource Group](group/delete/)
+----- | ----- | ----- | -----
+1. | [Create an Azure Resource Group](group/create/) | [Workflow file](.github/workflows/group_create_README_md.yml) | ![group/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/group/create/README.md/badge.svg)
+2. | [Delete an Azure Resource Group](group/delete/) | [Workflow file](.github/workflows/group_delete_README_md.yml) | ![group/delete/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/group/delete/README.md/badge.svg)
 
 ## Azure Service Bus examples
 
