@@ -1,5 +1,7 @@
 
-# Push a Glassfish Docker image to Azure Container Registry
+# Push a Glassfish Docker image
+
+![acr/glassfish/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/glassfish/README.md/badge.svg)
 
 ## Prerequisites
 
