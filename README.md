@@ -77,8 +77,8 @@ exit 0
 | -- | ---- | ---- | ------ 
 | 1. | [ Create an Azure Container registry](acr/create/) | [Workflow](.github/workflows/acr_create_README_md.yml) | ![acr/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/create/README.md/badge.svg)
 | 2. | [Create Maven settings.xml using admin access keys](acr/create-settings-xml/) | [Workflow](.github/workflows/acr_create-settings-xml_README_md.yml) | ![acr/create-settings-xml/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/create-settings-xml/README.md/badge.svg)
-| 3. | [Create an 'acrpull' Service Principal](acr/create-acrpull-service-principal/) | [Workflow](.github/acr_create-acrpull-service-principal_README_md.yml) | ![acr/create-acrpull-service-principal/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/create-acrpull-service-principal/README.md/badge.svg)
-| 4. | [Push a Glassfish Docker image](acr/glassfish/) | [Workflow](.github/acr_glassfish_README_md.yml) | ![acr/glassfish/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/glassfish/README.md/badge.svg)
+| 3. | [Create an 'acrpull' Service Principal](acr/create-acrpull-service-principal/) | [Workflow](.github/workflows/acr_create-acrpull-service-principal_README_md.yml) | ![acr/create-acrpull-service-principal/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/create-acrpull-service-principal/README.md/badge.svg)
+| 4. | [Push a Glassfish Docker image](acr/glassfish/) | [Workflow](.github/workflows/acr_glassfish_README_md.yml) | ![acr/glassfish/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/glassfish/README.md/badge.svg)
 
 1. [Push a GraalVM Docker application to Azure Container Registry](acr/graalvm/)
 1. [Push a Jetty Docker image to Azure Container Registry](acr/jetty/)
