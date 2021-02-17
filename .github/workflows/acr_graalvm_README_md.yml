@@ -34,7 +34,7 @@ jobs:
           
           mvn package
           docker build -t builder -f Dockerfile.builder .
-          docker run --rm -it -v $PWD/../..:/mnt builder mvn -P graalvm -pl acr/graalvm clean install
+          docker run --rm --tty -v $PWD/../..:/mnt builder mvn -P graalvm -pl acr/graalvm clean install
           export ACR_GRAALVM_IMAGE=graalvm:latest
           
           az acr build --registry $ACR --image $ACR_GRAALVM_IMAGE .
