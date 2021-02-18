@@ -1,6 +1,8 @@
 
 # Scale your App Service Plan manually
 
+[![appservice/scale-manually/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_scale-manually_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_scale-manually_README_md.yml)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following examples.
@@ -29,7 +31,7 @@ You can adjust the number to your desired number of workers.
 
 export RESULT=$(az appservice plan show --name $APPSERVICE_PLAN --resource-group $RESOURCE_GROUP --output tsv --query sku.capacity)
 az group delete --name $RESOURCE_GROUP --yes || true
-if [[ "$RESULT" == "2" ]]; then
+if [[ "$RESULT" != "2" ]]; then
   exit 1
 fi
 
