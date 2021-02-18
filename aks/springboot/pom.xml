@@ -50,11 +50,6 @@
             <version>9.0.27</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>com.azure.spring</groupId>
-            <artifactId>azure-spring-boot-starter-keyvault-certificates</artifactId>
-            <version>3.0.0-beta.2</version>
-        </dependency>
     </dependencies>
     <properties>
         <java.version>11</java.version>
