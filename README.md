@@ -81,7 +81,7 @@ exit 0
 | 4. [Push a Glassfish Docker image](acr/glassfish/) | [Workflow](.github/workflows/acr_glassfish_README_md.yml) | ![acr/glassfish/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/glassfish/README.md/badge.svg)
 | 5. [Push a GraalVM Docker image](acr/graalvm/) | [Workflow](.github/workflows/acr_graalvm_README_md.yml) | ![acr/graalvm/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/graalvm/README.md/badge.svg) 
 | 6. [Push a Jetty Docker image](acr/jetty/) | [Workflow](.github/workflows/acr_jetty_README_md.yml) | ![acr/jetty/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/jetty/README.md/badge.svg)
-1. [Push a Payara Docker image to Azure Container Registry](acr/payara/)
+| 7. [Push a Payara Docker image](acr/payara/) | [Workflow](.github/workflows/acr_payara_README_md.yml) | ![acr/payara/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/payara/README.md/badge.svg)
 1. [Push a Quarkus Docker application to Azure Container Registry](acr/quarkus/)
 1. [Push a Tomcat Docker image to Azure Container Registry](acr/tomcat/)
 1. [Push a WildFly Docker image to Azure Container Registry](acr/wildfly/)
