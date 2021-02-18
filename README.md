@@ -50,7 +50,7 @@ exit 0
 | ---- | ---- | ------ 
 | 1. [Deploy a web application on a managed Tomcat](appservice/tomcat-helloworld/) | [Workflow](.github/workflows/appservice_tomcat-helloworld_README_md.yml) | ![appservice/tomcat-helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/appservice/tomcat-helloworld/README.md/badge.svg)
 | 2. [Create an App Service Plan](appservice/create-plan/) | [Workflow](.github/workflows/appservice_create-plan_README_md.yml) | ![appservice/create-plan/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/appservice/create-plan/README.md/badge.svg)
-1. [Delete an App Service Plan](appservice/delete-plan/)
+| 3. [Delete an App Service Plan](appservice/delete-plan/) | [Workflow](.github/workflows/appservice_delete-plan_README_md.yml) | ![appservice/delete-plan/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/appservice/delete-plan/README.md/badge.svg)
 1. [Scale your App Service Plan manually](appservice/scale-manually/)
 1. [Delete your web application](appservice/delete-webapp/)
 1. [List your web applications](appservice/list-webapp/)
