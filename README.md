@@ -46,7 +46,9 @@ exit 0
 
 ## Azure App Service examples
 
-1. [Deploy a web application on a managed Tomcat](appservice/tomcat-helloworld/)
+| Name | Link | Status
+| ---- | ---- | ------ 
+| 1. [Deploy a web application on a managed Tomcat](appservice/tomcat-helloworld/) | [Workflow](.github/workflows/appservice_tomcat-helloworld_README_md.yml) | ![appservice/tomcat-helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/appservice/tomcat-helloworld/README.md/badge.svg)
 1. [Create an App Service Plan](appservice/create-plan/)
 1. [Delete an App Service Plan](appservice/delete-plan/)
 1. [Scale your App Service Plan manually](appservice/scale-manually/)
