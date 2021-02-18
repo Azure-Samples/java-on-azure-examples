@@ -83,7 +83,7 @@ exit 0
 | 6. [Push a Jetty Docker image](acr/jetty/) | [Workflow](.github/workflows/acr_jetty_README_md.yml) | ![acr/jetty/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/jetty/README.md/badge.svg)
 | 7. [Push a Payara Docker image](acr/payara/) | [Workflow](.github/workflows/acr_payara_README_md.yml) | ![acr/payara/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/payara/README.md/badge.svg)
 | 8. [Push a Quarkus Docker image](acr/quarkus/) | [Workflow](.github/workflows/acr_quarkus_README_md.yml) | ![acr/quarkus/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/quarkus/README.md/badge.svg)
-1. [Push a Tomcat Docker image to Azure Container Registry](acr/tomcat/)
+| 9. [Push a Tomcat Docker image](acr/tomcat/) | [Workflow](.github/workflows/acr_tomcat_README_md.yml) | ![acr/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/tomcat/README.md/badge.svg)
 1. [Push a WildFly Docker image to Azure Container Registry](acr/wildfly/)
 
 ## Azure Cosmos DB examples
