@@ -84,7 +84,7 @@ exit 0
 | 7. [Push a Payara Docker image](acr/payara/) | [Workflow](.github/workflows/acr_payara_README_md.yml) | ![acr/payara/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/payara/README.md/badge.svg)
 | 8. [Push a Quarkus Docker image](acr/quarkus/) | [Workflow](.github/workflows/acr_quarkus_README_md.yml) | ![acr/quarkus/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/quarkus/README.md/badge.svg)
 | 9. [Push a Tomcat Docker image](acr/tomcat/) | [Workflow](.github/workflows/acr_tomcat_README_md.yml) | ![acr/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/tomcat/README.md/badge.svg)
-1. [Push a WildFly Docker image to Azure Container Registry](acr/wildfly/)
+| 10. [Push a WildFly Docker image](acr/wildfly/) | [Workflow](.github/workflows/acr_wildfly_README_md.yml) | ![acr/wildfly/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/wildfly/README.md/badge.svg)
 
 ## Azure Cosmos DB examples
 
