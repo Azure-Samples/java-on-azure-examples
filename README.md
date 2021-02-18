@@ -52,7 +52,7 @@ exit 0
 | 2. [Create an App Service Plan](appservice/create-plan/) | [Workflow](.github/workflows/appservice_create-plan_README_md.yml) | ![appservice/create-plan/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/appservice/create-plan/README.md/badge.svg)
 | 3. [Delete an App Service Plan](appservice/delete-plan/) | [Workflow](.github/workflows/appservice_delete-plan_README_md.yml) | ![appservice/delete-plan/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/appservice/delete-plan/README.md/badge.svg)
 | 4. [Scale your App Service Plan manually](appservice/scale-manually/) | [Workflow](.github/workflows/appservice_scale-manually_README_md.yml) | [![appservice/scale-manually/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_scale-manually_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_scale-manually_README_md.yml)
-1. [Delete your web application](appservice/delete-webapp/)
+| 5. [Delete your web application](appservice/delete-webapp/) | [Workflow](.github/workflows/appservice_delete-webapp_README_md.yml) | [![appservice/delete-webapp/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_delete-webapp_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_delete-webapp_README_md.yml)
 1. [List your web applications](appservice/list-webapp/)
 1. [Create a deployment slot](appservice/create-a-deployment-slot/)
 1. [Deploy to a deployment slot](appservice/deploy-to-deployment-slot/)
