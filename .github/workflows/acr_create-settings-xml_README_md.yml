@@ -29,11 +29,17 @@ jobs:
           --resource-group $RESOURCE_GROUP \
           --sku Basic \
           --admin-enabled true
+          
+          cd acr/create-settings-xml
+          
           export ACR_USERNAME=`az acr credential show --name $ACR \
           --resource-group $RESOURCE_GROUP --query username --output tsv`
           export ACR_PASSWORD=`az acr credential show --name $ACR \
           --resource-group $RESOURCE_GROUP --query 'passwords[0].value' --output tsv`
           export SETTINGS_XML=$PWD/settings.xml
+          
+          cd ../..
+          
           az group delete --name $RESOURCE_GROUP --yes || true
           
           if [[ -z $ACR_USERNAME ]]; then
