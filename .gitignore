@@ -1,2 +1,7 @@
+.classpath
+.factorypath
+.project
+.settings
+.vscode/
 parrot.jar
 target/
