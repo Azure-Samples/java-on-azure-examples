@@ -20,6 +20,12 @@ This example assumes you have previously completed the following examples.
 
 ## Create the settings.xml
 
+<!-- workflow.run() 
+
+cd acr/create-settings-xml
+
+ -->
+
 Get the ACR username
 
 ```shell
@@ -39,6 +45,12 @@ Set the SETTINGS_XML variable
 ```shell
   export SETTINGS_XML=$PWD/settings.xml
 ```
+
+<!-- workflow.run() 
+
+cd ../..
+
+ -->
 
 <!-- workflow.directOnly()
 az group delete --name $RESOURCE_GROUP --yes || true
