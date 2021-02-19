@@ -13,7 +13,7 @@ This example assumes you have previously completed the following examples.
 
 ## Deploy Tomcat using a Docker image
 
-<!-- workflow.include(../acr/creating-settings-xml/README.md) -->
+<!-- workflow.include(../../acr/creating-settings-xml/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->
 
 To deploy Tomcat use the following command lines:
