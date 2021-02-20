@@ -16,6 +16,11 @@ This example assumes you have previously completed the following examples.
 <!-- workflow.include(../../acr/create-settings-xml/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->
 
+<!-- workflow.run() 
+
+cd appservice/docker-tomcat
+
+  -->
 To deploy Tomcat use the following command lines:
 
 ```shell
@@ -43,6 +48,12 @@ Then open your browser to the URL shown as output and you should see:
 And this is served by a custom Tomcat using a Docker image coming from our 
 own Azure Container Registry.
 ```
+
+<!-- workflow.run() 
+
+cd ../..
+
+  -->
 
 <!-- workflow.directOnly()
 
