@@ -51,6 +51,7 @@ own Azure Container Registry.
 
 <!-- workflow.run() 
 
+sleep 60
 cd ../..
 
   -->
