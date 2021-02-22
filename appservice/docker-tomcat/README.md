@@ -21,6 +21,7 @@ This example assumes you have previously completed the following examples.
 cd appservice/docker-tomcat
 
   -->
+  
 To deploy Tomcat use the following command lines:
 
 ```shell
