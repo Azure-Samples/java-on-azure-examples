@@ -5,15 +5,22 @@
 
 This example assumes you have previously completed the following examples.
 
-1. [Create an Azure Resource Group](../../group/create/)
-1. [Create an Azure Container Registry](../../acr/create/)
-1. [Create a GraalVM application packaged as a Docker image and push it to Azure Container Registry](../../acr/graalvm/)
-1. [Create settings.xml using admin access keys](../../acr/create-settings-xml/)
-1. [Create an Azure App Service Plan](../create-plan/)
+1. [Create an Azure Resource Group](../../group/create/README.md)
+1. [Create an Azure Container Registry](../../acr/create/README.md)
+1. [Create a GraalVM application packaged as a Docker image and push it to Azure Container Registry](../../acr/graalvm/README.md)
+1. [Create settings.xml using admin access keys](../../acr/create-settings-xml/README.md)
+1. [Create an Azure App Service Plan](../create-plan/README.md)
 
 ## Deploy the GraalVM application using a Docker image
 
+<!-- workflow.include(../../acr/create-settings-xml/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->
+
+<!-- workflow.run() 
+
+cd appservice/docker-graalvm
+
+  -->
 
 To deploy the example use the following command lines:
 
@@ -23,7 +30,7 @@ To deploy the example use the following command lines:
   mvn azure-webapp:deploy \
     --settings=$SETTINGS_XML \
     -DappName=$APPSERVICE_DOCKER_GRAALVM \
-    -DimageName=acr-graalvm:latest \
+    -DimageName=graalvm:latest \
     -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
     -DserverId=$ACR
@@ -37,9 +44,17 @@ To deploy the example use the following command lines:
 
 Then open your browser to the URL shown as output and you should see:
 
+<!-- workflow.skip() -->
 ```text
 Hello
 ```
+
+<!-- workflow.run() 
+
+sleep 60
+cd ../..
+
+  -->
 
 ## Properties supported by the example
 
