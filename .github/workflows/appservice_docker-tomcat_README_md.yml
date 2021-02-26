@@ -98,19 +98,5 @@ jobs:
           --query 'hostNames[0]' \
           --output tsv
           
-          export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_TOMCAT --output tsv --query state)
-          if [[ "$RESULT" != Running ]]; then
-          echo 'Web application is NOT running'
-          az group delete --name $RESOURCE_GROUP --yes || true
-          exit 1
-          fi
-          
-          export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_TOMCAT --output tsv --query defaultHostName)
-          export RESULT=$(curl $URL)
-          
-          az group delete --name $RESOURCE_GROUP --yes || true
-          
-          if [[ "$RESULT" != *"custom Tomcat"* ]]; then
-          echo "Response did not contain 'custom Tomcat'"
-          exit 1
-          fi
+          sleep 180
+          cd ../..
