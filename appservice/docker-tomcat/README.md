@@ -45,14 +45,14 @@ To deploy Tomcat use the following command lines:
     --output tsv
 ```
 
-Then open your browser to the URL shown as output and you should see:
-
 <!-- workflow.run()
 
 sleep 180
 cd ../..
 
   -->
+
+Then open your browser to the URL shown as output and you should see:
 
 <!-- workflow.skip() -->
 ```text
