@@ -13,6 +13,7 @@ This example assumes you have previously completed the following examples.
 
 ## Deploy Jetty using a Docker image
 
+<!-- workflow.include(../../acr/jetty/README.md) -->
 <!-- workflow.include(../../acr/create-settings-xml/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->
 
@@ -42,20 +43,19 @@ To deploy Jetty use the following command lines:
     --output tsv
 ```
 
+<!-- workflow.run()
+
+sleep 180
+cd ../..
+
+  -->
+
 Then open your browser to the URL shown as output and you should see:
 
-<!-- workflow.skip() -->
 ```text
 And this is served by a custom Jetty using a Docker image coming from our 
 own Azure Container Registry.
 ```
-
-<!-- workflow.run() 
-
-sleep 60
-cd ../..
-
-  -->
 
 <!-- workflow.directOnly()
 
