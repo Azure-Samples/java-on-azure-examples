@@ -1,5 +1,5 @@
 
-# Deploy Tomcat using a Docker image
+# Deploy a Dockerized Tomcat
 
 [![appservice/docker-tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_docker-tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_docker-tomcat_README_md.yml)
 
@@ -7,14 +7,15 @@
 
 This example assumes you have previously completed the following examples.
 
-1. [Create an Azure Resource Group](../../group/create/)
-1. [Create an Azure Container Registry](../../acr/create/)
-1. [Push a Tomcat Docker image to Azure Container Registry](../../acr/tomcat/)
-1. [Create settings.xml using admin access keys](../../acr/create-settings-xml/)
-1. [Create an Azure App Service Plan](../create-plan/)
+1. [Create an Azure Resource Group](../../group/create/README.md)
+1. [Create an Azure Container Registry](../../acr/create/README.md)
+1. [Push a Tomcat Docker image to Azure Container Registry](../../acr/tomcat/README.md)
+1. [Create settings.xml using admin access keys](../../acr/create-settings-xml/README.md)
+1. [Create an Azure App Service Plan](../create-plan/README.md)
 
 ## Deploy Tomcat using a Docker image
 
+<!-- workflow.include(../../acr/tomcat/README.md) -->
 <!-- workflow.include(../../acr/create-settings-xml/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->
 
@@ -40,7 +41,7 @@ To deploy Tomcat use the following command lines:
   az webapp show \
     --resource-group $RESOURCE_GROUP \
     --name $APPSERVICE_DOCKER_TOMCAT \
-    --query hostNames[0] \
+    --query 'hostNames[0]' \
     --output tsv
 ```
 
