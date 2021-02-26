@@ -28,6 +28,31 @@ jobs:
           --sku Basic \
           --admin-enabled true
           
+          cd acr/jetty
+          
+          mvn package
+          export ACR_JETTY_IMAGE=jetty:latest
+          
+          az acr build --registry $ACR --image $ACR_JETTY_IMAGE .
+          
+          cd ../..
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          fi
+          export REGION=westus2
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export DELETE_AFTER=$(( `date +%s` + 7200))
+          az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
+          if [[ -z $ACR ]]; then
+          export ACR=acr$RANDOM
+          fi
+          az acr create \
+          --name $ACR \
+          --resource-group $RESOURCE_GROUP \
+          --sku Basic \
+          --admin-enabled true
+          
           cd acr/create-settings-xml
           
           export ACR_USERNAME=`az acr credential show --name $ACR \
@@ -72,6 +97,10 @@ jobs:
           --name $APPSERVICE_DOCKER_JETTY \
           --query hostNames[0] \
           --output tsv
+          
+          sleep 180
+          cd ../..
+          
           
           export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_JETTY --output tsv --query state)
           if [[ "$RESULT" != Running ]]; then
