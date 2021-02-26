@@ -13,6 +13,7 @@ This example assumes you have previously completed the following examples.
 
 ## Deploy Glassfish using a Docker image
 
+<!-- workflow.include(../../acr/glaasfish/README.md) -->
 <!-- workflow.include(../../acr/create-settings-xml/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->
 
@@ -42,18 +43,38 @@ To deploy Glassfish use the following command lines:
     --output tsv
 ```
 
+<!-- workflow.run()
+
+sleep 180
+cd ../..
+
+  -->
+
 Then open your browser to the URL shown as output and you should see:
 
-<!-- workflow.skip() -->
 ```text
 And this is served by a custom Glassfish using a Docker image coming from our 
 own Azure Container Registry.
 ```
 
-<!-- workflow.run() 
+<!-- workflow.directOnly()
 
-sleep 60
-cd ../..
+export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_GLASSFISH --output tsv --query state)
+if [[ "$RESULT" != Running ]]; then
+  echo 'Web application is NOT running'
+  az group delete --name $RESOURCE_GROUP --yes || true
+  exit 1
+fi
+
+export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_GLASSFISH --output tsv --query defaultHostName)
+export RESULT=$(curl $URL)
+
+az group delete --name $RESOURCE_GROUP --yes || true
+
+if [[ "$RESULT" != *"custom Glassfish"* ]]; then
+  echo "Response did not contain 'custom Glassfish'"
+  exit 1
+fi
 
   -->
 
