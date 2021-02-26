@@ -13,7 +13,7 @@ This example assumes you have previously completed the following examples.
 
 ## Deploy Glassfish using a Docker image
 
-<!-- workflow.include(../../acr/glaasfish/README.md) -->
+<!-- workflow.include(../../acr/glassfish/README.md) -->
 <!-- workflow.include(../../acr/create-settings-xml/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->
 
@@ -39,7 +39,7 @@ To deploy Glassfish use the following command lines:
   az webapp show \
     --resource-group $RESOURCE_GROUP \
     --name $APPSERVICE_DOCKER_GLASSFISH \
-    --query hostNames[0] \
+    --query 'hostNames[0]' \
     --output tsv
 ```
 

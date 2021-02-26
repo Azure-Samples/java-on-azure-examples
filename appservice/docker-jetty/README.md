@@ -41,7 +41,7 @@ To deploy Jetty use the following command lines:
   az webapp show \
     --resource-group $RESOURCE_GROUP \
     --name $APPSERVICE_DOCKER_JETTY \
-    --query hostNames[0] \
+    --query 'hostNames[0]' \
     --output tsv
 ```
 
