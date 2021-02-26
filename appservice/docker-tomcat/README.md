@@ -54,7 +54,6 @@ cd ../..
 
 Then open your browser to the URL shown as output and you should see:
 
-<!-- workflow.skip() -->
 ```text
 And this is served by a custom Tomcat using a Docker image coming from our 
 own Azure Container Registry.
