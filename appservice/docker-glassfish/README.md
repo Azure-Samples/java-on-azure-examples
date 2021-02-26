@@ -71,8 +71,8 @@ export RESULT=$(curl $URL)
 
 az group delete --name $RESOURCE_GROUP --yes || true
 
-if [[ "$RESULT" != *"custom Glassfish"* ]]; then
-  echo "Response did not contain 'custom Glassfish'"
+if [[ "$RESULT" != *"Glassfish"* ]]; then
+  echo "Response did not contain 'Glassfish'"
   exit 1
 fi
 
