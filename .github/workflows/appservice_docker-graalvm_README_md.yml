@@ -28,6 +28,33 @@ jobs:
           --sku Basic \
           --admin-enabled true
           
+          cd acr/graalvm
+          
+          mvn package
+          docker build -t builder -f Dockerfile.builder .
+          docker run --rm --tty -v $PWD/../..:/mnt builder mvn -P graalvm -pl acr/graalvm clean install
+          export ACR_GRAALVM_IMAGE=graalvm:latest
+          
+          az acr build --registry $ACR --image $ACR_GRAALVM_IMAGE .
+          
+          cd ../..
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          fi
+          export REGION=westus2
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export DELETE_AFTER=$(( `date +%s` + 7200))
+          az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
+          if [[ -z $ACR ]]; then
+          export ACR=acr$RANDOM
+          fi
+          az acr create \
+          --name $ACR \
+          --resource-group $RESOURCE_GROUP \
+          --sku Basic \
+          --admin-enabled true
+          
           cd acr/create-settings-xml
           
           export ACR_USERNAME=`az acr credential show --name $ACR \
