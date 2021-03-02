@@ -72,3 +72,24 @@ jobs:
           --name $APPSERVICE_DOCKER_GRAALVM \
           --query hostNames[0] \
           --output tsv`/hello
+          
+          sleep 180
+          cd ../..
+          
+          
+          export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_GRAALVM --output tsv --query state)
+          if [[ "$RESULT" != Running ]]; then
+          echo 'Web application is NOT running'
+          az group delete --name $RESOURCE_GROUP --yes || true
+          exit 1
+          fi
+          
+          export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_GRAALVM --output tsv --query defaultHostName)
+          export RESULT=$(curl $URL)
+          
+          az group delete --name $RESOURCE_GROUP --yes || true
+          
+          if [[ "$RESULT" != *"Hello"* ]]; then
+          echo "Response did not contain 'Hello'"
+          exit 1
+          fi
