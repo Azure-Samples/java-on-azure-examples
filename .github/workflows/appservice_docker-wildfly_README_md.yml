@@ -28,6 +28,31 @@ jobs:
           --sku Basic \
           --admin-enabled true
           
+          cd acr/wildfly
+          
+          mvn package
+          export ACR_WILDFLY_IMAGE=wildfly:latest
+          
+          az acr build --registry $ACR --image $ACR_WILDFLY_IMAGE .
+          
+          cd ../..
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          fi
+          export REGION=westus2
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export DELETE_AFTER=$(( `date +%s` + 7200))
+          az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
+          if [[ -z $ACR ]]; then
+          export ACR=acr$RANDOM
+          fi
+          az acr create \
+          --name $ACR \
+          --resource-group $RESOURCE_GROUP \
+          --sku Basic \
+          --admin-enabled true
+          
           cd acr/create-settings-xml
           
           export ACR_USERNAME=`az acr credential show --name $ACR \
@@ -72,3 +97,24 @@ jobs:
           --name $APPSERVICE_DOCKER_WILDFLY \
           --query hostNames[0] \
           --output tsv
+          
+          sleep 60
+          cd ../..
+          
+          
+          export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_WILDFLY --output tsv --query state)
+          if [[ "$RESULT" != Running ]]; then
+          echo 'Web application is NOT running'
+          az group delete --name $RESOURCE_GROUP --yes || true
+          exit 1
+          fi
+          
+          export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_WILDFLY --output tsv --query defaultHostName)
+          export RESULT=$(curl $URL)
+          
+          az group delete --name $RESOURCE_GROUP --yes || true
+          
+          if [[ "$RESULT" != *"custom WildFly"* ]]; then
+          echo "Response did not contain 'custom WildFly'"
+          exit 1
+          fi
