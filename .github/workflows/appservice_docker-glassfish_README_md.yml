@@ -98,7 +98,7 @@ jobs:
           --query 'hostNames[0]' \
           --output tsv
           
-          sleep 300
+          sleep 600
           cd ../..
           
           
