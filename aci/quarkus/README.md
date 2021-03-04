@@ -52,8 +52,8 @@ export RESULT=$(curl $URL)
 
 az group delete --name $RESOURCE_GROUP --yes || true
 
-if [[ "$RESULT" != *"Hello"* ]]; then
-  echo "Response did not contain 'Hello'"
+if [[ "$RESULT" != *"hello"* ]]; then
+  echo "Response did not contain 'hello'"
   exit 1
 fi
 
