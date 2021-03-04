@@ -48,7 +48,7 @@ own Azure Container Registry.
 
 <!-- workflow.directOnly()
 
-export URL=https://$(az container show --resource-group $RESOURCE_GROUP --name $ACI_QUARKUS --query ipAddress.fqdn --output tsv):8080
+export URL=https://$(az container show --resource-group $RESOURCE_GROUP --name $ACI_TOMCAT --query ipAddress.fqdn --output tsv):8080
 export RESULT=$(curl $URL)
 
 az group delete --name $RESOURCE_GROUP --yes || true
