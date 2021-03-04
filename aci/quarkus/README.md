@@ -47,7 +47,7 @@ hello
 
 <!-- workflow.directOnly()
 
-export URL=https://$(az container show --resource-group $RESOURCE_GROUP --name $ACI_QUARKUS --query ipAddress.fqdn --output tsv):8080
+export URL=http://$(az container show --resource-group $RESOURCE_GROUP --name $ACI_QUARKUS --query ipAddress.fqdn --output tsv):8080
 export RESULT=$(curl $URL)
 
 az group delete --name $RESOURCE_GROUP --yes || true
