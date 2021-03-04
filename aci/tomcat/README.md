@@ -1,6 +1,8 @@
 
 # Deploy Tomcat
 
+[![aci/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aci_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aci_tomcat_README_md.yml)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following examples.
@@ -11,6 +13,9 @@ This example assumes you have previously completed the following examples.
 1. [Push a Tomcat Docker image to Azure Container Registry](../../acr/tomcat/)
 
 ## Deploy Tomcat
+
+<!-- workflow.include(../../acr/create-acrpull-service-principal/README.md) -->
+<!-- workflow.include(../../acr/tomcat/README.md) -->
 
 To deploy Tomcat the following command line:
 
@@ -40,6 +45,20 @@ Then open your browser to the URL echoed above and you should see:
 And this is served by a custom Tomcat using a Docker image coming from our 
 own Azure Container Registry.
 ```
+
+<!-- workflow.directOnly()
+
+export URL=https://$(az container show --resource-group $RESOURCE_GROUP --name $ACI_QUARKUS --query ipAddress.fqdn --output tsv):8080
+export RESULT=$(curl $URL)
+
+az group delete --name $RESOURCE_GROUP --yes || true
+
+if [[ "$RESULT" != *"custom Tomcat"* ]]; then
+  echo "Response did not contain 'custom Tomcat'"
+  exit 1
+fi
+
+  -->
 
 ## Cleanup
 
