@@ -45,7 +45,7 @@ To deploy Glassfish use the following command lines:
 
 <!-- workflow.run()
 
-sleep 180
+sleep 300
 cd ../..
 
   -->
@@ -53,8 +53,7 @@ cd ../..
 Then open your browser to the URL shown as output and you should see:
 
 ```text
-And this is served by a custom Glassfish using a Docker image coming from our 
-own Azure Container Registry.
+And this is served by a custom Glassfish using a Docker image coming from our own Azure Container Registry.
 ```
 
 <!-- workflow.directOnly()
@@ -71,8 +70,8 @@ export RESULT=$(curl $URL)
 
 az group delete --name $RESOURCE_GROUP --yes || true
 
-if [[ "$RESULT" != *"Glassfish"* ]]; then
-  echo "Response did not contain 'Glassfish'"
+if [[ "$RESULT" != *"custom Glassfish"* ]]; then
+  echo "Response did not contain 'custom Glassfish'"
   exit 1
 fi
 
