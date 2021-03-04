@@ -69,7 +69,9 @@ exit 0
 
 ## Azure Container Instances examples
 
-1. [Deploy a Quarkus application](aci/quarkus/)
+| Name | Link | Status
+| ---- | ---- | ------
+| 1. [Deploy a Quarkus application](aci/quarkus/) | [Workflow](.github/workflows/aci_quarkus_README_md.yml) | [![aci/quarkus/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aci_quarkus_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aci_quarkus_README_md.yml)
 1. [Deploy Tomcat](aci/tomcat/)
 1. [Deploy WildFly](aci/wildfly/)
 
