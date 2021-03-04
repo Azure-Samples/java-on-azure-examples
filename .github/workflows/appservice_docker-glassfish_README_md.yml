@@ -98,7 +98,7 @@ jobs:
           --query 'hostNames[0]' \
           --output tsv
           
-          sleep 180
+          sleep 300
           cd ../..
           
           
@@ -114,7 +114,7 @@ jobs:
           
           az group delete --name $RESOURCE_GROUP --yes || true
           
-          if [[ "$RESULT" != *"Glassfish"* ]]; then
-          echo "Response did not contain 'Glassfish'"
+          if [[ "$RESULT" != *"custom Glassfish"* ]]; then
+          echo "Response did not contain 'custom Glassfish'"
           exit 1
           fi
