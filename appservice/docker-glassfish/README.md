@@ -45,7 +45,7 @@ To deploy Glassfish use the following command lines:
 
 <!-- workflow.run()
 
-sleep 300
+sleep 600
 cd ../..
 
   -->
