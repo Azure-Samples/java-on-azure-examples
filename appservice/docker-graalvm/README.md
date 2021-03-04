@@ -41,7 +41,7 @@ To deploy the example use the following command lines:
   echo `az webapp show \
     --resource-group $RESOURCE_GROUP \
     --name $APPSERVICE_DOCKER_GRAALVM \
-    --query hostNames[0] \
+    --query 'hostNames[0]' \
     --output tsv`/hello
 ```
 
@@ -67,7 +67,7 @@ if [[ "$RESULT" != Running ]]; then
   exit 1
 fi
 
-export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_GRAALVM --output tsv --query defaultHostName)
+export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_GRAALVM --output tsv --query defaultHostName)/hello
 export RESULT=$(curl $URL)
 
 az group delete --name $RESOURCE_GROUP --yes || true
