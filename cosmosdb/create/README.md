@@ -1,6 +1,8 @@
 
 # Create an Azure Cosmos DB
 
+[![cosmosdb/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create_README_md.yml)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following example:
@@ -20,6 +22,12 @@ To create the Azure Cosmos DB use the following command line:
     --name $COSMOSDB_NAME \
     --resource-group $RESOURCE_GROUP
 ````
+
+<!-- workflow.directOnly()
+
+  az group delete --name $RESOURCE_GROUP --yes || true
+
+  -->
 
 ## Cleanup
 

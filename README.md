@@ -92,7 +92,9 @@ exit 0
 
 ## Azure Cosmos DB examples
 
-1. [Create an Azure Cosmos DB](cosmosdb/create/)
+| Name | Link | Status
+| ---- | ---- | ------
+| 1. [Create an Azure Cosmos DB](cosmosdb/create/) | [Workflow](.github/workflows/cosmosdb_create_README_md.yml) | [![cosmosdb/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create_README_md.yml)
 
 ## Azure Database for MySQL examples
 
