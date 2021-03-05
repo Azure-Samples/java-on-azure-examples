@@ -12,10 +12,21 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          fi
+          export REGION=westus2
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export DELETE_AFTER=$(( `date +%s` + 7200))
+          az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
           export MYSQL_NAME=mysql-$RANDOM
           export MYSQL_USERNAME=mysql
           export MYSQL_PASSWORD=p#ssw0rd-$RANDOM
-          
+          if [[ -z $MYSQL_NAME ]]; then
+          export MYSQL_NAME=mysql-$RANDOM
+          export MYSQL_USERNAME=mysql
+          export MYSQL_PASSWORD=p#ssw0rd-$RANDOM
+          fi
           az mysql server create \
           --admin-user $MYSQL_USERNAME \
           --admin-password $MYSQL_PASSWORD \
@@ -23,3 +34,5 @@ jobs:
           --resource-group $RESOURCE_GROUP \
           --sku B_Gen5_1 \
           --ssl-enforcement Disabled
+          
+          az group delete --name $RESOURCE_GROUP --yes || true

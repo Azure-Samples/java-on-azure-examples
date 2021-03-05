@@ -24,3 +24,5 @@ jobs:
           az cosmosdb create \
           --name $COSMOSDB_NAME \
           --resource-group $RESOURCE_GROUP
+          
+          az group delete --name $RESOURCE_GROUP --yes || true
