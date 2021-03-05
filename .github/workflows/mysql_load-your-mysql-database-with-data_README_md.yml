@@ -12,6 +12,14 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
+          export LOCAL_IP=`curl -s whatismyip.akamai.com`
+          
+          az mysql server firewall-rule create \
+          --resource-group $RESOURCE_GROUP \
+          --server $MYSQL_NAME \
+          --name AllowMyLocalIP \
+          --start-ip-address $LOCAL_IP \
+          --end-ip-address $LOCAL_IP
           export MYSQL_DNS_NAME=`az mysql server show \
           --resource-group $RESOURCE_GROUP \
           --name $MYSQL_NAME \
@@ -23,3 +31,5 @@ jobs:
           mysql -h $MYSQL_DNS_NAME -u $MYSQL_CLIENT_USERNAME --password $MYSQL_PASSWORD
           source load.sql;
           \q
+          
+          az group delete --name $RESOURCE_GROUP --yes || true
