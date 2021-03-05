@@ -45,7 +45,7 @@ To deploy Glassfish use the following command lines:
 
 <!-- workflow.run()
 
-sleep 600
+sleep 180
 cd ../..
 
   -->
@@ -66,6 +66,10 @@ if [[ "$RESULT" != Running ]]; then
 fi
 
 export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_GLASSFISH --output tsv --query defaultHostName)
+export RESULT=$(curl $URL)
+
+sleep 180
+
 export RESULT=$(curl $URL)
 
 az group delete --name $RESOURCE_GROUP --yes || true
