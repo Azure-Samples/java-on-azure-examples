@@ -9,6 +9,8 @@ This example assumes you have previously completed the following:
 1. [Create an Azure Database for MySQL](../create/)
 1. [Install curl](https://curl.haxx.se/download.html)
 
+<!-- workflow.include(../create/README.md) -->
+
 ## Open MySQL server firewall to your local IP address
 
 To make it possible to communicate with your MySQL server from your local IP
