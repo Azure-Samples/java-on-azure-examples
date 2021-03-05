@@ -86,6 +86,9 @@ jobs:
           --query ipAddress.fqdn \
           --output tsv`:8080
           
+          sleep 60
+          
+          
           export URL=http://$(az container show --resource-group $RESOURCE_GROUP --name $ACI_WILDFLY --query ipAddress.fqdn --output tsv):8080
           export RESULT=$(curl $URL)
           
