@@ -39,6 +39,12 @@ To deploy WildFly use the following command line:
     --output tsv`:8080
 ```
 
+<!-- workflow.run() 
+
+  sleep 60
+
+  -->
+
 Then open your browser to the URL echoed above and you should see:
 
 ```text
