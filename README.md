@@ -100,7 +100,7 @@ exit 0
 
 | Name | Link | Status
 | ---- | ---- | ------
-| 1. [Deploy an Azure Database for MySQL](mysql/create/) | [Workflow](.github/mysql/create_README_md.yml) | [![mysql/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_create_README_md.yml)
+| 1. [Deploy an Azure Database for MySQL](mysql/create/) | [Workflow](.github/workflows/mysql/create_README_md.yml) | [![mysql/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_create_README_md.yml)
 1. [Open MySQL server firewall to your IP address](mysql/open-firewall-to-your-ip/)
 1. [Load your MySQL database with data](mysql/load-your-mysql-database-with-data/)
 
