@@ -1,16 +1,21 @@
 
 # Deploy WildFly
 
+[![aci/wildfly/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aci_wildfly_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aci_wildfly_README_md.yml)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following examples.
 
-1. [Create an Azure Resource Group](../../group/create/)
-1. [Create an Azure Container Registry](../../acr/create/)
-1. [Create an 'acrpull' Service Principal](../../acr/create-acrpull-service-principal/)
-1. [Push a WildFly Docker image to Azure Container Registry](../../acr/wildfly/)
+1. [Create an Azure Resource Group](../../group/create/README.md)
+1. [Create an Azure Container Registry](../../acr/create/README.md)
+1. [Create an 'acrpull' Service Principal](../../acr/create-acrpull-service-principal/README.md)
+1. [Push a WildFly Docker image to Azure Container Registry](../../acr/wildfly/README.md)
 
 ## Deploy WildFly
+
+<!-- workflow.include(../../acr/create-acrpull-service-principal/README.md) -->
+<!-- workflow.include(../../acr/wildfly/README.md) -->
 
 To deploy WildFly use the following command line:
 
@@ -40,6 +45,20 @@ Then open your browser to the URL echoed above and you should see:
 And this is served by a custom WildFly using a Docker image coming from our 
 own Azure Container Registry.
 ```
+
+<!-- workflow.directOnly()
+
+export URL=http://$(az container show --resource-group $RESOURCE_GROUP --name $ACI_WILDFLY --query ipAddress.fqdn --output tsv):8080
+export RESULT=$(curl $URL)
+
+az group delete --name $RESOURCE_GROUP --yes || true
+
+if [[ "$RESULT" != *"custom WildFly"* ]]; then
+  echo "Response did not contain 'custom WildFly'"
+  exit 1
+fi
+
+  -->
 
 ## Cleanup
 
