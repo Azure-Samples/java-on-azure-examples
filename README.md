@@ -102,7 +102,7 @@ exit 0
 | ---- | ---- | ------
 | 1. [Deploy an Azure Database for MySQL](mysql/create/) | [Workflow](.github/workflows/mysql_create_README_md.yml) | [![mysql/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_create_README_md.yml)
 1. [Open MySQL server firewall to your IP address](mysql/open-firewall-to-your-ip/)
-1. [Load your MySQL database with data](mysql/load-your-mysql-database-with-data/)
+| 3. [Load your MySQL database with data](mysql/load-your-mysql-database-with-data/) | [Workflows](.github/workflows/mysql_load-your-mysql-database-with-data_README_md.yml) | [![mysql/load-your-mysql-database-with-data/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_load-your-mysql-database-with-data_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_load-your-mysql-database-with-data_README_md.yml)
 
 ## Azure Functions examples
 

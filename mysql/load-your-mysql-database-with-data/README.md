@@ -1,6 +1,8 @@
 
 # Load your MySQL database with data
 
+[![mysql/load-your-mysql-database-with-data/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_load-your-mysql-database-with-data_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_load-your-mysql-database-with-data_README_md.yml)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following:
@@ -10,6 +12,8 @@ This example assumes you have previously completed the following:
 1. [Install curl](https://curl.haxx.se/download.html)
 1. [Open MySQL server firewall to your IP address](../open-firewall-to-your-ip/)
 1. [Install mysql client](https://dev.mysql.com/downloads/)
+
+<!-- workflow.include(../open-firewall-to-your-ip/README.md) -->
 
 ## Load your MySQL database with data
 
@@ -49,6 +53,12 @@ And to exit the `mysql` tool use the following command line:
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+<!-- workflow.directOnly()
+
+  az group delete --name $RESOURCE_GROUP --yes || true
+
+  -->
 
 ## Next steps
 
