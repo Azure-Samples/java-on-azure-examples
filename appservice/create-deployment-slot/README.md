@@ -13,7 +13,7 @@ This example assumes you have previously completed the following:
 
 ## Create a deployment slot
 
-<!-- workflow.cron(0 8 * * 1) -->
+<!-- workflow.cron(0 1 * * 1) -->
 <!-- workflow.include(../tomcat-helloworld/README.md) -->
 
 To create a deployment slot use the following command line:

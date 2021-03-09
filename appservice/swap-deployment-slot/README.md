@@ -13,7 +13,7 @@ This example assumes you have previously completed the following:
 
 ## Swap a deployment slot
 
-<!-- workflow.cron(0 8 * * 1) -->
+<!-- workflow.cron(0 17 * * 1) -->
 <!-- workflow.include(../deploy-to-deployment-slot/README.md) -->
 
 To swap deployment slot use the following command line:

@@ -14,7 +14,7 @@ This example assumes you have previously completed the following:
 
 ## Build the example
 
-<!-- workflow.cron(0 9 * * 1) -->
+<!-- workflow.cron(0 5 * * 1) -->
 <!-- workflow.include(../create-deployment-slot/README.md) -->
 
 <!-- workflow.run() 

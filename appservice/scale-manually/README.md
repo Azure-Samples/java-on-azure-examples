@@ -15,6 +15,7 @@ This example assumes you have previously completed the following examples.
 
 To scale the App Service Plan use the following command line:
 
+<!-- workflow.cron(0 16 * * 1) -->
 <!-- workflow.include(../tomcat-helloworld/README.md) -->
 
 ```shell

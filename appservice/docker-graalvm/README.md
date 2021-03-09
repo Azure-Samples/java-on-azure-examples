@@ -15,6 +15,7 @@ This example assumes you have previously completed the following examples.
 
 ## Deploy the GraalVM application using a Docker image
 
+<!-- workflow.cron(0 7 * * 1) -->
 <!-- workflow.include(../../acr/graalvm/README.md) -->
 <!-- workflow.include(../../acr/create-settings-xml/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->

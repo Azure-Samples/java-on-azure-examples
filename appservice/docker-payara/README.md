@@ -13,7 +13,8 @@ This example assumes you have previously completed the following examples.
 
 ## Deploy Payara using a Docker image
 
-<!-- workflow.include(../create-plan/README.md)
+<!-- workflow.cron(0 9 * * 1) -->
+<!-- workflow.include(../create-plan/README.md) -->
 
 To deploy Payara use the following command lines:
 
