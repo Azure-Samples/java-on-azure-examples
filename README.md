@@ -106,7 +106,9 @@ exit 0
 
 ## Azure Functions examples
 
-1. [Install Azure Functions Core Tools](functions/install-tools/)
+| Name | Link | Status
+| ---- | ---- | ------
+| 1. [Install Azure Functions Core Tools](functions/install-tools/) | [Workflow](.github/workflows/functions_install-tools_README_md.yml) | [![functions/install-tools/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functions_install-tools_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functions_install-tools_README_md.yml)
 1. [Deploy a Java Function](functions/java/)
 1. [Deploy a Cosmos DB output Function](functions/cosmosdb-output/)
 
