@@ -16,6 +16,11 @@ This example assumes you have previously completed the following examples.
 ## Create a Kubeconfig file usin admin access
 
 <!-- workflow.include(../create/README.md) -->
+<!-- workflow.run()
+
+  cd aks/create-kube-config
+
+  -->
 
 To create the Kubeconfig file use the following command line:
 
@@ -33,7 +38,19 @@ Set the KUBECONFIG environment variable using the command line below:
   export KUBECONFIG=$PWD/config
 ```
 
+<!-- workflow.run()
+
+  cd ../..
+
+  -->
+
 ## Cleanup
+
+<!-- workflow.directOnly()
+
+  az group delete --name $RESOURCE_GROUP --yes || true
+
+  -->
 
 Do NOT forget to remove the resources once you are done with the example.
 

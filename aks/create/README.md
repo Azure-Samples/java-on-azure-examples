@@ -23,6 +23,12 @@ To create the cluster use the following command line:
 
 ## Cleanup
 
+<!-- workflow.directOnly()
+
+  az group delete --name $RESOURCE_GROUP --yes || true
+
+  -->
+
 Do NOT forget to remove the resources once you are done running the example.
 
 4m
