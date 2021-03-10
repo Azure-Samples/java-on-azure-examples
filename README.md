@@ -127,7 +127,7 @@ exit 0
 | ---- | ---- | ------
 | 1. [Create an Azure Kubernetes Service cluster](aks/create/) | [Workflow](.github/workflows/aks_create_README_md.yml) | [![aks/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create_README_md.yml)
 | 2. [Create a Kube config file using admin access](aks/create-kube-config/) | [Workflow](.github/workflows/aks_create-kube-config_README_md.yml) | [![aks/create-kube-config/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create-kube-config_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create-kube-config_README_md.yml)
-1. [Update your cluster to use your Azure Container Registry](aks/use-your-acr/)
+| 3. [Update your cluster to use your Azure Container Registry](aks/use-your-acr/) | [Workflow](.github/workflows/aks_use-your-acr_README_md.yml) | [![aks/use-your-acr/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_use-your-acr_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_use-your-acr_README_md.yml)
 1. [Deploy a Spring Boot application](aks/springboot/)
 1. [Deploy Tomcat](aks/tomcat/)
 1. [Deploy WildFly](aks/wildfly/)
