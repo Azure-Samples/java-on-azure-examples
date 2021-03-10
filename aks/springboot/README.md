@@ -1,6 +1,8 @@
 
 # Deploy a Spring Boot application
 
+[![aks/springboot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_springboot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_springboot_README_md.yml)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following examples.
@@ -15,6 +17,12 @@ This example assumes you have previously completed the following examples.
 ## Build the example
 
 <!-- workflow.include(../use-your-acr/README.md) -->
+
+<!-- workflow.run() 
+
+  cd aks/springboot
+
+  -->
 
 To build the JAR file use the following Maven command line.
 
@@ -67,6 +75,19 @@ Once the `EXTERNAL-IP` shows up open your browser to `http://EXTERNAL-IP`.
 
 It should show you a page with the text `Hello World`.
 
+<!-- workflow.run() 
+
+  cd ../..
+  
+  -->
+
+
 ## Cleanup
+
+<!-- workflow.directOnly()
+
+  az group delete --name $RESOURCE_GROUP --yes || true
+
+  -->
 
 Do NOT forget to remove the resources once you are done running the example.
