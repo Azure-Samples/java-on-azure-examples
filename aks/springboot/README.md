@@ -34,6 +34,7 @@ To build the JAR file use the following Maven command line.
 
 To run the example locally use the following Maven command line.
 
+<!-- workflow.skip() -->
 ````shell
   mvn spring-boot:run
 ````
