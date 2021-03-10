@@ -21,6 +21,6 @@ jobs:
           az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
           export AKS=aks-$RANDOM
           
-          az aks create --name $AKS --resource-group $RESOURCE_GROUP --verbose
+          az aks create --name $AKS --resource-group $RESOURCE_GROUP --generate-ssh-keys --verbose
           az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS --admin --file config
           export KUBECONFIG=$PWD/config
