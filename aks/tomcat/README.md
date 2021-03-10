@@ -21,7 +21,7 @@ This example assumes you have previously completed the following examples.
 
 <!-- workflow.run() 
 
-  cd aks/springboot
+  cd aks/tomcat
 
   -->
 

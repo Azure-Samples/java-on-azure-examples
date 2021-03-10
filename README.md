@@ -130,7 +130,7 @@ exit 0
 | 3. [Update your cluster to use your Azure Container Registry](aks/use-your-acr/) | [Workflow](.github/workflows/aks_use-your-acr_README_md.yml) | [![aks/use-your-acr/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_use-your-acr_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_use-your-acr_README_md.yml)
 | 4. [Deploy a Spring Boot application](aks/springboot/) | [Workflow](.github/workflows/aks_springboot_README_md.yml) | [![aks/springboot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_springboot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_springboot_README_md.yml)
 | 5. [Deploy Tomcat](aks/tomcat/) | [Workflow](.github/workflows/aks_tomcat_README_md.yml) | [![aks/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_tomcat_README_md.yml)
-1. [Deploy WildFly](aks/wildfly/)
+| 6. [Deploy WildFly](aks/wildfly/) | [Workflow](.github/workflows/aks_wildfly_README_md.yml) | [![aks/wildfly/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_wildfly_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_wildfly_README_md.yml)
 
 ## Azure Red Hat OpenShift examples
 

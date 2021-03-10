@@ -1,6 +1,8 @@
 
 # Deploy WildFly
 
+[![aks/wildfly/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_wildfly_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_wildfly_README_md.yml)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following examples.
@@ -16,6 +18,12 @@ This example assumes you have previously completed the following examples.
 ## Deploy WildFly
 
 <!-- workflow.include(../use-your-acr/README.md) -->
+
+<!-- workflow.run() 
+
+  cd aks/wildfly
+
+  -->
 
 First open the `deployment.yml` file in an editor and replace `ACR` with the
 name of your registry OR execute the command line below:
@@ -51,7 +59,19 @@ And this is served by a custom WildFly using a Docker image coming from our
 own Azure Container Registry.
 ```
 
+<!-- workflow.run() 
+
+  cd ../..
+  
+  -->
+
 ## Cleanup
+
+<!-- workflow.directOnly()
+
+  az group delete --name $RESOURCE_GROUP --yes || true
+
+  -->
 
 Do NOT forget to remove the resources once you are done running the example.
 
