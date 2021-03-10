@@ -22,3 +22,5 @@ jobs:
           export AKS=aks-$RANDOM
           
           az aks create --name $AKS --resource-group $RESOURCE_GROUP --generate-ssh-keys --verbose
+          
+          az group delete --name $RESOURCE_GROUP --yes || true
