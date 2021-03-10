@@ -129,7 +129,7 @@ exit 0
 | 2. [Create a Kube config file using admin access](aks/create-kube-config/) | [Workflow](.github/workflows/aks_create-kube-config_README_md.yml) | [![aks/create-kube-config/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create-kube-config_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create-kube-config_README_md.yml)
 | 3. [Update your cluster to use your Azure Container Registry](aks/use-your-acr/) | [Workflow](.github/workflows/aks_use-your-acr_README_md.yml) | [![aks/use-your-acr/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_use-your-acr_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_use-your-acr_README_md.yml)
 | 4. [Deploy a Spring Boot application](aks/springboot/) | [Workflow](.github/workflows/aks_springboot_README_md.yml) | [![aks/springboot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_springboot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_springboot_README_md.yml)
-1. [Deploy Tomcat](aks/tomcat/)
+| 5. [Deploy Tomcat](aks/tomcat/) | [Workflow](.github/workflows/aks_tomcat_README_md.yml) | [![aks/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_tomcat_README_md.yml)
 1. [Deploy WildFly](aks/wildfly/)
 
 ## Azure Red Hat OpenShift examples

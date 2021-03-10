@@ -1,6 +1,8 @@
 
 # Deploy Tomcat
 
+[![aks/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_tomcat_README_md.yml)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following examples.
@@ -14,6 +16,14 @@ This example assumes you have previously completed the following examples.
 1. [Update your AKS cluster to use your Azure Container Registry](../use-your-acr/)
 
 ## Deploying Tomcat
+
+<!-- workflow.include(../use-your-acr/README.md) -->
+
+<!-- workflow.run() 
+
+  cd aks/springboot
+
+  -->
 
 First open the `deployment.yml` file in an editor and replace `ACR` with the
 name of your registry OR execute the command line below:
@@ -33,7 +43,7 @@ kubectl apply -f deployment.yml
 
 To get the public IP address use the following command.
 
-```
+```shell
 kubectl get service/tomcat
 ```
 
@@ -49,7 +59,19 @@ And this is served by a custom Tomcat using a Docker image coming from our
 own Azure Container Registry.
 ```
 
+<!-- workflow.run() 
+
+  cd ../..
+  
+  -->
+
 ## Cleanup
+
+<!-- workflow.directOnly()
+
+  az group delete --name $RESOURCE_GROUP --yes || true
+
+  -->
 
 Do NOT forget to remove the resources once you are done running the example.
 
