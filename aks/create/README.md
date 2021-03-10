@@ -1,6 +1,8 @@
 
 # Create an Azure Kubernetes Service cluster
 
+[![aks/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create_README_md.yml)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following example.
@@ -16,7 +18,7 @@ To create the cluster use the following command line:
 ```shell
   export AKS=aks-$RANDOM
 
-  az aks create --name $AKS --resource-group $RESOURCE_GROUP --verbose 
+  az aks create --name $AKS --resource-group $RESOURCE_GROUP --generate-ssh-keys --verbose 
 ```
 
 ## Cleanup
