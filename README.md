@@ -110,7 +110,7 @@ exit 0
 | ---- | ---- | ------
 | 1. [Install Azure Functions Core Tools](functions/install-tools/) | [Workflow](.github/workflows/functions_install-tools_README_md.yml) | [![functions/install-tools/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functions_install-tools_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functions_install-tools_README_md.yml)
 | 2. [Deploy a Java Function](functions/java/) | [Workflow](.github/workflows/functions_java_README_md.yml) | [![functions/java/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functions_java_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functions_java_README_md.yml)
-1. [Deploy a Cosmos DB output Function](functions/cosmosdb-output/)
+| 3. [Deploy a Cosmos DB output Function](functions/cosmosdb-output/) | [Workflow](.github/workflows/functions_cosmosdb-output_README_md.yml) | [![functions/cosmosdb-output/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functions_cosmosdb-output_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functions_cosmosdb-output_README_md.yml)
 
 ## Azure Key Vault examples
 
