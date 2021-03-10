@@ -1,4 +1,6 @@
 on: 
+  schedule: 
+    - cron: '0 6 * * 1'
   workflow_dispatch: 
 
 name: 'appservice/docker-glassfish/README.md'

@@ -1,4 +1,6 @@
 on: 
+  schedule: 
+    - cron: '0 9 * * 1'
   workflow_dispatch: 
 
 name: 'appservice/docker-payara/README.md'
@@ -28,3 +30,18 @@ jobs:
           --name $APPSERVICE_PLAN \
           --is-linux \
           --sku P1V2
+          export APPSERVICE_DOCKER_PAYARA=appservice-docker-payara-$RANDOM
+          
+          mvn azure-webapp:deploy \
+          --settings=$SETTINGS_XML \
+          -DappName=$APPSERVICE_DOCKER_PAYARA \
+          -DimageName=acr-payara:latest \
+          -DappServicePlan=$APPSERVICE_PLAN \
+          -DresourceGroup=$RESOURCE_GROUP \
+          -DserverId=$ACR
+          
+          az webapp show \
+          --resource-group $RESOURCE_GROUP \
+          --name $APPSERVICE_DOCKER_PAYARA \
+          --query hostNames[0] \
+          --output tsv

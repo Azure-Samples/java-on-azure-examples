@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 3 * * 1'
+    - cron: '0 14 * * 1'
   workflow_dispatch: 
 
 name: 'appservice/jboss-eap-helloworld/README.md'
