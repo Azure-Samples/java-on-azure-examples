@@ -38,9 +38,17 @@ jobs:
           --sku Basic \
           --admin-enabled true
           az aks update --name $AKS --resource-group $RESOURCE_GROUP --attach-acr $ACR
+          
+          cd aks/springboot
+          
           mvn package
           mvn spring-boot:run
           az acr build --registry $ACR --image springboot:latest .
           sed -i "" "s/ACR/$ACR/g" deployment.yml
           kubectl apply -f deployment.yml
           kubectl get service/springboot
+          
+          cd ../..
+          
+          
+          az group delete --name $RESOURCE_GROUP --yes || true

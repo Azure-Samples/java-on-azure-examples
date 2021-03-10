@@ -12,5 +12,40 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          fi
+          export REGION=westus2
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export DELETE_AFTER=$(( `date +%s` + 7200))
+          az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
+          export AKS=aks-$RANDOM
+          
+          az aks create --name $AKS --resource-group $RESOURCE_GROUP --generate-ssh-keys --verbose
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          fi
+          export REGION=westus2
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export DELETE_AFTER=$(( `date +%s` + 7200))
+          az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
+          if [[ -z $ACR ]]; then
+          export ACR=acr$RANDOM
+          fi
+          az acr create \
+          --name $ACR \
+          --resource-group $RESOURCE_GROUP \
+          --sku Basic \
+          --admin-enabled true
+          az aks update --name $AKS --resource-group $RESOURCE_GROUP --attach-acr $ACR
+          
+          cd aks/springboot
+          
           sed -i "" "s/ACR/$ACR/g" deployment.yml
           kubectl apply -f deployment.yml
+          kubectl get service/tomcat
+          
+          cd ../..
+          
+          
+          az group delete --name $RESOURCE_GROUP --yes || true
