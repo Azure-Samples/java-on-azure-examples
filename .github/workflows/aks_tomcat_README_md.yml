@@ -39,7 +39,7 @@ jobs:
           --admin-enabled true
           az aks update --name $AKS --resource-group $RESOURCE_GROUP --attach-acr $ACR
           
-          cd aks/springboot
+          cd aks/tomcat
           
           sed -i "" "s/ACR/$ACR/g" deployment.yml
           kubectl apply -f deployment.yml

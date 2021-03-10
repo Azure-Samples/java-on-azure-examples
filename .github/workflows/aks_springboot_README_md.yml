@@ -42,7 +42,6 @@ jobs:
           cd aks/springboot
           
           mvn package
-          mvn spring-boot:run
           az acr build --registry $ACR --image springboot:latest .
           sed -i "" "s/ACR/$ACR/g" deployment.yml
           kubectl apply -f deployment.yml
