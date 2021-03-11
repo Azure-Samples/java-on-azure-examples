@@ -26,9 +26,15 @@ jobs:
           az spring-cloud create \
           --resource-group $RESOURCE_GROUP \
           --name $SPRING_CLOUD_NAME
+          
+          cd spring-cloud/config-server
+          
           az spring-cloud config-server set \
           --config-file application.yml \
           --name ${SPRING_CLOUD_NAME} \
           --resource-group ${RESOURCE_GROUP}
+          
+          cd ../..
+          
           
           az group delete --name $RESOURCE_GROUP --yes || true
