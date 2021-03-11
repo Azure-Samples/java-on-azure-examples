@@ -9,6 +9,8 @@ This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/)
 
+<!-- workflow.include(../../group/create/README.md) -->
+
 ## Create the Azure Spring Cloud
 
 To create the Azure Spring Cloud use the following command lines:
@@ -24,6 +26,12 @@ To create the Azure Spring Cloud use the following command lines:
 ```
 
 ## Cleanup
+
+<!-- workflow.directOnly()
+
+  az group delete --name $RESOURCE_GROUP --yes || true
+
+  -->
 
 Do NOT forget to remove the resources once you are done running the example.
 
