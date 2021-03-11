@@ -154,7 +154,9 @@ exit 0
 
 ## Azure Spring Cloud examples
 
-1. [Create an Azure Spring Cloud](spring-cloud/create/)
+| Name | Link | Status
+| ---- | ---- | ------
+| 1. [Create an Azure Spring Cloud](spring-cloud/create/) | [Workflow](.github/workflows/spring-cloud_create_README_md.yml) | [![spring-cloud/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring-cloud_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring-cloud_create_README_md.yml)
 1. [Deploy a Spring Boot application to Azure Spring Cloud](spring-cloud/helloworld/)
 1. [Configure the Azure Spring Cloud Config Server](spring-cloud/config-server/)
 
