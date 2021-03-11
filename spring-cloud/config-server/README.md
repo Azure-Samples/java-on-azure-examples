@@ -11,6 +11,11 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Spring Cloud instance](../create/)
 
 <!-- workflow.include(../create/README.md) -->
+<!-- workflow.run() 
+
+  cd spring-cloud/config-server
+
+  -->
 
 ## Configure the Azure Spring Cloud Config Server
 
@@ -29,6 +34,13 @@ the `application.yml` file.
 Note as a convenience (to keep everything in one Git repository) the `application.yml`
 file specifies a `default-label`, which maps to the `spring-cloud-config-server`
 branch of this Git repository.
+
+<!-- workflow.run() 
+
+  cd ../..
+
+  -->
+
 
 ## Cleanup
 
