@@ -16,8 +16,8 @@ This example assumes you have previously completed the following examples.
 
 ## Build the example
 
+<!-- workflow.include(../create-kube-config/README.md) -->
 <!-- workflow.include(../use-your-acr/README.md) -->
-
 <!-- workflow.run() 
 
   cd aks/springboot
@@ -51,7 +51,7 @@ First open the `deployment.yml` file in an editor and replace `ACR` with the
 name of your Azure Container Registry OR execute the command line below:
 
 ```shell
-  sed -i "" "s/ACR/$ACR/g" deployment.yml
+  sed -i "s/ACR/$ACR/g" deployment.yml
 ```
 
 Then execute the command below to deploy to the AKS cluster:
