@@ -10,6 +10,8 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Create an Azure Spring Cloud instance](../create/)
 
+<!-- workflow.include(../create/README.md) -->
+
 ## Configure the Azure Spring Cloud Config Server
 
 To use the Azure Spring Cloud Config Server you need to give it a configuration
@@ -29,5 +31,11 @@ file specifies a `default-label`, which maps to the `spring-cloud-config-server`
 branch of this Git repository.
 
 ## Cleanup
+
+<!-- workflow.directOnly()
+
+  az group delete --name $RESOURCE_GROUP --yes || true
+
+  -->
 
 Do NOT forget to remove the resources you created once you are done with the example.
