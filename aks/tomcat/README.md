@@ -18,7 +18,6 @@ This example assumes you have previously completed the following examples.
 ## Deploying Tomcat
 
 <!-- workflow.include(../use-your-acr/README.md) -->
-
 <!-- workflow.run() 
 
   cd aks/tomcat
@@ -29,7 +28,7 @@ First open the `deployment.yml` file in an editor and replace `ACR` with the
 name of your registry OR execute the command line below:
 
 ```shell
-  sed -i "" "s/ACR/$ACR/g" deployment.yml
+  sed -i "s/ACR/$ACR/g" deployment.yml
 ```
 
 Then execute the command below to deploy to the AKS cluster.
