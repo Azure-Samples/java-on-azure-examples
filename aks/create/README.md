@@ -12,9 +12,18 @@ This example assumes you have previously completed the following example.
 ## Create an Azure Kubernetes Service cluster
 
 <!-- workflow.include(../../group/create/README.md) -->
+<!-- workflow.run()
+
+  if [[ -z $AKS ]]; then
+    export AKS=aks-$RANDOM
+    az aks create --name $AKS --resource-group $RESOURCE_GROUP --generate-ssh-keys --verbose 
+  fi
+
+  -->
 
 To create the cluster use the following command line:
 
+<!-- workflow.skip() -->
 ```shell
   export AKS=aks-$RANDOM
 
