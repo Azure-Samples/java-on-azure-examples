@@ -158,7 +158,7 @@ exit 0
 | ---- | ---- | ------
 | 1. [Create an Azure Spring Cloud](spring-cloud/create/) | [Workflow](.github/workflows/spring-cloud_create_README_md.yml) | [![spring-cloud/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring-cloud_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring-cloud_create_README_md.yml)
 | 2. [Deploy a Spring Boot application to Azure Spring Cloud](spring-cloud/helloworld/) | [Workflow](.github/workflows/spring-cloud_helloworld_README_md.yml) | [![spring-cloud/helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring-cloud_helloworld_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring-cloud_helloworld_README_md.yml)
-1. [Configure the Azure Spring Cloud Config Server](spring-cloud/config-server/)
+| 3. [Configure the Azure Spring Cloud Config Server](spring-cloud/config-server/) | [Workflow](.github/workflows/spring-cloud_config-server_README_md.yml) | [![spring-cloud/config-server/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring-cloud_config-server_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring-cloud_config-server_README_md.yml)
 
 ## Azure Storage examples
 
