@@ -78,7 +78,7 @@ Hello World
 
 <!-- workflow.directOnly()
 
-  export URL=https://$(az spring-cloud app show \
+  export URL=$(az spring-cloud app show \
     --name helloworld \
     --service ${SPRING_CLOUD_NAME} \
     --resource-group ${RESOURCE_GROUP} \
