@@ -19,9 +19,12 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           export DELETE_AFTER=$(( `date +%s` + 7200))
           az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
-          export AKS=aks-$RANDOM
           
+          if [[ -z $AKS ]]; then
+          export AKS=aks-$RANDOM
           az aks create --name $AKS --resource-group $RESOURCE_GROUP --generate-ssh-keys --verbose
+          fi
+          
           
           cd aks/create-kube-config
           
@@ -37,9 +40,12 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           export DELETE_AFTER=$(( `date +%s` + 7200))
           az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
-          export AKS=aks-$RANDOM
           
+          if [[ -z $AKS ]]; then
+          export AKS=aks-$RANDOM
           az aks create --name $AKS --resource-group $RESOURCE_GROUP --generate-ssh-keys --verbose
+          fi
+          
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
           fi
