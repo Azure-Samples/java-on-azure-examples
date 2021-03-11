@@ -41,7 +41,7 @@ jobs:
           
           cd aks/tomcat
           
-          sed -i "" "s/ACR/$ACR/g" deployment.yml
+          sed -i "s/ACR/$ACR/g" deployment.yml
           kubectl apply -f deployment.yml
           kubectl get service/tomcat
           
