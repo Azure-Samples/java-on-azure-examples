@@ -7,10 +7,18 @@
 
 This example assumes you have previously completed the following examples.
 
-1. [Create an Azure Resource Group](../../group/create/)
-1. [Deploy an Azure Spring Cloud](../create/)
+1. [Create an Azure Resource Group](../../group/create/README.md)
+1. [Deploy an Azure Spring Cloud](../create/README.md)
+
+<!-- workflow.include(../create/README.md) -->
 
 ## Build the example
+
+<!-- workflow.run() 
+
+  cd spring-cloud/helloworld
+
+  -->
 
 To build the JAR file use the following Maven command line.
 
@@ -67,6 +75,25 @@ Hello World
 ```
 
 ## Cleanup
+
+<!-- workflow.directOnly()
+
+  export URL=https://$(az spring-cloud app show \
+    --name helloworld \
+    --service ${SPRING_CLOUD_NAME} \
+    --resource-group ${RESOURCE_GROUP} \
+    --query properties.url \
+    --output tsv)
+  export RESULT=$(curl $URL)
+
+  az group delete --name $RESOURCE_GROUP --yes || true
+
+  if [[ "$RESULT" != *"Hello World"* ]]; then
+    echo "Response did not contain 'Hello World'"
+    exit 1
+  fi
+  
+  -->
 
 Do NOT forget to remove the resources once you are done running the example.
 
