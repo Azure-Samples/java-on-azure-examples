@@ -1,6 +1,8 @@
 
 # Create a Spring Boot application and deploy it to Azure Spring Cloud
 
+[![spring-cloud/helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring-cloud_helloworld_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring-cloud_helloworld_README_md.yml)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following examples.
