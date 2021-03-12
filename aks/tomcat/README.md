@@ -16,6 +16,7 @@ This example assumes you have previously completed the following examples.
 
 ## Deploying Tomcat
 
+<!-- workflow.include(../../acr/tomcat/README.md) -->
 <!-- workflow.include(../create-kube-config/README.md) -->
 <!-- workflow.include(../use-your-acr/README.md) -->
 <!-- workflow.run() 
