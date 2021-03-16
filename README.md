@@ -110,6 +110,7 @@ exit 0
 | ---- | ---- | ------
 | 1. [Deploy an Azure Database for PostgreSQL](postgresql/create/) | [Workflow](.github/workflows/postgresql_create_README_md.yml) | [![postgresql/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgresql_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgresql_create_README_md.yml)
 | 2. [Open PostgreSQL server firewall to your IP address](postgresql/open-firewall-to-your-ip/) | [Workflows](.github/workflows/postgresql_open-firewall-to-your-ip_README_md.yml) | [![postgresql/open-firewall-to-your-ip/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgresql_open-firewall-to-your-ip_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgresql_open-firewall-to-your-ip_README_md.yml)
+| 3. [Load your PostgreSQL database with data](postgresql/load-your-postgresql-database-with-data/) | [Workflows](.github/workflows/postgresql_load-your-postgresql-database-with-data_README_md.yml) | [![postgresql/load-your-postgresql-database-with-data/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgresql_load-your-postgresql-database-with-data_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgresql_load-your-postgresql-database-with-data_README_md.yml)
 
 ## Azure Functions examples
 

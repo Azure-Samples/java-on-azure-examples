@@ -6,17 +6,11 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>examples.azure</groupId>
+        <groupId>examples.azure.postgresql</groupId>
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.postgresql</groupId>
-    <artifactId>project</artifactId>
+    <artifactId>load-your-postgresql-database-with-data</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Database for PostgreSQL examples</name>
-    <modules>
-        <module>create</module>
-        <module>load-your-postgresql-database-with-data</module>
-        <module>open-firewall-to-your-ip</module>
-    </modules>
+    <name>Load your PostgreSQL database with data</name>
 </project>
