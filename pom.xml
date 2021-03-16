@@ -71,6 +71,7 @@
         <module>group</module>
         <module>keyvault</module>
         <module>mysql</module>
+        <module>postgresql</module>
         <module>servicebus</module>
         <module>spring-cloud</module>
         <module>storage</module>

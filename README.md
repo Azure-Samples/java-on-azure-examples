@@ -104,6 +104,12 @@ exit 0
 | 2. [Open MySQL server firewall to your IP address](mysql/open-firewall-to-your-ip/) | [Workflows](.github/workflows/mysql_open-firewall-to-your-ip_README_md.yml) | [![mysql/open-firewall-to-your-ip/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_open-firewall-to-your-ip_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_open-firewall-to-your-ip_README_md.yml)
 | 3. [Load your MySQL database with data](mysql/load-your-mysql-database-with-data/) | [Workflows](.github/workflows/mysql_load-your-mysql-database-with-data_README_md.yml) | [![mysql/load-your-mysql-database-with-data/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_load-your-mysql-database-with-data_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_load-your-mysql-database-with-data_README_md.yml)
 
+## Azure Database for PostgreSQL examples
+
+| Name | Link | Status
+| ---- | ---- | ------
+| 1. [Deploy an Azure Database for PostgreSQL](postgresql/create/) | [Workflow](.github/workflows/postgresql_create_README_md.yml) | [![postgresql/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgresql_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgresql_create_README_md.yml)
+
 ## Azure Functions examples
 
 | Name | Link | Status
