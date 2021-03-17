@@ -50,7 +50,7 @@ jobs:
           
           export POSTGRESQL_CLIENT_USERNAME="$POSTGRESQL_USERNAME@$POSTGRESQL_NAME"
           
-          psql --host=$POSTGRESQL_DNS_NAME --port=5423 --username $POSTGRESQL_CLIENT_USERNAME --password $POSTGRESQL_PASSWORD --file load.sql
+          psql --host=$POSTGRESQL_DNS_NAME --port=5432 --username $POSTGRESQL_CLIENT_USERNAME --password $POSTGRESQL_PASSWORD --file load.sql
           
           cd ../..
           
