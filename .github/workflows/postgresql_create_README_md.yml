@@ -1,0 +1,45 @@
+on: 
+  workflow_dispatch: 
+
+name: 'postgresql/create/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          fi
+          export REGION=westus2
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export DELETE_AFTER=$(( `date +%s` + 7200))
+          az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
+          export POSTGRESQL_NAME=postgresql-$RANDOM
+          export POSTGRESQL_USERNAME=postgresql
+          export POSTGRESQL_PASSWORD=p#ssw0rd-$RANDOM
+          if [[ -z $POSTGRESQL_NAME ]]; then
+          export POSTGRESQL_NAME=postgresql-$RANDOM
+          export POSTGRESQL_USERNAME=postgresql
+          export POSTGRESQL_PASSWORD=p#ssw0rd-$RANDOM
+          fi
+          az postgres server create \
+          --admin-user $POSTGRESQL_USERNAME \
+          --admin-password $POSTGRESQL_PASSWORD \
+          --name $POSTGRESQL_NAME \
+          --resource-group $RESOURCE_GROUP \
+          --sku B_Gen5_1 \
+          --ssl-enforcement Disabled
+          
+          export RESULT=$(az postgres server show --resource-group $RESOURCE_GROUP --name $POSTGRESQL_NAME --output tsv --query userVisibleState)
+          if [[ "$RESULT" != Ready ]]; then
+          echo 'PostgreSQL database is NOT ready'
+          az group delete --name $RESOURCE_GROUP --yes || true
+          exit 1
+          fi
+          
+          az group delete --name $RESOURCE_GROUP --yes || true
