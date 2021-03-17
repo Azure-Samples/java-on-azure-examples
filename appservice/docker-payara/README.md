@@ -14,9 +14,17 @@ This example assumes you have previously completed the following examples.
 ## Deploy Payara using a Docker image
 
 <!-- workflow.cron(0 9 * * 1) -->
+<!-- workflow.include(../../acr/glassfish/README.md) -->
+<!-- workflow.include(../../acr/create-settings-xml/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->
 
 To deploy Payara use the following command lines:
+
+<!-- workflow.run() 
+
+  cd appservice/docker-payara
+
+  -->
 
 ```shell
   export APPSERVICE_DOCKER_PAYARA=appservice-docker-payara-$RANDOM
@@ -35,6 +43,13 @@ To deploy Payara use the following command lines:
     --query hostNames[0] \
     --output tsv
 ```
+
+<!-- workflow.run() 
+
+  sleep 180
+  cd ../..
+
+  -->
 
 Then open your browser to the URL shown as output and you should see:
 
@@ -59,6 +74,31 @@ to the Maven command line to customize your deployment.
 | resourceGroup          | the Azure Resource Group name     |
 
 ## Cleanup
+
+<!-- workflow.directOnly()
+
+export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_PAYARA --output tsv --query state)
+if [[ "$RESULT" != Running ]]; then
+  echo 'Web application is NOT running'
+  az group delete --name $RESOURCE_GROUP --yes || true
+  exit 1
+fi
+
+export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_PAYARA --output tsv --query defaultHostName)
+export RESULT=$(curl $URL)
+
+sleep 180
+
+export RESULT=$(curl $URL)
+
+az group delete --name $RESOURCE_GROUP --yes || true
+
+if [[ "$RESULT" != *"custom Payara"* ]]; then
+  echo "Response did not contain 'custom Payara'"
+  exit 1
+fi
+
+  -->
 
 Do NOT forget to remove the resources once you are done running the example.
 
