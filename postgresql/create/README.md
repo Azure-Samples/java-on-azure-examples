@@ -15,7 +15,7 @@ This example assumes you have previously completed the following example:
 
 To create the Azure Database for PostgreSQL setup the environment variables:
 
-<!--workflow.skip() -->
+<!-- workflow.skip() -->
 ```shell
   export POSTGRESQL_NAME=postgresql-$RANDOM
   export POSTGRESQL_USERNAME=postgresql

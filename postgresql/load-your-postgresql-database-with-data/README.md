@@ -30,7 +30,7 @@ connect to the database:
 
   export POSTGRESQL_CLIENT_USERNAME="$POSTGRESQL_USERNAME@$POSTGRESQL_NAME"
 
-  psql --host=$POSTGRESQL_DNS_NAME --port=5423 --username $POSTGRESQL_CLIENT_USERNAME --password $POSTGRESQL_PASSWORD
+  psql --host=$POSTGRESQL_DNS_NAME --port=5432 --username $POSTGRESQL_CLIENT_USERNAME --password $POSTGRESQL_PASSWORD
 ```
 
 Then use the following command line to load the `load.sql` file into the
