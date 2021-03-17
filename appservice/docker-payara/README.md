@@ -14,7 +14,7 @@ This example assumes you have previously completed the following examples.
 ## Deploy Payara using a Docker image
 
 <!-- workflow.cron(0 9 * * 1) -->
-<!-- workflow.include(../../acr/glassfish/README.md) -->
+<!-- workflow.include(../../acr/payara/README.md) -->
 <!-- workflow.include(../../acr/create-settings-xml/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->
 
