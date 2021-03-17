@@ -19,9 +19,6 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           export DELETE_AFTER=$(( `date +%s` + 7200))
           az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
-          export POSTGRESQL_NAME=postgresql-$RANDOM
-          export POSTGRESQL_USERNAME=postgresql
-          export POSTGRESQL_PASSWORD=p#ssw0rd-$RANDOM
           if [[ -z $POSTGRESQL_NAME ]]; then
           export POSTGRESQL_NAME=postgresql-$RANDOM
           export POSTGRESQL_USERNAME=postgresql
