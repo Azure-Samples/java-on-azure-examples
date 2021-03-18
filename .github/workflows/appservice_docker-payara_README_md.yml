@@ -30,12 +30,12 @@ jobs:
           --sku Basic \
           --admin-enabled true
           
-          cd acr/glassfish
+          cd acr/payara
           
           mvn package
-          export ACR_GLASSFISH_IMAGE=glassfish:latest
+          export ACR_PAYARA_IMAGE=payara:latest
           
-          az acr build --registry $ACR --image $ACR_GLASSFISH_IMAGE .
+          az acr build --registry $ACR --image $ACR_PAYARA_IMAGE .
           
           cd ../..
           
