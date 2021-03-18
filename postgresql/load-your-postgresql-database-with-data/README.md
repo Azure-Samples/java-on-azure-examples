@@ -65,7 +65,7 @@ And to exit the `psql` tool use the following command line:
 
   export POSTGRESQL_CLIENT_USERNAME="$POSTGRESQL_USERNAME@$POSTGRESQL_NAME"
 
-  PGPASSWORD=$POSTGRESQL_PASSWORD ; psql --host=$POSTGRESQL_DNS_NAME --port=5432 --username $POSTGRESQL_CLIENT_USERNAME --file load.sql
+  PGPASSWORD=$POSTGRESQL_PASSWORD psql --host=$POSTGRESQL_DNS_NAME --port=5432 --username $POSTGRESQL_CLIENT_USERNAME --file load.sql
 
   cd ../..
 
