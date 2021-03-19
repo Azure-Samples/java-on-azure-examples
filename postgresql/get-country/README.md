@@ -12,60 +12,37 @@ This example assumes you have previously completed the following:
 1. [Install curl](https://curl.haxx.se/download.html)
 1. [Open PostgreSQL server firewall to your IP address](../open-firewall-to-your-ip/)
 1. [Install psql client](https://www.postgresql.org/download/)
+1. [Load your PostgreSQL database with your data](load-your-postgresql-database-with-data/README.md)
 
-<!-- workflow.include(../open-firewall-to-your-ip/README.md) -->
+<!-- workflow.include(../load-your-postgresql-database-with-data/README.md) -->
 
-## Load your PostgreSQL database with data
+## Get country information
 
-To load the PostgreSQL database with data execute the following command lines to
-connect to the database:
-
-<!-- workflow.skip() -->
-```shell
-  export POSTGRESQL_DNS_NAME=`az postgres server show \
-    --resource-group $RESOURCE_GROUP \
-    --name $POSTGRESQL_NAME \
-    --query fullyQualifiedDomainName \
-    --output tsv`
-
-  export POSTGRESQL_CLIENT_USERNAME="$POSTGRESQL_USERNAME@$POSTGRESQL_NAME"
-
-  psql --host=$POSTGRESQL_DNS_NAME --port=5432 --username $POSTGRESQL_CLIENT_USERNAME --dbname=postgres
-```
-
-Then use the following command line to load the `load.sql` file into the
-database:
-
-<!-- workflow.skip() -->
-```shell
-  \i load.sql;
-```
-
-And to exit the `psql` tool use the following command line:
-
-<!-- workflow.skip() -->
-```shell
-  \q
-```
-
->
-> If your country is missing from the SQL file please let us know by filing a
-> GitHub issue or by issuing a PR against this repository.
->
+This example will get country information from the database.
 
 <!-- workflow.run()
 
-  cd postgresql/load-your-postgresql-database-with-data
+  cd postgresql/get-country
 
-  export POSTGRESQL_DNS_NAME=`az postgres server show \
-    --resource-group $RESOURCE_GROUP \
-    --name $POSTGRESQL_NAME \
-    --query fullyQualifiedDomainName \
-    --output tsv`
+  -->
 
-  export POSTGRESQL_CLIENT_USERNAME="$POSTGRESQL_USERNAME@$POSTGRESQL_NAME"
+First lets build the example.
 
-  PGPASSWORD=$POSTGRESQL_PASSWORD psql --host=$POSTGRESQL_DNS_NAME --port=5432 --username $POSTGRESQL_CLIENT_USERNAME --dbname=postgres --file load.sql
+```shell
+  mvn package
+```
+
+The command line below will get the country information for the country with
+the abbreviation 'USA'.
+
+```shell
+  java -jar target/get-country.jar jdbc:postgresql://$POSTGRESQL_DNS_NAME:5432/demo?ssl=true\&sslmode=require $POSTGRESQL_CLIENT_USERNAME $POSTGRESQL_PASSWORD USA
+```
+
+Note the & has been escaped using the backslash as this is needed when passing
+it into the shell. Omit the backslash when using it in your configuration files.
+
+<!-- workflow.run()
 
   cd ../..
 
@@ -80,4 +57,3 @@ Do NOT forget to remove the resources once you are done running the example.
   az group delete --name $RESOURCE_GROUP --yes || true
 
   -->
-

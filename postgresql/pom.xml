@@ -18,5 +18,6 @@
         <module>create</module>
         <module>load-your-postgresql-database-with-data</module>
         <module>open-firewall-to-your-ip</module>
+        <module>get-country</module>
     </modules>
 </project>
