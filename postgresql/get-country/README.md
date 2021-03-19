@@ -1,7 +1,7 @@
 
 # Load your PostgreSQL database with data
 
-[![postgresql/load-your-postgresql-database-with-data/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgresql_load-your-postgresql-database-with-data_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgresql_load-your-postgresql-database-with-data_README_md.yml)
+[![postgresql/get-country/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgresql_get-country_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgresql_get-country_README_md.yml)
 
 ## Prerequisites
 
