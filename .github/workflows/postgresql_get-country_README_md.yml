@@ -1,7 +1,7 @@
 on: 
   workflow_dispatch: 
 
-name: 'postgresql/load-your-postgresql-database-with-data/README.md'
+name: 'postgresql/get-country/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -51,6 +51,14 @@ jobs:
           export POSTGRESQL_CLIENT_USERNAME="$POSTGRESQL_USERNAME@$POSTGRESQL_NAME"
           
           PGPASSWORD=$POSTGRESQL_PASSWORD psql --host=$POSTGRESQL_DNS_NAME --port=5432 --username $POSTGRESQL_CLIENT_USERNAME --dbname=postgres --file load.sql
+          
+          cd ../..
+          
+          
+          cd postgresql/get-country
+          
+          mvn package
+          java -jar target/get-country.jar jdbc:postgresql://$POSTGRESQL_DNS_NAME:5432/demo?ssl=true\&sslmode=require $POSTGRESQL_CLIENT_USERNAME $POSTGRESQL_PASSWORD USA
           
           cd ../..
           
