@@ -1,7 +1,7 @@
 on: 
   workflow_dispatch: 
 
-name: 'mysql/load-your-mysql-database-with-data/README.md'
+name: 'mysql/get-country/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -54,6 +54,14 @@ jobs:
           export MYSQL_CLIENT_USERNAME="$MYSQL_USERNAME@$MYSQL_NAME"
           
           mysql -h $MYSQL_DNS_NAME -u $MYSQL_CLIENT_USERNAME --password $MYSQL_PASSWORD < load.sql
+          
+          cd ../..
+          
+          
+          cd mysql/get-country
+          
+          mvn package
+          java -jar target/get-country.jar jdbc:mysql://$MYSQL_DNS_NAME:5432/demo?useSSL=true\&requireSSL=true $MYSQL_CLIENT_USERNAME $MYSQL_PASSWORD USA
           
           cd ../..
           
