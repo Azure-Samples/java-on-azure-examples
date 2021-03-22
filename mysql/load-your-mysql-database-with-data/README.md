@@ -20,6 +20,7 @@ This example assumes you have previously completed the following:
 To load the MySQL database with data execute the following command lines to
 connect to the database:
 
+<!-- workflow.skip() -->
 ```shell
   export MYSQL_DNS_NAME=`az mysql server show \
     --resource-group $RESOURCE_GROUP \
@@ -35,12 +36,14 @@ connect to the database:
 Then use the following command line to load the `load.sql` file into the
 database:
 
+<!-- workflow.skip() -->
 ```shell
   source load.sql;
 ```
 
 And to exit the `mysql` tool use the following command line:
 
+<!-- workflow.skip() -->
 ```shell
   \q
 ```
@@ -49,6 +52,25 @@ And to exit the `mysql` tool use the following command line:
 > If your country is missing from the SQL file please let us know by filing a
 > GitHub issue or by issuing a PR against this repository.
 >
+
+
+<!-- workflow.run()
+
+  cd mysql/load-your-mysql-database-with-data
+
+  export MYSQL_DNS_NAME=`az mysql server show \
+    --resource-group $RESOURCE_GROUP \
+    --name $MYSQL_NAME \
+    --query fullyQualifiedDomainName \
+    --output tsv`
+
+  export MYSQL_CLIENT_USERNAME="$MYSQL_USERNAME@$MYSQL_NAME"
+
+  mysql -h $MYSQL_DNS_NAME -u $MYSQL_CLIENT_USERNAME --password $MYSQL_PASSWORD < load.sql
+
+  cd ../..
+
+  -->
 
 ## Cleanup
 
