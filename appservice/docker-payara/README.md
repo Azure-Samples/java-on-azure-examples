@@ -32,7 +32,7 @@ To deploy Payara use the following command lines:
   mvn azure-webapp:deploy \
     --settings=$SETTINGS_XML \
     -DappName=$APPSERVICE_DOCKER_PAYARA \
-    -DimageName=acr-payara:latest \
+    -DimageName=payara:latest \
     -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
     -DserverId=$ACR
