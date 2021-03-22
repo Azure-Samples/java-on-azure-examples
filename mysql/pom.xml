@@ -16,7 +16,8 @@
     <name>Azure Database for MySQL examples</name>
     <modules>
         <module>create</module>
-        <module>open-firewall-to-your-ip</module>
+        <module>get-country</module>
         <module>load-your-mysql-database-with-data</module>
+        <module>open-firewall-to-your-ip</module>
     </modules>
 </project>
