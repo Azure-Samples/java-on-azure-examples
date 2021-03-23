@@ -30,7 +30,7 @@ connect to the database:
 
   export MYSQL_CLIENT_USERNAME="$MYSQL_USERNAME@$MYSQL_NAME"
 
-  mysql -h $MYSQL_DNS_NAME -u $MYSQL_CLIENT_USERNAME --password $MYSQL_PASSWORD
+  mysql -h $MYSQL_DNS_NAME -u $MYSQL_CLIENT_USERNAME -p$MYSQL_PASSWORD
 ```
 
 Then use the following command line to load the `load.sql` file into the
