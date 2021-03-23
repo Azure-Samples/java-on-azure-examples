@@ -48,12 +48,4 @@ Do NOT forget to remove the resources once you are done running the example.
 
   -->
 
-## Next steps
-
-* [Azure Database for MySQL Documentation](https://docs.microsoft.com/en-us/azure/mysql/)
-* [Migrate to Azure Database for MySQL](https://datamigration.microsoft.com/scenario/mysql-to-azuremysql)
-* [Minimal downtime migration](https://docs.microsoft.com/en-us/azure/mysql/howto-migrate-online)
-* [Query data using Java](https://docs.microsoft.com/en-us/azure/mysql/connect-java)
-* [Manage Azure Database for MySQL servers](https://docs.microsoft.com/en-us/cli/azure/mysql)
-
 4m
