@@ -1,4 +1,4 @@
-package examples.azure.mysql.getcountry;
+package examples.azure.mssql.getcountry;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
