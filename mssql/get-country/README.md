@@ -36,11 +36,8 @@ The command line below will get the country information for the country with
 the abbreviation 'USA'.
 
 ```shell
-  java -jar target/get-country.jar jdbc:mysql://$MSSQL_DNS_NAME:1433/demo?encrypt=true\&trustServerCertificate=true $MSSQL_CLIENT_USERNAME $MSSQL_PASSWORD USA
+  java -jar target/get-country.jar "jdbc:sqlserver://$MSSQL_DNS_NAME:1433/demo?encrypt=true;trustServerCertificate=true $MSSQL_CLIENT_USERNAME $MSSQL_PASSWORD" USA
 ```
-
-Note the & has been escaped using the backslash as this is needed when passing
-it into the shell. Omit the backslash when using it in your configuration files.
 
 <!-- workflow.run()
 
