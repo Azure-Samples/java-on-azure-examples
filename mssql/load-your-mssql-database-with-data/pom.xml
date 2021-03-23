@@ -6,17 +6,11 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>examples.azure</groupId>
+        <groupId>examples.azure.mysql</groupId>
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.mssql</groupId>
-    <artifactId>project</artifactId>
+    <artifactId>load-your-mssql-database-with-data</artifactId>
     <packaging>pom</packaging>
-    <name>Azure SQL examples</name>
-    <modules>
-        <module>create</module>
-        <module>load-your-mssql-database-with-data</module>
-        <module>open-firewall-to-your-ip</module>
-    </modules>
+    <name>Load your Azure SQL database with data</name>
 </project>
