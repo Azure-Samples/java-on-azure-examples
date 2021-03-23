@@ -45,7 +45,9 @@ connect to the database:
   cd mssql/load-your-mssql-database-with-data
 
   sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
-  
+  python -m pip install --upgrade pip
+  sudo pip install mssql-cli
+
   export MSSQL_DNS_NAME=`az sql server show \
     --resource-group $RESOURCE_GROUP \
     --name $MSSQL_NAME \
