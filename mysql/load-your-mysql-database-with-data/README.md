@@ -66,7 +66,7 @@ And to exit the `mysql` tool use the following command line:
 
   export MYSQL_CLIENT_USERNAME="$MYSQL_USERNAME@$MYSQL_NAME"
 
-  mysql -h $MYSQL_DNS_NAME -u $MYSQL_CLIENT_USERNAME --password $MYSQL_PASSWORD < load.sql
+  mysql -h $MYSQL_DNS_NAME -u $MYSQL_CLIENT_USERNAME -p$MYSQL_PASSWORD < load.sql
 
   cd ../..
 
