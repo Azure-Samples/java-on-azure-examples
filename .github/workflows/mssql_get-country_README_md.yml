@@ -65,7 +65,7 @@ jobs:
           cd mssql/get-country
           
           mvn package
-          java -jar target/get-country.jar 'jdbc:sqlserver://'$MSSQL_DNS_NAME':1433/demo?encrypt=true;trustServerCertificate=true '$MSSQL_CLIENT_USERNAME $MSSQL_PASSWORD USA
+          java -jar target/get-country.jar "jdbc:sqlserver://$MSSQL_DNS_NAME:1433;databaseName=demo;encrypt=true;trustServerCertificate=true" $MSSQL_CLIENT_USERNAME $MSSQL_PASSWORD USA
           
           cd ../..
           
