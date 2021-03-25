@@ -11,6 +11,7 @@ This example assumes you have previously completed the following:
 1. [Create an Azure SQL Database](../create/)
 1. [Install curl](https://curl.haxx.se/download.html)
 
+<!-- workflow.cron(0 4 * * 5) -->
 <!-- workflow.include(../create/README.md) -->
 
 ## Open Azure SQL server firewall to your local IP address

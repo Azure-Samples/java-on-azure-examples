@@ -13,6 +13,7 @@ This example assumes you have previously completed the following:
 1. [Open Azure SQL server firewall to your IP address](../open-firewall-to-your-ip/)
 1. [Install mssql-cli client](https://docs.microsoft.com/en-us/sql/tools/mssql-cli?view=sql-server-ver15)
 
+<!-- workflow.cron(0 3 * * 5) -->
 <!-- workflow.include(../open-firewall-to-your-ip/README.md) -->
 
 ## Load your Azure SQL database with data

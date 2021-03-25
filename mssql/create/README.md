@@ -9,6 +9,7 @@ This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../group/create/)
 
+<!-- workflow.cron(0 1 * * 5) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 ## Create the Azure SQL Database
