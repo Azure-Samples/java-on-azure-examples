@@ -36,7 +36,7 @@ The command line below will get the country information for the country with
 the abbreviation 'USA'.
 
 ```shell
-  java -jar target/get-country.jar jdbc:mysql://$MYSQL_DNS_NAME:5432/demo?useSSL=true\&requireSSL=true $MYSQL_CLIENT_USERNAME $MYSQL_PASSWORD USA
+  java -jar target/get-country.jar jdbc:mysql://$MYSQL_DNS_NAME:3306/demo?useSSL=true\&requireSSL=true $MYSQL_CLIENT_USERNAME $MYSQL_PASSWORD USA
 ```
 
 Note the & has been escaped using the backslash as this is needed when passing
