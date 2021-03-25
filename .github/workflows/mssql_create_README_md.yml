@@ -1,4 +1,6 @@
 on: 
+  schedule: 
+    - cron: '0 1 * * 5'
   workflow_dispatch: 
 
 name: 'mssql/create/README.md'
