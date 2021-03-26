@@ -28,6 +28,7 @@ To build the JAR file use the following Maven command line.
 
 To run the example locally use the following Maven command line.
 
+<!-- workflow.skip() -->
 ```shell
   mvn -DappName=$FUNCTIONS_JAVA  -DresourceGroup=$RESOURCE_GROUP \
     clean package azure-functions:run
