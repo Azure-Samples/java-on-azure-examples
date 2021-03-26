@@ -5,6 +5,9 @@
 
 ## Prerequisites
 
+<!-- workflow.cron(0 3 * * 2) -->
+<!-- workflow.include(../install-tools/README.md) -->
+
 This example assumes you have previously completed the following.
 
 1. [Create an Azure Resource Group](../../group/create/)
