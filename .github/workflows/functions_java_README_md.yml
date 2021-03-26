@@ -15,8 +15,6 @@ jobs:
           export FUNCTIONS_JAVA=functions-java-$RANDOM
           mvn -DappName=$FUNCTIONS_JAVA -DresourceGroup=$RESOURCE_GROUP package
           mvn -DappName=$FUNCTIONS_JAVA  -DresourceGroup=$RESOURCE_GROUP \
-          clean package azure-functions:run
-          mvn -DappName=$FUNCTIONS_JAVA  -DresourceGroup=$RESOURCE_GROUP \
           clean package azure-functions:deploy
           echo `az functionapp show \
           --resource-group $RESOURCE_GROUP \
