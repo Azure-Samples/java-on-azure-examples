@@ -67,6 +67,12 @@ exit 0
 | 17. [Swap a deployment slot](appservice/swap-deployment-slot/) | [Workflow](.github/workflows/appservice_swap-deployment-slot_README_md.yml) | [![appservice/swap-deployment-slot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_swap-deployment-slot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_swap-deployment-slot_README_md.yml)
 | 18. [Deploy a web application on a managed JBoss EAP](appservice/jboss-eap-helloworld/) | [Workflow](.github/workflows/appservice_jboss-eap-helloworld_README_md.yml) | [![appservice/jboss-eap-helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_jboss-eap-helloworld_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_jboss-eap-helloworld_README_md.yml)
 
+## Azure Cache for Redis examples
+
+| Name | Link | Status
+| ---- | ---- | ------
+| 1. [Create an Azure Cache for Redis](redis/create/README.md) | [Workflow](.github/workflows/redis_create_README_md.yml) | ![redis/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/redis/create/README.md/badge.svg)
+
 ## Azure Container Instances examples
 
 | Name | Link | Status
