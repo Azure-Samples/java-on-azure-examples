@@ -1,0 +1,37 @@
+on: 
+  workflow_dispatch: 
+
+name: 'redis/create/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          fi
+          export REGION=westus2
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export DELETE_AFTER=$(( `date +%s` + 7200))
+          az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
+          export REDIS_NAME=redis-$RANDOM
+          
+          az redis create \
+          --location $REGION \
+          --name $REDIS_NAME \
+          --resource-group $RESOURCE_GROUP \
+          --sku Basic \
+          --vm-size c0
+          
+          sleep 240
+          
+          export RESULT=$(az redis show --resource-group $RESOURCE_GROUP --name $REDIS_NAME --query provisioningState --output tsv)
+          az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ "$RESULT" != Succeeded ]]; then
+          exit 1
+          fi
