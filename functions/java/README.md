@@ -16,7 +16,8 @@ This example assumes you have previously completed the following.
 <!-- workflow.run() 
 
   cd functions/java
-  export MAVEN_OPTS="-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
+  mkdir .mvn
+  echo "-ntp" > .mvn/maven.config
 
   -->
 
