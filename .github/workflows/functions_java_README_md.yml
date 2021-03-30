@@ -24,6 +24,7 @@ jobs:
           
           
           cd functions/java
+          export MAVEN_OPTS="-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
           
           export FUNCTIONS_JAVA=functions-java-$RANDOM
           mvn -DappName=$FUNCTIONS_JAVA -DresourceGroup=$RESOURCE_GROUP package
