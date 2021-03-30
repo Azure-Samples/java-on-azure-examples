@@ -16,6 +16,7 @@ This example assumes you have previously completed the following.
 <!-- workflow.run() 
 
   cd functions/java
+  export MAVEN_OPTS="-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn"
 
   -->
 
@@ -76,13 +77,19 @@ following command line:
 
 You should see `Hello World` in your browser.
 
-## Cleanup
-
 <!-- workflow.run()
 
   cd ../..
 
  -->
+
+## Cleanup
+
+ <!-- workflow.directOnly() 
+
+  az group delete --name $RESOURCE_GROUP --yes || true
+  
+  -->
 
 Do NOT forget to remove the resources once you are done running the example.
 
