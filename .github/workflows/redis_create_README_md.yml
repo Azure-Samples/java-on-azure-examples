@@ -19,7 +19,7 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           export DELETE_AFTER=$(( `date +%s` + 7200))
           az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
-          export REDIS_NAME=redis-$RANDOM
+          export REDIS_NAME=joa-redis-$RANDOM
           
           az redis create \
           --location $REGION \
