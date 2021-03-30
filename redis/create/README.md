@@ -16,7 +16,7 @@ This example assumes you have previously completed the following example:
 To create the Azure Cache for Redis use the following command line:
 
 ````shell
-  export REDIS_NAME=redis-$RANDOM
+  export REDIS_NAME=joa-redis-$RANDOM
 
   az redis create \
     --location $REGION \
