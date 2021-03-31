@@ -16,7 +16,7 @@ This example assumes you have previously completed the following example:
 To create the Azure Cache for Redis use the following command line:
 
 ````shell
-  export REDIS_NAME=joa-redis-$RANDOM
+  export REDIS_NAME=redis-$RANDOM
 
   az redis create \
     --location $REGION \
@@ -35,11 +35,15 @@ To create the Azure Cache for Redis use the following command line:
 ## Cleanup
 
 <!-- workflow.directOnly() 
+
 export RESULT=$(az redis show --resource-group $RESOURCE_GROUP --name $REDIS_NAME --query provisioningState --output tsv)
+
 az group delete --name $RESOURCE_GROUP --yes || true
+
 if [[ "$RESULT" != Succeeded ]]; then
   exit 1
 fi
+
   -->
 
 Do NOT forget to remove the resources once you are done running the example.
