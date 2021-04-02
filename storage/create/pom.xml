@@ -6,11 +6,11 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>examples.azure.storage.account</groupId>
+        <groupId>examples.azure.storage</groupId>
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>create</artifactId>
+    <artifactId>storage-create</artifactId>
     <packaging>pom</packaging>
     <name>Create an Azure Storage Account</name>
 </project>

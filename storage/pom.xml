@@ -15,7 +15,7 @@
     <packaging>pom</packaging>
     <name>Azure Storage examples</name>
     <modules>
-        <module>account</module>
+        <module>create</module>
         <module>enable-static-website</module>
         <module>blob</module>
     </modules>
