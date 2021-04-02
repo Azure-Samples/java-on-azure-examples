@@ -28,7 +28,7 @@ To create the Azure Cache for Redis use the following command line:
 
 <!-- workflow.run()
 
-  sleep 2400
+  sleep 3000
 
   -->
 
@@ -36,7 +36,7 @@ To create the Azure Cache for Redis use the following command line:
 
 <!-- workflow.directOnly() 
 
-export RESULT=$(az redis show --resource-group $RESOURCE_GROUP --name $REDIS_NAME --query properties.provisioningState --output tsv)
+export RESULT=$(az redis show --resource-group $RESOURCE_GROUP --name $REDIS_NAME --query provisioningState --output tsv)
 
 az group delete --name $RESOURCE_GROUP --yes || true
 
