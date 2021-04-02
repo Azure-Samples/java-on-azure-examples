@@ -17,6 +17,6 @@
     <modules>
         <module>create</module>
         <module>enable-static-website</module>
-        <module>blob</module>
+        <module>upload-files-to-static-website</module>
     </modules>
 </project>

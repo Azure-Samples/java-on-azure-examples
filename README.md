@@ -189,4 +189,4 @@ exit 0
 
 1. [Create an Azure Storage Account](storage/create/)
 1. [Enabled static website hosting on Azure Storage](storage/enable-static-website/)
-1. [Upload files to static website](storage/blob/upload-files-to-static-website/)
+1. [Upload files to static website](storage/upload-files-to-static-website/)
