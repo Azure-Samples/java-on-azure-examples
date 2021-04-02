@@ -8,6 +8,9 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Resource Group](../../group/create/)
 1. [Create an Azure Storage Account](../account/create/)
 
+<!-- workflow.cron(0 2 * * 4) -->
+<!-- workflow.include(../account/create/README.md) -->
+
 ## Enable static website hosting
 
 To enable static website hosting execute the following command line:
@@ -29,6 +32,12 @@ You can browse to the URL shown and it will show you a 404 error page as the
 content has not be uploaded yet.
 
 ## Cleanup
+
+<!-- workflow.directOnly() 
+
+  az group delete --name $RESOURCE_GROUP --yes || true
+
+  -->
 
 Do NOT forget to remove the resources once you are done running the example.
 
