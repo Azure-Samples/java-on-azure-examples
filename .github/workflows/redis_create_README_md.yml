@@ -31,7 +31,7 @@ jobs:
           sleep 2400
           
           
-          export RESULT=$(az redis show --resource-group $RESOURCE_GROUP --name $REDIS_NAME --query provisioningState --output tsv)
+          export RESULT=$(az redis show --resource-group $RESOURCE_GROUP --name $REDIS_NAME --query properties.provisioningState --output tsv)
           
           az group delete --name $RESOURCE_GROUP --yes || true
           
