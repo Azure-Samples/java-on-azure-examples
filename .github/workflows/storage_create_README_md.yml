@@ -1,9 +1,9 @@
 on: 
   schedule: 
-    - cron: '0 2 * * 4'
+    - cron: '0 1 * * 4'
   workflow_dispatch: 
 
-name: 'storage/enable-static-website/README.md'
+name: 'storage/create/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -28,15 +28,8 @@ jobs:
           --resource-group $RESOURCE_GROUP \
           --sku Standard_LRS \
           --kind StorageV2
-          az storage blob service-properties update \
-          --account-name $STORAGE_ACCOUNT_NAME \
-          --static-website \
-          --404-document 404.html \
-          --index-document index.html
-          
-          az storage account show \
-          --name $STORAGE_ACCOUNT_NAME \
-          --query primaryEndpoints.web \
-          --output tsv
-          
+          export RESULT=$(az storage account show --resource-group $RESOURCE_GROUP --name $STORAGE_ACCOUNT_NAME --query provisioningState --output tsv)
           az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ "$RESULT" != Succeeded ]]; then
+          exit 1
+          fi
