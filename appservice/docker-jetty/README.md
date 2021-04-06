@@ -37,7 +37,7 @@ To deploy Jetty use the following command lines:
     -DimageName=jetty:latest \
     -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
-    -DserverId=$ACR
+    -DserverId=$ACR_NAME
 
   az webapp show \
     --resource-group $RESOURCE_GROUP \

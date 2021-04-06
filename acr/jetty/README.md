@@ -34,7 +34,7 @@ To build and push the Docker image to your ACR use the command lines below:
 ```shell
   export ACR_JETTY_IMAGE=jetty:latest
 
-  az acr build --registry $ACR --image $ACR_JETTY_IMAGE .
+  az acr build --registry $ACR_NAME --image $ACR_JETTY_IMAGE .
 ```
 
 <!-- workflow.run()
@@ -45,7 +45,7 @@ cd ../..
 
 <!-- workflow.directOnly()
 
-export RESULT=$(az acr repository show --name $ACR --image $ACR_JETTY_IMAGE)
+export RESULT=$(az acr repository show --name $ACR_NAME --image $ACR_JETTY_IMAGE)
 az group delete --name $RESOURCE_GROUP --yes || true
 
 if [[ -z $RESULT ]]; then

@@ -34,7 +34,7 @@ To build and push the Docker image to your ACR use the command line below:
 ```shell
   export ACR_GLASSFISH_IMAGE=glassfish:latest
 
-  az acr build --registry $ACR --image $ACR_GLASSFISH_IMAGE .
+  az acr build --registry $ACR_NAME --image $ACR_GLASSFISH_IMAGE .
 ```
 
 <!-- workflow.run()
@@ -45,7 +45,7 @@ cd ../..
 
 <!-- workflow.directOnly()
 
-export RESULT=$(az acr repository show --name $ACR --image $ACR_GLASSFISH_IMAGE)
+export RESULT=$(az acr repository show --name $ACR_NAME --image $ACR_GLASSFISH_IMAGE)
 az group delete --name $RESOURCE_GROUP --yes || true
 
 if [[ -z $RESULT ]]; then

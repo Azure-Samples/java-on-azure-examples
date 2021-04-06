@@ -19,12 +19,12 @@ line below:
 
 <!-- workflow.skip() -->
 ```shell
-  export ACR=acr$RANDOM
+  export ACR_NAME=acreg$RANDOM
 ```
 
 <!-- workflow.run()
-if [[ -z $ACR ]]; then
-  export ACR=acr$RANDOM
+if [[ -z $ACR_NAME ]]; then
+  export ACR_NAME=acreg$RANDOM
 fi
   -->
 
@@ -32,17 +32,17 @@ To create the Azure Container Registry use the following command line:
 
 ```shell
   az acr create \
-    --name $ACR \
+    --name $ACR_NAME \
     --resource-group $RESOURCE_GROUP \
     --sku Basic \
     --admin-enabled true
 ```
 
 <!-- workflow.directOnly()
-export RESULT=$(az acr show --name $ACR --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
+export RESULT=$(az acr show --name $ACR_NAME --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
 az group delete --name $RESOURCE_GROUP --yes || true
 if [[ "$RESULT" != Succeeded ]]; then
-  echo "Azure Container Registry $ACR was not provisioned properly"
+  echo "Azure Container Registry $ACR_NAME was not provisioned properly"
   exit 1
 fi
   -->

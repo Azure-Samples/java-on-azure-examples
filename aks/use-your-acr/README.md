@@ -20,7 +20,7 @@ To update your cluster to make it so it can access your Azure Container
 Registry you need to use the following command line.
 
 ```shell
-  az aks update --name $AKS --resource-group $RESOURCE_GROUP --attach-acr $ACR
+  az aks update --name $AKS --resource-group $RESOURCE_GROUP --attach-acr $ACR_NAME
 ```
 
 ## Cleanup

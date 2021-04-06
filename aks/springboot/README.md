@@ -42,7 +42,7 @@ To run the example locally use the following Maven command line.
 ## Push the Docker image to your Azure Container Registry
 
 ````shell
- az acr build --registry $ACR --image springboot:latest .
+ az acr build --registry $ACR_NAME --image springboot:latest .
 ````
 
 ## Deploying to the AKS cluster
@@ -51,7 +51,7 @@ First open the `deployment.yml` file in an editor and replace `ACR` with the
 name of your Azure Container Registry OR execute the command line below:
 
 ```shell
-  sed -i "s/ACR/$ACR/g" deployment.yml
+  sed -i "s/ACR/$ACR_NAME/g" deployment.yml
 ```
 
 Then execute the command below to deploy to the AKS cluster:

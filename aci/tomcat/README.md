@@ -25,8 +25,8 @@ To deploy Tomcat the following command line:
   az container create \
     --resource-group $RESOURCE_GROUP \
     --name $ACI_TOMCAT \
-    --image $ACR.azurecr.io/$ACR_TOMCAT_IMAGE \
-    --registry-login-server $ACR.azurecr.io \
+    --image $ACR_NAME.azurecr.io/$ACR_TOMCAT_IMAGE \
+    --registry-login-server $ACR_NAME.azurecr.io \
     --registry-username $ACR_PULL_SERVICE_PRINCIPAL_ID \
     --registry-password $ACR_PULL_SERVICE_PRINCIPAL_PASSWORD \
     --dns-name-label $ACI_TOMCAT \

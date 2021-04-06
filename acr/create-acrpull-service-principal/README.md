@@ -20,7 +20,7 @@ Execute the following command lines to create the 'acrpull' Service Principal:
 <!-- workflow.skip() -->
 ```shell
   export ACR_PULL_SERVICE_PRINCIPAL_NAME=acr-pull-$RANDOM
-  export ACR_ID=`az acr show --name $ACR --query id --output tsv`
+  export ACR_ID=`az acr show --name $ACR_NAME --query id --output tsv`
   export ACR_PULL_SERVICE_PRINCIPAL_PASSWORD=`az ad sp create-for-rbac \
     --name http://$ACR_PULL_SERVICE_PRINCIPAL_NAME \
     --scopes $ACR_ID \
@@ -37,7 +37,7 @@ Execute the following command lines to create the 'acrpull' Service Principal:
 
 if [[ -z $ACR_PULL_SERVICE_PRINCIPAL_NAME ]]; then
   export ACR_PULL_SERVICE_PRINCIPAL_NAME=acr-pull-$RANDOM
-  export ACR_ID=`az acr show --name $ACR --query id --output tsv`
+  export ACR_ID=`az acr show --name $ACR_NAME --query id --output tsv`
   export ACR_PULL_SERVICE_PRINCIPAL_PASSWORD=`az ad sp create-for-rbac \
     --name http://$ACR_PULL_SERVICE_PRINCIPAL_NAME \
     --scopes $ACR_ID \

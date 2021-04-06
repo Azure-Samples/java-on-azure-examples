@@ -29,14 +29,14 @@ cd acr/create-settings-xml
 Get the ACR username
 
 ```shell
-  export ACR_USERNAME=`az acr credential show --name $ACR \
+  export ACR_USERNAME=`az acr credential show --name $ACR_NAME \
     --resource-group $RESOURCE_GROUP --query username --output tsv`
 ```
 
 Get the ACR password
 
 ```shell
-  export ACR_PASSWORD=`az acr credential show --name $ACR \
+  export ACR_PASSWORD=`az acr credential show --name $ACR_NAME \
     --resource-group $RESOURCE_GROUP --query 'passwords[0].value' --output tsv`
 ```
 

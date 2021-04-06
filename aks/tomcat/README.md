@@ -29,7 +29,7 @@ First open the `deployment.yml` file in an editor and replace `ACR` with the
 name of your registry OR execute the command line below:
 
 ```shell
-  sed -i "s/ACR/$ACR/g" deployment.yml
+  sed -i "s/ACR/$ACR_NAME/g" deployment.yml
 ```
 
 Then execute the command below to deploy to the AKS cluster.
