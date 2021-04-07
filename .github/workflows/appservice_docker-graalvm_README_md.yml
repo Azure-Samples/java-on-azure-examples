@@ -21,11 +21,11 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           export DELETE_AFTER=$(( `date +%s` + 7200))
           az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
-          if [[ -z $ACR ]]; then
-          export ACR=acr$RANDOM
+          if [[ -z $ACR_NAME ]]; then
+          export ACR_NAME=acreg$RANDOM
           fi
           az acr create \
-          --name $ACR \
+          --name $ACR_NAME \
           --resource-group $RESOURCE_GROUP \
           --sku Basic \
           --admin-enabled true
@@ -37,7 +37,7 @@ jobs:
           docker run --rm --tty -v $PWD/../..:/mnt builder mvn -P graalvm -pl acr/graalvm clean install
           export ACR_GRAALVM_IMAGE=graalvm:latest
           
-          az acr build --registry $ACR --image $ACR_GRAALVM_IMAGE .
+          az acr build --registry $ACR_NAME --image $ACR_GRAALVM_IMAGE .
           
           cd ../..
           
@@ -48,20 +48,20 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           export DELETE_AFTER=$(( `date +%s` + 7200))
           az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
-          if [[ -z $ACR ]]; then
-          export ACR=acr$RANDOM
+          if [[ -z $ACR_NAME ]]; then
+          export ACR_NAME=acreg$RANDOM
           fi
           az acr create \
-          --name $ACR \
+          --name $ACR_NAME \
           --resource-group $RESOURCE_GROUP \
           --sku Basic \
           --admin-enabled true
           
           cd acr/create-settings-xml
           
-          export ACR_USERNAME=`az acr credential show --name $ACR \
+          export ACR_USERNAME=`az acr credential show --name $ACR_NAME \
           --resource-group $RESOURCE_GROUP --query username --output tsv`
-          export ACR_PASSWORD=`az acr credential show --name $ACR \
+          export ACR_PASSWORD=`az acr credential show --name $ACR_NAME \
           --resource-group $RESOURCE_GROUP --query 'passwords[0].value' --output tsv`
           export SETTINGS_XML=$PWD/settings.xml
           
@@ -94,7 +94,7 @@ jobs:
           -DimageName=graalvm:latest \
           -DappServicePlan=$APPSERVICE_PLAN \
           -DresourceGroup=$RESOURCE_GROUP \
-          -DserverId=$ACR
+          -DserverId=$ACR_NAME
           
           echo `az webapp show \
           --resource-group $RESOURCE_GROUP \

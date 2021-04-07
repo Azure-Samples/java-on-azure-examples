@@ -19,18 +19,18 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           export DELETE_AFTER=$(( `date +%s` + 7200))
           az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
-          if [[ -z $ACR ]]; then
-          export ACR=acr$RANDOM
+          if [[ -z $ACR_NAME ]]; then
+          export ACR_NAME=acreg$RANDOM
           fi
           az acr create \
-          --name $ACR \
+          --name $ACR_NAME \
           --resource-group $RESOURCE_GROUP \
           --sku Basic \
           --admin-enabled true
           
           if [[ -z $ACR_PULL_SERVICE_PRINCIPAL_NAME ]]; then
           export ACR_PULL_SERVICE_PRINCIPAL_NAME=acr-pull-$RANDOM
-          export ACR_ID=`az acr show --name $ACR --query id --output tsv`
+          export ACR_ID=`az acr show --name $ACR_NAME --query id --output tsv`
           export ACR_PULL_SERVICE_PRINCIPAL_PASSWORD=`az ad sp create-for-rbac \
           --name http://$ACR_PULL_SERVICE_PRINCIPAL_NAME \
           --scopes $ACR_ID \
@@ -50,11 +50,11 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           export DELETE_AFTER=$(( `date +%s` + 7200))
           az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
-          if [[ -z $ACR ]]; then
-          export ACR=acr$RANDOM
+          if [[ -z $ACR_NAME ]]; then
+          export ACR_NAME=acreg$RANDOM
           fi
           az acr create \
-          --name $ACR \
+          --name $ACR_NAME \
           --resource-group $RESOURCE_GROUP \
           --sku Basic \
           --admin-enabled true
@@ -64,7 +64,7 @@ jobs:
           mvn package
           export ACR_WILDFLY_IMAGE=wildfly:latest
           
-          az acr build --registry $ACR --image $ACR_WILDFLY_IMAGE .
+          az acr build --registry $ACR_NAME --image $ACR_WILDFLY_IMAGE .
           
           cd ../..
           
@@ -73,8 +73,8 @@ jobs:
           az container create \
           --resource-group $RESOURCE_GROUP \
           --name $ACI_WILDFLY \
-          --image $ACR.azurecr.io/$ACR_WILDFLY_IMAGE \
-          --registry-login-server $ACR.azurecr.io \
+          --image $ACR_NAME.azurecr.io/$ACR_WILDFLY_IMAGE \
+          --registry-login-server $ACR_NAME.azurecr.io \
           --registry-username $ACR_PULL_SERVICE_PRINCIPAL_ID \
           --registry-password $ACR_PULL_SERVICE_PRINCIPAL_PASSWORD \
           --dns-name-label $ACI_WILDFLY \

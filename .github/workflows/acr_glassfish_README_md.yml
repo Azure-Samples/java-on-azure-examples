@@ -21,11 +21,11 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           export DELETE_AFTER=$(( `date +%s` + 7200))
           az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
-          if [[ -z $ACR ]]; then
-          export ACR=acr$RANDOM
+          if [[ -z $ACR_NAME ]]; then
+          export ACR_NAME=acreg$RANDOM
           fi
           az acr create \
-          --name $ACR \
+          --name $ACR_NAME \
           --resource-group $RESOURCE_GROUP \
           --sku Basic \
           --admin-enabled true
@@ -35,12 +35,12 @@ jobs:
           mvn package
           export ACR_GLASSFISH_IMAGE=glassfish:latest
           
-          az acr build --registry $ACR --image $ACR_GLASSFISH_IMAGE .
+          az acr build --registry $ACR_NAME --image $ACR_GLASSFISH_IMAGE .
           
           cd ../..
           
           
-          export RESULT=$(az acr repository show --name $ACR --image $ACR_GLASSFISH_IMAGE)
+          export RESULT=$(az acr repository show --name $ACR_NAME --image $ACR_GLASSFISH_IMAGE)
           az group delete --name $RESOURCE_GROUP --yes || true
           
           if [[ -z $RESULT ]]; then
