@@ -1,6 +1,8 @@
 
 # Upload files to static website
 
+[![storage/upload-files-to-static-website/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_upload-files-to-static-website_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_upload-files-to-static-website_README_md.yml)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following examples:
