@@ -39,7 +39,7 @@ To upload a directory containing your static website use following command line:
 
 <!-- workflow.directOnly() 
 
-  export URL=$(az storage account show --name $STORAGE_ACCOUNT_NAME --query primaryEndpoints.web --output tsv)/index.html
+  export URL=$(az storage account show --name $STORAGE_ACCOUNT_NAME --query primaryEndpoints.web --output tsv)index.html
   export RESULT=$(curl $URL)
 
   az group delete --name $RESOURCE_GROUP --yes || true
