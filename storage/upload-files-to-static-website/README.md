@@ -14,6 +14,12 @@ This example assumes you have previously completed the following examples:
 
 ## Upload files to static website
 
+<!-- workflow.run() 
+
+  cd storage/upload-files-to-static-website
+
+  -->
+
 To upload a directory containing your static website use following command line:
 
 ```shell
@@ -22,6 +28,12 @@ To upload a directory containing your static website use following command line:
     --destination '$web' \
     --account-name $STORAGE_ACCOUNT_NAME
 ```
+
+<!-- workflow.run() 
+
+  cd ../..
+
+  -->
 
 ## Cleanup
 
