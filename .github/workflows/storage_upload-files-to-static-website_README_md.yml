@@ -38,10 +38,16 @@ jobs:
           --name $STORAGE_ACCOUNT_NAME \
           --query primaryEndpoints.web \
           --output tsv
+          
+          cd storage/upload-files-to-static-website
+          
           az storage blob upload-batch \
           --source web \
           --destination '$web' \
           --account-name $STORAGE_ACCOUNT_NAME
+          
+          cd ../..
+          
           
           export URL=$(az storage account show --name $STORAGE_ACCOUNT_NAME --query primaryEndpoints.web --output tsv)
           export RESULT=$(curl $URL)
