@@ -164,7 +164,7 @@ exit 0
 | Name | Link | Status
 | ---- | ---- | ------
 | 1. [Create an Azure Service Bus](servicebus/create/) | [Workflow](.github/workflows/servicebus_create_README_md.yml)  | [![servicebus/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_create_README_md.yml)
-1. [Create an Azure Service Bus Queue](servicebus/create-queue/)
+| 2. [Create an Azure Service Bus Queue](servicebus/create-queue/) | [Workflow](.github/workflows/servicebus_create-queue_README_md.yml) | [![servicebus/create-queue/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_create-queue_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_create-queue_README_md.yml)
 1. [Send a message](servicebus/send-message/)
 1. [Receive a message](servicebus/receive-message/)
 1. [Send a JMS message](servicebus/send-jms-message/)

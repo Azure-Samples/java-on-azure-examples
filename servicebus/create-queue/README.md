@@ -1,6 +1,8 @@
 
 # Create an Azure Service Bus Queue
 
+[![servicebus/create-queue/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_create-queue_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_create-queue_README_md.yml)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following example.
