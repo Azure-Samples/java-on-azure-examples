@@ -168,7 +168,7 @@ exit 0
 | 3. [Send a message](servicebus/send-message/) | [Workflow](.github/workflows/servicebus_send-message_README_md.yml) | [![servicebus/send-message/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_send-message_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_send-message_README_md.yml)
 | 4. [Receive a message](servicebus/receive-message/) | [Workflow](.github/workflows/servicebus_receive-message_README_md.yml) | [![servicebus/receive-message/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_receive-message_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_receive-message_README_md.yml)
 | 5. [Send a JMS message](servicebus/send-jms-message/) | [Workflow](.github/workflows/servicebus_send-jms-message_README_md.yml) | [![servicebus/send-jms-message/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_send-jms-message_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_send-jms-message_README_md.yml)
-1. [Receive a JMS message](servicebus/receive-jms-message/)
+| 6. [Receive a JMS message](servicebus/receive-jms-message/) | [Workflow](.github/workflows/servicebus_receive-jms-message_README_md.yml) | [![servicebus/receive-jms-message/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_receive-jms-message_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_receive-jms-message_README_md.yml)
 
 ## Azure Spring Cloud examples
 
