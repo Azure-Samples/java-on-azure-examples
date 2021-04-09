@@ -1,6 +1,8 @@
 
 # Receive a message from an Azure Service Bus Queue
 
+[![servicebus/receive-message/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_receive-message_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_receive-message_README_md.yml)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following example.
