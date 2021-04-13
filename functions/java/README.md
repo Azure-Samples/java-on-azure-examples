@@ -87,7 +87,7 @@ You should see `Hello World` in your browser.
 
 ## Cleanup
 
- <!-- workflow.directOnly() 
+<!-- workflow.directOnly() 
 
   az group delete --name $RESOURCE_GROUP --yes || true
   
