@@ -45,3 +45,6 @@ jobs:
           --output tsv`/api/helloworld
           
           cd ../..
+          
+          
+          az group delete --name $RESOURCE_GROUP --yes || true
