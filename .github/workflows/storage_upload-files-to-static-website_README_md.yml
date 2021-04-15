@@ -46,6 +46,7 @@ jobs:
           --destination '$web' \
           --account-name $STORAGE_ACCOUNT_NAME
           
+          sleep 60
           cd ../..
           
           
@@ -54,7 +55,7 @@ jobs:
           
           az group delete --name $RESOURCE_GROUP --yes || true
           
-          if [[ "$RESULT" != *"This is served from Azure Storage"* ]]; then
+          if [[ "$RESULT" != *"TAzure Storage"* ]]; then
           echo "Response did not contain 'This is served from Azure Storage'"
           exit 1
           fi
