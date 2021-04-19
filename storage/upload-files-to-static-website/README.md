@@ -48,7 +48,7 @@ To upload a directory containing your static website use following command line:
 
   az group delete --name $RESOURCE_GROUP --yes || true
 
-  if [[ "$RESULT" != *"TAzure Storage"* ]]; then
+  if [[ "$RESULT" != *"Azure Storage"* ]]; then
     echo "Response did not contain 'This is served from Azure Storage'"
     exit 1
   fi
