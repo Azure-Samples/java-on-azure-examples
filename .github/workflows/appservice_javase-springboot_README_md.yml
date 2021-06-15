@@ -29,7 +29,7 @@ jobs:
           --location $REGION \
           --name $APPSERVICE_PLAN \
           --is-linux \
-          --sku P1V2
+          --sku P1v3
           
           cd appservice/javase-springboot
           
