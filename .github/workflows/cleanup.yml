@@ -1,0 +1,19 @@
+on: 
+  schedule: 
+    - cron: '55 * * * *'
+  workflow_dispatch: 
+name: 'cleanup'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          for resourceGroup in `az group list --query "[? contains(name,'java-on-azure-')][].{name:name}" -o tsv`; do
+            echo Deleting ${resourceGroup}
+            az group delete -n ${resourceGroup} --yes --no-wait
+          done
