@@ -120,6 +120,11 @@ exit 0
 | 3. [Load your PostgreSQL database with data](postgresql/load-your-postgresql-database-with-data/) | [Workflow](.github/workflows/postgresql_load-your-postgresql-database-with-data_README_md.yml) | [![postgresql/load-your-postgresql-database-with-data/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgresql_load-your-postgresql-database-with-data_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgresql_load-your-postgresql-database-with-data_README_md.yml)
 | 4. [Get country information (JDBC client)](postgresql/get-country/) | [Workflow](.github/workflows/postgresql_get-country_README_md.yml) | [![postgresql/get-country/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgresql_get-country_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgresql_get-country_README_md.yml)
 
+## Azure Event Hubs examples
+
+| Name | Link | Status
+| 1. [Create an Azure Event Hubs namespace](eventhubs/create-namespace/README.md) | |
+
 ## Azure Functions examples
 
 | Name | Link | Status

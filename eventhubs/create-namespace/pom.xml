@@ -6,15 +6,11 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>examples.azure</groupId>
+        <groupId>examples.azure.eventhubs</groupId>
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.eventhubs</groupId>
-    <artifactId>project</artifactId>
+    <artifactId>eventhubs-create-namespace</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Event Hubs examples</name>
-    <modules>
-        <module>create-namespace</module>
-    </modules>
+    <name>Create an Azure Event Hubs namespace</name>
 </project>
