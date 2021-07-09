@@ -123,7 +123,9 @@ exit 0
 ## Azure Event Hubs examples
 
 | Name | Link | Status
-| 1. [Create an Azure Event Hubs namespace](eventhubs/create-namespace/README.md) | |
+| ---- | ---- | ------
+| 1. [Create a namespace](eventhubs/create-namespace/README.md) | |
+| 1. [Create an event hub](eventhubs/create-eventhub/README.md) | | 
 
 ## Azure Functions examples
 

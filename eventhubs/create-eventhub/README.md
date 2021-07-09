@@ -1,25 +1,27 @@
 
-# Create a namespace
+# Create an event hub
 
 ## Prerequisites
 
 This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
+1. [Create an Azure Event Hubs namespace](../create-namespace/README.md)
 
 <!-- workflow.include(../../group/create/README.md) -->
+<!-- workflow.include(../create-namespace/README.md) -->
 
-## Create the namespace
+## Create the event hub
 
-To create the namespace use the following command line:
+To create the event hub use the following command line:
 
 ````shell
-  export EVENTHUBS_NAMESPACE=eventhubs-$RANDOM
+  export EVENTHUBS_EVENTHUB=eventhubs-hub-$RANDOM
 
-  az eventhubs namespace create \
-     --name $EVENTHUBS_NAMESPACE \
+  az eventhubs eventhub create \
+     --name $EVENTHUBS_EVENTHUB \
      --resource-group $RESOURCE_GROUP \
-     --location $REGION
+     --namespace-name $EVENTHUBS_NAMESPACE
 ````
 
 ## Cleanup
@@ -31,3 +33,5 @@ To create the namespace use the following command line:
   -->
 
 Do NOT forget to remove the resources once you are done running the example.
+
+1m
