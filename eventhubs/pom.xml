@@ -18,5 +18,6 @@
         <module>create-eventhub</module>
         <module>create-namespace</module>
         <module>send-event</module>
+        <module>receive-event</module>
     </modules>
 </project>

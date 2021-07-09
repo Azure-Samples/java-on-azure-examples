@@ -34,4 +34,9 @@ To create the event hub use the following command line:
 
 Do NOT forget to remove the resources once you are done running the example.
 
+## Additional documentation
+
+1. [Azure Event Hubs documentation](https://docs.microsoft.com/azure/event-hubs/)
+1. [Create an event hub](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-quickstart-cli#create-an-event-hub)
+
 1m

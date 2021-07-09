@@ -31,3 +31,8 @@ To create the namespace use the following command line:
   -->
 
 Do NOT forget to remove the resources once you are done running the example.
+
+## Additional documentation
+
+1. [Azure Event Hubs documentation](https://docs.microsoft.com/azure/event-hubs/)
+1. [Create an Event Hubs namespace](https://docs.microsoft.com/azure/event-hubs/event-hubs-quickstart-cli#create-an-event-hubs-namespace)

@@ -1,5 +1,5 @@
 
-# Send an event
+# Receive an event
 
 ## Prerequisites
 
@@ -8,24 +8,14 @@ This example assumes you have previously completed the following example:
 1. [Create a resource group](../../group/create/README.md)
 1. [Create a namespace](../create-namespace/README.md)
 1. [Create an event hub](../create-eventhub/README.md)
+1. [Send an event](../send-event/README.md)
 
 <!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../create-namespace/README.md) -->
 <!-- workflow.include(../create-eventhub/README.md) -->
+<!-- workflow.include(../send-event/README.md) -->
 
-## Send an event
-
-Execute the command line below to setup the connection string we will use to
-connect to the event hub:
-
-````shell
-  export EVENTHUBS_EVENTHUB_CONNECTION_STRING=$(az eventhubs namespace authorization-rule keys list \
-    --resource-group $RESOURCE_GROUP \
-    --namespace-name $EVENTHUBS_NAMESPACE \
-    --name RootManageSharedAccessKey \
-    --query primaryConnectionString \
-    --output tsv)
-````
+## Receive an event
 
 Build the JAR file using the Maven command line below:
 
@@ -33,10 +23,10 @@ Build the JAR file using the Maven command line below:
   mvn clean install
 ```
 
-Execute the following command line to send the event to the event hub:
+Execute the following command line to receive an event from the event hub:
 
 ```shell
-  java -jar targert/send-event.jar
+  java -jar targert/receive-event.jar
 ```
 
 ## Cleanup
@@ -52,5 +42,4 @@ Do NOT forget to remove the resources once you are done running the example.
 ## Additional documentation
 
 1. [Azure Event Hubs documentation](https://docs.microsoft.com/azure/event-hubs/)
-1. [Get an Event Hubs connection string](https://docs.microsoft.com/azure/event-hubs/event-hubs-get-connection-string)
 1. [Use Java to send events to or receive events from Azure Event Hubs (azure-messaging-eventhubs)](https://docs.microsoft.com/azure/event-hubs/event-hubs-java-get-started-send)
