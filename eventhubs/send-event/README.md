@@ -36,7 +36,7 @@ Build the JAR file using the Maven command line below:
 Execute the following command line to send the event to the event hub:
 
 ```shell
-  java -version
+  java -jar targert/send-event.jar
 ```
 
 ## Cleanup
