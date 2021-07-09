@@ -68,10 +68,14 @@
         <module>aks</module>
         <module>appservice</module>
         <module>aro</module>
+        <module>cosmosdb</module>
+        <module>eventhubs</module>
         <module>group</module>
         <module>keyvault</module>
+        <module>mssql</module>
         <module>mysql</module>
         <module>postgresql</module>
+        <module>redis</module>
         <module>servicebus</module>
         <module>spring-cloud</module>
         <module>storage</module>
