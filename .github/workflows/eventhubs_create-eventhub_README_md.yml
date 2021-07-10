@@ -1,0 +1,42 @@
+on: 
+  workflow_dispatch: 
+
+name: 'eventhubs/create-eventhub/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          fi
+          export REGION=westus2
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export DELETE_AFTER=$(( `date +%s` + 7200))
+          az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          fi
+          export REGION=westus2
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export DELETE_AFTER=$(( `date +%s` + 7200))
+          az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
+          export EVENTHUBS_NAMESPACE=eventhubs-$RANDOM
+          
+          az eventhubs namespace create \
+          --name $EVENTHUBS_NAMESPACE \
+          --resource-group $RESOURCE_GROUP \
+          --location $REGION
+          export EVENTHUBS_EVENTHUB=eventhubs-hub-$RANDOM
+          
+          az eventhubs eventhub create \
+          --name $EVENTHUBS_EVENTHUB \
+          --resource-group $RESOURCE_GROUP \
+          --namespace-name $EVENTHUBS_NAMESPACE
+          
+          az group delete --name $RESOURCE_GROUP --yes || true
