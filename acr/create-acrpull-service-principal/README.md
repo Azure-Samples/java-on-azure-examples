@@ -22,15 +22,16 @@ Execute the following command lines to create the 'acrpull' Service Principal:
   export ACR_PULL_SERVICE_PRINCIPAL_NAME=acr-pull-$RANDOM
   export ACR_ID=`az acr show --name $ACR_NAME --query id --output tsv`
   export ACR_PULL_SERVICE_PRINCIPAL_PASSWORD=`az ad sp create-for-rbac \
-    --name http://$ACR_PULL_SERVICE_PRINCIPAL_NAME \
+    --name $ACR_PULL_SERVICE_PRINCIPAL_NAME \
     --scopes $ACR_ID \
     --role acrpull \
     --query password \
     --output tsv`
   export ACR_PULL_SERVICE_PRINCIPAL_ID=`az ad sp show \
-    --id http://$ACR_PULL_SERVICE_PRINCIPAL_NAME \
-    --query appId \
+    --display-name $ACR_PULL_SERVICE_PRINCIPAL_NAME \
+    --query [].appId \
     --output tsv`
+fi
 ```
 
 <!-- workflow.run()
@@ -39,14 +40,14 @@ if [[ -z $ACR_PULL_SERVICE_PRINCIPAL_NAME ]]; then
   export ACR_PULL_SERVICE_PRINCIPAL_NAME=acr-pull-$RANDOM
   export ACR_ID=`az acr show --name $ACR_NAME --query id --output tsv`
   export ACR_PULL_SERVICE_PRINCIPAL_PASSWORD=`az ad sp create-for-rbac \
-    --name http://$ACR_PULL_SERVICE_PRINCIPAL_NAME \
+    --name $ACR_PULL_SERVICE_PRINCIPAL_NAME \
     --scopes $ACR_ID \
     --role acrpull \
     --query password \
     --output tsv`
-  export ACR_PULL_SERVICE_PRINCIPAL_ID=`az ad sp show \
-    --id http://$ACR_PULL_SERVICE_PRINCIPAL_NAME \
-    --query appId \
+  export ACR_PULL_SERVICE_PRINCIPAL_ID=`az ad sp list \
+    --display-name $ACR_PULL_SERVICE_PRINCIPAL_NAME \
+    --query [].appId \
     --output tsv`
 fi
 
