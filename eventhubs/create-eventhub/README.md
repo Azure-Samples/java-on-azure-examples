@@ -8,6 +8,7 @@ This example assumes you have previously completed the following example:
 1. [Create a resource group](../../group/create/README.md)
 1. [Create a namespace](../create-namespace/README.md)
 
+<!-- workflow.cron(0 7 * * 1) -->
 <!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../create-namespace/README.md) -->
 
@@ -28,7 +29,12 @@ To create the event hub use the following command line:
 
 <!-- workflow.directOnly()
 
+  export RESULT=$(az eventhubs eventhub show --name $EVENTHUBS_EVENTHUB --namespace-name $EVENTHUBS_NAMESPACE --resource-group $RESOURCE_GROUP --output tsv --query status)
   az group delete --name $RESOURCE_GROUP --yes || true
+  if [[ "$RESULT" != Active ]]; then
+    echo "Azure Event Hubs EventHub - $EVENTHUBS_EVENTHUB - was not provisioned properly"
+    exit 1
+  fi
 
   -->
 
