@@ -66,9 +66,13 @@ jobs:
           --name RootManageSharedAccessKey \
           --query primaryConnectionString \
           --output tsv)
+          
+          cd eventhubs/send-event
+          
           mvn clean install
           
           export RESULT=$(java -jar target/send-event.jar)
+          cd ../..
           
           
           az group delete --name $RESOURCE_GROUP --yes || true
