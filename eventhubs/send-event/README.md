@@ -28,6 +28,12 @@ connect to the event hub:
     --output tsv)
 ````
 
+<!-- workflow.run() 
+
+  cd eventhubs/send-event
+
+  -->
+
 Build the JAR file using the Maven command line below:
 
 ```shell
@@ -43,9 +49,11 @@ Execute the following command line to send the event to the event hub:
 
 <!-- workflow.run()
 
-   export RESULT=$(java -jar target/send-event.jar)
+  export RESULT=$(java -jar target/send-event.jar)
+  cd ../..
 
   -->
+
 
 ## Cleanup
 

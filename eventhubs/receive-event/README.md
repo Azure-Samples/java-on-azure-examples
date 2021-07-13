@@ -20,6 +20,13 @@ This example assumes you have previously completed the following example:
 
 Build the JAR file using the Maven command line below:
 
+<!-- workflow.run() 
+
+  cd eventhubs/receive-event
+
+  -->
+
+
 ```shell
   mvn clean install
 ```
@@ -33,7 +40,8 @@ Execute the following command line to receive an event from the event hub:
 
 <!-- workflow.run()
 
-   export RESULT=$(java -jar target/receive-event.jar)
+  export RESULT=$(java -jar target/receive-event.jar)
+  cd ../..
 
   -->
 
