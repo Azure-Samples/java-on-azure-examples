@@ -2,8 +2,7 @@ package examples.azure.eventhubs.receiveevent;
 
 import com.azure.messaging.eventhubs.EventHubClientBuilder;
 import static com.azure.messaging.eventhubs.EventHubClientBuilder.DEFAULT_CONSUMER_GROUP_NAME;
-import com.azure.messaging.eventhubs.EventHubConsumerClient;
-import com.azure.messaging.eventhubs.models.EventPosition;
+import com.azure.messaging.eventhubs.EventHubConsumerAsyncClient;
 import com.azure.messaging.eventhubs.models.PartitionEvent;
 
 public class ReceiveEvent {
@@ -12,16 +11,13 @@ public class ReceiveEvent {
         String connectionString = System.getenv("EVENTHUBS_EVENTHUB_CONNECTION_STRING");
         String eventHub = System.getenv("EVENTHUBS_EVENTHUB");
 
-        try (EventHubConsumerClient consumer = new EventHubClientBuilder()
+        try (EventHubConsumerAsyncClient consumer = new EventHubClientBuilder()
                 .connectionString(connectionString, eventHub)
                 .consumerGroup(DEFAULT_CONSUMER_GROUP_NAME)
-                .buildConsumerClient()) {
+                .buildAsyncConsumerClient()) {
 
-            String partitionId = consumer.getPartitionIds().stream().findFirst().orElseThrow();
-            PartitionEvent event = consumer.receiveFromPartition(partitionId, 1, EventPosition.earliest()).iterator().next();
+            PartitionEvent event = consumer.receive(true).blockFirst();
             System.out.println("Received: " + event.getData().getBodyAsString());
         }
-        
-        System.exit(0);
     }
 }

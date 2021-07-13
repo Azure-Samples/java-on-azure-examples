@@ -10,6 +10,7 @@ This example assumes you have previously completed the following example:
 1. [Create an event hub](../create-eventhub/README.md)
 1. [Send an event](../send-event/README.md)
 
+<!-- workflow.cron(0 7 * * 3) -->
 <!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../create-namespace/README.md) -->
 <!-- workflow.include(../create-eventhub/README.md) -->
@@ -25,15 +26,26 @@ Build the JAR file using the Maven command line below:
 
 Execute the following command line to receive an event from the event hub:
 
+<!-- workflow.skip() -->
 ```shell
   java -jar target/receive-event.jar
 ```
+
+<!-- workflow.run()
+
+   export RESULT=$(java -jar target/receive-event.jar)
+
+  -->
 
 ## Cleanup
 
 <!-- workflow.directOnly()
 
   az group delete --name $RESOURCE_GROUP --yes || true
+  if [[ "$RESULT" != 'Received: this is an event' ]]; then
+    echo "Error when receiving event to EventHub"
+    exit 1
+  fi
 
   -->
 
