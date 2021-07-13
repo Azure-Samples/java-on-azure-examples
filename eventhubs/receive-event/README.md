@@ -26,7 +26,7 @@ Build the JAR file using the Maven command line below:
 Execute the following command line to receive an event from the event hub:
 
 ```shell
-  java -jar targert/receive-event.jar
+  java -jar target/receive-event.jar
 ```
 
 ## Cleanup

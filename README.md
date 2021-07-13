@@ -127,6 +127,7 @@ exit 0
 | 1. [Create a namespace](eventhubs/create-namespace/README.md) | |
 | 2. [Create an event hub](eventhubs/create-eventhub/README.md) | | 
 | 3. [Send an event](eventhubs/send-event/README.md) | | 
+| 4. [Receive an event](eventhubs/receive-event/README.md) | | 
 
 ## Azure Functions examples
 

@@ -12,5 +12,5 @@
     </parent>
     <artifactId>eventhubs-create-namespace</artifactId>
     <packaging>pom</packaging>
-    <name>Create an Azure Event Hubs namespace</name>
+    <name>Create a namespace</name>
 </project>
