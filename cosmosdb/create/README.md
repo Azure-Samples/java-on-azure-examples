@@ -7,8 +7,9 @@
 
 This example assumes you have previously completed the following example:
 
-1. [Create an Azure Resource Group](../../group/create/)
+1. [Create an Azure Resource Group](../../group/create/README.md)
 
+<!-- workflow.cron(0 6 * * 1) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 ## Create the Azure Cosmos DB
@@ -23,12 +24,22 @@ To create the Azure Cosmos DB use the following command line:
     --resource-group $RESOURCE_GROUP
 ````
 
-<!-- workflow.directOnly()
+## Cleanup
 
+<!-- workflow.directOnly()
+  
+  export RESULT=$(az cosmosdb show --name $COSMOSDB_NAME --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
   az group delete --name $RESOURCE_GROUP --yes || true
+  if [[ "$RESULT" != Succeeded ]]; then
+    echo "$COSMOSDB_NAME was not provisioned properly"
+    exit 1
+  fi
 
   -->
 
-## Cleanup
-
 Do NOT forget to remove the resources once you are done running the example.
+
+## Additional documentation
+
+1. [Azure Cosmos DB documentation](https://docs.microsoft.com/azure/cosmos-db/)
+1. [Azure CLI - az cosmosdb](https://docs.microsoft.com/cli/azure/cosmosdb/database)
