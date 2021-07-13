@@ -17,6 +17,7 @@ public class SendEvent {
             EventData event = new EventData("this is an event");
             batch.tryAdd(event);
             producer.send(batch);
+            System.out.println("Event was sent successfully");
         }
     }
 }

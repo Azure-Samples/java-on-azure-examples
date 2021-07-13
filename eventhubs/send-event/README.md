@@ -9,6 +9,7 @@ This example assumes you have previously completed the following example:
 1. [Create a namespace](../create-namespace/README.md)
 1. [Create an event hub](../create-eventhub/README.md)
 
+<!-- workflow.cron(0 7 * * 4) -->
 <!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../create-namespace/README.md) -->
 <!-- workflow.include(../create-eventhub/README.md) -->
@@ -35,15 +36,26 @@ Build the JAR file using the Maven command line below:
 
 Execute the following command line to send the event to the event hub:
 
+<!-- workflow.skip() -->
 ```shell
-  java -jar targert/send-event.jar
+  java -jar target/send-event.jar
 ```
+
+<!-- workflow.run()
+
+   export RESULT=$(java -jar target/send-event.jar)
+
+  -->
 
 ## Cleanup
 
 <!-- workflow.directOnly()
 
   az group delete --name $RESOURCE_GROUP --yes || true
+  if [[ "$RESULT" != 'Event was sent successfully' ]]; then
+    echo "Error when sending event to EventHub"
+    exit 1
+  fi
 
   -->
 
