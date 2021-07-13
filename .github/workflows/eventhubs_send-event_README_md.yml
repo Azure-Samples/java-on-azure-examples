@@ -1,4 +1,6 @@
 on: 
+  schedule: 
+    - cron: '0 7 * * 4'
   workflow_dispatch: 
 
 name: 'eventhubs/send-event/README.md'
@@ -65,6 +67,12 @@ jobs:
           --query primaryConnectionString \
           --output tsv)
           mvn clean install
-          java -jar targert/send-event.jar
+          
+          export RESULT=$(java -jar target/send-event.jar)
+          
           
           az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ "$RESULT" != 'Event was sent successfully' ]]; then
+          echo "Error when sending event to EventHub"
+          exit 1
+          fi

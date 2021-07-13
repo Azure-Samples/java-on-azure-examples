@@ -1,4 +1,6 @@
 on: 
+  schedule: 
+    - cron: '0 7 * * 1'
   workflow_dispatch: 
 
 name: 'eventhubs/create-eventhub/README.md'
@@ -39,4 +41,9 @@ jobs:
           --resource-group $RESOURCE_GROUP \
           --namespace-name $EVENTHUBS_NAMESPACE
           
+          export RESULT=$(az eventhubs eventhub show --name $EVENTHUBS_EVENTHUB --namespace-name $EVENTHUBS_NAMESPACE --resource-group $RESOURCE_GROUP --output tsv --query status)
           az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ "$RESULT" != Active ]]; then
+          echo "Azure Event Hubs EventHub - $EVENTHUBS_EVENTHUB - was not provisioned properly"
+          exit 1
+          fi
