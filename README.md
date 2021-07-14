@@ -101,7 +101,7 @@ exit 0
 | Name | Link | Status
 | ---- | ---- | ------
 | 1. [Create an Azure Cosmos DB](cosmosdb/create/) | [Workflow](.github/workflows/cosmosdb_create_README_md.yml) | [![cosmosdb/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create_README_md.yml)
-| 2. [Create a database](cosmosdb/create-database/) | [Workflow](.github/workflows/cosmosdb_create-database_README_md.yml) | [![cosmosdb/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create-database_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create-database_README_md.yml)
+| 2. [Create a database](cosmosdb/create-database/) | [Workflow](.github/workflows/cosmosdb_create-database_README_md.yml) | [![cosmosdb/create-database/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create-database_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create-database_README_md.yml)
 
 ## Azure Database for MySQL examples
 
