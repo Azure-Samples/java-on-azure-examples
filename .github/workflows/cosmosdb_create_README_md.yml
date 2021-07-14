@@ -1,4 +1,6 @@
 on: 
+  schedule: 
+    - cron: '0 6 * * 1'
   workflow_dispatch: 
 
 name: 'cosmosdb/create/README.md'
@@ -25,4 +27,9 @@ jobs:
           --name $COSMOSDB_NAME \
           --resource-group $RESOURCE_GROUP
           
+          export RESULT=$(az cosmosdb show --name $COSMOSDB_NAME --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
           az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ "$RESULT" != Succeeded ]]; then
+          echo "$COSMOSDB_NAME was not provisioned properly"
+          exit 1
+          fi
