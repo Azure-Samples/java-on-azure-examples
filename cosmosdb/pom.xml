@@ -16,5 +16,6 @@
     <name>Azure Cosmos DB examples</name>
     <modules>
         <module>create</module>
+        <module>create-database</module>
     </modules>
 </project>

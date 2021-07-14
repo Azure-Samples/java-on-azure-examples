@@ -1,25 +1,28 @@
 
-# Create an Azure Cosmos DB
+# Create a database
 
-[![cosmosdb/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create_README_md.yml)
+[![cosmosdb/create-database/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create-database_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create-database_README_md.yml)
 
 ## Prerequisites
 
 This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
+1. [Create an Azure Cosmos DB](../create/README.md)
 
-<!-- workflow.cron(0 6 * * 1) -->
+<!-- workflow.cron(0 6 * * 2) -->
 <!-- workflow.include(../../group/create/README.md) -->
+<!-- workflow.include(../create/README.md) -->
 
-## Create the Azure Cosmos DB
+## Create the database
 
-To create the Azure Cosmos DB use the following command line:
+To create the database use the following command lines:
 
 ````shell
-  export COSMOSDB_NAME=cosmosdb-$RANDOM
+  export COSMOSDB_DATABASE=database-$RANDOM
 
-  az cosmosdb create \
+  az cosmosdb database create \
+    --db-name $COSMOS
     --name $COSMOSDB_NAME \
     --resource-group $RESOURCE_GROUP
 ````

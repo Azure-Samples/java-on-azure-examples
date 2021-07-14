@@ -10,7 +10,7 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>create</artifactId>
+    <artifactId>create-database</artifactId>
     <packaging>pom</packaging>
     <name>Create a database</name>
 </project>
