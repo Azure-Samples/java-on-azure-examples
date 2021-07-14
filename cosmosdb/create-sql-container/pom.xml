@@ -6,17 +6,11 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>examples.azure</groupId>
+        <groupId>examples.azure.cosmosdb</groupId>
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.cosmosdb</groupId>
-    <artifactId>project</artifactId>
+    <artifactId>cosmosdb-create-sql-container</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Cosmos DB examples</name>
-    <modules>
-        <module>create</module>
-        <module>create-sql-container</module>
-        <module>create-sql-database</module>
-    </modules>
+    <name>Create a SQL container</name>
 </project>

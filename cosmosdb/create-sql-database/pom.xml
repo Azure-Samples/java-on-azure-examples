@@ -10,7 +10,7 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>create-database</artifactId>
+    <artifactId>cosmosdb-create-sql-database</artifactId>
     <packaging>pom</packaging>
-    <name>Create a database</name>
+    <name>Create a SQL database</name>
 </project>
