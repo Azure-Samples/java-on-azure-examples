@@ -18,5 +18,6 @@
         <module>create</module>
         <module>create-sql-container</module>
         <module>create-sql-database</module>
+        <module>insert-item-into-sql-container</module>
     </modules>
 </project>
