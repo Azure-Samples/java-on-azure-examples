@@ -11,6 +11,7 @@ This example assumes you have previously completed the following example.
 
 ## Create an Azure Data Explorer cluster
 
+<!-- workflow.cron(0 3 * * 1) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 Install the CLI extension using the following command line:
@@ -27,16 +28,9 @@ command line below:
   export ADX_NAME=adxcluster$RANDOM
 ```
 
-<!-- workflow.run()
-
-  if [[ -z $ADX_NAME ]]; then
-    export ADX_NAME=adxcluster$RANDOM
-  fi
-
-  -->
-
 To create the cluster use the following command line:
 
+<!-- workflow.skip() -->
 ```shell
   az kusto cluster create \
     --cluster-name $ADX_NAME \
@@ -45,6 +39,22 @@ To create the cluster use the following command line:
     --location $REGION \
     --type SystemAssigned
 ```
+
+<!-- workflow.run()
+
+  if [[ -z $ADX_NAME ]]; then
+    export ADX_NAME=adxcluster$RANDOM
+    az kusto cluster create \
+      --cluster-name $ADX_NAME \
+      --resource-group $RESOURCE_GROUP \
+      --sku name="Standard_D13_v2" tier="Standard" \
+      --location $REGION \
+      --type SystemAssigned
+  fi
+
+  -->
+
+## Cleanup
 
 <!-- workflow.directOnly()
 
@@ -58,8 +68,11 @@ To create the cluster use the following command line:
 
   -->
 
-## Cleanup
-
 Do NOT forget to remove the resources once you are done running the example.
+
+## Additional documentation
+
+1. [Azure Data Explorer documentation](https://docs.microsoft.com/azure/data-explorer/)
+1. [Azure CLI - az kusto](https://docs.microsoft.com/cli/azure/kusto)
 
 10m

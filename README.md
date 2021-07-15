@@ -112,6 +112,7 @@ exit 0
 | Name | Link | Status
 | ---- | ---- | ------
 | 1. [Create an Azure Data Explorer cluster](adx/create/README.md) | [Workflow](.github/workflows/adx_create_README_md.yml) | ![adx/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/adx/create/README.md/badge.svg)
+| 2. [Create a database](adx/create-database/README.md) | [Workflow](.github/workflows/adx_create-database_README_md.yml) | ![adx/create-database/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/adx/create-database/README.md/badge.svg)
 
 ## Azure Database for MySQL examples
 
