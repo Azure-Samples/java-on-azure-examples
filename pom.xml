@@ -65,6 +65,7 @@
     <modules>
         <module>aci</module>
         <module>acr</module>
+        <module>adx</module>
         <module>aks</module>
         <module>appservice</module>
         <module>aro</module>
