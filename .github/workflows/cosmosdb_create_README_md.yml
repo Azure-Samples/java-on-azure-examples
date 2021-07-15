@@ -21,15 +21,18 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           export DELETE_AFTER=$(( `date +%s` + 7200))
           az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
-          export COSMOSDB_NAME=cosmosdb-$RANDOM
           
+          if [[ -z $COSMOSDB_NAME ]]; then
+          export COSMOSDB_NAME=cosmosdb-$RANDOM
           az cosmosdb create \
           --name $COSMOSDB_NAME \
           --resource-group $RESOURCE_GROUP
+          fi
+          
           
           export RESULT=$(az cosmosdb show --name $COSMOSDB_NAME --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
           az group delete --name $RESOURCE_GROUP --yes || true
           if [[ "$RESULT" != Succeeded ]]; then
-          echo "$COSMOSDB_NAME was not provisioned properly"
+          echo "Failed to create Cosmos DB account $COSMOSDB_NAME"
           exit 1
           fi

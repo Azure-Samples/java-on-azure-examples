@@ -29,11 +29,14 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           export DELETE_AFTER=$(( `date +%s` + 7200))
           az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
-          export COSMOSDB_NAME=cosmosdb-$RANDOM
           
+          if [[ -z $COSMOSDB_NAME ]]; then
+          export COSMOSDB_NAME=cosmosdb-$RANDOM
           az cosmosdb create \
           --name $COSMOSDB_NAME \
           --resource-group $RESOURCE_GROUP
+          fi
+          
           
           cd functions/cosmosdb-output
           

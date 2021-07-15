@@ -1,9 +1,9 @@
 on: 
   schedule: 
-    - cron: '0 6 * * 2'
+    - cron: '0 6 * * 4'
   workflow_dispatch: 
 
-name: 'cosmosdb/create-sql-container/README.md'
+name: 'cosmosdb/create-sql-leases-container/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -68,13 +68,13 @@ jobs:
           fi
           
           
-          if [[ -z $COSMOSDB_SQL_CONTAINER ]]; then
-          export COSMOSDB_SQL_CONTAINER=sql-container-$RANDOM
+          if [[ -z $COSMOSDB_SQL_LEASES_CONTAINER ]]; then
+          export COSMOSDB_SQL_LEASES_CONTAINER=sql-leases-$RANDOM
           az cosmosdb sql container create \
           --resource-group $RESOURCE_GROUP \
           --account-name $COSMOSDB_NAME \
           --database-name $COSMOSDB_SQL_DATABASE \
-          --name $COSMOSDB_SQL_CONTAINER \
+          --name $COSMOSDB_SQL_LEASES_CONTAINER \
           --partition-key-path '/id'
           fi
           
@@ -83,10 +83,10 @@ jobs:
           --resource-group $RESOURCE_GROUP \
           --account-name $COSMOSDB_NAME \
           --database-name $COSMOSDB_SQL_DATABASE \
-          --name $COSMOSDB_SQL_CONTAINER \
+          --name $COSMOSDB_SQL_LEASES_CONTAINER \
           --output tsv --query id)
           az group delete --name $RESOURCE_GROUP --yes || true
           if [[ "$RESULT" == "" ]]; then
-          echo "Failed to create CosmosDB SQL container $COSMOSDB_SQL_CONTAINER"
+          echo "Failed to create CosmosDB SQL leases container $COSMOSDB_SQL_CONTAINER"
           exit 1
           fi

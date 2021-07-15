@@ -28,27 +28,31 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           export DELETE_AFTER=$(( `date +%s` + 7200))
           az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
-          export COSMOSDB_NAME=cosmosdb-$RANDOM
           
+          if [[ -z $COSMOSDB_NAME ]]; then
+          export COSMOSDB_NAME=cosmosdb-$RANDOM
           az cosmosdb create \
           --name $COSMOSDB_NAME \
           --resource-group $RESOURCE_GROUP
-          export COSMOSDB_SQL_DATABASE=sql-database-$RANDOM
+          fi
           
+          
+          if [[ -z $COSMOSDB_SQL_DATABASE ]]; then
+          export COSMOSDB_SQL_DATABASE=sql-database-$RANDOM
           az cosmosdb sql database create \
           --resource-group $RESOURCE_GROUP \
           --account-name $COSMOSDB_NAME \
           --name $COSMOSDB_SQL_DATABASE
+          fi
+          
           
           export RESULT=$(az cosmosdb sql database show \
           --resource-group $RESOURCE_GROUP \
           --account-name $COSMOSDB_NAME \
           --name $COSMOSDB_SQL_DATABASE \
           --output tsv --query id)
-          
           az group delete --name $RESOURCE_GROUP --yes || true
-          
           if [[ "$RESULT" == "" ]]; then
-          echo "$COSMOSDB_SQL_DATABASE was not provisioned properly"
+          echo "Failed to create CosmosDB SQL database $COSMOSDB_SQL_DATABASE"
           exit 1
           fi
