@@ -18,6 +18,7 @@ This example assumes you have previously completed the following example:
 
 To create the SQL database use the following command lines:
 
+<!-- workflow.skip() -->
 ````shell
   export COSMOSDB_SQL_DATABASE=sql-database-$RANDOM
 
@@ -26,6 +27,18 @@ To create the SQL database use the following command lines:
     --account-name $COSMOSDB_NAME \
     --name $COSMOSDB_SQL_DATABASE
 ````
+
+<!-- workflow.run()
+
+  if [[ -z $COSMOSDB_SQL_DATABASE ]]; then
+    export COSMOSDB_SQL_DATABASE=sql-database-$RANDOM
+    az cosmosdb sql database create \
+      --resource-group $RESOURCE_GROUP \
+      --account-name $COSMOSDB_NAME \
+      --name $COSMOSDB_SQL_DATABASE
+  fi
+
+  -->
 
 ## Cleanup
 
@@ -36,11 +49,9 @@ To create the SQL database use the following command lines:
     --account-name $COSMOSDB_NAME \
     --name $COSMOSDB_SQL_DATABASE \
     --output tsv --query id)
-
   az group delete --name $RESOURCE_GROUP --yes || true
-
   if [[ "$RESULT" == "" ]]; then
-    echo "$COSMOSDB_SQL_DATABASE was not provisioned properly"
+    echo "Failed to create CosmosDB SQL database $COSMOSDB_SQL_DATABASE"
     exit 1
   fi
 

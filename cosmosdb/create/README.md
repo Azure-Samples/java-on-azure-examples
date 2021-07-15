@@ -14,8 +14,9 @@ This example assumes you have previously completed the following example:
 
 ## Create the Azure Cosmos DB
 
-To create the Azure Cosmos DB use the following command line:
+To create the Azure Cosmos DB use the following command lines:
 
+<!-- workflow.skip() -->
 ````shell
   export COSMOSDB_NAME=cosmosdb-$RANDOM
 
@@ -24,6 +25,17 @@ To create the Azure Cosmos DB use the following command line:
     --resource-group $RESOURCE_GROUP
 ````
 
+<!-- workflow.run()
+
+  if [[ -z $COSMOSDB_NAME ]]; then
+    export COSMOSDB_NAME=cosmosdb-$RANDOM
+    az cosmosdb create \
+      --name $COSMOSDB_NAME \
+      --resource-group $RESOURCE_GROUP
+  fi
+
+  -->
+
 ## Cleanup
 
 <!-- workflow.directOnly()
@@ -31,7 +43,7 @@ To create the Azure Cosmos DB use the following command line:
   export RESULT=$(az cosmosdb show --name $COSMOSDB_NAME --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
   az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != Succeeded ]]; then
-    echo "$COSMOSDB_NAME was not provisioned properly"
+    echo "Failed to create Cosmos DB account $COSMOSDB_NAME"
     exit 1
   fi
 

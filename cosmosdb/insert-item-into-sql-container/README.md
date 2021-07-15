@@ -12,7 +12,7 @@ This example assumes you have previously completed the following example:
 1. [Create a SQL database](../create-sql-database/README.md)
 1. [Create a SQL container](../create-sql-container/README.md)
 
-<!-- workflow.cron(0 6 * * 4) -->
+<!-- workflow.cron(0 6 * * 5) -->
 <!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../create/README.md) -->
 <!-- workflow.include(../create-sql-database/README.md) -->
@@ -63,7 +63,7 @@ Then execute the following command line:
   az group delete --name $RESOURCE_GROUP --yes || true
 
   if [[ "$RESULT" != "Item was added" ]]; then
-    echo "Unable to insert item into $COSMOSDB_SQL_CONTAINER"
+    echo "Failed to insert item into $COSMOSDB_SQL_CONTAINER"
     exit 1
   fi
 
