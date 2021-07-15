@@ -11,6 +11,8 @@ This example assumes you have previously completed the following example.
 
 ## Create a table
 
+<!-- workflow.include(../create/create-database.md) -->
+
 Open up the Azure database explorer to start the process of creating a table.
 To do so execute the following command line and use its output 
 
@@ -37,3 +39,7 @@ Then set the streaming ingestion policy for the table
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+## Additional documentation
+
+1. [Azure Data Explorer documentation](https://docs.microsoft.com/azure/data-explorer/)

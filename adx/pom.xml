@@ -17,5 +17,6 @@
     <modules>
         <module>create</module>
         <module>create-database</module>
+        <module>create-table</module>
     </modules>
 </project>
