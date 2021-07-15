@@ -24,7 +24,7 @@ This example assumes you have previously completed the following example:
 
 <!-- workflow.run()
 
-  cd cosmosdb/sql-changefeed-processor
+  cd cosmosdb/sql-change-feed-processor
 
   -->
 
