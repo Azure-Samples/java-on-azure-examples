@@ -20,5 +20,6 @@
         <module>create-sql-database</module>
         <module>create-sql-leases-container</module>
         <module>insert-item-into-sql-container</module>
+        <module>sql-change-feed-processor</module>
     </modules>
 </project>
