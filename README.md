@@ -107,6 +107,12 @@ exit 0
 | 5. [Create SQL leases container](cosmosdb/create-sql-leases-container/) | [Workflow](.github/workflows/cosmosdb_create-sql-leases-container_README_md.yml) | [![cosmosdb/create-sql-leases-container/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create-sql-leases-container_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create-sql-leases-container_README_md.yml)
 | 6. [SQL Change Feed Processor](cosmosdb/sql-change-feed-processor/) | [Workflow](.github/workflows/cosmosdb_sql-change-feed-processor_README_md.yml) | [![cosmosdb/sql-change-feed-processor/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_sql-change-feed-processor_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_sql-change-feed-processor_README_md.yml)
 
+## Azure Data Explorer examples
+
+| Name | Link | Status
+| ---- | ---- | ------
+| 1. [Create an Azure Data Explorer cluster](adx/create/README.md) | [Workflow](.github/workflows/adx_create_README_md.yml) | ![adx/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/adx/create/README.md/badge.svg)
+
 ## Azure Database for MySQL examples
 
 | Name | Link | Status
