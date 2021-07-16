@@ -25,7 +25,7 @@ line below:
 
 To create the database use the following command line:
 
-<!-- worfklow.skip() -->
+<!-- workflow.skip() -->
 ```shell
   az kusto database create \
     --cluster-name $ADX_CLUSTER_NAME \
