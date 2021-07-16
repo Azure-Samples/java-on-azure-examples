@@ -42,7 +42,7 @@ public class ChangeFeed {
                     .leaseContainer(leaseContainer)
                     .handleChanges((List<JsonNode> docs) -> {
                         for (JsonNode document : docs) {
-                            if (result.isEmpty()) {
+                            if (result.length() == 0) {
                                 System.err.println(document.toPrettyString());
                                 result.append(document.toPrettyString());
                             }
