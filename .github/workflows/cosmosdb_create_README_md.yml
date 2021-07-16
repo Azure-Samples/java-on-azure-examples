@@ -22,17 +22,17 @@ jobs:
           export DELETE_AFTER=$(( `date +%s` + 7200))
           az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
           
-          if [[ -z $COSMOSDB_NAME ]]; then
-          export COSMOSDB_NAME=cosmosdb-$RANDOM
+          if [[ -z $COSMOSDB_ACCOUNT_NAME ]]; then
+          export COSMOSDB_ACCOUNT_NAME=cosmosdb-$RANDOM
           az cosmosdb create \
-          --name $COSMOSDB_NAME \
+          --name $COSMOSDB_ACCOUNT_NAME \
           --resource-group $RESOURCE_GROUP
           fi
           
           
-          export RESULT=$(az cosmosdb show --name $COSMOSDB_NAME --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
+          export RESULT=$(az cosmosdb show --name $COSMOSDB_ACCOUNT_NAME --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
           az group delete --name $RESOURCE_GROUP --yes || true
           if [[ "$RESULT" != Succeeded ]]; then
-          echo "Failed to create Cosmos DB account $COSMOSDB_NAME"
+          echo "Failed to create Cosmos DB account $COSMOSDB_ACCOUNT_NAME"
           exit 1
           fi
