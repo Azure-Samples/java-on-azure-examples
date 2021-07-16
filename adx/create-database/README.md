@@ -37,11 +37,11 @@ To create the database use the following command line:
 <!-- workflow.run() 
 
   if [[ -z $ADX_DATABASE_NAME ]]; then
-    export ADX_DATABASE_NAME=database-$RANDOM
+    export ADX_DATABASE_NAME=adxdb$RANDOM
     az kusto database create \
       --cluster-name $ADX_CLUSTER_NAME \
-      --resource-group $RESOURCE_GROUP \
-      --database-name $ADX_DATABASE_NAME \
+      --resource-group "$RESOURCE_GROUP" \
+      --database-name "$ADX_DATABASE_NAME" \
       --read-write-database location="$REGION"
   fi
 
