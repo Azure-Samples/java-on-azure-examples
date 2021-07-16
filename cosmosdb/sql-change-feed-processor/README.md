@@ -14,9 +14,6 @@ This example assumes you have previously completed the following example:
 1. [Create a SQL leases container](../create-sql-leases-container/README.md)
 
 <!-- workflow.cron(0 6 * * 6) -->
-<!-- workflow.include(../../group/create/README.md) -->
-<!-- workflow.include(../create/README.md) -->
-<!-- workflow.include(../create-sql-database/README.md) -->
 <!-- workflow.include(../create-sql-container/README.md) -->
 <!-- workflow.include(../create-sql-leases-container/README.md) -->
 
@@ -38,9 +35,9 @@ Second setup the environment variable needed for access:
 
 ```shell
   export COSMOSDB_ENDPOINT=$(az cosmosdb show --resource-group $RESOURCE_GROUP \
-    --name $COSMOSDB_NAME --output tsv --query documentEndpoint)
+    --name $COSMOSDB_ACCOUNT_NAME --output tsv --query documentEndpoint)
 
-  export COSMOSDB_MASTER_KEY=$(az cosmosdb keys list --name $COSMOSDB_NAME \
+  export COSMOSDB_MASTER_KEY=$(az cosmosdb keys list --name $COSMOSDB_ACCOUNT_NAME \
     --resource-group $RESOURCE_GROUP --output tsv --query primaryMasterKey)
 ```
 
@@ -64,7 +61,7 @@ Then execute the following command line:
 
   az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != "Change feed was processed" ]]; then
-    echo "Failed to process change feed"
+    echo "Failed to process SQL change feed"
     exit 1
   fi
 

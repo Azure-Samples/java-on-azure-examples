@@ -12,8 +12,6 @@ This example assumes you have previously completed the following example:
 1. [Create a database](../create-sql-database/README.md)
 
 <!-- workflow.cron(0 6 * * 4) -->
-<!-- workflow.include(../../group/create/README.md) -->
-<!-- workflow.include(../create/README.md) -->
 <!-- workflow.include(../create-sql-database/README.md) -->
 
 ## Create the SQL leases container
@@ -26,7 +24,7 @@ To create the SQL leases container use the following command lines:
 
   az cosmosdb sql container create \
     --resource-group $RESOURCE_GROUP \
-    --account-name $COSMOSDB_NAME \
+    --account-name $COSMOSDB_ACCOUNT_NAME \
     --database-name $COSMOSDB_SQL_DATABASE \
     --name $COSMOSDB_SQL_LEASES_CONTAINER \
     --partition-key-path '/id'
@@ -38,7 +36,7 @@ To create the SQL leases container use the following command lines:
     export COSMOSDB_SQL_LEASES_CONTAINER=sql-leases-$RANDOM
     az cosmosdb sql container create \
       --resource-group $RESOURCE_GROUP \
-      --account-name $COSMOSDB_NAME \
+      --account-name $COSMOSDB_ACCOUNT_NAME \
       --database-name $COSMOSDB_SQL_DATABASE \
       --name $COSMOSDB_SQL_LEASES_CONTAINER \
       --partition-key-path '/id'
@@ -52,7 +50,7 @@ To create the SQL leases container use the following command lines:
   
   export RESULT=$(az cosmosdb sql container show \
     --resource-group $RESOURCE_GROUP \
-    --account-name $COSMOSDB_NAME \
+    --account-name $COSMOSDB_ACCOUNT_NAME \
     --database-name $COSMOSDB_SQL_DATABASE \
     --name $COSMOSDB_SQL_LEASES_CONTAINER \
     --output tsv --query id)

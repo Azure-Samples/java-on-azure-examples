@@ -36,9 +36,9 @@ Second setup the environment variable needed for access:
 
 ```shell
   export COSMOSDB_ENDPOINT=$(az cosmosdb show --resource-group $RESOURCE_GROUP \
-    --name $COSMOSDB_NAME --output tsv --query documentEndpoint)
+    --name $COSMOSDB_ACCOUNT_NAME --output tsv --query documentEndpoint)
 
-  export COSMOSDB_MASTER_KEY=$(az cosmosdb keys list --name $COSMOSDB_NAME \
+  export COSMOSDB_MASTER_KEY=$(az cosmosdb keys list --name $COSMOSDB_ACCOUNT_NAME \
     --resource-group $RESOURCE_GROUP --output tsv --query primaryMasterKey)
 ```
 

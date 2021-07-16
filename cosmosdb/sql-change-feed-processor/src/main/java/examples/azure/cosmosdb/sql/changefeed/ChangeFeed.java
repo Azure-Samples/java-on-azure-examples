@@ -72,7 +72,7 @@ public class ChangeFeed {
             /*
              * Wait for the item to be processed.
              */
-            while (result.isEmpty()) {
+            while (result.length() == 0) {
                 Thread.sleep(250);
             }
             System.out.println("Change feed was processed");

@@ -83,7 +83,7 @@
     </modules>
     <profiles>
         <profile>
-            <id>functions></id>
+            <id>functions</id>
             <modules>
                 <module>functions</module>
             </modules>

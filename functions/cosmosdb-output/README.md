@@ -30,7 +30,7 @@ This example assumes you have previously completed the following.
 ## Set the Cosmos DB connection string environment variable
 
 ```shell
-  export FUNCTIONS_COSMOSDB_CONNECTION_STRING="$(az cosmosdb keys list --resource-group $RESOURCE_GROUP --name $COSMOSDB_NAME --type connection-strings --query connectionStrings[0].connectionString --output tsv)"
+  export FUNCTIONS_COSMOSDB_CONNECTION_STRING="$(az cosmosdb keys list --resource-group $RESOURCE_GROUP --name $COSMOSDB_ACCOUNT_NAME --type connection-strings --query connectionStrings[0].connectionString --output tsv)"
 ```
 
 ## Setup the local environment

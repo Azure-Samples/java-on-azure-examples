@@ -11,7 +11,6 @@ This example assumes you have previously completed the following example:
 1. [Create an Azure Cosmos DB](../create/README.md)
 
 <!-- workflow.cron(0 6 * * 3) -->
-<!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../create/README.md) -->
 
 ## Create the SQL database
@@ -24,7 +23,7 @@ To create the SQL database use the following command lines:
 
   az cosmosdb sql database create \
     --resource-group $RESOURCE_GROUP \
-    --account-name $COSMOSDB_NAME \
+    --account-name $COSMOSDB_ACCOUNT_NAME \
     --name $COSMOSDB_SQL_DATABASE
 ````
 
@@ -34,7 +33,7 @@ To create the SQL database use the following command lines:
     export COSMOSDB_SQL_DATABASE=sql-database-$RANDOM
     az cosmosdb sql database create \
       --resource-group $RESOURCE_GROUP \
-      --account-name $COSMOSDB_NAME \
+      --account-name $COSMOSDB_ACCOUNT_NAME \
       --name $COSMOSDB_SQL_DATABASE
   fi
 
@@ -46,7 +45,7 @@ To create the SQL database use the following command lines:
   
   export RESULT=$(az cosmosdb sql database show \
     --resource-group $RESOURCE_GROUP \
-    --account-name $COSMOSDB_NAME \
+    --account-name $COSMOSDB_ACCOUNT_NAME \
     --name $COSMOSDB_SQL_DATABASE \
     --output tsv --query id)
   az group delete --name $RESOURCE_GROUP --yes || true
