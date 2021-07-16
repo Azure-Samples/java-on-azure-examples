@@ -25,7 +25,7 @@ command line below:
 
 <!-- workflow.skip() -->
 ```shell
-  export ADX_NAME=adxcluster$RANDOM
+  export ADX_CLUSTER_NAME=adxcluster$RANDOM
 ```
 
 To create the cluster use the following command line:
@@ -33,7 +33,7 @@ To create the cluster use the following command line:
 <!-- workflow.skip() -->
 ```shell
   az kusto cluster create \
-    --cluster-name $ADX_NAME \
+    --cluster-name $ADX_CLUSTER_NAME \
     --resource-group $RESOURCE_GROUP \
     --sku name="Standard_D13_v2" tier="Standard" \
     --location $REGION \
@@ -42,10 +42,10 @@ To create the cluster use the following command line:
 
 <!-- workflow.run()
 
-  if [[ -z $ADX_NAME ]]; then
-    export ADX_NAME=adxcluster$RANDOM
+  if [[ -z $ADX_CLUSTER_NAME ]]; then
+    export ADX_CLUSTER_NAME=adxcluster$RANDOM
     az kusto cluster create \
-      --cluster-name $ADX_NAME \
+      --cluster-name $ADX_CLUSTER_NAME \
       --resource-group $RESOURCE_GROUP \
       --sku name="Standard_D13_v2" tier="Standard" \
       --location $REGION \
@@ -58,11 +58,11 @@ To create the cluster use the following command line:
 
 <!-- workflow.directOnly()
 
-  export RESULT=$(az kusto cluster show --name $ADX_NAME \
+  export RESULT=$(az kusto cluster show --name $ADX_CLUSTER_NAME \
     --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
   az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != Succeeded ]]; then
-    echo "Failed to create Azure Data Explorer cluster $ADX_NAME"
+    echo "Failed to create Azure Data Explorer cluster $ADX_CLUSTER_NAME"
     exit 1
   fi
 

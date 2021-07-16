@@ -7,18 +7,18 @@ This example assumes you have previously completed the following example.
 
 1. [Create a resource group](../../group/create/README.md)
 1. [Create an Azure Data Explorer cluster](../create/README.md)
-1. [Create a Database](../create-database/README.md)
+1. [Create a database](../create-database/README.md)
 
 ## Create a table
 
-<!-- workflow.include(../create/create-database.md) -->
+<!-- workflow.include(../create-database.md) -->
 
 Open up the Azure database explorer to start the process of creating a table.
 To do so execute the following command line and use its output 
 
 <!-- workflow.skip() -->
 ```shell
-  echo https://dataexplorer.azure.com/clusters/$ADX_NAME.$REGION/databases/$ADX_DATABASE
+  echo https://dataexplorer.azure.com/clusters/$ADX_CLUSTER_NAME.$REGION/databases/$ADX_DATABASE_NAME
 ```
 
 Then in the query window execute the following query.
@@ -34,6 +34,12 @@ Then set the streaming ingestion policy for the table
 
 ```text
   .alter table Events policy streamingingestion enable
+```
+
+And then execute the following command line to set the environment variable:
+
+```shell
+  export ADX_TABLE=Events
 ```
 
 ## Cleanup

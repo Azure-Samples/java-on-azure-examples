@@ -12,9 +12,27 @@
     </parent>
     <artifactId>adx-ingest-client</artifactId>
     <packaging>jar</packaging>
-    <name>Ingest into ADX using client library</name>
+    <name>Ingest into ADX</name>
     <build>
+        <finalName>ingest</finalName>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -23,7 +41,8 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <classpathPrefix>dependency/</classpathPrefix>
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <mainClass>examples.azure.adx.ingest.Ingest</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

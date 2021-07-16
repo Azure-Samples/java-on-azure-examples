@@ -18,5 +18,6 @@
         <module>create</module>
         <module>create-database</module>
         <module>create-table</module>
+        <module>ingest-client</module>
     </modules>
 </project>
