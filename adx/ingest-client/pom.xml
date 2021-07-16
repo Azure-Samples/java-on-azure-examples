@@ -12,7 +12,7 @@
     </parent>
     <artifactId>adx-ingest-client</artifactId>
     <packaging>jar</packaging>
-    <name>Ingest into ADX</name>
+    <name>Ingest Client</name>
     <build>
         <finalName>ingest</finalName>
         <plugins>
