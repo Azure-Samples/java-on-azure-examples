@@ -45,7 +45,7 @@ To build and push the Docker image to your ACR use the command lines below:
 ```shell
   export ACR_QUARKUS_IMAGE=quarkus:latest
 
-  az acr build --registry $ACR_NAME --image $ACR_QUARKUS_IMAGE .
+  az acr build --registry $ACR_NAME --resource-group $RESOURCE_GROUP --image $ACR_QUARKUS_IMAGE .
 ```
 
 <!-- workflow.run()
