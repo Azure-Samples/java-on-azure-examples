@@ -16,11 +16,8 @@
     
     <properties>
         <example.appName>${example.prefix}-springcloud-helloworld</example.appName>
-        <example.postfix>${maven.build.timestamp}</example.postfix>
-        <example.prefix>examples</example.prefix>
         <example.resourceGroup>${example.prefix}-rg</example.resourceGroup>
         <example.springCloudName>${example.prefix}-springcloud</example.springCloudName>
-        <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
         <java.version>1.8</java.version>
     </properties>
 

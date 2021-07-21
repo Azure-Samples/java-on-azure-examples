@@ -90,6 +90,9 @@
         </profile>
     </profiles>
     <properties>
+        <example.prefix>examples</example.prefix>
+        <example.postfix>${maven.build.timestamp}</example.postfix>
+        <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>
