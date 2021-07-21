@@ -50,7 +50,7 @@
         </dependency>
     </dependencies>
     <properties>
-        <appName>helloworld-${postfix}</appName>
+        <appName>helloworld-${example.postfix}</appName>
         <appServicePlan>azure-examples-appserviceplan</appServicePlan>
         <javaVersion>jre8</javaVersion>
         <region>westus2</region>

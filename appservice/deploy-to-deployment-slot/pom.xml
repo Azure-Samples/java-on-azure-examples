@@ -53,7 +53,7 @@
         </dependency>
     </dependencies>
     <properties>
-        <appName>helloworld-${postfix}</appName>
+        <appName>helloworld-${example.postfix}</appName>
         <appServicePlan>azure-examples-appserviceplan</appServicePlan>
         <deploymentSlotName>staging</deploymentSlotName>
         <javaVersion>jre8</javaVersion>
