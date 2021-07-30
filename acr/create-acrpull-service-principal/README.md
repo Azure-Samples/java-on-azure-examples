@@ -27,7 +27,7 @@ Execute the following command lines to create the 'acrpull' Service Principal:
     --role acrpull \
     --query password \
     --output tsv`
-  export ACR_PULL_SERVICE_PRINCIPAL_ID=`az ad sp show \
+  export ACR_PULL_SERVICE_PRINCIPAL_ID=`az ad sp list \
     --display-name $ACR_PULL_SERVICE_PRINCIPAL_NAME \
     --query [].appId \
     --output tsv`
