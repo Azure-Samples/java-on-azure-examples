@@ -20,11 +20,12 @@ public class SendJMSMessage {
 
         try (JMSContext context = factory.createContext()) {
             Queue queue = context.createQueue(System.getenv("SERVICE_BUS_QUEUE"));
-            TextMessage message = context.createTextMessage("Hello, World!");
+            TextMessage message = context.createTextMessage(
+                    "{'id': '" + System.nanoTime() + "', 'hello': 'Hello World!'}");
             JMSProducer producer = context.createProducer();
             producer.send(queue, message);
         }
         
-        System.out.println("Sent a 'Hello, World!' message to " + System.getenv("SERVICE_BUS_QUEUE"));
+        System.out.println("Sent a 'Hello World!' message to " + System.getenv("SERVICE_BUS_QUEUE"));
     }
 }

@@ -24,6 +24,6 @@ public class ReceiveJMSMessage {
             message = (TextMessage) consumer.receive();
         }
         
-        System.out.println("Received a " + message.getText());
+        System.out.println("Received " + message.getText());
     }
 }

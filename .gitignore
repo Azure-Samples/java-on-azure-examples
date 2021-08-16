@@ -4,6 +4,8 @@
 .project
 .settings/
 .vscode/
+nbactions.xml
+nb-configuration.xml
 parrot.jar
 target/
 *.iml

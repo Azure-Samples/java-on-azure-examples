@@ -17,6 +17,7 @@
     <modules>
         <module>create</module>
         <module>create-queue</module>
+        <module>jms-to-cosmosdb-springboot</module>
         <module>receive-jms-message</module>
         <module>receive-message</module>
         <module>send-jms-message</module>
