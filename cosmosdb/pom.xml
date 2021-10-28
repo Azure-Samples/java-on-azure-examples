@@ -15,6 +15,7 @@
     <packaging>pom</packaging>
     <name>Azure Cosmos DB examples</name>
     <modules>
+        <module>cosmos-to-storage</module>
         <module>create</module>
         <module>create-sql-container</module>
         <module>create-sql-database</module>
