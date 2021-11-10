@@ -14,7 +14,7 @@ This example assumes you have previously completed the following example:
 
 ## Create the Azure Storage Account
 
-To create the Azure Storage Account use the following command line:
+To create the Azure Storage Account use the following command lines:
 
 ```shell
   export STORAGE_ACCOUNT_NAME=storage$RANDOM

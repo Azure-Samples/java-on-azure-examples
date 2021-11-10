@@ -22,7 +22,8 @@ This example assumes you have previously completed the following examples:
 
   -->
 
-To upload a directory containing your static website use following command line:
+To upload a directory containing your static website use the following command
+line:
 
 ```shell
   az storage blob upload-batch \

@@ -15,7 +15,7 @@ This example assumes you have previously completed the following examples:
 
 ## Enable static website hosting
 
-To enable static website hosting execute the following command line:
+To enable static website hosting execute the following command lines:
 
 ```shell
   az storage blob service-properties update \
