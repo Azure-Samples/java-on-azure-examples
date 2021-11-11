@@ -153,7 +153,10 @@ exit 0
 
 ## Azure Key Vault examples
 
-1. [Create an Azure Key Vault](keyvault/create/)
+| Name | Link | Status
+| ---- | ---- | ------
+| 1. [Create an Azure Key Vault](keyvault/create/) | [Workflow](.github/workflows/kevault_create_README_md.yml) | ![keyvault/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/keyvault/create/README.md/badge.svg)
+
 1. [Add a Secret to an Azure Key Vault](keyvault/add-secret/)
 1. [Create a self-signed certificate](keyvault/create-self-signed-certificate/)
 1. [Create a Spring Boot application with server-side mTLS](keyvault/spring-boot-mtls-server-side/)
