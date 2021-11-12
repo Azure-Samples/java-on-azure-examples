@@ -12,5 +12,5 @@
     </parent>
     <artifactId>add-secret</artifactId>
     <packaging>pom</packaging>
-    <name>Add a Secret to Azure Key Vault</name>
+    <name>Add a Secret</name>
 </project>

@@ -41,7 +41,7 @@ az group delete --name $RESOURCE_GROUP --yes || true
 
   -->
 
-## For more information
+## More information
 
 1. [Azure CLI](https://docs.microsoft.com/cli/azure/keyvault)
 1. [Azure Key Vault - documentation](https://docs.microsoft.com/azure/key-vault/)
