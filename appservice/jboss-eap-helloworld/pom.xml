@@ -53,7 +53,7 @@
         <appName>helloworld-jboss-eap-${example.postfix}</appName>
         <appServicePlan>azure-examples-appserviceplan</appServicePlan>
         <javaVersion>jre8</javaVersion>
-        <region>westus2</region>
+        <region>eastus2</region>
         <webContainer>JbossEAP 7.2</webContainer>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
