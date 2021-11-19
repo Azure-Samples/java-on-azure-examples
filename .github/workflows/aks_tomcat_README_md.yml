@@ -15,7 +15,7 @@ jobs:
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
           fi
-          export REGION=eastus2
+          export REGION=westus2
           az group create --name $RESOURCE_GROUP --location $REGION
           export DELETE_AFTER=$(( `date +%s` + 7200))
           az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
@@ -40,7 +40,7 @@ jobs:
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
           fi
-          export REGION=eastus2
+          export REGION=westus2
           az group create --name $RESOURCE_GROUP --location $REGION
           export DELETE_AFTER=$(( `date +%s` + 7200))
           az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
@@ -61,7 +61,7 @@ jobs:
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
           fi
-          export REGION=eastus2
+          export REGION=westus2
           az group create --name $RESOURCE_GROUP --location $REGION
           export DELETE_AFTER=$(( `date +%s` + 7200))
           az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
@@ -74,7 +74,7 @@ jobs:
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
           fi
-          export REGION=eastus2
+          export REGION=westus2
           az group create --name $RESOURCE_GROUP --location $REGION
           export DELETE_AFTER=$(( `date +%s` + 7200))
           az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
