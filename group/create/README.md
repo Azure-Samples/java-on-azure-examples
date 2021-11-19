@@ -19,7 +19,7 @@ the command lines below:
 <!-- workflow.skip() -->
 ```shell
   export RESOURCE_GROUP=java-on-azure
-  export REGION=eastus2
+  export REGION=westus2
 ```
 
 <!-- workflow.run()

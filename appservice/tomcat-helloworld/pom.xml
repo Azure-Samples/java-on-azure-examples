@@ -53,7 +53,7 @@
         <appName>helloworld-${example.postfix}</appName>
         <appServicePlan>azure-examples-appserviceplan</appServicePlan>
         <javaVersion>jre8</javaVersion>
-        <region>eastus2</region>
+        <region>westus2</region>
         <webContainer>tomcat 8.5</webContainer>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
