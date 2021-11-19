@@ -26,7 +26,7 @@ the command lines below:
 if [[ -z $RESOURCE_GROUP ]]; then
   export RESOURCE_GROUP=java-on-azure-$RANDOM
 fi
-export REGION=eastus2
+export REGION=westus2
   -->
 
 To create the Resource Group use the following command line:
