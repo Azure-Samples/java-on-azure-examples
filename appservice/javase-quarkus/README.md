@@ -1,5 +1,5 @@
 
-# Deploy a Quarkus application using managed JavaSE
+# Deploy a managed JavaSE Quarkus application
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ To run the example locally use the following Maven command line.
 
 You can see the application in action at http://localhost:8080/hello
 
-## Deploy the Quarkus application using managed JavaSE
+## Deploy the managed JavaSE Quarkus application
 
 To deploy the application use the following command lines:
 
@@ -60,12 +60,16 @@ browser and going to the ```xxxxx.azurewebsites.net``` address the command echoe
 
 <!-- workflow.directOnly() 
 
+sleep 60
+
 export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_JAVASE_QUARKUS --output tsv --query state)
 if [[ "$RESULT" != Running ]]; then
   echo 'Web application is NOT running'
   az group delete --name $RESOURCE_GROUP --yes || true
   exit 1
 fi
+
+sleep 60
 
 export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_JAVASE_QUARKUS --output tsv --query defaultHostName)
 export RESULT=$(curl $URL)
