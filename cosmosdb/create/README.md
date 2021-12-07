@@ -31,7 +31,8 @@ To create the Azure Cosmos DB account use the following command lines:
     export COSMOSDB_ACCOUNT_NAME=cosmosdb-$RANDOM
     az cosmosdb create \
       --name $COSMOSDB_ACCOUNT_NAME \
-      --resource-group $RESOURCE_GROUP
+      --resource-group $RESOURCE_GROUP \
+      --locations regionName=westus3 failoverPriority=0
   fi
 
   -->
