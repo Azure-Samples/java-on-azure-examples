@@ -32,7 +32,7 @@ Do NOT forget to remove the resources once you are done running the example.
 <!-- workflow.directOnly()
 
 export RESULT=$(az keyvault secret show --name mySecret --vault $KEYVAULT_NAME --query value --output tsv)
-if [[ "$RESULT" != "mySecretValue ]]; then
+if [[ "$RESULT" != "mySecretValue" ]]; then
   echo 'Secret was not properly set'
   az group delete --name $RESOURCE_GROUP --yes || true
   exit 1
