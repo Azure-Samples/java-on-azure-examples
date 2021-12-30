@@ -1,21 +1,19 @@
 # Java on Azure Examples
 
-This GitHub repository contains a set of Azure examples specifically for Java 
-developers to quickly get started with Azure. Please use the issue tracker to
-leave feedback, file issues or to propose other examples.
+This GitHub repository contains a set of Azure examples specifically for Java developers to quickly get started with Azure.
+Please use the issue tracker to leave feedback, file issues or to propose other examples.
 
 ## Getting started
 
-To work with these examples it is assumed you have the Azure CLI installed, and
-you have logged in and set your default subscription. If you haven't done so
-follow the steps below.
+To work with these examples it is assumed you have the Azure CLI installed, and you have logged in and set your default subscription.
+If you haven't done so follow the steps below.
 
-_Note logging in and setting your default subscription needs to be done once per
- terminal session._
+_Note: Logging in and setting your default subscription needs to be done once per terminal session._
 
 ### Install Azure CLI
 
-To setup the Azure CLI, please visit [Install the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli). And once you are done come back to this README.
+To setup the Azure CLI, please visit [Install the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli).
+And once you are done come back to this README.
 
 ### Login into Azure
 
@@ -26,14 +24,21 @@ To setup the Azure CLI, please visit [Install the Azure CLI](https://docs.micros
 
 ### Set your default subscription
 
-Get a list of your subscriptions
+Get a list of your subscriptions:
 
 <!-- workflow.skip() -->
 ````shell
   az account list --output table
 ````
 
-Set your default subscription for this session using the subscription id from the previous output
+If the previous list shows any old subscriptions, add the `refresh` parameter to the command, this will retrieve up-to-date subscriptions from server:
+
+<!-- workflow.skip() -->
+````shell
+  az account list --output table --refresh
+````
+
+Set your default subscription for this session using the subscription id from the previous output:
 
 <!-- workflow.skip() -->
 ````shell
