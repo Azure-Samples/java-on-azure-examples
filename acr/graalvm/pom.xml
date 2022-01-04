@@ -41,7 +41,7 @@
         <profile>
             <id>graalvm</id>
             <build>
-                <plugins>            
+                <plugins>
                     <plugin>
                         <groupId>org.graalvm.nativeimage</groupId>
                         <artifactId>native-image-maven-plugin</artifactId>
