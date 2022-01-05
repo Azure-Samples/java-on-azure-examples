@@ -24,14 +24,7 @@ And once you are done come back to this README.
 
 ### Set your default subscription
 
-Get a list of your subscriptions:
-
-<!-- workflow.skip() -->
-````shell
-  az account list --output table
-````
-
-If the previous list shows any old subscriptions, add the `refresh` parameter to the command, this will retrieve up-to-date subscriptions from server:
+Get a list of your subscriptions (notice the `refresh` parameter that retrieves up-to-date subscriptions from the server) :
 
 <!-- workflow.skip() -->
 ````shell
