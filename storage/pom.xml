@@ -7,13 +7,12 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.storage</groupId>
-    <artifactId>project</artifactId>
+    <groupId>examples.azure</groupId>
+    <artifactId>storage</artifactId>
+    <version>1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Azure Storage examples</name>
+    <name>Storage</name>
     <modules>
-        <module>create</module>
-        <module>enable-static-website</module>
-        <module>upload-files-to-static-website</module>
+        <module>storage</module>
     </modules>
 </project>
