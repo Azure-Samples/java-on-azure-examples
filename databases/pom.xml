@@ -8,11 +8,15 @@
         <version>1-SNAPSHOT</version>
     </parent>
     <groupId>examples.azure</groupId>
-    <artifactId>storage</artifactId>
+    <artifactId>databases</artifactId>
     <version>1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Storage</name>
+    <name>Databases</name>
     <modules>
-        <module>storage</module>
+        <module>cosmosdb</module>
+        <module>mssql</module>
+        <module>mysql</module>
+        <module>postgresql</module>
+        <module>redis</module>
     </modules>
 </project>

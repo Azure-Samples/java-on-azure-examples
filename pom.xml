@@ -60,29 +60,20 @@
         </dependencies>
     </dependencyManagement>
     <modules>
-        <module>aci</module>
-        <module>acr</module>
-        <module>adx</module>
-        <module>aks</module>
-        <module>appservice</module>
-        <module>aro</module>
-        <module>cosmosdb</module>
-        <module>eventhubs</module>
-        <module>group</module>
-        <module>keyvault</module>
-        <module>mssql</module>
-        <module>mysql</module>
-        <module>postgresql</module>
-        <module>redis</module>
-        <module>servicebus</module>
-        <module>spring-cloud</module>
+        <module>analytics</module>
+        <module>compute</module>
+        <module>containers</module>
+        <module>databases</module>
+        <module>general</module>
+        <module>integration</module>
+        <module>security</module>
         <module>storage</module>
     </modules>
     <profiles>
         <profile>
             <id>functions</id>
             <modules>
-                <module>functions</module>
+                <module>compute/functions</module>
             </modules>
         </profile>
     </profiles>

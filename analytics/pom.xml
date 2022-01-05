@@ -8,11 +8,12 @@
         <version>1-SNAPSHOT</version>
     </parent>
     <groupId>examples.azure</groupId>
-    <artifactId>storage</artifactId>
+    <artifactId>analytics</artifactId>
     <version>1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Storage</name>
+    <name>Analytics</name>
     <modules>
-        <module>storage</module>
+        <module>adx</module>
+        <module>eventhubs</module>
     </modules>
 </project>

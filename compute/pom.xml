@@ -8,11 +8,12 @@
         <version>1-SNAPSHOT</version>
     </parent>
     <groupId>examples.azure</groupId>
-    <artifactId>storage</artifactId>
+    <artifactId>compute</artifactId>
     <version>1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Storage</name>
+    <name>Compute</name>
     <modules>
-        <module>storage</module>
+        <module>appservice</module>
+        <module>spring-cloud</module>
     </modules>
 </project>
