@@ -7,7 +7,7 @@
 
 This example assumes you have previously completed the following:
 
-1. [Create an Azure Resource Group](../../../general/group/create/)
+1. [Create an Azure Resource Group](../../../general/group/create/README.md)
 1. [Create an Azure Container Registry](../create/)
 
 <!-- workflow.cron(0 8 * * 2) -->

@@ -7,7 +7,7 @@
 
 This example assumes you have previously completed the following example.
 
-1. [Create an Azure Resource Group](../../../general/group/create/)
+1. [Create an Azure Resource Group](../../../general/group/create/README.md)
 
 ## Create an Azure Container Registry
 
@@ -15,7 +15,7 @@ Setup environment variable for the Azure Container Registry using the command
 line below:
 
 <!-- workflow.cron(0 1 * * 2) -->
-<!-- workflow.include(../../group/create/README.md) -->
+<!-- workflow.include(../../../general/group/create/README.md) -->
 
 <!-- workflow.skip() -->
 ```shell

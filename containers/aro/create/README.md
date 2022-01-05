@@ -5,7 +5,7 @@
 
 This example assumes you have previously completed the following example.
 
-1. [Create an Azure Resource Group](../../../general/group/create/)
+1. [Create an Azure Resource Group](../../../general/group/create/README.md)
 
 ## Deploy an Azure Red hat OpenShift cluster
 

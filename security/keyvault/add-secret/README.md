@@ -11,7 +11,7 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Key Vault](../create/)
 
 <!-- workflow.cron(25 13 * * 5) -->
-<!-- workflow.include(../../group/create/README.md) -->
+<!-- workflow.include(../../../general/group/create/README.md) -->
 <!-- workflow.include(../create/README.md) -->
 
 ## Add a Secret to Azure Key Vault

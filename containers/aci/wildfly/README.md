@@ -7,7 +7,7 @@
 
 This example assumes you have previously completed the following examples.
 
-1. [Create an Azure Resource Group](../../group/create/README.md)
+1. [Create an Azure Resource Group](../../../general/group/create/README.md)
 1. [Create an Azure Container Registry](../../../acr/create/README.md)
 1. [Create an 'acrpull' Service Principal](../../../acr/create-acrpull-service-principal/README.md)
 1. [Push a WildFly Docker image to Azure Container Registry](../../../acr/wildfly/README.md)

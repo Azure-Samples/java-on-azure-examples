@@ -7,7 +7,7 @@
 
 This example assumes you have previously completed the following:
 
-1. [Create an Azure Resource Group](../../../general/group/create/)
+1. [Create an Azure Resource Group](../../../general/group/create/README.md)
 1. [Create an Azure SQL Database](../create/)
 1. [Install curl](https://curl.haxx.se/download.html)
 1. [Open Azure SQL server firewall to your IP address](../open-firewall-to-your-ip/)

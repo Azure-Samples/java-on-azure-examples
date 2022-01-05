@@ -7,9 +7,9 @@
 
 This example assumes you have previously completed the following example:
 
-1. [Create an Azure Resource Group](../../group/create/README.md)
+1. [Create an Azure Resource Group](../../../general/group/create/README.md)
 
-<!-- workflow.include(../../group/create/README.md) -->
+<!-- workflow.include(../../../general/group/create/README.md) -->
 
 ## Create the Azure Database for PostgreSQL
 

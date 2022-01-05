@@ -7,7 +7,7 @@
 
 This example assumes you have previously completed the following examples.
 
-1. [Create an Azure Resource Group](../../../general/group/create/)
+1. [Create an Azure Resource Group](../../../general/group/create/README.md)
 1. [Create an Azure Container Registry](../../acr/create/)
 1. [Push a Jetty Docker image to Azure Container Registry](../../acr/jetty/)
 1. [Create settings.xml using admin access keys](../../acr/create-settings-xml/)

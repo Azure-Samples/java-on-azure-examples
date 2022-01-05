@@ -7,12 +7,12 @@
 
 This example assumes you have previously completed the following example.
 
-1. [Create an Azure Resource Group](../../../general/group/create/)
+1. [Create an Azure Resource Group](../../../general/group/create/README.md)
 
 ## Create an Azure Service Bus
 
 <!-- workflow.cron(0 1 * * 1) -->
-<!-- workflow.include(../../group/create/README.md) -->
+<!-- workflow.include(../../../general/group/create/README.md) -->
 
 First, create the environment variable used for our Service Bus
 using the command line below:

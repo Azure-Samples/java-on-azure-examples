@@ -7,7 +7,7 @@
 
 This example assumes you have previously completed the following examples.
 
-1. [Create an Azure Resource Group](../../../general/group/create/)
+1. [Create an Azure Resource Group](../../../general/group/create/README.md)
 1. [Deploy an Azure Kubernetes Service cluster](../create/)
 1. [Create an Azure Container Registry](../../acr/create/)
 

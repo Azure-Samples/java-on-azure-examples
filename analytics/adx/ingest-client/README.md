@@ -5,7 +5,7 @@
 
 This example assumes you have previously completed the following example.
 
-1. [Create a resource group](../../group/create/README.md)
+1. [Create a resource group](../../../general/group/create/README.md)
 1. [Create an Azure Data Explorer cluster](../create/README.md)
 1. [Create a database](../create-database/README.md)
 1. [Create a table](../create-table/README.md)

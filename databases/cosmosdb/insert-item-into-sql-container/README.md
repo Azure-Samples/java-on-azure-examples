@@ -7,13 +7,13 @@
 
 This example assumes you have previously completed the following example:
 
-1. [Create an Azure Resource Group](../../group/create/README.md)
+1. [Create an Azure Resource Group](../../../general/group/create/README.md)
 1. [Create an Azure Cosmos DB](../create/README.md)
 1. [Create a SQL database](../create-sql-database/README.md)
 1. [Create a SQL container](../create-sql-container/README.md)
 
 <!-- workflow.cron(0 6 * * 5) -->
-<!-- workflow.include(../../group/create/README.md) -->
+<!-- workflow.include(../../../general/group/create/README.md) -->
 <!-- workflow.include(../create/README.md) -->
 <!-- workflow.include(../create-sql-database/README.md) -->
 <!-- workflow.include(../create-sql-container/README.md) -->

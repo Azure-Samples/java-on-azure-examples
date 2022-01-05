@@ -7,7 +7,7 @@
 
 This example assumes you have previously completed the following example.
 
-1. [Create an Azure Resource Group](../../../general/group/create/)
+1. [Create an Azure Resource Group](../../../general/group/create/README.md)
 1. [Create an Azure Service Bus](../create/)
 1. [Create an Azure Service Bus Queue](../create-queue/)
 1. [Send a JMS message](../send-jms-message/)
