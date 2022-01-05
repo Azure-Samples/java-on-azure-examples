@@ -8,7 +8,7 @@
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../../general/group/create/README.md)
-1. [Deploy a web application on a managed Tomcat](../tomcat-helloworld/)
+1. [Deploy a web application on a managed Tomcat](../tomcat-helloworld/README.md)
 
 ## Delete a web application
 

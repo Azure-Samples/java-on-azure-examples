@@ -8,8 +8,8 @@
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../../general/group/create/README.md)
-1. [Create an Azure App Service Plan](../create-plan/)
-1. [Deploy a web application on a managed Tomcat](../tomcat-helloworld/)
+1. [Create an Azure App Service Plan](../create-plan/README.md)
+1. [Deploy a web application on a managed Tomcat](../tomcat-helloworld/README.md)
 
 ## List your web applications
 

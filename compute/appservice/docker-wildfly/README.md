@@ -15,7 +15,7 @@ This example assumes you have previously completed the following examples.
 
 <!-- workflow.cron(0 11 * * 1) -->
 <!-- workflow.include(../../acr/wildfly/README.md) -->
-<!-- workflow.include(../../acr/create-settings-xml/README.md) -->
+<!-- workflow.include(../../../containers/acr/create-settings-xml/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->
 
 <!-- workflow.run() 

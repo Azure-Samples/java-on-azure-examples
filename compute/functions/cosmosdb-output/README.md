@@ -8,8 +8,8 @@
 This example assumes you have previously completed the following.
 
 1. [Create an Azure Resource Group](../../../general/group/create/README.md)
-1. [Install Azure Functions Core Tools](../install-tools/)
-1. [Create an Azure Cosmos DB](../../cosmosdb/create/)
+1. [Install Azure Functions Core Tools](../install-tools/README.md)
+1. [Create an Azure Cosmos DB](../../cosmosdb/create/README.md)
 
 <!-- workflow.cron(0 1 * * 2) -->
 <!-- workflow.include(../install-tools/README.md) -->
@@ -102,7 +102,7 @@ Do NOT forget to remove the resources once you are done running the example.
 
 ## Next steps
 
-* [Azure Functions documentation](https://docs.microsoft.com/en-us/azure/azure-functions/)
+* [Azure Functions documentation](https://docs.microsoft.com/en-us/azure/azure-functions/README.md)
 * [Manage function apps](https://docs.microsoft.com/cli/azure/functionapp)
 
 5m

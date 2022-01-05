@@ -8,13 +8,13 @@
 This example assumes you have previously completed the following examples.
 
 1. [Create an Azure Resource Group](../../../general/group/create/README.md)
-1. [Deploy an Azure Kubernetes Service cluster](../create/)
-1. [Create an Azure Container Registry](../../acr/create/)
+1. [Deploy an Azure Kubernetes Service cluster](../create/README.md)
+1. [Create an Azure Container Registry](../../../containers/acr/create/README.md)
 
 ## Update your cluster to use your Azure Container Registry
 
 <!-- workflow.include(../create/README.md) -->
-<!-- workflow.include(../../acr/create/README.md) -->
+<!-- workflow.include(../../../containers/acr/create/README.md) -->
 
 To update your cluster to make it so it can access your Azure Container
 Registry you need to use the following command line.

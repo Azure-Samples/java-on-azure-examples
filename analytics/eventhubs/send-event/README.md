@@ -71,6 +71,6 @@ Do NOT forget to remove the resources once you are done running the example.
 
 ## Additional documentation
 
-1. [Azure Event Hubs documentation](https://docs.microsoft.com/azure/event-hubs/)
+1. [Azure Event Hubs documentation](https://docs.microsoft.com/azure/event-hubs/README.md)
 1. [Get an Event Hubs connection string](https://docs.microsoft.com/azure/event-hubs/event-hubs-get-connection-string)
 1. [Use Java to send events to or receive events from Azure Event Hubs (azure-messaging-eventhubs)](https://docs.microsoft.com/azure/event-hubs/event-hubs-java-get-started-send)

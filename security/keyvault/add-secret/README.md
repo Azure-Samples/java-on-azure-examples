@@ -7,8 +7,8 @@
 
 This example assumes you have previously completed the following examples:
 
-1. [Create an Azure Resource Group](../../groupd/create/)
-1. [Create an Azure Key Vault](../create/)
+1. [Create an Azure Resource Group](../../groupd/create/README.md)
+1. [Create an Azure Key Vault](../create/README.md)
 
 <!-- workflow.cron(25 13 * * 5) -->
 <!-- workflow.include(../../../general/group/create/README.md) -->

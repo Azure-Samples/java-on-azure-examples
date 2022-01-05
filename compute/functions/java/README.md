@@ -97,7 +97,7 @@ Do NOT forget to remove the resources once you are done running the example.
 
 ## Next steps
 
-* [Azure Functions documentation](https://docs.microsoft.com/en-us/azure/azure-functions/)
+* [Azure Functions documentation](https://docs.microsoft.com/en-us/azure/azure-functions/README.md)
 * [Manage function apps](https://docs.microsoft.com/cli/azure/functionapp)
 
 5m

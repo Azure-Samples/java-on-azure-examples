@@ -8,10 +8,10 @@
 This example assumes you have previously completed the following:
 
 1. [Create an Azure Resource Group](../../../general/group/create/README.md)
-1. [Create an Azure Database for MySQL](../create/)
+1. [Create an Azure Database for MySQL](../create/README.md)
 1. [Install curl](https://curl.haxx.se/download.html)
-1. [Open MySQL server firewall to your IP address](../open-firewall-to-your-ip/)
-1. [Install mysql client](https://dev.mysql.com/downloads/)
+1. [Open MySQL server firewall to your IP address](../open-firewall-to-your-ip/README.md)
+1. [Install mysql client](https://dev.mysql.com/downloads/README.md)
 
 <!-- workflow.include(../open-firewall-to-your-ip/README.md) -->
 
@@ -84,7 +84,7 @@ Do NOT forget to remove the resources once you are done running the example.
 
 ## Next steps
 
-* [Azure Database for MySQL Documentation](https://docs.microsoft.com/en-us/azure/mysql/)
+* [Azure Database for MySQL Documentation](https://docs.microsoft.com/en-us/azure/mysql/README.md)
 * [Migrate to Azure Database for MySQL](https://datamigration.microsoft.com/scenario/mysql-to-azuremysql)
 * [Minimal downtime migration](https://docs.microsoft.com/en-us/azure/mysql/howto-migrate-online)
 * [Query data using Java](https://docs.microsoft.com/en-us/azure/mysql/connect-java)

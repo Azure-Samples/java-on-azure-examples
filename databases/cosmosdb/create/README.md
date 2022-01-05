@@ -54,7 +54,7 @@ Do NOT forget to remove the resources once you are done running the example.
 
 ## Additional documentation
 
-1. [Azure Cosmos DB documentation](https://docs.microsoft.com/azure/cosmos-db/)
+1. [Azure Cosmos DB documentation](https://docs.microsoft.com/azure/cosmos-db/README.md)
 1. [Azure CLI - az cosmosdb](https://docs.microsoft.com/cli/azure/cosmosdb)
 
 1m

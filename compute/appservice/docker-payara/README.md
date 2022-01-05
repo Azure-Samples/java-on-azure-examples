@@ -6,16 +6,16 @@
 This example assumes you have previously completed the following examples.
 
 1. [Create an Azure Resource Group](../../../general/group/create/README.md)
-1. [Create an Azure Container Registry](../../acr/create/)
-1. [Push a Payara Docker image to Azure Container Registry](../../acr/payara/)
-1. [Create settings.xml using admin access keys](../../acr/create-settings-xml/)
-1. [Create an Azure App Service Plan](../create-plan/)
+1. [Create an Azure Container Registry](../../../containers/acr/create/README.md)
+1. [Push a Payara Docker image to Azure Container Registry](../../acr/payara/README.md)
+1. [Create settings.xml using admin access keys](../../../containers/acr/create-settings-xml/README.md)
+1. [Create an Azure App Service Plan](../create-plan/README.md)
 
 ## Deploy Payara using a Docker image
 
 <!-- workflow.cron(0 9 * * 1) -->
 <!-- workflow.include(../../acr/payara/README.md) -->
-<!-- workflow.include(../../acr/create-settings-xml/README.md) -->
+<!-- workflow.include(../../../containers/acr/create-settings-xml/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->
 
 To deploy Payara use the following command lines:

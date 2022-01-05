@@ -8,8 +8,8 @@
 This example assumes you have previously completed the following example.
 
 1. [Create an Azure Resource Group](../../../general/group/create/README.md)
-1. [Create an Azure Service Bus](../create/)
-1. [Create an Azure Service Bus Queue](../create-queue/)
+1. [Create an Azure Service Bus](../create/README.md)
+1. [Create an Azure Service Bus Queue](../create-queue/README.md)
 
 ## Send a JMS message to an Azure Service Bus Queue
 

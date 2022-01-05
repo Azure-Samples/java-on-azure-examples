@@ -20,5 +20,5 @@ Do NOT forget to remove the resources once you are done running the example.
 
 ## Additional documentation
 
-1. [Azure Data Explorer documentation](https://docs.microsoft.com/azure/data-explorer/)
+1. [Azure Data Explorer documentation](https://docs.microsoft.com/azure/data-explorer/README.md)
 1. [Kusto Java SDK GitHub repository](https://github.com/Azure/azure-kusto-java)

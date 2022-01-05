@@ -6,7 +6,7 @@
 This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../../general/group/create/README.md)
-1. [Create an Azure Key Vault](../create/)
+1. [Create an Azure Key Vault](../create/README.md)
 
 ## Create the self-signed certificate
 
@@ -32,4 +32,4 @@ Do NOT forget to remove the resources once you are done running the example.
 ## Reference material
 
 1. [Azure CLI](https://docs.microsoft.com/cli/azure/keyvault/certificate)
-1. [Azure Key Vault - Cerificates documentation](https://docs.microsoft.com/azure/key-vault/certificates/)
+1. [Azure Key Vault - Cerificates documentation](https://docs.microsoft.com/azure/key-vault/certificates/README.md)

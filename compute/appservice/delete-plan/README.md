@@ -8,7 +8,7 @@
 This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../../general/group/create/README.md)
-1. [Create an Azure App Service Plan](../create-plan/)
+1. [Create an Azure App Service Plan](../create-plan/README.md)
 
 ## Delete an App Service Plan
 

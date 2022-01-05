@@ -8,7 +8,7 @@
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../../general/group/create/README.md)
-1. [Create an Azure Spring Cloud instance](../create/)
+1. [Create an Azure Spring Cloud instance](../create/README.md)
 
 <!-- workflow.include(../create/README.md) -->
 <!-- workflow.run() 

@@ -8,10 +8,10 @@
 This example assumes you have previously completed the following:
 
 1. [Create an Azure Resource Group](../../../general/group/create/README.md)
-1. [Create an Azure Database for MySQL](../create/)
+1. [Create an Azure Database for MySQL](../create/README.md)
 1. [Install curl](https://curl.haxx.se/download.html)
-1. [Open MySQL server firewall to your IP address](../open-firewall-to-your-ip/)
-1. [Install mysql client](https://dev.mysql.com/downloads/)
+1. [Open MySQL server firewall to your IP address](../open-firewall-to-your-ip/README.md)
+1. [Install mysql client](https://dev.mysql.com/downloads/README.md)
 1. [Load your MySQL database with your data](load-your-mysqk-database-with-data/README.md)
 
 <!-- workflow.include(../load-your-mysql-database-with-data/README.md) -->

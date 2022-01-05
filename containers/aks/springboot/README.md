@@ -8,11 +8,11 @@
 This example assumes you have previously completed the following examples.
 
 1. [Create an Azure Resource Group](../../../general/group/create/README.md)
-1. [Create an Azure Container Registry](../../acr/create/)
-1. [Create settings.xml using admin access keys](../../acr/create-settings-xml/)
-1. [Deploy an Azure Kubernetes Service cluster](../create/)
-1. [Create a Kube config for your Azure Kubernetes Service cluster (using admin access keys)](../create-kube-config/)
-1. [Update your AKS cluster to use your Azure Container Registry](../use-your-acr/)
+1. [Create an Azure Container Registry](../../../containers/acr/create/README.md)
+1. [Create settings.xml using admin access keys](../../../containers/acr/create-settings-xml/README.md)
+1. [Deploy an Azure Kubernetes Service cluster](../create/README.md)
+1. [Create a Kube config for your Azure Kubernetes Service cluster (using admin access keys)](../create-kube-config/README.md)
+1. [Update your AKS cluster to use your Azure Container Registry](../use-your-acr/README.md)
 
 ## Build the example
 
