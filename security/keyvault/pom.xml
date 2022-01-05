@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>examples.azure</groupId>
-        <artifactId>project</artifactId>
+        <artifactId>security</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.keyvault</groupId>
+    <groupId>examples.azure.security.keyvault</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
     <name>Azure KeyVault examples</name>

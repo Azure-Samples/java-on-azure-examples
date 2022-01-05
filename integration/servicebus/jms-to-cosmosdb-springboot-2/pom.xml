@@ -8,6 +8,7 @@
         <version>2.5.3</version>
         <relativePath/>
     </parent>
+    <groupId>examples.azure.integration.servicebus</groupId>
     <artifactId>servicebus-jms-to-cosmosdb-springboot-2</artifactId>
     <packaging>jar</packaging>
     <name>JMS to Cosmos DB Spring Boot application #2</name>

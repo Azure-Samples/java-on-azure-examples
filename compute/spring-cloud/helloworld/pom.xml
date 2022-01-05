@@ -8,8 +8,8 @@
         <version>2.1.12.RELEASE</version>
         <relativePath/>
     </parent>
-    <groupId>examples.azure.springcloud</groupId>
-    <artifactId>helloworld</artifactId>
+    <groupId>examples.azure.compute.springcloud</groupId>
+    <artifactId>springcloud-helloworld</artifactId>
     <version>1-SNAPSHOT</version>
     <name>Deploy a Spring Boot application to an Azure Spring Cloud</name>
 

@@ -8,8 +8,8 @@
         <version>2.3.3.RELEASE</version>
         <relativePath/>
     </parent>
-    <groupId>example</groupId>
-    <artifactId>cosmos2storage</artifactId>
+    <groupId>examples.azure.databases.cosmosdb</groupId>
+    <artifactId>cosmosdb-cosmos-to-storage</artifactId>
     <version>1-SNAPSHOT</version>
     <name>Cosmos DB to Azure Storage</name>
     <build>

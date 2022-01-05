@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>examples.azure</groupId>
-        <artifactId>project</artifactId>
+        <artifactId>storage</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.storage</groupId>
+    <groupId>examples.azure.storage.storage</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
     <name>Azure Storage examples</name>

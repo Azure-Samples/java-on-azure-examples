@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>examples.azure</groupId>
-        <artifactId>project</artifactId>
+        <artifactId>containers</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.acr</groupId>
+    <groupId>examples.azure.containers.acr</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
     <name>Azure Container Registry examples</name>
