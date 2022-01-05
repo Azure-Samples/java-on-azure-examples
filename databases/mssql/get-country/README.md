@@ -12,7 +12,7 @@ This example assumes you have previously completed the following:
 1. [Install curl](https://curl.haxx.se/download.html)
 1. [Open Azure SQL server firewall to your IP address](../open-firewall-to-your-ip/README.md)
 1. [Install mssql-cli client](https://docs.microsoft.com/en-us/sql/tools/mssql-cli?view=sql-server-ver15)
-1. [Load your Azure SQL database with your data](load-your-mssql-database-with-data/README.md)
+1. [Load your Azure SQL database with your data](../load-your-mssql-database-with-data/README.md)
 
 <!-- workflow.cron(0 2 * * 5) -->
 <!-- workflow.include(../load-your-mssql-database-with-data/README.md) -->

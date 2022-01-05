@@ -7,7 +7,7 @@
 
 This example assumes you are logged into Azure CLI and have set your default
 subscription, if you have NOT done so please go to our top-level
-[README](../../..)
+[README](../../../README.md)
 
 ## Delete the Resource Group
 
