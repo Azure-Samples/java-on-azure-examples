@@ -11,7 +11,7 @@
 
 This example assumes you have previously completed the following.
 
-1. [Create an Azure Resource Group](../../group/create/)
+1. [Create an Azure Resource Group](../../../general/group/create/)
 1. [Install Azure Functions Core Tools](https://docs.microsoft.com/azure/azure-functions/functions-run-local#install-the-azure-functions-core-tools)
 
 <!-- workflow.run() 

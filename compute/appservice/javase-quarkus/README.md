@@ -5,7 +5,7 @@
 
 This example assumes you have previously completed the following examples:
 
-1. [Create an Azure Resource Group](../../group/create/)
+1. [Create an Azure Resource Group](../../../general/group/create/)
 1. [Create an Azure App Service Plan](../create-plan/)
 
 <!-- workflow.cron(0 12 * * 1) -->

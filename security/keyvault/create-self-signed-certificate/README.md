@@ -5,7 +5,7 @@
 
 This example assumes you have previously completed the following example:
 
-1. [Create an Azure Resource Group](../../group/create/)
+1. [Create an Azure Resource Group](../../../general/group/create/)
 1. [Create an Azure Key Vault](../create/)
 
 ## Create the self-signed certificate

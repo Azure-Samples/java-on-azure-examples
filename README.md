@@ -87,7 +87,7 @@ exit 0
 | 17. [Swap a deployment slot](compute/appservice/swap-deployment-slot/) | [Workflow](.github/workflows/appservice_swap-deployment-slot_README_md.yml) | [![appservice/swap-deployment-slot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_swap-deployment-slot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_swap-deployment-slot_README_md.yml)
 | 18. [Deploy a web application on a managed JBoss EAP](compute/appservice/jboss-eap-helloworld/) | [Workflow](.github/workflows/appservice_jboss-eap-helloworld_README_md.yml) | [![appservice/jboss-eap-helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_jboss-eap-helloworld_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_jboss-eap-helloworld_README_md.yml)
 
-## Azure Functions examples
+### Azure Functions examples
 
 | Name | Link | Status
 | ---- | ---- | ------
