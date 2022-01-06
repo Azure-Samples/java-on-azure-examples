@@ -1,6 +1,8 @@
 
 # Deploy a web application on a managed JBoss EAP
 
+[![compute/appservice/jboss-eap-helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_appservice_jboss-eap-helloworld_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_appservice_jboss-eap-helloworld_README_md.yml)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following examples:

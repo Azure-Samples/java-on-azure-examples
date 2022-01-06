@@ -1,7 +1,7 @@
 
 # Create an Azure Key Vault
 
-![keyvault/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/keyvault/create/README.md/badge.svg)
+[![security/keyvault/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_create_README_md.yml)
 
 ## Prerequisites
 

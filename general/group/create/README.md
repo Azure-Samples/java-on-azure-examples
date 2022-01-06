@@ -1,7 +1,7 @@
 
 # Create an Azure Resource Group
 
-![group/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/group/create/README.md/badge.svg)
+[![general/group/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/general_group_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/general_group_create_README_md.yml)
 
 ## Prerequisites
 

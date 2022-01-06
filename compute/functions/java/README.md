@@ -1,7 +1,7 @@
 
 # Deploy a Java Function
 
-[![functions/java/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functions_java_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functions_java_README_md.yml)
+[![compute/functions/java/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_functions_java_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_functions_java_README_md.yml)
 
 ## Prerequisites
 

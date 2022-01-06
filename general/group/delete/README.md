@@ -1,7 +1,7 @@
 
 # Delete an Azure Resource Group
 
-![group/delete/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/group/delete/README.md/badge.svg)
+[![general/group/delete/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/general_group_delete_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/general_group_delete_README_md.yml)
 
 ## Prerequisites
 

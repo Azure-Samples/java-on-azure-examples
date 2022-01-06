@@ -1,7 +1,7 @@
 
 # Push a Tomcat Docker image to Azure Container Registry
 
-![acr/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/tomcat/README.md/badge.svg)
+[![containers/acr/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_acr_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_acr_tomcat_README_md.yml)
 
 ## Prerequisites
 

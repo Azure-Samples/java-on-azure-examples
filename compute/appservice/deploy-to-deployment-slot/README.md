@@ -1,7 +1,7 @@
 
 # Deploy to a deployment slot
 
-[![appservice/deploy-to-deployment-slot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_deploy-to-deployment-slot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_deploy-to-deployment-slot_README_md.yml)
+[![compute/appservice/deploy-to-deployment-slot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_appservice_deploy-to-deployment-slot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_appservice_deploy-to-deployment-slot_README_md.yml)
 
 ## Prerequisites
 

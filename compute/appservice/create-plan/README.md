@@ -1,7 +1,7 @@
 
 # Create an App Service Plan
 
-![appservice/create-plan/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/appservice/create-plan/README.md/badge.svg)
+[![compute/appservice/create-plan/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_appservice_create-plan_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_appservice_create-plan_README_md.yml)
 
 ## Prerequisites
 

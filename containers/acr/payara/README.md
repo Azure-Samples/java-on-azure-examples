@@ -1,7 +1,7 @@
 
 # Push a Payara Docker image to Azure Container Registry
 
-![acr/payara/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/payara/README.md/badge.svg)
+[![containers/acr/payara/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_acr_payara_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_acr_payara_README_md.yml)
 
 ## Prerequisites
 

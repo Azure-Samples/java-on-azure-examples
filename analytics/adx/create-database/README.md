@@ -1,7 +1,7 @@
 
 # Create a database
 
-![adx/create-database/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/adx/create-database/README.md/badge.svg)
+[![analytics/adx/create-database/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_create-database_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_create-database_README_md.yml)
 
 ## Prerequisites
 

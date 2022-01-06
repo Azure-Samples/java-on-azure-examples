@@ -1,6 +1,8 @@
 
 # Swap a deployment slot
 
+[![compute/appservice/swap-deployment-slot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_appservice_swap-deployment-slot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_appservice_swap-deployment-slot_README_md.yml)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following:

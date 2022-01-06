@@ -1,7 +1,7 @@
 
 # Load your Azure SQL database with data
 
-[![mssql/load-your-mysql-database-with-data/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mssql_load-your-mysql-database-with-data_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mssql_load-your-mysql-database-with-data_README_md.yml)
+[![databases/mssql/load-your-mssql-database-with-data/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_load-your-mssql-database-with-data_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_load-your-mssql-database-with-data_README_md.yml)
 
 ## Prerequisites
 

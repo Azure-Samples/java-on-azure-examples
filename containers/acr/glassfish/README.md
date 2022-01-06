@@ -1,7 +1,7 @@
 
 # Push a Glassfish Docker image
 
-![acr/glassfish/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/glassfish/README.md/badge.svg)
+[![containers/acr/glassfish/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_acr_glassfish_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_acr_glassfish_README_md.yml)
 
 ## Prerequisites
 

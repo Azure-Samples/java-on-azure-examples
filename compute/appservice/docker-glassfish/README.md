@@ -1,6 +1,8 @@
 
 # Deploy Glassfish using a Docker image
 
+[![compute/appservice/docker-glassfish/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_appservice_docker-glassfish_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_appservice_docker-glassfish_README_md.yml)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following examples.

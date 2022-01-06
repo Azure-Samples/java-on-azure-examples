@@ -1,7 +1,7 @@
 
 # Push a GraalVM Docker application to Azure Container Registry
 
-![acr/graalvm/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/graalvm/README.md/badge.svg)
+[![containers/acr/graalvm/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_acr_graalvm_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_acr_graalvm_README_md.yml)
 
 ## Prerequisites
 

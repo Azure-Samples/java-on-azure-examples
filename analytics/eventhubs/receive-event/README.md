@@ -1,6 +1,8 @@
 
 # Receive an event
 
+[![analytics/eventhubs/receive-event/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_eventhubs_receive-event_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_eventhubs_receive-event_README_md.yml)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following example:
