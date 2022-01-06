@@ -1,7 +1,7 @@
 
 # Create an Azure Database for MySQL
 
-[![mysql/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_create_README_md.yml)
+[![databases/mysql/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mysql_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mysql_create_README_md.yml)
 
 ## Prerequisites
 

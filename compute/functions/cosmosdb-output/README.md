@@ -1,7 +1,7 @@
 
 # Deploy a Cosmos DB output Function
 
-[![functions/cosmosdb-output/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functions_cosmosdb-output_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functions_cosmosdb-output_README_md.yml)
+[![compute/functions/cosmosdb-output/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_functions_cosmosdb-output_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_functions_cosmosdb-output_README_md.yml)
 
 ## Prerequisites
 

@@ -1,7 +1,7 @@
 
 # Deploy Tomcat
 
-[![aci/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aci_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aci_tomcat_README_md.yml)
+[![containers/aci/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aci_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aci_tomcat_README_md.yml)
 
 ## Prerequisites
 

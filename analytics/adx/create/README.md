@@ -1,7 +1,7 @@
 
 # Create an Azure Data Explorer cluster
 
-![adx/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/adx/create/README.md/badge.svg)
+[![analytics/adx/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_create_README_md.yml)
 
 ## Prerequisites
 

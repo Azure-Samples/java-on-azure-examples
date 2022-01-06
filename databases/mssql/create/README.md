@@ -1,7 +1,7 @@
 
 # Create an Azure SQL Database
 
-[![mssql/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mssql_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mssql_create_README_md.yml)
+[![databases/mssql/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_create_README_md.yml)
 
 ## Prerequisites
 

@@ -1,7 +1,7 @@
 
 # Create settings.xml using admin access keys
 
-![acr/create-settings-xml/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/create-settings-xml/README.md/badge.svg)
+[![containers/acr/create-settings-xml/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_acr_create-settings-xml_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_acr_create-settings-xml_README_md.yml)
 
 ```text
 Note for production environments we recommend you setup

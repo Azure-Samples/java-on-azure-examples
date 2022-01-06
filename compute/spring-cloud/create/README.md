@@ -1,7 +1,7 @@
 
 # Create an Azure Spring Cloud
 
-[![spring-cloud/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring-cloud_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring-cloud_create_README_md.yml)
+[![compute/spring-cloud/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_spring-cloud_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_spring-cloud_create_README_md.yml)
 
 ## Prerequisites
 

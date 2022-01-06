@@ -1,7 +1,7 @@
 
-# Create an Azure Database for MySQL
+# Create an Azure Database for PostgreSQL
 
-[![postgresql/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgresql_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgresql_create_README_md.yml)
+[![databases/postgresql/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_postgresql_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_postgresql_create_README_md.yml)
 
 ## Prerequisites
 

@@ -1,7 +1,7 @@
 
 # Deploy a Spring Boot application
 
-[![aks/springboot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_springboot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_springboot_README_md.yml)
+[![containers/aks/springboot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_springboot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_springboot_README_md.yml)
 
 ## Prerequisites
 

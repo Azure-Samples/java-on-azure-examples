@@ -1,7 +1,7 @@
 
 # Delete an App Service Plan
 
-![appservice/delete-plan/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/appservice/delete-plan/README.md/badge.svg)
+[![compute/appservice/delete-plan/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_appservice_delete-plan_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_appservice_delete-plan_README_md.yml)
 
 ## Prerequisites
 

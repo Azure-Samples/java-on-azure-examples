@@ -1,6 +1,8 @@
 
 # Create a Spring Boot mTLS server-side application
 
+[![security/keyvault/spring-boot-mtls-server-side/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_spring-boot-mtls-server-side_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_spring-boot-mtls-server-side_README_md.yml)
+
 ## Prerequisites
 
 This example assumes you have previously completed the following examples.

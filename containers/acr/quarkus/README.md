@@ -1,7 +1,7 @@
 
 # Push a Quarkus Docker image to Azure Container Registry
 
-![acr/quarkus/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/acr/quarkus/README.md/badge.svg)
+[![containers/acr/quarkus/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_acr_quarkus_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_acr_quarkus_README_md.yml)
 
 ## Prerequisites
 

@@ -1,7 +1,7 @@
 
 # Adding a Secret to Azure Key Vault
 
-![keyvault/add-secret/README.md](https://github.com/Azure-Samples/java-on-azure-examples/workflows/keyvault/add-secret/README.md/badge.svg)
+[![security/keyvault/add-secret/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_add-secret_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_add-secret_README_md.yml)
 
 ## Prerequisites
 

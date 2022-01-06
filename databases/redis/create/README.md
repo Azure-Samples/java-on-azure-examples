@@ -1,7 +1,7 @@
 
 # Create an Azure Cache for Redis
 
-[![redis/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/redis_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/redis_create_README_md.yml)
+[![databases/redis/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_redis_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_redis_create_README_md.yml)
 
 ## Prerequisites
 

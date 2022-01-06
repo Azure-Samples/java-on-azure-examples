@@ -1,7 +1,7 @@
 
 # Get country information (JDBC client)
 
-[![mysql/get-country/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_get-country_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_get-country_README_md.yml)
+[![databases/mysql/get-country/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mysql_get-country_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mysql_get-country_README_md.yml)
 
 ## Prerequisites
 

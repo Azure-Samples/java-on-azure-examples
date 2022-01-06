@@ -1,7 +1,7 @@
 
 # Get country information (JDBC client)
 
-[![postgresql/get-country/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgresql_get-country_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgresql_get-country_README_md.yml)
+[![databases/postgresql/get-country/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_postgresql_get-country_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_postgresql_get-country_README_md.yml)
 
 ## Prerequisites
 
