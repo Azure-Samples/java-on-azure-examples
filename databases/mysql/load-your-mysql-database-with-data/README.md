@@ -56,7 +56,7 @@ And to exit the `mysql` tool use the following command line:
 
 <!-- workflow.run()
 
-  cd mysql/load-your-mysql-database-with-data
+  cd databases/mysql/load-your-mysql-database-with-data
 
   export MYSQL_DNS_NAME=`az mysql server show \
     --resource-group $RESOURCE_GROUP \
@@ -68,7 +68,7 @@ And to exit the `mysql` tool use the following command line:
 
   mysql -h $MYSQL_DNS_NAME -u $MYSQL_CLIENT_USERNAME -p$MYSQL_PASSWORD < load.sql
 
-  cd ../..
+  cd ../../..
 
   -->
 

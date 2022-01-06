@@ -20,7 +20,7 @@ This example assumes you have previously completed the following examples.
 <!-- workflow.include(../use-your-acr/README.md) -->
 <!-- workflow.run() 
 
-  cd aks/springboot
+cd containers/aks/springboot
 
   -->
 
@@ -78,7 +78,7 @@ It should show you a page with the text `Hello World`.
 
 <!-- workflow.run() 
 
-  cd ../..
+cd ../../..
   
   -->
 

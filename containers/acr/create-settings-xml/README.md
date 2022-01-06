@@ -22,7 +22,7 @@ This example assumes you have previously completed the following examples.
 
 <!-- workflow.run() 
 
-cd acr/create-settings-xml
+cd containers/acr/create-settings-xml
 
  -->
 
@@ -48,7 +48,7 @@ Set the SETTINGS_XML variable
 
 <!-- workflow.run() 
 
-cd ../..
+cd ../../..
 
  -->
 

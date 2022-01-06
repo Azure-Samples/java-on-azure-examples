@@ -19,7 +19,7 @@ To build the WAR file use the following command line:
 
 <!-- workflow.run()
 
-cd acr/wildfly
+cd containers/acr/wildfly
 
   -->
 
@@ -39,7 +39,7 @@ To build and push the Docker image to your ACR use the command line below:
 
 <!-- workflow.run()
 
-cd ../..
+cd ../../..
 
   -->
 

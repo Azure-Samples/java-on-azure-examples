@@ -22,7 +22,7 @@ This example assumes you have previously completed the following examples.
 
 <!-- workflow.run() 
 
-cd appservice/docker-jetty
+cd compute/appservice/docker-jetty
 
   -->
 
@@ -49,7 +49,7 @@ To deploy Jetty use the following command lines:
 <!-- workflow.run()
 
 sleep 180
-cd ../..
+cd ../../..
 
   -->
 

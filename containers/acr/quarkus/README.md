@@ -17,7 +17,7 @@ This example assumes you have previously completed the following:
 
 <!-- workflow.run()
 
-cd acr/quarkus
+cd containers/acr/quarkus
 
   -->
 
@@ -50,7 +50,7 @@ To build and push the Docker image to your ACR use the command lines below:
 
 <!-- workflow.run()
 
-cd ../..
+cd ../../..
 
   -->
 

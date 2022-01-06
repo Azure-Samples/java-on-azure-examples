@@ -20,7 +20,7 @@ This example assumes you have previously completed the following examples.
 
 <!-- workflow.run() 
 
-cd appservice/docker-wildfly
+cd compute/appservice/docker-wildfly
 
   -->
 
@@ -47,7 +47,7 @@ To deploy WildFly use the following command lines:
 <!-- workflow.run() 
 
 sleep 60
-cd ../..
+cd ../../..
 
   -->
 

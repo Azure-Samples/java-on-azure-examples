@@ -22,7 +22,7 @@ This example assumes you have previously completed the following examples.
 
 <!-- workflow.run() 
 
-cd appservice/docker-graalvm
+cd compute/appservice/docker-graalvm
 
   -->
 
@@ -49,7 +49,7 @@ To deploy the example use the following command lines:
 <!-- workflow.run() 
 
 sleep 180
-cd ../..
+cd ../../..
 
   -->
 

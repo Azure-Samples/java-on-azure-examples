@@ -43,7 +43,7 @@ connect to the database:
 
 <!-- workflow.run()
 
-  cd mssql/load-your-mssql-database-with-data
+  cd databases/mssql/load-your-mssql-database-with-data
 
   sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
   python -m pip install --upgrade pip
@@ -61,7 +61,7 @@ connect to the database:
 
   mssql-cli -S $MSSQL_DNS_NAME -U $MSSQL_CLIENT_USERNAME -P $MSSQL_PASSWORD -d demo -i load.sql
 
-  cd ../..
+  cd ../../..
 
   -->
 

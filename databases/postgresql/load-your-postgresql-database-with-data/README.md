@@ -55,7 +55,7 @@ And to exit the `psql` tool use the following command line:
 
 <!-- workflow.run()
 
-  cd postgresql/load-your-postgresql-database-with-data
+  cd databases/postgresql/load-your-postgresql-database-with-data
 
   export POSTGRESQL_DNS_NAME=`az postgres server show \
     --resource-group $RESOURCE_GROUP \
@@ -67,7 +67,7 @@ And to exit the `psql` tool use the following command line:
 
   PGPASSWORD=$POSTGRESQL_PASSWORD psql --host=$POSTGRESQL_DNS_NAME --port=5432 --username $POSTGRESQL_CLIENT_USERNAME --dbname=postgres --file load.sql
 
-  cd ../..
+  cd ../../..
 
   -->
 
