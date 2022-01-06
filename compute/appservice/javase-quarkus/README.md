@@ -17,7 +17,7 @@ To build the JAR file use the following Maven command line.
 
 <!-- workflow.run() 
 
-cd appservice/javase-quarkus
+cd compute/appservice/javase-quarkus
 
   -->
 
@@ -51,7 +51,7 @@ To deploy the application use the following command lines:
 
 <!-- workflow.run()
 
-cd ../..
+cd ../../..
 
   -->
 

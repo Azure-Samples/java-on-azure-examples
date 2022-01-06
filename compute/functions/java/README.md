@@ -16,9 +16,9 @@ This example assumes you have previously completed the following.
 
 <!-- workflow.run() 
 
-  cd functions/java
-  mkdir .mvn
-  echo "-ntp" > .mvn/maven.config
+cd compute/functions/java
+mkdir .mvn
+echo "-ntp" > .mvn/maven.config
 
   -->
 
@@ -81,7 +81,7 @@ You should see `Hello World` in your browser.
 
 <!-- workflow.run()
 
-  cd ../..
+cd ../../..
 
  -->
 

@@ -19,7 +19,7 @@ This example assumes you have previously completed the following:
 
 <!-- workflow.run() 
 
-cd appservice/deploy-to-deployment-slot
+cd compute/appservice/deploy-to-deployment-slot
 
   -->
 
@@ -39,7 +39,7 @@ cd appservice/deploy-to-deployment-slot
 
 <!-- workflow.run()
 
-cd ../..
+cd ../../..
 
   -->
 

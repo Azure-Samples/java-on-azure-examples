@@ -17,7 +17,7 @@ This example assumes you have previously completed the following.
 
 <!-- workflow.run() 
 
-  cd functions/cosmosdb-output
+cd compute/functions/cosmosdb-output
 
   -->
 
@@ -84,7 +84,7 @@ following command line:
 
 <!-- workflow.run() 
 
-  cd ../..
+cd ../../..
 
   -->
 

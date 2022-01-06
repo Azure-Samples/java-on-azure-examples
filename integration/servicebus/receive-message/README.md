@@ -28,7 +28,7 @@ using the command line below:
 ```
 
 <!-- workflow.run()
-  cd servicebus/receive-message
+cd integration/servicebus/receive-message
   -->
 
 Then build the client:
@@ -44,7 +44,7 @@ And then send the message:
 ```
 
 <!-- workflow.run()
-  cd ../..
+cd ../../..
   -->
 
 <!-- workflow.directOnly() 

@@ -21,7 +21,7 @@ This example assumes you have previously completed the following example:
 
 <!-- workflow.run()
 
-  cd cosmosdb/sql-change-feed-processor
+cd databases/cosmosdb/sql-change-feed-processor
 
   -->
 
@@ -50,8 +50,8 @@ Then execute the following command line:
 
 <!-- workflow.run() 
 
-  export RESULT=$(java -jar target/change-feed-processor.jar)
-  cd ../..
+export RESULT=$(java -jar target/change-feed-processor.jar)
+cd ../../..
 
   -->
 

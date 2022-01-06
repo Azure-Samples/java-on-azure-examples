@@ -16,7 +16,7 @@ This example assumes you have previously completed the following examples.
 
 <!-- workflow.run() 
 
-  cd spring-cloud/helloworld
+cd compute/spring-cloud/helloworld
 
   -->
 

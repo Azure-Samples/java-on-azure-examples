@@ -13,7 +13,7 @@ This example assumes you have previously completed the following examples:
 <!-- workflow.include(../create/README.md) -->
 <!-- workflow.run() 
 
-  cd spring-cloud/config-server
+cd compute/spring-cloud/config-server
 
   -->
 
@@ -37,7 +37,7 @@ branch of this Git repository.
 
 <!-- workflow.run() 
 
-  cd ../..
+cd ../../..
 
   -->
 

@@ -17,7 +17,7 @@ This example assumes you have previously completed the following examples.
 
 <!-- workflow.run()
 
-cd acr/payara
+cd containers/acr/payara
 
   -->
 
@@ -39,7 +39,7 @@ To build and push the Docker image to your ACR use the command line below:
 
 <!-- workflow.run()
 
-cd ../..
+cd ../../..
 
   -->
 

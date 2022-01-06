@@ -23,7 +23,7 @@ This example will get country information from the database.
 
 <!-- workflow.run()
 
-  cd mssql/get-country
+cd databases/mssql/get-country
 
   -->
 
@@ -42,7 +42,7 @@ the abbreviation 'USA'.
 
 <!-- workflow.run()
 
-  cd ../..
+cd ../../..
 
   -->
 

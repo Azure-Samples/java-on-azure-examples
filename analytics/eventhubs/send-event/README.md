@@ -30,7 +30,7 @@ connect to the event hub:
 
 <!-- workflow.run() 
 
-  cd eventhubs/send-event
+cd analytics/eventhubs/send-event
 
   -->
 
@@ -49,8 +49,8 @@ Execute the following command line to send the event to the event hub:
 
 <!-- workflow.run()
 
-  export RESULT=$(java -jar target/send-event.jar)
-  cd ../..
+export RESULT=$(java -jar target/send-event.jar)
+cd ../../..
 
   -->
 

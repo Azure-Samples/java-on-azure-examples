@@ -22,7 +22,7 @@ To deploy Payara use the following command lines:
 
 <!-- workflow.run() 
 
-  cd appservice/docker-payara
+cd compute/appservice/docker-payara
 
   -->
 
@@ -46,8 +46,8 @@ To deploy Payara use the following command lines:
 
 <!-- workflow.run() 
 
-  sleep 180
-  cd ../..
+sleep 180
+cd ../../..
 
   -->
 

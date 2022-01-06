@@ -17,7 +17,7 @@ This example assumes you have previously completed the following:
 
 <!-- workflow.run()
 
-cd acr/graalvm
+cd containers/acr/graalvm
 
   -->
 
@@ -59,7 +59,7 @@ To build and push the Docker image to your ACR use the command lines below:
 
 <!-- workflow.run()
 
-cd ../..
+cd ../../..
 
   -->
 

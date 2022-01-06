@@ -18,7 +18,7 @@ This example assumes you have previously completed the following examples:
 
 <!-- workflow.run() 
 
-  cd storage/upload-files-to-static-website
+cd storage/storage/upload-files-to-static-website
 
   -->
 
@@ -35,8 +35,8 @@ line:
 
 <!-- workflow.run() 
 
-  sleep 60
-  cd ../..
+sleep 60
+cd ../../..
 
   -->
 

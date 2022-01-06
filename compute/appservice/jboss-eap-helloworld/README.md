@@ -15,7 +15,7 @@ This example assumes you have previously completed the following examples:
 
 <!-- workflow.run() 
 
-cd appservice/jboss-eap-helloworld
+cd compute/appservice/jboss-eap-helloworld
 
   -->
 
@@ -39,7 +39,7 @@ To deploy the example use the following Maven command line.
 <!-- workflow.run()
 
 sleep 60
-cd ../..
+cd ../../..
 
   -->
 

@@ -22,7 +22,7 @@ This example assumes you have previously completed the following examples.
 <!-- workflow.include(../use-your-acr/README.md) -->
 <!-- workflow.run() 
 
-  cd aks/wildfly
+cd containers/aks/wildfly
 
   -->
 
@@ -62,7 +62,7 @@ own Azure Container Registry.
 
 <!-- workflow.run() 
 
-  cd ../..
+cd ../../..
   
   -->
 

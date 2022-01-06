@@ -20,7 +20,7 @@ This example assumes you have previously completed the following examples.
 <!-- workflow.include(../create/README.md) -->
 <!-- workflow.run()
 
-  cd aks/create-kube-config
+cd containers/aks/create-kube-config
 
   -->
 
@@ -42,7 +42,7 @@ Set the KUBECONFIG environment variable using the command line below:
 
 <!-- workflow.run()
 
-  cd ../..
+cd ../../..
 
   -->
 

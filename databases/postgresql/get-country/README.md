@@ -22,7 +22,7 @@ This example will get country information from the database.
 
 <!-- workflow.run()
 
-  cd postgresql/get-country
+cd databases/postgresql/get-country
 
   -->
 
@@ -44,7 +44,7 @@ it into the shell. Omit the backslash when using it in your configuration files.
 
 <!-- workflow.run()
 
-  cd ../..
+cd ../../..
 
   -->
 

@@ -17,7 +17,7 @@ To build the JAR file use the following Maven command line.
 
 <!-- workflow.run() 
 
-cd appservice/javase-springboot
+cd compute/appservice/javase-springboot
 
   -->
 
@@ -52,7 +52,7 @@ To deploy the example use the following Maven command line:
 
 <!-- workflow.run()
 
-cd ../..
+cd ../../..
 
   -->
 

@@ -22,7 +22,7 @@ This example assumes you have previously completed the following example:
 
 <!-- workflow.run()
 
-  cd cosmosdb/insert-item-into-sql-container
+cd databases/cosmosdb/insert-item-into-sql-container
 
   -->
 
@@ -51,8 +51,8 @@ Then execute the following command line:
 
 <!-- workflow.run() 
 
-  export RESULT=$(java -jar target/insert-item.jar)
-  cd ../..
+export RESULT=$(java -jar target/insert-item.jar)
+cd ../../..
 
   -->
 

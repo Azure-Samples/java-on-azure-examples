@@ -28,7 +28,7 @@ using the command line below:
 
 <!-- workflow.run()
 
-  cd servicebus/send-jms-message
+cd integration/servicebus/send-jms-message
 
 -->
 
@@ -46,7 +46,7 @@ And then send the message:
 
 <!-- workflow.run()
 
-  cd ../..
+cd ../../..
 
 -->
 

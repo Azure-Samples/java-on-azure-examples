@@ -17,7 +17,7 @@ This example assumes you have previously completed the following examples.
 
 <!-- workflow.run()
 
-cd acr/jetty
+cd containers/acr/jetty
 
   -->
 
@@ -39,7 +39,7 @@ To build and push the Docker image to your ACR use the command lines below:
 
 <!-- workflow.run()
 
-cd ../..
+cd ../../..
 
   -->
 

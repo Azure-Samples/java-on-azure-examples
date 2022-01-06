@@ -20,7 +20,7 @@ To build the WAR file use the following command line:
 
 <!-- workflow.run()
 
-cd acr/tomcat
+cd containers/acr/tomcat
 
   -->
 
@@ -40,7 +40,7 @@ To build and push the Docker image to your ACR use the command lines below:
 
 <!-- workflow.run()
 
-cd ../..
+cd ../../..
 
   -->
 
