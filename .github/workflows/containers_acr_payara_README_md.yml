@@ -30,14 +30,14 @@ jobs:
           --sku Basic \
           --admin-enabled true
           
-          cd acr/payara
+          cd containers/acr/payara
           
           mvn package
           export ACR_PAYARA_IMAGE=payara:latest
           
           az acr build --registry $ACR_NAME --image $ACR_PAYARA_IMAGE .
           
-          cd ../..
+          cd ../../..
           
           
           export RESULT=$(az acr repository show --name $ACR_NAME --image $ACR_PAYARA_IMAGE)

@@ -43,7 +43,7 @@ jobs:
           --start-ip-address $LOCAL_IP \
           --end-ip-address $LOCAL_IP
           
-          cd mysql/load-your-mysql-database-with-data
+          cd databases/mysql/load-your-mysql-database-with-data
           
           export MYSQL_DNS_NAME=`az mysql server show \
           --resource-group $RESOURCE_GROUP \
@@ -55,15 +55,15 @@ jobs:
           
           mysql -h $MYSQL_DNS_NAME -u $MYSQL_CLIENT_USERNAME -p$MYSQL_PASSWORD < load.sql
           
-          cd ../..
+          cd ../../..
           
           
-          cd mysql/get-country
+          cd databases/mysql/get-country
           
           mvn package
           java -jar target/get-country.jar jdbc:mysql://$MYSQL_DNS_NAME:3306/demo?useSSL=true\&requireSSL=true $MYSQL_CLIENT_USERNAME $MYSQL_PASSWORD USA
           
-          cd ../..
+          cd ../../..
           
           
           az group delete --name $RESOURCE_GROUP --yes || true

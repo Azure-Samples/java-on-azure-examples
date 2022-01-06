@@ -31,7 +31,7 @@ jobs:
           --is-linux \
           --sku P1v3
           
-          cd appservice/jboss-eap-helloworld
+          cd compute/appservice/jboss-eap-helloworld
           
           mvn clean package
           export APPSERVICE_JBOSS_EAP_HELLOWORLD=appservice-jboss-eap-helloworld-$RANDOM
@@ -42,7 +42,7 @@ jobs:
           -DresourceGroup=$RESOURCE_GROUP
           
           sleep 60
-          cd ../..
+          cd ../../..
           
           
           export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_JBOSS_EAP_HELLOWORLD --output tsv --query state)

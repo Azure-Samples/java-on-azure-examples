@@ -37,17 +37,17 @@ jobs:
           export SERVICE_BUS_QUEUE_CONNECTION_STRING=$(az servicebus namespace authorization-rule keys list \
           --resource-group $RESOURCE_GROUP --namespace-name $SERVICE_BUS --name RootManageSharedAccessKey \
           --query primaryConnectionString --output tsv)
-          cd servicebus/send-message
+          cd integration/servicebus/send-message
           mvn clean package
           java -jar target/send-message.jar
-          cd ../..
+          cd ../../..
           export SERVICE_BUS_QUEUE_CONNECTION_STRING=$(az servicebus namespace authorization-rule keys list \
           --resource-group $RESOURCE_GROUP --namespace-name $SERVICE_BUS --name RootManageSharedAccessKey \
           --query primaryConnectionString --output tsv)
-          cd servicebus/receive-message
+          cd integration/servicebus/receive-message
           mvn clean package
           java -jar target/receive-message.jar
-          cd ../..
+          cd ../../..
           export RESULT=$(az servicebus queue show --resource-group $RESOURCE_GROUP --namespace $SERVICE_BUS --name $SERVICE_BUS_QUEUE --query countDetails.activeMessageCount --output tsv)
           az group delete --name $RESOURCE_GROUP --yes || true
           if [[ "$RESULT" != "0" ]]; then

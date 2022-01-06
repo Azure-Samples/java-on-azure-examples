@@ -39,7 +39,7 @@ jobs:
           fi
           
           
-          cd functions/cosmosdb-output
+          cd compute/functions/cosmosdb-output
           
           export FUNCTIONS_COSMOSDB=functions-cosmosdb-$RANDOM
           export FUNCTIONS_COSMOSDB_CONNECTION_STRING="$(az cosmosdb keys list --resource-group $RESOURCE_GROUP --name $COSMOSDB_ACCOUNT_NAME --type connection-strings --query connectionStrings[0].connectionString --output tsv)"
@@ -49,7 +49,7 @@ jobs:
           -DcosmosDBConnectionString="$FUNCTIONS_COSMOSDB_CONNECTION_STRING" \
           clean package azure-functions:deploy
           
-          cd ../..
+          cd ../../..
           
           
           az group delete --name $RESOURCE_GROUP --yes || true

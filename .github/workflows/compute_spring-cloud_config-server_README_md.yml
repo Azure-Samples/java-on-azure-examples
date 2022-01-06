@@ -27,14 +27,14 @@ jobs:
           --resource-group $RESOURCE_GROUP \
           --name $SPRING_CLOUD_NAME
           
-          cd spring-cloud/config-server
+          cd compute/spring-cloud/config-server
           
           az spring-cloud config-server set \
           --config-file application.yml \
           --name ${SPRING_CLOUD_NAME} \
           --resource-group ${RESOURCE_GROUP}
           
-          cd ../..
+          cd ../../..
           
           
           az group delete --name $RESOURCE_GROUP --yes || true

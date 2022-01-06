@@ -30,14 +30,14 @@ jobs:
           --sku Basic \
           --admin-enabled true
           
-          cd acr/payara
+          cd containers/acr/payara
           
           mvn package
           export ACR_PAYARA_IMAGE=payara:latest
           
           az acr build --registry $ACR_NAME --image $ACR_PAYARA_IMAGE .
           
-          cd ../..
+          cd ../../..
           
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
@@ -55,7 +55,7 @@ jobs:
           --sku Basic \
           --admin-enabled true
           
-          cd acr/create-settings-xml
+          cd containers/acr/create-settings-xml
           
           export ACR_USERNAME=`az acr credential show --name $ACR_NAME \
           --resource-group $RESOURCE_GROUP --query username --output tsv`
@@ -63,7 +63,7 @@ jobs:
           --resource-group $RESOURCE_GROUP --query 'passwords[0].value' --output tsv`
           export SETTINGS_XML=$PWD/settings.xml
           
-          cd ../..
+          cd ../../..
           
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
@@ -82,7 +82,7 @@ jobs:
           --is-linux \
           --sku P1v3
           
-          cd appservice/docker-payara
+          cd compute/appservice/docker-payara
           
           export APPSERVICE_DOCKER_PAYARA=appservice-docker-payara-$RANDOM
           
@@ -101,7 +101,7 @@ jobs:
           --output tsv
           
           sleep 180
-          cd ../..
+          cd ../../..
           
           
           export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_PAYARA --output tsv --query state)

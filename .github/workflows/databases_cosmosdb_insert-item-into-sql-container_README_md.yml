@@ -99,7 +99,7 @@ jobs:
           fi
           
           
-          cd cosmosdb/insert-item-into-sql-container
+          cd databases/cosmosdb/insert-item-into-sql-container
           
           mvn clean install
           export COSMOSDB_ENDPOINT=$(az cosmosdb show --resource-group $RESOURCE_GROUP \
@@ -109,7 +109,7 @@ jobs:
           --resource-group $RESOURCE_GROUP --output tsv --query primaryMasterKey)
           
           export RESULT=$(java -jar target/insert-item.jar)
-          cd ../..
+          cd ../../..
           
           
           az group delete --name $RESOURCE_GROUP --yes || true

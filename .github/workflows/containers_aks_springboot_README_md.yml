@@ -26,12 +26,12 @@ jobs:
           fi
           
           
-          cd aks/create-kube-config
+          cd containers/aks/create-kube-config
           
           az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS --admin --file config
           export KUBECONFIG=$PWD/config
           
-          cd ../..
+          cd ../../..
           
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
@@ -63,7 +63,7 @@ jobs:
           --admin-enabled true
           az aks update --name $AKS --resource-group $RESOURCE_GROUP --attach-acr $ACR_NAME
           
-          cd aks/springboot
+          cd containers/aks/springboot
           
           mvn package
           az acr build --registry $ACR_NAME --image springboot:latest .
@@ -71,7 +71,7 @@ jobs:
           kubectl apply -f deployment.yml
           kubectl get service/springboot
           
-          cd ../..
+          cd ../../..
           
           
           az group delete --name $RESOURCE_GROUP --yes || true

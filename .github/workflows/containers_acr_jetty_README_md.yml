@@ -30,14 +30,14 @@ jobs:
           --sku Basic \
           --admin-enabled true
           
-          cd acr/jetty
+          cd containers/acr/jetty
           
           mvn package
           export ACR_JETTY_IMAGE=jetty:latest
           
           az acr build --registry $ACR_NAME --image $ACR_JETTY_IMAGE .
           
-          cd ../..
+          cd ../../..
           
           
           export RESULT=$(az acr repository show --name $ACR_NAME --image $ACR_JETTY_IMAGE)

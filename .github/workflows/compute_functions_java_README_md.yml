@@ -30,7 +30,7 @@ jobs:
           func
           
           
-          cd functions/java
+          cd compute/functions/java
           mkdir .mvn
           echo "-ntp" > .mvn/maven.config
           
@@ -44,7 +44,7 @@ jobs:
           --query hostNames \
           --output tsv`/api/helloworld
           
-          cd ../..
+          cd ../../..
           
           
           az group delete --name $RESOURCE_GROUP --yes || true

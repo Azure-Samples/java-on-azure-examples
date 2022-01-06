@@ -30,14 +30,14 @@ jobs:
           --sku Basic \
           --admin-enabled true
           
-          cd acr/jetty
+          cd containers/acr/jetty
           
           mvn package
           export ACR_JETTY_IMAGE=jetty:latest
           
           az acr build --registry $ACR_NAME --image $ACR_JETTY_IMAGE .
           
-          cd ../..
+          cd ../../..
           
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
@@ -55,7 +55,7 @@ jobs:
           --sku Basic \
           --admin-enabled true
           
-          cd acr/create-settings-xml
+          cd containers/acr/create-settings-xml
           
           export ACR_USERNAME=`az acr credential show --name $ACR_NAME \
           --resource-group $RESOURCE_GROUP --query username --output tsv`
@@ -63,7 +63,7 @@ jobs:
           --resource-group $RESOURCE_GROUP --query 'passwords[0].value' --output tsv`
           export SETTINGS_XML=$PWD/settings.xml
           
-          cd ../..
+          cd ../../..
           
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
@@ -82,7 +82,7 @@ jobs:
           --is-linux \
           --sku P1v3
           
-          cd appservice/docker-jetty
+          cd compute/appservice/docker-jetty
           
           export APPSERVICE_DOCKER_JETTY=appservice-docker-jetty-$RANDOM
           
@@ -101,7 +101,7 @@ jobs:
           --output tsv
           
           sleep 180
-          cd ../..
+          cd ../../..
           
           
           export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_JETTY --output tsv --query state)

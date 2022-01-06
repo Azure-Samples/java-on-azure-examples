@@ -27,7 +27,7 @@ jobs:
           --resource-group $RESOURCE_GROUP \
           --name $SPRING_CLOUD_NAME
           
-          cd spring-cloud/helloworld
+          cd compute/spring-cloud/helloworld
           
           mvn package
           az spring-cloud app create \

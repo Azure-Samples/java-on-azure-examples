@@ -87,7 +87,7 @@ jobs:
           fi
           
           
-          cd cosmosdb/sql-change-feed-processor
+          cd databases/cosmosdb/sql-change-feed-processor
           
           mvn clean install
           export COSMOSDB_ENDPOINT=$(az cosmosdb show --resource-group $RESOURCE_GROUP \
@@ -97,7 +97,7 @@ jobs:
           --resource-group $RESOURCE_GROUP --output tsv --query primaryMasterKey)
           
           export RESULT=$(java -jar target/change-feed-processor.jar)
-          cd ../..
+          cd ../../..
           
           
           az group delete --name $RESOURCE_GROUP --yes || true

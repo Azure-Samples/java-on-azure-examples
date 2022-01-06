@@ -30,14 +30,14 @@ jobs:
           --sku Basic \
           --admin-enabled true
           
-          cd acr/glassfish
+          cd containers/acr/glassfish
           
           mvn package
           export ACR_GLASSFISH_IMAGE=glassfish:latest
           
           az acr build --registry $ACR_NAME --image $ACR_GLASSFISH_IMAGE .
           
-          cd ../..
+          cd ../../..
           
           
           export RESULT=$(az acr repository show --name $ACR_NAME --image $ACR_GLASSFISH_IMAGE)

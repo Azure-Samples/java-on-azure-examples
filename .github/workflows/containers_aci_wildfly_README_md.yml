@@ -59,14 +59,14 @@ jobs:
           --sku Basic \
           --admin-enabled true
           
-          cd acr/wildfly
+          cd containers/acr/wildfly
           
           mvn package
           export ACR_WILDFLY_IMAGE=wildfly:latest
           
           az acr build --registry $ACR_NAME --image $ACR_WILDFLY_IMAGE .
           
-          cd ../..
+          cd ../../..
           
           export ACI_WILDFLY=aci-wildfly-$RANDOM
           

@@ -42,7 +42,7 @@ jobs:
           --query primaryEndpoints.web \
           --output tsv
           
-          cd storage/upload-files-to-static-website
+          cd storage/storage/upload-files-to-static-website
           
           az storage blob upload-batch \
           --source web \
@@ -51,7 +51,7 @@ jobs:
           --connection-string $STORAGE_ACCOUNT_CONNECTION_STRING
           
           sleep 60
-          cd ../..
+          cd ../../..
           
           
           export URL=$(az storage account show --name $STORAGE_ACCOUNT_NAME --query primaryEndpoints.web --output tsv)index.html

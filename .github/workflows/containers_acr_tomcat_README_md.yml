@@ -30,14 +30,14 @@ jobs:
           --sku Basic \
           --admin-enabled true
           
-          cd acr/tomcat
+          cd containers/acr/tomcat
           
           mvn package
           export ACR_TOMCAT_IMAGE=tomcat:latest
           
           az acr build --registry $ACR_NAME --image $ACR_TOMCAT_IMAGE .
           
-          cd ../..
+          cd ../../..
           
           
           export RESULT=$(az acr repository show --name $ACR_NAME --image $ACR_TOMCAT_IMAGE)

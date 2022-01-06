@@ -113,20 +113,20 @@ jobs:
           --query primaryConnectionString \
           --output tsv)
           
-          cd eventhubs/send-event
+          cd analytics/eventhubs/send-event
           
           mvn clean install
           
           export RESULT=$(java -jar target/send-event.jar)
-          cd ../..
+          cd ../../..
           
           
-          cd eventhubs/receive-event
+          cd analytics/eventhubs/receive-event
           
           mvn clean install
           
           export RESULT=$(java -jar target/receive-event.jar)
-          cd ../..
+          cd ../../..
           
           
           az group delete --name $RESOURCE_GROUP --yes || true

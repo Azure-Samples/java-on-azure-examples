@@ -43,7 +43,7 @@ jobs:
           --start-ip-address $LOCAL_IP \
           --end-ip-address $LOCAL_IP
           
-          cd mssql/load-your-mssql-database-with-data
+          cd databases/mssql/load-your-mssql-database-with-data
           
           sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
           python -m pip install --upgrade pip
@@ -61,15 +61,15 @@ jobs:
           
           mssql-cli -S $MSSQL_DNS_NAME -U $MSSQL_CLIENT_USERNAME -P $MSSQL_PASSWORD -d demo -i load.sql
           
-          cd ../..
+          cd ../../..
           
           
-          cd mssql/get-country
+          cd databases/mssql/get-country
           
           mvn package
           java -jar target/get-country.jar "jdbc:sqlserver://$MSSQL_DNS_NAME:1433;databaseName=demo;encrypt=true;trustServerCertificate=true" $MSSQL_CLIENT_USERNAME $MSSQL_PASSWORD USA
           
-          cd ../..
+          cd ../../..
           
           
           az group delete --name $RESOURCE_GROUP --yes || true

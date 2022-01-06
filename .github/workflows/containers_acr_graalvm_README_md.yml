@@ -30,7 +30,7 @@ jobs:
           --sku Basic \
           --admin-enabled true
           
-          cd acr/graalvm
+          cd containers/acr/graalvm
           
           mvn package
           docker build -t builder -f Dockerfile.builder .
@@ -39,7 +39,7 @@ jobs:
           
           az acr build --registry $ACR_NAME --image $ACR_GRAALVM_IMAGE .
           
-          cd ../..
+          cd ../../..
           
           
           export RESULT=$(az acr repository show --name $ACR_NAME --image $ACR_GRAALVM_IMAGE)

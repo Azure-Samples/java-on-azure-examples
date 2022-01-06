@@ -30,14 +30,14 @@ jobs:
           --sku Basic \
           --admin-enabled true
           
-          cd acr/quarkus
+          cd containers/acr/quarkus
           
           mvn package
           export ACR_QUARKUS_IMAGE=quarkus:latest
           
           az acr build --registry $ACR_NAME --resource-group $RESOURCE_GROUP --image $ACR_QUARKUS_IMAGE .
           
-          cd ../..
+          cd ../../..
           
           
           export RESULT=$(az acr repository show --name $ACR_NAME --image $ACR_QUARKUS_IMAGE)

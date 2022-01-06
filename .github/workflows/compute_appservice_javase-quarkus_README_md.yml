@@ -31,7 +31,7 @@ jobs:
           --is-linux \
           --sku P1v3
           
-          cd appservice/javase-quarkus
+          cd compute/appservice/javase-quarkus
           
           mvn package
           export APPSERVICE_JAVASE_QUARKUS=appservice-javase-quarkus-$RANDOM
@@ -41,7 +41,7 @@ jobs:
           -DappServicePlan=$APPSERVICE_PLAN \
           -DresourceGroup=$RESOURCE_GROUP
           
-          cd ../..
+          cd ../../..
           
           
           sleep 60

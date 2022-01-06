@@ -31,7 +31,7 @@ jobs:
           --is-linux \
           --sku P1v3
           
-          cd appservice/javase-springboot
+          cd compute/appservice/javase-springboot
           
           mvn package
           export APPSERVICE_JAVASE_SPRINGBOOT=appservice-javase-springboot-$RANDOM
@@ -41,7 +41,7 @@ jobs:
           -DappServicePlan=$APPSERVICE_PLAN \
           -DresourceGroup=$RESOURCE_GROUP
           
-          cd ../..
+          cd ../../..
           
           
           export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_JAVASE_SPRINGBOOT --output tsv --query state)

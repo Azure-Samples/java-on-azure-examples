@@ -38,23 +38,23 @@ jobs:
           --resource-group $RESOURCE_GROUP --namespace-name $SERVICE_BUS --name RootManageSharedAccessKey \
           --query primaryConnectionString --output tsv)
           
-          cd servicebus/send-jms-message
+          cd integration/servicebus/send-jms-message
           
           mvn clean package
           java -jar target/send-jms-message.jar
           
-          cd ../..
+          cd ../../..
           
           export SERVICE_BUS_QUEUE_CONNECTION_STRING=$(az servicebus namespace authorization-rule keys list \
           --resource-group $RESOURCE_GROUP --namespace-name $SERVICE_BUS --name RootManageSharedAccessKey \
           --query primaryConnectionString --output tsv)
           
-          cd servicebus/receive-jms-message
+          cd integration/servicebus/receive-jms-message
           
           mvn clean package
           java -jar target/receive-jms-message.jar
           
-          cd ../..
+          cd ../../..
           
           
           export RESULT=$(az servicebus queue show --resource-group $RESOURCE_GROUP --namespace $SERVICE_BUS --name $SERVICE_BUS_QUEUE --query countDetails.activeMessageCount --output tsv)

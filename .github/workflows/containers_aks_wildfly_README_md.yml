@@ -28,14 +28,14 @@ jobs:
           --sku Basic \
           --admin-enabled true
           
-          cd acr/wildfly
+          cd containers/acr/wildfly
           
           mvn package
           export ACR_WILDFLY_IMAGE=wildfly:latest
           
           az acr build --registry $ACR_NAME --image $ACR_WILDFLY_IMAGE .
           
-          cd ../..
+          cd ../../..
           
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
@@ -51,12 +51,12 @@ jobs:
           fi
           
           
-          cd aks/create-kube-config
+          cd containers/aks/create-kube-config
           
           az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS --admin --file config
           export KUBECONFIG=$PWD/config
           
-          cd ../..
+          cd ../../..
           
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
@@ -88,12 +88,12 @@ jobs:
           --admin-enabled true
           az aks update --name $AKS --resource-group $RESOURCE_GROUP --attach-acr $ACR_NAME
           
-          cd aks/wildfly
+          cd containers/aks/wildfly
           
           sed -i "s/ACR/$ACR_NAME/g" deployment.yml
           kubectl apply -f deployment.yml
           
-          cd ../..
+          cd ../../..
           
           
           az group delete --name $RESOURCE_GROUP --yes || true
