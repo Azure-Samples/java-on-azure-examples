@@ -9,5 +9,5 @@
     </parent>
     <artifactId>eventhubs-create-namespace</artifactId>
     <packaging>pom</packaging>
-    <name>Create a namespace</name>
+    <name>Analytics :: Event Hubs :: Create a namespace</name>
 </project>

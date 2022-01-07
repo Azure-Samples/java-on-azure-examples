@@ -9,5 +9,5 @@
     </parent>
     <artifactId>keyvault-create-self-signed-certificate</artifactId>
     <packaging>pom</packaging>
-    <name>Create a self-signed certificate</name>
+    <name>Security :: KeyVault :: Create a self-signed certificate</name>
 </project>

@@ -10,7 +10,7 @@
     <groupId>examples.azure.analytics.adx</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Data Explorer examples</name>
+    <name>Analytics :: Data Explorer</name>
     <modules>
         <module>create</module>
         <module>create-database</module>

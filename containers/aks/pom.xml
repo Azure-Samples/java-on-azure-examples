@@ -10,7 +10,7 @@
     <groupId>examples.azure.containers.aks</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Kubernetes Service examples</name>
+    <name>Containers :: Kubernetes</name>
     <modules>
         <module>create</module>
         <module>create-kube-config</module>

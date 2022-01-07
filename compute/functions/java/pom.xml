@@ -9,7 +9,7 @@
     </parent>
     <artifactId>functions-java</artifactId>
     <packaging>jar</packaging>
-    <name>Deploy a Java Function</name>
+    <name>Compute :: Functions :: Deploy a Java Function</name>
     <build>
         <plugins>
             <plugin>

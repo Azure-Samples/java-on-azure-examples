@@ -9,5 +9,5 @@
     </parent>
     <artifactId>mssql-create</artifactId>
     <packaging>pom</packaging>
-    <name>Create an Azure SQL Database</name>
+    <name>Databases :: Azure SQL :: Create an Azure SQL Database</name>
 </project>

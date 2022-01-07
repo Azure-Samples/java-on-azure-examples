@@ -9,7 +9,7 @@
     </parent>
     <artifactId>acr-create-acrpull-service-principal</artifactId>
     <packaging>pom</packaging>
-    <name>Create an 'acrpull' Service Principal</name>
+    <name>Containers :: Container Registry :: Create an 'acrpull' Service Principal</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

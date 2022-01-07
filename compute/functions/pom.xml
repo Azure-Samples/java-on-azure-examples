@@ -10,7 +10,7 @@
     <groupId>examples.azure.compute.functions</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Functions examples</name>
+    <name>Compute :: Functions</name>
     <modules>
         <module>cosmosdb-output</module>
         <module>install-tools</module>

@@ -9,5 +9,5 @@
     </parent>
     <artifactId>springcloud-create</artifactId>
     <packaging>pom</packaging>
-    <name>Create an Azure Spring Cloud</name>
+    <name>Compute :: Spring Cloud :: Create an Azure Spring Cloud</name>
 </project>

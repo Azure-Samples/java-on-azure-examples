@@ -9,7 +9,7 @@
     </parent>
     <artifactId>appservice-docker-jetty</artifactId>
     <packaging>pom</packaging>
-    <name>Deploy Jetty using a Docker image</name>
+    <name>Compute :: App Service :: Deploy Jetty using a Docker image</name>
     <build>
         <plugins>
             <plugin>

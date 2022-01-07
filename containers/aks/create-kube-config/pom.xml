@@ -9,7 +9,7 @@
     </parent>
     <artifactId>aks-create-kube-config</artifactId>
     <packaging>pom</packaging>
-    <name>Create Kube config using admin access</name>
+    <name>Containers :: Kubernetes :: Create Kube config using admin access</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

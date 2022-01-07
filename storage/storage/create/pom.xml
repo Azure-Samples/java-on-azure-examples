@@ -9,5 +9,5 @@
     </parent>
     <artifactId>storage-create</artifactId>
     <packaging>pom</packaging>
-    <name>Create an Azure Storage Account</name>
+    <name>Storage :: Storage :: Create an Azure Storage Account</name>
 </project>

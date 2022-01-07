@@ -9,7 +9,7 @@
     </parent>
     <artifactId>adx-ingest-client</artifactId>
     <packaging>jar</packaging>
-    <name>Ingest Client</name>
+    <name>Analytics :: Data Explorer :: Ingest Client</name>
     <build>
         <finalName>ingest</finalName>
         <plugins>

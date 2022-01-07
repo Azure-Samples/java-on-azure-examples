@@ -9,7 +9,7 @@
     </parent>
     <artifactId>appservice-jboss-eap-helloworld</artifactId>
     <packaging>war</packaging>
-    <name>Deploy a web application on a managed JBoss EAP</name>
+    <name>Compute :: App Service :: Deploy a web application on a managed JBoss EAP</name>
     <build>
         <plugins>
             <plugin>

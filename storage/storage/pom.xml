@@ -10,7 +10,7 @@
     <groupId>examples.azure.storage.storage</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Storage examples</name>
+    <name>Storage :: Storage</name>
     <modules>
         <module>create</module>
         <module>enable-static-website</module>

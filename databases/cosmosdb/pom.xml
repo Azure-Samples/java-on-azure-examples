@@ -10,7 +10,7 @@
     <groupId>examples.azure.databases.cosmosdb</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Cosmos DB examples</name>
+    <name>Databases :: Cosmos DB</name>
     <modules>
         <module>cosmos-to-storage</module>
         <module>create</module>

@@ -10,7 +10,7 @@
     <groupId>examples.azure.general.group</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Resource Group examples</name>
+    <name>General :: Resource Group</name>
     <modules>
         <module>create</module>
         <module>delete</module>

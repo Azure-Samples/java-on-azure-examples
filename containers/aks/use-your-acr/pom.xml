@@ -9,7 +9,7 @@
     </parent>
     <artifactId>aks-use-your-acr-registry</artifactId>
     <packaging>pom</packaging>
-    <name>Update your AKS cluster to use your Azure Container Registry</name>
+    <name>Containers :: Kubernetes :: Update your AKS cluster to use your Azure Container Registry</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

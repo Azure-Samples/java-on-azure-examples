@@ -9,5 +9,5 @@
     </parent>
     <artifactId>appservice-delete-plan</artifactId>
     <packaging>pom</packaging>
-    <name>Delete an App Service Plan</name>
+    <name>Compute :: App Service :: Delete an App Service Plan</name>
 </project>

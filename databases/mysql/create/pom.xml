@@ -9,5 +9,5 @@
     </parent>
     <artifactId>mysql-create</artifactId>
     <packaging>pom</packaging>
-    <name>Create an Azure Database for MySQL</name>
+    <name>Databases :: MySQL :: Create an Azure Database for MySQL</name>
 </project>

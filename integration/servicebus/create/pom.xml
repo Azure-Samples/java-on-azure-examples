@@ -9,5 +9,5 @@
     </parent>
     <artifactId>servicebus-create</artifactId>
     <packaging>pom</packaging>
-    <name>Create an Azure Service Bus</name>
+    <name>Integration :: Service Bus :: Create an Azure Service Bus</name>
 </project>

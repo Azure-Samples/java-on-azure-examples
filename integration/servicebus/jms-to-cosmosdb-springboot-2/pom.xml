@@ -11,7 +11,7 @@
     <groupId>examples.azure.integration.servicebus</groupId>
     <artifactId>servicebus-jms-to-cosmosdb-springboot-2</artifactId>
     <packaging>jar</packaging>
-    <name>JMS to Cosmos DB Spring Boot application #2</name>
+    <name>Integration :: Service Bus :: JMS to Cosmos DB Spring Boot application #2</name>
     <build>
         <finalName>jms-to-cosmosdb-springboot</finalName>
         <plugins>

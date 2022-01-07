@@ -10,7 +10,7 @@
     <groupId>examples.azure.databases.mssql</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure SQL examples</name>
+    <name>Databases :: Azure SQL</name>
     <modules>
         <module>create</module>
         <module>load-your-mssql-database-with-data</module>
