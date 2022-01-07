@@ -5,7 +5,7 @@
 
 ## Prerequisites
 
-This example assumes you have previously completed the following example.
+This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../../general/group/create/README.md)
 

@@ -5,7 +5,7 @@
 
 ## Prerequisites
 
-This example assumes you have previously completed the following examples.
+This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../../general/group/create/README.md)
 1. [Create an Azure Container Registry](../create/README.md)
@@ -34,7 +34,13 @@ To build and push the Docker image to your ACR use the command line below:
 ```shell
   export ACR_GLASSFISH_IMAGE=glassfish:latest
 
-  az acr build --registry $ACR_NAME --image $ACR_GLASSFISH_IMAGE .
+  az acr build --resource-group $RESOURCE_GROUP --registry $ACR_NAME --image $ACR_GLASSFISH_IMAGE .
+```
+
+You can then use the following command to display the content on the ACR:
+
+```shell
+  az acr repository list --name $ACR_NAME --output table
 ```
 
 <!-- workflow.run()
