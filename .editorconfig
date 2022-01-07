@@ -12,5 +12,8 @@ tab_width = 4
 [{*.xml,*.xsd,*.xsl,*.xslt}]
 max_line_length = 1000
 
+[{*.md,*.asciidoc}]
+max_line_length = 1000
+
 [{*.yaml,*.yml}]
 indent_size = 2

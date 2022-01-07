@@ -69,8 +69,8 @@ fi
 
   -->
 
-Once the command completes you will be able to see the example by using your web browser and going to the `xxxxx.azurewebsites.net` address the command echoes. You can also get
-the URL using the following command:
+Once the command completes you will be able to see the example by using your web browser and going to the `xxxxx.azurewebsites.net` address the command echoes.
+You can also get the URL using the following command:
 
 ```shell
   az webapp show --name $APPSERVICE_TOMCAT_HELLOWORLD 
@@ -85,12 +85,12 @@ The example supports the following properties that you can pass in as
 
 | name                   | description                  |
 |------------------------|------------------------------|
-| appName                | the Application Name         |
-| appServicePlan         | the App Service plan to use  |
-| javaVersion            | the Java version to use      |
-| region                 | the Region to use            |
-| resourceGroup          | the Resource Group to use    |
-| webContainer           | the Web Container to use     |
+| `appName`              | the Application Name         |
+| `appServicePlan`       | the App Service plan to use  |
+| `javaVersion`          | the Java version to use      |
+| `region`               | the Region to use            |
+| `resourceGroup`        | the Resource Group to use    |
+| `webContainer`         | the Web Container to use     |
 
 ## Cleanup
 
