@@ -25,6 +25,22 @@ To create a deployment slot use the following command line:
     --slot staging
 ```
 
+The following command gives you the URL of the original web app:
+
+```shell
+  az webapp show --name $APPSERVICE_TOMCAT_HELLOWORLD 
+                 --resource-group $RESOURCE_GROUP
+                 --query=defaultHostName
+```
+
+The following command gives you the URL of the web app that is in the staging slot:
+
+```shell
+  az webapp deployment slot list --name $APPSERVICE_TOMCAT_HELLOWORLD 
+                                 --resource-group $RESOURCE_GROUP
+                                 --query='[].defaultHostName'
+```
+
 ## Cleanup
 
 <!-- workflow.directOnly()
@@ -42,3 +58,8 @@ fi
 Do NOT forget to remove the resources once you are done running the example.
 
 1m
+
+## Additional documentation
+
+1. [Set up staging environments in Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/deploy-staging-slots)
+1. [Why Azure Deployment Slots are Awesome and How to Use Them](https://stackify.com/azure-deployment-slots/)
