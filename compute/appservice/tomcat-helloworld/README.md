@@ -1,4 +1,3 @@
-
 # Deploy a web application on a managed Tomcat
 
 [![compute/appservice/tomcat-helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_appservice_tomcat-helloworld_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_appservice_tomcat-helloworld_README_md.yml)
@@ -33,7 +32,7 @@ Setup the application name environment variable using the command line below:
   export APPSERVICE_TOMCAT_HELLOWORLD=appservice-tomcat-helloworld-$RANDOM
 ```
 
-To deploy the example use the following Maven command line.
+To deploy the example use the following Maven command line:
 
 ```shell
   mvn azure-webapp:deploy \
@@ -70,14 +69,19 @@ fi
 
   -->
 
-Once the command completes you will be able to see the example by using your 
-web browser and going to the ```xxxxx.azurewebsites.net``` address the command
-echoes.
+Once the command completes you will be able to see the example by using your web browser and going to the `xxxxx.azurewebsites.net` address the command echoes. You can also get
+the URL using the following command:
+
+```shell
+  az webapp show --name $APPSERVICE_TOMCAT_HELLOWORLD 
+                 --resource-group $RESOURCE_GROUP
+                 --query=defaultHostName
+```
 
 ### Properties supported by the example
 
 The example supports the following properties that you can pass in as
--Dname=value to the Maven command line to customize your deployment.
+`-Dname=value` to the Maven command line to customize your deployment.
 
 | name                   | description                  |
 |------------------------|------------------------------|
