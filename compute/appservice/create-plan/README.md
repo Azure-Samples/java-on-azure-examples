@@ -41,7 +41,7 @@ Then, create the App Service Plan using the following command line:
 
 <!-- workflow.directOnly() 
 
-  export RESULT=$(az appservice plan show --resource-group $RESOURCE_GROUP --name $APPSERVICE_PLAN --query provisioningState --output tsv)
+  export RESULT=$(az appservice plan show --resource-group $RESOURCE_GROUP --name $APPSERVICE_PLAN --query properties.provisioningState --output tsv)
   az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != Succeeded ]]; then
     exit 1
