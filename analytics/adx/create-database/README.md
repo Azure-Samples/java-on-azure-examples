@@ -5,7 +5,7 @@
 
 ## Prerequisites
 
-This example assumes you have previously completed the following example.
+This example assumes you have previously completed the following examples:
 
 1. [Create a resource group](../../../general/group/create/README.md)
 1. [Create an Azure Data Explorer cluster](../create/README.md)
