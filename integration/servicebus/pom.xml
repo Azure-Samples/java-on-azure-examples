@@ -10,7 +10,7 @@
     <groupId>examples.azure.integration.servicebus</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Service Bus examples</name>
+    <name>Integration :: Service Bus</name>
     <modules>
         <module>create</module>
         <module>create-queue</module>

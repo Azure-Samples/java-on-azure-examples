@@ -9,7 +9,7 @@
     </parent>
     <artifactId>cosmosdb-insert-item-into-sql-container</artifactId>
     <packaging>jar</packaging>
-    <name>Insert an item into a SQL container</name>
+    <name>Databases :: Cosmos DB :: Insert an item into a SQL container</name>
     <build>
         <finalName>insert-item</finalName>
         <plugins>

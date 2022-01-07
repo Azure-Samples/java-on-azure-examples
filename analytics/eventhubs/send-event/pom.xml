@@ -9,7 +9,7 @@
     </parent>
     <artifactId>eventhubs-send-event</artifactId>
     <packaging>jar</packaging>
-    <name>Send an event</name>
+    <name>Analytics :: Event Hubs :: Send an event</name>
     <build>
         <finalName>send-event</finalName>
         <plugins>

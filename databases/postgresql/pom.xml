@@ -10,7 +10,7 @@
     <groupId>examples.azure.databases.postgresql</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Database for PostgreSQL examples</name>
+    <name>Databases :: PostgreSQL</name>
     <modules>
         <module>create</module>
         <module>load-your-postgresql-database-with-data</module>

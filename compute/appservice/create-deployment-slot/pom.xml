@@ -9,7 +9,7 @@
     </parent>
     <artifactId>appservice-create-deployment-slot</artifactId>
     <packaging>pom</packaging>
-    <name>Create a deployment slot</name>
+    <name>Compute :: App Service :: Create a deployment slot</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

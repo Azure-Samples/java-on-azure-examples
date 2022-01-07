@@ -10,7 +10,7 @@
     <groupId>examples.azure.compute.appservice</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure App Service examples</name>
+    <name>Compute :: App Service</name>
     <modules>
         <module>create-deployment-slot</module>
         <module>create-plan</module>

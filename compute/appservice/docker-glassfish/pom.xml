@@ -9,7 +9,7 @@
     </parent>
     <artifactId>appservice-docker-glassfish</artifactId>
     <packaging>pom</packaging>
-    <name>Deploy Glassfish using a Docker image</name>
+    <name>Compute :: App Service :: Deploy Glassfish using a Docker image</name>
     <build>
         <plugins>
             <plugin>

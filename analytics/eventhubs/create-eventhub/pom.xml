@@ -9,5 +9,5 @@
     </parent>
     <artifactId>eventhubs-create-eventhub</artifactId>
     <packaging>pom</packaging>
-    <name>Create an event hub</name>
+    <name>Analytics :: Event Hubs :: Create an event hub</name>
 </project>

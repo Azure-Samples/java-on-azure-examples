@@ -9,7 +9,7 @@
     </parent>
     <artifactId>appservice-javase-springboot</artifactId>
     <packaging>jar</packaging>
-    <name>Deploy a Spring Boot Application using managed JavaSE</name>
+    <name>Compute :: App Service :: Deploy a Spring Boot Application using managed JavaSE</name>
     <build>
         <plugins>
             <plugin>

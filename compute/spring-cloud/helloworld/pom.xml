@@ -11,7 +11,7 @@
     <groupId>examples.azure.compute.springcloud</groupId>
     <artifactId>springcloud-helloworld</artifactId>
     <version>1-SNAPSHOT</version>
-    <name>Deploy a Spring Boot application to an Azure Spring Cloud</name>
+    <name>Compute :: Spring Cloud :: Deploy a Spring Boot application to an Azure Spring Cloud</name>
 
     <properties>
         <example.appName>${example.prefix}-springcloud-helloworld</example.appName>

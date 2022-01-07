@@ -9,6 +9,6 @@
     </parent>
     <artifactId>storage-upload-files-to-static-website</artifactId>
     <packaging>pom</packaging>
-    <name>Upload files to static website</name>
+    <name>Storage :: Storage :: Upload files to static website</name>
 </project>
 

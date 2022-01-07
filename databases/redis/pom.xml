@@ -10,7 +10,7 @@
     <groupId>examples.azure.databases.redis</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Cache for Redis examples</name>
+    <name>Databases :: Redis</name>
     <modules>
         <module>create</module>
     </modules>

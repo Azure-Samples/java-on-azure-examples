@@ -9,7 +9,7 @@
     </parent>
     <artifactId>servicebus-send-message</artifactId>
     <packaging>jar</packaging>
-    <name>Send a message</name>
+    <name>Integration :: Service Bus :: Send a message</name>
     <build>
         <finalName>send-message</finalName>
         <plugins>

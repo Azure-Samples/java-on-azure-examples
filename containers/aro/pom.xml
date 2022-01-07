@@ -10,7 +10,7 @@
     <groupId>examples.azure.containers.aro</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Redhat OpenShift examples</name>
+    <name>Containers :: OpenShift</name>
     <modules>
         <module>create</module>
     </modules>

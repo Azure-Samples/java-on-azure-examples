@@ -9,5 +9,5 @@
     </parent>
     <artifactId>springcloud-config-server</artifactId>
     <packaging>pom</packaging>
-    <name>Configure the Azure Spring Cloud Config Server</name>
+    <name>Compute :: Spring Cloud :: Configure the Azure Spring Cloud Config Server</name>
 </project>

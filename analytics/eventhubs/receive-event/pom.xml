@@ -9,7 +9,7 @@
     </parent>
     <artifactId>eventhubs-receive-event</artifactId>
     <packaging>jar</packaging>
-    <name>Receive an event</name>
+    <name>Analytics :: Event Hubs :: Receive an event</name>
     <build>
         <finalName>receive-event</finalName>
         <plugins>

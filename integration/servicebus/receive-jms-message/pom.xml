@@ -9,7 +9,7 @@
     </parent>
     <artifactId>servicebus-receive-jms-message</artifactId>
     <packaging>jar</packaging>
-    <name>Receive a JMS message</name>
+    <name>Integration :: Service Bus :: Receive a JMS message</name>
     <build>
         <finalName>receive-jms-message</finalName>
         <plugins>

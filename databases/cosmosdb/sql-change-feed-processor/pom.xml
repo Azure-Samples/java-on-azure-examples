@@ -9,7 +9,7 @@
     </parent>
     <artifactId>cosmosdb-sql-changefeed-processor</artifactId>
     <packaging>jar</packaging>
-    <name>SQL Change Feed processor</name>
+    <name>Databases :: Cosmos DB :: SQL Change Feed processor</name>
     <build>
         <finalName>change-feed-processor</finalName>
         <plugins>

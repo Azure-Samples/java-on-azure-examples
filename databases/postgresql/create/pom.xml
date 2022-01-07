@@ -9,5 +9,5 @@
     </parent>
     <artifactId>postgresql-create</artifactId>
     <packaging>pom</packaging>
-    <name>Create an Azure Database for PostgreSQL</name>
+    <name>Databases :: PostgreSQL :: Create an Azure Database for PostgreSQL</name>
 </project>

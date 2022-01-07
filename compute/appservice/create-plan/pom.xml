@@ -9,5 +9,5 @@
     </parent>
     <artifactId>appservice-create-plan</artifactId>
     <packaging>pom</packaging>
-    <name>Create an App Service Plan</name>
+    <name>Compute :: App Service :: Create an App Service Plan</name>
 </project>

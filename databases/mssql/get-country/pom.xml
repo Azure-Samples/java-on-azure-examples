@@ -9,7 +9,7 @@
     </parent>
     <artifactId>mssql-get-country</artifactId>
     <packaging>jar</packaging>
-    <name>Get country information</name>
+    <name>Databases :: Azure SQL :: Get country information</name>
     <build>
         <finalName>get-country</finalName>
         <plugins>

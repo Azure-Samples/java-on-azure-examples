@@ -9,7 +9,7 @@
     </parent>
     <artifactId>appservice-docker-payara</artifactId>
     <packaging>pom</packaging>
-    <name>Deploy Payara using a Docker image</name>
+    <name>Compute :: App Service :: Deploy Payara using a Docker image</name>
     <build>
         <plugins>
             <plugin>

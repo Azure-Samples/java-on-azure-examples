@@ -9,5 +9,5 @@
     </parent>
     <artifactId>adx-create-database</artifactId>
     <packaging>pom</packaging>
-    <name>Create a database</name>
+    <name>Analytics :: Data Explorer :: Create a database</name>
 </project>

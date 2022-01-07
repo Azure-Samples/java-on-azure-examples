@@ -10,7 +10,7 @@
     <groupId>examples.azure.compute.springcloud</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Spring Cloud examples</name>
+    <name>Compute :: Spring Cloud</name>
     <modules>
         <module>create</module>
         <module>config-server</module>

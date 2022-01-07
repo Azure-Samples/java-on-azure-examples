@@ -9,7 +9,7 @@
     </parent>
     <artifactId>appservice-tomcat-helloworld</artifactId>
     <packaging>war</packaging>
-    <name>Deploy a web application on a managed Tomcat</name>
+    <name>Compute :: App Service :: Deploy a web application on a managed Tomcat</name>
     <build>
         <plugins>
             <plugin>

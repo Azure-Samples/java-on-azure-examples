@@ -9,7 +9,7 @@
     </parent>
     <artifactId>mysql-get-country</artifactId>
     <packaging>jar</packaging>
-    <name>Get country information</name>
+    <name>Databases :: MySQL :: Get country information</name>
     <build>
         <finalName>get-country</finalName>
         <plugins>

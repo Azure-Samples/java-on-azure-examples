@@ -9,7 +9,7 @@
     </parent>
     <artifactId>appservice-deploy-to-deployment-slot</artifactId>
     <packaging>war</packaging>
-    <name>Deploy to a deployment slot</name>
+    <name>Compute :: App Service :: Deploy to a deployment slot</name>
     <build>
         <plugins>
             <plugin>

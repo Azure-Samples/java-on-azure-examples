@@ -8,7 +8,7 @@
         <version>1-SNAPSHOT</version>
     </parent>
     <artifactId>keyvault-spring-boot-ssl-server-side</artifactId>
-    <name>Spring Boot SSL server-side application</name>
+    <name>Security :: KeyVault :: Spring Boot SSL server-side application</name>
     <properties>
         <java.version>1.8</java.version>
     </properties>

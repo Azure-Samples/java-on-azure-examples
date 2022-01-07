@@ -9,7 +9,7 @@
     </parent>
     <artifactId>acr-graalvm</artifactId>
     <packaging>jar</packaging>
-    <name>Create a GraalVM application using a Docker image and push it to Azure Container Registry</name>
+    <name>Containers :: Container Registry :: Create a GraalVM application using a Docker image and push it to Azure Container Registry</name>
     <build>
         <finalName>graalvm</finalName>
         <plugins>

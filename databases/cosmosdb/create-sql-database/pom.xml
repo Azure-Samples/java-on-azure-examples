@@ -9,5 +9,5 @@
     </parent>
     <artifactId>cosmosdb-create-sql-database</artifactId>
     <packaging>pom</packaging>
-    <name>Create a SQL database</name>
+    <name>Databases :: Cosmos DB :: Create a SQL database</name>
 </project>
