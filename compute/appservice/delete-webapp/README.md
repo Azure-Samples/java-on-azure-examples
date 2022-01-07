@@ -15,15 +15,22 @@ This example assumes you have previously completed the following examples:
 <!-- workflow.cron(0 4 * * 1) -->
 <!-- workflow.include(../tomcat-helloworld/README.md) -->
 
-To delete the web application from Azure App Service use the following command
-line:
+To delete the web application from Azure App Service use the following command line:
 
 ```shell
   az webapp delete --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD
 ```
 
-Note you can substitute $APPSERVICE_TOMCAT_HELLOWORLD with the name of any web 
-application you want to delete in your resource group.
+If you want to make sure the web application has been removed, you can execute the following command.
+You should see a messaging informing you that the application cannot be found anymore:
+
+```shell
+  az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD
+  
+  Unable to find webapp 'appservice-tomcat-helloworld', in RG 'java-on-azure'.
+```
+
+Note you can substitute `$APPSERVICE_TOMCAT_HELLOWORLD` with the name of any web application you want to delete in your resource group.
 
 <!-- workflow.directOnly() 
 
