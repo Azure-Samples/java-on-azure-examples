@@ -60,3 +60,7 @@ jobs:
           echo "Response did not contain 'Hello World'"
           exit 1
           fi
+          
+          az webapp show --name $APPSERVICE_TOMCAT_HELLOWORLD
+          --resource-group $RESOURCE_GROUP
+          --query=defaultHostName

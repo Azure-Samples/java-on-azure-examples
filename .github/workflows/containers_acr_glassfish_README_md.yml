@@ -35,7 +35,8 @@ jobs:
           mvn package
           export ACR_GLASSFISH_IMAGE=glassfish:latest
           
-          az acr build --registry $ACR_NAME --image $ACR_GLASSFISH_IMAGE .
+          az acr build --resource-group $RESOURCE_GROUP --registry $ACR_NAME --image $ACR_GLASSFISH_IMAGE .
+          az acr repository list --name $ACR_NAME --output table
           
           cd ../../..
           

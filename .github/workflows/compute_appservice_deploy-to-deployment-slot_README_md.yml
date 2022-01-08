@@ -43,10 +43,19 @@ jobs:
           sleep 60
           cd ../../..
           
+          az webapp show --name $APPSERVICE_TOMCAT_HELLOWORLD
+          --resource-group $RESOURCE_GROUP
+          --query=defaultHostName
           az webapp deployment slot create \
           --resource-group $RESOURCE_GROUP \
           --name $APPSERVICE_TOMCAT_HELLOWORLD \
           --slot staging
+          az webapp show --name $APPSERVICE_TOMCAT_HELLOWORLD
+          --resource-group $RESOURCE_GROUP
+          --query=defaultHostName
+          az webapp deployment slot list --name $APPSERVICE_TOMCAT_HELLOWORLD
+          --resource-group $RESOURCE_GROUP
+          --query='[].defaultHostName'
           
           cd compute/appservice/deploy-to-deployment-slot
           
@@ -78,3 +87,7 @@ jobs:
           echo "Response did not contain 'Hello Staging'"
           exit 1
           fi
+          
+          az webapp show --name $APPSERVICE_TOMCAT_HELLOWORLD
+          --resource-group $RESOURCE_GROUP
+          --query=defaultHostName

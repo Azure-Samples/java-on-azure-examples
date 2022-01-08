@@ -43,4 +43,7 @@ jobs:
           sleep 60
           cd ../../..
           
+          az webapp show --name $APPSERVICE_TOMCAT_HELLOWORLD
+          --resource-group $RESOURCE_GROUP
+          --query=defaultHostName
           az webapp list --resource-group $RESOURCE_GROUP
