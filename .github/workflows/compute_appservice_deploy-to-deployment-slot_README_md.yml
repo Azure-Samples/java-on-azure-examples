@@ -43,9 +43,11 @@ jobs:
           sleep 60
           cd ../../..
           
-          az webapp show --name $APPSERVICE_TOMCAT_HELLOWORLD
-          --resource-group $RESOURCE_GROUP
-          --query=defaultHostName
+          az webapp show \
+          --name $APPSERVICE_TOMCAT_HELLOWORLD \
+          --resource-group $RESOURCE_GROUP \
+          --query defaultHostName \
+          --output tsv
           az webapp deployment slot create \
           --resource-group $RESOURCE_GROUP \
           --name $APPSERVICE_TOMCAT_HELLOWORLD \
