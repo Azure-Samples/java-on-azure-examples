@@ -27,6 +27,7 @@ To enable static website hosting execute the following command lines:
 
   az storage account show \
     --name $STORAGE_ACCOUNT_NAME \
+    --resource-group $RESOURCE_GROUP \
     --query primaryEndpoints.web \
     --output tsv
 ```
