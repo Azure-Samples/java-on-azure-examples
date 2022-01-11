@@ -16,7 +16,7 @@ This example assumes you have previously completed the following examples:
 ## Deploy Tomcat using a Docker image
 
 <!-- workflow.cron(0 10 * * 1) -->
-<!-- workflow.include(../../acr/tomcat/README.md) -->
+<!-- workflow.include(../../../containers/acr/tomcat/README.md) -->
 <!-- workflow.include(../../../containers/acr/create-settings-xml/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->
 

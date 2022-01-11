@@ -16,7 +16,7 @@ This example assumes you have previously completed the following examples:
 ## Deploy WildFly using a Docker image
 
 <!-- workflow.cron(0 11 * * 1) -->
-<!-- workflow.include(../../acr/wildfly/README.md) -->
+<!-- workflow.include(../../../containers/acr/wildfly/README.md) -->
 <!-- workflow.include(../../../containers/acr/create-settings-xml/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->
 
