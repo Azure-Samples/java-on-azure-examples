@@ -51,8 +51,6 @@ jobs:
           az webapp delete --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD
           az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD
           
-          Unable to find webapp 'appservice-tomcat-helloworld', in RG 'java-on-azure'.
-          
           export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD --output tsv --query state)
           az group delete --name $RESOURCE_GROUP --yes || true
           if [[ "$RESULT" == Running ]]; then
