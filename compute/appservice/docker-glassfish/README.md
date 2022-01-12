@@ -91,13 +91,13 @@ to the Maven command line to customize your deployment.
 
 | name                   | description                       |
 |------------------------|-----------------------------------|
-| appName                | the application name              |
-| appServicePlan         | the App Service plan to use       |
-| imageName              | the Docker image name             |
-| serverId               | the Maven server id               |
-| registry               | the Azure Container Registry name |
-| registryUrl            | the Azure Container Registry url  |
-| resourceGroup          | the Azure Resource Group name     |
+| `appName`              | the application name              |
+| `appServicePlan`       | the App Service plan to use       |
+| `imageName`            | the Docker image name             |
+| `serverId`             | the Maven server id               |
+| `registry`             | the Azure Container Registry name |
+| `registryUrl`          | the Azure Container Registry url  |
+| `resourceGroup`        | the Azure Resource Group name     |
 
 ## Cleanup
 

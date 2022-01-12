@@ -90,9 +90,9 @@ The example supports the following properties that you can pass in as
 
 | name                   | description                  |
 |------------------------|------------------------------|
-| appName                | the Application Name         |
-| appServicePlan         | the App Service plan to use  |
-| resourceGroup          | the Resource Group to use    |
+| `appName`              | the Application Name         |
+| `appServicePlan`       | the App Service plan to use  |
+| `resourceGroup`        | the Resource Group to use    |
 
 ## Cleanup
 
