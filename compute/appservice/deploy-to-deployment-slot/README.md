@@ -70,8 +70,8 @@ Once the command completes you will be able to see the example by using your web
 You can also get the URL by using the following command:
 
 ```shell
-  az webapp show --name $APPSERVICE_TOMCAT_HELLOWORLD 
-                 --resource-group $RESOURCE_GROUP
+  az webapp show --name $APPSERVICE_TOMCAT_HELLOWORLD \
+                 --resource-group $RESOURCE_GROUP \
                  --query=defaultHostName
 ```
 

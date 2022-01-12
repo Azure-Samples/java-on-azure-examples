@@ -28,16 +28,16 @@ To create a deployment slot use the following command line:
 The following command gives you the URL of the original web app:
 
 ```shell
-  az webapp show --name $APPSERVICE_TOMCAT_HELLOWORLD 
-                 --resource-group $RESOURCE_GROUP
+  az webapp show --name $APPSERVICE_TOMCAT_HELLOWORLD \
+                 --resource-group $RESOURCE_GROUP \
                  --query=defaultHostName
 ```
 
 The following command gives you the URL of the web app that is in the staging slot:
 
 ```shell
-  az webapp deployment slot list --name $APPSERVICE_TOMCAT_HELLOWORLD 
-                                 --resource-group $RESOURCE_GROUP
+  az webapp deployment slot list --name $APPSERVICE_TOMCAT_HELLOWORLD \
+                                 --resource-group $RESOURCE_GROUP \
                                  --query='[].defaultHostName'
 ```
 
