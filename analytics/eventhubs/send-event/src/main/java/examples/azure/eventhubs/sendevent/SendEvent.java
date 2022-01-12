@@ -8,8 +8,19 @@ import com.azure.messaging.eventhubs.EventHubProducerClient;
 public class SendEvent {
 
     public static void main(String[] arguments) {
+        // Checks the environment variables
         String connectionString = System.getenv("EVENTHUBS_EVENTHUB_CONNECTION_STRING");
+        if (connectionString == null || connectionString.isEmpty()) {
+            System.out.println("You need to set the variable EVENTHUBS_EVENTHUB_CONNECTION_STRING");
+            return;
+        }
         String eventHub = System.getenv("EVENTHUBS_EVENTHUB");
+        if (eventHub == null || eventHub.isEmpty()) {
+            System.out.println("You need to set the variable EVENTHUBS_EVENTHUB");
+            return;
+        }
+
+        // Sends the event
         try (EventHubProducerClient producer = new EventHubClientBuilder()
                 .connectionString(connectionString, eventHub)
                 .buildProducerClient()) {
