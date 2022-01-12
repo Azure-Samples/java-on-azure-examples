@@ -77,12 +77,12 @@ The example supports the following properties that you can pass in as
 
 | name                   | description                  |
 |------------------------|------------------------------|
-| appName                | the Application Name         |
-| appServicePlan         | the App Service plan to use  |
-| javaVersion            | the Java version to use      |
-| region                 | the Region to use            |
-| resourceGroup          | the Resource Group to use    |
-| webContainer           | the Web Container to use     |
+| `appName`              | the Application Name         |
+| `appServicePlan`       | the App Service plan to use  |
+| `javaVersion`          | the Java version to use      |
+| `region`               | the Region to use            |
+| `resourceGroup`        | the Resource Group to use    |
+| `webContainer`         | the Web Container to use     |
 
 ## Cleanup
 

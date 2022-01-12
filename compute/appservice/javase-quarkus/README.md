@@ -90,11 +90,11 @@ fi
 The example supports the following properties that you can pass in as -Dname=value
 to the Maven command line to customize your deployment.
 
-| name                   | description                      |
-|------------------------|----------------------------------|
-| example.appName        | the application name             |
-| example.appServicePlan | the App Service plan to use      |
-| example.resourceGroup  | the Azure Resource Group name    |
+| name                     | description                      |
+|--------------------------|----------------------------------|
+| `example.appName`        | the application name             |
+| `example.appServicePlan` | the App Service plan to use      |
+| `example.resourceGroup`  | the Azure Resource Group name    |
 
 ## Cleanup
 
