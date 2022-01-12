@@ -43,11 +43,6 @@ jobs:
           sleep 60
           cd ../../..
           
-          az webapp show \
-          --name $APPSERVICE_TOMCAT_HELLOWORLD \
-          --resource-group $RESOURCE_GROUP \
-          --query defaultHostName \
-          --output tsv
           az appservice plan update \
           --verbose \
           --name $APPSERVICE_PLAN \
