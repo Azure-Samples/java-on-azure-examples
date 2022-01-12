@@ -24,7 +24,7 @@ To delete the web application from Azure App Service use the following command l
 If you want to make sure the web application has been removed, you can execute the following command.
 You should see the message ```Unable to find webapp 'appservice-tomcat-helloworld', in RG 'java-on-azure'``` informing you that the application cannot be found anymore:
 
-```shell
+```text
   az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD
 ```
 

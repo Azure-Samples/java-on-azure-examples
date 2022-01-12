@@ -75,7 +75,7 @@ echoes.
 
 You can also get the URL using the following command:
 
-```shell
+```text
   az webapp show \
     --name $APPSERVICE_TOMCAT_HELLOWORLD \
     --resource-group $RESOURCE_GROUP \
