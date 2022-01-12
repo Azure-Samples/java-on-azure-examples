@@ -2,7 +2,7 @@ on:
   schedule:
     - cron: '0 0 * * *'
   workflow_dispatch:
-name: generate_workflows
+name: '_generate_workflows'
 jobs:
   validate:
     runs-on: ubuntu-latest
