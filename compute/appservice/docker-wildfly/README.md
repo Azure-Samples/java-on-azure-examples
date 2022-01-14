@@ -34,7 +34,7 @@ To deploy WildFly use the following command lines:
   mvn azure-webapp:deploy \
     --settings=$SETTINGS_XML \
     -DappName=$APPSERVICE_DOCKER_WILDFLY \
-    -DimageName=wildfly:latest \
+    -DimageName=$ACR_WILDFLY_IMAGE \
     -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
     -DserverId=$ACR_NAME

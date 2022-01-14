@@ -34,7 +34,7 @@ cd compute/appservice/docker-payara
   mvn azure-webapp:deploy \
     --settings=$SETTINGS_XML \
     -DappName=$APPSERVICE_DOCKER_PAYARA \
-    -DimageName=payara:latest \
+    -DimageName=$ACR_PAYARA_IMAGE \
     -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
     -DserverId=$ACR_NAME

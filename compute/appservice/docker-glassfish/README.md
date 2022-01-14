@@ -34,7 +34,7 @@ To deploy Glassfish use the following command lines:
   mvn azure-webapp:deploy \
     --settings=$SETTINGS_XML \
     -DappName=$APPSERVICE_DOCKER_GLASSFISH \
-    -DimageName=glassfish:latest \
+    -DimageName=$ACR_GLASSFISH_IMAGE \
     -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
     -DserverId=$ACR_NAME

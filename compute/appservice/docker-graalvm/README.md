@@ -34,7 +34,7 @@ To deploy the example use the following command lines:
   mvn azure-webapp:deploy \
     --settings=$SETTINGS_XML \
     -DappName=$APPSERVICE_DOCKER_GRAALVM \
-    -DimageName=graalvm:latest \
+    -DimageName=$ACR_GRAALVM_IMAGE \
     -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
     -DserverId=$ACR_NAME
