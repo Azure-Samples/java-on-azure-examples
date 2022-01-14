@@ -65,9 +65,6 @@ jobs:
           
           cd ../../..
           
-          az webapp show --name $APPSERVICE_TOMCAT_HELLOWORLD \
-          --resource-group $RESOURCE_GROUP \
-          --query=defaultHostName
           az webapp deployment slot swap \
           --resource-group $RESOURCE_GROUP \
           --name $APPSERVICE_TOMCAT_HELLOWORLD \
