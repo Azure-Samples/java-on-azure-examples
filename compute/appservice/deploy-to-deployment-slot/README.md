@@ -69,7 +69,7 @@ fi
 Once the command completes you will be able to see the example by using your web browser and going to the `xxxxx.azurewebsites.net` address the command echoes.
 You can also get the URL by using the following command:
 
-```shell
+```text
   az webapp show --name $APPSERVICE_TOMCAT_HELLOWORLD \
                  --resource-group $RESOURCE_GROUP \
                  --query=defaultHostName
