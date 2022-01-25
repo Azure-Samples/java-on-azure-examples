@@ -36,6 +36,10 @@ To create the Azure Spring Cloud use the following command lines:
 
 Do NOT forget to remove the resources once you are done running the example.
 
+## Next steps
+
+1. [Configure the Azure Spring Cloud Config Server](../config-server/README.md)
+
 ## Reference documentation
 
 1. [Commands to manage Azure Spring Cloud](https://docs.microsoft.com/cli/azure/spring-cloud)

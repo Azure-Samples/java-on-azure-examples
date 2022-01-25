@@ -10,6 +10,7 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Resource Group](../../../general/group/create/README.md)
 1. [Create an Azure Spring Cloud instance](../create/README.md)
 
+<!-- workflow.cron(0 17 * * 2) -->
 <!-- workflow.include(../create/README.md) -->
 <!-- workflow.run() 
 
@@ -41,7 +42,6 @@ cd ../../..
 
   -->
 
-
 ## Cleanup
 
 <!-- workflow.directOnly()
@@ -51,3 +51,8 @@ cd ../../..
   -->
 
 Do NOT forget to remove the resources you created once you are done with the example.
+
+## Reference documentation
+
+1. [Commands to manage Azure Spring Cloud](https://docs.microsoft.com/cli/azure/spring-cloud)
+
