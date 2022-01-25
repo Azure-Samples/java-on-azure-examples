@@ -9,6 +9,7 @@ This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../../general/group/create/README.md)
 
+<!-- workflow.cron(0 16 * * 2) -->
 <!-- workflow.include(../../../general/group/create/README.md) -->
 
 ## Create the Azure Spring Cloud
@@ -34,5 +35,9 @@ To create the Azure Spring Cloud use the following command lines:
   -->
 
 Do NOT forget to remove the resources once you are done running the example.
+
+## Reference documentation
+
+1. [Commands to manage Azure Spring Cloud](https://docs.microsoft.com/cli/azure/spring-cloud)
 
 6m

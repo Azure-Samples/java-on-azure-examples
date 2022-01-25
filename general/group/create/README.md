@@ -54,6 +54,10 @@ Do NOT forget to remove the resources once you are done running the example.
 
 ## Next steps
 
+1. [Create an Azure Spring Cloud](../../../compute/spring-cloud/create/README.md)
+
+## Reference material
+
 1. [Manage resource groups and template deployments](https://docs.microsoft.com/en-us/cli/azure/group)
 
 1m
