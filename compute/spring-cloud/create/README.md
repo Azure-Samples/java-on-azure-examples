@@ -38,10 +38,12 @@ Do NOT forget to remove the resources once you are done running the example.
 
 ## Next steps
 
+1. [Deploy a Hello World Spring Boot application to Azure Spring Cloud](../config-server/README.md)
 1. [Configure the Azure Spring Cloud Config Server](../config-server/README.md)
 
 ## Reference documentation
 
 1. [Commands to manage Azure Spring Cloud](https://docs.microsoft.com/cli/azure/spring-cloud)
+1. [Azure Spring Cloud Documentation](https://docs.microsoft.com/azure/spring-cloud/)
 
 6m

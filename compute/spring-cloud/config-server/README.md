@@ -55,5 +55,7 @@ Do NOT forget to remove the resources you created once you are done with the exa
 ## Reference documentation
 
 1. [Commands to manage Azure Spring Cloud](https://docs.microsoft.com/cli/azure/spring-cloud)
+1. [Azure Spring Cloud Documentation](https://docs.microsoft.com/azure/spring-cloud/)
+1. [Quickstart: Set up Azure Spring Cloud Config Server](https://docs.microsoft.com/azure/spring-cloud/quickstart-setup-config-server?pivots=programming-language-java)
 
 2m

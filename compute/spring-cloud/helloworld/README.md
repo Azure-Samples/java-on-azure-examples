@@ -1,5 +1,5 @@
 
-# Create a Spring Boot application and deploy it to Azure Spring Cloud
+# Deploy a Hello World Spring Boot application to Azure Spring Cloud
 
 [![compute/spring-cloud/helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_spring-cloud_helloworld_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_spring-cloud_helloworld_README_md.yml)
 
@@ -10,6 +10,7 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Resource Group](../../../general/group/create/README.md)
 1. [Deploy an Azure Spring Cloud](../create/README.md)
 
+<!-- workflow.cron(0 18 * * 2) -->
 <!-- workflow.include(../create/README.md) -->
 
 ## Build the example
@@ -42,7 +43,7 @@ ignored.
 You can verify the application works by using your browser and going
 to http://localhost:8080/
 
-## Deploy the application to Azure Spring Cloud
+## Deploy the Hello World Spring Boot application to Azure Spring Cloud
 
 ```shell
   az spring-cloud app create \
@@ -96,5 +97,11 @@ Hello World
   -->
 
 Do NOT forget to remove the resources once you are done running the example.
+
+## Reference documentation
+
+1. [Commands to manage Azure Spring Cloud](https://docs.microsoft.com/cli/azure/spring-cloud)
+1. [Azure Spring Cloud Documentation](https://docs.microsoft.com/azure/spring-cloud/)
+1. [Quickstart: Build and deploy apps to Azure Spring Cloud](https://docs.microsoft.com/azure/spring-cloud/quickstart-deploy-apps?pivots=programming-language-java)
 
 6m
