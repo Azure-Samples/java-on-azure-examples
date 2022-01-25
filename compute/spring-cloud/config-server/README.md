@@ -56,3 +56,4 @@ Do NOT forget to remove the resources you created once you are done with the exa
 
 1. [Commands to manage Azure Spring Cloud](https://docs.microsoft.com/cli/azure/spring-cloud)
 
+2m
