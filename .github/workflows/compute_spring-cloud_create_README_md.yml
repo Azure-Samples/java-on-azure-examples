@@ -1,4 +1,6 @@
 on: 
+  schedule: 
+    - cron: '0 16 * * 2'
   workflow_dispatch: 
 
 name: 'compute/spring-cloud/create/README.md'
