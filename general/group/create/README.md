@@ -23,10 +23,12 @@ the command lines below:
 ```
 
 <!-- workflow.run()
-if [[ -z $RESOURCE_GROUP ]]; then
-  export RESOURCE_GROUP=java-on-azure-$RANDOM
-fi
-export REGION=westus2
+
+  if [[ -z $RESOURCE_GROUP ]]; then
+    export RESOURCE_GROUP=java-on-azure-$RANDOM
+  fi
+  export REGION=westus2
+
   -->
 
 To create the Resource Group use the following command line:
@@ -35,17 +37,14 @@ To create the Resource Group use the following command line:
   az group create --name $RESOURCE_GROUP --location $REGION
 ```
 
-<!-- workflow.run()
-  export DELETE_AFTER=$(( `date +%s` + 7200))
-  az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER" 
-  -->
-
 <!-- workflow.directOnly()
-export RESULT=$(az group show --name $RESOURCE_GROUP --output tsv --query properties.provisioningState)
-az group delete --name $RESOURCE_GROUP --yes || true
-if [[ "$RESULT" != Succeeded ]]; then
-  exit 1
-fi
+
+  export RESULT=$(az group show --name $RESOURCE_GROUP --output tsv --query properties.provisioningState)
+  az group delete --name $RESOURCE_GROUP --yes || true
+  if [[ "$RESULT" != Succeeded ]]; then
+    exit 1
+  fi
+
   -->
 
 ## Cleanup
@@ -54,10 +53,11 @@ Do NOT forget to remove the resources once you are done running the example.
 
 ## Next steps
 
-1. [Create an Azure Spring Cloud](../../../compute/spring-cloud/create/README.md)
+* [Create an Azure Kubernetes Service cluster](../../../containers/aks/create/README.md)
+* [Create an Azure Spring Cloud](../../../compute/spring-cloud/create/README.md)
 
 ## Reference documentation
 
-1. [Manage resource groups and template deployments](https://docs.microsoft.com/en-us/cli/azure/group)
+* [Manage resource groups and template deployments](https://docs.microsoft.com/en-us/cli/azure/group)
 
 1m

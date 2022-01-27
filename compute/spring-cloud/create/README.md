@@ -30,7 +30,13 @@ To create the Azure Spring Cloud use the following command lines:
 
 <!-- workflow.directOnly()
 
+  export RESULT=$(az spring-cloud show --resource-group $RESOURCE_GROUP --name $SPRING_CLOUD_NAME --output tsv --query properties.provisioningState)
+  
   az group delete --name $RESOURCE_GROUP --yes || true
+
+  if [[ "$RESULT" != Succeeded ]]; then
+    exit 1
+  fi
 
   -->
 
@@ -38,12 +44,12 @@ Do NOT forget to remove the resources once you are done running the example.
 
 ## Next steps
 
-1. [Deploy a Hello World Spring Boot application to Azure Spring Cloud](../helloworld/README.md)
-1. [Configure the Azure Spring Cloud Config Server](../config-server/README.md)
+* [Deploy a Hello World Spring Boot application to Azure Spring Cloud](../helloworld/README.md)
+* [Configure the Azure Spring Cloud Config Server](../config-server/README.md)
 
 ## Reference documentation
 
-1. [Commands to manage Azure Spring Cloud](https://docs.microsoft.com/cli/azure/spring-cloud)
-1. [Azure Spring Cloud Documentation](https://docs.microsoft.com/azure/spring-cloud/)
+* [Commands to manage Azure Spring Cloud](https://docs.microsoft.com/cli/azure/spring-cloud)
+* [Azure Spring Cloud Documentation](https://docs.microsoft.com/azure/spring-cloud/)
 
 6m

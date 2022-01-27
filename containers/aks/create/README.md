@@ -11,6 +11,7 @@ This example assumes you have previously completed the following example:
 
 ## Create an Azure Kubernetes Service cluster
 
+<!-- workflow.cron(0 10 * * 4) -->
 <!-- workflow.include(../../../general/group/create/README.md) -->
 <!-- workflow.run()
 
@@ -34,10 +35,19 @@ To create the cluster use the following command line:
 
 <!-- workflow.directOnly()
 
+  export RESULT=$(az aks show --name $AKS --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
   az group delete --name $RESOURCE_GROUP --yes || true
+  if [[ "$RESULT" != Succeeded ]]; then
+    exit 1
+  fi
 
   -->
 
 Do NOT forget to remove the resources once you are done running the example.
 
-4m
+## Reference documentation
+
+* [Commands to manage Azure Kubernetes Services](https://docs.microsoft.com/cli/azure/aks)
+* [Azure Kubernetes Service Documentation](https://docs.microsoft.com/azure/aks/)
+
+5m
