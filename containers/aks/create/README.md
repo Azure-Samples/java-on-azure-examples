@@ -45,6 +45,10 @@ To create the cluster use the following command line:
 
 Do NOT forget to remove the resources once you are done running the example.
 
+## Next steps
+
+* [Create a Kubeconfig file using admin access](../create-kube-config/README.md)
+
 ## Reference documentation
 
 * [Commands to manage Azure Kubernetes Services](https://docs.microsoft.com/cli/azure/aks)

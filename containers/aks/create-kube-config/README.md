@@ -17,6 +17,7 @@ This example assumes you have previously completed the following examples:
 
 ## Create a Kubeconfig file usin admin access
 
+<!-- workflow.cron(0 11 * * 4) -->
 <!-- workflow.include(../create/README.md) -->
 <!-- workflow.run()
 
@@ -51,9 +52,17 @@ cd ../../..
 <!-- workflow.directOnly()
 
   az group delete --name $RESOURCE_GROUP --yes || true
+  if [[ ! -f $KUBECONFIG ]]; then
+    exit 1
+  fi
 
   -->
 
 Do NOT forget to remove the resources once you are done with the example.
+
+## Reference documentation
+
+* [Commands to manage Azure Kubernetes Services](https://docs.microsoft.com/cli/azure/aks)
+* [Azure Kubernetes Service Documentation](https://docs.microsoft.com/azure/aks/)
 
 1m
