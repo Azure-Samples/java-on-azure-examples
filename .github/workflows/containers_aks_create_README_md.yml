@@ -1,4 +1,6 @@
 on: 
+  schedule: 
+    - cron: '0 10 * * 4'
   workflow_dispatch: 
 
 name: 'containers/aks/create/README.md'
@@ -12,13 +14,13 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
+          
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
           fi
           export REGION=westus2
+          
           az group create --name $RESOURCE_GROUP --location $REGION
-          export DELETE_AFTER=$(( `date +%s` + 7200))
-          az group update --name $RESOURCE_GROUP --set tags.'DeleteAfter'="$DELETE_AFTER"
           
           if [[ -z $AKS ]]; then
           export AKS=aks-$RANDOM
@@ -26,4 +28,8 @@ jobs:
           fi
           
           
+          export RESULT=$(az aks show --name $AKS --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
           az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ "$RESULT" != Succeeded ]]; then
+          exit 1
+          fi
