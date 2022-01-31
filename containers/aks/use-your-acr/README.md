@@ -1,5 +1,5 @@
 
-# Update your cluster to use your Azure Container Registry
+# Update your AKS cluster to use your Azure Container Registry
 
 [![containers/aks/use-your-acr/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_use-your-acr_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_use-your-acr_README_md.yml)
 
@@ -11,8 +11,9 @@ This example assumes you have previously completed the following examples:
 1. [Deploy an Azure Kubernetes Service cluster](../create/README.md)
 1. [Create an Azure Container Registry](../../../containers/acr/create/README.md)
 
-## Update your cluster to use your Azure Container Registry
+## Update your AKS cluster to use your Azure Container Registry
 
+<!-- workflow.cron(0 9 * * 1) -->
 <!-- workflow.include(../create/README.md) -->
 <!-- workflow.include(../../../containers/acr/create/README.md) -->
 
