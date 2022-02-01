@@ -19,7 +19,7 @@ spec:
         "beta.kubernetes.io/os": linux
       containers:
       - name: springboot
-        image: ACR.azurecr.io/springboot:latest
+        image: acreg6469.azurecr.io/springboot:latest
         ports:
         - containerPort: 8080
           name: http

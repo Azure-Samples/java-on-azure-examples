@@ -34,4 +34,10 @@ Registry you need to use the following command line.
 
 Do NOT forget to remove the resources once you are done running the example.
 
+
+## Next steps
+
+* [Deploy a Spring Boot application](../springboot/README.md)
+
+
 1m

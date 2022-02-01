@@ -16,6 +16,7 @@ This example assumes you have previously completed the following examples:
 
 ## Build the example
 
+<!-- workflow.cron(0 12 * * 2) -->
 <!-- workflow.include(../create-kube-config/README.md) -->
 <!-- workflow.include(../use-your-acr/README.md) -->
 <!-- workflow.run() 
@@ -66,7 +67,7 @@ Then execute the command below to deploy to the AKS cluster:
 To get the public IP address use the following command.
 
 ```shell
-kubectl get service/springboot
+kubectl get service/springboot -w
 ```
 
 If the `EXTERNAL-IP` column has no IP address yet keep repeating the command as
@@ -82,13 +83,30 @@ cd ../../..
   
   -->
 
-
 ## Cleanup
 
 <!-- workflow.directOnly()
+  
+  wait 60
+
+  export URL=http://$(kubectl get service/springboot --output jsonpath="{.status.loadBalancer.ingress[0].ip}")
+  export RESULT=$(curl $URL)
 
   az group delete --name $RESOURCE_GROUP --yes || true
+
+  if [[ "$RESULT" != *"Hello World"* ]]; then
+    echo "Response did not contain 'Hello World'"
+    exit 1
+  fi
 
   -->
 
 Do NOT forget to remove the resources once you are done running the example.
+
+## Reference documentation
+
+* [Commands to manage Azure Kubernetes Services](https://docs.microsoft.com/cli/azure/aks)
+* [Azure Kubernetes Service Documentation](https://docs.microsoft.com/azure/aks/)
+* [kubectl](https://kubernetes.io/docs/reference/kubectl/)
+
+3m
