@@ -87,7 +87,7 @@ cd ../../..
 
 <!-- workflow.directOnly()
   
-  wait 120
+  sleep 120
 
   export URL=http://$(kubectl get service/springboot --output jsonpath="{.status.loadBalancer.ingress[0].ip}")
   export RESULT=$(curl $URL)
