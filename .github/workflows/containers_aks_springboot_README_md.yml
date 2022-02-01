@@ -1,4 +1,6 @@
 on: 
+  schedule: 
+    - cron: '0 12 * * 2'
   workflow_dispatch: 
 
 name: 'containers/aks/springboot/README.md'
@@ -69,9 +71,19 @@ jobs:
           az acr build --registry $ACR_NAME --image springboot:latest .
           sed -i "s/ACR/$ACR_NAME/g" deployment.yml
           kubectl apply -f deployment.yml
-          kubectl get service/springboot
+          kubectl get service/springboot -w
           
           cd ../../..
           
           
+          wait 60
+          
+          export URL=http://$(kubectl get service/springboot --output jsonpath="{.status.loadBalancer.ingress[0].ip}")
+          export RESULT=$(curl $URL)
+          
           az group delete --name $RESOURCE_GROUP --yes || true
+          
+          if [[ "$RESULT" != *"Hello World"* ]]; then
+          echo "Response did not contain 'Hello World'"
+          exit 1
+          fi
