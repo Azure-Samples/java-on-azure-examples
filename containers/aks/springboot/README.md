@@ -66,6 +66,7 @@ Then execute the command below to deploy to the AKS cluster:
 
 To get the public IP address use the following command.
 
+<!-- workflow.slip() -->
 ```shell
 kubectl get service/springboot
 ```
@@ -77,17 +78,11 @@ Once the `EXTERNAL-IP` shows up open your browser to `http://EXTERNAL-IP`.
 
 It should show you a page with the text `Hello World`.
 
-<!-- workflow.run() 
-
-cd ../../..
-  
-  -->
-
 ## Cleanup
 
 <!-- workflow.directOnly()
   
-  sleep 120
+  sleep 180
 
   export URL=http://$(kubectl get service/springboot --output jsonpath="{.status.loadBalancer.ingress[0].ip}")
   export RESULT=$(curl $URL)
@@ -99,6 +94,12 @@ cd ../../..
     exit 1
   fi
 
+  -->
+
+<!-- workflow.run() 
+
+cd ../../..
+  
   -->
 
 Do NOT forget to remove the resources once you are done running the example.
