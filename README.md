@@ -235,3 +235,7 @@ exit 0
 | 1. [Create an Azure Storage Account](storage/storage/create/README.md) | [Workflow](.github/workflows/storage_storage_create_README_md.yml) | [![storage/storage/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_storage_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_storage_create_README_md.yml)
 | 2. [Enable static website hosting](storage/storage/enable-static-website/README.md) | [Workflow](.github/workflows/storage_storage_enable-static-website_README_md.yml) | [![storage/storage/enable-static-website/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_storage_enable-static-website_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_storage_enable-static-website_README_md.yml)
 | 3. [Upload files to static website](storage/storage/upload-files-to-static-website/README.md) | [Workflow](.github/workflows/storage_storage_upload-files-to-static-website_README_md.yml) | [![storage/storage/upload-files-to-static-website/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_storage_upload-files-to-static-website_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_storage_upload-files-to-static-website_README_md.yml)
+
+## Contributing
+
+How do I contribute? See [Contributing](CONTRIBUTING.md)
