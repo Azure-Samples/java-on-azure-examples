@@ -73,10 +73,7 @@ jobs:
           kubectl apply -f deployment.yml
           kubectl get service/springboot
           
-          cd ../../..
-          
-          
-          sleep 120
+          sleep 180
           
           export URL=http://$(kubectl get service/springboot --output jsonpath="{.status.loadBalancer.ingress[0].ip}")
           export RESULT=$(curl $URL)
@@ -87,3 +84,6 @@ jobs:
           echo "Response did not contain 'Hello World'"
           exit 1
           fi
+          
+          
+          cd ../../..
