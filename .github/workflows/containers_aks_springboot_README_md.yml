@@ -71,9 +71,8 @@ jobs:
           az acr build --registry $ACR_NAME --image springboot:latest .
           sed -i "s/ACR/$ACR_NAME/g" deployment.yml
           kubectl apply -f deployment.yml
-          kubectl get service/springboot
           
-          sleep 180
+          sleep 240
           
           export URL=http://$(kubectl get service/springboot --output jsonpath="{.status.loadBalancer.ingress[0].ip}")
           export RESULT=$(curl $URL)
