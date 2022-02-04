@@ -16,6 +16,7 @@ This example assumes you have previously completed the following examples:
 
 ## Deploying Tomcat
 
+<!-- workflow.cron(0 5 * * 0) -->
 <!-- workflow.include(../../acr/tomcat/README.md) -->
 <!-- workflow.include(../create-kube-config/README.md) -->
 <!-- workflow.include(../use-your-acr/README.md) -->
@@ -43,6 +44,7 @@ kubectl apply -f deployment.yml
 
 To get the public IP address use the following command.
 
+<!-- workflow.skip() -->
 ```shell
 kubectl get service/tomcat
 ```
@@ -59,18 +61,28 @@ And this is served by a custom Tomcat using a Docker image coming from our
 own Azure Container Registry.
 ```
 
+## Cleanup
+
+<!-- workflow.directOnly()
+  
+  sleep 240
+
+  export URL=http://$(kubectl get service/tomcat --output jsonpath="{.status.loadBalancer.ingress[0].ip}")
+  export RESULT=$(curl $URL)
+
+  az group delete --name $RESOURCE_GROUP --yes || true
+
+  if [[ "$RESULT" != *"custom Tomcat"* ]]; then
+    echo "Response did not contain 'custom Tomca'"
+    exit 1
+  fi
+
+  -->
+
 <!-- workflow.run() 
 
 cd ../../..
   
-  -->
-
-## Cleanup
-
-<!-- workflow.directOnly()
-
-  az group delete --name $RESOURCE_GROUP --yes || true
-
   -->
 
 Do NOT forget to remove the resources once you are done running the example.

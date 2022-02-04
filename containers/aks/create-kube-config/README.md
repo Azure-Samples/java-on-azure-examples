@@ -17,7 +17,7 @@ This example assumes you have previously completed the following examples:
 
 ## Create a Kubeconfig file usin admin access
 
-<!-- workflow.cron(0 11 * * 4) -->
+<!-- workflow.cron(0 2 * * 0) -->
 <!-- workflow.include(../create/README.md) -->
 <!-- workflow.run()
 

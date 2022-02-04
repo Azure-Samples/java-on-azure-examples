@@ -11,7 +11,7 @@ This example assumes you have previously completed the following example:
 
 ## Create an Azure Kubernetes Service cluster
 
-<!-- workflow.cron(0 10 * * 4) -->
+<!-- workflow.cron(0 1 * * 0) -->
 <!-- workflow.include(../../../general/group/create/README.md) -->
 <!-- workflow.run()
 
