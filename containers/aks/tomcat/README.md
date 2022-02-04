@@ -73,7 +73,7 @@ own Azure Container Registry.
   az group delete --name $RESOURCE_GROUP --yes || true
 
   if [[ "$RESULT" != *"custom Tomcat"* ]]; then
-    echo "Response did not contain 'custom Tomca'"
+    echo "Response did not contain 'custom Tomcat'"
     exit 1
   fi
 

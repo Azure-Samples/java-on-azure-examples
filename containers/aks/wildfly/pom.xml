@@ -9,5 +9,5 @@
     </parent>
     <artifactId>aks-wildfly</artifactId>
     <packaging>pom</packaging>
-    <name>Containers :: Kubernetes :: Deploy WildFly</name>
+    <name>Containers :: AKS :: Deploy WildFly</name>
 </project>

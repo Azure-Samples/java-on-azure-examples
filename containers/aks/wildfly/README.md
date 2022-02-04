@@ -17,6 +17,7 @@ This example assumes you have previously completed the following examples:
 
 ## Deploy WildFly
 
+<!-- workflow.cron(0 6 * * 0) -->
 <!-- workflow.include(../../acr/wildfly/README.md) -->
 <!-- workflow.include(../create-kube-config/README.md) -->
 <!-- workflow.include(../use-your-acr/README.md) -->
@@ -44,6 +45,7 @@ kubectl apply -f deployment.yml
 
 To get the public IP address use the following command.
 
+<!-- workflow.skip() -->
 ```
 kubectl get service/wildfly
 ```
@@ -69,9 +71,25 @@ cd ../../..
 ## Cleanup
 
 <!-- workflow.directOnly()
+  
+  sleep 240
+
+  export URL=http://$(kubectl get service/wildfly --output jsonpath="{.status.loadBalancer.ingress[0].ip}")
+  export RESULT=$(curl $URL)
 
   az group delete --name $RESOURCE_GROUP --yes || true
 
+  if [[ "$RESULT" != *"custom WildFly"* ]]; then
+    echo "Response did not contain 'custom WildFly'"
+    exit 1
+  fi
+
+  -->
+
+<!-- workflow.run() 
+
+cd ../../..
+  
   -->
 
 Do NOT forget to remove the resources once you are done running the example.
