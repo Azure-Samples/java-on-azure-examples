@@ -9,7 +9,7 @@
     </parent>
     <artifactId>acr-wildfly</artifactId>
     <packaging>war</packaging>
-    <name>Containers :: Container Registry :: Push a WildFly Docker image to Azure Container Registry</name>
+    <name>Containers :: ACR :: Push a WildFly Docker image to Azure Container Registry</name>
     <build>
         <finalName>ROOT</finalName>
     </build>

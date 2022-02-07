@@ -9,7 +9,7 @@
     </parent>
     <artifactId>acr-tomcat</artifactId>
     <packaging>war</packaging>
-    <name>Containers :: Container Registry :: Push a Tomcat Docker image to Azure Container Registry</name>
+    <name>Containers :: ACR :: Push a Tomcat Docker image to Azure Container Registry</name>
     <build>
         <finalName>ROOT</finalName>
     </build>
