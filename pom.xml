@@ -69,14 +69,6 @@
         <module>security</module>
         <module>storage</module>
     </modules>
-    <profiles>
-        <profile>
-            <id>functions</id>
-            <modules>
-                <module>compute/functions</module>
-            </modules>
-        </profile>
-    </profiles>
     <properties>
         <example.prefix>examples</example.prefix>
         <example.postfix>${maven.build.timestamp}</example.postfix>

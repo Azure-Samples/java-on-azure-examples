@@ -16,7 +16,8 @@
                 <groupId>com.microsoft.azure</groupId>
                 <artifactId>azure-webapp-maven-plugin</artifactId>
                 <configuration>
-                    <schemaVersion>v2</schemaVersion>
+                    <schemaVersion>V2</schemaVersion>
+                    <resourceGroup>${resourceGroup}</resourceGroup>
                     <appName>${appName}</appName>
                     <appServicePlanName>${appServicePlan}</appServicePlanName>
                     <region>${region}</region>
@@ -51,9 +52,9 @@
         <appServicePlan>${env.APPSERVICE_PLAN}</appServicePlan>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <resourceGroup>${env.RESOURCE_GROUP}</resourceGroup>
         <pricingTier>P3V3</pricingTier>
         <region>${env.REGION}</region>
+        <resourceGroup>${env.RESOURCE_GROUP}</resourceGroup>
         <webContainer>Jbosseap 7</webContainer>
     </properties>
 </project>
