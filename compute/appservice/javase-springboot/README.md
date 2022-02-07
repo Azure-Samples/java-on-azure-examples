@@ -23,7 +23,6 @@ cd compute/appservice/javase-springboot
 
   -->
 
-
 ````shell
   mvn package
 ````
@@ -54,6 +53,7 @@ To deploy the example use the following Maven command line:
 
 <!-- workflow.run()
 
+sleep 240
 cd ../../..
 
   -->
