@@ -10,6 +10,9 @@ This example assumes you have previously completed the following example:
 1. [Create an Azure Resource Group](../../../general/group/create/README.md)
 1. [Create an Azure Key Vault](../create/README.md)
 
+<!-- workflow.cron(23 16 * * 1) -->
+<!-- workflow.include(..create/README.md) -->
+
 ## Create the self-signed certificate
 
 Execute the command line below to set the certificate alias environment variable
@@ -30,6 +33,19 @@ command line below.
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+<!-- workflow.directOnly()
+
+export RESULT=$(az keyvault certificate show --vault-name $KEYVAULT_NAME --name $KEYAULT_CERTIFICATE_ALIAS --output tsv --query properties.provisioningState)
+if [[ "$RESULT" != Succeeded ]]; then
+  echo 'Certificate was not provisioned'
+  az group delete --name $RESOURCE_GROUP --yes || true
+  exit 1
+fi
+
+az group delete --name $RESOURCE_GROUP --yes || true
+
+  -->
 
 ## Reference material
 
