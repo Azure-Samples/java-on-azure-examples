@@ -9,7 +9,7 @@
     </parent>
     <artifactId>acr-glassfish</artifactId>
     <packaging>war</packaging>
-    <name>Containers :: Container Registry :: Push a Glassfish Docker image to Azure Container Registry</name>
+    <name>Containers :: ACR :: Push a Glassfish Docker image to Azure Container Registry</name>
     <build>
         <finalName>ROOT</finalName>
     </build>

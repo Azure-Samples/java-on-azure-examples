@@ -10,7 +10,7 @@
     <groupId>examples.azure.containers.acr</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Containers :: Container Registry</name>
+    <name>Containers :: ACR</name>
     <modules>
         <module>create</module>
         <module>create-settings-xml</module>

@@ -6,26 +6,25 @@
 # -----------------------------------------------------------------------------
 
 #
-# Zulu JDK
+# Microsoft OpenJDK 11
 #
-FROM mcr.microsoft.com/java/jdk:8u242-zulu-centos
+FROM mcr.microsoft.com/openjdk/jdk:11-ubuntu
 
 #
-# Install bsdtar and unzip.
+# Install curl.
 #
-RUN yum update -y && \
-    yum -y install bsdtar unzip && \
-    yum clean all
+RUN apt-get update && \
+    apt-get install -y curl unzip
 
 #
 # Install Glassfish
 #
-RUN export GLASSFISH_VERSION=5.1.0 && \
+RUN export GLASSFISH_VERSION=6.2.3 && \
     cd /opt && \
-    curl -L -o glassfish.zip https://www.eclipse.org/downloads/download.php?file=/glassfish/glassfish-${GLASSFISH_VERSION}.zip\&r=1 && \
+    curl -L -o glassfish.zip https://www.eclipse.org/downloads/download.php?file=/ee4j/glassfish/glassfish-${GLASSFISH_VERSION}.zip && \
     unzip glassfish.zip && \
     rm glassfish.zip && \
-    mv glassfish5 glassfish
+    mv glassfish6 glassfish
 
 #
 # Expose port 8080.
