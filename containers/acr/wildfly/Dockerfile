@@ -11,7 +11,7 @@
 FROM mcr.microsoft.com/openjdk/jdk:11-ubuntu
 
 #
-# Install bsdtar and unzip.
+# Install curl.
 #
 RUN apt-get update && \
     apt-get install -y curl

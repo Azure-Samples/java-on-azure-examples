@@ -8,7 +8,7 @@
         <version>1-SNAPSHOT</version>
     </parent>
     <artifactId>acr-quarkus</artifactId>
-    <name>Containers :: Container Registry :: Create a Quarkus application packaged as a Docker image</name>
+    <name>Containers :: ACR :: Create a Quarkus application packaged as a Docker image</name>
     <properties>
         <compiler-plugin.version>3.8.1</compiler-plugin.version>
         <maven.compiler.parameters>true</maven.compiler.parameters>

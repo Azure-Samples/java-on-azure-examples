@@ -6,17 +6,14 @@
 # -----------------------------------------------------------------------------
 
 #
-# Zulu JDK
+# Microsoft OpenJDK 11
 #
-FROM mcr.microsoft.com/java/jdk:8u242-zulu-centos
+FROM mcr.microsoft.com/openjdk/jdk:11-ubuntu
 
 #
-# Install bsdtar and unzip.
+# Create quarkus lib directory
 #
-RUN yum update -y && \
-    yum -y install bsdtar unzip && \
-    yum clean all && \
-    mkdir -p /opt/quarkus/lib
+RUN mkdir -p /opt/quarkus/lib
 
 #
 # Expose port 8080.
