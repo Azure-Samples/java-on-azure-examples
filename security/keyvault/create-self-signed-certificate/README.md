@@ -24,7 +24,7 @@ Execute the command line below to set the certificate alias environment variable
 Create the self-signed certificate using alias 'self-signed' by executing the
 command line below.
 
-```
+```shell
   az keyvault certificate create --vault-name $KEYVAULT_NAME \
     --name $KEYVAULT_CERTIFICATE_ALIAS \
     --policy "$(az keyvault certificate get-default-policy)"
