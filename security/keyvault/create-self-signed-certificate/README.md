@@ -11,7 +11,7 @@ This example assumes you have previously completed the following example:
 1. [Create an Azure Key Vault](../create/README.md)
 
 <!-- workflow.cron(23 16 * * 1) -->
-<!-- workflow.include(..create/README.md) -->
+<!-- workflow.include(../create/README.md) -->
 
 ## Create the self-signed certificate
 
