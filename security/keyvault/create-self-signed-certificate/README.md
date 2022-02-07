@@ -36,8 +36,8 @@ Do NOT forget to remove the resources once you are done running the example.
 
 <!-- workflow.directOnly()
 
-export RESULT=$(az keyvault certificate show --vault-name $KEYVAULT_NAME --name $KEYVAULT_CERTIFICATE_ALIAS --output tsv --query properties.provisioningState)
-if [[ "$RESULT" != Succeeded ]]; then
+export RESULT=$(az keyvault certificate show --vault-name $KEYVAULT_NAME --name $KEYVAULT_CERTIFICATE_ALIAS --output tsv --query status)
+if [[ "$RESULT" != completed ]]; then
   echo 'Certificate was not provisioned'
   az group delete --name $RESOURCE_GROUP --yes || true
   exit 1
