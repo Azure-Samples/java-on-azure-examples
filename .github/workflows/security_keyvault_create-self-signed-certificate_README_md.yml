@@ -1,4 +1,6 @@
 on: 
+  schedule: 
+    - cron: '23 16 * * 1'
   workflow_dispatch: 
 
 name: 'security/keyvault/create-self-signed-certificate/README.md'
@@ -13,3 +15,12 @@ jobs:
       - uses: 'actions/checkout@v2'
       - run: | 
           export KEYVAULT_CERTIFICATE_ALIAS=self-signed
+          
+          export RESULT=$(az keyvault certificate show --vault-name $KEYVAULT_NAME --name $KEYAULT_CERTIFICATE_ALIAS --output tsv --query properties.provisioningState)
+          if [[ "$RESULT" != Succeeded ]]; then
+          echo 'Certificate was not provisioned'
+          az group delete --name $RESOURCE_GROUP --yes || true
+          exit 1
+          fi
+          
+          az group delete --name $RESOURCE_GROUP --yes || true
