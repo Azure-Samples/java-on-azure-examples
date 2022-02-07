@@ -14,6 +14,18 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          fi
+          export REGION=westus2
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export KEYVAULT_NAME=keyvault-$RANDOM
+          
+          az keyvault create \
+          --resource-group $RESOURCE_GROUP \
+          --name $KEYVAULT_NAME
           export KEYVAULT_CERTIFICATE_ALIAS=self-signed
           
           export RESULT=$(az keyvault certificate show --vault-name $KEYVAULT_NAME --name $KEYAULT_CERTIFICATE_ALIAS --output tsv --query properties.provisioningState)
