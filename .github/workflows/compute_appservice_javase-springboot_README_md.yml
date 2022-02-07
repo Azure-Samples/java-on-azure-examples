@@ -41,6 +41,7 @@ jobs:
           -DappServicePlan=$APPSERVICE_PLAN \
           -DresourceGroup=$RESOURCE_GROUP
           
+          sleep 240
           cd ../../..
           
           
