@@ -6,16 +6,15 @@
 # -----------------------------------------------------------------------------
 
 #
-# Zulu JDK
+# Microsoft OpenJDK 11
 #
-FROM mcr.microsoft.com/java/jdk:8u242-zulu-centos
+FROM mcr.microsoft.com/openjdk/jdk:11-ubuntu
 
 #
-# Install bsdtar and unzip.
+# Install curl.
 #
-RUN yum update -y && \
-    yum -y install bsdtar unzip which && \
-    yum clean all
+RUN apt-get update && \
+    apt-get install -y curl
 
 #
 # Install Jetty.
