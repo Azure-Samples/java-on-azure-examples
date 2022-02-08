@@ -15,7 +15,6 @@ To setup the environment variables needed to create the Resource Group execute
 the command lines below:
 
 <!-- workflow.cron(0 1 * * 0) -->
-
 <!-- workflow.skip() -->
 ```shell
   export RESOURCE_GROUP=java-on-azure
@@ -26,8 +25,8 @@ the command lines below:
 
   if [[ -z $RESOURCE_GROUP ]]; then
     export RESOURCE_GROUP=java-on-azure-$RANDOM
+    export REGION=westus2
   fi
-  export REGION=westus2
 
   -->
 
