@@ -17,15 +17,15 @@ jobs:
           
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
-          fi
           export REGION=westus2
+          fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
           
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
-          fi
           export REGION=westus2
+          fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
           
@@ -40,8 +40,8 @@ jobs:
           
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
-          fi
           export REGION=westus2
+          fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
           
@@ -65,8 +65,8 @@ jobs:
           
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
-          fi
           export REGION=westus2
+          fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
           

@@ -15,8 +15,8 @@ jobs:
           
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
-          fi
           export REGION=westus2
+          fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
           export REDIS_NAME=redis-$RANDOM
