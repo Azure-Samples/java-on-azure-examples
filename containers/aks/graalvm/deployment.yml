@@ -2,24 +2,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: springboot
+  name: graalvm
   labels:
-    app: springboot
+    app: graalvm
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: springboot
+      app: graalvm
   template:
     metadata:
       labels:
-        app: springboot
+        app: graalvm
     spec:
       nodeSelector:
         "beta.kubernetes.io/os": linux
       containers:
-      - name: springboot
-        image: ACR.azurecr.io/springboot:latest
+      - name: graalvm
+        image: ACR.azurecr.io/graalvm:latest
         ports:
         - containerPort: 8080
           name: http
@@ -27,11 +27,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: springboot
+  name: graalvm
 spec:
   type: LoadBalancer
   ports:
   - port: 80
     targetPort: 8080
   selector:
-    app: springboot
+    app: graalvm

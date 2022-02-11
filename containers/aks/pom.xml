@@ -14,6 +14,7 @@
     <modules>
         <module>create</module>
         <module>create-kube-config</module>
+        <module>graalvm</module>
         <module>springboot</module>
         <module>tomcat</module>
         <module>use-your-acr</module>
