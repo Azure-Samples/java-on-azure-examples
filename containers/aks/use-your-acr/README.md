@@ -39,5 +39,9 @@ Do NOT forget to remove the resources once you are done running the example.
 
 * [Deploy a Spring Boot application](../springboot/README.md)
 
+## Reference documentation
+
+* [Commands to manage Azure Kubernetes Services](https://docs.microsoft.com/cli/azure/aks)
+* [Azure Kubernetes Service Documentation](https://docs.microsoft.com/azure/aks/)
 
 1m

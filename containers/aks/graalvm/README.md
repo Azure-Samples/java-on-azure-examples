@@ -1,7 +1,7 @@
 
 # Deploy a GraalVM application
 
-[![containers/aks/wildfly/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_graalvm_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_graalvm_README_md.yml)
+[![containers/aks/graalvm/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_graalvm_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_graalvm_README_md.yml)
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ This example assumes you have previously completed the following examples:
 1. [Create a Kube config for your Azure Kubernetes Service cluster (using admin access keys)](../create-kube-config/README.md)
 1. [Update your AKS cluster to use your Azure Container Registry](../use-your-acr/README.md)
 
-## Deploy WildFly
+## Deploy a GraalVM application
 
 <!-- workflow.cron(0 7 * * 0) -->
 <!-- workflow.include(../../acr/graalvm/README.md) -->
@@ -53,13 +53,12 @@ kubectl get service/graalvm
 If the `EXTERNAL-IP` column has no IP address yet keep repeating the command as
 it might take a while before AKS has assigned a public IP.
 
-Once the `EXTERNAL-IP` shows up open your browser to `http://EXTERNAL-IP`.
+Once the `EXTERNAL-IP` shows up open your browser to `http://EXTERNAL-IP/helloworld`.
 
 It should tell you:
 
 ```text
-And this is served by a custom WildFly using a Docker image coming from our 
-own Azure Container Registry.
+Hello
 ```
 
 <!-- workflow.run() 
@@ -74,7 +73,7 @@ cd ../../..
   
   sleep 240
 
-  export URL=http://$(kubectl get service/graalvm --output jsonpath="{.status.loadBalancer.ingress[0].ip}")
+  export URL=http://$(kubectl get service/graalvm --output jsonpath="{.status.loadBalancer.ingress[0].ip}")/helloworld
   export RESULT=$(curl $URL)
 
   az group delete --name $RESOURCE_GROUP --yes || true
@@ -93,5 +92,12 @@ cd ../../..
   -->
 
 Do NOT forget to remove the resources once you are done running the example.
+
+## Reference documentation
+
+* [Commands to manage Azure Kubernetes Services](https://docs.microsoft.com/cli/azure/aks)
+* [Azure Kubernetes Service Documentation](https://docs.microsoft.com/azure/aks/)
+* [kubectl](https://kubernetes.io/docs/reference/kubectl/)
+* [GraalVM documentation](https://www.graalvm.org/docs/)
 
 1m
