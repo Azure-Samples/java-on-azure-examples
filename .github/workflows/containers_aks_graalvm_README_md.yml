@@ -99,7 +99,7 @@ jobs:
           
           sleep 240
           
-          export URL=http://$(kubectl get service/graalvm --output jsonpath="{.status.loadBalancer.ingress[0].ip}")
+          export URL=http://$(kubectl get service/graalvm --output jsonpath="{.status.loadBalancer.ingress[0].ip}")/helloworld
           export RESULT=$(curl $URL)
           
           az group delete --name $RESOURCE_GROUP --yes || true
