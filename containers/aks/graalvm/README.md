@@ -79,8 +79,8 @@ cd ../../..
 
   az group delete --name $RESOURCE_GROUP --yes || true
 
-  if [[ "$RESULT" != *"custom WildFly"* ]]; then
-    echo "Response did not contain 'custom WildFly'"
+  if [[ "$RESULT" != *"Hello"* ]]; then
+    echo "Response did not contain 'Hello'"
     exit 1
   fi
 
