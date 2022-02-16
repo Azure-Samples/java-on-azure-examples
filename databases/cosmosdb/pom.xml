@@ -12,6 +12,7 @@
     <packaging>pom</packaging>
     <name>Databases :: Cosmos DB</name>
     <modules>
+        <module>cosmos-to-adx</module>
         <module>cosmos-to-storage</module>
         <module>create</module>
         <module>create-sql-container</module>
