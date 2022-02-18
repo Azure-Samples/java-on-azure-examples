@@ -3,15 +3,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>examples.azure</groupId>
+        <groupId>examples.azure.networking.vnet</groupId>
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.networking</groupId>
-    <artifactId>project</artifactId>
+    <artifactId>examples-azure-networking-vnet-create</artifactId>
+    <version>1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Networking</name>
-    <modules>
-        <module>vnet</module>
-    </modules>
+    <name>Networking :: VNet :: Create VNet</name>
 </project>

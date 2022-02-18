@@ -214,6 +214,14 @@ exit 0
 | 5. [Send a JMS message](integration/servicebus/send-jms-message/README.md) | [Workflow](.github/workflows/integration_servicebus_send-jms-message_README_md.yml) | [![integration/servicebus/send-jms-message/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_send-jms-message_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_send-jms-message_README_md.yml)
 | 6. [Send a message](integration/servicebus/send-message/README.md) | [Workflow](.github/workflows/integration_servicebus_send-message_README_md.yml) | [![integration/servicebus/send-message/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_send-message_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_send-message_README_md.yml)
 
+## Networking
+
+### VNet examples
+
+| Name | Link | Status
+| ---- | ---- | ------
+| 1. [Create a VNet](networking/vnet/create/README.md) | [Workflow](.github/workflows/networking_vnet_create_README_md.yml) | [![networking/vnet/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/networking_vnet_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/networking_vnet_create_README_md.yml)
+
 ## Security
 
 ### Azure Key Vault examples
