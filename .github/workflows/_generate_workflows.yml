@@ -13,11 +13,11 @@ jobs:
         token: ${{ secrets.GIT_PASSWORD }}
     - uses: actions/setup-java@v1
       with:
-        java-version: 1.8
+        java-version: 17
     - name: Run GitHub Workflow Generator
       run: |
         rm -rf .github/workflows/*_md.yml
-        curl -L https://repo1.maven.org/maven2/com/manorrock/parrot/parrot/21.2.11/parrot-21.2.11.jar -o parrot.jar
+        curl -L https://repo1.maven.org/maven2/com/manorrock/parrot/parrot/22.5.0/parrot-22.5.0.jar -o parrot.jar
         java -jar parrot.jar --baseDirectory . --outputDirectory .github/workflows
         git config --global user.email "noreply@microsoft.com"
         git config --global user.name "Automated workflow"
