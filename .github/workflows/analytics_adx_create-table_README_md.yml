@@ -12,4 +12,5 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
+          # WARN File could not be found: analytics/adx/create-database.md
           export ADX_TABLE=Events
