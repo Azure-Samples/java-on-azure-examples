@@ -14,7 +14,7 @@ This example assumes you have previously completed the following examples:
 
 ## Ingest into ADX
 
-<!-- workflow.include(../create-table.md) -->
+<!-- workflow.include(../create-table/README.md) -->
 
 ## Cleanup
 
