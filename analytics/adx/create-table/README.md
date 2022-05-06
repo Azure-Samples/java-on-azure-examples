@@ -13,7 +13,7 @@ This example assumes you have previously completed the following examples:
 
 ## Create a table
 
-<!-- workflow.include(../create-database.md) -->
+<!-- workflow.include(../create-database/README.md) -->
 
 Open up the Azure database explorer to start the process of creating a table.
 To do so execute the following command line and use its output 
