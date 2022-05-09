@@ -13,7 +13,7 @@ if [[ -z $LOG_ANALYTICS_WORKSPACE ]]; then
 export LOG_ANALYTICS_WORKSPACE=log-analytics-workspace-$RANDOM
 az monitor log-analytics workspace create \
 --resource-group $RESOURCE_GROUP \
---location $LOCATION \
+--location $REGION \
 --workspace-name $LOG_ANALYTICS_WORKSPACE
 fi
 
