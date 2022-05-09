@@ -19,7 +19,7 @@ This example assumes you have previously completed the following example:
     export LOG_ANALYTICS_WORKSPACE=log-analytics-workspace-$RANDOM
     az monitor log-analytics workspace create \
       --resource-group $RESOURCE_GROUP \
-      --location $LOCATION \
+      --location $REGION \
       --workspace-name $LOG_ANALYTICS_WORKSPACE
   fi
 
@@ -33,7 +33,7 @@ To create the log analytics workspace use the following command line:
 
     az monitor log-analytics workspace create \
       --resource-group $RESOURCE_GROUP \
-      --location $LOCATION \
+      --location $REGION \
       --workspace-name $LOG_ANALYTICS_WORKSPACE
 ```
 
