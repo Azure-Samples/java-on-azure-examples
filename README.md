@@ -220,7 +220,7 @@ exit 0
 
 | Name                                                                                    | Link                                                                               | Status
 |-----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------| ------
-| 1. [Create an Azure Log Analytics Workspace](monitor/log-analytics/create-workspace/README.md) | [Workflow](.github/workflows/monitor_log_analytics_create_workspace_README_md.yml) | [![monitor/log-analytics/create-workspace/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/monitor_log_analytics_create_workspace_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/monitor_log_analytics_create_workspace_README_md.yml)
+| 1. [Create an Azure Log Analytics Workspace](monitor/log-analytics/create-workspace/README.md) | [Workflow](.github/workflows/monitor_log-analytics_create-workspace_README_md.yml) | [![monitor/log-analytics/create-workspace/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/monitor_log-analytics_create-workspace_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/monitor_log-analytics_create-workspace_README_md.yml)
 
 ## Networking
 
