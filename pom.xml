@@ -66,6 +66,7 @@
         <module>databases</module>
         <module>general</module>
         <module>integration</module>
+        <module>monitor</module>
         <module>networking</module>
         <module>security</module>
         <module>storage</module>
