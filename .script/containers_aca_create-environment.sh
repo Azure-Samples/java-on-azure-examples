@@ -20,6 +20,7 @@ az containerapp env create \
 --name $ACA_ENVIRONMENT_NAME \
 --resource-group $RESOURCE_GROUP \
 --location "$ACA_REGION"
+sleep 60
 export RESULT=$(az containerapp env show --name $ACA_ENVIRONMENT_NAME --resource-group $RESOURCE_GROUP --output tsv --query properties.provisioningState)
 az group delete --name $RESOURCE_GROUP --yes || true
 if [[ "$RESULT" != Succeeded ]]; then
