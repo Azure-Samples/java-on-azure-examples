@@ -50,16 +50,17 @@ To create the Azure Container Apps environment use the following command line:
 ```
 
 <!-- workflow.directOnly()
-export RESULT=$(az containerapp env show --name $ACA_ENVIRONMENT_NAME --resource-group $RESOURCE_GROUP --output tsv --query properties.provisioningState)
-az group delete --name $RESOURCE_GROUP --yes || true
-if [[ "$RESULT" != Succeeded ]]; then
-  echo "Azure Container Apps environment $ACA_ENVIRONMENT_NAME was not provisioned properly"
-  exit 1
-fi
+  sleep 60
+  export RESULT=$(az containerapp env show --name $ACA_ENVIRONMENT_NAME --resource-group $RESOURCE_GROUP --output tsv --query properties.provisioningState)
+  az group delete --name $RESOURCE_GROUP --yes || true
+  if [[ "$RESULT" != Succeeded ]]; then
+    echo "Azure Container Apps environment $ACA_ENVIRONMENT_NAME was not provisioned properly"
+    exit 1
+  fi
   -->
 
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
 
-3m
+4m
