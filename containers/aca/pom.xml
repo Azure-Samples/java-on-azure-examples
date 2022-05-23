@@ -4,19 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>examples.azure</groupId>
-        <artifactId>project</artifactId>
+        <artifactId>containers</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure</groupId>
-    <artifactId>containers</artifactId>
-    <version>1-SNAPSHOT</version>
+    <groupId>examples.azure.containers.aca</groupId>
+    <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Containers</name>
+    <name>Azure Container Apps examples</name>
     <modules>
-        <module>aca</module>
-        <module>aci</module>
-        <module>acr</module>
-        <module>aks</module>
-        <module>aro</module>
+        <module>create-environment</module>
     </modules>
 </project>
