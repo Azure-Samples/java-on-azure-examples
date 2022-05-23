@@ -31,8 +31,9 @@ command line below:
 ```
 
 <!-- workflow.run()
-if [[ -z $ACA_ENVIRONMENT ]]; then
-  export ACA_ENVIRONMENT=aca$RANDOM
+if [[ -z $ACA_ENVIRONMENT_NAME ]]; then
+  export ACA_ENVIRONMENT_NAME=aca$RANDOM
+  export ACA_REGION=westus
 fi
   -->
 
