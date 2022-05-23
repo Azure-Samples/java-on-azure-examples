@@ -16,8 +16,9 @@ jobs:
           az extension add --name containerapp --upgrade
           az provider register --namespace Microsoft.App
           az provider register --namespace Microsoft.OperationalInsights
-          if [[ -z $ACA_ENVIRONMENT ]]; then
-          export ACA_ENVIRONMENT=aca$RANDOM
+          if [[ -z $ACA_ENVIRONMENT_NAME ]]; then
+          export ACA_ENVIRONMENT_NAME=aca$RANDOM
+          export ACA_REGION=westus
           fi
           az containerapp env create \
           --name $ACA_ENVIRONMENT_NAME \
