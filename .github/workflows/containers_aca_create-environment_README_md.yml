@@ -1,4 +1,6 @@
 on: 
+  schedule: 
+    - cron: '0 16 * * 1'
   workflow_dispatch: 
 
 name: 'containers/aca/create-environment/README.md'
@@ -12,6 +14,13 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          export REGION=westus2
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
           az upgrade
           az extension add --name containerapp --upgrade
           az provider register --namespace Microsoft.App
