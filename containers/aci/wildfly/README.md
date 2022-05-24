@@ -14,6 +14,7 @@ This example assumes you have previously completed the following examples:
 
 ## Deploy WildFly
 
+<!-- workflow.cron(0 16 * * 2) -->
 <!-- workflow.include(../../acr/create-acrpull-service-principal/README.md) -->
 <!-- workflow.include(../../acr/wildfly/README.md) -->
 
