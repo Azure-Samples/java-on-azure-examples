@@ -16,7 +16,7 @@ Ensure you are running the latest Azure CLI and install the Azure Container
 Apps extensions for the CLI.
 
 ```shell
-  az upgrade
+  az upgrade --yes
   az extension add --name containerapp --upgrade
   az provider register --namespace Microsoft.App
   az provider register --namespace Microsoft.OperationalInsights

@@ -13,5 +13,6 @@
     <name>Azure Container Apps examples</name>
     <modules>
         <module>create-environment</module>
+        <module>wildfly</module>
     </modules>
 </project>
