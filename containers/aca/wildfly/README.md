@@ -34,7 +34,7 @@ line below.
 ```
 
 <!-- workflow.directOnly()
-  sleep 240
+  sleep 60
   export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --name $ACA_WILDFLY --query properties.configuration.ingress.fqdn --output tsv)
   export RESULT=$(curl $URL)
   az group delete --name $RESOURCE_GROUP --yes || true
