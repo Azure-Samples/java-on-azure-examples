@@ -14,6 +14,7 @@ This example assumes you have previously completed the following examples:
 
 ## Deploy the Quarkus application
 
+<!-- workflow.cron(0 10 * * 2) -->
 <!-- workflow.include(../../acr/create-acrpull-service-principal/README.md) -->
 <!-- workflow.include(../../acr/quarkus/README.md) -->
 
