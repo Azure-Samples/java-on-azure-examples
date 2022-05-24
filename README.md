@@ -110,7 +110,7 @@ exit 0
 | Name | Link | Status
 | ---- | ---- | ------
 | 1. [Create an environment](containers/aca/create-environment/README.md) | [Workflow](.github/workflows/containers_aca_create-environment_README_md.yml) | [![containers/aca/create-environment/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_create-environment_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_create-environment_README_md.yml)
-
+| 2. [Deploy WildFly](containers/aca/wildfly/README.md) | [Workflow](.github/workflows/containers_aca_wildfly_README_md.yml) | [![containers/aca/wildfly/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_wildfly_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_wildfly_README_md.yml)
 
 ### Azure Container Instances examples
 

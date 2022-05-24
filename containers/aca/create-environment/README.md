@@ -13,10 +13,10 @@ This example assumes you have previously completed the following example:
 <!-- workflow.include(../../../general/group/create/README.md) -->
 
 Ensure you are running the latest Azure CLI and install the Azure Container
-Apps extensions for the CLI.
+Apps extensions for the CLI using the command lines below:
 
 ```shell
-  az upgrade --yes
+  az upgrade --yes || true
   az extension add --name containerapp --upgrade
   az provider register --namespace Microsoft.App
   az provider register --namespace Microsoft.OperationalInsights
@@ -24,8 +24,8 @@ Apps extensions for the CLI.
 
 ## Create an environment
 
-Setup environment variable for the Azure Container Apps environment using the
-command line below:
+Setup the environment variables for the Azure Container Apps environment and its
+region using the command lines below:
 
 <!-- workflow.skip() -->
 ```shell
