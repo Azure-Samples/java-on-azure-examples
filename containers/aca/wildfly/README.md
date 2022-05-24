@@ -30,14 +30,12 @@ line below.
     --target-port 8080 \
     --ingress 'external' \
     --registry-server $ACR_NAME.azurecr.io \
-    --cpu 1.0 \
-    --memory 1.0Gi \
-    --query configuration.ingress.fqdn
+    --min-replicas 1
 ```
 
 <!-- workflow.directOnly()
   sleep 240
-  export URL=http://$(kubectl get service/wildfly --output jsonpath="{.status.loadBalancer.ingress[0].ip}")
+  export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --name $ACA_WILDFLY --query properties.configuration.ingress.fqdn --output tsv)
   export RESULT=$(curl $URL)
   az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != *"custom WildFly"* ]]; then
