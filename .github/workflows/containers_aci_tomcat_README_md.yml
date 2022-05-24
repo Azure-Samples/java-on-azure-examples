@@ -1,4 +1,6 @@
 on: 
+  schedule: 
+    - cron: '0 14 * * 2'
   workflow_dispatch: 
 
 name: 'containers/aci/tomcat/README.md'
