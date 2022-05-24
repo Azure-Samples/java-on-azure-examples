@@ -17,15 +17,21 @@ RUN apt-get update && \
     apt-get install -y curl
 
 #
+# Create wildfly user
+#
+RUN groupadd -r wildfly && \
+    useradd -r -g wildfly wildfly
+
+#
 # Install WildFly.
 #
 RUN export WILDFLY_VERSION=18.0.1.Final && \
-    mkdir -p /opt/jboss && \
-    cd /opt/jboss && \
+    cd /opt && \
     curl -O https://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz && \
     tar xf wildfly-$WILDFLY_VERSION.tar.gz && \
-    mv wildfly-$WILDFLY_VERSION /opt/jboss/wildfly && \
-    rm wildfly-$WILDFLY_VERSION.tar.gz
+    mv wildfly-$WILDFLY_VERSION /opt/wildfly && \
+    rm wildfly-$WILDFLY_VERSION.tar.gz && \
+    chown -R wildfly /opt/wildfly
 
 #
 # Expose port 8080.
@@ -35,7 +41,13 @@ EXPOSE 8080
 #
 # Copy the WAR file.
 #
-COPY target/ROOT.war /opt/jboss/wildfly/standalone/deployments/ROOT.war
+COPY target/ROOT.war /opt/wildfly/standalone/deployments/ROOT.war
+RUN chown wildfly /opt/wildfly/standalone/deployments/ROOT.war
+
+#
+# Change user
+#
+USER wildfly
 
 #
 # Needed for graceful termination.
@@ -45,4 +57,4 @@ ENV LAUNCH_JBOSS_IN_BACKGROUND true
 #
 # Startup command.
 #
-CMD ["/opt/jboss/wildfly/bin/standalone.sh", "-b", "0.0.0.0"]
+CMD ["/opt/wildfly/bin/standalone.sh", "-b", "0.0.0.0"]
