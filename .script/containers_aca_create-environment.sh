@@ -8,7 +8,7 @@ export REGION=westus2
 fi
 
 az group create --name $RESOURCE_GROUP --location $REGION
-az upgrade
+az upgrade --yes
 az extension add --name containerapp --upgrade
 az provider register --namespace Microsoft.App
 az provider register --namespace Microsoft.OperationalInsights
