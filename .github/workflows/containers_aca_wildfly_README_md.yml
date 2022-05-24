@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 16 * * 1'
+    - cron: '0 8 * * 2'
   workflow_dispatch: 
 
 name: 'containers/aca/wildfly/README.md'
@@ -46,7 +46,7 @@ jobs:
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
-          az upgrade --yes
+          az upgrade --yes || true
           az extension add --name containerapp --upgrade
           az provider register --namespace Microsoft.App
           az provider register --namespace Microsoft.OperationalInsights
