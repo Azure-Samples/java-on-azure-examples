@@ -9,7 +9,7 @@
     </parent>
     <artifactId>aca-quarkus</artifactId>
     <packaging>pom</packaging>
-    <name>Deploy Quarkus</name>
+    <name>Deploy a Quarkus application</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

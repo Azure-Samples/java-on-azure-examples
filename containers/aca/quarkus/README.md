@@ -1,5 +1,6 @@
-
 # Deploy a Quarkus application
+
+[![containers/aca/quarkus/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_quarkus_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_quarkus_README_md.yml)
 
 ## Prerequisites
 
