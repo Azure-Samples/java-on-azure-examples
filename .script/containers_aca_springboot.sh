@@ -65,7 +65,7 @@ sleep 60
 export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --name $ACA_SPRINGBOOT --query properties.configuration.ingress.fqdn --output tsv)
 export RESULT=$(curl $URL)
 az group delete --name $RESOURCE_GROUP --yes || true
-if [[ "$RESULT" != *"hello"* ]]; then
+if [[ "$RESULT" != *"Hello World"* ]]; then
 echo "Response did not contain 'hello'"
 exit 1
 fi
