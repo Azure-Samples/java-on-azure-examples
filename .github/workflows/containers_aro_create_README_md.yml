@@ -45,3 +45,10 @@ jobs:
           --master-subnet aro-master-subnet \
           --worker-subnet aro-worker-subnet \
           --vnet aro-vnet
+          
+          export RESULT=$(az aro show --name $ARO_NAME --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
+          az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ "$RESULT" != Succeeded ]]; then
+          echo "Azure RedHat OpenShift cluster " $ARO_NAME " was not created successfully"
+          exit 1
+          fi
