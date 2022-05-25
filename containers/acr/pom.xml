@@ -20,6 +20,7 @@
         <module>jetty</module>
         <module>payara</module>
         <module>quarkus</module>
+        <module>springboot</module>
         <module>tomcat</module>
         <module>wildfly</module>
     </modules>
