@@ -11,6 +11,12 @@
 FROM mcr.microsoft.com/openjdk/jdk:11-ubuntu
 
 #
+# Create quarkus user
+#
+RUN groupadd -r quarkus && \
+    useradd -r -g quarkus quarkus
+
+#
 # Create quarkus lib directory
 #
 RUN mkdir -p /opt/quarkus/lib
@@ -29,6 +35,16 @@ COPY target/acr-quarkus-runner.jar /opt/quarkus/acr-quarkus.jar
 # Copy the lib directory
 #
 COPY target/lib/* /opt/quarkus/lib/
+
+#
+# Set file ownership
+#
+RUN chown -R quarkus /opt/quarkus
+
+#
+# Change user
+#
+USER quarkus
 
 #
 # Startup command.
