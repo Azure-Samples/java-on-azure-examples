@@ -52,11 +52,12 @@ Do NOT forget to remove the resources once you are done running the example.
 
 ## Next steps
 
+* [Create an Azure Container Apps environment](../../../containers/aca/create-environment/README.md)
 * [Create an Azure Kubernetes Service cluster](../../../containers/aks/create/README.md)
 * [Create an Azure Spring Cloud](../../../compute/spring-cloud/create/README.md)
 
 ## Reference documentation
 
-* [Manage resource groups and template deployments](https://docs.microsoft.com/en-us/cli/azure/group)
+* [Manage resource groups and template deployments](https://docs.microsoft.com/cli/azure/group)
 
 1m

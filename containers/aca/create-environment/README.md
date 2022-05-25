@@ -63,4 +63,15 @@ To create the Azure Container Apps environment use the following command line:
 
 Do NOT forget to remove the resources once you are done running the example.
 
+## Next steps
+
+* [Deploy a Quarkus application](../quarkus/README.md)
+* [Deploy Tomcat](../tomcat/README.md)
+* [Deploy WildFly](../wildfly/README.md)
+
+## Reference documentation
+
+* [Manage Azure Container Apps](https://docs.microsoft.com/cli/azure/containerapp)
+* [Azure Container Apps documentation](https://docs.microsoft.com/azure/container-apps)
+
 4m
