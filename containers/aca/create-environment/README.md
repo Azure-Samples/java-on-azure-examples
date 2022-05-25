@@ -1,5 +1,6 @@
-
 # Create an environment
+
+[![containers/aca/create-environment/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_create-environment_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_create-environment_README_md.yml)
 
 ## Prerequisites
 
