@@ -11,7 +11,6 @@ This example assumes you have previously completed the following example:
 
 ## Deploy an Azure Red Hat OpenShift cluster
 
-<!-- workflow.cron(0 10 * * 3) -->
 <!-- workflow.include(../../../general/group/create/README.md) -->
 
 To deploy the Azure Red hat OpenShift cluster use the following command lines:

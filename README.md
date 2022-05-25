@@ -152,7 +152,7 @@ exit 0
 
 | Name | Link | Status
 | ---- | ---- | ------
-| 1. [Deploy an Azure Red Hat OpenShift cluster](containers/aro/create/README.md) | [Workflow](.github/workflows/containers_aro_create_README_md.yml) | [![containers/aro/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aro_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aro_create_README_md.yml)
+| 1. [Deploy an Azure Red Hat OpenShift cluster](containers/aro/create/README.md) | |
 
 ## Databases
 
