@@ -17,6 +17,12 @@ RUN apt-get update && \
     apt-get install -y curl
 
 #
+# Create tomcat user
+#
+RUN groupadd -r tomcat && \
+    useradd -r -g tomcat tomcat
+
+#
 # Install Tomcat.
 #
 RUN export TOMCAT_VERSION=9.0.37 && \
@@ -26,7 +32,8 @@ RUN export TOMCAT_VERSION=9.0.37 && \
     tar xf apache-tomcat-$TOMCAT_VERSION.tar.gz && \
     mv /opt/apache-tomcat-$TOMCAT_VERSION /opt/tomcat && \
     rm -rf /opt/tomcat/webapps/* && \
-    rm apache-tomcat-$TOMCAT_VERSION.tar.gz
+    rm apache-tomcat-$TOMCAT_VERSION.tar.gz && \
+    chown -R tomcat /opt/tomcat
 
 #
 # Expose port 8080.
@@ -37,6 +44,12 @@ EXPOSE 8080
 # Copy the WAR file.
 #
 COPY target/ROOT.war /opt/tomcat/webapps/ROOT.war
+RUN chown tomcat /opt/tomcat/webapps/ROOT.war
+
+#
+# Change user
+#
+USER tomcat
 
 #
 # Startup command.
