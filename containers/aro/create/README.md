@@ -9,7 +9,7 @@ This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../../general/group/create/README.md)
 
-## Deploy an Azure Red hat OpenShift cluster
+## Deploy an Azure Red Hat OpenShift cluster
 
 To deploy the Azure Red hat OpenShift cluster use the following command lines:
 
@@ -51,4 +51,22 @@ To deploy the Azure Red hat OpenShift cluster use the following command lines:
 
 ## Cleanup
 
+<!-- workflow.directOnly()
+
+  export RESULT=$(az aro show --name $ARO_NAME --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
+  az group delete --name $RESOURCE_GROUP --yes || true
+  if [[ "$RESULT" != Succeeded ]]; then
+    echo "Azure RedHat OpenShift cluster " $ARO_NAME " was not created successfully"
+    exit 1
+  fi
+
+  -->
+
 Do NOT forget to remove the resources once you are done running the example.
+
+## Reference documentation
+
+* [Manage Azure Red Hat OpenShift clusters](https://docs.microsoft.com/cli/azure/aro)
+* [Azure Red Hat OpenShift documentation](https://docs.microsoft.com/azure/openshift/)
+
+38m
