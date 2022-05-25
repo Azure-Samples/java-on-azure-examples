@@ -1,4 +1,6 @@
 on: 
+  schedule: 
+    - cron: '0 10 * * 3'
   workflow_dispatch: 
 
 name: 'containers/aro/create/README.md'
@@ -12,6 +14,13 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          export REGION=westus2
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
           export ARO_NAME=aro-$RANDOM
           
           az network vnet create \
