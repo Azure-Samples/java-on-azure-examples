@@ -13,6 +13,7 @@
     <name>Azure Container Apps examples</name>
     <modules>
         <module>create-environment</module>
+        <module>tomcat</module>
         <module>wildfly</module>
     </modules>
 </project>
