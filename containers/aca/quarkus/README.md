@@ -1,5 +1,5 @@
 
-# Deploy Quarkus
+# Deploy a Quarkus application
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@ This example assumes you have previously completed the following example:
 1. [Push a Quarkus application to Azure Container Registry](../../acr/quarkus/README.md)
 1. [Create an Azure Container Apps environment](../create-environment/README.md)
 
-## Deploy Quarkus
+## Deploy the Quarkus application
 
 <!-- workflow.cron(0 11 * * 3) -->
 <!-- workflow.include(../../acr/quarkus/README.md) -->
