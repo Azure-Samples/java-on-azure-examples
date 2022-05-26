@@ -14,7 +14,7 @@ This example assumes you have previously completed the following example:
 
 ## Create the Azure Database for MySQL
 
-To create the Azure Database for MySQL setup the environment variables:
+To create the Azure Database for MySQL setup the following environment variables:
 
 <!-- workflow.skip() -->
 ```shell
@@ -34,6 +34,8 @@ To create the Azure Database for MySQL setup the environment variables:
   fi
 
   -->
+
+And then create the MySQL database using the command line below:
 
 ```shell
 
@@ -64,10 +66,14 @@ Do NOT forget to remove the resources once you are done running the example.
 
 ## Next steps
 
-* [Azure Database for MySQL Documentation](https://docs.microsoft.com/en-us/azure/mysql/README.md)
+* [Open MySQL server firewall to your IP address](../open-firewall-to-your-ip/README.md)
+
+## Reference documentation
+
+* [Manage Azure Database for MySQL servers](https://docs.microsoft.com/cli/azure/mysql)
+* [Azure Database for MySQL Documentation](https://docs.microsoft.com/azure/mysql/README.md)
 * [Migrate to Azure Database for MySQL](https://datamigration.microsoft.com/scenario/mysql-to-azuremysql)
-* [Minimal downtime migration](https://docs.microsoft.com/en-us/azure/mysql/howto-migrate-online)
-* [Query data using Java](https://docs.microsoft.com/en-us/azure/mysql/connect-java)
-* [Manage Azure Database for MySQL servers](https://docs.microsoft.com/en-us/cli/azure/mysql)
+* [Minimal downtime migration](https://docs.microsoft.com/azure/mysql/howto-migrate-online)
+* [Query data using Java](https://docs.microsoft.com/azure/mysql/connect-java)
 
 4m
