@@ -11,9 +11,9 @@ This example assumes you have previously completed the following example:
 1. [Build and push a Dropwizard application to ACR](../../acr/dropwizard/README.md)
 1. [Create an Azure Container Apps environment](../create-environment/README.md)
 
-## Deploy the Spring Boot application
+## Deploy the Dropwizard application
 
-<!-- workflow.cron(0 11 * * 3) -->
+<!-- workflow.cron(0 16 * * 4) -->
 <!-- workflow.include(../../acr/dropwizard/README.md) -->
 <!-- workflow.include(../../aca/create-environment/README.md) -->
 
