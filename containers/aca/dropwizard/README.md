@@ -36,7 +36,7 @@ command lines below.
   echo $(az containerapp show \
     --resource-group $RESOURCE_GROUP \
     --name $ACA_DROPWIZARD \
-    --query properties.configuration.ingress.fqdn)/hellworld
+    --query properties.configuration.ingress.fqdn)/helloworld
 ```
 
 Then open your browser to the URL echoed above and you should see:
