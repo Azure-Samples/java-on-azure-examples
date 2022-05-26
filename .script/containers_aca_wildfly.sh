@@ -4,7 +4,7 @@ cd ..
 
 if [[ -z $RESOURCE_GROUP ]]; then
 export RESOURCE_GROUP=java-on-azure-$RANDOM
-export REGION=westus2
+export REGION=southcentralus
 fi
 
 az group create --name $RESOURCE_GROUP --location $REGION
@@ -29,7 +29,7 @@ cd ../../..
 
 if [[ -z $RESOURCE_GROUP ]]; then
 export RESOURCE_GROUP=java-on-azure-$RANDOM
-export REGION=westus2
+export REGION=southcentralus
 fi
 
 az group create --name $RESOURCE_GROUP --location $REGION
@@ -56,6 +56,11 @@ az containerapp create \
 --ingress 'external' \
 --registry-server $ACR_NAME.azurecr.io \
 --min-replicas 1
+
+az containerapp show \
+--resource-group $RESOURCE_GROUP \
+--name $ACA_WILDFLY \
+--query properties.configuration.ingress.fqdn
 sleep 60
 export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --name $ACA_WILDFLY --query properties.configuration.ingress.fqdn --output tsv)
 export RESULT=$(curl $URL)

@@ -4,14 +4,14 @@ cd ..
 
 if [[ -z $RESOURCE_GROUP ]]; then
 export RESOURCE_GROUP=java-on-azure-$RANDOM
-export REGION=westus2
+export REGION=southcentralus
 fi
 
 az group create --name $RESOURCE_GROUP --location $REGION
 
 if [[ -z $RESOURCE_GROUP ]]; then
 export RESOURCE_GROUP=java-on-azure-$RANDOM
-export REGION=westus2
+export REGION=southcentralus
 fi
 
 az group create --name $RESOURCE_GROUP --location $REGION
@@ -27,7 +27,7 @@ fi
 
 if [[ -z $RESOURCE_GROUP ]]; then
 export RESOURCE_GROUP=java-on-azure-$RANDOM
-export REGION=westus2
+export REGION=southcentralus
 fi
 
 az group create --name $RESOURCE_GROUP --location $REGION
@@ -52,7 +52,7 @@ fi
 
 if [[ -z $RESOURCE_GROUP ]]; then
 export RESOURCE_GROUP=java-on-azure-$RANDOM
-export REGION=westus2
+export REGION=southcentralus
 fi
 
 az group create --name $RESOURCE_GROUP --location $REGION
