@@ -32,6 +32,18 @@ lines below.
     --ingress 'external' \
     --registry-server $ACR_NAME.azurecr.io \
     --min-replicas 1
+
+  az containerapp show \
+    --resource-group $RESOURCE_GROUP \
+    --name $ACA_TOMCAT \
+    --query properties.configuration.ingress.fqdn
+```
+
+Then open your browser to the URL echoed above and you should see:
+
+```text
+And this is served by a custom Tomcat using a Docker image coming from
+our own Azure Container Registry.
 ```
 
 <!-- workflow.directOnly()
