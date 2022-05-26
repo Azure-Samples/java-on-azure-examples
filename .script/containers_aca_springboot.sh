@@ -66,6 +66,6 @@ export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --nam
 export RESULT=$(curl $URL)
 az group delete --name $RESOURCE_GROUP --yes || true
 if [[ "$RESULT" != *"Hello World"* ]]; then
-echo "Response did not contain 'hello'"
+echo "Response did not contain 'Hello World'"
 exit 1
 fi
