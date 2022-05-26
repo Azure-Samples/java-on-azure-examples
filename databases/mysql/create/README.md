@@ -9,28 +9,34 @@ This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../../general/group/create/README.md)
 
+<!-- workflow.cron(0 11 * * 4) -->
 <!-- workflow.include(../../../general/group/create/README.md) -->
 
 ## Create the Azure Database for MySQL
 
 To create the Azure Database for MySQL setup the environment variables:
 
-<!--workflow.skip() -->
+<!-- workflow.skip() -->
 ```shell
+
   export MYSQL_NAME=mysql-$RANDOM
   export MYSQL_USERNAME=mysql
   export MYSQL_PASSWORD=p#ssw0rd-$RANDOM
+
 ```
 
 <!-- workflow.run()
-if [[ -z $MYSQL_NAME ]]; then
-  export MYSQL_NAME=mysql-$RANDOM
-  export MYSQL_USERNAME=mysql
-  export MYSQL_PASSWORD=p#ssw0rd-$RANDOM
-fi
+
+  if [[ -z $MYSQL_NAME ]]; then
+    export MYSQL_NAME=mysql-$RANDOM
+    export MYSQL_USERNAME=mysql
+    export MYSQL_PASSWORD=p#ssw0rd-$RANDOM
+  fi
+
   -->
 
 ```shell
+
   az mysql server create \
     --admin-user $MYSQL_USERNAME \
     --admin-password $MYSQL_PASSWORD \
@@ -38,6 +44,7 @@ fi
     --resource-group $RESOURCE_GROUP \
     --sku B_Gen5_1 \
     --ssl-enforcement Disabled
+
 ```
 
 ## Cleanup
@@ -46,7 +53,12 @@ Do NOT forget to remove the resources once you are done running the example.
 
 <!-- workflow.directOnly()
 
+  export RESULT=$(az mysql server show --name $MYSQL_NAME --resource-group $RESOURCE_GROUP --output tsv --query userVisibleState)
   az group delete --name $RESOURCE_GROUP --yes || true
+  if [[ "$RESULT" != Ready ]]; then
+    echo "Provisioning MySQL " $MYSQL_NAME " failed"
+    exit 1
+  fi
 
   -->
 
