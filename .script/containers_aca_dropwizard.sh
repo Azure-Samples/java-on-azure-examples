@@ -57,10 +57,10 @@ az containerapp create \
 --registry-server $ACR_NAME.azurecr.io \
 --min-replicas 1
 
-az containerapp show \
+echo $(az containerapp show \
 --resource-group $RESOURCE_GROUP \
 --name $ACA_DROPWIZARD \
---query properties.configuration.ingress.fqdn
+--query properties.configuration.ingress.fqdn)/hellworld
 sleep 60
 export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --name $ACA_DROPWIZARD --query properties.configuration.ingress.fqdn --output tsv)/helloworld
 export RESULT=$(curl $URL)
