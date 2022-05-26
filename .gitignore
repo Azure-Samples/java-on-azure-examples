@@ -9,3 +9,4 @@ nb-configuration.xml
 parrot.jar
 target/
 *.iml
+/containers/acr/dropwizard/dependency-reduced-pom.xml

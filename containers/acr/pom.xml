@@ -15,6 +15,7 @@
         <module>create</module>
         <module>create-settings-xml</module>
         <module>create-acrpull-service-principal</module>
+        <module>dropwizard</module>
         <module>glassfish</module>
         <module>graalvm</module>
         <module>jetty</module>
