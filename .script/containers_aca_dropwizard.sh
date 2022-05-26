@@ -62,7 +62,7 @@ az containerapp show \
 --name $ACA_DROPWIZARD \
 --query properties.configuration.ingress.fqdn
 sleep 60
-export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --name $ACA_DROPWIZARD --query properties.configuration.ingress.fqdn --output tsv)
+export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --name $ACA_DROPWIZARD --query properties.configuration.ingress.fqdn --output tsv)/helloworld
 export RESULT=$(curl $URL)
 az group delete --name $RESOURCE_GROUP --yes || true
 if [[ "$RESULT" != *"Hello World"* ]]; then
