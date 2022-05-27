@@ -9,5 +9,5 @@
     </parent>
     <artifactId>mysql-load-your-mysql-database-with-data</artifactId>
     <packaging>pom</packaging>
-    <name>Databases :: MySQL :: Load your MySQL database with data</name>
+    <name>Load your MySQL database with data</name>
 </project>
