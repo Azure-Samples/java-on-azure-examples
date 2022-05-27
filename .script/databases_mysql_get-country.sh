@@ -54,7 +54,7 @@ cd databases/mysql/get-country
 export RESULT=$(java -jar target/get-country.jar jdbc:mysql://$MYSQL_DNS_NAME:3306/demo?useSSL=true\&requireSSL=true $MYSQL_CLIENT_USERNAME $MYSQL_PASSWORD USA)
 cd ../../..
 az group delete --name $RESOURCE_GROUP --yes || true
-if [[ "$RESULT" != "*United States*" ]]; then
+if [[ "$RESULT" != *"United States"* ]]; then
 echo "Unable to get the correct country information"
 exit 1
 fi
