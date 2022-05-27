@@ -17,7 +17,7 @@ This example assumes you have previously completed the following example:
 <!-- workflow.include(../../acr/springboot/README.md) -->
 <!-- workflow.include(../../aca/create-environment/README.md) -->
 
-To deploy the Spring Bot container image to Azure Container Apps use the
+To deploy the Spring Boot container image to Azure Container Apps use the
 command lines below.
 
 ```shell
