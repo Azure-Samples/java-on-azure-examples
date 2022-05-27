@@ -32,18 +32,20 @@ az mysql server firewall-rule create \
 --end-ip-address $LOCAL_IP
 
 cd databases/mysql/load-your-mysql-database-with-data
-
 export MYSQL_DNS_NAME=`az mysql server show \
 --resource-group $RESOURCE_GROUP \
 --name $MYSQL_NAME \
 --query fullyQualifiedDomainName \
 --output tsv`
-
 export MYSQL_CLIENT_USERNAME="$MYSQL_USERNAME@$MYSQL_NAME"
-
 mysql -h $MYSQL_DNS_NAME -u $MYSQL_CLIENT_USERNAME -p$MYSQL_PASSWORD < load.sql
-
 cd ../../..
 
 
+echo 'SELECT COUNT(*) FROM countries;' > check.sql
+export RESULT=$(mysql -s -h $MYSQL_DNS_NAME -u $MYSQL_CLIENT_USERNAME -p$MYSQL_PASSWORD demo < check.sql)
+if [[ "$RESULT" != "1" ]]; then
+echo "MySQL data was NOT loaded"
+exit 1
+fi
 az group delete --name $RESOURCE_GROUP --yes || true
