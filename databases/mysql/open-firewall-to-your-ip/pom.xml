@@ -9,5 +9,5 @@
     </parent>
     <artifactId>mysql-open-firewall-to-your-ip</artifactId>
     <packaging>pom</packaging>
-    <name>Databases :: MySQL :: Open MySQL server firewall to your IP address</name>
+    <name>Open the MySQL server firewall to your IP address</name>
 </project>

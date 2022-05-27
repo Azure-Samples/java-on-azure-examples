@@ -11,6 +11,7 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Database for MySQL](../create/README.md)
 1. [Install curl](https://curl.haxx.se/download.html)
 
+<!-- workflow.cron(0 11 * * 5) -->
 <!-- workflow.include(../create/README.md) -->
 
 ## Open MySQL server firewall to your local IP address
@@ -32,6 +33,17 @@ address execute the following command lines:
 ## Cleanup
 
 Do NOT forget to remove the resources once you are done running the example.
+
+<!-- workflow.directOnly()
+
+  export RESULT=$(az mysql server firewall-rule show --resource-group $RESOURCE_GROUP --server $MYSQL_NAME --name AllowMyLocalIP --query name --output tsv)
+  az group delete --name $RESOURCE_GROUP --yes || true
+  if [[ "$RESULT" != AllowMyLocalIP ]]; then
+    echo "MySQL firewall was NOT configured to allow access from " $LOCAL_IP
+    exit 1
+  fi
+
+  -->
 
 ## Next steps
 
