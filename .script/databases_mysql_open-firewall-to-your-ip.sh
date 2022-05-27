@@ -30,3 +30,10 @@ az mysql server firewall-rule create \
 --name AllowMyLocalIP \
 --start-ip-address $LOCAL_IP \
 --end-ip-address $LOCAL_IP
+
+export RESULT=$(az mysql server firewall-rule show --resource-group $RESOURCE_GROUP --server $MYSQL_NAME --name AllowMyLocalIP --query name --output tsv)
+az group delete --name $RESOURCE_GROUP --yes || true
+if [[ "$RESULT" != AllowMyLocalIP ]]; then
+echo "MySQL firewall was NOT configured to allow access from " $LOCAL_IP
+exit 1
+fi
