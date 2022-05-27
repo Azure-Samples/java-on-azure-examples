@@ -10,11 +10,11 @@
     <groupId>examples.azure.databases.mysql</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Databases :: MySQL</name>
+    <name>Azure Database for MySQL examples</name>
     <modules>
         <module>create</module>
-        <module>get-country</module>
-        <module>load-your-mysql-database-with-data</module>
         <module>open-firewall-to-your-ip</module>
+        <module>load-your-mysql-database-with-data</module>
+        <module>get-country</module>
     </modules>
 </project>
