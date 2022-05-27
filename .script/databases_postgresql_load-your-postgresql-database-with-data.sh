@@ -8,11 +8,13 @@ export REGION=southcentralus
 fi
 
 az group create --name $RESOURCE_GROUP --location $REGION
+
 if [[ -z $POSTGRESQL_NAME ]]; then
 export POSTGRESQL_NAME=postgresql-$RANDOM
 export POSTGRESQL_USERNAME=postgresql
 export POSTGRESQL_PASSWORD=p#ssw0rd-$RANDOM
 fi
+
 az postgres server create \
 --admin-user $POSTGRESQL_USERNAME \
 --admin-password $POSTGRESQL_PASSWORD \
