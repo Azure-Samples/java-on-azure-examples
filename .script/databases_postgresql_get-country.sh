@@ -61,3 +61,4 @@ az group delete --name $RESOURCE_GROUP --yes || true
 if [[ "$RESULT" != *"United States"* ]]; then
 echo "Unable to get the correct country information"
 exit 1
+fi

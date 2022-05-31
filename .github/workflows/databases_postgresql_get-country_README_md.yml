@@ -74,3 +74,4 @@ jobs:
           if [[ "$RESULT" != *"United States"* ]]; then
           echo "Unable to get the correct country information"
           exit 1
+          fi
