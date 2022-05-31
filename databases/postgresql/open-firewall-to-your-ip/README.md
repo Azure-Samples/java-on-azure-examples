@@ -11,6 +11,7 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Database for PostgreSQL](../create/README.md)
 1. [Install curl](https://curl.haxx.se/download.html)
 
+<!-- workflow.cron(0 10 * * 2) -->
 <!-- workflow.include(../create/README.md) -->
 
 ## Open PostgreSQL server firewall to your local IP address
@@ -33,8 +34,15 @@ address execute the following command lines:
 
 <!-- workflow.directOnly()
 
+  export RESULT=$(az postgres server firewall-rule show --resource-group $RESOURCE_GROUP --server-name $POSTGRESQL_NAME --name AllowMyLocalIP --query name --output tsv)
   az group delete --name $RESOURCE_GROUP --yes || true
+  if [[ "$RESULT" != AllowMyLocalIP ]]; then
+    echo "PostgreSQL firewall was NOT configured to allow access from " $LOCAL_IP
+    exit 1
+  fi
 
   -->
 
 Do NOT forget to remove the resources once you are done running the example.
+
+1m
