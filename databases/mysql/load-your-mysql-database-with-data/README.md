@@ -85,7 +85,7 @@ Do NOT forget to remove the resources once you are done running the example.
 
   -->
 
-## Next steps
+## Reference documentation
 
 * [Azure Database for MySQL Documentation](https://docs.microsoft.com/en-us/azure/mysql/README.md)
 * [Migrate to Azure Database for MySQL](https://datamigration.microsoft.com/scenario/mysql-to-azuremysql)
