@@ -54,4 +54,10 @@ java -jar target/get-country.jar jdbc:postgresql://$POSTGRESQL_DNS_NAME:5432/dem
 cd ../../..
 
 
+cd databases/mysql/get-country
+export RESULT=$(java -jar target/get-country.jar jdbc:postgresql://$POSTGRESQL_DNS_NAME:5432/demo?ssl=true\&sslmode=require $POSTGRESQL_CLIENT_USERNAME $POSTGRESQL_PASSWORD USA)
+cd ../../..
 az group delete --name $RESOURCE_GROUP --yes || true
+if [[ "$RESULT" != *"United States"* ]]; then
+echo "Unable to get the correct country information"
+exit 1

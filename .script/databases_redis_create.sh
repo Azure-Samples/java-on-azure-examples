@@ -17,13 +17,11 @@ az redis create \
 --sku Basic \
 --vm-size c0
 
-sleep 3000
+sleep 1200
 
 
 export RESULT=$(az redis show --resource-group $RESOURCE_GROUP --name $REDIS_NAME --query provisioningState --output tsv)
-
 az group delete --name $RESOURCE_GROUP --yes || true
-
 if [[ "$RESULT" != Succeeded ]]; then
 exit 1
 fi
