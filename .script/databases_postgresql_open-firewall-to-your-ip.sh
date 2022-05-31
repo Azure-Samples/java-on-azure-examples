@@ -31,4 +31,9 @@ az postgres server firewall-rule create \
 --start-ip-address $LOCAL_IP \
 --end-ip-address $LOCAL_IP
 
+export RESULT=$(az postgres server firewall-rule show --resource-group $RESOURCE_GROUP --server-name $POSTGRESQL_NAME --name AllowMyLocalIP --query name --output tsv)
 az group delete --name $RESOURCE_GROUP --yes || true
+if [[ "$RESULT" != AllowMyLocalIP ]]; then
+echo "PostgreSQL firewall was NOT configured to allow access from " $LOCAL_IP
+exit 1
+fi
