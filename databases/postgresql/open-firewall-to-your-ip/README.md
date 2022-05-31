@@ -24,7 +24,7 @@ address execute the following command lines:
 
   az postgres server firewall-rule create \
     --resource-group $RESOURCE_GROUP \
-    --server $POSTGRESQL_NAME \
+    --server-name $POSTGRESQL_NAME \
     --name AllowMyLocalIP \
     --start-ip-address $LOCAL_IP \
     --end-ip-address $LOCAL_IP
