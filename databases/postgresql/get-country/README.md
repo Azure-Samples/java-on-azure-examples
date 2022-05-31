@@ -55,7 +55,7 @@ Do NOT forget to remove the resources once you are done running the example.
 
 <!-- workflow.directOnly()
 
-  cd databases/mysql/get-country
+  cd databases/postgresql/get-country
   export RESULT=$(java -jar target/get-country.jar jdbc:postgresql://$POSTGRESQL_DNS_NAME:5432/demo?ssl=true\&sslmode=require $POSTGRESQL_CLIENT_USERNAME $POSTGRESQL_PASSWORD USA)
   cd ../../..
   az group delete --name $RESOURCE_GROUP --yes || true
