@@ -1,5 +1,5 @@
 
-# Get country information (JDBC client)
+# JDBC command line client
 
 [![databases/postgresql/get-country/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_postgresql_get-country_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_postgresql_get-country_README_md.yml)
 
@@ -14,9 +14,10 @@ This example assumes you have previously completed the following examples:
 1. [Install psql client](https://www.postgresql.org/download/README.md)
 1. [Load your PostgreSQL database with your data](../load-your-postgresql-database-with-data/README.md)
 
+<!-- workflow.cron(0 14 * * 2) -->
 <!-- workflow.include(../load-your-postgresql-database-with-data/README.md) -->
 
-## Get country information
+## JDBC command line client
 
 This example will get country information from the database.
 
@@ -54,6 +55,12 @@ Do NOT forget to remove the resources once you are done running the example.
 
 <!-- workflow.directOnly()
 
+  cd databases/mysql/get-country
+  export RESULT=$(java -jar target/get-country.jar jdbc:postgresql://$POSTGRESQL_DNS_NAME:5432/demo?ssl=true\&sslmode=require $POSTGRESQL_CLIENT_USERNAME $POSTGRESQL_PASSWORD USA)
+  cd ../../..
   az group delete --name $RESOURCE_GROUP --yes || true
+  if [[ "$RESULT" != *"United States"* ]]; then
+    echo "Unable to get the correct country information"
+    exit 1
 
   -->

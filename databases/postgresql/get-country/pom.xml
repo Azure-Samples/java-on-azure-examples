@@ -9,7 +9,7 @@
     </parent>
     <artifactId>postgresql-get-country</artifactId>
     <packaging>jar</packaging>
-    <name>Databases :: PostgreSQL :: Get country information</name>
+    <name>JDBC command line client</name>
     <build>
         <finalName>get-country</finalName>
         <plugins>
