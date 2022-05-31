@@ -46,4 +46,10 @@ PGPASSWORD=$POSTGRESQL_PASSWORD psql --host=$POSTGRESQL_DNS_NAME --port=5432 --u
 cd ../../..
 
 
+echo 'SELECT COUNT(*) FROM countries;' > check.sql
+export RESULT=$(PGPASSWORD=$POSTGRESQL_PASSWORD psql --host=$POSTGRESQL_DNS_NAME -qtAX --port=5432 --username $POSTGRESQL_CLIENT_USERNAME --dbname=demo --csv < check.sql)
+if [[ "$RESULT" != "1" ]]; then
+echo "PostgreSQL data was NOT loaded"
+exit 1
+fi
 az group delete --name $RESOURCE_GROUP --yes || true
