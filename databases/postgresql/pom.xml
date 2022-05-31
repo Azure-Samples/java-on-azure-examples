@@ -10,11 +10,11 @@
     <groupId>examples.azure.databases.postgresql</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Databases :: PostgreSQL</name>
+    <name>Azure Database for PostgreSQL examples</name>
     <modules>
         <module>create</module>
+        <module>get-country</module>
         <module>load-your-postgresql-database-with-data</module>
         <module>open-firewall-to-your-ip</module>
-        <module>get-country</module>
     </modules>
 </project>

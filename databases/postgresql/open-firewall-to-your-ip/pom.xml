@@ -9,5 +9,5 @@
     </parent>
     <artifactId>postgresql-open-firewall-to-your-ip</artifactId>
     <packaging>pom</packaging>
-    <name>Databases :: PostgreSQL :: Open PostgreSQL server firewall to your IP address</name>
+    <name>Open PostgreSQL server firewall to your IP address</name>
 </project>
