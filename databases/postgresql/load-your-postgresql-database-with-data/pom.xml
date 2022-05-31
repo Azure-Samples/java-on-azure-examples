@@ -9,5 +9,5 @@
     </parent>
     <artifactId>postgresql-load-your-postgresql-database-with-data</artifactId>
     <packaging>pom</packaging>
-    <name>Databases :: PostgreSQL :: Load your PostgreSQL database with data</name>
+    <name>Load your PostgreSQL database with data</name>
 </project>
