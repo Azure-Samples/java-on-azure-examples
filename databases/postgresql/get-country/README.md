@@ -62,5 +62,8 @@ Do NOT forget to remove the resources once you are done running the example.
   if [[ "$RESULT" != *"United States"* ]]; then
     echo "Unable to get the correct country information"
     exit 1
+  fi
 
   -->
+
+1m
