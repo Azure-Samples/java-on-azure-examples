@@ -27,12 +27,6 @@ To create the Azure Cache for Redis use the following command line:
     --vm-size c0
 ````
 
-<!-- workflow.run()
-
-  sleep 1200
-
-  -->
-
 ## Cleanup
 
 <!-- workflow.directOnly() 
