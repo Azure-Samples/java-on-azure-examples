@@ -42,7 +42,7 @@ command lines below.
 Then open your browser to the URL echoed above and you should see:
 
 ```text
-Hello World
+{"message":"Hello World!"
 ```
 
 <!-- workflow.directOnly()
