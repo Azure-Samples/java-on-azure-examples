@@ -70,12 +70,12 @@ jobs:
           --registry-server $ACR_NAME.azurecr.io \
           --min-replicas 1
           
-          az containerapp show \
+          echo $(az containerapp show \
           --resource-group $RESOURCE_GROUP \
           --name $ACA_HELIDON \
-          --query properties.configuration.ingress.fqdn
+          --query properties.configuration.ingress.fqdn)/greet
           sleep 60
-          export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --name $ACA_HELIDON --query properties.configuration.ingress.fqdn --output tsv)
+          export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --name $ACA_HELIDON --query properties.configuration.ingress.fqdn --output tsv)/greet
           export RESULT=$(curl $URL)
           az group delete --name $RESOURCE_GROUP --yes || true
           if [[ "$RESULT" != *"Hello World"* ]]; then
