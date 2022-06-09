@@ -30,22 +30,27 @@ jobs:
           --workspace-name $LOG_ANALYTICS_WORKSPACE
           fi
           
-          LOG_ANALYTICS_WORKSPACE_CLIENT_ID=`az monitor log-analytics workspace show  \
+          export LOG_ANALYTICS_WORKSPACE_CLIENT_ID=`az monitor log-analytics workspace show  \
           --resource-group $RESOURCE_GROUP \
           --workspace-name $LOG_ANALYTICS_WORKSPACE \
           --query customerId  \
-          --output tsv | tr -d '[:space:]'`
+          --output tsv`
           
           echo $LOG_ANALYTICS_WORKSPACE_CLIENT_ID
           
-          LOG_ANALYTICS_WORKSPACE_CLIENT_SECRET=`az monitor log-analytics workspace get-shared-keys \
+          export LOG_ANALYTICS_WORKSPACE_CLIENT_SECRET=`az monitor log-analytics workspace get-shared-keys \
           --resource-group $RESOURCE_GROUP \
           --workspace-name $LOG_ANALYTICS_WORKSPACE \
           --query primarySharedKey \
-          --output tsv | tr -d '[:space:]'`
+          --output tsv`
           
           echo $LOG_ANALYTICS_WORKSPACE_CLIENT_SECRET
           
+          export RESULT=`az monitor log-analytics workspace show  \
+          --resource-group $RESOURCE_GROUP \
+          --workspace-name $LOG_ANALYTICS_WORKSPACE \
+          --query provisioningState \
+          --output tsv`
           az group delete --name $RESOURCE_GROUP --yes || true
           if [[ "$RESULT" != Succeeded ]]; then
           exit 1
