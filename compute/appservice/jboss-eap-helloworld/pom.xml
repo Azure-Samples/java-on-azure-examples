@@ -50,7 +50,7 @@
     <properties>
         <appName>${env.APPSERVICE_JBOSS_EAP_HELLOWORLD}</appName>
         <appServicePlan>${env.APPSERVICE_PLAN}</appServicePlan>
-        <java.version>1.8</java.version>
+        <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <pricingTier>P3V3</pricingTier>
         <region>${env.REGION}</region>
