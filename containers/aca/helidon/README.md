@@ -33,10 +33,10 @@ command lines below.
     --registry-server $ACR_NAME.azurecr.io \
     --min-replicas 1
 
-  az containerapp show \
+  echo $(az containerapp show \
     --resource-group $RESOURCE_GROUP \
     --name $ACA_HELIDON \
-    --query properties.configuration.ingress.fqdn
+    --query properties.configuration.ingress.fqdn)/greet
 ```
 
 Then open your browser to the URL echoed above and you should see:
@@ -47,7 +47,7 @@ Hello World
 
 <!-- workflow.directOnly()
   sleep 60
-  export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --name $ACA_HELIDON --query properties.configuration.ingress.fqdn --output tsv)
+  export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --name $ACA_HELIDON --query properties.configuration.ingress.fqdn --output tsv)/greet
   export RESULT=$(curl $URL)
   az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != *"Hello World"* ]]; then
