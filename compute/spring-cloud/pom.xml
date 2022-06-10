@@ -7,10 +7,10 @@
         <artifactId>compute</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.compute.springcloud</groupId>
+    <groupId>examples.azure.compute.springapps</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Compute :: Spring Cloud</name>
+    <name>Azure Spring Apps examples</name>
     <modules>
         <module>create</module>
         <module>config-server</module>
