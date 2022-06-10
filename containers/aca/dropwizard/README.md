@@ -37,7 +37,7 @@ command lines below.
     --resource-group $RESOURCE_GROUP \
     --name $ACA_DROPWIZARD \
     --query properties.configuration.ingress.fqdn \
-    --output -tsv)/helloworld
+    --output tsv)/helloworld
 ```
 
 Then open your browser to the URL echoed above and you should see:
