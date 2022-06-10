@@ -20,6 +20,7 @@
         <module>graalvm</module>
         <module>helidon</module>
         <module>jetty</module>
+        <module>micronaut</module>
         <module>payara</module>
         <module>piranha</module>
         <module>quarkus</module>

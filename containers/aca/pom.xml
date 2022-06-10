@@ -15,6 +15,7 @@
         <module>create-environment</module>
         <module>dropwizard</module>
         <module>helidon</module>
+        <module>micronaut</module>
         <module>piranha</module>
         <module>quarkus</module>
         <module>springboot</module>
