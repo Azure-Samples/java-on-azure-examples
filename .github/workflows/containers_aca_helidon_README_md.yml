@@ -73,7 +73,8 @@ jobs:
           echo $(az containerapp show \
           --resource-group $RESOURCE_GROUP \
           --name $ACA_HELIDON \
-          --query properties.configuration.ingress.fqdn)/greet
+          --query properties.configuration.ingress.fqdn \
+          --output tsv)/greet
           sleep 60
           export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --name $ACA_HELIDON --query properties.configuration.ingress.fqdn --output tsv)/greet
           export RESULT=$(curl $URL)
