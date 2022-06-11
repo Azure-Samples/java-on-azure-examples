@@ -61,7 +61,7 @@ echo $(az containerapp show \
 --resource-group $RESOURCE_GROUP \
 --name $ACA_DROPWIZARD \
 --query properties.configuration.ingress.fqdn \
---output -tsv)/helloworld
+--output tsv)/helloworld
 sleep 60
 export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --name $ACA_DROPWIZARD --query properties.configuration.ingress.fqdn --output tsv)/helloworld
 export RESULT=$(curl $URL)
