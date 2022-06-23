@@ -1,17 +1,17 @@
 
 # Enable static website hosting
 
-[![storage/storage/enable-static-website/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_storage_enable-static-website_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_storage_enable-static-website_README_md.yml)
+[![storage/enable-static-website/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_storage_enable-static-website_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_enable-static-website_README_md.yml)
 
 ## Prerequisites
 
 This example assumes you have previously completed the following examples:
 
-1. [Create an Azure Resource Group](../../../general/group/create/README.md)
-1. [Create an Azure Storage Account](../create/README.md)
+1. [Create an Azure Resource Group](../../general/group/create/README.md)
+1. [Create an Azure Storage Account](../storage/create/README.md)
 
-<!-- workflow.cron(0 2 * * 4) -->
-<!-- workflow.include(../create/README.md) -->
+<!-- workflow.cron(0 2 * * 1) -->
+<!-- workflow.include(../storage/create/README.md) -->
 
 ## Enable static website hosting
 

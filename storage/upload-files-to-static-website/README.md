@@ -1,24 +1,24 @@
 
 # Upload files to static website
 
-[![storage/storage/upload-files-to-static-website/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_storage_upload-files-to-static-website_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_storage_upload-files-to-static-website_README_md.yml)
+[![storage/upload-files-to-static-website/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_storage_upload-files-to-static-website_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_storage_upload-files-to-static-website_README_md.yml)
 
 ## Prerequisites
 
 This example assumes you have previously completed the following examples:
 
-1. [Create an Azure Resource Group](../../../general/group/create/README.md)
-1. [Create an Azure Storage Account](../create/README.md)
-1. [Enale static website hosting](../enable-static-website/README.md)
+1. [Create an Azure Resource Group](../../general/group/create/README.md)
+1. [Create an Azure Storage Account](../storage/create/README.md)
+1. [Enale static website hosting](../storage/enable-static-website/README.md)
 
-<!-- workflow.cron(0 3 * * 4) -->
-<!-- workflow.include(../enable-static-website/README.md) -->
+<!-- workflow.cron(0 3 * * 1) -->
+<!-- workflow.include(../storage/enable-static-website/README.md) -->
 
 ## Upload files to static website
 
 <!-- workflow.run() 
 
-cd storage/storage/upload-files-to-static-website
+cd storage/upload-files-to-static-website
 
   -->
 
@@ -36,7 +36,7 @@ line:
 <!-- workflow.run() 
 
 sleep 60
-cd ../../..
+cd ../..
 
   -->
 

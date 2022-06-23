@@ -1,7 +1,7 @@
 
 # Create an Azure Storage Account
 
-[![storage/storage/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_storage_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_storage_create_README_md.yml)
+[![storage/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_storage_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_storage_create_README_md.yml)
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@ This example assumes you have previously completed the following example:
 1. [Create an Azure Resource Group](../../../general/group/create/README.md)
 
 <!-- workflow.cron(0 1 * * 4) -->
-<!-- workflow.include(../../../general/group/create/README.md) -->
+<!-- workflow.include(../../general/group/create/README.md) -->
 
 ## Create the Azure Storage Account
 
