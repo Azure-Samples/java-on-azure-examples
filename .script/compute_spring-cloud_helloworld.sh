@@ -19,26 +19,26 @@ az spring-cloud create \
 cd compute/spring-cloud/helloworld
 
 mvn package
-az spring-cloud app create \
+az spring app create \
 --name helloworld \
 --service ${SPRING_CLOUD_NAME} \
 --resource-group ${RESOURCE_GROUP} \
 --is-public true
 
-az spring-cloud app deploy \
+az spring app deploy \
 --name helloworld \
 --service ${SPRING_CLOUD_NAME} \
 --resource-group ${RESOURCE_GROUP} \
---jar-path ./target/springcloud-helloworld.jar
+--artifact-path ./target/springcloud-helloworld.jar
 
-az spring-cloud app show \
+az spring app show \
 --name helloworld \
 --service ${SPRING_CLOUD_NAME} \
 --resource-group ${RESOURCE_GROUP} \
 --query properties.url \
 --output tsv
 
-export URL=$(az spring-cloud app show \
+export URL=$(az spring app show \
 --name helloworld \
 --service ${SPRING_CLOUD_NAME} \
 --resource-group ${RESOURCE_GROUP} \
