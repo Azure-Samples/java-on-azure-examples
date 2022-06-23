@@ -3,7 +3,7 @@ on:
     - cron: '0 1 * * 4'
   workflow_dispatch: 
 
-name: 'storage/storage/create/README.md'
+name: 'storage/create/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
