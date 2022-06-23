@@ -1,5 +1,5 @@
 
-# Deploy a Hello World Spring Boot application to Azure Spring Cloud
+# Deploy a Hello World Spring Boot application
 
 [![compute/spring-cloud/helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_spring-cloud_helloworld_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_spring-cloud_helloworld_README_md.yml)
 
@@ -46,19 +46,19 @@ to http://localhost:8080/
 ## Deploy the Hello World Spring Boot application to Azure Spring Cloud
 
 ```shell
-  az spring-cloud app create \
+  az spring app create \
     --name helloworld \
     --service ${SPRING_CLOUD_NAME} \
     --resource-group ${RESOURCE_GROUP} \
     --is-public true
 
-  az spring-cloud app deploy \
+  az spring app deploy \
     --name helloworld \
     --service ${SPRING_CLOUD_NAME} \
     --resource-group ${RESOURCE_GROUP} \
-    --jar-path ./target/springcloud-helloworld.jar
+    --artifact-path ./target/springcloud-helloworld.jar
 
-  az spring-cloud app show \
+  az spring app show \
     --name helloworld \
     --service ${SPRING_CLOUD_NAME} \
     --resource-group ${RESOURCE_GROUP} \
@@ -79,7 +79,7 @@ Hello World
 
 <!-- workflow.directOnly()
 
-  export URL=$(az spring-cloud app show \
+  export URL=$(az spring app show \
     --name helloworld \
     --service ${SPRING_CLOUD_NAME} \
     --resource-group ${RESOURCE_GROUP} \
