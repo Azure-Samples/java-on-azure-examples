@@ -1,4 +1,4 @@
-FROM ghcr.io/graalvm/graalvm-ce:ol8-java8-21.0.0
+FROM ghcr.io/graalvm/graalvm-ce:ol8-java11
 
 RUN microdnf update -y
 RUN microdnf install wget -y
