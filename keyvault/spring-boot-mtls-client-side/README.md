@@ -1,7 +1,7 @@
 
 # Create a Spring Boot mTLS client-side application
 
-[![keyvault/spring-boot-mtls-client-side/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/keyvault_spring-boot-mtls-client-side_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/keyvault_spring-boot-mtls-client-side_README_md.yml)
+[![README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/keyvault_spring-boot-mtls-client-side_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/keyvault_spring-boot-mtls-client-side_README_md.yml)
 
 ## Prerequisites
 

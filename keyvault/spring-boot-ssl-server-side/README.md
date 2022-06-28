@@ -1,7 +1,7 @@
 
 # Create a Spring Boot SSL server-side application
 
-[![keyvault/spring-boot-ssl-server-side/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/keyvault_spring-boot-ssl-server-side_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/keyvault_spring-boot-ssl-server-side_README_md.yml)
+[![README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/keyvault_spring-boot-ssl-server-side_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/keyvault_spring-boot-ssl-server-side_README_md.yml)
 
 ## Prerequisites
 
