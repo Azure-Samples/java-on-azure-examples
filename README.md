@@ -242,22 +242,10 @@ exit 0
 | ---- | ---- | ------
 | 1. [Create a VNet](networking/vnet/create/README.md) | [Workflow](.github/workflows/networking_vnet_create_README_md.yml) | [![networking/vnet/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/networking_vnet_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/networking_vnet_create_README_md.yml)
 
-## Security
-
-### Azure Key Vault examples
-
-| Name | Link | Status
-| ---- | ---- | ------
-| 1. [Add a Secret](security/keyvault/add-secret/README.md) | [Workflow](.github/workflows/security_keyvault_add-secret_README_md.yml) | [![security/keyvault/add-secret/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_add-secret_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_add-secret_README_md.yml)
-| 2. [Create a self-signed certificate](security/keyvault/create-self-signed-certificate/README.md) | [Workflow](.github/workflows/security_keyvault_create-self-signed-certificate_README_md.yml) | [![security/keyvault/create-self-signed-certificate/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_create-self-signed-certificate_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_create-self-signed-certificate_README_md.yml)
-| 3. [Create an Azure Key Vault](security/keyvault/create/README.md) | [Workflow](.github/workflows/security_keyvault_create_README_md.yml) | [![security/keyvault/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_create_README_md.yml)
-| 4. [Create a Spring Boot application with client-side mTLS](security/keyvault/spring-boot-mtls-client-side/README.md) | [Workflow](.github/workflows/security_keyvault_spring-boot-mtls-client-side_README_md.yml) | [![security/keyvault/spring-boot-mtls-client-side/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_spring-boot-mtls-client-side_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_spring-boot-mtls-client-side_README_md.yml)
-| 5. [Create a Spring Boot application with server-side mTLS](security/keyvault/spring-boot-mtls-server-side/README.md) | [Workflow](.github/workflows/security_keyvault_spring-boot-mtls-server-side_README_md.yml) | [![security/keyvault/spring-boot-mtls-server-side/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_spring-boot-mtls-server-side_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_spring-boot-mtls-server-side_README_md.yml)
-| 6. [Create a server-side SSL Spring Boot application](security/keyvault/spring-boot-ssl-server-side/README.md) | [Workflow](.github/workflows/security_keyvault_spring-boot-ssl-server-side_README_md.yml) | [![security/keyvault/spring-boot-ssl-server-side/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_spring-boot-ssl-server-side_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_spring-boot-ssl-server-side_README_md.yml)
-
 ## Service specific examples
 
-1. [Azure Storage](storage/README.md)
+1. [Azure Key Vault examples](keyvault/README.md) <!-- workflows run Tuesday -->
+1. [Azure Storage examples](storage/README.md)    <!-- workflows run Monday  -->
 
 ## Contributing
 

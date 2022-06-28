@@ -1,16 +1,16 @@
 
 # Create a self-signed certificate
 
-[![security/keyvault/create-self-signed-certificate/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_create-self-signed-certificate_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_create-self-signed-certificate_README_md.yml)
+[![keyvault/create-self-signed-certificate/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/keyvault_create-self-signed-certificate_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/keyvault_create-self-signed-certificate_README_md.yml)
 
 ## Prerequisites
 
 This example assumes you have previously completed the following example:
 
-1. [Create an Azure Resource Group](../../../general/group/create/README.md)
+1. [Create an Azure Resource Group](../../general/group/create/README.md)
 1. [Create an Azure Key Vault](../create/README.md)
 
-<!-- workflow.cron(23 16 * * 1) -->
+<!-- workflow.cron(0 3 * * 2) -->
 <!-- workflow.include(../create/README.md) -->
 
 ## Create the self-signed certificate
@@ -38,13 +38,11 @@ Do NOT forget to remove the resources once you are done running the example.
 
   sleep 60
   export RESULT=$(az keyvault certificate show --vault-name $KEYVAULT_NAME --name $KEYVAULT_CERTIFICATE_ALIAS --output tsv --query attributes.enabled)
+  az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != true ]]; then
     echo 'Certificate was not provisioned'
-    az group delete --name $RESOURCE_GROUP --yes || true
     exit 1
   fi
-
-  az group delete --name $RESOURCE_GROUP --yes || true
 
   -->
 

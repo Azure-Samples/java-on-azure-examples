@@ -68,13 +68,15 @@
         <module>integration</module>
         <module>monitor</module>
         <module>networking</module>
-        <module>security</module>
+        <module>keyvault</module>
         <module>storage</module>
     </modules>
     <properties>
+        <azure.spring.version>3.1.0</azure.spring.version>
         <example.prefix>examples</example.prefix>
         <example.postfix>${maven.build.timestamp}</example.postfix>
         <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <springboot.version>2.3.8.RELEASE</springboot.version>
     </properties>
 </project>

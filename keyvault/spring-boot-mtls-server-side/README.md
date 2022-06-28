@@ -1,18 +1,17 @@
 
-# Create a Spring Boot mTLS client-side application
+# Create a Spring Boot mTLS server-side application
 
-[![security/keyvault/spring-boot-mtls-client-side/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_spring-boot-mtls-client-side_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_spring-boot-mtls-client-side_README_md.yml)
+[![keyvault/spring-boot-mtls-server-side/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/keyvault_spring-boot-mtls-server-side_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/keyvault_spring-boot-mtls-server-side_README_md.yml)
 
 ## Prerequisites
 
 This example assumes you have previously completed the following examples:
 
-1. [Create an Azure Resource Group](../../../general/group/create/README.md)
+1. [Create an Azure Resource Group](../../general/group/create/README.md)
 1. [Create an Azure Key Vault](../create/README.md)
 1. [Create a self-signed certificate](../create-self-signed-certificate/README.md)
 1. Create a 'read-only' Service Principal
 1. Create an access policy
-1. [Create a Spring Boot mTLS server-side application](../spring-boot-mtls-server-side/README.md)
 
 ## Build the example
 
@@ -24,20 +23,11 @@ To build the JAR file use the following Maven command line.
 
 ## Run example
 
-To run the example locally use the following Maven command line.
+To run the example use the following Maven command line.
 
 <!-- workflow.skip() -->
 ```shell
   mvn spring-boot:run
-```
-
-You can verify the application works by using your browser and going
-to http://localhost:8080/hello
-
-It should show you the following:
-
-```text
-Hello mTLS
 ```
 
 ## Cleanup
