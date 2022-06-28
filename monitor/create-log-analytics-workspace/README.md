@@ -1,41 +1,41 @@
 
 # Create a Log Analytics workspace
 
-[![monitor/log-analytics/create-workspace/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/monitor_log-analytics_create-workspace_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/monitor_log-analytics_create-workspace_README_md.yml)
+[![README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/monitor_create-log-analytics-workspace_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/monitor_create-log-analytics-workspace_README_md.yml)
 
 ## Prerequisites
 
 This example assumes you have previously completed the following example:
 
-1. [Create an Azure Resource Group](../../../general/group/create/README.md)
+1. [Create an Azure Resource Group](../../general/group/create/README.md)
 
 ## Create a Log Analytics workspace
 
-<!-- workflow.cron(0 1 * * 0) -->
-<!-- workflow.include(../../../general/group/create/README.md) -->
+<!-- workflow.cron(0 0 * * 4) -->
+<!-- workflow.include(../../general/group/create/README.md) -->
 
 To create the log analytics workspace use the following command line:
 
 <!-- workflow.skip() -->
 ```shell
     
-  export LOG_ANALYTICS_WORKSPACE=log-analytics-workspace-$RANDOM
+  export MONITOR_LOG_ANALYTICS_WORKSPACE=log-analytics-workspace-$RANDOM
 
   az monitor log-analytics workspace create \
       --resource-group $RESOURCE_GROUP \
       --location $REGION \
-      --workspace-name $LOG_ANALYTICS_WORKSPACE
+      --workspace-name $MONITOR_LOG_ANALYTICS_WORKSPACE
 
 ```
 
 <!-- workflow.run()
 
-  if [[ -z $LOG_ANALYTICS_WORKSPACE ]]; then
-    export LOG_ANALYTICS_WORKSPACE=log-analytics-workspace-$RANDOM
+  if [[ -z $MONITOR_LOG_ANALYTICS_WORKSPACE ]]; then
+    export MONITOR_LOG_ANALYTICS_WORKSPACE=log-analytics-workspace-$RANDOM
     az monitor log-analytics workspace create \
       --resource-group $RESOURCE_GROUP \
       --location $REGION \
-      --workspace-name $LOG_ANALYTICS_WORKSPACE
+      --workspace-name $MONITOR_LOG_ANALYTICS_WORKSPACE
   fi
 
   -->
@@ -47,21 +47,21 @@ client ID and the client secret using the command lines below:
 
 ```shell
 
-  export LOG_ANALYTICS_WORKSPACE_CLIENT_ID=`az monitor log-analytics workspace show  \
+  export MONITOR_LOG_ANALYTICS_WORKSPACE_CLIENT_ID=`az monitor log-analytics workspace show  \
     --resource-group $RESOURCE_GROUP \
-    --workspace-name $LOG_ANALYTICS_WORKSPACE \
+    --workspace-name $MONITOR_LOG_ANALYTICS_WORKSPACE \
     --query customerId  \
     --output tsv`
 
-  echo $LOG_ANALYTICS_WORKSPACE_CLIENT_ID
+  echo $MONITOR_LOG_ANALYTICS_WORKSPACE_CLIENT_ID
 
-  export LOG_ANALYTICS_WORKSPACE_CLIENT_SECRET=`az monitor log-analytics workspace get-shared-keys \
+  export MONITOR_LOG_ANALYTICS_WORKSPACE_CLIENT_SECRET=`az monitor log-analytics workspace get-shared-keys \
     --resource-group $RESOURCE_GROUP \
-    --workspace-name $LOG_ANALYTICS_WORKSPACE \
+    --workspace-name $MONITOR_LOG_ANALYTICS_WORKSPACE \
     --query primarySharedKey \
     --output tsv`
 
-  echo $LOG_ANALYTICS_WORKSPACE_CLIENT_SECRET
+  echo $MONITOR_LOG_ANALYTICS_WORKSPACE_CLIENT_SECRET
 
 ```
 
@@ -72,7 +72,7 @@ client ID and the client secret using the command lines below:
 
   export RESULT=`az monitor log-analytics workspace show  \
     --resource-group $RESOURCE_GROUP \
-    --workspace-name $LOG_ANALYTICS_WORKSPACE \
+    --workspace-name $MONITOR_LOG_ANALYTICS_WORKSPACE \
     --query provisioningState \
     --output tsv`
   az group delete --name $RESOURCE_GROUP --yes || true

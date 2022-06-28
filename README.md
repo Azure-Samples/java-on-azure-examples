@@ -226,20 +226,12 @@ exit 0
 | 5. [Send a JMS message](integration/servicebus/send-jms-message/README.md) | [Workflow](.github/workflows/integration_servicebus_send-jms-message_README_md.yml) | [![integration/servicebus/send-jms-message/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_send-jms-message_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_send-jms-message_README_md.yml)
 | 6. [Send a message](integration/servicebus/send-message/README.md) | [Workflow](.github/workflows/integration_servicebus_send-message_README_md.yml) | [![integration/servicebus/send-message/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_send-message_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_send-message_README_md.yml)
 
-## Monitor
-
-### Log Analytics
-
-| Name                                                                                    | Link                                                                               | Status
-|-----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------| ------
-| 1. [Create an Azure Log Analytics Workspace](monitor/log-analytics/create-workspace/README.md) | [Workflow](.github/workflows/monitor_log-analytics_create-workspace_README_md.yml) | [![monitor/log-analytics/create-workspace/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/monitor_log-analytics_create-workspace_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/monitor_log-analytics_create-workspace_README_md.yml)
-
-
 ## Additional examples
 
-1. [Azure Key Vault examples](keyvault/README.md) <!-- workflows run Tuesday   -->
-1. [Azure Networking examples](network/README.md) <!-- workflows run Wednesday -->
-1. [Azure Storage examples](storage/README.md)    <!-- workflows run Monday    -->
+1. [Azure Key Vault examples](keyvault/README.md) <!-- workflows run Tuesday   / 6 examples -->
+1. [Azure Monitor examples](monitor/README.md)    <!-- workflows run Thursday  / 1 example  -->
+1. [Azure Networking examples](network/README.md) <!-- workflows run Wednesday / 1 example  -->
+1. [Azure Storage examples](storage/README.md)    <!-- workflows run Monday    / 3 examples -->
 
 ## Contributing
 
