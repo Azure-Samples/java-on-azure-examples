@@ -46,9 +46,7 @@ cd ../..
 
   export URL=$(az storage account show --name $STORAGE_ACCOUNT_NAME --query primaryEndpoints.web --output tsv)index.html
   export RESULT=$(curl $URL)
-
   az group delete --name $RESOURCE_GROUP --yes || true
-
   if [[ "$RESULT" != *"Azure Storage"* ]]; then
     echo "Response did not contain 'This is served from Azure Storage'"
     exit 1

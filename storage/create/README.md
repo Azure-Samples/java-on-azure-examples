@@ -7,7 +7,7 @@
 
 This example assumes you have previously completed the following example:
 
-1. [Create an Azure Resource Group](../../../general/group/create/README.md)
+1. [Create an Azure Resource Group](../../general/group/create/README.md)
 
 <!-- workflow.cron(0 1 * * 1) -->
 <!-- workflow.include(../../general/group/create/README.md) -->
@@ -31,11 +31,13 @@ To create the Azure Storage Account use the following command lines:
 ## Cleanup
 
 <!-- workflow.directOnly() 
+
   export RESULT=$(az storage account show --resource-group $RESOURCE_GROUP --name $STORAGE_ACCOUNT_NAME --query provisioningState --output tsv)
   az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != Succeeded ]]; then
     exit 1
   fi  
+
   -->
 
 Do NOT forget to remove the resources once you are done running the example.
