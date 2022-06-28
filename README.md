@@ -234,18 +234,12 @@ exit 0
 |-----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------| ------
 | 1. [Create an Azure Log Analytics Workspace](monitor/log-analytics/create-workspace/README.md) | [Workflow](.github/workflows/monitor_log-analytics_create-workspace_README_md.yml) | [![monitor/log-analytics/create-workspace/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/monitor_log-analytics_create-workspace_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/monitor_log-analytics_create-workspace_README_md.yml)
 
-## Networking
 
-### VNet examples
+## Additional examples
 
-| Name | Link | Status
-| ---- | ---- | ------
-| 1. [Create a VNet](networking/vnet/create/README.md) | [Workflow](.github/workflows/networking_vnet_create_README_md.yml) | [![networking/vnet/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/networking_vnet_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/networking_vnet_create_README_md.yml)
-
-## Service specific examples
-
-1. [Azure Key Vault examples](keyvault/README.md) <!-- workflows run Tuesday -->
-1. [Azure Storage examples](storage/README.md)    <!-- workflows run Monday  -->
+1. [Azure Key Vault examples](keyvault/README.md) <!-- workflows run Tuesday   -->
+1. [Azure Networking examples](network/README.md) <!-- workflows run Wednesday -->
+1. [Azure Storage examples](storage/README.md)    <!-- workflows run Monday    -->
 
 ## Contributing
 

@@ -67,8 +67,8 @@
         <module>general</module>
         <module>integration</module>
         <module>monitor</module>
-        <module>networking</module>
         <module>keyvault</module>
+        <module>network</module>
         <module>storage</module>
     </modules>
     <properties>

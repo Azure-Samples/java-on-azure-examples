@@ -1,17 +1,17 @@
 # Create a VNet
 
-[![networking/vnet/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/networking_vnet_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/networking_vnet_create_README_md.yml)
+[![README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/network_create-vnet_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/network_create-vnet_README_md.yml)
 
 ## Prerequisites
 
 This example assumes you have previously completed the following example:
 
-1. [Create an Azure Resource Group](../../../general/group/create/README.md)
+1. [Create an Azure Resource Group](../../general/group/create/README.md)
 
 ## Create a VNet
 
-<!-- workflow.cron(0 9 * * 5) -->
-<!-- workflow.include(../../../general/group/create/README.md) -->
+<!-- workflow.cron(0 0 * * 3) -->
+<!-- workflow.include(../../general/group/create/README.md) -->
 
 First, create the environment variable used for our VNet using the command line
 below:
@@ -36,7 +36,6 @@ Then, create the VNet using the following command line:
   if [[ "$RESULT" != Succeeded ]]; then
     exit 1
   fi
-  exit 0
 
   -->
 
