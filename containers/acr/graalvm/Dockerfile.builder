@@ -5,7 +5,7 @@ RUN microdnf install wget -y
 RUN wget https://downloads.apache.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz -P /tmp
 RUN tar xf /tmp/apache-maven-3.6.3-bin.tar.gz -C /opt
 RUN ln -s /opt/apache-maven-3.6.3 /opt/maven
-RUN ln -s /opt/graalvm-ce-java8-21.0.0 /opt/graalvm
+RUN ln -s /opt/graalvm-ce-java11-22.1.0 /opt/graalvm
 RUN gu install native-image
 
 ENV JAVA_HOME=/opt/graalvm

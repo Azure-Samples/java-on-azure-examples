@@ -9,5 +9,5 @@
     </parent>
     <artifactId>aks-graalvm</artifactId>
     <packaging>pom</packaging>
-    <name>Containers :: AKS :: Deploy a GraalVM application</name>
+    <name>Deploy a GraalVM application</name>
 </project>
