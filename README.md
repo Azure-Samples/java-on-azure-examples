@@ -255,13 +255,9 @@ exit 0
 | 5. [Create a Spring Boot application with server-side mTLS](security/keyvault/spring-boot-mtls-server-side/README.md) | [Workflow](.github/workflows/security_keyvault_spring-boot-mtls-server-side_README_md.yml) | [![security/keyvault/spring-boot-mtls-server-side/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_spring-boot-mtls-server-side_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_spring-boot-mtls-server-side_README_md.yml)
 | 6. [Create a server-side SSL Spring Boot application](security/keyvault/spring-boot-ssl-server-side/README.md) | [Workflow](.github/workflows/security_keyvault_spring-boot-ssl-server-side_README_md.yml) | [![security/keyvault/spring-boot-ssl-server-side/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_spring-boot-ssl-server-side_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/security_keyvault_spring-boot-ssl-server-side_README_md.yml)
 
-### Azure Storage examples
+## Service specific examples
 
-| Name | Link | Status
-| ---- | ---- | ------
-| 1. [Create an Azure Storage Account](storage/create/README.md) | [Workflow](.github/workflows/storage_create_README_md.yml) | [![storage/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_create_README_md.yml)
-| 2. [Enable static website hosting](storage/enable-static-website/README.md) | [Workflow](.github/workflows/storage_enable-static-website_README_md.yml) | [![storage/enable-static-website/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_enable-static-website_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_enable-static-website_README_md.yml)
-| 3. [Upload files to static website](storage/upload-files-to-static-website/README.md) | [Workflow](.github/workflows/storage_upload-files-to-static-website_README_md.yml) | [![storage/upload-files-to-static-website/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_upload-files-to-static-website_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_upload-files-to-static-website_README_md.yml)
+1. [Azure Storage](storage/README.md)
 
 ## Contributing
 
