@@ -213,25 +213,13 @@ exit 0
 | 1. [Create an Azure Resource Group](general/group/create/README.md) | [Workflow](.github/workflows/general_group_create_README_md.yml) | [![general/group/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/general_group_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/general_group_create_README_md.yml)
 | 2. [Delete an Azure Resource Group](general/group/delete/README.md) | [Workflow](.github/workflows/general_group_delete_README_md.yml) | [![general/group/delete/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/general_group_delete_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/general_group_delete_README_md.yml)
 
-## Integration
-
-### Azure Service Bus examples
-
-| Name | Link | Status
-| ---- | ---- | ------
-| 1. [Create an Azure Service Bus Queue](integration/servicebus/create-queue/README.md) | [Workflow](.github/workflows/integration_servicebus_create-queue_README_md.yml) | [![integration/servicebus/create-queue/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_create-queue_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_create-queue_README_md.yml)
-| 2. [Create an Azure Service Bus](integration/servicebus/create/README.md) | [Workflow](.github/workflows/integration_servicebus_create_README_md.yml)  | [![integration/servicebus/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_create_README_md.yml)
-| 3. [Receive a JMS message](integration/servicebus/receive-jms-message/README.md) | [Workflow](.github/workflows/integration_servicebus_receive-jms-message_README_md.yml) | [![integration/servicebus/receive-jms-message/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_receive-jms-message_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_receive-jms-message_README_md.yml)
-| 4. [Receive a message](integration/servicebus/receive-message/README.md) | [Workflow](.github/workflows/integration_servicebus_receive-message_README_md.yml) | [![integration/servicebus/receive-message/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_receive-message_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_receive-message_README_md.yml)
-| 5. [Send a JMS message](integration/servicebus/send-jms-message/README.md) | [Workflow](.github/workflows/integration_servicebus_send-jms-message_README_md.yml) | [![integration/servicebus/send-jms-message/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_send-jms-message_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_send-jms-message_README_md.yml)
-| 6. [Send a message](integration/servicebus/send-message/README.md) | [Workflow](.github/workflows/integration_servicebus_send-message_README_md.yml) | [![integration/servicebus/send-message/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_send-message_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_send-message_README_md.yml)
-
 ## Additional examples
 
-1. [Azure Key Vault examples](keyvault/README.md) <!-- workflows run Tuesday   / 6 examples -->
-1. [Azure Monitor examples](monitor/README.md)    <!-- workflows run Thursday  / 1 example  -->
-1. [Azure Networking examples](network/README.md) <!-- workflows run Wednesday / 1 example  -->
-1. [Azure Storage examples](storage/README.md)    <!-- workflows run Monday    / 3 examples -->
+1. [Azure Key Vault examples](keyvault/README.md)     <!-- workflows run Tuesday   / 6 examples -->
+1. [Azure Monitor examples](monitor/README.md)        <!-- workflows run Thursday  / 1 example  -->
+1. [Azure Networking examples](network/README.md)     <!-- workflows run Wednesday / 1 example  -->
+1. [Azure Service Bus examples](servicebus/README.md) <!-- workflows run Friday    / 9 examples -->
+1. [Azure Storage examples](storage/README.md)        <!-- workflows run Monday    / 3 examples -->
 
 ## Contributing
 

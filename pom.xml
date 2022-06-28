@@ -66,12 +66,14 @@
         <module>databases</module>
         <module>general</module>
         <module>integration</module>
-        <module>monitor</module>
         <module>keyvault</module>
+        <module>monitor</module>
         <module>network</module>
+        <module>servicebus</module>
         <module>storage</module>
     </modules>
     <properties>
+        <azure.bom.version>1.2.3</azure.bom.version>
         <azure.spring.version>3.1.0</azure.spring.version>
         <example.prefix>examples</example.prefix>
         <example.postfix>${maven.build.timestamp}</example.postfix>
