@@ -1,7 +1,7 @@
 on: 
   workflow_dispatch: 
 
-name: 'security/keyvault/spring-boot-mtls-client-side/README.md'
+name: 'keyvault/spring-boot-mtls-client-side/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'

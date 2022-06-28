@@ -1,9 +1,9 @@
 on: 
   schedule: 
-    - cron: '58 12 * * 4'
+    - cron: '0 3 * * 2'
   workflow_dispatch: 
 
-name: 'security/keyvault/create/README.md'
+name: 'keyvault/create-self-signed-certificate/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -26,12 +26,15 @@ jobs:
           az keyvault create \
           --resource-group $RESOURCE_GROUP \
           --name $KEYVAULT_NAME
+          export KEYVAULT_CERTIFICATE_ALIAS=self-signed
+          az keyvault certificate create --vault-name $KEYVAULT_NAME \
+          --name $KEYVAULT_CERTIFICATE_ALIAS \
+          --policy "$(az keyvault certificate get-default-policy)"
           
-          export RESULT=$(az keyvault show --resource-group $RESOURCE_GROUP --name $KEYVAULT_NAME --output tsv --query properties.provisioningState)
-          if [[ "$RESULT" != Succeeded ]]; then
-          echo 'Key vault was not provisioned'
+          sleep 60
+          export RESULT=$(az keyvault certificate show --vault-name $KEYVAULT_NAME --name $KEYVAULT_CERTIFICATE_ALIAS --output tsv --query attributes.enabled)
           az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ "$RESULT" != true ]]; then
+          echo 'Certificate was not provisioned'
           exit 1
           fi
-          
-          az group delete --name $RESOURCE_GROUP --yes || true

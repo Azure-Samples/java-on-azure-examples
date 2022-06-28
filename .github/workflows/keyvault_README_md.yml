@@ -1,7 +1,7 @@
 on: 
   workflow_dispatch: 
 
-name: 'storage/README.md'
+name: 'keyvault/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
