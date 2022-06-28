@@ -65,7 +65,6 @@
         <module>containers</module>
         <module>databases</module>
         <module>general</module>
-        <module>integration</module>
         <module>keyvault</module>
         <module>monitor</module>
         <module>network</module>
