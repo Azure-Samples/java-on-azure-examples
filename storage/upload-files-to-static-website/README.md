@@ -8,11 +8,11 @@
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../general/group/create/README.md)
-1. [Create an Azure Storage Account](../storage/create/README.md)
-1. [Enale static website hosting](../storage/enable-static-website/README.md)
+1. [Create an Azure Storage Account](../create/README.md)
+1. [Enale static website hosting](../enable-static-website/README.md)
 
 <!-- workflow.cron(0 3 * * 1) -->
-<!-- workflow.include(../storage/enable-static-website/README.md) -->
+<!-- workflow.include(../enable-static-website/README.md) -->
 
 ## Upload files to static website
 
