@@ -1,7 +1,7 @@
 
 # Create a database
 
-[![analytics/adx/create-database/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_create-database_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_create-database_README_md.yml)
+[![kusto/create-database/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/kusto_create-database_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/kusto_create-database_README_md.yml)
 
 ## Prerequisites
 
@@ -12,7 +12,7 @@ This example assumes you have previously completed the following examples:
 
 ## Create a database
 
-<!-- workflow.cron(0 6 * * 2) -->
+<!-- workflow.cron(0 1 * * 7) -->
 <!-- workflow.include(../create/README.md) -->
 
 Setup the environment variable for the database using the command

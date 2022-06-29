@@ -1,7 +1,7 @@
 
 # Create a table
 
-[![analytics/adx/create-table/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_create-table_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_create-table_README_md.yml)
+[![kusto/create-table/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/kusto_create-table_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/kusto_create-table_README_md.yml)
 
 ## Prerequisites
 

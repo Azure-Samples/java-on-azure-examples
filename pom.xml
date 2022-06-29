@@ -62,7 +62,6 @@
     <modules>
         <module>acr</module>
         <module>aks</module>
-        <module>analytics</module>
         <module>appservice</module>
         <module>aro</module>
         <module>container</module>
@@ -71,6 +70,7 @@
         <module>eventhubs</module>
         <module>group</module>
         <module>keyvault</module>
+        <module>kusto</module>
         <module>monitor</module>
         <module>mysql</module>
         <module>network</module>

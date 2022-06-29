@@ -42,17 +42,6 @@ Set your default subscription for this session using the subscription id from th
 exit 0
   -->
 
-## Analytics
-
-### Azure Data Explorer examples
-
-| Name | Link | Status
-| ---- | ---- | ------
-| 1. [Create a database](analytics/adx/create-database/README.md) | [Workflow](.github/workflows/analytics_adx_create-database_README_md.yml) | [![analytics/adx/create-database/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_create-database_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_create-database_README_md.yml)
-| 2. [Create a table](analytics/adx/create-table/README.md) | [Workflow](.github/workflows/analytics_adx_create-table_README_md.yml) | [![analytics/adx/create-table/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_create-table_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_create-table_README_md.yml)
-| 3. [Create an Azure Data Explorer cluster](analytics/adx/create/README.md) | [Workflow](.github/workflows/analytics_adx_create_README_md.yml) | [![analytics/adx/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_create_README_md.yml)
-| 4. [Ingest Client](analytics/adx/ingest-client/README.md) | [Workflow](.github/workflows/analytics_adx_ingest-client_README_md.yml) | [![analytics/adx/ingest-client/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_ingest-client_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_ingest-client_README_md.yml)
-
 ## Our alphabetical list of examples
 
 1. [Azure App Service examples](appservice/)           <!-- workflows run Friday    / 18 examples -->
@@ -61,6 +50,7 @@ exit 0
 1. [Azure Container Instances examples](container/)    <!-- workflows run Monday    / 3 examples  -->
 1. [Azure Container Registry examples](acr/)           <!-- workflows run Sunday    / 15 examples -->
 1. [Azure Cosmos DB examples](cosmosdb/)               <!-- workflows run Thursday  / 8 examples  -->
+1. [Azure Data Explorer examples](kusto/)              <!-- workflows run Sunday    / 4 examples  -->
 1. [Azure Database for MySQL examples](mysql/)         <!-- workflows run Tuesday   / 4 examples  -->
 1. [Azure Database for PostgreSQL examples](postgres/) <!-- workflows run Monday    / 4 examples  -->
 1. [Azure Event Hubs examples](eventhubs/)             <!-- workflows run Saturday  / 4 examples  -->
@@ -76,7 +66,7 @@ exit 0
 1. [Azure SQL Database examples](sql/)                 <!-- workflows run Wednesday / 4 examples  -->
 1. [Azure Storage examples](storage/)                  <!-- workflows run Monday    / 3 examples  -->
 
-<!-- next day for workflows is Sunday -->
+<!-- next day for workflows is Monday -->
 
 ## Contributing
 

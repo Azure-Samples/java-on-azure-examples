@@ -7,12 +7,14 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure</groupId>
-    <artifactId>analytics</artifactId>
-    <version>1-SNAPSHOT</version>
+    <groupId>examples.azure.kusto</groupId>
+    <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Analytics</name>
+    <name>Azure Data Explorer examples</name>
     <modules>
-        <module>adx</module>
+        <module>create</module>
+        <module>create-database</module>
+        <module>create-table</module>
+        <module>ingest-client</module>
     </modules>
 </project>

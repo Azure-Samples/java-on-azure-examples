@@ -1,7 +1,7 @@
 
 # Create an Azure Data Explorer cluster
 
-[![analytics/adx/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_create_README_md.yml)
+[![kusto/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/kusto_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/kusto_create_README_md.yml)
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ This example assumes you have previously completed the following example:
 
 ## Create an Azure Data Explorer cluster
 
-<!-- workflow.cron(0 3 * * 1) -->
+<!-- workflow.cron(0 0 * * 7) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 Install the CLI extension using the following command line:

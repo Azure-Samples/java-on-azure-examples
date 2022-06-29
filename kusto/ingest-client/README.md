@@ -1,7 +1,7 @@
 
 # Ingest into ADX
 
-[![analytics/adx/ingest-client/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_ingest-client_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_ingest-client_README_md.yml)
+[![kusto/ingest-client/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/kusto_ingest-client_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/kusto_ingest-client_README_md.yml)
 
 ## Prerequisites
 
