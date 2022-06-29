@@ -1,7 +1,7 @@
 
 # Create an Azure SQL Database
 
-[![databases/mssql/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_create_README_md.yml)
+[![sql/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/sql_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/sql_create_README_md.yml)
 
 ## Prerequisites
 
@@ -9,7 +9,7 @@ This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 
-<!-- workflow.cron(0 1 * * 5) -->
+<!-- workflow.cron(0 0 * * 3) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 ## Create the Azure SQL Database

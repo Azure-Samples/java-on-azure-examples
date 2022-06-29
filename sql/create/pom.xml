@@ -3,11 +3,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>examples.azure.databases.mssql</groupId>
+        <groupId>examples.azure.sql</groupId>
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>mssql-load-your-mssql-database-with-data</artifactId>
+    <artifactId>sql-create</artifactId>
     <packaging>pom</packaging>
-    <name>Databases :: Azure SQL :: Load your Azure SQL database with data</name>
+    <name>Create an Azure SQL Database</name>
 </project>

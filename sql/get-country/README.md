@@ -1,7 +1,7 @@
 
 # Get country information (JDBC client)
 
-[![databases/mssql/get-country/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_get-country_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_get-country_README_md.yml)
+[![sql/get-country/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/sql_get-country_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/sql_get-country_README_md.yml)
 
 ## Prerequisites
 
@@ -14,7 +14,7 @@ This example assumes you have previously completed the following examples:
 1. [Install mssql-cli client](https://docs.microsoft.com/en-us/sql/tools/mssql-cli?view=sql-server-ver15)
 1. [Load your Azure SQL database with your data](../load-your-mssql-database-with-data/README.md)
 
-<!-- workflow.cron(0 2 * * 5) -->
+<!-- workflow.cron(0 3 * * 3) -->
 <!-- workflow.include(../load-your-mssql-database-with-data/README.md) -->
 
 ## Get country information
@@ -23,7 +23,7 @@ This example will get country information from the database.
 
 <!-- workflow.run()
 
-cd databases/mssql/get-country
+cd sql/get-country
 
   -->
 
@@ -42,7 +42,7 @@ the abbreviation 'USA'.
 
 <!-- workflow.run()
 
-cd ../../..
+cd ../..
 
   -->
 

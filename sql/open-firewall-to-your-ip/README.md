@@ -1,7 +1,7 @@
 
 # Open Azure SQL server firewall to your IP address
 
-[![databases/mssql/open-firewall-to-your-ip/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_open-firewall-to-your-ip_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_open-firewall-to-your-ip_README_md.yml)
+[![sql/open-firewall-to-your-ip/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/sql_open-firewall-to-your-ip_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/sql_open-firewall-to-your-ip_README_md.yml)
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure SQL Database](../create/README.md)
 1. [Install curl](https://curl.haxx.se/download.html)
 
-<!-- workflow.cron(0 4 * * 5) -->
+<!-- workflow.cron(0 1 * * 3) -->
 <!-- workflow.include(../create/README.md) -->
 
 ## Open Azure SQL server firewall to your local IP address

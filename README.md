@@ -171,15 +171,6 @@ exit 0
 | 5. [Insert item into a SQL container](databases/cosmosdb/insert-item-into-sql-container/README.md) | [Workflow](.github/workflows/databases_cosmosdb_insert-item-into-sql-container_README_md.yml) | [![databases/cosmosdb/insert-item-into-sql-container/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_insert-item-into-sql-container_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_insert-item-into-sql-container_README_md.yml)
 | 6. [SQL Change Feed Processor](databases/cosmosdb/sql-change-feed-processor/README.md) | [Workflow](.github/workflows/databases_cosmosdb_sql-change-feed-processor_README_md.yml) | [![databases/cosmosdb/sql-change-feed-processor/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_sql-change-feed-processor_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_sql-change-feed-processor_README_md.yml)
 
-### Azure SQL Database examples
-
-| Name | Link | Status
-| ---- | ---- | ------
-| 1. [Deploy an Azure SQL Database](databases/mssql/create/README.md) | [Workflow](.github/workflows/databases_mssql_create_README_md.yml) | [![databases/mssql/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_create_README_md.yml)
-| 2. [Get country information (JDBC client)](databases/mssql/get-country/README.md) | [Workflow](.github/workflows/databases_mssql_get-country_README_md.yml) | [![databases/mssql/get-country/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_get-country_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_get-country_README_md.yml)
-| 3. [Load your Azure SQL database with data](databases/mssql/load-your-mssql-database-with-data/README.md) | [Workflow](.github/workflows/databases_mssql_load-your-mssql-database-with-data_README_md.yml) | [![databases/mssql/load-your-mssql-database-with-data/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_load-your-mssql-database-with-data_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_load-your-mssql-database-with-data_README_md.yml)
-| 4. [Open Azure SQL server firewall to your IP address](databases/mssql/open-firewall-to-your-ip/README.md) | [Workflow](.github/workflows/databases_mssql_open-firewall-to-your-ip_README_md.yml) | [![databases/mssql/open-firewall-to-your-ip/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_open-firewall-to-your-ip_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_open-firewall-to-your-ip_README_md.yml)
-
 ## Additional examples
 
 1. [Azure Cache for Redis examples](redis/README.md)            <!-- workflows run Sunday    / 1 example  -->
@@ -190,6 +181,7 @@ exit 0
 1. [Azure Networking examples](network/README.md)               <!-- workflows run Wednesday / 1 example  -->
 1. [Azure Resource Group examples](group/README.md)             <!-- workflows run Saturday  / 2 examples -->
 1. [Azure Service Bus examples](servicebus/README.md)           <!-- workflows run Friday    / 9 examples -->
+1. [Azure SQL Database examples](sql/README.md)                 <!-- workflows run Wednesday / 4 examples -->
 1. [Azure Storage examples](storage/README.md)                  <!-- workflows run Monday    / 3 examples -->
 
 ## Contributing
