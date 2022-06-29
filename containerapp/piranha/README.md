@@ -1,6 +1,6 @@
-# Deploy a Micronaut application
+# Deploy a Piranha Micro application
 
-[![containers/aca/micronaut/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_micronaut_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_micronaut_README_md.yml)
+[![containerapp/piranha/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_piranha_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_piranha_README_md.yml)
 
 ## Prerequisites
 
@@ -8,36 +8,35 @@ This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Create an Azure Container Registry](../../acr/create/README.md)
-1. [Build and push a Micronaut application to ACR](../../acr/micronaut/README.md)
+1. [Build and push a Piranha Micro application to ACR](../../acr/piranha/README.md)
 1. [Create an Azure Container Apps environment](../create-environment/README.md)
 
-## Deploy the Micronaut application
+## Deploy the Piranha Micro application
 
-<!-- workflow.cron(0 11 * * 5) -->
-<!-- workflow.include(../../acr/micronaut/README.md) -->
-<!-- workflow.include(../../aca/create-environment/README.md) -->
+<!-- workflow.cron(0 2 * * 2) -->
+<!-- workflow.include(../../acr/piranha/README.md) -->
+<!-- workflow.include(../create-environment/README.md) -->
 
-To deploy the Micronaut container image to Azure Container Apps use the
+To deploy the Piranha Micro container image to Azure Container Apps use the
 command lines below.
 
 ```shell
-  export ACA_MICRONAUT=micronaut
+  export ACA_PIRANHA=piranha
 
   az containerapp create \
-    --name $ACA_MICRONAUT \
+    --name $ACA_PIRANHA \
     --resource-group $RESOURCE_GROUP \
     --environment $ACA_ENVIRONMENT_NAME \
-    --image $ACR_NAME.azurecr.io/$ACR_MICRONAUT_IMAGE \
+    --image $ACR_NAME.azurecr.io/$ACR_PIRANHA_IMAGE \
     --target-port 8080 \
     --ingress 'external' \
     --registry-server $ACR_NAME.azurecr.io \
     --min-replicas 1
 
-  echo $(az containerapp show \
+  az containerapp show \
     --resource-group $RESOURCE_GROUP \
-    --name $ACA_MICRONAUT \
-    --query properties.configuration.ingress.fqdn \
-    --output tsv)/helloworld
+    --name $ACA_PIRANHA \
+    --query properties.configuration.ingress.fqdn
 ```
 
 Then open your browser to the URL echoed above and you should see:
@@ -47,8 +46,9 @@ Hello World
 ```
 
 <!-- workflow.directOnly()
+
   sleep 60
-  export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --name $ACA_MICRONAUT --query properties.configuration.ingress.fqdn --output tsv)/helloworld
+  export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --name $ACA_PIRANHA --query properties.configuration.ingress.fqdn --output tsv)
   export RESULT=$(curl $URL)
   az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != *"Hello World"* ]]; then

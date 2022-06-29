@@ -103,23 +103,10 @@ exit 0
 | 2. [Configure the Azure Spring Cloud Config Server](compute/spring-cloud/config-server/README.md) | [Workflow](.github/workflows/compute_spring-cloud_config-server_README_md.yml) | [![compute/spring-cloud/config-server/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_spring-cloud_config-server_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_spring-cloud_config-server_README_md.yml)
 | 3. [Deploy a Hello World Spring Boot application to Azure Spring Cloud](compute/spring-cloud/helloworld/README.md) | [Workflow](.github/workflows/compute_spring-cloud_helloworld_README_md.yml) | [![compute/spring-cloud/helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_spring-cloud_helloworld_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_spring-cloud_helloworld_README_md.yml)
 
-## Containers
-
-### Azure Container Apps examples
-
-| Name | Link | Status
-| ---- | ---- | ------
-| 1. [Create an environment](containers/aca/create-environment/README.md) | [Workflow](.github/workflows/containers_aca_create-environment_README_md.yml) | [![containers/aca/create-environment/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_create-environment_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_create-environment_README_md.yml)
-| 2. [Deploy a Dropwizard application](containers/aca/dropwizard/README.md) | [Workflow](.github/workflows/containers_aca_dropwizard_README_md.yml) | [![containers/aca/dropwizard/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_dropwizard_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_dropwizard_README_md.yml)
-| 3. [Deploy a Piranha Micro application](containers/aca/piranha/README.md) | [Workflow](.github/workflows/containers_aca_piranha_README_md.yml) | [![containers/aca/piranha/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_piranha_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_piranha_README_md.yml)
-| 4. [Deploy a Quarkus application](containers/aca/quarkus/README.md) | [Workflow](.github/workflows/containers_aca_quarkus_README_md.yml) | [![containers/aca/quarkus/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_quarkus_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_quarkus_README_md.yml)
-| 5. [Deploy a Spring Boot application](containers/aca/springboot/README.md) | [Workflow](.github/workflows/containers_aca_springboot_README_md.yml) | [![containers/aca/springboot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_springboot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_springboot_README_md.yml)
-| 6. [Deploy Tomcat](containers/aca/tomcat/README.md) | [Workflow](.github/workflows/containers_aca_tomcat_README_md.yml) | [![containers/aca/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_tomcat_README_md.yml)
-| 7. [Deploy WildFly](containers/aca/wildfly/README.md) | [Workflow](.github/workflows/containers_aca_wildfly_README_md.yml) | [![containers/aca/wildfly/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_wildfly_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_wildfly_README_md.yml)
-
 ## Additional examples
 
 1. [Azure Cache for Redis examples](redis/README.md)            <!-- workflows run Sunday    / 1 example   -->
+1. [Azure Container Apps examples](containerapp/README.md)      <!-- workflows run Tuesday   / 9 examples  -->
 1. [Azure Container Instances examples](container/README.md)    <!-- workflows run Monday    / 3 examples  -->
 1. [Azure Container Registry examples](acr/README.md)           <!-- workflows run Sunday    / 15 examples -->
 1. [Azure Cosmos DB examples](cosmosdb/README.md)               <!-- workflows run Thursday  / 8 examples  -->
@@ -135,7 +122,7 @@ exit 0
 1. [Azure SQL Database examples](sql/README.md)                 <!-- workflows run Wednesday / 4 examples  -->
 1. [Azure Storage examples](storage/README.md)                  <!-- workflows run Monday    / 3 examples  -->
 
-<!-- next day for workflows is Tuesday -->
+<!-- next day for workflows is Wednesday -->
 
 ## Contributing
 

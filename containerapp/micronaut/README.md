@@ -1,6 +1,6 @@
-# Deploy a Dropwizard application
+# Deploy a Micronaut application
 
-[![containers/aca/dropwizard/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_dropwizard_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_dropwizard_README_md.yml)
+[![containerapp/micronaut/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_micronaut_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_micronaut_README_md.yml)
 
 ## Prerequisites
 
@@ -8,26 +8,26 @@ This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Create an Azure Container Registry](../../acr/create/README.md)
-1. [Build and push a Dropwizard application to ACR](../../acr/dropwizard/README.md)
+1. [Build and push a Micronaut application to ACR](../../acr/micronaut/README.md)
 1. [Create an Azure Container Apps environment](../create-environment/README.md)
 
-## Deploy the Dropwizard application
+## Deploy the Micronaut application
 
-<!-- workflow.cron(0 16 * * 4) -->
-<!-- workflow.include(../../acr/dropwizard/README.md) -->
-<!-- workflow.include(../../aca/create-environment/README.md) -->
+<!-- workflow.cron(0 8 * * 2) -->
+<!-- workflow.include(../../acr/micronaut/README.md) -->
+<!-- workflow.include(../create-environment/README.md) -->
 
-To deploy the Dropwizard container image to Azure Container Apps use the
+To deploy the Micronaut container image to Azure Container Apps use the
 command lines below.
 
 ```shell
-  export ACA_DROPWIZARD=dropwizard
+  export ACA_MICRONAUT=micronaut
 
   az containerapp create \
-    --name $ACA_DROPWIZARD \
+    --name $ACA_MICRONAUT \
     --resource-group $RESOURCE_GROUP \
     --environment $ACA_ENVIRONMENT_NAME \
-    --image $ACR_NAME.azurecr.io/$ACR_DROPWIZARD_IMAGE \
+    --image $ACR_NAME.azurecr.io/$ACR_MICRONAUT_IMAGE \
     --target-port 8080 \
     --ingress 'external' \
     --registry-server $ACR_NAME.azurecr.io \
@@ -35,7 +35,7 @@ command lines below.
 
   echo $(az containerapp show \
     --resource-group $RESOURCE_GROUP \
-    --name $ACA_DROPWIZARD \
+    --name $ACA_MICRONAUT \
     --query properties.configuration.ingress.fqdn \
     --output tsv)/helloworld
 ```
@@ -47,8 +47,9 @@ Hello World
 ```
 
 <!-- workflow.directOnly()
+
   sleep 60
-  export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --name $ACA_DROPWIZARD --query properties.configuration.ingress.fqdn --output tsv)/helloworld
+  export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --name $ACA_MICRONAUT --query properties.configuration.ingress.fqdn --output tsv)/helloworld
   export RESULT=$(curl $URL)
   az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != *"Hello World"* ]]; then

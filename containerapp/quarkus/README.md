@@ -1,6 +1,6 @@
 # Deploy a Quarkus application
 
-[![containers/aca/quarkus/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_quarkus_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_quarkus_README_md.yml)
+[![containerapp/quarkus/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_quarkus_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_quarkus_README_md.yml)
 
 ## Prerequisites
 
@@ -13,9 +13,9 @@ This example assumes you have previously completed the following example:
 
 ## Deploy the Quarkus application
 
-<!-- workflow.cron(0 11 * * 3) -->
+<!-- workflow.cron(0 3 * * 2) -->
 <!-- workflow.include(../../acr/quarkus/README.md) -->
-<!-- workflow.include(../../aca/create-environment/README.md) -->
+<!-- workflow.include(../create-environment/README.md) -->
 
 To deploy the Quarkus container image to Azure Container Apps use the
 command lines below.
@@ -46,6 +46,7 @@ hello
 ```
 
 <!-- workflow.directOnly()
+
   sleep 60
   export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --name $ACA_QUARKUS --query properties.configuration.ingress.fqdn --output tsv)
   export RESULT=$(curl $URL)

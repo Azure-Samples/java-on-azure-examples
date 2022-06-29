@@ -1,6 +1,6 @@
 # Deploy Tomcat
 
-[![containers/aca/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_tomcat_README_md.yml)
+[![containerapp/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_tomcat_README_md.yml)
 
 ## Prerequisites
 
@@ -13,9 +13,9 @@ This example assumes you have previously completed the following example:
 
 ## Deploy Tomcat
 
-<!-- workflow.cron(0 9 * * 3) -->
+<!-- workflow.cron(0 5 * * 2) -->
 <!-- workflow.include(../../acr/tomcat/README.md) -->
-<!-- workflow.include(../../aca/create-environment/README.md) -->
+<!-- workflow.include(../create-environment/README.md) -->
 
 To deploy the Tomcat container image to Azure Container Apps use the command 
 lines below.
@@ -47,6 +47,7 @@ our own Azure Container Registry.
 ```
 
 <!-- workflow.directOnly()
+
   sleep 60
   export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --name $ACA_TOMCAT --query properties.configuration.ingress.fqdn --output tsv)
   export RESULT=$(curl $URL)

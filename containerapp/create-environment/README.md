@@ -1,6 +1,6 @@
 # Create an environment
 
-[![containers/aca/create-environment/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_create-environment_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_create-environment_README_md.yml)
+[![containerapp/create-environment/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_create-environment_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_create-environment_README_md.yml)
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@ This example assumes you have previously completed the following example:
 
 ## Setup the CLI extensions
 
-<!-- workflow.cron(0 16 * * 1) -->
+<!-- workflow.cron(0 0 * * 2) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 Ensure you are running the latest Azure CLI and install the Azure Container
@@ -35,10 +35,12 @@ region using the command lines below:
 ```
 
 <!-- workflow.run()
-if [[ -z $ACA_ENVIRONMENT_NAME ]]; then
-  export ACA_ENVIRONMENT_NAME=aca$RANDOM
-  export ACA_REGION=westus
-fi
+
+  if [[ -z $ACA_ENVIRONMENT_NAME ]]; then
+    export ACA_ENVIRONMENT_NAME=aca$RANDOM
+    export ACA_REGION=westus
+  fi
+
   -->
 
 To create the Azure Container Apps environment use the following command line:
@@ -51,6 +53,7 @@ To create the Azure Container Apps environment use the following command line:
 ```
 
 <!-- workflow.directOnly()
+
   sleep 60
   export RESULT=$(az containerapp env show --name $ACA_ENVIRONMENT_NAME --resource-group $RESOURCE_GROUP --output tsv --query properties.provisioningState)
   az group delete --name $RESOURCE_GROUP --yes || true
@@ -58,6 +61,7 @@ To create the Azure Container Apps environment use the following command line:
     echo "Azure Container Apps environment $ACA_ENVIRONMENT_NAME was not provisioned properly"
     exit 1
   fi
+
   -->
 
 ## Cleanup
