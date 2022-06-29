@@ -180,18 +180,10 @@ exit 0
 | 3. [Load your Azure SQL database with data](databases/mssql/load-your-mssql-database-with-data/README.md) | [Workflow](.github/workflows/databases_mssql_load-your-mssql-database-with-data_README_md.yml) | [![databases/mssql/load-your-mssql-database-with-data/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_load-your-mssql-database-with-data_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_load-your-mssql-database-with-data_README_md.yml)
 | 4. [Open Azure SQL server firewall to your IP address](databases/mssql/open-firewall-to-your-ip/README.md) | [Workflow](.github/workflows/databases_mssql_open-firewall-to-your-ip_README_md.yml) | [![databases/mssql/open-firewall-to-your-ip/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_open-firewall-to-your-ip_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mssql_open-firewall-to-your-ip_README_md.yml)
 
-### Azure Database for MySQL examples
-
-| Name | Link | Status
-| ---- | ---- | ------
-| 1. [Create an Azure Database for MySQL](databases/mysql/create/README.md) | [Workflow](.github/workflows/databases_mysql_create_README_md.yml) | [![databases/mysql/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mysql_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mysql_create_README_md.yml)
-| 2. [Open MySQL server firewall to your IP address](databases/mysql/open-firewall-to-your-ip/README.md) | [Workflow](.github/workflows/databases_mysql_open-firewall-to-your-ip_README_md.yml) | [![databases/mysql/open-firewall-to-your-ip/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mysql_open-firewall-to-your-ip_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mysql_open-firewall-to-your-ip_README_md.yml)
-| 3. [Load your MySQL database with data](databases/mysql/load-your-mysql-database-with-data/README.md) | [Workflow](.github/workflows/databases_mysql_load-your-mysql-database-with-data_README_md.yml) | [![databases/mysql/load-your-mysql-database-with-data/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mysql_load-your-mysql-database-with-data_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mysql_load-your-mysql-database-with-data_README_md.yml)
-| 4. [JDBC command line client](databases/mysql/get-country/README.md) | [Workflow](.github/workflows/databases_mysql_get-country_README_md.yml) | [![databases/mysql/get-country/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mysql_get-country_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mysql_get-country_README_md.yml)
-
 ## Additional examples
 
 1. [Azure Cache for Redis examples](redis/README.md)            <!-- workflows run Sunday    / 1 example  -->
+1. [Azure Database for MySQL examples](mysql/README.md)         <!-- workflows run Tuesday   / 4 examples -->
 1. [Azure Database for PostgreSQL examples](postgres/README.md) <!-- workflows run Monday    / 4 examples -->
 1. [Azure Key Vault examples](keyvault/README.md)               <!-- workflows run Tuesday   / 6 examples -->
 1. [Azure Monitor examples](monitor/README.md)                  <!-- workflows run Thursday  / 1 example  -->

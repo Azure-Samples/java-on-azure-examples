@@ -1,7 +1,7 @@
 
 # Load your MySQL database with data
 
-[![databases/mysql/load-your-mysql-database-with-data/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mysql_load-your-mysql-database-with-data_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mysql_load-your-mysql-database-with-data_README_md.yml)
+[![mysql/load-your-mysql-database-with-data/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_load-your-mysql-database-with-data_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_load-your-mysql-database-with-data_README_md.yml)
 
 ## Prerequisites
 
@@ -13,7 +13,7 @@ This example assumes you have previously completed the following examples:
 1. [Open MySQL server firewall to your IP address](../open-firewall-to-your-ip/README.md)
 1. [Install mysql client](https://dev.mysql.com/downloads/README.md)
 
-<!-- workflow.cron(0 12 * * 5) -->
+<!-- workflow.cron(0 2 * * 2) -->
 <!-- workflow.include(../open-firewall-to-your-ip/README.md) -->
 
 ## Load your MySQL database with data
@@ -49,15 +49,9 @@ And to exit the `mysql` tool use the following command line:
   \q
 ```
 
->
-> If your country is missing from the SQL file please let us know by filing a
-> GitHub issue or by issuing a PR against this repository.
->
-
-
 <!-- workflow.run()
 
-  cd databases/mysql/load-your-mysql-database-with-data
+  cd mysql/load-your-mysql-database-with-data
   export MYSQL_DNS_NAME=`az mysql server show \
     --resource-group $RESOURCE_GROUP \
     --name $MYSQL_NAME \
@@ -65,7 +59,7 @@ And to exit the `mysql` tool use the following command line:
     --output tsv`
   export MYSQL_CLIENT_USERNAME="$MYSQL_USERNAME@$MYSQL_NAME"
   mysql -h $MYSQL_DNS_NAME -u $MYSQL_CLIENT_USERNAME -p$MYSQL_PASSWORD < load.sql
-  cd ../../..
+  cd ../..
 
   -->
 
@@ -77,11 +71,11 @@ Do NOT forget to remove the resources once you are done running the example.
 
   echo 'SELECT COUNT(*) FROM countries;' > check.sql
   export RESULT=$(mysql -s -h $MYSQL_DNS_NAME -u $MYSQL_CLIENT_USERNAME -p$MYSQL_PASSWORD demo < check.sql)
+  az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != "1" ]]; then
     echo "MySQL data was NOT loaded"
     exit 1
   fi
-  az group delete --name $RESOURCE_GROUP --yes || true
 
   -->
 

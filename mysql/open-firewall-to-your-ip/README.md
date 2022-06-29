@@ -1,7 +1,7 @@
 
 # Open MySQL server firewall to your IP address
 
-[![databases/mysql/open-firewall-to-your-ip/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mysql_open-firewall-to-your-ip_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_mysql_open-firewall-to-your-ip_README_md.yml)
+[![mysql/open-firewall-to-your-ip/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_open-firewall-to-your-ip_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/mysql_open-firewall-to-your-ip_README_md.yml)
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Database for MySQL](../create/README.md)
 1. [Install curl](https://curl.haxx.se/download.html)
 
-<!-- workflow.cron(0 11 * * 5) -->
+<!-- workflow.cron(0 1 * * 2) -->
 <!-- workflow.include(../create/README.md) -->
 
 ## Open MySQL server firewall to your local IP address
@@ -51,6 +51,6 @@ Do NOT forget to remove the resources once you are done running the example.
 * [Migrate to Azure Database for MySQL](https://datamigration.microsoft.com/scenario/mysql-to-azuremysql)
 * [Minimal downtime migration](https://docs.microsoft.com/en-us/azure/mysql/howto-migrate-online)
 * [Query data using Java](https://docs.microsoft.com/en-us/azure/mysql/connect-java)
-* [Manage Azure Database for MySQL servers](https://docs.microsoft.com/en-us/cli/azure/mysql)
+* [Manage Azure Database for MySQL servers](https://docs.microsoft.com/cli/azure/mysql)
 
 1m
