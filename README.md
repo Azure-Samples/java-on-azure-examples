@@ -152,12 +152,6 @@ exit 0
 | 6. [Deploy WildFly](containers/aks/wildfly/README.md) | [Workflow](.github/workflows/containers_aks_wildfly_README_md.yml) | [![containers/aks/wildfly/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_wildfly_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_wildfly_README_md.yml)
 | 7. [Deploy a GraalVM application](containers/aks/graalvm/README.md) | [Workflow](.github/workflows/containers_aks_graalvm_README_md.yml) | [![containers/aks/graalvm/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_graalvm_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_graalvm_README_md.yml)
 
-### Azure Red Hat OpenShift examples
-
-| Name | Link | Status
-| ---- | ---- | ------
-| 1. [Deploy an Azure Red Hat OpenShift cluster](containers/aro/create/README.md) | |
-
 ## Additional examples
 
 1. [Azure Cache for Redis examples](redis/README.md)            <!-- workflows run Sunday    / 1 example  -->

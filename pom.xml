@@ -61,6 +61,7 @@
     </dependencyManagement>
     <modules>
         <module>analytics</module>
+        <module>aro</module>
         <module>compute</module>
         <module>containers</module>
         <module>cosmosdb</module>

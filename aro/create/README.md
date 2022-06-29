@@ -1,7 +1,7 @@
 
 # Deploy an Azure Red Hat OpenShift cluster
 
-[![containers/aro/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aro_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aro_create_README_md.yml)
+[![aro/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aro_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aro_create_README_md.yml)
 
 ## Prerequisites
 
