@@ -3,17 +3,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>examples.azure</groupId>
+        <groupId>examples.azure.acr</groupId>
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure</groupId>
-    <artifactId>containers</artifactId>
-    <version>1-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <name>Containers</name>
-    <modules>
-        <module>aca</module>
-        <module>aci</module>
-    </modules>
+    <artifactId>acr-tomcat</artifactId>
+    <packaging>war</packaging>
+    <name>Build and push a Tomcat container image to ACR</name>
+    <build>
+        <finalName>ROOT</finalName>
+    </build>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 </project>
+

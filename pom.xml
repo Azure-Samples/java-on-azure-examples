@@ -60,6 +60,7 @@
         </dependencies>
     </dependencyManagement>
     <modules>
+        <module>acr</module>
         <module>aks</module>
         <module>analytics</module>
         <module>aro</module>
