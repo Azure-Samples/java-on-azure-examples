@@ -161,10 +161,13 @@ exit 0
 1. [Azure Key Vault examples](keyvault/README.md)               <!-- workflows run Tuesday   / 6 examples -->
 1. [Azure Monitor examples](monitor/README.md)                  <!-- workflows run Thursday  / 1 example  -->
 1. [Azure Networking examples](network/README.md)               <!-- workflows run Wednesday / 1 example  -->
+1. [Azure Red Hat OpenShift examples](aro/README.md)            <!-- workflows run Friday    / 1 example  -->
 1. [Azure Resource Group examples](group/README.md)             <!-- workflows run Saturday  / 2 examples -->
 1. [Azure Service Bus examples](servicebus/README.md)           <!-- workflows run Friday    / 9 examples -->
 1. [Azure SQL Database examples](sql/README.md)                 <!-- workflows run Wednesday / 4 examples -->
 1. [Azure Storage examples](storage/README.md)                  <!-- workflows run Monday    / 3 examples -->
+
+<!-- next day for workflows is Saturday -->
 
 ## Contributing
 
