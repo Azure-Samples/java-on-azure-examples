@@ -1,7 +1,7 @@
 
 # Create an Azure Cosmos DB account
 
-[![databases/cosmosdb/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_create_README_md.yml)
+[![cosmosdb/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create_README_md.yml)
 
 ## Prerequisites
 
@@ -9,7 +9,7 @@ This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 
-<!-- workflow.cron(0 6 * * 1) -->
+<!-- workflow.cron(0 0 * * 4) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 ## Create the Azure Cosmos DB account

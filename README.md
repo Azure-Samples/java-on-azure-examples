@@ -158,22 +158,10 @@ exit 0
 | ---- | ---- | ------
 | 1. [Deploy an Azure Red Hat OpenShift cluster](containers/aro/create/README.md) | |
 
-## Databases
-
-### Azure Cosmos DB examples
-
-| Name | Link | Status
-| ---- | ---- | ------
-| 1. [Create a SQL container](databases/cosmosdb/create-sql-container/README.md) | [Workflow](.github/workflows/databases_cosmosdb_create-sql-container_README_md.yml) | [![databases/cosmosdb/create-sql-container/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_create-sql-container_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_create-sql-container_README_md.yml)
-| 2. [Create a SQL database](databases/cosmosdb/create-sql-database/README.md) | [Workflow](.github/workflows/databases_cosmosdb_create-sql-database_README_md.yml) | [![databases/cosmosdb/create-sql-database/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_create-sql-database_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_create-sql-database_README_md.yml)
-| 3. [Create SQL leases container](databases/cosmosdb/create-sql-leases-container/README.md) | [Workflow](.github/workflows/databases_cosmosdb_create-sql-leases-container_README_md.yml) | [![databases/cosmosdb/create-sql-leases-container/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_create-sql-leases-container_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_create-sql-leases-container_README_md.yml)
-| 4. [Create an Azure Cosmos DB](databases/cosmosdb/create/README.md) | [Workflow](.github/workflows/databases_cosmosdb_create_README_md.yml) | [![databases/cosmosdb/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_create_README_md.yml)
-| 5. [Insert item into a SQL container](databases/cosmosdb/insert-item-into-sql-container/README.md) | [Workflow](.github/workflows/databases_cosmosdb_insert-item-into-sql-container_README_md.yml) | [![databases/cosmosdb/insert-item-into-sql-container/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_insert-item-into-sql-container_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_insert-item-into-sql-container_README_md.yml)
-| 6. [SQL Change Feed Processor](databases/cosmosdb/sql-change-feed-processor/README.md) | [Workflow](.github/workflows/databases_cosmosdb_sql-change-feed-processor_README_md.yml) | [![databases/cosmosdb/sql-change-feed-processor/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_sql-change-feed-processor_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_sql-change-feed-processor_README_md.yml)
-
 ## Additional examples
 
 1. [Azure Cache for Redis examples](redis/README.md)            <!-- workflows run Sunday    / 1 example  -->
+1. [Azure Cosmos DB examples](cosmosdb/README.md)               <!-- workflows run Thursday  / 8 examples -->
 1. [Azure Database for MySQL examples](mysql/README.md)         <!-- workflows run Tuesday   / 4 examples -->
 1. [Azure Database for PostgreSQL examples](postgres/README.md) <!-- workflows run Monday    / 4 examples -->
 1. [Azure Key Vault examples](keyvault/README.md)               <!-- workflows run Tuesday   / 6 examples -->

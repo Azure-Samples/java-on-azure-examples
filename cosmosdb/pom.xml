@@ -4,13 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>examples.azure</groupId>
-        <artifactId>databases</artifactId>
+        <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.databases.cosmosdb</groupId>
+    <groupId>examples.azure.cosmosdb</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Databases :: Cosmos DB</name>
+    <name>Azure Cosmos DB examples</name>
     <modules>
         <module>cosmos-to-adx</module>
         <module>cosmos-to-storage</module>

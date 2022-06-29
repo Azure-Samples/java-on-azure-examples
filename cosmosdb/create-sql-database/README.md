@@ -1,7 +1,7 @@
 
 # Create a SQL database
 
-[![databases/cosmosdb/create-sql-database/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_create-sql-database_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_create-sql-database_README_md.yml)
+[![cosmosdb/create-sql-database/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create-sql-database_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create-sql-database_README_md.yml)
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Create an Azure Cosmos DB](../create/README.md)
 
-<!-- workflow.cron(0 6 * * 3) -->
+<!-- workflow.cron(0 1 * * 4) -->
 <!-- workflow.include(../create/README.md) -->
 
 ## Create the SQL database

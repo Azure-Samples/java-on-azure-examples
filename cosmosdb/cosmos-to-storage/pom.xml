@@ -3,15 +3,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.3.RELEASE</version>
-        <relativePath/>
+        <groupId>examples.azure.cosmosdb</groupId>
+        <artifactId>project</artifactId>
+        <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.databases.cosmosdb</groupId>
-    <artifactId>cosmosdb-cosmos-to-adx</artifactId>
+    <artifactId>cosmosdb-cosmos-to-storage</artifactId>
     <version>1-SNAPSHOT</version>
-    <name>Databases :: Cosmos DB :: Cosmos DB to Azure Data Explorer</name>
+    <name>Cosmos to Azure Storage Spring Boot application</name>
     <build>
         <plugins>
             <plugin>
@@ -42,13 +40,17 @@
             <version>4.19.1</version>
         </dependency>
         <dependency>
-            <groupId>com.microsoft.azure.kusto</groupId>
-            <artifactId>kusto-ingest</artifactId>
-            <version>2.7.0</version>
+            <groupId>com.azure</groupId>
+            <artifactId>azure-storage-blob</artifactId>
+            <version>12.14.1</version>
         </dependency>
     </dependencies>
+    <developers>
+        <developer>
+            <name>Sree Ram</name>
+        </developer>
+    </developers>
     <properties>
         <java.version>11</java.version>
     </properties>
 </project>
-

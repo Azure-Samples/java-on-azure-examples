@@ -1,7 +1,7 @@
 
-# Insert an item into a SQL container
+# SQL Change Feed processor
 
-[![databases/cosmosdb/insert-item-into-sql-container/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_insert-item-into-sql-container_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_insert-item-into-sql-container_README_md.yml)
+[![cosmosdb/sql-change-feed-processor/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_sql-change-feed-processor_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_sql-change-feed-processor_README_md.yml)
 
 ## Prerequisites
 
@@ -11,18 +11,17 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Cosmos DB](../create/README.md)
 1. [Create a SQL database](../create-sql-database/README.md)
 1. [Create a SQL container](../create-sql-container/README.md)
+1. [Create a SQL leases container](../create-sql-leases-container/README.md)
 
-<!-- workflow.cron(0 6 * * 5) -->
-<!-- workflow.include(../../group/create/README.md) -->
-<!-- workflow.include(../create/README.md) -->
-<!-- workflow.include(../create-sql-database/README.md) -->
+<!-- workflow.cron(0 5 * * 4) -->
 <!-- workflow.include(../create-sql-container/README.md) -->
+<!-- workflow.include(../create-sql-leases-container/README.md) -->
 
-## Insert the item into the SQL container
+## SQL Change Feed processor
 
 <!-- workflow.run()
 
-cd databases/cosmosdb/insert-item-into-sql-container
+  cd cosmosdb/sql-change-feed-processor
 
   -->
 
@@ -46,13 +45,13 @@ Then execute the following command line:
 
 <!-- workflow.skip() -->
 ````shell
-  java -jar target/insert-item.jar
+  java -jar target/change-feed-processor.jar
 ````
 
 <!-- workflow.run() 
 
-export RESULT=$(java -jar target/insert-item.jar)
-cd ../../..
+  export RESULT=$(java -jar target/change-feed-processor.jar)
+  cd ../..
 
   -->
 
@@ -61,9 +60,8 @@ cd ../../..
 <!-- workflow.directOnly()
 
   az group delete --name $RESOURCE_GROUP --yes || true
-
-  if [[ "$RESULT" != "Item was added" ]]; then
-    echo "Failed to insert item into $COSMOSDB_SQL_CONTAINER"
+  if [[ "$RESULT" != "Change feed was processed" ]]; then
+    echo "Failed to process SQL change feed"
     exit 1
   fi
 
@@ -74,11 +72,6 @@ Do NOT forget to remove the resources once you are done running the example.
 ## Additional documentation
 
 1. [Azure Cosmos DB documentation](https://docs.microsoft.com/azure/cosmos-db/README.md)
+1. [Change feed in Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/change-feed)
 
 1m
-
-<!--
-
-  jmeter -n -t insert-item.jmx -l insert-item.output
-
-  -->

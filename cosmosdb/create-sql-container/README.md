@@ -1,7 +1,7 @@
 
 # Create a SQL container
 
-[![databases/cosmosdb/create-sql-container/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_create-sql-container_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_cosmosdb_create-sql-container_README_md.yml)
+[![cosmosdb/create-sql-container/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create-sql-container_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/cosmosdb_create-sql-container_README_md.yml)
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Cosmos DB](../create/README.md)
 1. [Create a database](../create-sql-database/README.md)
 
-<!-- workflow.cron(0 6 * * 2) -->
+<!-- workflow.cron(0 2 * * 4) -->
 <!-- workflow.include(../create-sql-database/README.md) -->
 
 ## Create the SQL container

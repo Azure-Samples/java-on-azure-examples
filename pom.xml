@@ -63,14 +63,16 @@
         <module>analytics</module>
         <module>compute</module>
         <module>containers</module>
-        <module>databases</module>
+        <module>cosmosdb</module>
         <module>group</module>
         <module>keyvault</module>
         <module>monitor</module>
+        <module>mysql</module>
         <module>network</module>
         <module>postgres</module>
         <module>redis</module>
         <module>servicebus</module>
+        <module>sql</module>
         <module>storage</module>
     </modules>
     <properties>

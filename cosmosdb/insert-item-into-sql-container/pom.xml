@@ -3,15 +3,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>examples.azure.databases.cosmosdb</groupId>
+        <groupId>examples.azure.cosmosdb</groupId>
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>cosmosdb-sql-changefeed-processor</artifactId>
+    <artifactId>cosmosdb-insert-item-into-sql-container</artifactId>
     <packaging>jar</packaging>
-    <name>Databases :: Cosmos DB :: SQL Change Feed processor</name>
+    <name>Insert an item into a SQL container</name>
     <build>
-        <finalName>change-feed-processor</finalName>
+        <finalName>insert-item</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -39,7 +39,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>examples.azure.cosmosdb.sql.changefeed.ChangeFeed</mainClass>
+                            <mainClass>examples.azure.cosmosdb.insertitemsqlcontainer.InsertItemSQLContainer</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
