@@ -1,0 +1,42 @@
+on: 
+  schedule: 
+    - cron: '0 17 * * 2'
+  workflow_dispatch: 
+
+name: 'spring/config-server/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          export REGION=southcentralus
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          az extension add --name spring
+          
+          export SPRING_NAME=spring-$RANDOM
+          
+          az spring create \
+          --resource-group $RESOURCE_GROUP \
+          --name $SPRING_NAME
+          
+          cd spring/config-server
+          
+          az spring config-server set \
+          --config-file application.yml \
+          --name ${SPRING_NAME} \
+          --resource-group ${RESOURCE_GROUP}
+          
+          cd ../..
+          
+          
+          az group delete --name $RESOURCE_GROUP --yes || true

@@ -1,0 +1,44 @@
+on: 
+  schedule: 
+    - cron: '0 1 * * 3'
+  workflow_dispatch: 
+
+name: 'sql/open-firewall-to-your-ip/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          export REGION=southcentralus
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export MSSQL_NAME=mssql-$RANDOM
+          export MSSQL_USERNAME=mssql
+          export MSSQL_PASSWORD=p#ssw0rd-$RANDOM
+          if [[ -z $MSSQL_NAME ]]; then
+          export MSSQL_NAME=mssql-$RANDOM
+          export MSSQL_USERNAME=mssql
+          export MSSQL_PASSWORD=p#ssw0rd-$RANDOM
+          fi
+          az sql server create \
+          --admin-user $MSSQL_USERNAME \
+          --admin-password $MSSQL_PASSWORD \
+          --name $MSSQL_NAME \
+          --resource-group $RESOURCE_GROUP
+          export LOCAL_IP=`curl -s whatismyip.akamai.com`
+          
+          az sql server firewall-rule create \
+          --resource-group $RESOURCE_GROUP \
+          --server $MSSQL_NAME \
+          --name AllowMyLocalIP \
+          --start-ip-address $LOCAL_IP \
+          --end-ip-address $LOCAL_IP

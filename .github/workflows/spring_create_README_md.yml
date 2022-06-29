@@ -1,0 +1,36 @@
+on: 
+  schedule: 
+    - cron: '0 16 * * 2'
+  workflow_dispatch: 
+
+name: 'spring/create/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          export REGION=southcentralus
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          az extension add --name spring
+          
+          export SPRING_NAME=spring-$RANDOM
+          
+          az spring create \
+          --resource-group $RESOURCE_GROUP \
+          --name $SPRING_NAME
+          
+          export RESULT=$(az spring show --resource-group $RESOURCE_GROUP --name $SPRING_NAME --output tsv --query properties.provisioningState)
+          az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ "$RESULT" != Succeeded ]]; then
+          exit 1
+          fi

@@ -1,0 +1,60 @@
+on: 
+  schedule: 
+    - cron: '0 5 * * 6'
+  workflow_dispatch: 
+
+name: 'aks/wildfly/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          # WARN File could not be found: containers/acr/wildfly/README.md
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          export REGION=southcentralus
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          
+          if [[ -z $AKS ]]; then
+          export AKS=aks-$RANDOM
+          az aks create --name $AKS --resource-group $RESOURCE_GROUP --generate-ssh-keys --verbose
+          fi
+          
+          
+          cd aks/create-kube-config
+          
+          az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS --admin --file config
+          export KUBECONFIG=$PWD/config
+          
+          cd ../..
+          
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          export REGION=southcentralus
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          
+          if [[ -z $AKS ]]; then
+          export AKS=aks-$RANDOM
+          az aks create --name $AKS --resource-group $RESOURCE_GROUP --generate-ssh-keys --verbose
+          fi
+          
+          # WARN File could not be found: ../containers/acr/create/README.md
+          az aks update --name $AKS --resource-group $RESOURCE_GROUP --attach-acr $ACR_NAME
+          
+          cd aks/wildfly
+          
+          sed -i "s/ACR/$ACR_NAME/g" deployment.yml
+          kubectl apply -f deployment.yml
+          
+          cd ../..

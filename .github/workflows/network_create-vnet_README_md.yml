@@ -14,13 +14,7 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
-          
-          if [[ -z $RESOURCE_GROUP ]]; then
-          export RESOURCE_GROUP=java-on-azure-$RANDOM
-          export REGION=southcentralus
-          fi
-          
-          az group create --name $RESOURCE_GROUP --location $REGION
+          # WARN File could not be found: network/group/create/README.md
           export VNET=myvnet
           az network vnet create \
           --name $VNET \
