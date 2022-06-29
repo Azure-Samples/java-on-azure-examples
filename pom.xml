@@ -63,8 +63,8 @@
         <module>acr</module>
         <module>aks</module>
         <module>analytics</module>
+        <module>appservice</module>
         <module>aro</module>
-        <module>compute</module>
         <module>container</module>
         <module>containerapp</module>
         <module>cosmosdb</module>
