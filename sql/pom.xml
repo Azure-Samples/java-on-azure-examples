@@ -13,6 +13,7 @@
     <name>Azure SQL Database examples</name>
     <modules>
         <module>create</module>
+        <module>get-country</module>
         <module>load-your-mssql-database-with-data</module>
         <module>open-firewall-to-your-ip</module>
     </modules>

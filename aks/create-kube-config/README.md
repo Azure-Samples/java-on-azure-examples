@@ -1,7 +1,7 @@
 
 # Create a Kubeconfig file using admin access
 
-[![containers/aks/create-kube-config/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_create-kube-config_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_create-kube-config_README_md.yml)
+[![aks/create-kube-config/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create-kube-config_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create-kube-config_README_md.yml)
 
 ```text
 Note for production environments we recommend you configure RBAC to
@@ -17,11 +17,11 @@ This example assumes you have previously completed the following examples:
 
 ## Create a Kubeconfig file usin admin access
 
-<!-- workflow.cron(0 2 * * 0) -->
+<!-- workflow.cron(0 1 * * 6) -->
 <!-- workflow.include(../create/README.md) -->
 <!-- workflow.run()
 
-cd containers/aks/create-kube-config
+cd aks/create-kube-config
 
   -->
 
@@ -43,7 +43,7 @@ Set the KUBECONFIG environment variable using the command line below:
 
 <!-- workflow.run()
 
-cd ../../..
+cd ../..
 
   -->
 

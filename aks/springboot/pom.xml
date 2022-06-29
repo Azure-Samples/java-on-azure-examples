@@ -3,13 +3,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>examples.azure.containers.aks</groupId>
+        <groupId>examples.azure.aks</groupId>
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
     <artifactId>aks-springboot</artifactId>
     <packaging>jar</packaging>
-    <name>Containers :: AKS :: Deploy a Spring Boot application</name>
+    <name>Deploy a Spring Boot application</name>
     <build>
         <plugins>
             <plugin>

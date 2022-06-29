@@ -16,6 +16,5 @@
         <module>aca</module>
         <module>aci</module>
         <module>acr</module>
-        <module>aks</module>
     </modules>
 </project>

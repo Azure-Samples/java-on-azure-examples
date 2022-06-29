@@ -1,61 +1,40 @@
 
-# Deploy a Spring Boot application
+# Deploy a GraalVM application
 
-[![containers/aks/springboot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_springboot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_springboot_README_md.yml)
+[![aks/graalvm/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_graalvm_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_graalvm_README_md.yml)
 
 ## Prerequisites
 
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
-1. [Create an Azure Container Registry](../../../containers/acr/create/README.md)
-1. [Create settings.xml using admin access keys](../../../containers/acr/create-settings-xml/README.md)
+1. [Create an Azure Container Registry](../../containers/acr/create/README.md)
+1. [Push a GraalVM Docker image to Azure Container Registry](../../containers/acr/graalvm/README.md)
+1. [Create settings.xml using admin access keys](../../containers/acr/create-settings-xml/README.md)
 1. [Deploy an Azure Kubernetes Service cluster](../create/README.md)
 1. [Create a Kube config for your Azure Kubernetes Service cluster (using admin access keys)](../create-kube-config/README.md)
 1. [Update your AKS cluster to use your Azure Container Registry](../use-your-acr/README.md)
 
-## Build the example
+## Deploy a GraalVM application
 
-<!-- workflow.cron(0 4 * * 0) -->
+<!-- workflow.cron(0 7 * * 0) -->
+<!-- workflow.include(../../containers/acr/graalvm/README.md) -->
 <!-- workflow.include(../create-kube-config/README.md) -->
 <!-- workflow.include(../use-your-acr/README.md) -->
 <!-- workflow.run() 
 
-cd containers/aks/springboot
+  cd aks/graalvm
 
   -->
 
-To build the JAR file use the following Maven command line.
-
-````shell
-  mvn package
-````
-
-## Run example locally
-
-To run the example locally use the following Maven command line.
-
-<!-- workflow.skip() -->
-````shell
-  mvn spring-boot:run
-````
-
-## Push the Docker image to your Azure Container Registry
-
-````shell
- az acr build --registry $ACR_NAME --image springboot:latest .
-````
-
-## Deploying to the AKS cluster
-
 First open the `deployment.yml` file in an editor and replace `ACR` with the
-name of your Azure Container Registry OR execute the command line below:
+name of your registry OR execute the command line below:
 
 ```shell
   sed -i "s/ACR/$ACR_NAME/g" deployment.yml
 ```
 
-Then execute the command below to deploy to the AKS cluster:
+Then execute the command below to deploy to the AKS cluster.
 
 ```shell
   kubectl apply -f deployment.yml
@@ -67,30 +46,31 @@ Then execute the command below to deploy to the AKS cluster:
 To get the public IP address use the following command.
 
 <!-- workflow.skip() -->
-```shell
-kubectl get service/springboot
+```
+kubectl get service/graalvm
 ```
 
 If the `EXTERNAL-IP` column has no IP address yet keep repeating the command as
 it might take a while before AKS has assigned a public IP.
 
-Once the `EXTERNAL-IP` shows up open your browser to `http://EXTERNAL-IP`.
+Once the `EXTERNAL-IP` shows up open your browser to `http://EXTERNAL-IP/helloworld`.
 
-It should show you a page with the text `Hello World`.
+It should tell you:
+
+```text
+Hello
+```
 
 ## Cleanup
 
 <!-- workflow.directOnly()
   
   sleep 240
-
-  export URL=http://$(kubectl get service/springboot --output jsonpath="{.status.loadBalancer.ingress[0].ip}")
+  export URL=http://$(kubectl get service/graalvm --output jsonpath="{.status.loadBalancer.ingress[0].ip}")/helloworld
   export RESULT=$(curl $URL)
-
   az group delete --name $RESOURCE_GROUP --yes || true
-
-  if [[ "$RESULT" != *"Hello World"* ]]; then
-    echo "Response did not contain 'Hello World'"
+  if [[ "$RESULT" != *"Hello"* ]]; then
+    echo "Response did not contain 'Hello'"
     exit 1
   fi
 
@@ -98,7 +78,7 @@ It should show you a page with the text `Hello World`.
 
 <!-- workflow.run() 
 
-cd ../../..
+  cd ../..
   
   -->
 
@@ -109,5 +89,6 @@ Do NOT forget to remove the resources once you are done running the example.
 * [Commands to manage Azure Kubernetes Services](https://docs.microsoft.com/cli/azure/aks)
 * [Azure Kubernetes Service Documentation](https://docs.microsoft.com/azure/aks/)
 * [kubectl](https://kubernetes.io/docs/reference/kubectl/)
+* [GraalVM documentation](https://www.graalvm.org/docs/)
 
-3m
+1m

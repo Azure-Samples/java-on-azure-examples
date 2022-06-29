@@ -9,5 +9,5 @@
     </parent>
     <artifactId>sql-open-firewall-to-your-ip</artifactId>
     <packaging>pom</packaging>
-    <name>Databases :: Azure SQL :: Open Azure SQL server firewall to your IP address</name>
+    <name>Open Azure SQL server firewall to your IP address</name>
 </project>

@@ -1,7 +1,7 @@
 
 # Create an Azure Kubernetes Service cluster
 
-[![containers/aks/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_create_README_md.yml)
+[![aks/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create_README_md.yml)
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ This example assumes you have previously completed the following example:
 
 ## Create an Azure Kubernetes Service cluster
 
-<!-- workflow.cron(0 1 * * 0) -->
+<!-- workflow.cron(0 0 * * 6) -->
 <!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.run()
 

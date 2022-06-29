@@ -13,7 +13,7 @@ This example assumes you have previously completed the following examples:
 
 ## Update your AKS cluster to use your Azure Container Registry
 
-<!-- workflow.cron(0 3 * * 0) -->
+<!-- workflow.cron(0 2 * * 6) -->
 <!-- workflow.include(../create/README.md) -->
 <!-- workflow.include(../../../containers/acr/create/README.md) -->
 

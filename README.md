@@ -140,18 +140,6 @@ exit 0
 | 9. [Push a Tomcat Docker image](containers/acr/tomcat/README.md) | [Workflow](.github/workflows/containers_acr_tomcat_README_md.yml) | [![containers/acr/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_acr_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_acr_tomcat_README_md.yml)
 | 10. [Push a WildFly Docker image](containers/acr/wildfly/README.md) | [Workflow](.github/workflows/containers_acr_wildfly_README_md.yml) | [![containers/acr/wildfly/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_acr_wildfly_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_acr_wildfly_README_md.yml)
 
-### Azure Kubernetes Service examples
-
-| Name | Link | Status
-| ---- | ---- | ------
-| 1. [Create an Azure Kubernetes Service cluster](containers/aks/create/README.md) | [Workflow](.github/workflows/containers_aks_create_README_md.yml) | [![containers/aks/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_create_README_md.yml)
-| 2. [Create a Kube config file using admin access](containers/aks/create-kube-config/README.md) | [Workflow](.github/workflows/containers_aks_create-kube-config_README_md.yml) | [![containers/aks/create-kube-config/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_create-kube-config_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_create-kube-config_README_md.yml)
-| 3. [Update your cluster to use your Azure Container Registry](containers/aks/use-your-acr/README.md) | [Workflow](.github/workflows/containers_aks_use-your-acr_README_md.yml) | [![containers/aks/use-your-acr/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_use-your-acr_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_use-your-acr_README_md.yml)
-| 4. [Deploy a Spring Boot application](containers/aks/springboot/README.md) | [Workflow](.github/workflows/containers_aks_springboot_README_md.yml) | [![containers/aks/springboot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_springboot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_springboot_README_md.yml)
-| 5. [Deploy Tomcat](containers/aks/tomcat/README.md) | [Workflow](.github/workflows/containers_aks_tomcat_README_md.yml) | [![containers/aks/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_tomcat_README_md.yml)
-| 6. [Deploy WildFly](containers/aks/wildfly/README.md) | [Workflow](.github/workflows/containers_aks_wildfly_README_md.yml) | [![containers/aks/wildfly/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_wildfly_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_wildfly_README_md.yml)
-| 7. [Deploy a GraalVM application](containers/aks/graalvm/README.md) | [Workflow](.github/workflows/containers_aks_graalvm_README_md.yml) | [![containers/aks/graalvm/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_graalvm_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_graalvm_README_md.yml)
-
 ## Additional examples
 
 1. [Azure Cache for Redis examples](redis/README.md)            <!-- workflows run Sunday    / 1 example  -->
@@ -159,6 +147,7 @@ exit 0
 1. [Azure Database for MySQL examples](mysql/README.md)         <!-- workflows run Tuesday   / 4 examples -->
 1. [Azure Database for PostgreSQL examples](postgres/README.md) <!-- workflows run Monday    / 4 examples -->
 1. [Azure Key Vault examples](keyvault/README.md)               <!-- workflows run Tuesday   / 6 examples -->
+1. [Azure Kubernetes Service examples](aks/README.md)           <!-- workflows run Saturday  / 7 examples -->
 1. [Azure Monitor examples](monitor/README.md)                  <!-- workflows run Thursday  / 1 example  -->
 1. [Azure Networking examples](network/README.md)               <!-- workflows run Wednesday / 1 example  -->
 1. [Azure Red Hat OpenShift examples](aro/README.md)            <!-- workflows run Friday    / 1 example  -->
@@ -167,7 +156,7 @@ exit 0
 1. [Azure SQL Database examples](sql/README.md)                 <!-- workflows run Wednesday / 4 examples -->
 1. [Azure Storage examples](storage/README.md)                  <!-- workflows run Monday    / 3 examples -->
 
-<!-- next day for workflows is Saturday -->
+<!-- next day for workflows is Sunday -->
 
 ## Contributing
 

@@ -1,28 +1,28 @@
 
 # Deploy Tomcat
 
-[![containers/aks/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aks_tomcat_README_md.yml)
+[![aks/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_tomcat_README_md.yml)
 
 ## Prerequisites
 
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
-1. [Create an Azure Container Registry](../../../containers/acr/create/README.md)
-1. [Push a Tomcat Docker image to Azure Container Registry](../../acr/tomcat/README.md)
+1. [Create an Azure Container Registry](../../containers/acr/create/README.md)
+1. [Push a Tomcat Docker image to Azure Container Registry](../../containers/acr/tomcat/README.md)
 1. [Deploy an Azure Kubernetes Service cluster](../create/README.md)
 1. [Create a Kube config for your Azure Kubernetes Service cluster (using admin access keys)](../create-kube-config/README.md)
 1. [Update your AKS cluster to use your Azure Container Registry](../use-your-acr/README.md)
 
 ## Deploying Tomcat
 
-<!-- workflow.cron(0 5 * * 0) -->
-<!-- workflow.include(../../acr/tomcat/README.md) -->
+<!-- workflow.cron(0 3 * * 6) -->
+<!-- workflow.include(../../containers/acr/tomcat/README.md) -->
 <!-- workflow.include(../create-kube-config/README.md) -->
 <!-- workflow.include(../use-your-acr/README.md) -->
 <!-- workflow.run() 
 
-cd containers/aks/tomcat
+  cd aks/tomcat
 
   -->
 
@@ -66,12 +66,9 @@ own Azure Container Registry.
 <!-- workflow.directOnly()
   
   sleep 240
-
   export URL=http://$(kubectl get service/tomcat --output jsonpath="{.status.loadBalancer.ingress[0].ip}")
   export RESULT=$(curl $URL)
-
   az group delete --name $RESOURCE_GROUP --yes || true
-
   if [[ "$RESULT" != *"custom Tomcat"* ]]; then
     echo "Response did not contain 'custom Tomcat'"
     exit 1
@@ -81,7 +78,7 @@ own Azure Container Registry.
 
 <!-- workflow.run() 
 
-cd ../../..
+  cd ../..
   
   -->
 
