@@ -6,7 +6,7 @@
 
 This example assumes you have previously completed the following example:
 
-1. [Create an Azure Resource Group](../../../general/group/create/README.md)
+1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Create an Azure Container Registry](../../acr/create/README.md)
 1. [Build and push a Dropwizard application to ACR](../../acr/dropwizard/README.md)
 1. [Create an Azure Container Apps environment](../create-environment/README.md)

@@ -7,12 +7,12 @@
 
 This example assumes you have previously completed the following example:
 
-1. [Create an Azure Resource Group](../../../general/group/create/README.md)
+1. [Create an Azure Resource Group](../../group/create/README.md)
 
 ## Create an Azure Kubernetes Service cluster
 
 <!-- workflow.cron(0 1 * * 0) -->
-<!-- workflow.include(../../../general/group/create/README.md) -->
+<!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.run()
 
   if [[ -z $AKS ]]; then

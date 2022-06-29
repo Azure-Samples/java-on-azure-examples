@@ -64,7 +64,7 @@
         <module>compute</module>
         <module>containers</module>
         <module>databases</module>
-        <module>general</module>
+        <module>group</module>
         <module>keyvault</module>
         <module>monitor</module>
         <module>network</module>

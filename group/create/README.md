@@ -1,20 +1,20 @@
 
 # Create an Azure Resource Group
 
-[![general/group/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/general_group_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/general_group_create_README_md.yml)
+[![group/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/group_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/group_create_README_md.yml)
 
 ## Prerequisites
 
 This example assume you are logged into Azure CLI and have set your default
 subscription, if you have NOT done so please go to our top-level
-[README](../../../README.md)
+[README](../../README.md)
 
 ## Create the Resource Group
 
 To setup the environment variables needed to create the Resource Group execute
 the command lines below:
 
-<!-- workflow.cron(0 1 * * 0) -->
+<!-- workflow.cron(0 0 * * 6) -->
 <!-- workflow.skip() -->
 ```shell
   export RESOURCE_GROUP=java-on-azure
@@ -52,9 +52,9 @@ Do NOT forget to remove the resources once you are done running the example.
 
 ## Next steps
 
-* [Create an Azure Container Apps environment](../../../containers/aca/create-environment/README.md)
-* [Create an Azure Kubernetes Service cluster](../../../containers/aks/create/README.md)
-* [Create an Azure Spring Cloud](../../../compute/spring-cloud/create/README.md)
+* [Create an Azure Container Apps environment](../../containers/aca/create-environment/README.md)
+* [Create an Azure Kubernetes Service cluster](../../containers/aks/create/README.md)
+* [Create an Azure Spring Cloud](../../compute/spring-cloud/create/README.md)
 
 ## Reference documentation
 

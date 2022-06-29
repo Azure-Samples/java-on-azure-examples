@@ -204,20 +204,12 @@ exit 0
 | ---- | ---- | ------
 | 1. [Create an Azure Cache for Redis](databases/redis/create/README.md) | [Workflow](.github/workflows/databases_redis_create_README_md.yml) | [![databases/redis/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_redis_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_redis_create_README_md.yml)
 
-## General
-
-### Azure Resource Group examples
-
-| Name | Link | Status
-| ---- | ---- | ------ 
-| 1. [Create an Azure Resource Group](general/group/create/README.md) | [Workflow](.github/workflows/general_group_create_README_md.yml) | [![general/group/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/general_group_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/general_group_create_README_md.yml)
-| 2. [Delete an Azure Resource Group](general/group/delete/README.md) | [Workflow](.github/workflows/general_group_delete_README_md.yml) | [![general/group/delete/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/general_group_delete_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/general_group_delete_README_md.yml)
-
 ## Additional examples
 
 1. [Azure Key Vault examples](keyvault/README.md)     <!-- workflows run Tuesday   / 6 examples -->
 1. [Azure Monitor examples](monitor/README.md)        <!-- workflows run Thursday  / 1 example  -->
 1. [Azure Networking examples](network/README.md)     <!-- workflows run Wednesday / 1 example  -->
+1. [Azure Resource Group examples](group/README.md)   <!-- workflows run Saturday  / 2 examples -->
 1. [Azure Service Bus examples](servicebus/README.md) <!-- workflows run Friday    / 9 examples -->
 1. [Azure Storage examples](storage/README.md)        <!-- workflows run Monday    / 3 examples -->
 

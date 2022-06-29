@@ -7,12 +7,12 @@
 
 This example assumes you have previously completed the following examples:
 
-1. [Create a resource group](../../../general/group/create/README.md)
+1. [Create a resource group](../../group/create/README.md)
 1. [Create a namespace](../create-namespace/README.md)
 1. [Create an event hub](../create-eventhub/README.md)
 
 <!-- workflow.cron(0 7 * * 4) -->
-<!-- workflow.include(../../../general/group/create/README.md) -->
+<!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../create-namespace/README.md) -->
 <!-- workflow.include(../create-eventhub/README.md) -->
 

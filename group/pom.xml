@@ -7,10 +7,10 @@
         <artifactId>general</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.general.group</groupId>
+    <groupId>examples.azure.group</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>General :: Resource Group</name>
+    <name>Azure Resource Group examples</name>
     <modules>
         <module>create</module>
         <module>delete</module>

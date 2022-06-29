@@ -1,19 +1,19 @@
 
 # Delete an Azure Resource Group
 
-[![general/group/delete/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/general_group_delete_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/general_group_delete_README_md.yml)
+[![group/delete/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/group_delete_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/group_delete_README_md.yml)
 
 ## Prerequisites
 
 This example assumes you are logged into Azure CLI and have set your default
 subscription, if you have NOT done so please go to our top-level
-[README](../../../README.md)
+[README](../../README.md)
 
 ## Delete the Resource Group
 
 To delete the Resource Group use the following command line:
 
-<!-- workflow.cron(0 2 * * 0) -->
+<!-- workflow.cron(0 1 * * 6) -->
 <!-- workflow.include(../create/README.md) -->
 
 ```shell
@@ -29,6 +29,6 @@ fi
 
 ## Next steps
 
-1. [Manage resource groups and template deployments](https://docs.microsoft.com/en-us/cli/azure/group)
+1. [Manage resource groups and template deployments](https://docs.microsoft.com/cli/azure/group)
 
 1m

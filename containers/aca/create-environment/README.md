@@ -6,12 +6,12 @@
 
 This example assumes you have previously completed the following example:
 
-1. [Create an Azure Resource Group](../../../general/group/create/README.md)
+1. [Create an Azure Resource Group](../../group/create/README.md)
 
 ## Setup the CLI extensions
 
 <!-- workflow.cron(0 16 * * 1) -->
-<!-- workflow.include(../../../general/group/create/README.md) -->
+<!-- workflow.include(../../group/create/README.md) -->
 
 Ensure you are running the latest Azure CLI and install the Azure Container
 Apps extensions for the CLI using the command lines below:

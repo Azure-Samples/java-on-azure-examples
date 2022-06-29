@@ -7,7 +7,7 @@
 
 This example assumes you have previously completed the following examples:
 
-1. [Create an Azure Resource Group](../../../general/group/create/README.md)
+1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Install Azure Functions Core Tools](../install-tools/README.md)
 1. [Create an Azure Cosmos DB](../../../databases/cosmosdb/create/README.md)
 

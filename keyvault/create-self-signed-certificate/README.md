@@ -7,7 +7,7 @@
 
 This example assumes you have previously completed the following example:
 
-1. [Create an Azure Resource Group](../../general/group/create/README.md)
+1. [Create an Azure Resource Group](../group/create/README.md)
 1. [Create an Azure Key Vault](../create/README.md)
 
 <!-- workflow.cron(0 3 * * 2) -->

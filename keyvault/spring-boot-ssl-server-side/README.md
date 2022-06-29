@@ -7,7 +7,7 @@
 
 This example assumes you have previously completed the following examples:
 
-1. [Create an Azure Resource Group](../../general/group/create/README.md)
+1. [Create an Azure Resource Group](../group/create/README.md)
 1. [Create an Azure Key Vault](../create/README.md)
 1. [Create a self-signed certificate](../create-self-signed-certificate/README.md)
 1. Create a 'read-only' Service Principal

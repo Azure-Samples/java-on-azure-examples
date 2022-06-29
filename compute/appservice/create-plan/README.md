@@ -7,12 +7,12 @@
 
 This example assumes you have previously completed the following example:
 
-1. [Create an Azure Resource Group](../../../general/group/create/README.md)
+1. [Create an Azure Resource Group](../../group/create/README.md)
 
 ## Create an App Service Plan
 
 <!-- workflow.cron(0 2 * * 1) -->
-<!-- workflow.include(../../../general/group/create/README.md) -->
+<!-- workflow.include(../../group/create/README.md) -->
 
 First, create the environment variable used for our App Service Plan
 using the command line below:

@@ -7,12 +7,12 @@
 
 This example assumes you have previously completed the following example:
 
-1. [Create an Azure Resource Group](../../general/group/create/README.md)
+1. [Create an Azure Resource Group](../group/create/README.md)
 
 ## Create a Log Analytics workspace
 
 <!-- workflow.cron(0 0 * * 4) -->
-<!-- workflow.include(../../general/group/create/README.md) -->
+<!-- workflow.include(../group/create/README.md) -->
 
 To create the log analytics workspace use the following command line:
 
