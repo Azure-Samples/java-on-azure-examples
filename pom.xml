@@ -80,6 +80,14 @@
         <module>sql</module>
         <module>storage</module>
     </modules>
+    <profiles>
+        <profile>
+            <id>functionapp</id>
+            <modules>
+                <module>functionapp</module>
+            </modules>
+        </profile>
+    </profiles>
     <properties>
         <azure.bom.version>1.2.3</azure.bom.version>
         <azure.spring.version>3.1.0</azure.spring.version>

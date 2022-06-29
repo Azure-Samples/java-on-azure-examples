@@ -4,13 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>examples.azure</groupId>
-        <artifactId>compute</artifactId>
+        <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.compute.functions</groupId>
+    <groupId>examples.azure.functionapp</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Compute :: Functions</name>
+    <name>Azure Functions examples</name>
     <modules>
         <module>cosmosdb-output</module>
         <module>install-tools</module>

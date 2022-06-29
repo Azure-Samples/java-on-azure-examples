@@ -1,7 +1,7 @@
 
 # Deploy a Cosmos DB output Function
 
-[![compute/functions/cosmosdb-output/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_functions_cosmosdb-output_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_functions_cosmosdb-output_README_md.yml)
+[![functionapp/cosmosdb-output/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_cosmosdb-output_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_cosmosdb-output_README_md.yml)
 
 ## Prerequisites
 
@@ -9,15 +9,15 @@ This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Install Azure Functions Core Tools](../install-tools/README.md)
-1. [Create an Azure Cosmos DB](../../../databases/cosmosdb/create/README.md)
+1. [Create an Azure Cosmos DB](../../cosmosdb/create/README.md)
 
 <!-- workflow.cron(0 1 * * 2) -->
 <!-- workflow.include(../install-tools/README.md) -->
-<!-- workflow.include(../../../databases/cosmosdb/create/README.md) -->
+<!-- workflow.include(../../cosmosdb/create/README.md) -->
 
 <!-- workflow.run() 
 
-cd compute/functions/cosmosdb-output
+  cd functionapp/cosmosdb-output
 
   -->
 
@@ -84,7 +84,7 @@ following command line:
 
 <!-- workflow.run() 
 
-cd ../../..
+  cd ../..
 
   -->
 

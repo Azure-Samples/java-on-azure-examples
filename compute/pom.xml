@@ -15,12 +15,4 @@
     <modules>
         <module>appservice</module>
     </modules>
-    <profiles>
-        <profile>
-            <id>functions</id>
-            <modules>
-                <module>functions</module>
-            </modules>
-        </profile>
-    </profiles>
 </project>

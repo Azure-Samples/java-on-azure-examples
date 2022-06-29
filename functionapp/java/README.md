@@ -1,11 +1,11 @@
 
 # Deploy a Java Function
 
-[![compute/functions/java/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_functions_java_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_functions_java_README_md.yml)
+[![functionapp/java/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_java_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_java_README_md.yml)
 
 ## Prerequisites
 
-<!-- workflow.cron(0 3 * * 2) -->
+<!-- workflow.cron(0 1 * * 4) -->
 <!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../install-tools/README.md) -->
 
@@ -16,9 +16,9 @@ This example assumes you have previously completed the following examples:
 
 <!-- workflow.run() 
 
-cd compute/functions/java
-mkdir .mvn
-echo "-ntp" > .mvn/maven.config
+  cd functionapp/java
+  mkdir .mvn
+  echo "-ntp" > .mvn/maven.config
 
   -->
 
@@ -81,7 +81,7 @@ You should see `Hello World` in your browser.
 
 <!-- workflow.run()
 
-cd ../../..
+  cd ../..
 
  -->
 

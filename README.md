@@ -87,14 +87,6 @@ exit 0
 | 17. [Swap a deployment slot](compute/appservice/swap-deployment-slot/README.md) | [Workflow](.github/workflows/compute_appservice_swap-deployment-slot_README_md.yml) | [![compute/appservice/swap-deployment-slot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_appservice_swap-deployment-slot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_appservice_swap-deployment-slot_README_md.yml)
 | 18. [Deploy a web application on a managed Tomcat](compute/appservice/tomcat-helloworld/README.md) | [Workflow](.github/workflows/compute_appservice_tomcat-helloworld_README_md.yml) | [![compute/appservice/tomcat-helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_appservice_tomcat-helloworld_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_appservice_tomcat-helloworld_README_md.yml)
 
-### Azure Functions examples
-
-| Name | Link | Status
-| ---- | ---- | ------
-| 1. [Deploy a Cosmos DB output Function](compute/functions/cosmosdb-output/README.md) | [Workflow](.github/workflows/compute_functions_cosmosdb-output_README_md.yml) | [![compute/functions/cosmosdb-output/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_functions_cosmosdb-output_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_functions_cosmosdb-output_README_md.yml)
-| 2. [Install Azure Functions Core Tools](compute/functions/install-tools/README.md) | [Workflow](.github/workflows/compute_functions_install-tools_README_md.yml) |[![compute/functions/install-tools/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_functions_install-tools_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_functions_install-tools_README_md.yml)
-| 3. [Deploy a Java Function](compute/functions/java/README.md) | [Workflow](.github/workflows/compute_functions_java_README_md.yml) | [![compute/functions/java/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_functions_java_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_functions_java_README_md.yml)
-
 ## Additional examples
 
 1. [Azure Cache for Redis examples](redis/README.md)            <!-- workflows run Sunday    / 1 example   -->
@@ -104,6 +96,7 @@ exit 0
 1. [Azure Cosmos DB examples](cosmosdb/README.md)               <!-- workflows run Thursday  / 8 examples  -->
 1. [Azure Database for MySQL examples](mysql/README.md)         <!-- workflows run Tuesday   / 4 examples  -->
 1. [Azure Database for PostgreSQL examples](postgres/README.md) <!-- workflows run Monday    / 4 examples  -->
+1. [Azure Functions examples](functionapp/README.md)            <!-- workflows run Thursday  / 3 examples  -->
 1. [Azure Key Vault examples](keyvault/README.md)               <!-- workflows run Tuesday   / 6 examples  -->
 1. [Azure Kubernetes Service examples](aks/README.md)           <!-- workflows run Saturday  / 7 examples  -->
 1. [Azure Monitor examples](monitor/README.md)                  <!-- workflows run Thursday  / 1 example   -->
@@ -115,7 +108,7 @@ exit 0
 1. [Azure SQL Database examples](sql/README.md)                 <!-- workflows run Wednesday / 4 examples  -->
 1. [Azure Storage examples](storage/README.md)                  <!-- workflows run Monday    / 3 examples  -->
 
-<!-- next day for workflows is Thursday -->
+<!-- next day for workflows is Friday -->
 
 ## Contributing
 
