@@ -117,17 +117,10 @@ exit 0
 | 6. [Deploy Tomcat](containers/aca/tomcat/README.md) | [Workflow](.github/workflows/containers_aca_tomcat_README_md.yml) | [![containers/aca/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_tomcat_README_md.yml)
 | 7. [Deploy WildFly](containers/aca/wildfly/README.md) | [Workflow](.github/workflows/containers_aca_wildfly_README_md.yml) | [![containers/aca/wildfly/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_wildfly_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aca_wildfly_README_md.yml)
 
-### Azure Container Instances examples
-
-| Name | Link | Status
-| ---- | ---- | ------
-| 1. [Deploy a Quarkus application](containers/aci/quarkus/README.md) | [Workflow](.github/workflows/containers_aci_quarkus_README_md.yml) | [![containers/aci/quarkus/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aci_quarkus_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aci_quarkus_README_md.yml)
-| 2. [Deploy Tomcat](containers/aci/tomcat/README.md) | [Workflow](.github/workflows/containers_aci_tomcat_README_md.yml) | [![containers/aci/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aci_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aci_tomcat_README_md.yml)
-| 3. [Deploy WildFly](containers/aci/wildfly/README.md) | [Workflow](.github/workflows/containers_aci_wildfly_README_md.yml) | [![containers/aci/wildfly/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aci_wildfly_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aci_wildfly_README_md.yml)
-
 ## Additional examples
 
 1. [Azure Cache for Redis examples](redis/README.md)            <!-- workflows run Sunday    / 1 example   -->
+1. [Azure Container Instances examples](container/README.md)    <!-- workflows run Monday    / 3 examples  -->
 1. [Azure Container Registry examples](acr/README.md)           <!-- workflows run Sunday    / 15 examples -->
 1. [Azure Cosmos DB examples](cosmosdb/README.md)               <!-- workflows run Thursday  / 8 examples  -->
 1. [Azure Database for MySQL examples](mysql/README.md)         <!-- workflows run Tuesday   / 4 examples  -->
@@ -142,7 +135,7 @@ exit 0
 1. [Azure SQL Database examples](sql/README.md)                 <!-- workflows run Wednesday / 4 examples  -->
 1. [Azure Storage examples](storage/README.md)                  <!-- workflows run Monday    / 3 examples  -->
 
-<!-- next day for workflows is Monday -->
+<!-- next day for workflows is Tuesday -->
 
 ## Contributing
 

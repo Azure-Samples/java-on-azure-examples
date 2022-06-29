@@ -4,17 +4,16 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>examples.azure</groupId>
-        <artifactId>containers</artifactId>
+        <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.containers.aci</groupId>
+    <groupId>examples.azure.container</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Containers :: Container Instance</name>
+    <name>Azure Container Instances examples</name>
     <modules>
         <module>quarkus</module>
         <module>tomcat</module>
         <module>wildfly</module>
     </modules>
 </project>
-

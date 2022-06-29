@@ -1,20 +1,20 @@
 
 # Deploy a Quarkus application
 
-[![containers/aci/quarkus/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aci_quarkus_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aci_quarkus_README_md.yml)
+[![container/quarkus/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/container_quarkus_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/container_quarkus_README_md.yml)
 
 ## Prerequisites
 
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
-1. [Create an Azure Container Registry](../../../containers/acr/create/README.md)
-1. [Create an 'acrpull' Service Principal](../../../containers/acr/create-acrpull-service-principal/README.md)
-1. [Push a Quarkus Docker application to Azure Container Registry](../../../containers/acr/quarkus/README.md)
+1. [Create an Azure Container Registry](../../acr/create/README.md)
+1. [Create an 'acrpull' Service Principal](../../acr/create-acrpull-service-principal/README.md)
+1. [Push a Quarkus Docker application to Azure Container Registry](../../acr/quarkus/README.md)
 
 ## Deploy the Quarkus application
 
-<!-- workflow.cron(0 10 * * 2) -->
+<!-- workflow.cron(0 0 * * 1) -->
 <!-- workflow.include(../../acr/create-acrpull-service-principal/README.md) -->
 <!-- workflow.include(../../acr/quarkus/README.md) -->
 
@@ -48,15 +48,13 @@ hello
 
 <!-- workflow.directOnly()
 
-export URL=http://$(az container show --resource-group $RESOURCE_GROUP --name $ACI_QUARKUS --query ipAddress.fqdn --output tsv):8080
-export RESULT=$(curl $URL)
-
-az group delete --name $RESOURCE_GROUP --yes || true
-
-if [[ "$RESULT" != *"hello"* ]]; then
-  echo "Response did not contain 'hello'"
-  exit 1
-fi
+  export URL=http://$(az container show --resource-group $RESOURCE_GROUP --name $ACI_QUARKUS --query ipAddress.fqdn --output tsv):8080
+  export RESULT=$(curl $URL)
+  az group delete --name $RESOURCE_GROUP --yes || true
+  if [[ "$RESULT" != *"hello"* ]]; then
+    echo "Response did not contain 'hello'"
+    exit 1
+  fi
 
   -->
 

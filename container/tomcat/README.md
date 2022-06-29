@@ -1,20 +1,20 @@
 
 # Deploy Tomcat
 
-[![containers/aci/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aci_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aci_tomcat_README_md.yml)
+[![container/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/container_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/container_tomcat_README_md.yml)
 
 ## Prerequisites
 
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
-1. [Create an Azure Container Registry](../../../containers/acr/create/README.md)
+1. [Create an Azure Container Registry](../../acr/create/README.md)
 1. [Create an 'acrpull' Service Principal](../../acr/create-acrpull-service-principal/README.md)
 1. [Push a Tomcat Docker image to Azure Container Registry](../../acr/tomcat/README.md)
 
 ## Deploy Tomcat
 
-<!-- workflow.cron(0 14 * * 2) -->
+<!-- workflow.cron(0 1 * * 1) -->
 <!-- workflow.include(../../acr/create-acrpull-service-principal/README.md) -->
 <!-- workflow.include(../../acr/tomcat/README.md) -->
 
@@ -49,15 +49,13 @@ own Azure Container Registry.
 
 <!-- workflow.directOnly()
 
-export URL=http://$(az container show --resource-group $RESOURCE_GROUP --name $ACI_TOMCAT --query ipAddress.fqdn --output tsv):8080
-export RESULT=$(curl $URL)
-
-az group delete --name $RESOURCE_GROUP --yes || true
-
-if [[ "$RESULT" != *"custom Tomcat"* ]]; then
-  echo "Response did not contain 'custom Tomcat'"
-  exit 1
-fi
+  export URL=http://$(az container show --resource-group $RESOURCE_GROUP --name $ACI_TOMCAT --query ipAddress.fqdn --output tsv):8080
+  export RESULT=$(curl $URL)
+  az group delete --name $RESOURCE_GROUP --yes || true
+  if [[ "$RESULT" != *"custom Tomcat"* ]]; then
+    echo "Response did not contain 'custom Tomcat'"
+    exit 1
+  fi
 
   -->
 

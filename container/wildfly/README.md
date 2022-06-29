@@ -1,20 +1,20 @@
 
 # Deploy WildFly
 
-[![containers/aci/wildfly/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aci_wildfly_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_aci_wildfly_README_md.yml)
+[![container/wildfly/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/container_wildfly_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/container_wildfly_README_md.yml)
 
 ## Prerequisites
 
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
-1. [Create an Azure Container Registry](../../../containers/acr/create/README.md)
-1. [Create an 'acrpull' Service Principal](../../../containers/acr/create-acrpull-service-principal/README.md)
-1. [Push a WildFly Docker image to Azure Container Registry](../../../containers/acr/wildfly/README.md)
+1. [Create an Azure Container Registry](../../acr/create/README.md)
+1. [Create an 'acrpull' Service Principal](../../acr/create-acrpull-service-principal/README.md)
+1. [Push a WildFly Docker image to Azure Container Registry](../../acr/wildfly/README.md)
 
 ## Deploy WildFly
 
-<!-- workflow.cron(0 16 * * 2) -->
+<!-- workflow.cron(0 2 * * 1) -->
 <!-- workflow.include(../../acr/create-acrpull-service-principal/README.md) -->
 <!-- workflow.include(../../acr/wildfly/README.md) -->
 
@@ -55,15 +55,13 @@ own Azure Container Registry.
 
 <!-- workflow.directOnly()
 
-export URL=http://$(az container show --resource-group $RESOURCE_GROUP --name $ACI_WILDFLY --query ipAddress.fqdn --output tsv):8080
-export RESULT=$(curl $URL)
-
-az group delete --name $RESOURCE_GROUP --yes || true
-
-if [[ "$RESULT" != *"custom WildFly"* ]]; then
-  echo "Response did not contain 'custom WildFly'"
-  exit 1
-fi
+  export URL=http://$(az container show --resource-group $RESOURCE_GROUP --name $ACI_WILDFLY --query ipAddress.fqdn --output tsv):8080
+  export RESULT=$(curl $URL)
+  az group delete --name $RESOURCE_GROUP --yes || true
+  if [[ "$RESULT" != *"custom WildFly"* ]]; then
+    echo "Response did not contain 'custom WildFly'"
+    exit 1
+  fi
 
   -->
 
