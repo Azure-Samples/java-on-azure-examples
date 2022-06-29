@@ -41,8 +41,8 @@
         <dependencies>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>springboot-dependencies</artifactId>
-                <version>2.1.12.RELEASE</version>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <version>${springboot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
