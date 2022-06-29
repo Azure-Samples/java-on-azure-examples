@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 3 * * 7'
+    - cron: '0 3 * * 0'
   workflow_dispatch: 
 
 name: 'acr/glassfish/README.md'
