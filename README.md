@@ -53,15 +53,6 @@ exit 0
 | 3. [Create an Azure Data Explorer cluster](analytics/adx/create/README.md) | [Workflow](.github/workflows/analytics_adx_create_README_md.yml) | [![analytics/adx/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_create_README_md.yml)
 | 4. [Ingest Client](analytics/adx/ingest-client/README.md) | [Workflow](.github/workflows/analytics_adx_ingest-client_README_md.yml) | [![analytics/adx/ingest-client/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_ingest-client_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_adx_ingest-client_README_md.yml)
 
-### Azure Event Hubs examples
-
-| Name | Link | Status
-| ---- | ---- | ------
-| 1. [Create an event hub](analytics/eventhubs/create-eventhub/README.md) | [Workflow](.github/workflows/analytics_eventhubs_create-eventhub_README_md.yml) |  [![analytics/eventhubs/create-eventhub/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_eventhubs_create-eventhub_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_eventhubs_create-eventhub_README_md.yml)
-| 2. [Create a namespace](analytics/eventhubs/create-namespace/README.md) | [Workflow](.github/workflows/analytics_eventhubs_create-namespace_README_md.yml) | [![analytics/eventhubs/create-namespace/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_eventhubs_create-namespace_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_eventhubs_create-namespace_README_md.yml)
-| 3. [Receive an event](analytics/eventhubs/receive-event/README.md) | [Workflow](.github/workflows/analytics_eventhubs_receive-event_README_md.yml) |  [![analytics/eventhubs/receive-event/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_eventhubs_receive-event_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_eventhubs_receive-event_README_md.yml)
-| 4. [Send an event](analytics/eventhubs/send-event/README.md) | [Workflow](.github/workflows/analytics_eventhubs_send-event_README_md.yml) | [![analytics/eventhubs/send-event/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_eventhubs_send-event_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_eventhubs_send-event_README_md.yml)
-
 ## Our alphabetical list of examples
 
 1. [Azure App Service examples](appservice/)           <!-- workflows run Friday    / 18 examples -->
@@ -72,6 +63,7 @@ exit 0
 1. [Azure Cosmos DB examples](cosmosdb/)               <!-- workflows run Thursday  / 8 examples  -->
 1. [Azure Database for MySQL examples](mysql/)         <!-- workflows run Tuesday   / 4 examples  -->
 1. [Azure Database for PostgreSQL examples](postgres/) <!-- workflows run Monday    / 4 examples  -->
+1. [Azure Event Hubs examples](eventhubs/)             <!-- workflows run Saturday  / 4 examples  -->
 1. [Azure Functions examples](functionapp/)            <!-- workflows run Thursday  / 3 examples  -->
 1. [Azure Key Vault examples](keyvault/)               <!-- workflows run Tuesday   / 6 examples  -->
 1. [Azure Kubernetes Service examples](aks/)           <!-- workflows run Saturday  / 7 examples  -->
@@ -84,7 +76,7 @@ exit 0
 1. [Azure SQL Database examples](sql/)                 <!-- workflows run Wednesday / 4 examples  -->
 1. [Azure Storage examples](storage/)                  <!-- workflows run Monday    / 3 examples  -->
 
-<!-- next day for workflows is Saturday -->
+<!-- next day for workflows is Sunday -->
 
 ## Contributing
 

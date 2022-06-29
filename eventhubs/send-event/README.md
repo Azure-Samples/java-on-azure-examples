@@ -1,7 +1,7 @@
 
 # Send an event
 
-[![analytics/eventhubs/send-event/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_eventhubs_send-event_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_eventhubs_send-event_README_md.yml)
+[![eventhubs/send-event/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/eventhubs_send-event_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/eventhubs_send-event_README_md.yml)
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ This example assumes you have previously completed the following examples:
 1. [Create a namespace](../create-namespace/README.md)
 1. [Create an event hub](../create-eventhub/README.md)
 
-<!-- workflow.cron(0 7 * * 4) -->
+<!-- workflow.cron(0 2 * * 6) -->
 <!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../create-namespace/README.md) -->
 <!-- workflow.include(../create-eventhub/README.md) -->
@@ -32,7 +32,7 @@ connect to the event hub:
 
 <!-- workflow.run() 
 
-cd analytics/eventhubs/send-event
+  cd eventhubs/send-event
 
   -->
 
@@ -51,8 +51,8 @@ Execute the following command line to send the event to the event hub:
 
 <!-- workflow.run()
 
-export RESULT=$(java -jar target/send-event.jar)
-cd ../../..
+  export RESULT=$(java -jar target/send-event.jar)
+  cd ../..
 
   -->
 

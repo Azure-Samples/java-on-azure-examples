@@ -1,7 +1,7 @@
 
 # Create an event hub
 
-[![analytics/eventhubs/create-eventhub/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_eventhubs_create-eventhub_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_eventhubs_create-eventhub_README_md.yml)
+[![eventhubs/create-eventhub/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/eventhubs_create-eventhub_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/eventhubs_create-eventhub_README_md.yml)
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@ This example assumes you have previously completed the following examples:
 1. [Create a resource group](../../group/create/README.md)
 1. [Create a namespace](../create-namespace/README.md)
 
-<!-- workflow.cron(0 7 * * 1) -->
+<!-- workflow.cron(0 1 * * 6) -->
 <!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../create-namespace/README.md) -->
 

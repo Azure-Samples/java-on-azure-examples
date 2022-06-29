@@ -3,15 +3,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>examples.azure.analytics.eventhubs</groupId>
+        <groupId>examples.azure.eventhubs</groupId>
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>eventhubs-send-event</artifactId>
+    <artifactId>eventhubs-receive-event</artifactId>
     <packaging>jar</packaging>
-    <name>Analytics :: Event Hubs :: Send an event</name>
+    <name>Receive an event</name>
     <build>
-        <finalName>send-event</finalName>
+        <finalName>receive-event</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -39,7 +39,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>examples.azure.eventhubs.sendevent.SendEvent</mainClass>
+                            <mainClass>examples.azure.eventhubs.receiveevent.ReceiveEvent</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

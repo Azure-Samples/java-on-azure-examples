@@ -1,7 +1,7 @@
 
 # Receive an event
 
-[![analytics/eventhubs/receive-event/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_eventhubs_receive-event_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_eventhubs_receive-event_README_md.yml)
+[![eventhubs/receive-event/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/eventhubs_receive-event_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/eventhubs_receive-event_README_md.yml)
 
 ## Prerequisites
 
@@ -12,7 +12,7 @@ This example assumes you have previously completed the following examples:
 1. [Create an event hub](../create-eventhub/README.md)
 1. [Send an event](../send-event/README.md)
 
-<!-- workflow.cron(0 7 * * 3) -->
+<!-- workflow.cron(0 3 * * 6) -->
 <!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../create-namespace/README.md) -->
 <!-- workflow.include(../create-eventhub/README.md) -->
@@ -24,7 +24,7 @@ Build the JAR file using the Maven command line below:
 
 <!-- workflow.run() 
 
-cd analytics/eventhubs/receive-event
+  cd eventhubs/receive-event
 
   -->
 
@@ -42,8 +42,8 @@ Execute the following command line to receive an event from the event hub:
 
 <!-- workflow.run()
 
-export RESULT=$(java -jar target/receive-event.jar)
-cd ../../..
+  export RESULT=$(java -jar target/receive-event.jar)
+  cd ../..
 
   -->
 
@@ -53,7 +53,7 @@ cd ../../..
 
   az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != 'Received: this is an event' ]]; then
-    echo "Error when receiving event to EventHub"
+    echo "Error when receiving event from EventHub"
     exit 1
   fi
 

@@ -1,7 +1,7 @@
 
 # Create a namespace
 
-[![analytics/eventhubs/create-namespace/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_eventhubs_create-namespace_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/analytics_eventhubs_create-namespace_README_md.yml)
+[![eventhubs/create-namespace/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/eventhubs_create-namespace_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/eventhubs_create-namespace_README_md.yml)
 
 ## Prerequisites
 
@@ -9,7 +9,7 @@ This example assumes you have previously completed the following example:
 
 1. [Create a resource group](../../group/create/README.md)
 
-<!-- workflow.cron(0 7 * * 2) -->
+<!-- workflow.cron(0 0 * * 6) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 ## Create the namespace

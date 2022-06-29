@@ -68,6 +68,7 @@
         <module>container</module>
         <module>containerapp</module>
         <module>cosmosdb</module>
+        <module>eventhubs</module>
         <module>group</module>
         <module>keyvault</module>
         <module>monitor</module>
