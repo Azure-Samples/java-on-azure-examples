@@ -198,14 +198,9 @@ exit 0
 | 3. [Load your PostgreSQL database with data](databases/postgresql/load-your-postgresql-database-with-data/README.md) | [Workflow](.github/workflows/databases_postgresql_load-your-postgresql-database-with-data_README_md.yml) | [![databases/postgresql/load-your-postgresql-database-with-data/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_postgresql_load-your-postgresql-database-with-data_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_postgresql_load-your-postgresql-database-with-data_README_md.yml)
 | 4. [JDBC command line client](databases/postgresql/get-country/README.md) | [Workflow](.github/workflows/databases_postgresql_get-country_README_md.yml) | [![databases/postgresql/get-country/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_postgresql_get-country_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_postgresql_get-country_README_md.yml)
 
-### Azure Cache for Redis examples
-
-| Name | Link | Status
-| ---- | ---- | ------
-| 1. [Create an Azure Cache for Redis](databases/redis/create/README.md) | [Workflow](.github/workflows/databases_redis_create_README_md.yml) | [![databases/redis/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_redis_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_redis_create_README_md.yml)
-
 ## Additional examples
 
+1. [Azure Cache for Redis examples](redis/README.md)  <!-- workflows run Sunday    / 1 example  -->
 1. [Azure Key Vault examples](keyvault/README.md)     <!-- workflows run Tuesday   / 6 examples -->
 1. [Azure Monitor examples](monitor/README.md)        <!-- workflows run Thursday  / 1 example  -->
 1. [Azure Networking examples](network/README.md)     <!-- workflows run Wednesday / 1 example  -->

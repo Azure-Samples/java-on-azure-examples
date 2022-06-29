@@ -3,15 +3,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>examples.azure</groupId>
-        <artifactId>databases</artifactId>
+        <groupId>examples.azure.redis</groupId>
+        <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.databases.redis</groupId>
-    <artifactId>project</artifactId>
+    <artifactId>redis-create</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Cache for Redis examples</name>
-    <modules>
-        <module>create</module>
-    </modules>
+    <name>Create an Azure Cache for Redis</name>
 </project>
