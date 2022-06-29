@@ -76,6 +76,7 @@
         <module>postgres</module>
         <module>redis</module>
         <module>servicebus</module>
+        <module>spring</module>
         <module>sql</module>
         <module>storage</module>
     </modules>

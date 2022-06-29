@@ -95,14 +95,6 @@ exit 0
 | 2. [Install Azure Functions Core Tools](compute/functions/install-tools/README.md) | [Workflow](.github/workflows/compute_functions_install-tools_README_md.yml) |[![compute/functions/install-tools/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_functions_install-tools_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_functions_install-tools_README_md.yml)
 | 3. [Deploy a Java Function](compute/functions/java/README.md) | [Workflow](.github/workflows/compute_functions_java_README_md.yml) | [![compute/functions/java/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_functions_java_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_functions_java_README_md.yml)
 
-### Azure Spring Cloud examples
-
-| Name | Link | Status
-| ---- | ---- | ------
-| 1. [Create an Azure Spring Cloud](compute/spring-cloud/create/README.md) | [Workflow](.github/workflows/compute_spring-cloud_create_README_md.yml) | [![compute/spring-cloud/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_spring-cloud_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_spring-cloud_create_README_md.yml)
-| 2. [Configure the Azure Spring Cloud Config Server](compute/spring-cloud/config-server/README.md) | [Workflow](.github/workflows/compute_spring-cloud_config-server_README_md.yml) | [![compute/spring-cloud/config-server/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_spring-cloud_config-server_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_spring-cloud_config-server_README_md.yml)
-| 3. [Deploy a Hello World Spring Boot application to Azure Spring Cloud](compute/spring-cloud/helloworld/README.md) | [Workflow](.github/workflows/compute_spring-cloud_helloworld_README_md.yml) | [![compute/spring-cloud/helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_spring-cloud_helloworld_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_spring-cloud_helloworld_README_md.yml)
-
 ## Additional examples
 
 1. [Azure Cache for Redis examples](redis/README.md)            <!-- workflows run Sunday    / 1 example   -->
@@ -119,10 +111,11 @@ exit 0
 1. [Azure Red Hat OpenShift examples](aro/README.md)            <!-- workflows run Friday    / 1 example   -->
 1. [Azure Resource Group examples](group/README.md)             <!-- workflows run Saturday  / 2 examples  -->
 1. [Azure Service Bus examples](servicebus/README.md)           <!-- workflows run Friday    / 9 examples  -->
+1. [Azure Spring Apps examples](spring/README.md)               <!-- workflows run Wednesday / 3 examples  -->
 1. [Azure SQL Database examples](sql/README.md)                 <!-- workflows run Wednesday / 4 examples  -->
 1. [Azure Storage examples](storage/README.md)                  <!-- workflows run Monday    / 3 examples  -->
 
-<!-- next day for workflows is Wednesday -->
+<!-- next day for workflows is Thursday -->
 
 ## Contributing
 

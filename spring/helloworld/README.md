@@ -8,7 +8,7 @@
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
-1. [Deploy an Azure Spring Cloud](../create/README.md)
+1. [Deploy an Azure Spring Apps environment](../create/README.md)
 
 <!-- workflow.cron(0 18 * * 2) -->
 <!-- workflow.include(../create/README.md) -->
@@ -17,7 +17,7 @@ This example assumes you have previously completed the following examples:
 
 <!-- workflow.run() 
 
-cd compute/spring-cloud/helloworld
+  cd spring/helloworld
 
   -->
 
@@ -56,7 +56,7 @@ to http://localhost:8080/
     --name helloworld \
     --service ${SPRING_CLOUD_NAME} \
     --resource-group ${RESOURCE_GROUP} \
-    --artifact-path ./target/springcloud-helloworld.jar
+    --artifact-path ./target/spring-helloworld.jar
 
   az spring app show \
     --name helloworld \
@@ -86,9 +86,7 @@ Hello World
     --query properties.url \
     --output tsv)
   export RESULT=$(curl $URL)
-
   az group delete --name $RESOURCE_GROUP --yes || true
-
   if [[ "$RESULT" != *"Hello World"* ]]; then
     echo "Response did not contain 'Hello World'"
     exit 1
@@ -100,7 +98,7 @@ Do NOT forget to remove the resources once you are done running the example.
 
 ## Reference documentation
 
-1. [Commands to manage Azure Spring Cloud](https://docs.microsoft.com/cli/azure/spring-cloud)
+1. [Commands to manage Azure Spring Apps](https://docs.microsoft.com/cli/azure/spring)
 1. [Azure Spring Cloud Documentation](https://docs.microsoft.com/azure/spring-cloud/)
 1. [Quickstart: Build and deploy apps to Azure Spring Cloud](https://docs.microsoft.com/azure/spring-cloud/quickstart-deploy-apps?pivots=programming-language-java)
 

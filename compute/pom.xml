@@ -14,7 +14,6 @@
     <name>Compute</name>
     <modules>
         <module>appservice</module>
-        <module>spring-cloud</module>
     </modules>
     <profiles>
         <profile>

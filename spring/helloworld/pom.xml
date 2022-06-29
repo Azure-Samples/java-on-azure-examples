@@ -3,15 +3,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.12.RELEASE</version>
-        <relativePath/>
+        <groupId>examples.azure.spring</groupId>
+        <artifactId>project</artifactId>
+        <version>1-SNAPSHOT</version>
     </parent>
-    <groupId>examples.azure.compute.springapps</groupId>
-    <artifactId>springcloud-helloworld</artifactId>
-    <version>1-SNAPSHOT</version>
-    <name>Compute :: Spring Cloud :: Deploy a Hello World Spring Boot application to an Azure Spring Cloud</name>
+    <artifactId>spring-helloworld</artifactId>
+    <name>Deploy a Hello World Spring Boot application</name>
 
     <properties>
         <example.appName>${example.prefix}-springcloud-helloworld</example.appName>
@@ -43,6 +40,13 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>springboot-dependencies</artifactId>
+                <version>2.1.12.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>Greenwich.RELEASE</version>
@@ -53,7 +57,7 @@
     </dependencyManagement>
 
     <build>
-        <finalName>springcloud-helloworld</finalName>
+        <finalName>spring-helloworld</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
