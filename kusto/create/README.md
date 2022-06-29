@@ -11,7 +11,7 @@ This example assumes you have previously completed the following example:
 
 ## Create an Azure Data Explorer cluster
 
-<!-- workflow.cron(0 0 * * 7) -->
+<!-- workflow.cron(0 0 * * 0) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 Install the CLI extension using the following command line:

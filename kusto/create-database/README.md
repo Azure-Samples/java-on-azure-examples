@@ -12,7 +12,7 @@ This example assumes you have previously completed the following examples:
 
 ## Create a database
 
-<!-- workflow.cron(0 1 * * 7) -->
+<!-- workflow.cron(0 1 * * 0) -->
 <!-- workflow.include(../create/README.md) -->
 
 Setup the environment variable for the database using the command

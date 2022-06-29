@@ -12,7 +12,7 @@ This example assumes you have previously completed the following examples:
 
 ## Build the WAR file
 
-<!-- workflow.cron(0 8 * * 7) -->
+<!-- workflow.cron(0 8 * * 0) -->
 <!-- workflow.include(../create/README.md) -->
 
 To build the WAR file use the following command line:
