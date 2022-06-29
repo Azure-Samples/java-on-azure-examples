@@ -1,7 +1,7 @@
 
 # Create an Azure Database for PostgreSQL
 
-[![databases/postgresql/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_postgresql_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_postgresql_create_README_md.yml)
+[![postgres/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgres_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgres_create_README_md.yml)
 
 ## Prerequisites
 
@@ -9,7 +9,7 @@ This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 
-<!-- workflow.cron(0 16 * * 5) -->
+<!-- workflow.cron(0 0 * * 1) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 ## Create the Azure Database for PostgreSQL

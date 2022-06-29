@@ -16,7 +16,5 @@
         <module>cosmosdb</module>
         <module>mssql</module>
         <module>mysql</module>
-        <module>postgresql</module>
-        <module>redis</module>
     </modules>
 </project>

@@ -1,7 +1,7 @@
 
 # JDBC command line client
 
-[![databases/postgresql/get-country/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_postgresql_get-country_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_postgresql_get-country_README_md.yml)
+[![postgres/get-country/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgres_get-country_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgres_get-country_README_md.yml)
 
 ## Prerequisites
 
@@ -14,7 +14,7 @@ This example assumes you have previously completed the following examples:
 1. [Install psql client](https://www.postgresql.org/download/README.md)
 1. [Load your PostgreSQL database with your data](../load-your-postgresql-database-with-data/README.md)
 
-<!-- workflow.cron(0 14 * * 2) -->
+<!-- workflow.cron(0 3 * * 1) -->
 <!-- workflow.include(../load-your-postgresql-database-with-data/README.md) -->
 
 ## JDBC command line client
@@ -23,7 +23,7 @@ This example will get country information from the database.
 
 <!-- workflow.run()
 
-cd databases/postgresql/get-country
+cd postgres/get-country
 
   -->
 
@@ -45,7 +45,7 @@ it into the shell. Omit the backslash when using it in your configuration files.
 
 <!-- workflow.run()
 
-cd ../../..
+cd ../..
 
   -->
 
@@ -55,9 +55,9 @@ Do NOT forget to remove the resources once you are done running the example.
 
 <!-- workflow.directOnly()
 
-  cd databases/postgresql/get-country
+  cd postgres/get-country
   export RESULT=$(java -jar target/get-country.jar jdbc:postgresql://$POSTGRESQL_DNS_NAME:5432/demo?ssl=true\&sslmode=require $POSTGRESQL_CLIENT_USERNAME $POSTGRESQL_PASSWORD USA)
-  cd ../../..
+  cd ../..
   az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != *"United States"* ]]; then
     echo "Unable to get the correct country information"

@@ -1,7 +1,7 @@
 
 # Load your PostgreSQL database with data
 
-[![databases/postgresql/load-your-postgresql-database-with-data/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_postgresql_load-your-postgresql-database-with-data_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/databases_postgresql_load-your-postgresql-database-with-data_README_md.yml)
+[![postgres/load-your-postgresql-database-with-data/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgres_load-your-postgresql-database-with-data_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/postgres_load-your-postgresql-database-with-data_README_md.yml)
 
 ## Prerequisites
 
@@ -13,7 +13,7 @@ This example assumes you have previously completed the following examples:
 1. [Open PostgreSQL server firewall to your IP address](../open-firewall-to-your-ip/README.md)
 1. [Install psql client](https://www.postgresql.org/download/README.md)
 
-<!-- workflow.cron(0 14 * * 2) -->
+<!-- workflow.cron(0 2 * * 1) -->
 <!-- workflow.include(../open-firewall-to-your-ip/README.md) -->
 
 ## Load your PostgreSQL database with data
@@ -56,7 +56,7 @@ And to exit the `psql` tool use the following command line:
 
 <!-- workflow.run()
 
-  cd databases/postgresql/load-your-postgresql-database-with-data
+  cd postgres/load-your-postgresql-database-with-data
 
   export POSTGRESQL_DNS_NAME=`az postgres server show \
     --resource-group $RESOURCE_GROUP \
@@ -68,7 +68,7 @@ And to exit the `psql` tool use the following command line:
 
   PGPASSWORD=$POSTGRESQL_PASSWORD psql --host=$POSTGRESQL_DNS_NAME --port=5432 --username $POSTGRESQL_CLIENT_USERNAME --dbname=postgres --file load.sql
 
-  cd ../../..
+  cd ../..
 
   -->
 

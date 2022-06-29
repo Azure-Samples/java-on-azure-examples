@@ -68,6 +68,7 @@
         <module>keyvault</module>
         <module>monitor</module>
         <module>network</module>
+        <module>postgres</module>
         <module>redis</module>
         <module>servicebus</module>
         <module>storage</module>
