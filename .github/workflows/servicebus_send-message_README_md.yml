@@ -1,9 +1,9 @@
 on: 
   schedule: 
-    - cron: '0 5 * * 1'
+    - cron: '0 2 * * 5'
   workflow_dispatch: 
 
-name: 'integration/servicebus/send-jms-message/README.md'
+name: 'servicebus/send-message/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -38,12 +38,12 @@ jobs:
           --resource-group $RESOURCE_GROUP --namespace-name $SERVICE_BUS --name RootManageSharedAccessKey \
           --query primaryConnectionString --output tsv)
           
-          cd integration/servicebus/send-jms-message
+          cd servicebus/send-message
           
           mvn clean package
-          java -jar target/send-jms-message.jar
+          java -jar target/send-message.jar
           
-          cd ../../..
+          cd ../..
           
           
           export RESULT=$(az servicebus queue show --resource-group $RESOURCE_GROUP --namespace $SERVICE_BUS --name $SERVICE_BUS_QUEUE --query countDetails.activeMessageCount --output tsv)

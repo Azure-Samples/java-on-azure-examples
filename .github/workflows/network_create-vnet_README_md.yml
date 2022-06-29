@@ -1,9 +1,9 @@
 on: 
   schedule: 
-    - cron: '0 9 * * 5'
+    - cron: '0 0 * * 3'
   workflow_dispatch: 
 
-name: 'networking/vnet/create/README.md'
+name: 'network/create-vnet/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -32,4 +32,3 @@ jobs:
           if [[ "$RESULT" != Succeeded ]]; then
           exit 1
           fi
-          exit 0

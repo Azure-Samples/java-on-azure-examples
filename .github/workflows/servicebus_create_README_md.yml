@@ -1,9 +1,9 @@
 on: 
   schedule: 
-    - cron: '0 1 * * 1'
+    - cron: '0 0 * * 5'
   workflow_dispatch: 
 
-name: 'integration/servicebus/create/README.md'
+name: 'servicebus/create/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -27,6 +27,7 @@ jobs:
           --name $SERVICE_BUS \
           --sku Premium \
           --location $REGION
+          
           export RESULT=$(az servicebus namespace show --resource-group $RESOURCE_GROUP --name $SERVICE_BUS --query provisioningState --output tsv)
           az group delete --name $RESOURCE_GROUP --yes || true
           if [[ "$RESULT" != Succeeded ]]; then
