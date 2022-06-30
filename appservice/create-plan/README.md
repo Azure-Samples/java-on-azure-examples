@@ -25,6 +25,7 @@ using the command line below:
 <!-- workflow.run() 
 if [[ -z $APPSERVICE_PLAN ]]; then
   export APPSERVICE_PLAN=appservice-plan-$RANDOM
+  export REGION=northcentralus
 fi
 -->
 
