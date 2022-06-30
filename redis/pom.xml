@@ -13,5 +13,6 @@
     <name>Azure Cache for Redis examples</name>
     <modules>
         <module>create</module>
+        <module>lettuce</module>
     </modules>
 </project>
