@@ -23,6 +23,7 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           if [[ -z $APPSERVICE_PLAN ]]; then
           export APPSERVICE_PLAN=appservice-plan-$RANDOM
+          export REGION=northcentralus
           fi
           az appservice plan create \
           --resource-group $RESOURCE_GROUP \
@@ -52,7 +53,7 @@ jobs:
           --query=defaultHostName
           az webapp deployment slot list --name $APPSERVICE_TOMCAT_HELLOWORLD \
           --resource-group $RESOURCE_GROUP \
-          --query='[].defaultHostName'
+          --query='[0].defaultHostName'
           
           cd appservice/deploy-to-deployment-slot
           
@@ -63,6 +64,7 @@ jobs:
           -DresourceGroup=$RESOURCE_GROUP \
           -DdeploymentSlotName=staging
           
+          sleep 60
           cd ../..
           
           az webapp deployment slot swap \

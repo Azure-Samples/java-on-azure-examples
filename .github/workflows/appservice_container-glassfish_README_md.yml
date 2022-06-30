@@ -1,9 +1,9 @@
 on: 
   schedule: 
-    - cron: '0 10 * * 5'
+    - cron: '0 9 * * 5'
   workflow_dispatch: 
 
-name: 'appservice/docker-graalvm/README.md'
+name: 'appservice/container-glassfish/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -30,14 +30,13 @@ jobs:
           --sku Basic \
           --admin-enabled true
           
-          cd acr/graalvm
+          cd acr/glassfish
           
           mvn package
-          docker build -t builder -f Dockerfile.builder .
-          docker run --rm --tty -v $PWD/../../..:/mnt builder mvn -P graalvm -pl containers/acr/graalvm clean install
-          export ACR_GRAALVM_IMAGE=graalvm:latest
+          export ACR_GLASSFISH_IMAGE=glassfish:latest
           
-          az acr build --registry $ACR_NAME --image $ACR_GRAALVM_IMAGE .
+          az acr build --resource-group $RESOURCE_GROUP --registry $ACR_NAME --image $ACR_GLASSFISH_IMAGE .
+          az acr repository list --name $ACR_NAME --output table
           
           cd ../..
           
@@ -76,6 +75,7 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           if [[ -z $APPSERVICE_PLAN ]]; then
           export APPSERVICE_PLAN=appservice-plan-$RANDOM
+          export REGION=northcentralus
           fi
           az appservice plan create \
           --resource-group $RESOURCE_GROUP \
@@ -84,38 +84,40 @@ jobs:
           --is-linux \
           --sku P1v3
           
-          cd appservice/docker-graalvm
+          cd appservice/container-glassfish
           
-          export APPSERVICE_DOCKER_GRAALVM=appservice-docker-graalvm-$RANDOM
+          export APPSERVICE_CONTAINER_GLASSFISH=appservice-container-glassfish-$RANDOM
           
           mvn azure-webapp:deploy \
           --settings=$SETTINGS_XML \
-          -DappName=$APPSERVICE_DOCKER_GRAALVM \
-          -DimageName=$ACR_GRAALVM_IMAGE \
+          -DappName=$APPSERVICE_CONTAINER_GLASSFISH \
           -DappServicePlan=$APPSERVICE_PLAN \
+          -DimageName=$ACR_GLASSFISH_IMAGE \
           -DresourceGroup=$RESOURCE_GROUP \
           -DserverId=$ACR_NAME
           
-          echo `az webapp show \
+          az webapp show \
           --resource-group $RESOURCE_GROUP \
-          --name $APPSERVICE_DOCKER_GRAALVM \
+          --name $APPSERVICE_CONTAINER_GLASSFISH \
           --query 'hostNames[0]' \
-          --output tsv`/hello
+          --output tsv
           
           sleep 180
           cd ../..
           
           
-          export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_GRAALVM --output tsv --query state)
+          export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_CONTAINER_GLASSFISH --output tsv --query state)
           if [[ "$RESULT" != Running ]]; then
           echo 'Web application is NOT running'
           az group delete --name $RESOURCE_GROUP --yes || true
           exit 1
           fi
-          export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_GRAALVM --output tsv --query defaultHostName)/hello
+          export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_CONTAINER_GLASSFISH --output tsv --query defaultHostName)
+          export RESULT=$(curl $URL)
+          sleep 180
           export RESULT=$(curl $URL)
           az group delete --name $RESOURCE_GROUP --yes || true
-          if [[ "$RESULT" != *"Hello"* ]]; then
-          echo "Response did not contain 'Hello'"
+          if [[ "$RESULT" != *"custom Glassfish"* ]]; then
+          echo "Response did not contain 'custom Glassfish'"
           exit 1
           fi

@@ -3,7 +3,7 @@ on:
     - cron: '0 11 * * 5'
   workflow_dispatch: 
 
-name: 'appservice/docker-jetty/README.md'
+name: 'appservice/container-jetty/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -74,6 +74,7 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           if [[ -z $APPSERVICE_PLAN ]]; then
           export APPSERVICE_PLAN=appservice-plan-$RANDOM
+          export REGION=northcentralus
           fi
           az appservice plan create \
           --resource-group $RESOURCE_GROUP \
@@ -82,13 +83,13 @@ jobs:
           --is-linux \
           --sku P1v3
           
-          cd appservice/docker-jetty
+          cd appservice/container-jetty
           
-          export APPSERVICE_DOCKER_JETTY=appservice-docker-jetty-$RANDOM
+          export APPSERVICE_CONTAINER_JETTY=appservice-container-jetty-$RANDOM
           
           mvn azure-webapp:deploy \
           --settings=$SETTINGS_XML \
-          -DappName=$APPSERVICE_DOCKER_JETTY \
+          -DappName=$APPSERVICE_CONTAINER_JETTY \
           -DimageName=$ACR_JETTY_IMAGE \
           -DappServicePlan=$APPSERVICE_PLAN \
           -DresourceGroup=$RESOURCE_GROUP \
@@ -96,7 +97,7 @@ jobs:
           
           az webapp show \
           --resource-group $RESOURCE_GROUP \
-          --name $APPSERVICE_DOCKER_JETTY \
+          --name $APPSERVICE_CONTAINER_JETTY \
           --query 'hostNames[0]' \
           --output tsv
           
@@ -104,13 +105,13 @@ jobs:
           cd ../..
           
           
-          export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_JETTY --output tsv --query state)
+          export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_CONTAINER_JETTY --output tsv --query state)
           if [[ "$RESULT" != Running ]]; then
           echo 'Web application is NOT running'
           az group delete --name $RESOURCE_GROUP --yes || true
           exit 1
           fi
-          export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_JETTY --output tsv --query defaultHostName)
+          export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_CONTAINER_JETTY --output tsv --query defaultHostName)
           export RESULT=$(curl $URL)
           az group delete --name $RESOURCE_GROUP --yes || true
           if [[ "$RESULT" != *"custom Jetty"* ]]; then

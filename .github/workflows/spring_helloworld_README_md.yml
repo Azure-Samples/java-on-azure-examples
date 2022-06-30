@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 18 * * 2'
+    - cron: '0 2 * * 3'
   workflow_dispatch: 
 
 name: 'spring/helloworld/README.md'
@@ -34,26 +34,26 @@ jobs:
           mvn package
           az spring app create \
           --name helloworld \
-          --service ${SPRING_CLOUD_NAME} \
+          --service ${SPRING_NAME} \
           --resource-group ${RESOURCE_GROUP} \
           --is-public true
           
           az spring app deploy \
           --name helloworld \
-          --service ${SPRING_CLOUD_NAME} \
+          --service ${SPRING_NAME} \
           --resource-group ${RESOURCE_GROUP} \
           --artifact-path ./target/spring-helloworld.jar
           
           az spring app show \
           --name helloworld \
-          --service ${SPRING_CLOUD_NAME} \
+          --service ${SPRING_NAME} \
           --resource-group ${RESOURCE_GROUP} \
           --query properties.url \
           --output tsv
           
           export URL=$(az spring app show \
           --name helloworld \
-          --service ${SPRING_CLOUD_NAME} \
+          --service ${SPRING_NAME} \
           --resource-group ${RESOURCE_GROUP} \
           --query properties.url \
           --output tsv)

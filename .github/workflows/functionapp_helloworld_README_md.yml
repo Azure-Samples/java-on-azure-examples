@@ -3,7 +3,7 @@ on:
     - cron: '0 1 * * 4'
   workflow_dispatch: 
 
-name: 'functionapp/java/README.md'
+name: 'functionapp/helloworld/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -30,17 +30,20 @@ jobs:
           func
           
           
-          cd functionapp/java
+          cd functionapp/helloworld
           mkdir .mvn
           echo "-ntp" > .mvn/maven.config
           
-          export FUNCTIONS_JAVA=functions-java-$RANDOM
-          mvn -DappName=$FUNCTIONS_JAVA -DresourceGroup=$RESOURCE_GROUP package
-          mvn -DappName=$FUNCTIONS_JAVA  -DresourceGroup=$RESOURCE_GROUP \
+          export FUNCTIONAPP_HELLOWORLD=functionapp-helloworld-$RANDOM
+          mvn -DappName=$FUNCTIONAPP_HELLOWORLD \
+          -DresourceGroup=$RESOURCE_GROUP \
+          package
+          mvn -DappName=$FUNCTIONAPP_HELLOWORLD \
+          -DresourceGroup=$RESOURCE_GROUP \
           clean package azure-functions:deploy
           echo `az functionapp show \
           --resource-group $RESOURCE_GROUP \
-          --name $FUNCTIONS_JAVA \
+          --name $FUNCTIONAPP_HELLOWORLD \
           --query hostNames \
           --output tsv`/api/helloworld
           

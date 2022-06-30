@@ -74,6 +74,7 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           if [[ -z $APPSERVICE_PLAN ]]; then
           export APPSERVICE_PLAN=appservice-plan-$RANDOM
+          export REGION=northcentralus
           fi
           az appservice plan create \
           --resource-group $RESOURCE_GROUP \
