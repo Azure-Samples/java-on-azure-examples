@@ -1,4 +1,4 @@
-package examples.azure.springcloud.helloworld;
+package helloworld;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

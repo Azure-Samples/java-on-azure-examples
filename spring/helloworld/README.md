@@ -1,7 +1,7 @@
 
 # Deploy a Hello World Spring Boot application
 
-[![compute/spring-cloud/helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_spring-cloud_helloworld_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/compute_spring-cloud_helloworld_README_md.yml)
+[![spring/helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring_helloworld_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring_helloworld_README_md.yml)
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Deploy an Azure Spring Apps environment](../create/README.md)
 
-<!-- workflow.cron(0 18 * * 2) -->
+<!-- workflow.cron(0 2 * * 3) -->
 <!-- workflow.include(../create/README.md) -->
 
 ## Build the example
@@ -37,30 +37,27 @@ To run the example locally use the following Maven command line.
 ```
 
 Note you will see exception occurring in the logs because you are not running the
-application within the Azure Spring Cloud. Do not worry this expected and can be
-ignored.
-
-You can verify the application works by using your browser and going
-to http://localhost:8080/
+application within the Azure Spring Apps environment. Do not worry this expected
+and can be ignored.
 
 ## Deploy the Hello World Spring Boot application to Azure Spring Cloud
 
 ```shell
   az spring app create \
     --name helloworld \
-    --service ${SPRING_CLOUD_NAME} \
+    --service ${SPRING_NAME} \
     --resource-group ${RESOURCE_GROUP} \
     --is-public true
 
   az spring app deploy \
     --name helloworld \
-    --service ${SPRING_CLOUD_NAME} \
+    --service ${SPRING_NAME} \
     --resource-group ${RESOURCE_GROUP} \
     --artifact-path ./target/spring-helloworld.jar
 
   az spring app show \
     --name helloworld \
-    --service ${SPRING_CLOUD_NAME} \
+    --service ${SPRING_NAME} \
     --resource-group ${RESOURCE_GROUP} \
     --query properties.url \
     --output tsv
@@ -81,7 +78,7 @@ Hello World
 
   export URL=$(az spring app show \
     --name helloworld \
-    --service ${SPRING_CLOUD_NAME} \
+    --service ${SPRING_NAME} \
     --resource-group ${RESOURCE_GROUP} \
     --query properties.url \
     --output tsv)

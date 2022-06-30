@@ -1,5 +1,5 @@
 
-# Create an Azure Spring Cloud
+# Create an Azure Spring Apps environment
 
 [![spring/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring_create_README_md.yml)
 
@@ -9,10 +9,10 @@ This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 
-<!-- workflow.cron(0 16 * * 2) -->
+<!-- workflow.cron(0 0 * * 3) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
-## Create the Azure Spring Cloud
+## Create the Azure Spring Apps environment
 
 To create the Azure Spring Apps environment use the following command lines:
 
