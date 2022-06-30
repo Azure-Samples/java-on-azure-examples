@@ -1,7 +1,7 @@
 
-# Deploy a Java Function
+# Deploy a Hello World Function
 
-[![functionapp/java/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_java_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_java_README_md.yml)
+[![functionapp/helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_helloworld_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_helloworld_README_md.yml)
 
 ## Prerequisites
 
@@ -16,17 +16,17 @@ This example assumes you have previously completed the following examples:
 
 <!-- workflow.run() 
 
-  cd functionapp/java
+  cd functionapp/helloworld
   mkdir .mvn
   echo "-ntp" > .mvn/maven.config
 
   -->
 
-## Set the Java function name
+## Set the function name
 
 ```shell
 
-  export FUNCTIONS_JAVA=functions-java-$RANDOM
+  export FUNCTIONAPP_HELLOWORLD=functionapp-helloworld-$RANDOM
 
 ```
 
@@ -36,7 +36,9 @@ To build the JAR file use the following Maven command line.
 
 ```shell
 
-  mvn -DappName=$FUNCTIONS_JAVA -DresourceGroup=$RESOURCE_GROUP package
+  mvn -DappName=$FUNCTIONAPP_HELLOWORLD \
+      -DresourceGroup=$RESOURCE_GROUP \
+      package
 
 ```
 
@@ -46,8 +48,9 @@ To run the example locally use the following Maven command line.
 
 <!-- workflow.skip() -->
 ```shell
-  mvn -DappName=$FUNCTIONS_JAVA  -DresourceGroup=$RESOURCE_GROUP \
-    clean package azure-functions:run
+  mvn -DappName=$FUNCTIONAPP_HELLOWORLD \
+      -DresourceGroup=$RESOURCE_GROUP \
+      clean package azure-functions:run
 ```
 
 You can verify the function works by using your browser and going to 
@@ -59,8 +62,9 @@ You should see `Hello World` in your brower.
 
 ```shell
 
-  mvn -DappName=$FUNCTIONS_JAVA  -DresourceGroup=$RESOURCE_GROUP \
-    clean package azure-functions:deploy
+  mvn -DappName=$FUNCTIONAPP_HELLOWORLD \
+      -DresourceGroup=$RESOURCE_GROUP \
+      clean package azure-functions:deploy
 
 ```
 
@@ -71,7 +75,7 @@ following command line:
 
   echo `az functionapp show \
     --resource-group $RESOURCE_GROUP \
-    --name $FUNCTIONS_JAVA \
+    --name $FUNCTIONAPP_HELLOWORLD \
     --query hostNames \
     --output tsv`/api/helloworld
 

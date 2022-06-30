@@ -1,4 +1,4 @@
-package examples.azure.function.java;
+package helloworld;
 
 import com.microsoft.azure.functions.ExecutionContext;
 import com.microsoft.azure.functions.HttpMethod;

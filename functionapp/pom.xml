@@ -13,7 +13,7 @@
     <name>Azure Functions examples</name>
     <modules>
         <module>cosmosdb-output</module>
+        <module>helloworld</module>
         <module>install-tools</module>
-        <module>java</module>
     </modules>
 </project>
