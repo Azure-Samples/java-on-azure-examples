@@ -13,13 +13,12 @@
     <name>Azure App Service examples</name>
     <modules>
         <module>container-glassfish</module>
+        <module>container-graalvm</module>
         <module>create-deployment-slot</module>
         <module>create-plan</module>
         <module>delete-plan</module>
         <module>delete-webapp</module>
         <module>deploy-to-deployment-slot</module>
-        <module>docker-graalvm</module>
-        <module>docker-jetty</module>
         <module>docker-payara</module>
         <module>docker-tomcat</module>
         <module>docker-wildfly</module>
@@ -30,5 +29,6 @@
         <module>scale-manually</module>
         <module>swap-deployment-slot</module>
         <module>tomcat-helloworld</module>
+        <module>container-jetty</module>
     </modules>
 </project>

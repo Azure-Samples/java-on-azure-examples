@@ -1,7 +1,7 @@
 
-# Deploy Jetty using a Docker image
+# Deploy Jetty using a container image
 
-[![appservice/docker-jetty/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_docker-jetty_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_docker-jetty_README_md.yml)
+[![appservice/container-jetty/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_container-jetty_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_container-jetty_README_md.yml)
 
 ## Prerequisites
 
@@ -9,7 +9,7 @@ This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Create an Azure Container Registry](../../acr/create/README.md)
-1. [Push a Jetty Docker image to Azure Container Registry](../../acr/jetty/README.md)
+1. [Build and push a Jetty container image to ACR](../../acr/jetty/README.md)
 1. [Create settings.xml using admin access keys](../../acr/create-settings-xml/README.md)
 1. [Create an Azure App Service Plan](../create-plan/README.md)
 
@@ -21,18 +21,18 @@ This example assumes you have previously completed the following examples:
 <!-- workflow.include(../create-plan/README.md) -->
 <!-- workflow.run() 
 
-  cd appservice/docker-jetty
+  cd appservice/container-jetty
 
   -->
 
 To deploy Jetty use the following command lines:
 
 ```shell
-  export APPSERVICE_DOCKER_JETTY=appservice-docker-jetty-$RANDOM
+  export APPSERVICE_CONTAINER_JETTY=appservice-container-jetty-$RANDOM
 
   mvn azure-webapp:deploy \
     --settings=$SETTINGS_XML \
-    -DappName=$APPSERVICE_DOCKER_JETTY \
+    -DappName=$APPSERVICE_CONTAINER_JETTY \
     -DimageName=$ACR_JETTY_IMAGE \
     -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
@@ -40,7 +40,7 @@ To deploy Jetty use the following command lines:
 
   az webapp show \
     --resource-group $RESOURCE_GROUP \
-    --name $APPSERVICE_DOCKER_JETTY \
+    --name $APPSERVICE_CONTAINER_JETTY \
     --query 'hostNames[0]' \
     --output tsv
 ```
@@ -61,13 +61,13 @@ own Azure Container Registry.
 
 <!-- workflow.directOnly()
 
-  export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_JETTY --output tsv --query state)
+  export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_CONTAINER_JETTY --output tsv --query state)
   if [[ "$RESULT" != Running ]]; then
     echo 'Web application is NOT running'
     az group delete --name $RESOURCE_GROUP --yes || true
     exit 1
   fi
-  export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_JETTY --output tsv --query defaultHostName)
+  export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_CONTAINER_JETTY --output tsv --query defaultHostName)
   export RESULT=$(curl $URL)
   az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != *"custom Jetty"* ]]; then
@@ -87,10 +87,10 @@ to the Maven command line to customize your deployment.
 | `appName`              | the application name              |
 | `appServicePlan`       | the App Service plan to use       |
 | `imageName`            | the Docker image name             |
-| `serverId`             | the Maven server id               |
 | `registry`             | the Azure Container Registry name |
 | `registryUrl`          | the Azure Container Registry url  |
 | `resourceGroup`        | the Azure Resource Group name     |
+| `serverId`             | the Maven server id               |
 
 ## Cleanup
 

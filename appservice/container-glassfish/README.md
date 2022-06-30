@@ -28,11 +28,11 @@ This example assumes you have previously completed the following examples:
 To deploy Glassfish use the following command lines:
 
 ```shell
-  export APPSERVICE_DOCKER_GLASSFISH=appservice-container-glassfish-$RANDOM
+  export APPSERVICE_CONTAINER_GLASSFISH=appservice-container-glassfish-$RANDOM
 
   mvn azure-webapp:deploy \
     --settings=$SETTINGS_XML \
-    -DappName=$APPSERVICE_DOCKER_GLASSFISH \
+    -DappName=$APPSERVICE_CONTAINER_GLASSFISH \
     -DappServicePlan=$APPSERVICE_PLAN \
     -DimageName=$ACR_GLASSFISH_IMAGE \
     -DresourceGroup=$RESOURCE_GROUP \
@@ -40,7 +40,7 @@ To deploy Glassfish use the following command lines:
 
   az webapp show \
     --resource-group $RESOURCE_GROUP \
-    --name $APPSERVICE_DOCKER_GLASSFISH \
+    --name $APPSERVICE_CONTAINER_GLASSFISH \
     --query 'hostNames[0]' \
     --output tsv
 ```
@@ -61,13 +61,13 @@ Then open your browser to the URL shown as output and you should see:
 
 <!-- workflow.directOnly()
 
-  export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_GLASSFISH --output tsv --query state)
+  export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_CONTAINER_GLASSFISH --output tsv --query state)
   if [[ "$RESULT" != Running ]]; then
     echo 'Web application is NOT running'
     az group delete --name $RESOURCE_GROUP --yes || true
     exit 1
   fi
-  export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_GLASSFISH --output tsv --query defaultHostName)
+  export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_CONTAINER_GLASSFISH --output tsv --query defaultHostName)
   export RESULT=$(curl $URL)
   sleep 180
   export RESULT=$(curl $URL)

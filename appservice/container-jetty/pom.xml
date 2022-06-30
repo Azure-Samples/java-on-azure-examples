@@ -7,9 +7,9 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>appservice-docker-graalvm</artifactId>
+    <artifactId>appservice-container-jetty</artifactId>
     <packaging>pom</packaging>
-    <name>Deploy a GraalVM application using a Docker image</name>
+    <name>Deploy Jetty using a container image</name>
     <build>
         <plugins>
             <plugin>
@@ -37,9 +37,9 @@
         </plugins>
     </build>
     <properties>
-        <appName>appservice-docker-graalvm-${example.postfix}</appName>
+        <appName>appservice-docker-jetty-${example.postfix}</appName>
         <appServicePlan>appservice-plan</appServicePlan>
-        <imageName>acr-graalvm:latest</imageName>
+        <imageName>acr-jetty:latest</imageName>
         <resourceGroup>azure-examples</resourceGroup>
         <registryUrl>https://${serverId}.azurecr.io</registryUrl>
         <serverId>${env.ACR_NAME}</serverId>

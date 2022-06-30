@@ -7,7 +7,7 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>appservice-glassfish</artifactId>
+    <artifactId>appservice-container-glassfish</artifactId>
     <packaging>pom</packaging>
     <name>Deploy Glassfish using a container image</name>
     <build>
@@ -37,7 +37,7 @@
         </plugins>
     </build>
     <properties>
-        <appName>appservice-docker-glassfish-${example.postfix}</appName>
+        <appName>appservice-container-glassfish-${example.postfix}</appName>
         <appServicePlan>appservice-plan</appServicePlan>
         <imageName>acr-glassfish:latest</imageName>
         <resourceGroup>azure-examples</resourceGroup>
