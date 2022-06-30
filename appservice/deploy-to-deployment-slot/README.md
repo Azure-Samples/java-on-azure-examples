@@ -38,20 +38,21 @@ This example assumes you have previously completed the following examples:
 
 <!-- workflow.run()
 
+  sleep 60
   cd ../..
 
   -->
 
 <!-- workflow.directOnly() 
 
-  export RESULT=$(az webapp deployment slot list --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD --output tsv --query [0].state)
+  export RESULT=$(az webapp deployment slot list --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD --output tsv --query '[0].state')
   if [[ "$RESULT" != Running ]]; then
     echo 'Deployment slot is NOT running'
     az group delete --name $RESOURCE_GROUP --yes || true
     exit 1
   fi
   sleep 60
-  export URL=https://$(az webapp deployment slot list --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD --output tsv --query [0].defaultHostName)
+  export URL=https://$(az webapp deployment slot list --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD --output tsv --query '[0].defaultHostName')
   export RESULT=$(curl $URL)
   az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != *"Hello Staging"* ]]; then
@@ -67,9 +68,11 @@ browser and going to the `xxxxx.azurewebsites.net` address the command echoes.
 You can also get the URL by using the following command:
 
 ```text
-  az webapp show --name $APPSERVICE_TOMCAT_HELLOWORLD \
-                 --resource-group $RESOURCE_GROUP \
-                 --query=defaultHostName
+  az webapp deployment slot list \
+    --resource-group $RESOURCE_GROUP \
+    --name $APPSERVICE_TOMCAT_HELLOWORLD \
+    --output tsv \
+    --query '[0].defaultHostName'
 ```
 
 ## Cleanup

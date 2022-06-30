@@ -1,7 +1,7 @@
 
-# Deploy Glassfish using a Docker image
+# Deploy Glassfish using a container image
 
-[![appservice/docker-glassfish/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_docker-glassfish_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_docker-glassfish_README_md.yml)
+[![appservice/container-glassfish/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_container-glassfish_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_container-glassfish_README_md.yml)
 
 ## Prerequisites
 
@@ -9,11 +9,11 @@ This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Create an Azure Container Registry](../../acr/create/README.md)
-1. [Push a Glassfish Docker image to Azure Container Registry](../../acr/glassfish/README.md)
+1. [Build and push a Glassfish container image to ACR](../../acr/glassfish/README.md)
 1. [Create settings.xml using admin access keys](../../acr/create-settings-xml/README.md)
 1. [Create an Azure App Service Plan](../create-plan/README.md)
 
-## Deploy Glassfish using a Docker image
+## Deploy Glassfish using a container image
 
 <!-- workflow.cron(0 9 * * 5) -->
 <!-- workflow.include(../../acr/glassfish/README.md) -->
@@ -21,20 +21,20 @@ This example assumes you have previously completed the following examples:
 <!-- workflow.include(../create-plan/README.md) -->
 <!-- workflow.run() 
 
-  cd appservice/docker-glassfish
+  cd appservice/container-glassfish
 
   -->
 
 To deploy Glassfish use the following command lines:
 
 ```shell
-  export APPSERVICE_DOCKER_GLASSFISH=appservice-docker-glassfish-$RANDOM
+  export APPSERVICE_DOCKER_GLASSFISH=appservice-container-glassfish-$RANDOM
 
   mvn azure-webapp:deploy \
     --settings=$SETTINGS_XML \
     -DappName=$APPSERVICE_DOCKER_GLASSFISH \
-    -DimageName=$ACR_GLASSFISH_IMAGE \
     -DappServicePlan=$APPSERVICE_PLAN \
+    -DimageName=$ACR_GLASSFISH_IMAGE \
     -DresourceGroup=$RESOURCE_GROUP \
     -DserverId=$ACR_NAME
 
@@ -55,7 +55,8 @@ To deploy Glassfish use the following command lines:
 Then open your browser to the URL shown as output and you should see:
 
 ```text
-And this is served by a custom Glassfish using a Docker image coming from our own Azure Container Registry.
+  And this is served by a custom Glassfish using a Docker image coming from our 
+  own Azure Container Registry.
 ```
 
 <!-- workflow.directOnly()
@@ -87,11 +88,11 @@ to the Maven command line to customize your deployment.
 |------------------------|-----------------------------------|
 | `appName`              | the application name              |
 | `appServicePlan`       | the App Service plan to use       |
-| `imageName`            | the Docker image name             |
-| `serverId`             | the Maven server id               |
+| `imageName`            | the container image name          |
 | `registry`             | the Azure Container Registry name |
 | `registryUrl`          | the Azure Container Registry url  |
 | `resourceGroup`        | the Azure Resource Group name     |
+| `serverId`             | the Maven server id               |
 
 ## Cleanup
 

@@ -19,13 +19,12 @@
                     <schemaVersion>v2</schemaVersion>
                     <appName>${appName}</appName>
                     <appServicePlanName>${appServicePlan}</appServicePlanName>
-                    <region>${region}</region>
                     <deploymentSlot>
                         <name>${deploymentSlotName}</name>
                     </deploymentSlot>
                     <runtime>
                         <os>linux</os>
-                        <javaVersion>${javaVersion}</javaVersion>
+                        <javaVersion>${java.version}</javaVersion>
                         <webContainer>${webContainer}</webContainer>
                     </runtime>
                     <deployment>
@@ -50,11 +49,9 @@
         </dependency>
     </dependencies>
     <properties>
-        <appName>helloworld-${example.postfix}</appName>
-        <appServicePlan>azure-examples-appserviceplan</appServicePlan>
+        <appName>appservice-tomcat-helloworld-${example.postfix}</appName>
+        <appServicePlan>appservice-plan</appServicePlan>
         <deploymentSlotName>staging</deploymentSlotName>
-        <javaVersion>jre8</javaVersion>
-        <region>westus2</region>
         <webContainer>tomcat 8.5</webContainer>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

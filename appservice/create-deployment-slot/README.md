@@ -38,14 +38,14 @@ The following command gives you the URL of the web app that is in the staging sl
 ```shell
   az webapp deployment slot list --name $APPSERVICE_TOMCAT_HELLOWORLD \
                                  --resource-group $RESOURCE_GROUP \
-                                 --query='[].defaultHostName'
+                                 --query='[0].defaultHostName'
 ```
 
 ## Cleanup
 
 <!-- workflow.directOnly()
 
-  export RESULT=$(az webapp deployment slot list --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD  --output tsv --query [0].state)
+  export RESULT=$(az webapp deployment slot list --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD  --output tsv --query '[0].state')
   az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != Running ]]; then
     echo 'Deployment slot is NOT running'
