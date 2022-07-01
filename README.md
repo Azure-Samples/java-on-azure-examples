@@ -39,13 +39,15 @@ Set your default subscription for this session using the subscription id from th
 ````
 
 <!-- workflow.run() 
-exit 0
+
+  exit 0
+
   -->
 
 ## Our alphabetical list of examples
 
 1. [Azure App Service examples](appservice/)           <!-- workflows run Friday    / 18 examples -->
-1. [Azure Cache for Redis examples](redis/)            <!-- workflows run Sunday    / 1 example   -->
+1. [Azure Cache for Redis examples](redis/)            <!-- workflows run Sunday    / 2 examples  -->
 1. [Azure Container Apps examples](containerapp/)      <!-- workflows run Tuesday   / 9 examples  -->
 1. [Azure Container Instances examples](container/)    <!-- workflows run Monday    / 3 examples  -->
 1. [Azure Container Registry examples](acr/)           <!-- workflows run Sunday    / 15 examples -->

@@ -1,4 +1,4 @@
-package examples.azure.appservice.javase.springboot;
+package helloworld;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

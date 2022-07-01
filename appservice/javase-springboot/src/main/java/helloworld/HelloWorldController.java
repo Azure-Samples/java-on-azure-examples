@@ -1,4 +1,4 @@
-package examples.azure.appservice.javase.springboot;
+package helloworld;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
