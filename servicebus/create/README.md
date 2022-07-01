@@ -1,18 +1,18 @@
 
 # Create an Azure Service Bus
 
-[![README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_create_README_md.yml)
+[![servicebus/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_create_README_md.yml)
 
 ## Prerequisites
 
 This example assumes you have previously completed the following example:
 
-1. [Create an Azure Resource Group](../group/create/README.md)
+1. [Create an Azure Resource Group](../../group/create/README.md)
 
 ## Create an Azure Service Bus
 
 <!-- workflow.cron(0 0 * * 5) -->
-<!-- workflow.include(../group/create/README.md) -->
+<!-- workflow.include(../../group/create/README.md) -->
 
 First, create the environment variable used for our Service Bus
 using the command line below:

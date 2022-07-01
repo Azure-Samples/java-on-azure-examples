@@ -1,13 +1,13 @@
 
 # Receive a JMS message from an Azure Service Bus Queue
 
-[![integration/servicebus/receive-jms-message/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_receive-jms-message_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/integration_servicebus_receive-jms-message_README_md.yml)
+[![servicebus/receive-jms-message/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_receive-jms-message_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_receive-jms-message_README_md.yml)
 
 ## Prerequisites
 
 This example assumes you have previously completed the following examples:
 
-1. [Create an Azure Resource Group](../group/create/README.md)
+1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Create an Azure Service Bus](../create/README.md)
 1. [Create an Azure Service Bus Queue](../create-queue/README.md)
 1. [Send a JMS message](../send-jms-message/README.md)
