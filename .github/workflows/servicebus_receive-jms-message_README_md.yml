@@ -14,7 +14,13 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
-          # WARN File could not be found: servicebus/group/create/README.md
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          export REGION=southcentralus
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
           export SERVICE_BUS=service-bus-$RANDOM
           az servicebus namespace create \
           --resource-group $RESOURCE_GROUP \
