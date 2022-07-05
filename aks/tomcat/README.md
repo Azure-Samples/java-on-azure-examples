@@ -8,8 +8,8 @@
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
-1. [Create an Azure Container Registry](../../containers/acr/create/README.md)
-1. [Push a Tomcat Docker image to Azure Container Registry](../../containers/acr/tomcat/README.md)
+1. [Create an Azure Container Registry](../../acr/create/README.md)
+1. [Push a Tomcat Docker image to Azure Container Registry](../../acr/tomcat/README.md)
 1. [Deploy an Azure Kubernetes Service cluster](../create/README.md)
 1. [Create a Kube config for your Azure Kubernetes Service cluster (using admin access keys)](../create-kube-config/README.md)
 1. [Update your AKS cluster to use your Azure Container Registry](../use-your-acr/README.md)
@@ -17,7 +17,7 @@ This example assumes you have previously completed the following examples:
 ## Deploying Tomcat
 
 <!-- workflow.cron(0 3 * * 6) -->
-<!-- workflow.include(../../containers/acr/tomcat/README.md) -->
+<!-- workflow.include(../../acr/tomcat/README.md) -->
 <!-- workflow.include(../create-kube-config/README.md) -->
 <!-- workflow.include(../use-your-acr/README.md) -->
 <!-- workflow.run() 
