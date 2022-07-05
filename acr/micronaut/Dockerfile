@@ -5,43 +5,12 @@
 #
 # -----------------------------------------------------------------------------
 
-#
-# Microsoft OpenJDK 11
-#
 FROM mcr.microsoft.com/openjdk/jdk:11-ubuntu
-
-#
-# Create micronaut user
-#
-RUN groupadd -r micronaut && \
-    useradd -r -g micronaut micronaut
-
-#
-# Create micronaut directory
-#
-RUN mkdir -p /opt/micronaut
-
-#
-# Expose port 8080.
-#
-EXPOSE 8080
-
-#
-# Copy the JAR file.
-#
 COPY target/acr-micronaut.jar /opt/micronaut/acr-micronaut.jar
-
-#
-# Set file ownership
-#
-RUN chown -R micronaut /opt/micronaut
-
-#
-# Change user
-#
+RUN groupadd -r micronaut && \
+    useradd -r -g micronaut micronaut && \
+    mkdir -p /opt/micronaut && \
+    chown -R micronaut /opt/micronaut
+EXPOSE 8080
 USER micronaut
-
-#
-# Startup command.
-#
 CMD ["java", "-jar", "/opt/micronaut/acr-micronaut.jar"]
