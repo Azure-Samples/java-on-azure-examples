@@ -8,9 +8,9 @@
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
-1. [Create an Azure Container Registry](../../containers/acr/create/README.md)
-1. [Push a GraalVM Docker image to Azure Container Registry](../../containers/acr/graalvm/README.md)
-1. [Create settings.xml using admin access keys](../../containers/acr/create-settings-xml/README.md)
+1. [Create an Azure Container Registry](../../acr/create/README.md)
+1. [Push a GraalVM Docker image to Azure Container Registry](../../acr/graalvm/README.md)
+1. [Create settings.xml using admin access keys](../../acr/create-settings-xml/README.md)
 1. [Deploy an Azure Kubernetes Service cluster](../create/README.md)
 1. [Create a Kube config for your Azure Kubernetes Service cluster (using admin access keys)](../create-kube-config/README.md)
 1. [Update your AKS cluster to use your Azure Container Registry](../use-your-acr/README.md)
@@ -18,7 +18,7 @@ This example assumes you have previously completed the following examples:
 ## Deploy a GraalVM application
 
 <!-- workflow.cron(0 7 * * 0) -->
-<!-- workflow.include(../../containers/acr/graalvm/README.md) -->
+<!-- workflow.include(../../acr/graalvm/README.md) -->
 <!-- workflow.include(../create-kube-config/README.md) -->
 <!-- workflow.include(../use-your-acr/README.md) -->
 <!-- workflow.run() 
