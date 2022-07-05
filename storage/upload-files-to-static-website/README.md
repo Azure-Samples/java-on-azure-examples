@@ -7,7 +7,7 @@
 
 This example assumes you have previously completed the following examples:
 
-1. [Create an Azure Resource Group](../group/create/README.md)
+1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Create an Azure Storage Account](../create/README.md)
 1. [Enale static website hosting](../enable-static-website/README.md)
 
