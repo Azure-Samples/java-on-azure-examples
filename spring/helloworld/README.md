@@ -53,6 +53,7 @@ and can be ignored.
     --name helloworld \
     --service ${SPRING_NAME} \
     --resource-group ${RESOURCE_GROUP} \
+    --disable-validation
     --artifact-path ./target/spring-helloworld.jar
 
   az spring app show \
