@@ -2,7 +2,7 @@
 
 | Name | Link | Status
 | ---- | ---- | ------
-| 1. [Deploy an Azure Red Hat OpenShift cluster](aro/create/README.md) | |
+| 1. [Deploy an Azure Red Hat OpenShift cluster](create/README.md) | |
 
 <!-- workflow.run() 
 
