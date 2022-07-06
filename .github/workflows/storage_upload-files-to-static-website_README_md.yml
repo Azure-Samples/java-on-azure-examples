@@ -14,7 +14,13 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
-          # WARN File could not be found: storage/group/create/README.md
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          export REGION=southcentralus
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
           export STORAGE_ACCOUNT_NAME=storage$RANDOM
           
           az storage account create \
