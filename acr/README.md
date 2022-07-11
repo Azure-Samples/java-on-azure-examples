@@ -16,7 +16,7 @@
 | 12. [Build and push a Helidon container image](helidon/README.md) | |
 | 13. [Build and push a Spring Boot container image](springboot/README.md) | |
 | 14. [Build and push a Piranha Micro container image](piranha/README.md) | |
-| 15. [Build and push a Micronaut container image](micronaut/README.md) | |
+| 15. [Build and push a Micronaut container image](micronaut/README.md) | [Workflow](../.github/workflows/acr_micronaut_README_md.yml) | [![acr/micronaut/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_micronaut_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_micronaut_README_md.yml)
 
 <!-- workflow.run() 
 
