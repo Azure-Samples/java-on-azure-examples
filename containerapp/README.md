@@ -10,7 +10,7 @@
 | 6. [Deploy Tomcat](tomcat/README.md) | [Workflow](../.github/workflows/containerapp_tomcat_README_md.yml) | [![containerapp/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_tomcat_README_md.yml)
 | 7. [Deploy WildFly](wildfly/README.md) | [Workflow](../.github/workflows/containerapp_wildfly_README_md.yml) | [![containerapp/wildfly/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_wildfly_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_wildfly_README_md.yml)
 | 8. [Deploy a Helidon application](helidon/README.md) | |
-| 9. [Deploy a Micronaut application](micronaut/README.md) | |
+| 9. [Deploy a Micronaut application](micronaut/README.md) | [Workflow](../.github/workflows/containerapp_micronaut_README_md.yml) | [![containerapp/micronaut/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_micronaut_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_micronaut_README_md.yml)
 
 <!-- workflow.run() 
 
