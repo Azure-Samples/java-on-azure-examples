@@ -47,7 +47,7 @@ Hello World
 
 <!-- workflow.directOnly()
 
-  sleep 60
+  sleep 120
   export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --name $ACA_PIRANHA --query properties.configuration.ingress.fqdn --output tsv)
   export RESULT=$(curl $URL)
   az group delete --name $RESOURCE_GROUP --yes || true
