@@ -36,9 +36,9 @@ To run the example locally use the following Maven command line.
   mvn spring-boot:run
 ```
 
-Note you will see exception occurring in the logs because you are not running the
-application within the Azure Spring Apps environment. Do not worry this expected
-and can be ignored.
+Note you will see exceptions occurring in the logs because you are not running
+the application within the Azure Spring Apps environment. Do not worry this
+expected and can be ignored.
 
 ## Deploy the Hello World Spring Boot application to Azure Spring Cloud
 
@@ -47,14 +47,16 @@ and can be ignored.
     --name helloworld \
     --service ${SPRING_NAME} \
     --resource-group ${RESOURCE_GROUP} \
-    --is-public true
+    --assign-endpoint \
+    --runtime-version Java_11 \
+    --verbose
 
   az spring app deploy \
     --name helloworld \
     --service ${SPRING_NAME} \
     --resource-group ${RESOURCE_GROUP} \
-    --disable-validation
-    --artifact-path ./target/spring-helloworld.jar
+    --artifact-path ./target/spring-helloworld.jar \
+    --verbose
 
   az spring app show \
     --name helloworld \
@@ -64,7 +66,7 @@ and can be ignored.
     --output tsv
 ```
 
-You can verify the application works, now on Azure Spring Cloud, by using your 
+You can verify the application works, now on Azure Spring Apps, by using your 
 browser and going to the URL shown.
 
 It should show you the following:

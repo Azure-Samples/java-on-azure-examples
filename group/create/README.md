@@ -25,7 +25,7 @@ the command lines below:
 
   if [[ -z $RESOURCE_GROUP ]]; then
     export RESOURCE_GROUP=java-on-azure-$RANDOM
-    export REGION=southcentralus
+    export REGION=northcentralus
   fi
 
   -->

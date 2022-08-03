@@ -8,6 +8,7 @@
         <version>1-SNAPSHOT</version>
     </parent>
     <artifactId>spring-helloworld</artifactId>
+    <packaging>jar</packaging>
     <name>Deploy a Hello World Spring Boot application</name>
     <build>
         <finalName>spring-helloworld</finalName>
@@ -15,6 +16,13 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
@@ -22,7 +30,7 @@
         <dependencies>
             <dependency>
                 <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-parent</artifactId>
+                <artifactId>spring-boot-dependencies</artifactId>
                 <version>${springboot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
