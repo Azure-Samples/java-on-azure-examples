@@ -17,7 +17,7 @@ jobs:
           
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
-          export REGION=southcentralus
+          export REGION=northcentralus
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
@@ -28,7 +28,7 @@ jobs:
           
           if [[ -z $ACA_ENVIRONMENT_NAME ]]; then
           export ACA_ENVIRONMENT_NAME=aca$RANDOM
-          export ACA_REGION=westus
+          export ACA_REGION=northcentralus
           fi
           
           az containerapp env create \

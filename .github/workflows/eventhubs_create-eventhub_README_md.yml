@@ -17,14 +17,14 @@ jobs:
           
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
-          export REGION=southcentralus
+          export REGION=northcentralus
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
           
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
-          export REGION=southcentralus
+          export REGION=northcentralus
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
