@@ -9,7 +9,7 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Create an Azure App Service Plan](../create-plan/README.md)
 
-<!-- workflow.cron(0 2 * * 5) -->
+<!-- workflow.cron(0 0 * * 3) -->
 <!-- workflow.include(../create-plan/README.md) -->
 
 ## Build the example

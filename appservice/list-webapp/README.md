@@ -13,7 +13,7 @@ This example assumes you have previously completed the following examples:
 
 ## List your web applications
 
-<!-- workflow.cron(0 3 * * 5) -->
+<!-- workflow.cron(0 0 * * 4) -->
 <!-- workflow.include(../tomcat-helloworld/README.md) -->
 
 To list the web applications use the following command line:

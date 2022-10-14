@@ -12,11 +12,11 @@
     <packaging>pom</packaging>
     <name>Azure App Service examples</name>
     <modules>
+        <module>create-plan</module>
+        <module>delete-plan</module>
         <module>container-glassfish</module>
         <module>container-graalvm</module>
         <module>create-deployment-slot</module>
-        <module>create-plan</module>
-        <module>delete-plan</module>
         <module>delete-webapp</module>
         <module>deploy-to-deployment-slot</module>
         <module>docker-payara</module>
