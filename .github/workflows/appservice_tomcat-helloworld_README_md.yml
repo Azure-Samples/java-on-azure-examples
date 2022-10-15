@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 2 * * 5'
+    - cron: '0 0 * * 3'
   workflow_dispatch: 
 
 name: 'appservice/tomcat-helloworld/README.md'

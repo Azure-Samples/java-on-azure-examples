@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 4 * * 5'
+    - cron: '0 0 * * 5'
   workflow_dispatch: 
 
 name: 'appservice/delete-webapp/README.md'
