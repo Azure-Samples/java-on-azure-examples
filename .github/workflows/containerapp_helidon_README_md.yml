@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 7 * * 2'
+    - cron: '0 0 * * 6'
   workflow_dispatch: 
 
 name: 'containerapp/helidon/README.md'

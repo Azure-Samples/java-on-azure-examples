@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 4 * * 3'
+    - cron: '0 1 * * 3'
   workflow_dispatch: 
 
 name: 'containerapp/springboot/README.md'
