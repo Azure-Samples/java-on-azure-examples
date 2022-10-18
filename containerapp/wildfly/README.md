@@ -13,7 +13,7 @@ This example assumes you have previously completed the following example:
 
 ## Deploy WildFly
 
-<!-- workflow.cron(0 6 * * 2) -->
+<!-- workflow.cron(0 1 * * 5) -->
 <!-- workflow.include(../../acr/wildfly/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 

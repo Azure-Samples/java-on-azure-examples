@@ -10,7 +10,7 @@ This example assumes you have previously completed the following example:
 
 ## Setup the CLI extensions
 
-<!-- workflow.cron(0 0 * * 2) -->
+<!-- workflow.cron(0 0 * * 4) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 Ensure you are running the latest Azure CLI and install the Azure Container

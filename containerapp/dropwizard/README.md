@@ -13,7 +13,7 @@ This example assumes you have previously completed the following example:
 
 ## Deploy the Dropwizard application
 
-<!-- workflow.cron(0 1 * * 2) -->
+<!-- workflow.cron(0 0 * * 5) -->
 <!-- workflow.include(../../acr/dropwizard/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 

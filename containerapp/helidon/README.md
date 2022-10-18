@@ -13,7 +13,7 @@ This example assumes you have previously completed the following example:
 
 ## Deploy the Helidon application
 
-<!-- workflow.cron(0 7 * * 2) -->
+<!-- workflow.cron(0 0 * * 6) -->
 <!-- workflow.include(../../acr/helidon/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 

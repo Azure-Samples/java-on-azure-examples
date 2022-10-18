@@ -13,7 +13,7 @@ This example assumes you have previously completed the following example:
 
 ## Deploy Tomcat
 
-<!-- workflow.cron(0 5 * * 2) -->
+<!-- workflow.cron(0 1 * * 4) -->
 <!-- workflow.include(../../acr/tomcat/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 

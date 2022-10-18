@@ -13,7 +13,7 @@ This example assumes you have previously completed the following example:
 
 ## Deploy the Quarkus application
 
-<!-- workflow.cron(0 3 * * 2) -->
+<!-- workflow.cron(0 1 * * 2) -->
 <!-- workflow.include(../../acr/quarkus/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 

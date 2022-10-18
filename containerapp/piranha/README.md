@@ -13,7 +13,7 @@ This example assumes you have previously completed the following example:
 
 ## Deploy the Piranha Micro application
 
-<!-- workflow.cron(0 2 * * 2) -->
+<!-- workflow.cron(0 1 * * 1) -->
 <!-- workflow.include(../../acr/piranha/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 

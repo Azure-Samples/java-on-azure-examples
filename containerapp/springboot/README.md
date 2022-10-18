@@ -13,7 +13,7 @@ This example assumes you have previously completed the following example:
 
 ## Deploy the Spring Boot application
 
-<!-- workflow.cron(0 4 * * 3) -->
+<!-- workflow.cron(0 1 * * 3) -->
 <!-- workflow.include(../../acr/springboot/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 

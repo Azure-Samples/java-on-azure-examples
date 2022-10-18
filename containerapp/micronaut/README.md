@@ -13,7 +13,7 @@ This example assumes you have previously completed the following example:
 
 ## Deploy the Micronaut application
 
-<!-- workflow.cron(0 8 * * 2) -->
+<!-- workflow.cron(0 1 * * 0) -->
 <!-- workflow.include(../../acr/micronaut/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 
