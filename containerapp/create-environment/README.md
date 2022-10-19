@@ -38,7 +38,7 @@ region using the command lines below:
 
   if [[ -z $ACA_ENVIRONMENT_NAME ]]; then
     export ACA_ENVIRONMENT_NAME=aca$RANDOM
-    export ACA_REGION=northcentralus
+    export ACA_REGION=westus
   fi
 
   -->
