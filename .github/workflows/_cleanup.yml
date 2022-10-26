@@ -11,7 +11,7 @@ jobs:
         with: 
           allow-no-subscriptions: 'true'
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
-      - uses: 'actions/checkout@v2'
+      - uses: 'actions/checkout@v3'
       - run: | 
           for resourceGroup in `az group list --query "[? contains(name,'java-on-azure-')][].{name:name}" -o tsv`; do
             echo Deleting ${resourceGroup}
