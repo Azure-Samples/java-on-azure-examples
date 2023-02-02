@@ -104,6 +104,7 @@
     <modules>
         <module>acr</module>
         <module>aks</module>
+        <module>appconfig</module>
         <module>appservice</module>
         <module>aro</module>
         <module>container</module>

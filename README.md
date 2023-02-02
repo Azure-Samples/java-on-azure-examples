@@ -46,6 +46,7 @@ Set your default subscription for this session using the subscription id from th
 
 ## Our alphabetical list of examples
 
+1. [Azure App Configuration examples](appconfig/)      <!-- workflows run Tuesday   / 2 examples -->
 1. [Azure App Service examples](appservice/)           <!-- workflows run Friday    / 18 examples -->
 1. [Azure Cache for Redis examples](redis/)            <!-- workflows run Sunday    / 2 examples  -->
 1. [Azure Container Apps examples](containerapp/)      <!-- workflows run Tuesday   / 9 examples  -->
