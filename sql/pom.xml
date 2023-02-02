@@ -10,7 +10,7 @@
     <groupId>examples.azure.sql</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure SQL Database examples</name>
+    <name>Azure SQL Database</name>
     <modules>
         <module>create</module>
         <module>get-country</module>

@@ -9,5 +9,5 @@
     </parent>
     <artifactId>aks-tomcat</artifactId>
     <packaging>pom</packaging>
-    <name>Deploy Tomcat</name>
+    <name>Azure Kubernetes Service :: Deploy Tomcat</name>
 </project>

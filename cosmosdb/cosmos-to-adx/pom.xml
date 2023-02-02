@@ -9,7 +9,7 @@
     </parent>
     <artifactId>cosmosdb-cosmos-to-adx</artifactId>
     <version>1-SNAPSHOT</version>
-    <name>Cosmos to ADX Spring Boot application</name>
+    <name>Azure Cosmos DB :: Cosmos to ADX Spring Boot application</name>
     <build>
         <plugins>
             <plugin>

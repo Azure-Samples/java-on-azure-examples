@@ -9,7 +9,7 @@
     </parent>
     <artifactId>appservice-docker-wildfly</artifactId>
     <packaging>pom</packaging>
-    <name>Deploy WildFly using a Docker image</name>
+    <name>Azure App Service :: Deploy WildFly using a Docker image</name>
     <build>
         <plugins>
             <plugin>

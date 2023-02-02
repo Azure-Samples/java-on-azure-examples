@@ -10,7 +10,7 @@
     </parent>
     <artifactId>acr-helidon</artifactId>
     <version>1-SNAPSHOT</version>
-    <name>Build and push a Helidon application to ACR</name>
+    <name>Azure Container Registry :: Build and push a Helidon application to ACR</name>
     <properties>
         <mainClass>io.helidon.examples.quickstart.se.Main</mainClass>
     </properties>

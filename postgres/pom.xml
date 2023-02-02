@@ -10,7 +10,7 @@
     <groupId>examples.azure.postgres</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Database for PostgreSQL examples</name>
+    <name>Azure Database for PostgreSQL</name>
     <modules>
         <module>create</module>
         <module>get-country</module>

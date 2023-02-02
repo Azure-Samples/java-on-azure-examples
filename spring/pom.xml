@@ -10,7 +10,7 @@
     <groupId>examples.azure.spring</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Spring Apps examples</name>
+    <name>Azure Spring Apps</name>
     <modules>
         <module>create</module>
         <module>config-server</module>

@@ -9,5 +9,5 @@
     </parent>
     <artifactId>aks-graalvm</artifactId>
     <packaging>pom</packaging>
-    <name>Deploy a GraalVM application</name>
+    <name>Azure Kubernetes Service :: Deploy a GraalVM application</name>
 </project>

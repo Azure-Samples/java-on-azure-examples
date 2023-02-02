@@ -9,7 +9,7 @@
     </parent>
     <artifactId>redis-lettuce</artifactId>
     <packaging>jar</packaging>
-    <name>Lettuce command line client</name>
+    <name>Azure Cache for Redis :: Lettuce command line client</name>
     <build>
         <finalName>redis-lettuce</finalName>
         <plugins>

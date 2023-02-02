@@ -9,5 +9,5 @@
     </parent>
     <artifactId>monitor-create-log-analytics-workspace</artifactId>
     <packaging>pom</packaging>
-    <name>Create Log Analytics Workspace</name>
+    <name>Azure Monitor :: Create Log Analytics Workspace</name>
 </project>

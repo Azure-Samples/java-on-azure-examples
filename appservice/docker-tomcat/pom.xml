@@ -9,7 +9,7 @@
     </parent>
     <artifactId>appservice-docker-tomcat</artifactId>
     <packaging>pom</packaging>
-    <name>Deploy Tomcat using a Docker image</name>
+    <name>Azure App Service :: Deploy Tomcat using a Docker image</name>
     <build>
         <plugins>
             <plugin>

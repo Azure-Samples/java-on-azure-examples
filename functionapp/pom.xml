@@ -10,7 +10,7 @@
     <groupId>examples.azure.functionapp</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Functions examples</name>
+    <name>Azure Functions</name>
     <modules>
         <module>cosmosdb-output</module>
         <module>helloworld</module>

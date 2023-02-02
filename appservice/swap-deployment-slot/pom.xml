@@ -9,7 +9,7 @@
     </parent>
     <artifactId>appservice-swap-deployment-slot</artifactId>
     <packaging>pom</packaging>
-    <name>Swap a deployment slot</name>
+    <name>Azure App Service :: Swap a deployment slot</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

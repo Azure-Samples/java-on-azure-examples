@@ -8,7 +8,7 @@
         <version>1-SNAPSHOT</version>
     </parent>
     <artifactId>keyvault-spring-boot-ssl-server-side</artifactId>
-    <name>Create a server-side SSL Spring Boot application</name>
+    <name>Azure Key Vault :: Create a server-side SSL Spring Boot application</name>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

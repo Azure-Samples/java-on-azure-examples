@@ -9,7 +9,7 @@
     </parent>
     <artifactId>appservice-javase-springboot</artifactId>
     <packaging>jar</packaging>
-    <name>Deploy a Spring Boot Application on managed JavaSE</name>
+    <name>Azure App Service :: Deploy a Spring Boot Application on managed JavaSE</name>
     <build>
         <plugins>
             <plugin>

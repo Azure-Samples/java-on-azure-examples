@@ -9,5 +9,5 @@
     </parent>
     <artifactId>storage-enable-static-website</artifactId>
     <packaging>pom</packaging>
-    <name>Enable static website</name>
+    <name>Azure Storage :: Enable static website</name>
 </project>

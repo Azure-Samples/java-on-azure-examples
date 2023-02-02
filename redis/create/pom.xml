@@ -9,5 +9,5 @@
     </parent>
     <artifactId>redis-create</artifactId>
     <packaging>pom</packaging>
-    <name>Create an Azure Cache for Redis</name>
+    <name>Azure Cache for Redis :: Create an Azure Cache for Redis</name>
 </project>

@@ -9,7 +9,7 @@
     </parent>
     <artifactId>aca-piranha</artifactId>
     <packaging>pom</packaging>
-    <name>Deploy a Piranha Micro application</name>
+    <name>Azure Container Apps :: Deploy a Piranha Micro application</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

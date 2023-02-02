@@ -9,7 +9,7 @@
     </parent>
     <artifactId>servicebus-jms-to-eventhubs-springboot</artifactId>
     <packaging>jar</packaging>
-    <name>JMS to EventHubs Spring Boot application</name>
+    <name>Azure Service Bus :: JMS to EventHubs Spring Boot application</name>
     <build>
         <finalName>jms-to-eventhubs-springboot</finalName>
         <plugins>

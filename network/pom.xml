@@ -11,7 +11,7 @@
     <artifactId>project</artifactId>
     <version>1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Azure Networking examples</name>
+    <name>Azure Networking</name>
     <modules>
         <module>create-vnet</module>
     </modules>

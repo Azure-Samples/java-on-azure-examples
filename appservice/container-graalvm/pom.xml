@@ -9,7 +9,7 @@
     </parent>
     <artifactId>appservice-container-graalvm</artifactId>
     <packaging>pom</packaging>
-    <name>Deploy a GraalVM application using a container image</name>
+    <name>Azure App Service :: Deploy a GraalVM application using a container image</name>
     <build>
         <plugins>
             <plugin>

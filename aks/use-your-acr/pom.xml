@@ -9,7 +9,7 @@
     </parent>
     <artifactId>aks-use-your-acr-registry</artifactId>
     <packaging>pom</packaging>
-    <name>Update your AKS cluster to use your ACR</name>
+    <name>Azure Kubernetes Service :: Update your AKS cluster to use your ACR</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

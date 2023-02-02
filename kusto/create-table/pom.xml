@@ -9,5 +9,5 @@
     </parent>
     <artifactId>adx-create-table</artifactId>
     <packaging>pom</packaging>
-    <name>Create a table</name>
+    <name>Azure Data Explorer :: Create a table</name>
 </project>

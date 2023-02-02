@@ -9,5 +9,5 @@
     </parent>
     <artifactId>aks-create</artifactId>
     <packaging>pom</packaging>
-    <name>Create an Azure Kubernetes Service cluster</name>
+    <name>Azure Kubernetes Service :: Create an Azure Kubernetes Service cluster</name>
 </project>

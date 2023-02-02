@@ -9,5 +9,5 @@
     </parent>
     <artifactId>cosmosdb-create-sql-leases-container</artifactId>
     <packaging>pom</packaging>
-    <name>Create a SQL leases container</name>
+    <name>Azure Cosmos DB :: Create a SQL leases container</name>
 </project>

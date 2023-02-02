@@ -9,7 +9,7 @@
     </parent>
     <artifactId>postgresql-get-country</artifactId>
     <packaging>jar</packaging>
-    <name>JDBC command line client</name>
+    <name>Azure Database for PostgreSQL :: JDBC command line client</name>
     <build>
         <finalName>get-country</finalName>
         <plugins>

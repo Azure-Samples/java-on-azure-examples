@@ -9,7 +9,7 @@
     </parent>
     <artifactId>functionapp-helloworld</artifactId>
     <packaging>jar</packaging>
-    <name>Deploy a HelloWorld Function</name>
+    <name>Azure Functions :: Deploy a HelloWorld Function</name>
     <build>
         <plugins>
             <plugin>

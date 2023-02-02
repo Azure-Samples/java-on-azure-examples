@@ -10,7 +10,7 @@
     <groupId>examples.azure.aro</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Red Hat OpenShift examples</name>
+    <name>Azure Red Hat OpenShift</name>
     <modules>
         <module>create</module>
     </modules>

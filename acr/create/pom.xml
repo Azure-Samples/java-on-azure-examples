@@ -9,5 +9,5 @@
     </parent>
     <artifactId>acr-create</artifactId>
     <packaging>pom</packaging>
-    <name>Create an Azure Container Registry</name>
+    <name>Azure Container Registry :: Create an Azure Container Registry</name>
 </project>

@@ -9,7 +9,7 @@
     </parent>
     <artifactId>servicebus-jms-to-cosmosdb-springboot-1</artifactId>
     <packaging>jar</packaging>
-    <name>JMS to Cosmos DB Spring Boot application #1</name>
+    <name>Azure Service Bus :: JMS to Cosmos DB Spring Boot application #1</name>
     <build>
         <finalName>jms-to-cosmosdb-springboot-1</finalName>
         <plugins>

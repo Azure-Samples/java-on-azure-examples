@@ -10,7 +10,7 @@
     <groupId>examples.azure.redis</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Cache for Redis examples</name>
+    <name>Azure Cache for Redis</name>
     <modules>
         <module>create</module>
         <module>lettuce</module>

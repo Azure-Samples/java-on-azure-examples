@@ -10,7 +10,7 @@
     <groupId>examples.azure.mysql</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Database for MySQL examples</name>
+    <name>Azure Database for MySQL</name>
     <modules>
         <module>create</module>
         <module>get-country</module>

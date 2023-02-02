@@ -10,7 +10,7 @@
     <groupId>examples.azure.acr</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Container Registry examples</name>
+    <name>Azure Container Registry</name>
     <modules>
         <module>create</module>
         <module>create-settings-xml</module>

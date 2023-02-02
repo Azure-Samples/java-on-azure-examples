@@ -9,7 +9,7 @@
     </parent>
     <artifactId>acr-create-settings-xml</artifactId>
     <packaging>pom</packaging>
-    <name>Create settings.xml using admin access keys</name>
+    <name>Azure Container Registry :: Create settings.xml using admin access keys</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

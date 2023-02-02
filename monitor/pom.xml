@@ -10,7 +10,7 @@
     <groupId>examples.azure.monitor</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Monitor examples</name>
+    <name>Azure Monitor</name>
     <modules>
         <module>create-log-analytics-workspace</module>
     </modules>

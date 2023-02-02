@@ -10,7 +10,7 @@
     <groupId>examples.azure.eventhubs</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Event Hubs examples</name>
+    <name>Azure Event Hubs</name>
     <modules>
         <module>create-eventhub</module>
         <module>create-namespace</module>

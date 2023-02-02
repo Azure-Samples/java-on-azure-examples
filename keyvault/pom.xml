@@ -11,7 +11,7 @@
     <artifactId>project</artifactId>
     <version>1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Azure Key Vault examples</name>
+    <name>Azure Key Vault</name>
     <modules>
         <module>add-secret</module>
         <module>create</module>

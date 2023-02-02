@@ -9,7 +9,7 @@
     </parent>
     <artifactId>acr-springboot</artifactId>
     <packaging>jar</packaging>
-    <name>Build and push a Spring Boot Application to ACR</name>
+    <name>Azure Container Registry :: Build and push a Spring Boot Application to ACR</name>
     <build>
         <finalName>acr-springboot</finalName>
         <plugins>

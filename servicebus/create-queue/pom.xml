@@ -9,5 +9,5 @@
     </parent>
     <artifactId>servicebus-create-queue</artifactId>
     <packaging>pom</packaging>
-    <name>Create an Azure Service Bus Queue</name>
+    <name>Azure Service Bus :: Create an Azure Service Bus Queue</name>
 </project>

@@ -9,5 +9,5 @@
     </parent>
     <artifactId>appconfig-add-key-value</artifactId>
     <packaging>pom</packaging>
-    <name>Add a Value</name>
+    <name>Azure App Configuration :: Add a Kay / Value</name>
 </project>

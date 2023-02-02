@@ -8,7 +8,7 @@
         <version>1-SNAPSHOT</version>
     </parent>
     <artifactId>appservice-javase-quarkus</artifactId>
-    <name>Deploy a managed JavaSE Quarkus application</name>
+    <name>Azure App Service :: Deploy a managed JavaSE Quarkus application</name>
     <properties>
         <compiler-plugin.version>3.8.1</compiler-plugin.version>
         <maven.compiler.parameters>true</maven.compiler.parameters>

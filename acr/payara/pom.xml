@@ -9,7 +9,7 @@
     </parent>
     <artifactId>acr-payara</artifactId>
     <packaging>war</packaging>
-    <name>Build and push a Payara container image to ACR</name>
+    <name>Azure Container Registry :: Build and push a Payara container image to ACR</name>
     <build>
         <finalName>ROOT</finalName>
     </build>

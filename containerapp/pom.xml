@@ -10,7 +10,7 @@
     <groupId>examples.azure.containerapp</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Container Apps examples</name>
+    <name>Azure Container Apps</name>
     <modules>
         <module>create-environment</module>
         <module>dropwizard</module>

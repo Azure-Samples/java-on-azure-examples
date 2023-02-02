@@ -9,5 +9,5 @@
     </parent>
     <artifactId>cosmosdb-create-sql-container</artifactId>
     <packaging>pom</packaging>
-    <name>Create a SQL container</name>
+    <name>Azure Cosmos DB :: Create a SQL container</name>
 </project>
