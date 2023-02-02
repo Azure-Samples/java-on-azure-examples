@@ -1,0 +1,37 @@
+on: 
+  schedule: 
+    - cron: '0 0 * * 2'
+  workflow_dispatch: 
+
+name: 'appconfig/create/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          export REGION=northcentralus
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export APP_CONFIG_NAME=appconfig-$RANDOM
+          
+          az appconfig create \
+          --resource-group $RESOURCE_GROUP \
+          --location $REGION \
+          --name $APP_CONFIG_NAME \
+          --enable-public-network true
+          
+          export RESULT=$(az appconfig show --resource-group $RESOURCE_GROUP --name $APP_CONFIG_NAME --output tsv --query provisioningState)
+          az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ "$RESULT" != Succeeded ]]; then
+          echo 'App Configuration was not provisioned'
+          exit 1
+          fi
