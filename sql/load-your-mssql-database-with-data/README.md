@@ -39,11 +39,10 @@ connect to the database:
 <!-- workflow.run()
 
   cd sql/load-your-mssql-database-with-data
-  curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-  sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod
-  sudo apt-get update
-  sudo apt-get install mssql-cli
-  sudo apt-get install -f
+  sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
+  python -m pip install --upgrade pip
+  sudo pip install mssql-cli
+  sudo pip install cli-helpers --upgrade --force
   export MSSQL_DNS_NAME=`az sql server show \
     --resource-group $RESOURCE_GROUP \
     --name $MSSQL_NAME \
