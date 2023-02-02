@@ -10,7 +10,7 @@
     <groupId>examples.azure.appservice</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure App Service examples</name>
+    <name>Azure App Service</name>
     <modules>
         <module>create-plan</module>
         <module>delete-plan</module>

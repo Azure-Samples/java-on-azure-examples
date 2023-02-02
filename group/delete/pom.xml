@@ -9,5 +9,5 @@
     </parent>
     <artifactId>group-delete</artifactId>
     <packaging>pom</packaging>
-    <name>Delete an Azure Resource Group</name>
+    <name>Azure Resource Group :: Delete an Azure Resource Group</name>
 </project>

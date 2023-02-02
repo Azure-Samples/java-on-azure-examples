@@ -9,5 +9,5 @@
     </parent>
     <artifactId>sql-load-your-mssql-database-with-data</artifactId>
     <packaging>pom</packaging>
-    <name>Load your Azure SQL database with data</name>
+    <name>Azure SQL Database :: Load your Azure SQL database with data</name>
 </project>

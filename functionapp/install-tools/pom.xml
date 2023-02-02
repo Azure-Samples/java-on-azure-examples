@@ -9,5 +9,5 @@
     </parent>
     <artifactId>functionapp-install-tools</artifactId>
     <packaging>pom</packaging>
-    <name>Install Azure Functions Core Tools</name>
+    <name>Azure Functions :: Install Azure Functions Core Tools</name>
 </project>

@@ -9,7 +9,7 @@
     </parent>
     <artifactId>appservice-list-webapp</artifactId>
     <packaging>pom</packaging>
-    <name>List your web applications</name>
+    <name>Azure App Service :: List your web applications</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

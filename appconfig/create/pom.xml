@@ -9,5 +9,5 @@
     </parent>
     <artifactId>appconfig-create</artifactId>
     <packaging>pom</packaging>
-    <name>Create an Azure App Configuration</name>
+    <name>Azure App Configuration :: Create an Azure App Configuration</name>
 </project>

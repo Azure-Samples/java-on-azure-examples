@@ -9,7 +9,7 @@
     </parent>
     <artifactId>cosmosdb-cosmos-to-storage</artifactId>
     <version>1-SNAPSHOT</version>
-    <name>Cosmos to Azure Storage Spring Boot application</name>
+    <name>Azure Cosmos DB :: Cosmos to Azure Storage Spring Boot application</name>
     <build>
         <plugins>
             <plugin>

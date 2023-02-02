@@ -9,5 +9,5 @@
     </parent>
     <artifactId>cosmosdb-create</artifactId>
     <packaging>pom</packaging>
-    <name>Create an Azure Cosmos DB</name>
+    <name>Azure Cosmos DB :: Create an Azure Cosmos DB</name>
 </project>

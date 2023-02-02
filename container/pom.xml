@@ -10,7 +10,7 @@
     <groupId>examples.azure.container</groupId>
     <artifactId>project</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Container Instances examples</name>
+    <name>Azure Container Instances</name>
     <modules>
         <module>quarkus</module>
         <module>tomcat</module>

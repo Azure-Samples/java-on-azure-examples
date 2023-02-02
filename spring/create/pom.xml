@@ -9,5 +9,5 @@
     </parent>
     <artifactId>spring-create</artifactId>
     <packaging>pom</packaging>
-    <name>Create an Azure Spring Apps environment</name>
+    <name>Azure Spring Apps :: Create an Azure Spring Apps environment</name>
 </project>

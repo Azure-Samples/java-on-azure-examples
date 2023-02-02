@@ -9,7 +9,7 @@
     </parent>
     <artifactId>servicebus-jms-to-spring-data-jpa-sql-server</artifactId>
     <packaging>jar</packaging>
-    <name>JMS to Spring Data JPA SQL server application</name>
+    <name>Azure Service Bus :: JMS to Spring Data JPA SQL server application</name>
     <build>
         <finalName>jms-to-spring-data</finalName>
         <plugins>

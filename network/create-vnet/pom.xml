@@ -9,5 +9,5 @@
     </parent>
     <artifactId>network-create-vnet</artifactId>
     <packaging>pom</packaging>
-    <name>Create a VNet</name>
+    <name>Azure Networking :: Create a VNet</name>
 </project>

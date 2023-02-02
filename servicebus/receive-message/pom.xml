@@ -9,7 +9,7 @@
     </parent>
     <artifactId>servicebus-receive-message</artifactId>
     <packaging>jar</packaging>
-    <name>Receive a message</name>
+    <name>Azure Service Bus :: Receive a message</name>
     <build>
         <finalName>receive-message</finalName>
         <plugins>

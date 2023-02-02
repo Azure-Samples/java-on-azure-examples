@@ -9,7 +9,7 @@
     </parent>
     <artifactId>servicebus-send-jms-message</artifactId>
     <packaging>jar</packaging>
-    <name>Send a JMS message</name>
+    <name>Azure Service Bus :: Send a JMS message</name>
     <build>
         <finalName>send-jms-message</finalName>
         <plugins>

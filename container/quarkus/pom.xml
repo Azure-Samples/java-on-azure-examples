@@ -9,7 +9,7 @@
     </parent>
     <artifactId>aci-quarkus</artifactId>
     <packaging>pom</packaging>
-    <name>Deploy a Quarkus application</name>
+    <name>Azure Container Instances :: Deploy a Quarkus application</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

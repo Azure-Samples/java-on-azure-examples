@@ -9,7 +9,7 @@
     </parent>
     <artifactId>functions-cosmosdb-output</artifactId>
     <packaging>jar</packaging>
-    <name>Deploy a Java Function storing data in Cosmos DB</name>
+    <name>Azure Functions :: Deploy a Java Function storing data in Cosmos DB</name>
     <build>
         <plugins>
             <plugin>

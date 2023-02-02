@@ -9,7 +9,7 @@
     </parent>
     <artifactId>aks-springboot</artifactId>
     <packaging>jar</packaging>
-    <name>Deploy a Spring Boot application</name>
+    <name>Azure Kubernetes Service :: Deploy a Spring Boot application</name>
     <build>
         <plugins>
             <plugin>

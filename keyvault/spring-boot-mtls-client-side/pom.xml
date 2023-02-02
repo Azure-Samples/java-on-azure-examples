@@ -8,7 +8,7 @@
         <version>1-SNAPSHOT</version>
     </parent>
     <artifactId>keyvault-spring-boot-mtls-client-side</artifactId>
-    <name>Create a client-side mTLS Spring Boot application</name>
+    <name>Azure Key Vault :: Create a client-side mTLS Spring Boot application</name>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

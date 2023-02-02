@@ -9,5 +9,5 @@
     </parent>
     <artifactId>adx-create</artifactId>
     <packaging>pom</packaging>
-    <name>Create an Azure Data Explorer cluster</name>
+    <name>Azure Data Explorer :: Create an Azure Data Explorer cluster</name>
 </project>

@@ -9,7 +9,7 @@
     </parent>
     <artifactId>appservice-delete-webapp</artifactId>
     <packaging>pom</packaging>
-    <name>Delete your web application</name>
+    <name>Azure App Service :: Delete your web application</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

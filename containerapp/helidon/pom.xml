@@ -9,7 +9,7 @@
     </parent>
     <artifactId>aca-helidon</artifactId>
     <packaging>pom</packaging>
-    <name>Deploy a Helidon application</name>
+    <name>Azure Container Apps :: Deploy a Helidon application</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

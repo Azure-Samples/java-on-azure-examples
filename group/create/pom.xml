@@ -9,5 +9,5 @@
     </parent>
     <artifactId>group-create</artifactId>
     <packaging>pom</packaging>
-    <name>Create an Azure Resource Group</name>
+    <name>Azure Resource Group :: Create an Azure Resource Group</name>
 </project>

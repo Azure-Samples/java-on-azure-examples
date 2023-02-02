@@ -9,7 +9,7 @@
     </parent>
     <artifactId>aca-tomcat</artifactId>
     <packaging>pom</packaging>
-    <name>Deploy Tomcat</name>
+    <name>Azure Container Apps :: Deploy Tomcat</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

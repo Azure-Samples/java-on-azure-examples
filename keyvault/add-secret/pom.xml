@@ -9,5 +9,5 @@
     </parent>
     <artifactId>keyvault-add-secret</artifactId>
     <packaging>pom</packaging>
-    <name>Add a Secret</name>
+    <name>Azure Key Vault :: Add a Secret</name>
 </project>

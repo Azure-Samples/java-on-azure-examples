@@ -9,5 +9,5 @@
     </parent>
     <artifactId>aro-create</artifactId>
     <packaging>pom</packaging>
-    <name>Deploy an Azure Redhat OpenShift cluster</name>
+    <name>Azure Red Hat OpenShift :: Deploy an Azure Redhat OpenShift cluster</name>
 </project>

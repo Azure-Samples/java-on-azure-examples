@@ -11,7 +11,7 @@
     <artifactId>project</artifactId>
     <version>1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Azure App Configuration examples</name>
+    <name>Azure App Configuration</name>
     <modules>
         <module>add-key-value</module>
         <module>create</module>
