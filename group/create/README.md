@@ -23,9 +23,12 @@ the command lines below:
 
 <!-- workflow.run()
 
+  if [[ -z $REGION ]]; then
+    export REGION=northcentralus
+  fi
+
   if [[ -z $RESOURCE_GROUP ]]; then
     export RESOURCE_GROUP=java-on-azure-$RANDOM
-    export REGION=northcentralus
   fi
 
   -->

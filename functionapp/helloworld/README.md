@@ -6,6 +6,13 @@
 ## Prerequisites
 
 <!-- workflow.cron(0 1 * * 4) -->
+
+<!-- workflow.run()
+
+  export REGION=westus3
+
+  -->
+
 <!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../install-tools/README.md) -->
 
