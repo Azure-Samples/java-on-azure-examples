@@ -15,16 +15,22 @@ jobs:
       - uses: 'actions/checkout@v2'
       - run: | 
           
+          if [[ -z $REGION ]]; then
+          export REGION=northcentralus
+          fi
+          
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
-          export REGION=northcentralus
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
           
+          if [[ -z $REGION ]]; then
+          export REGION=northcentralus
+          fi
+          
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
-          export REGION=northcentralus
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
@@ -35,16 +41,22 @@ jobs:
           --resource-group $RESOURCE_GROUP \
           --location $REGION
           
+          if [[ -z $REGION ]]; then
+          export REGION=northcentralus
+          fi
+          
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
-          export REGION=northcentralus
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
           
+          if [[ -z $REGION ]]; then
+          export REGION=northcentralus
+          fi
+          
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
-          export REGION=northcentralus
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
@@ -61,16 +73,22 @@ jobs:
           --resource-group $RESOURCE_GROUP \
           --namespace-name $EVENTHUBS_NAMESPACE
           
+          if [[ -z $REGION ]]; then
+          export REGION=northcentralus
+          fi
+          
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
-          export REGION=northcentralus
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
           
+          if [[ -z $REGION ]]; then
+          export REGION=northcentralus
+          fi
+          
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
-          export REGION=northcentralus
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
@@ -81,16 +99,22 @@ jobs:
           --resource-group $RESOURCE_GROUP \
           --location $REGION
           
+          if [[ -z $REGION ]]; then
+          export REGION=northcentralus
+          fi
+          
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
-          export REGION=northcentralus
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
           
+          if [[ -z $REGION ]]; then
+          export REGION=northcentralus
+          fi
+          
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
-          export REGION=northcentralus
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
