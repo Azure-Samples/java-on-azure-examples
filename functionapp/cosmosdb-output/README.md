@@ -15,7 +15,7 @@ This example assumes you have previously completed the following examples:
 
 <!-- workflow.run()
 
-  export REGION=eastus2
+  export REGION=eastus
 
   -->
 
