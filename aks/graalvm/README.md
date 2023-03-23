@@ -18,6 +18,13 @@ This example assumes you have previously completed the following examples:
 ## Deploy a GraalVM application
 
 <!-- workflow.cron(0 7 * * 0) -->
+
+<!-- workflow.run()
+
+  export REGION=westus
+
+  -->
+
 <!-- workflow.include(../../acr/graalvm/README.md) -->
 <!-- workflow.include(../create-kube-config/README.md) -->
 <!-- workflow.include(../use-your-acr/README.md) -->
