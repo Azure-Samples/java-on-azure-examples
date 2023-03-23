@@ -9,7 +9,7 @@
 
 <!-- workflow.run()
 
-  export REGION=eastus2
+  export REGION=westcentralus
 
   -->
 
