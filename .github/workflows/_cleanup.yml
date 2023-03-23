@@ -17,3 +17,8 @@ jobs:
             echo Deleting ${resourceGroup}
             az group delete -n ${resourceGroup} --yes --no-wait
           done
+          for fn in `az ad app list --filter "startswith(displayName, 'acr-pull-')" --query '[].appId'`; do
+            echo Deleting ACR pull service principal ${fn}
+            az ad app delete --id ${}fn} 
+          done
+
