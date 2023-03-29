@@ -16,7 +16,12 @@ This example assumes you have previously completed the following examples:
 
 ## Build the example
 
-<!-- workflow.cron(0 4 * * 6) -->
+<!-- workflow.cron(0 2 * * 1) -->
+<!--
+
+  export REGION=eastus
+
+  -->
 <!-- workflow.include(../create-kube-config/README.md) -->
 <!-- workflow.include(../use-your-acr/README.md) -->
 <!-- workflow.run() 

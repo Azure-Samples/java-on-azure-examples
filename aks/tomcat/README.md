@@ -16,14 +16,12 @@ This example assumes you have previously completed the following examples:
 
 ## Deploying Tomcat
 
-<!-- workflow.cron(0 3 * * 6) -->
-
+<!-- workflow.cron(0 2 * * 1) -->
 <!-- workflow.run()
 
-  export REGION=eastus
+  export REGION=westus3
 
   -->
-
 <!-- workflow.include(../../acr/tomcat/README.md) -->
 <!-- workflow.include(../create-kube-config/README.md) -->
 <!-- workflow.include(../use-your-acr/README.md) -->

@@ -17,11 +17,10 @@ This example assumes you have previously completed the following examples:
 
 ## Deploy a GraalVM application
 
-<!-- workflow.cron(0 7 * * 0) -->
-
+<!-- workflow.cron(0 2 * * 1) -->
 <!-- workflow.run()
 
-  export REGION=westus
+  export REGION=eastus2
 
   -->
 

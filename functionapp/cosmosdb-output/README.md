@@ -11,17 +11,14 @@ This example assumes you have previously completed the following examples:
 1. [Install Azure Functions Core Tools](../install-tools/README.md)
 1. [Create an Azure Cosmos DB](../../cosmosdb/create/README.md)
 
-<!-- workflow.cron(0 1 * * 2) -->
-
+<!-- workflow.cron(0 10 * * 1) -->
 <!-- workflow.run()
 
-  export REGION=eastus
+  export REGION=westus2
 
   -->
-
 <!-- workflow.include(../install-tools/README.md) -->
 <!-- workflow.include(../../cosmosdb/create/README.md) -->
-
 <!-- workflow.run() 
 
   cd functionapp/cosmosdb-output

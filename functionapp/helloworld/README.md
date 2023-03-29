@@ -5,14 +5,12 @@
 
 ## Prerequisites
 
-<!-- workflow.cron(0 1 * * 4) -->
-
+<!-- workflow.cron(0 10 * * 1) -->
 <!-- workflow.run()
 
-  export REGION=eastus
+  export REGION=westus
 
   -->
-
 <!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../install-tools/README.md) -->
 
