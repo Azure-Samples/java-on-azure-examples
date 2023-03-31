@@ -17,7 +17,11 @@ This example assumes you have previously completed the following example:
 
   if [[ -z $AKS ]]; then
     export AKS=aks-$RANDOM
-    az aks create --name $AKS --resource-group $RESOURCE_GROUP --generate-ssh-keys --verbose 
+    echo ---------------------------------------------------------------------
+    echo  Creating AKS cluster - $AKS
+    echo ---------------------------------------------------------------------
+    az aks create --name $AKS --resource-group $RESOURCE_GROUP --generate-ssh-keys --verbose
+    sleep 60 
   fi
 
   -->
