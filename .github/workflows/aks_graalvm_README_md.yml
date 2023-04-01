@@ -60,7 +60,11 @@ jobs:
           
           if [[ -z $AKS ]]; then
           export AKS=aks-$RANDOM
+          echo ---------------------------------------------------------------------
+          echo  Creating AKS cluster - $AKS
+          echo ---------------------------------------------------------------------
           az aks create --name $AKS --resource-group $RESOURCE_GROUP --generate-ssh-keys --verbose
+          sleep 60
           fi
           
           
@@ -84,7 +88,11 @@ jobs:
           
           if [[ -z $AKS ]]; then
           export AKS=aks-$RANDOM
+          echo ---------------------------------------------------------------------
+          echo  Creating AKS cluster - $AKS
+          echo ---------------------------------------------------------------------
           az aks create --name $AKS --resource-group $RESOURCE_GROUP --generate-ssh-keys --verbose
+          sleep 60
           fi
           
           
