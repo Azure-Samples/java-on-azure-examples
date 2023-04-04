@@ -21,7 +21,7 @@ This example assumes you have previously completed the following example:
     echo  Creating AKS cluster - $AKS
     echo ---------------------------------------------------------------------
     az aks create --name $AKS --resource-group $RESOURCE_GROUP --generate-ssh-keys --verbose
-    sleep 60 
+    sleep 120 
   fi
 
   -->

@@ -13,12 +13,14 @@ This example assumes you have previously completed the following examples:
 
 ## Update your AKS cluster to use your Azure Container Registry
 
-<!-- workflow.cron(0 2 * * 1) -->
 <!--
 
-  export REGION=westus2
+  if [[ -z $REGION ]]; then
+    export REGION=westus2
+  fi
 
   -->
+<!-- workflow.cron(0 2 * * 1) -->
 <!-- workflow.include(../create/README.md) -->
 <!-- workflow.include(../../acr/create/README.md) -->
 

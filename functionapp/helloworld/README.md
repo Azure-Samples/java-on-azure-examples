@@ -5,12 +5,14 @@
 
 ## Prerequisites
 
-<!-- workflow.cron(0 10 * * 1) -->
-<!-- workflow.run()
+<!--
 
-  export REGION=westus
+  if [[ -z $REGION ]]; then
+    export REGION=westus3
+  fi
 
   -->
+<!-- workflow.cron(0 10 * * 1) -->
 <!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../install-tools/README.md) -->
 

@@ -14,7 +14,12 @@ This example assumes you have previously completed the following examples:
 
 ## Build the example
 
-<!-- workflow.cron(0 6 * * 5) -->
+<!--
+
+    export REGION=westus
+
+  -->
+<!-- workflow.cron(0 4 * * 1) -->
 <!-- workflow.include(../create-deployment-slot/README.md) -->
 <!-- workflow.run() 
 

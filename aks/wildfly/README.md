@@ -17,12 +17,14 @@ This example assumes you have previously completed the following examples:
 
 ## Deploy WildFly
 
-<!-- workflow.cron(0 2 * * 1) -->
 <!-- 
 
-  export REGION=westus
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
 
   -->
+<!-- workflow.cron(0 2 * * 1) -->
 <!-- workflow.include(../../acr/wildfly/README.md) -->
 <!-- workflow.include(../create-kube-config/README.md) -->
 <!-- workflow.include(../use-your-acr/README.md) -->
