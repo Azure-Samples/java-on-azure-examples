@@ -1,7 +1,7 @@
 
 # Build and push a Piranha Micro application to Azure Container Registry
 
-[![containers/acr/piranha/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_acr_piranha_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containers_acr_piranha_README_md.yml)
+[![acr/piranha/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_piranha_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_piranha_README_md.yml)
 
 ## Prerequisites
 
@@ -10,7 +10,14 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Create an Azure Container Registry](../create/README.md)
 
-<!-- workflow.cron(0 13 * * 0) -->
+<!-- 
+
+  if [[ -z $REGION ]]; then
+    export REGION=canadaeast
+  fi
+
+  -->
+<!-- workflow.cron(0 1 * * 1) -->
 <!-- workflow.include(../create/README.md) -->
 
 ## Build the example locally

@@ -9,13 +9,20 @@ This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 
+<!-- 
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 1 * * 1) -->
+<!-- workflow.include(../../group/create/README.md) -->
+
 ## Create an Azure Container Registry
 
 Setup environment variable for the Azure Container Registry using the command
 line below:
-
-<!-- workflow.cron(0 0 * * 0) -->
-<!-- workflow.include(../../group/create/README.md) -->
 
 <!-- workflow.skip() -->
 ```shell
@@ -23,6 +30,7 @@ line below:
 ```
 
 <!-- workflow.run()
+
 if [[ -z $ACR_NAME ]]; then
   export ACR_NAME=acreg$RANDOM
 fi
