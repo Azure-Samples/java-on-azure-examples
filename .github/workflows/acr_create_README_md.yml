@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 0 * * 0'
+    - cron: '0 1 * * 1'
   workflow_dispatch: 
 
 name: 'acr/create/README.md'
@@ -24,6 +24,7 @@ jobs:
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
+          
           if [[ -z $ACR_NAME ]]; then
           export ACR_NAME=acreg$RANDOM
           fi
