@@ -14,11 +14,12 @@ This example assumes you have previously completed the following examples:
 <!--
 
   if [[ -z $REGION ]]; then
-    export REGION=eastus
+    export REGION=eastus2
+    echo "Using 'eastus2' region"
   fi
 
   -->
-<!-- workflow.cron(0 10 * * 1) -->
+<!-- workflow.cron(0 1 * * 1) -->
 <!-- workflow.include(../install-tools/README.md) -->
 <!-- workflow.include(../../cosmosdb/create/README.md) -->
 <!-- workflow.run() 
