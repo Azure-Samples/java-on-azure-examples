@@ -70,7 +70,7 @@ public class Jms2EventHubsApplication {
      * @return the JmsListenerContainerFactory.
      */
     @Bean
-    public JmsListenerContainerFactory jmsContainerFactory(
+    public JmsListenerContainerFactory<?> jmsContainerFactory(
             ConnectionFactory connectionFactory,
             DefaultJmsListenerContainerFactoryConfigurer configurer) {
         

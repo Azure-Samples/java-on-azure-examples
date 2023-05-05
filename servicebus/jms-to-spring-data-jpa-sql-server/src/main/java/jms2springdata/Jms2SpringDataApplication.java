@@ -70,7 +70,7 @@ public class Jms2SpringDataApplication {
      * @return the JmsListenerContainerFactory.
      */
     @Bean
-    public JmsListenerContainerFactory jmsContainerFactory(
+    public JmsListenerContainerFactory<?> jmsContainerFactory(
             ConnectionFactory connectionFactory,
             DefaultJmsListenerContainerFactoryConfigurer configurer) {
         

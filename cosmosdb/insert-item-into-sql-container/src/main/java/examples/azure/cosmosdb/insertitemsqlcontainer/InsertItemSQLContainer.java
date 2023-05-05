@@ -16,7 +16,7 @@ public class InsertItemSQLContainer {
 
             CosmosDatabase database = client.getDatabase(System.getenv("COSMOSDB_SQL_DATABASE"));
             CosmosContainer container = database.getContainer(System.getenv("COSMOSDB_SQL_CONTAINER"));
-            CosmosItemResponse response = container.createItem(new Item());
+            CosmosItemResponse<Item> response = container.createItem(new Item());
             if (response.getStatusCode() < 400) {
                 System.out.println("Item was added");
             } else {
