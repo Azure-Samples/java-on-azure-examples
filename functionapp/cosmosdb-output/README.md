@@ -5,30 +5,31 @@
 
 ## Prerequisites
 
-This example assumes you have previously completed the following examples:
-
-1. [Create an Azure Resource Group](../../group/create/README.md)
-1. [Install Azure Functions Core Tools](../install-tools/README.md)
-1. [Create an Azure Cosmos DB](../../cosmosdb/create/README.md)
-
 <!--
 
   if [[ -z $REGION ]]; then
-    export REGION=eastus2
-    echo "Using 'eastus2' region"
+    export REGION=southcentralus
+    echo "Using 'southcentralus' region"
   fi
 
   -->
 <!-- workflow.cron(0 1 * * 1) -->
 <!-- workflow.include(../install-tools/README.md) -->
 <!-- workflow.include(../../cosmosdb/create/README.md) -->
+
+This example assumes you have previously completed the following examples:
+
+1. [Create an Azure Resource Group](../../group/create/README.md)
+1. [Install Azure Functions Core Tools](../install-tools/README.md)
+1. [Create an Azure Cosmos DB](../../cosmosdb/create/README.md)
+
+## Set the Java function name environment variable
+
 <!-- workflow.run() 
 
   cd functionapp/cosmosdb-output
 
   -->
-
-## Set the Java function name environment variable
 
 ```shell
   export FUNCTIONS_COSMOSDB=functions-cosmosdb-$RANDOM

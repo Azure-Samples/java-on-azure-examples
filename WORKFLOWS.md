@@ -24,7 +24,7 @@
 | [![aks/wildfly/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_wildfly_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_wildfly_README_md.yml) | 0 2 * *  1 | westus |
 | [![appservice/deploy-to-deployment-slot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_deploy-to-deployment-slot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_deploy-to-deployment-slot_README_md.yml) | 0 4 * * 1 | westus
 | [![functionapp/cosmosdb-output/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_cosmosdb-output_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_cosmosdb-output_README_md.yml) | 0 1 * *  1 | eastus2 |
-| [![functionapp/helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_helloworld_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_helloworld_README_md.yml) | 0 2 * * 1 | northcentralus |
+| [![functionapp/helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_helloworld_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_helloworld_README_md.yml) | 0 2 * * 1 | centralus |
 | [![monitor/create-log-analytics-workspace/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/monitor_create-log-analytics-workspace_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/monitor_create-log-analytics-workspace_README_md.yml) | 0 0 * * 4 | northcentralus |
 [![servicebus/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_create_README_md.yml) | 0 0 * * 5 | northcentralus |
 [![servicebus/create-queue/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_create-queue_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_create-queue_README_md.yml) | 0 1 * * 5 | northcentralus |
@@ -43,5 +43,7 @@ Regions cheatsheet
   4. eastus
   5. eastus2
   6. northcentralus
+  7. centralus
+  8. southcentralus
 
  -->

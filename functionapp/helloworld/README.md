@@ -8,8 +8,8 @@
 <!--
 
   if [[ -z $REGION ]]; then
-    export REGION=northcentralus
-    echo "Using 'northcentralus' region"
+    export REGION=centralus
+    echo "Using 'centralus' region"
   fi
 
   -->
