@@ -5,6 +5,17 @@
 
 ## Prerequisites
 
+<!--
+
+  if [[ -z $REGION ]]; then
+    export REGION=eastus2
+    echo "Using 'eastus2' region"
+  fi
+
+  -->
+<!-- workflow.cron(0 5 * * 1) -->
+<!-- workflow.include(../send-jms-message/README.md) -->
+
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
@@ -13,9 +24,6 @@ This example assumes you have previously completed the following examples:
 1. [Send a JMS message](../send-jms-message/README.md)
 
 ## Receive a message from an Azure Service Bus Queue
-
-<!-- workflow.cron(0 5 * * 5) -->
-<!-- workflow.include(../send-jms-message/README.md) -->
 
 First, create the environment variables used to connect to our message queue
 using the command line below:

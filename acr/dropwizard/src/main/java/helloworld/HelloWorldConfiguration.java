@@ -1,4 +1,4 @@
-package examples.azure.containers.acr.dropwizard;
+package helloworld;
 
 import io.dropwizard.core.Configuration;
 
