@@ -19,12 +19,12 @@ RUN apt-get update && \
 #
 # Install Glassfish
 #
-RUN export GLASSFISH_VERSION=6.2.3 && \
+RUN export GLASSFISH_VERSION=7.0.3 && \
     cd /opt && \
     curl -L -o glassfish.zip https://www.eclipse.org/downloads/download.php?file=/ee4j/glassfish/glassfish-${GLASSFISH_VERSION}.zip && \
     unzip glassfish.zip && \
     rm glassfish.zip && \
-    mv glassfish6 glassfish
+    mv glassfish7 glassfish
 
 #
 # Expose port 8080.

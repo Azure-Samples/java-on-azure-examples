@@ -51,7 +51,7 @@ Set your default subscription for this session using the subscription id from th
 1. [Azure Cache for Redis examples](redis/)            <!-- workflows run Sunday    / 2 examples  -->
 1. [Azure Container Apps examples](containerapp/)      <!-- workflows run Tuesday   / 9 examples  -->
 1. [Azure Container Instances examples](container/)    <!-- workflows run Monday    / 3 examples  -->
-1. [Azure Container Registry examples](acr/)           <!-- workflows run Sunday    / 15 examples -->
+1. [Azure Container Registry examples](acr/)           
 1. [Azure Cosmos DB examples](cosmosdb/)               <!-- workflows run Thursday  / 8 examples  -->
 1. [Azure Data Explorer examples](kusto/)              <!-- workflows run Sunday    / 4 examples  -->
 1. [Azure Database for MySQL examples](mysql/)         <!-- workflows run Tuesday   / 4 examples  -->
