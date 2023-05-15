@@ -12,14 +12,17 @@
     <version>1-SNAPSHOT</version>
     <name>Azure Container Registry :: Build and push a Helidon application to ACR</name>
     <properties>
+        <helidon.version>2.6.0</helidon.version>
         <mainClass>io.helidon.examples.quickstart.se.Main</mainClass>
+        <maven-dependency-plugin.version>3.5.0</maven-dependency-plugin.version>
+        <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
     </properties>
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>io.helidon</groupId>
                 <artifactId>helidon-dependencies</artifactId>
-                <version>2.5.1</version>
+                <version>${helidon.version}</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
@@ -57,6 +60,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
+                <version>${maven-dependency-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>copy-libs</id>
@@ -73,6 +77,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
+                <version>${maven-jar-plugin.version}</version>
                 <configuration>
                     <archive>
                         <manifest>
