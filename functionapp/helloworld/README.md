@@ -5,11 +5,11 @@
 
 ## Prerequisites
 
-<!--
+<!-- workflow.run()
 
   if [[ -z $REGION ]]; then
-    export REGION=centralus
-    echo "Using 'centralus' region"
+    export REGION=westus2
+    echo "Using 'westus2' region"
   fi
 
   -->

@@ -10,6 +10,10 @@
     <artifactId>acr-graalvm</artifactId>
     <packaging>jar</packaging>
     <name>Azure Container Registry :: Build and push a GraalVM application to ACR</name>
+    <properties>
+        <native-image-maven-plugin.version>21.2.0</native-image-maven-plugin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
     <build>
         <finalName>graalvm</finalName>
         <plugins>
@@ -45,7 +49,7 @@
                     <plugin>
                         <groupId>org.graalvm.nativeimage</groupId>
                         <artifactId>native-image-maven-plugin</artifactId>
-                        <version>21.0.0</version>
+                        <version>${native-image-maven-plugin.version}</version>
                         <executions>
                             <execution>
                                 <goals>
@@ -64,7 +68,4 @@
             </build>
         </profile>
     </profiles>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 </project>
