@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "cdee15d9-5220-4b22-83b1-0f9116b5be2a",
+		"name": "Products",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3849019"
+	},
+	"item": [
+		{
+			"name": "Add Products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"4\",\r\n    \"name\": \"flfla\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://yourappName.azurewebsites.net/product/add",
+					"protocol": "https",
+					"host": [
+						"yourappName",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"product",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://yourappName.azurewebsites.net/product/1",
+					"protocol": "https",
+					"host": [
+						"yourappName",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://yourappName.azurewebsites.net/products",
+					"protocol": "https",
+					"host": [
+						"yourappName",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
