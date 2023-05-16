@@ -19,13 +19,20 @@ RUN apt-get update && \
 #
 # Install Jetty.
 #
-RUN export JETTY_VERSION=9.4.31.v20200723 && \
-    mkdir -p /opt && \
-    cd /opt && \
-    curl -O https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-distribution/${JETTY_VERSION}/jetty-distribution-${JETTY_VERSION}.tar.gz && \
-    tar xfv jetty-distribution-${JETTY_VERSION}.tar.gz && \
-    mv /opt/jetty-distribution-${JETTY_VERSION} /opt/jetty && \
-    rm jetty-distribution-${JETTY_VERSION}.tar.gz
+RUN export JETTY_VERSION=11.0.15 && \
+    mkdir -p /opt/jetty && \
+    cd /opt/jetty && \
+    curl -O https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/${JETTY_VERSION}/jetty-home-${JETTY_VERSION}.tar.gz && \
+    tar xfv jetty-home-${JETTY_VERSION}.tar.gz && \
+    mv /opt/jetty/jetty-home-${JETTY_VERSION} /opt/jetty/server && \
+    rm jetty-home-${JETTY_VERSION}.tar.gz && \
+    cd /opt/jetty/server && \
+    java -jar start.jar jetty.base=/opt/jetty/base --add-module=server,http,deploy,jsp,jstl,ext,resources,websocket
+
+#
+# Set JETTY_BASE
+#
+ENV JETTY_BASE /opt/jetty/base
 
 #
 # Expose port 8080.
@@ -35,9 +42,14 @@ EXPOSE 8080
 #
 # Copy the WAR file.
 #
-COPY target/ROOT.war /opt/jetty/webapps/ROOT.war
+COPY target/ROOT.war /opt/jetty/base/webapps/ROOT.war
+
+#
+# Work directory
+#
+WORKDIR /opt/jetty/base
 
 #
 # Startup command.
 #
-CMD ["/opt/jetty/bin/jetty.sh", "run"]
+CMD ["java", "-jar", "/opt/jetty/server/start.jar"]
