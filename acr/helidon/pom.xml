@@ -64,11 +64,12 @@
                 <executions>
                     <execution>
                         <id>copy-libs</id>
-                        <phase>pre-package</phase>
+                        <phase>prepare-package</phase>
                         <goals>
                             <goal>copy-dependencies</goal>
                         </goals>
                         <configuration>
+                            <verbose>true</verbose>
                             <outputDirectory>${project.build.directory}/libs</outputDirectory>
                         </configuration>
                     </execution>
