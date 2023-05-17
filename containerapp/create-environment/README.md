@@ -78,4 +78,4 @@ Do NOT forget to remove the resources once you are done running the example.
 * [Manage Azure Container Apps](https://docs.microsoft.com/cli/azure/containerapp)
 * [Azure Container Apps documentation](https://docs.microsoft.com/azure/container-apps)
 
-4m
+1m

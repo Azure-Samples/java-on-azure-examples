@@ -14,6 +14,7 @@
     <modules>
         <module>create-environment</module>
         <module>dropwizard</module>
+        <module>glassfish</module>
         <module>helidon</module>
         <module>micronaut</module>
         <module>piranha</module>
