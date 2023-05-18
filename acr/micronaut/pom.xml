@@ -12,8 +12,10 @@
     <packaging>jar</packaging>
     <name>Azure Container Registry :: Build and push a Micronaut application to ACR</name>
     <properties>
+        <java.version>11</java.version>
         <micronaut.aot.version>1.1.0</micronaut.aot.version>
-        <micronaut.version>3.5.2</micronaut.version>
+        <micronaut-maven-plugin.version>3.5.3</micronaut-maven-plugin.version>
+        <micronaut.version>3.5.3</micronaut.version>
         <micronaut.runtime>netty</micronaut.runtime>
     </properties>
     <dependencyManagement>
@@ -61,7 +63,7 @@
             <plugin>
                 <groupId>io.micronaut.build</groupId>
                 <artifactId>micronaut-maven-plugin</artifactId>
-                <version>3.3.1</version>
+                <version>${micronaut-maven-plugin.version}</version>
                 <extensions>true</extensions>
                 <executions>
                     <execution>
@@ -79,13 +81,15 @@
                 </executions>
                 <configuration>
                     <mainClass>com.example.Application</mainClass>
+                    <testResourcesEnabled>false</testResourcesEnabled>
+                    <testResourcesVersion>${micronaut.version}</testResourcesVersion>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <release>11</release>
+                    <release>${java.version}</release>
                     <annotationProcessorPaths>
                         <path>
                             <groupId>io.micronaut</groupId>
@@ -95,12 +99,12 @@
                         <path>
                             <groupId>io.micronaut</groupId>
                             <artifactId>micronaut-inject-java</artifactId>
-                            <version>3.5.2</version>
+                            <version>${micronaut.version}</version>
                         </path>
                         <path>
                             <groupId>io.micronaut</groupId>
                             <artifactId>micronaut-validation</artifactId>
-                            <version>3.5.2</version>
+                            <version>${micronaut.version}</version>
                         </path>
                     </annotationProcessorPaths>
                     <compilerArgs>
