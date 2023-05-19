@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 1 * * 6'
+    - cron: '0 3 * * 1'
   workflow_dispatch: 
 
 name: 'aks/create-kube-config/README.md'
@@ -14,6 +14,18 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus2
+          echo "Using 'westus2' region"
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          echo "Using 'westus' region"
+          fi
+          
           
           if [[ -z $REGION ]]; then
           export REGION=northcentralus

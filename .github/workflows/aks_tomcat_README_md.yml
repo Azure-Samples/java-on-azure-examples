@@ -15,7 +15,10 @@ jobs:
       - uses: 'actions/checkout@v2'
       - run: | 
           
-          export REGION=westus3
+          if [[ -z $REGION ]]; then
+          export REGION=northcentralus
+          echo "Using 'northcentralus' region"
+          fi
           
           
           if [[ -z $REGION ]]; then
@@ -49,6 +52,18 @@ jobs:
           
           
           if [[ -z $REGION ]]; then
+          export REGION=westus2
+          echo "Using 'westus2' region"
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          echo "Using 'westus' region"
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
           export REGION=northcentralus
           echo "Using 'northcentralus' region"
           fi
@@ -75,6 +90,18 @@ jobs:
           export KUBECONFIG=$PWD/config
           
           cd ../..
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus3
+          echo "Using 'westus3' region"
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          echo "Using 'westus' region"
+          fi
           
           
           if [[ -z $REGION ]]; then
