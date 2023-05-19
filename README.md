@@ -53,13 +53,14 @@ Set your default subscription for this session using the subscription id from th
 1. [Azure Container Instances examples](container/)    <!-- workflows run Monday    / 3 examples  -->
 1. [Azure Container Registry examples](acr/)           
 1. [Azure Cosmos DB examples](cosmosdb/)               <!-- workflows run Thursday  / 8 examples  -->
+1. [Azure Front Door examples](afd/)
 1. [Azure Data Explorer examples](kusto/)              <!-- workflows run Sunday    / 4 examples  -->
 1. [Azure Database for MySQL examples](mysql/)         <!-- workflows run Tuesday   / 4 examples  -->
 1. [Azure Database for PostgreSQL examples](postgres/) <!-- workflows run Monday    / 4 examples  -->
 1. [Azure Event Hubs examples](eventhubs/)             <!-- workflows run Saturday  / 4 examples  -->
 1. [Azure Functions examples](functionapp/)            <!-- workflows run Thursday  / 3 examples  -->
 1. [Azure Key Vault examples](keyvault/)               <!-- workflows run Tuesday   / 6 examples  -->
-1. [Azure Kubernetes Service examples](aks/)           <!-- workflows run Saturday  / 7 examples  -->
+1. [Azure Kubernetes Service examples](aks/)           
 1. [Azure Monitor examples](monitor/)                  <!-- workflows run Thursday  / 1 example   -->
 1. [Azure Networking examples](network/)               <!-- workflows run Wednesday / 1 example   -->
 1. [Azure Red Hat OpenShift examples](aro/)            <!-- workflows run Friday    / 1 example   -->
@@ -68,8 +69,6 @@ Set your default subscription for this session using the subscription id from th
 1. [Azure Spring Apps examples](spring/)               <!-- workflows run Wednesday / 3 examples  -->
 1. [Azure SQL Database examples](sql/)                 <!-- workflows run Wednesday / 4 examples  -->
 1. [Azure Storage examples](storage/)                  <!-- workflows run Monday    / 3 examples  -->
-
-<!-- next day for workflows is Monday -->
 
 ## Contributing
 

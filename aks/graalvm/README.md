@@ -5,6 +5,19 @@
 
 ## Prerequisites
 
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=eastus
+    echo "Using 'eastus' region"
+  fi
+
+  -->
+<!-- workflow.cron(0 3 * * 1) -->
+<!-- workflow.include(../../acr/graalvm/README.md) -->
+<!-- workflow.include(../create-kube-config/README.md) -->
+<!-- workflow.include(../use-your-acr/README.md) -->
+
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
@@ -17,16 +30,6 @@ This example assumes you have previously completed the following examples:
 
 ## Deploy a GraalVM application
 
-<!-- workflow.cron(0 2 * * 1) -->
-<!-- workflow.run()
-
-  export REGION=eastus2
-
-  -->
-
-<!-- workflow.include(../../acr/graalvm/README.md) -->
-<!-- workflow.include(../create-kube-config/README.md) -->
-<!-- workflow.include(../use-your-acr/README.md) -->
 <!-- workflow.run() 
 
   cd aks/graalvm

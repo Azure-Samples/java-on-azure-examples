@@ -5,14 +5,23 @@
 
 ## Prerequisites
 
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+    echo "Using 'westus' region"
+  fi
+
+  -->
+<!-- workflow.cron(0 3 * * 1) -->
+<!-- workflow.include(../../group/create/README.md) -->
+
 This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 
 ## Create an Azure Kubernetes Service cluster
 
-<!-- workflow.cron(0 0 * * 6) -->
-<!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.run()
 
   if [[ -z $AKS ]]; then

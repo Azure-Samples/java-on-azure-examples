@@ -5,6 +5,19 @@
 
 ## Prerequisites
 
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=centralus
+    echo "Using 'centralus' region"
+  fi
+
+  -->
+<!-- workflow.cron(0 3 * * 1) -->
+<!-- workflow.include(../../acr/wildfly/README.md) -->
+<!-- workflow.include(../create-kube-config/README.md) -->
+<!-- workflow.include(../use-your-acr/README.md) -->
+
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
@@ -17,17 +30,6 @@ This example assumes you have previously completed the following examples:
 
 ## Deploy WildFly
 
-<!-- 
-
-  if [[ -z $REGION ]]; then
-    export REGION=westus
-  fi
-
-  -->
-<!-- workflow.cron(0 2 * * 1) -->
-<!-- workflow.include(../../acr/wildfly/README.md) -->
-<!-- workflow.include(../create-kube-config/README.md) -->
-<!-- workflow.include(../use-your-acr/README.md) -->
 <!-- workflow.run() 
 
   cd aks/wildfly
