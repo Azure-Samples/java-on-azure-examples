@@ -14,5 +14,6 @@
     <modules>
         <module>create</module>
         <module>lettuce</module>
+        <module>springboot-azureredis</module>
     </modules>
 </project>
