@@ -5,6 +5,18 @@
 
 ## Prerequisites
 
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=eastus2
+    echo "Using 'eastus2' region"
+  fi
+
+  -->
+<!-- workflow.cron(0 3 * * 1) -->
+<!-- workflow.include(../create-kube-config/README.md) -->
+<!-- workflow.include(../use-your-acr/README.md) -->
+
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
@@ -16,14 +28,6 @@ This example assumes you have previously completed the following examples:
 
 ## Build the example
 
-<!-- workflow.cron(0 2 * * 1) -->
-<!--
-
-  export REGION=eastus
-
-  -->
-<!-- workflow.include(../create-kube-config/README.md) -->
-<!-- workflow.include(../use-your-acr/README.md) -->
 <!-- workflow.run() 
 
   cd aks/springboot

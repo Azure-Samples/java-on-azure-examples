@@ -10,6 +10,17 @@ limit access to your Kubernetes cluster based on roles.
 
 ## Prerequisites
 
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus2
+    echo "Using 'westus2' region"
+  fi
+
+  -->
+<!-- workflow.cron(0 3 * * 1) -->
+<!-- workflow.include(../create/README.md) -->
+
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
@@ -17,8 +28,6 @@ This example assumes you have previously completed the following examples:
 
 ## Create a Kubeconfig file usin admin access
 
-<!-- workflow.cron(0 1 * * 6) -->
-<!-- workflow.include(../create/README.md) -->
 <!-- workflow.run()
 
 cd aks/create-kube-config
