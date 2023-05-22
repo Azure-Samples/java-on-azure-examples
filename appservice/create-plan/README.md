@@ -5,14 +5,22 @@
 
 ## Prerequisites
 
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=northcentralus
+    echo "Using 'northcentralus' region"
+  fi
+
+  -->
+<!-- workflow.cron(0 0 * * 1) -->
+<!-- workflow.include(../../group/create/README.md) -->
+
 This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 
 ## Create an App Service Plan
-
-<!-- workflow.cron(0 0 * * 1) -->
-<!-- workflow.include(../../group/create/README.md) -->
 
 First, create the environment variable used for our App Service Plan
 using the command line below:
@@ -23,10 +31,11 @@ using the command line below:
 ```
 
 <!-- workflow.run() 
-if [[ -z $APPSERVICE_PLAN ]]; then
-  export APPSERVICE_PLAN=appservice-plan-$RANDOM
-  export REGION=northcentralus
-fi
+
+  if [[ -z $APPSERVICE_PLAN ]]; then
+    export APPSERVICE_PLAN=appservice-plan-$RANDOM
+  fi
+
 -->
 
 Then, create the App Service Plan using the following command line:
@@ -47,7 +56,6 @@ Then, create the App Service Plan using the following command line:
   if [[ "$RESULT" != Succeeded ]]; then
     exit 1
   fi
-  exit 0
 
   -->
 
