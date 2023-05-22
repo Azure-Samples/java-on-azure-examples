@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 2 * * 1'
+    - cron: '0 3 * * 1'
   workflow_dispatch: 
 
 name: 'aks/use-your-acr/README.md'
@@ -14,6 +14,18 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus3
+          echo "Using 'westus3' region"
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          echo "Using 'westus' region"
+          fi
+          
           
           if [[ -z $REGION ]]; then
           export REGION=northcentralus

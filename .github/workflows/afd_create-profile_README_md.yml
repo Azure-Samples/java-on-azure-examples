@@ -1,9 +1,9 @@
 on: 
   schedule: 
-    - cron: '0 3 * * 1'
+    - cron: '0 1 * * 1'
   workflow_dispatch: 
 
-name: 'aks/create/README.md'
+name: 'afd/create-profile/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -17,7 +17,6 @@ jobs:
           
           if [[ -z $REGION ]]; then
           export REGION=westus
-          echo "Using 'westus' region"
           fi
           
           
@@ -32,18 +31,17 @@ jobs:
           
           az group create --name $RESOURCE_GROUP --location $REGION
           
-          if [[ -z $AKS ]]; then
-          export AKS=aks-$RANDOM
-          echo ---------------------------------------------------------------------
-          echo  Creating AKS cluster - $AKS
-          echo ---------------------------------------------------------------------
-          az aks create --name $AKS --resource-group $RESOURCE_GROUP --generate-ssh-keys --verbose
-          sleep 120
+          if [[ -z $AFD_PROFILE_NAME ]]; then
+          export AFD_PROFILE_NAME=jazafd$RANDOM
           fi
+          az afd profile create \
+          --profile-name $AFD_PROFILE_NAME \
+          --resource-group $RESOURCE_GROUP \
+          --sku Premium_AzureFrontDoor
           
-          
-          export RESULT=$(az aks show --name $AKS --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
+          export RESULT=$(az afd profile show --profile-name $AFD_PROFILE_NAME --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
           az group delete --name $RESOURCE_GROUP --yes || true
           if [[ "$RESULT" != Succeeded ]]; then
+          echo "Azure Front Door Profile $AFD_PROFILE_NAME was not provisioned properly"
           exit 1
           fi
