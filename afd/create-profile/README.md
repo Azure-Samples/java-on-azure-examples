@@ -13,6 +13,7 @@ This example assumes you have previously completed the following example:
 
   if [[ -z $REGION ]]; then
     export REGION=westus
+    echo "Using 'westus' region"
   fi
 
   -->

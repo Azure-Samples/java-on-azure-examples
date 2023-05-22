@@ -8,8 +8,8 @@
 <!-- workflow.run()
 
   if [[ -z $REGION ]]; then
-    export REGION=westus
-    echo "Using 'westus' region"
+    export REGION=westus3
+    echo "Using 'westus3' region"
   fi
 
   -->
