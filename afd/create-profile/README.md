@@ -5,10 +5,6 @@
 
 ## Prerequisites
 
-This example assumes you have previously completed the following example:
-
-1. [Create an Azure Resource Group](../../group/create/README.md)
-
 <!-- workflow.run()
 
   if [[ -z $REGION ]]; then
@@ -17,8 +13,12 @@ This example assumes you have previously completed the following example:
   fi
 
   -->
-<!-- workflow.cron(0 1 * * 1) -->
+<!-- workflow.cron(0 2 * * 1) -->
 <!-- workflow.include(../../group/create/README.md) -->
+
+This example assumes you have previously completed the following example:
+
+1. [Create an Azure Resource Group](../../group/create/README.md)
 
 ## Create an Azure Front Door Profile
 
