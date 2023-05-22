@@ -11,12 +11,12 @@ RUN apt update -y && \
     apt-get -y install curl && \
     mkdir -p /opt/piranha && \
     cd /opt/piranha && \
-    curl -O https://repo1.maven.org/maven2/cloud/piranha/piranha-micro/22.4.0/piranha-micro-22.4.0.jar && \
-    mv piranha-micro-22.4.0.jar piranha-micro.jar && \
+    curl -O https://repo1.maven.org/maven2/cloud/piranha/dist/piranha-dist-webprofile/23.5.0/piranha-dist-webprofile-23.5.0.jar && \
+    mv piranha-dist-webprofile-23.5.0.jar piranha-webprofile.jar && \
     groupadd -r piranha && \
     useradd -r -g piranha piranha && \
     chown -R piranha /opt/piranha
 EXPOSE 8080
 USER piranha
 WORKDIR /opt/piranha
-CMD ["java", "-jar", "piranha-micro.jar", "--war-file", "ROOT.war"]
+CMD ["java", "-jar", "piranha-webprofile.jar", "--war-file", "ROOT.war"]
