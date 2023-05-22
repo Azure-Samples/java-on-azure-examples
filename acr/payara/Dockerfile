@@ -6,9 +6,9 @@
 # -----------------------------------------------------------------------------
 
 #
-# Microsoft OpenJDK 11
+# Microsoft OpenJDK 17
 #
-FROM mcr.microsoft.com/openjdk/jdk:11-ubuntu
+FROM mcr.microsoft.com/openjdk/jdk:17-ubuntu
 
 #
 # Install bsdtar and unzip.
@@ -19,12 +19,12 @@ RUN apt-get update && \
 #
 # Install Payara
 #
-RUN export PAYARA_VERSION=5.2021.10 && \
+RUN export PAYARA_VERSION=6.2023.4 && \
     cd /opt && \
     curl -L -o payara.zip https://repo1.maven.org/maven2/fish/payara/distributions/payara/${PAYARA_VERSION}/payara-${PAYARA_VERSION}.zip && \
     unzip payara.zip && \
     rm payara.zip && \
-    mv payara5 payara
+    mv payara6 payara
 
 #
 # Expose port 8080.
