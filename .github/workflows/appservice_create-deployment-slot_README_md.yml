@@ -19,16 +19,23 @@ jobs:
           export REGION=northcentralus
           echo "Using 'northcentralus' region"
           fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=northcentralus
+          echo "Using 'northcentralus' region"
+          fi
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
           echo "Using '"$RESOURCE_GROUP"' as resource group"
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
+          
           if [[ -z $APPSERVICE_PLAN ]]; then
           export APPSERVICE_PLAN=appservice-plan-$RANDOM
-          export REGION=northcentralus
           fi
+          
           az appservice plan create \
           --resource-group $RESOURCE_GROUP \
           --location $REGION \

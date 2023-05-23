@@ -3,7 +3,7 @@ on:
     - cron: '0 2 * * 1'
   workflow_dispatch: 
 
-name: 'afd/create-profile/README.md'
+name: 'afd/create-endpoint/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -14,6 +14,12 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus2
+          echo "Using 'westus2' region"
+          fi
+          
           
           if [[ -z $REGION ]]; then
           export REGION=westus
@@ -40,9 +46,18 @@ jobs:
           --resource-group $RESOURCE_GROUP \
           --sku Premium_AzureFrontDoor
           
-          export RESULT=$(az afd profile show --profile-name $AFD_PROFILE_NAME --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
+          if [[ -z $AFD_ENDPOINT_NAME ]]; then
+          export AFD_ENDPOINT_NAME=afdendp$RANDOM
+          fi
+          az afd endpoint create \
+          --resource-group $RESOURCE_GROUP \
+          --endpoint-name $AFD_ENDPOINT_NAME \
+          --profile-name $AFD_PROFILE_NAME \
+          --enabled-state Enabled
+          
+          export RESULT=$(az afd endpoint show --endpoint-name $AFD_ENDPOINT_NAME --profile-name $AFD_PROFILE_NAME --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
           az group delete --name $RESOURCE_GROUP --yes || true
           if [[ "$RESULT" != Succeeded ]]; then
-          echo "Azure Front Door Profile $AFD_PROFILE_NAME was not provisioned properly"
+          echo "Azure Front Door Endpoint $AFD_ENDPOINT_NAME was not provisioned properly"
           exit 1
           fi

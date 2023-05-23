@@ -1,0 +1,84 @@
+on: 
+  schedule: 
+    - cron: '0 2 * * 1'
+  workflow_dispatch: 
+
+name: 'afd/create-origin-group/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus3
+          echo "Using 'westus3' region"
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus2
+          echo "Using 'westus2' region"
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          echo "Using 'westus' region"
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=northcentralus
+          echo "Using 'northcentralus' region"
+          fi
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          
+          if [[ -z $AFD_PROFILE_NAME ]]; then
+          export AFD_PROFILE_NAME=jazafd$RANDOM
+          fi
+          az afd profile create \
+          --profile-name $AFD_PROFILE_NAME \
+          --resource-group $RESOURCE_GROUP \
+          --sku Premium_AzureFrontDoor
+          
+          if [[ -z $AFD_ENDPOINT_NAME ]]; then
+          export AFD_ENDPOINT_NAME=afdendp$RANDOM
+          fi
+          az afd endpoint create \
+          --resource-group $RESOURCE_GROUP \
+          --endpoint-name $AFD_ENDPOINT_NAME \
+          --profile-name $AFD_PROFILE_NAME \
+          --enabled-state Enabled
+          
+          if [[ -z $AFD_ORIGIN_GROUP_NAME ]]; then
+          export AFD_ORIGIN_GROUP_NAME=afdorigrp$RANDOM
+          fi
+          az afd origin-group create \
+          --resource-group $RESOURCE_GROUP \
+          --origin-group-name $AFD_ORIGIN_GROUP_NAME \
+          --profile-name $AFD_PROFILE_NAME \
+          --probe-request-type GET \
+          --probe-protocol Http \
+          --probe-interval-in-seconds 60 \
+          --probe-path / \
+          --sample-size 4 \
+          --successful-samples-required 3 \
+          --additional-latency-in-milliseconds 50
+          
+          export RESULT=$(az afd origin-group show --origin-group-name $AFD_ORIGIN_GROUP_NAME --profile-name $AFD_PROFILE_NAME --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
+          az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ "$RESULT" != Succeeded ]]; then
+          echo "Azure Front Door Origin Group $AFD_ORIGIN_GROUP_NAME was not provisioned properly"
+          exit 1
+          fi
