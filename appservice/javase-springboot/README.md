@@ -43,7 +43,7 @@ You can see the application in action at http://localhost:8080/
 To deploy the example use the following Maven command line:
 
 ````shell
-  export APPSERVICE_JAVASE_SPRINGBOOT=appservice-javase-springboot-$RANDOM
+  export APPSERVICE_JAVASE_SPRINGBOOT=javazappsvc-javase-springboot-$RANDOM
 
   mvn azure-webapp:deploy \
     -DappName=$APPSERVICE_JAVASE_SPRINGBOOT \
