@@ -29,13 +29,13 @@ line below:
 
 <!-- workflow.skip() -->
 ```shell
-  export AFD_ORIGIN_GROUP_NAME=afdorigrp$RANDOM
+  export AFD_ORIGIN_GROUP_NAME=javazafdogrp$RANDOM
 ```
 
 <!-- workflow.run()
 
 if [[ -z $AFD_ORIGIN_GROUP_NAME ]]; then
-  export AFD_ORIGIN_GROUP_NAME=afdorigrp$RANDOM
+  export AFD_ORIGIN_GROUP_NAME=javazafdogrp$RANDOM
 fi
   -->
 

@@ -43,7 +43,7 @@ You can see the application in action at http://localhost:8080/hello
 To deploy the application use the following command lines:
 
 ````shell
-  export APPSERVICE_JAVASE_QUARKUS=appservice-javase-quarkus-$RANDOM
+  export APPSERVICE_JAVASE_QUARKUS=javazappsvc-javase-quarkus-$RANDOM
 
   mvn azure-webapp:deploy \
     -DappName=$APPSERVICE_JAVASE_QUARKUS \

@@ -28,13 +28,13 @@ line below:
 
 <!-- workflow.skip() -->
 ```shell
-  export AFD_ENDPOINT_NAME=afdendp$RANDOM
+  export AFD_ENDPOINT_NAME=javazafdendp$RANDOM
 ```
 
 <!-- workflow.run()
 
 if [[ -z $AFD_ENDPOINT_NAME ]]; then
-  export AFD_ENDPOINT_NAME=afdendp$RANDOM
+  export AFD_ENDPOINT_NAME=javazafdendp$RANDOM
 fi
   -->
 

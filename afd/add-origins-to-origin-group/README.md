@@ -15,6 +15,8 @@
   -->
 <!-- workflow.cron(0 2 * * 1) -->
 <!-- workflow.include(../create-origin-group/README.md) -->
+<!-- workflow.include(../../appservice/javase-springboot/README.md) -->
+<!-- workflow.include(../../appservice/javase-quarkus/README.md) -->
 
 This example assumes you have previously completed the following examples:
 
@@ -44,6 +46,7 @@ Next we need to add the primary application as an origin to the origin group. Us
     --profile-name $AFD_PROFILE_NAME \
     --origin-group-name $AFD_ORIGIN_GROUP_NAME \
     --origin-name springboot \
+    --origin-host-header $AFD_PRIMARY_HOST_NAME \
     --priority 1 \
     --weight 1000 \
     --enabled-state Enabled \
@@ -66,6 +69,7 @@ Next we need to add the secondary application as an origin to the origin group. 
     --host-name $AFD_SECONDARY_HOST_NAME \
     --profile-name $AFD_PROFILE_NAME \
     --origin-group-name $AFD_ORIGIN_GROUP_NAME \
+    --origin-host-header $AFD_SECONDARY_HOST_NAME \
     --origin-name quarkus \
     --priority 1 \
     --weight 1000 \

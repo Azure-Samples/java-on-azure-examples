@@ -27,13 +27,13 @@ line below:
 
 <!-- workflow.skip() -->
 ```shell
-  export AFD_PROFILE_NAME=jazafd$RANDOM
+  export AFD_PROFILE_NAME=javazafd$RANDOM
 ```
 
 <!-- workflow.run()
 
 if [[ -z $AFD_PROFILE_NAME ]]; then
-  export AFD_PROFILE_NAME=jazafd$RANDOM
+  export AFD_PROFILE_NAME=javazafd$RANDOM
 fi
   -->
 

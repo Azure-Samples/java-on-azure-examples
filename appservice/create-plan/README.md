@@ -27,13 +27,13 @@ using the command line below:
 
 <!-- workflow.skip() -->
 ```shell
-  export APPSERVICE_PLAN=appservice-plan
+  export APPSERVICE_PLAN=javazappsvcplan
 ```
 
 <!-- workflow.run() 
 
   if [[ -z $APPSERVICE_PLAN ]]; then
-    export APPSERVICE_PLAN=appservice-plan-$RANDOM
+    export APPSERVICE_PLAN=javazappsvcplan-$RANDOM
   fi
 
 -->
