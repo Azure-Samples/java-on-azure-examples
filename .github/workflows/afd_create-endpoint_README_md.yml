@@ -39,7 +39,7 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           
           if [[ -z $AFD_PROFILE_NAME ]]; then
-          export AFD_PROFILE_NAME=jazafd$RANDOM
+          export AFD_PROFILE_NAME=javazafd$RANDOM
           fi
           az afd profile create \
           --profile-name $AFD_PROFILE_NAME \
@@ -47,7 +47,7 @@ jobs:
           --sku Premium_AzureFrontDoor
           
           if [[ -z $AFD_ENDPOINT_NAME ]]; then
-          export AFD_ENDPOINT_NAME=afdendp$RANDOM
+          export AFD_ENDPOINT_NAME=javazafdendp$RANDOM
           fi
           az afd endpoint create \
           --resource-group $RESOURCE_GROUP \

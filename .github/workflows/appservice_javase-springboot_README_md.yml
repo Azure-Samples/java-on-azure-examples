@@ -33,7 +33,7 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           
           if [[ -z $APPSERVICE_PLAN ]]; then
-          export APPSERVICE_PLAN=appservice-plan-$RANDOM
+          export APPSERVICE_PLAN=javazappsvcplan-$RANDOM
           fi
           
           az appservice plan create \
@@ -46,7 +46,7 @@ jobs:
           cd appservice/javase-springboot
           
           mvn package
-          export APPSERVICE_JAVASE_SPRINGBOOT=appservice-javase-springboot-$RANDOM
+          export APPSERVICE_JAVASE_SPRINGBOOT=javazappsvc-javase-springboot-$RANDOM
           
           mvn azure-webapp:deploy \
           -DappName=$APPSERVICE_JAVASE_SPRINGBOOT \

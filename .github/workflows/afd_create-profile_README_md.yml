@@ -33,7 +33,7 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           
           if [[ -z $AFD_PROFILE_NAME ]]; then
-          export AFD_PROFILE_NAME=jazafd$RANDOM
+          export AFD_PROFILE_NAME=javazafd$RANDOM
           fi
           az afd profile create \
           --profile-name $AFD_PROFILE_NAME \

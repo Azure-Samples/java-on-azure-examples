@@ -3,7 +3,7 @@ on:
     - cron: '0 2 * * 1'
   workflow_dispatch: 
 
-name: 'afd/add-origins-to-origin-group/README.md'
+name: 'afd/add-route/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -14,6 +14,12 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
+          
+          if [[ -z $REGION ]]; then
+          export REGION=eastus2
+          echo "Using 'eastus2' region"
+          fi
+          
           
           if [[ -z $REGION ]]; then
           export REGION=eastus
@@ -190,16 +196,22 @@ jobs:
           --enabled-state Enabled \
           --http-port 80 \
           --https-port 443
+          az afd route create \
+          --resource-group $RESOURCE_GROUP \
+          --profile-name $AFD_PROFILE_NAME \
+          --endpoint-name $AFD_ENDPOINT_NAME \
+          --forwarding-protocol MatchRequest \
+          --route-name route \
+          --https-redirect Enabled \
+          --origin-group $AFD_ORIGIN_GROUP_NAME \
+          --supported-protocols Http Https \
+          --link-to-default-domain Enabled
           
-          export RESULT=$(az afd origin show --origin-name springboot --origin-group-name $AFD_ORIGIN_GROUP_NAME --profile-name $AFD_PROFILE_NAME --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
-          if [[ "$RESULT" != Succeeded ]]; then
+          sleep 300
+          export URL=https://$(az afd endpoint show --resource-group $RESOURCE_GROUP --profile-name $AFD_PROFILE_NAME --endpoint-name $AFD_ENDPOINT_NAME --query hostName --output tsv)
+          export RESULT=$(curl $URL)
           az group delete --name $RESOURCE_GROUP --yes || true
-          echo "Azure Front Door Origin - springboot - was not provisioned properly"
-          exit 1
-          fi
-          export RESULT=$(az afd origin show --origin-name quarkus --origin-group-name $AFD_ORIGIN_GROUP_NAME --profile-name $AFD_PROFILE_NAME --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
-          az group delete --name $RESOURCE_GROUP --yes || true
-          if [[ "$RESULT" != Succeeded ]]; then
-          echo "Azure Front Door Origin Group - quarkus - was not provisioned properly"
+          if [[ "$RESULT" != *"Hello"* ]]; then
+          echo "Response did not contain 'Hello'"
           exit 1
           fi
