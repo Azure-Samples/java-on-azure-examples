@@ -8,12 +8,12 @@
 <!-- workflow.run()
 
   if [[ -z $REGION ]]; then
-    export REGION=eastus
-    echo "Using 'eastus' region"
+    export REGION=eastus2
+    echo "Using 'eastus2' region"
   fi
 
   -->
-<!-- workflow.cron(0 2 * * 1) -->
+<!-- workflow.cron(0 11 * * 1) -->
 <!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../install-tools/README.md) -->
 

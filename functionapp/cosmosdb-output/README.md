@@ -8,12 +8,12 @@
 <!-- workflow.run()
 
   if [[ -z $REGION ]]; then
-    export REGION=westus3
-    echo "Using 'westus3' region"
+    export REGION=eastus
+    echo "Using 'eastus' region"
   fi
 
   -->
-<!-- workflow.cron(0 1 * * 1) -->
+<!-- workflow.cron(0 11 * * 1) -->
 <!-- workflow.include(../install-tools/README.md) -->
 <!-- workflow.include(../../cosmosdb/create/README.md) -->
 
