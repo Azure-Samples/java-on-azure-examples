@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 2 * * 1'
+    - cron: '0 11 * * 1'
   workflow_dispatch: 
 
 name: 'functionapp/helloworld/README.md'
@@ -16,8 +16,8 @@ jobs:
       - run: | 
           
           if [[ -z $REGION ]]; then
-          export REGION=eastus
-          echo "Using 'eastus' region"
+          export REGION=eastus2
+          echo "Using 'eastus2' region"
           fi
           
           

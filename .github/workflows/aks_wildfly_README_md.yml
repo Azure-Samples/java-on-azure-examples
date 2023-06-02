@@ -52,8 +52,8 @@ jobs:
           
           
           if [[ -z $REGION ]]; then
-          export REGION=westus2
-          echo "Using 'westus2' region"
+          export REGION=southcentralus
+          echo "Using 'southcentralus' region"
           fi
           
           
