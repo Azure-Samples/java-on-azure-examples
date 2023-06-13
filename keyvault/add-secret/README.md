@@ -5,13 +5,21 @@
 
 ## Prerequisites
 
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+    echo "Using 'westus' region"
+  fi
+
+  -->
+<!-- workflow.cron(0 13 * * 1) -->
+<!-- workflow.include(../create/README.md) -->
+
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Create an Azure Key Vault](../create/README.md)
-
-<!-- workflow.cron(0 1 * * 2) -->
-<!-- workflow.include(../create/README.md) -->
 
 ## Add a Secret to Azure Key Vault
 
