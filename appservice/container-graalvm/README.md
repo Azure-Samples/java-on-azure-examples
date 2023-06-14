@@ -5,6 +5,19 @@
 
 ## Prerequisites
 
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus2
+    echo "Using 'westus2' region"
+  fi
+
+  -->
+<!-- workflow.cron(0 5 * * 1) -->
+<!-- workflow.include(../../acr/graalvm/README.md) -->
+<!-- workflow.include(../../acr/create-settings-xml/README.md) -->
+<!-- workflow.include(../create-plan/README.md) -->
+
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
@@ -15,10 +28,6 @@ This example assumes you have previously completed the following examples:
 
 ## Deploy the GraalVM application using a container image
 
-<!-- workflow.cron(0 10 * * 5) -->
-<!-- workflow.include(../../acr/graalvm/README.md) -->
-<!-- workflow.include(../../acr/create-settings-xml/README.md) -->
-<!-- workflow.include(../create-plan/README.md) -->
 <!-- workflow.run() 
 
   cd appservice/container-graalvm
