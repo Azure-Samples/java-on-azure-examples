@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 4 * * 1'
+    - cron: '0 5 * * 1'
   workflow_dispatch: 
 
 name: 'appservice/deploy-to-deployment-slot/README.md'
@@ -14,6 +14,12 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          echo "Using 'westus' region"
+          fi
+          
           
           if [[ -z $REGION ]]; then
           export REGION=northcentralus
