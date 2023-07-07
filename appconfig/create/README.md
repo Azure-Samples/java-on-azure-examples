@@ -23,6 +23,7 @@ To create the Azure App Configuration use the following command lines:
     --resource-group $RESOURCE_GROUP \
     --location $REGION \
     --name $APP_CONFIG_NAME \
+    --sku Free \
     --enable-public-network true
 ```
 
