@@ -34,7 +34,7 @@
 | [![containerapp/glassfish/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_glassfish_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_glassfish_README_md.yml) | 0 1 * * 1 | westus |
 | [![containerapp/quarkus/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_quarkus_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_quarkus_README_md.yml) | 0 1 * * 2 | northcentralus |
 | [![functionapp/helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_helloworld_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_helloworld_README_md.yml) | 0 11 * * 1 | canadacentral |
-| [![functionapp/cosmosdb-output/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_cosmosdb-output_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_cosmosdb-output_README_md.yml) | 0 11 * *  1 | southcentralus |
+| [![functionapp/cosmosdb-output/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_cosmosdb-output_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_cosmosdb-output_README_md.yml) | 0 11 * *  1 | canadaeast |
 | [![keyvault/add-secret/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/keyvault_add-secret_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/keyvault_add-secret_README_md.yml) | 0 13 * * 1 | eastus |
 | [![monitor/create-log-analytics-workspace/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/monitor_create-log-analytics-workspace_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/monitor_create-log-analytics-workspace_README_md.yml) | 0 15 * * 1 | westus |
 | [![servicebus/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/servicebus_create_README_md.yml) | 0 0 * * 5 | northcentralus |
@@ -59,5 +59,6 @@ Regions cheatsheet
   8. southcentralus
   9. westcentralus
  10. canadacentral
+ 11. canadaeast
 
  -->
