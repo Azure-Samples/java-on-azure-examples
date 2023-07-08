@@ -31,6 +31,7 @@ jobs:
           --resource-group $RESOURCE_GROUP \
           --location $REGION \
           --name $APP_CONFIG_NAME \
+          --sku Free \
           --enable-public-network true
           
           export RESULT=$(az appconfig show --resource-group $RESOURCE_GROUP --name $APP_CONFIG_NAME --output tsv --query provisioningState)

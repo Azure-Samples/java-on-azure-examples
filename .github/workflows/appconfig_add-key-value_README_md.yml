@@ -31,6 +31,7 @@ jobs:
           --resource-group $RESOURCE_GROUP \
           --location $REGION \
           --name $APP_CONFIG_NAME \
+          --sku Free \
           --enable-public-network true
           az appconfig kv set \
           --name $APP_CONFIG_NAME \
