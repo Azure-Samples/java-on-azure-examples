@@ -60,6 +60,6 @@ Regions cheatsheet
   9. westcentralus
  10. canadacentral
  11. canadaeast
- 12. brazil
+ 12. brazilsouth
 
  -->
