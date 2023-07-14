@@ -8,8 +8,8 @@
 <!-- workflow.run()
 
   if [[ -z $REGION ]]; then
-    export REGION=brazilsoutheast
-    echo "Using 'brazilsoutheast' region"
+    export REGION=northeurope
+    echo "Using 'northeurope' region"
   fi
 
   -->
