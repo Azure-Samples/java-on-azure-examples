@@ -16,8 +16,8 @@ jobs:
       - run: | 
           
           if [[ -z $REGION ]]; then
-          export REGION=canadacentral
-          echo "Using 'canadacentral' region"
+          export REGION=brazilsoutheast
+          echo "Using 'brazilsoutheast' region"
           fi
           
           
