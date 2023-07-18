@@ -17,6 +17,7 @@
                 <artifactId>azure-functions-maven-plugin</artifactId>
                 <configuration>
                     <appName>${appName}</appName>
+                    <region>${region}</region>
                     <resourceGroup>${resourceGroup}</resourceGroup>
                     <runtime>
                         <javaVersion>${java.version}</javaVersion>
@@ -28,7 +29,7 @@
                         </property>
                         <property>
                             <name>FUNCTIONS_EXTENSION_VERSION</name>
-                            <value>~2</value>
+                            <value>~4</value>
                         </property>
                     </appSettings>
                 </configuration>
@@ -109,6 +110,7 @@
     </dependencies>
     <properties>
         <appName>functionapp-helloworld</appName>
+        <region>westus2</region>
         <resourceGroup>java-on-azure</resourceGroup>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <stagingDirectory>${project.build.directory}/azure-functions/${appName}</stagingDirectory>

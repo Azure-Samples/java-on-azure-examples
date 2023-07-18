@@ -33,7 +33,7 @@
 | [![appservice/container-graalvm/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_container-graalvm_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_container-graalvm_README_md.yml) | 0 5 * * 1 | westus2 |
 | [![containerapp/glassfish/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_glassfish_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_glassfish_README_md.yml) | 0 1 * * 1 | westus |
 | [![containerapp/quarkus/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_quarkus_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_quarkus_README_md.yml) | 0 1 * * 2 | northcentralus |
-| [![functionapp/helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_helloworld_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_helloworld_README_md.yml) | 0 11 * * 1 | northeurope |
+| [![functionapp/helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_helloworld_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_helloworld_README_md.yml) | 0 11 * * 1 | westus2 |
 | [![functionapp/cosmosdb-output/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_cosmosdb-output_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/functionapp_cosmosdb-output_README_md.yml) | 0 11 * *  1 | canadaeast |
 | [![keyvault/add-secret/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/keyvault_add-secret_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/keyvault_add-secret_README_md.yml) | 0 13 * * 1 | eastus |
 | [![monitor/create-log-analytics-workspace/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/monitor_create-log-analytics-workspace_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/monitor_create-log-analytics-workspace_README_md.yml) | 0 15 * * 1 | westus |
@@ -65,5 +65,19 @@ Regions cheatsheet
  14. europe                 - Europe
  15. northeurope
  16. westeurope
+ 17. francecentral
+ 18. francesouth
+ 19. germanywestcentral
+ 20. norwaywest
+ 21. norwayeast
+ 22. polandcentral
+ 23. swedencentral
+ 24. swedensouth
+ 25. switzerlandnorth
+ 26. switzerlandwest
+ 27. uksouth
+ 28. ukwest
+ 29. southafricanorth       - Africa
+ 30. southafricawest
 
  -->

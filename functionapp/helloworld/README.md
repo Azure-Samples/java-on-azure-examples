@@ -8,8 +8,8 @@
 <!-- workflow.run()
 
   if [[ -z $REGION ]]; then
-    export REGION=northeurope
-    echo "Using 'northeurope' region"
+    export REGION=westus2
+    echo "Using 'westus2' region"
   fi
 
   -->
@@ -46,6 +46,7 @@ To build the JAR file use the following Maven command line.
 
   mvn -DappName=$FUNCTIONAPP_HELLOWORLD \
       -DresourceGroup=$RESOURCE_GROUP \
+      -Dregion=$REGION \
       package
 
 ```
@@ -58,6 +59,7 @@ To run the example locally use the following Maven command line.
 ```shell
   mvn -DappName=$FUNCTIONAPP_HELLOWORLD \
       -DresourceGroup=$RESOURCE_GROUP \
+      -Dregion=$REGION \
       clean package azure-functions:run
 ```
 
@@ -72,6 +74,7 @@ You should see `Hello World` in your brower.
 
   mvn -DappName=$FUNCTIONAPP_HELLOWORLD \
       -DresourceGroup=$RESOURCE_GROUP \
+      -Dregion=$REGION \
       clean package azure-functions:deploy
 
 ```
