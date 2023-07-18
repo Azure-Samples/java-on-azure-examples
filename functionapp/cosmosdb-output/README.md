@@ -8,8 +8,8 @@
 <!-- workflow.run()
 
   if [[ -z $REGION ]]; then
-    export REGION=canadaeast
-    echo "Using 'canadaeast' region"
+    export REGION=westus3
+    echo "Using 'westus3' region"
   fi
 
   -->
@@ -52,7 +52,10 @@ This example assumes you have previously completed the following examples:
 To build the JAR file use the following Maven command line.
 
 ```shell
-  mvn -DresourceGroup=$RESOURCE_GROUP -DappName=$FUNCTIONS_COSMOSDB  package
+  mvn -DresourceGroup=$RESOURCE_GROUP \
+      -DappName=$FUNCTIONS_COSMOSDB \
+      -Dregion=$REGION \
+      package
 ```
 
 ## Run the example locally
@@ -61,8 +64,10 @@ To run the example locally use the following Maven command line.
 
 <!-- workflow.skip() -->
 ```shell
-  mvn -DappName=$FUNCTIONS_COSMOSDB  -DresourceGroup=$RESOURCE_GROUP \
-    clean package azure-functions:run
+  mvn -DappName=$FUNCTIONS_COSMOSDB \
+      -Dregion=$REGION \
+      -DresourceGroup=$RESOURCE_GROUP \
+      clean package azure-functions:run
 ```
 
 You can verify the function works by using your browser and going to 
@@ -73,9 +78,11 @@ You should see `We stored an item in Cosmos DB` in your brower.
 ## Deploy the example to Azure
 
 ```shell
-  mvn -DappName=$FUNCTIONS_COSMOSDB  -DresourceGroup=$RESOURCE_GROUP \
-    -DcosmosDBConnectionString="$FUNCTIONS_COSMOSDB_CONNECTION_STRING" \
-    clean package azure-functions:deploy
+  mvn -DappName=$FUNCTIONS_COSMOSDB \
+      -Dregion=$REGION \
+      -DresourceGroup=$RESOURCE_GROUP \
+      -DcosmosDBConnectionString="$FUNCTIONS_COSMOSDB_CONNECTION_STRING" \
+      clean package azure-functions:deploy
 ```
 
 To verify the function works open your browser to the URL echoed by the 

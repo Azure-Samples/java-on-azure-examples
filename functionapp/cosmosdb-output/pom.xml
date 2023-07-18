@@ -17,6 +17,7 @@
                 <artifactId>azure-functions-maven-plugin</artifactId>
                 <configuration>
                     <appName>${appName}</appName>
+                    <region>${region}</region>
                     <resourceGroup>${resourceGroup}</resourceGroup>
                     <runtime>
                         <javaVersion>${java.version}</javaVersion>
@@ -148,6 +149,7 @@
     </profiles>
     <properties>
         <appName>functions-cosmosdb-output</appName>
+        <region>westus2</region>
         <resourceGroup>azure-examples</resourceGroup>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <stagingDirectory>${project.build.directory}/azure-functions/${appName}</stagingDirectory>
