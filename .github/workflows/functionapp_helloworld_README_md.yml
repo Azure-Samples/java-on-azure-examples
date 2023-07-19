@@ -16,8 +16,8 @@ jobs:
       - run: | 
           
           if [[ -z $REGION ]]; then
-          export REGION=northeurope
-          echo "Using 'northeurope' region"
+          export REGION=westus2
+          echo "Using 'westus2' region"
           fi
           
           
@@ -47,9 +47,11 @@ jobs:
           export FUNCTIONAPP_HELLOWORLD=functionapp-helloworld-$RANDOM
           mvn -DappName=$FUNCTIONAPP_HELLOWORLD \
           -DresourceGroup=$RESOURCE_GROUP \
+          -Dregion=$REGION \
           package
           mvn -DappName=$FUNCTIONAPP_HELLOWORLD \
           -DresourceGroup=$RESOURCE_GROUP \
+          -Dregion=$REGION \
           clean package azure-functions:deploy
           echo `az functionapp show \
           --resource-group $RESOURCE_GROUP \
