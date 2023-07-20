@@ -16,8 +16,8 @@ jobs:
       - run: | 
           
           if [[ -z $REGION ]]; then
-          export REGION=canadaeast
-          echo "Using 'canadaeast' region"
+          export REGION=westus3
+          echo "Using 'westus3' region"
           fi
           
           
@@ -54,8 +54,13 @@ jobs:
           export FUNCTIONS_COSMOSDB=functions-cosmosdb-$RANDOM
           export FUNCTIONS_COSMOSDB_CONNECTION_STRING="$(az cosmosdb keys list --resource-group $RESOURCE_GROUP --name $COSMOSDB_ACCOUNT_NAME --type connection-strings --query connectionStrings[0].connectionString --output tsv)"
           mvn -P local validate
-          mvn -DresourceGroup=$RESOURCE_GROUP -DappName=$FUNCTIONS_COSMOSDB  package
-          mvn -DappName=$FUNCTIONS_COSMOSDB  -DresourceGroup=$RESOURCE_GROUP \
+          mvn -DresourceGroup=$RESOURCE_GROUP \
+          -DappName=$FUNCTIONS_COSMOSDB \
+          -Dregion=$REGION \
+          package
+          mvn -DappName=$FUNCTIONS_COSMOSDB \
+          -Dregion=$REGION \
+          -DresourceGroup=$RESOURCE_GROUP \
           -DcosmosDBConnectionString="$FUNCTIONS_COSMOSDB_CONNECTION_STRING" \
           clean package azure-functions:deploy
           
