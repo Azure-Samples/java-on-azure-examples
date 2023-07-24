@@ -13,7 +13,9 @@
     <name>Azure Container Apps</name>
     <modules>
         <module>create-environment</module>
+        <module>create-manual-job</module>
         <module>dropwizard</module>
+        <module>execute-manual-job</module>
         <module>glassfish</module>
         <module>helidon</module>
         <module>micronaut</module>
@@ -22,6 +24,5 @@
         <module>springboot</module>
         <module>tomcat</module>
         <module>wildfly</module>
-        <module>create-manual-job</module>
     </modules>
 </project>
