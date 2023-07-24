@@ -27,5 +27,6 @@
         <module>springboot</module>
         <module>tomcat</module>
         <module>wildfly</module>
+        <module>helloworldjob</module>
     </modules>
 </project>
