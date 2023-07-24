@@ -9,7 +9,7 @@
     </parent>
     <artifactId>aca-wildfly</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Container Apps :: Deploy WildFly</name>
+    <name>ACA :: Deploy WildFly</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
