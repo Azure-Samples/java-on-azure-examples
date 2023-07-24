@@ -22,5 +22,6 @@
         <module>springboot</module>
         <module>tomcat</module>
         <module>wildfly</module>
+        <module>create-manual-job</module>
     </modules>
 </project>
