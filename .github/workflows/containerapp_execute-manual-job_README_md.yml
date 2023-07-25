@@ -1,0 +1,119 @@
+on: 
+  schedule: 
+    - cron: '0 0 * * 4'
+  workflow_dispatch: 
+
+name: 'containerapp/execute-manual-job/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          
+          if [[ -z $REGION ]]; then
+          export REGION=northcentralus
+          echo "Using 'northcentralus' region"
+          fi
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          
+          if [[ -z $ACR_NAME ]]; then
+          export ACR_NAME=acreg$RANDOM
+          fi
+          az acr create \
+          --name $ACR_NAME \
+          --resource-group $RESOURCE_GROUP \
+          --sku Basic \
+          --admin-enabled true
+          
+          cd acr/helloworldjob
+          
+          mvn package
+          export ACR_HELLOWORLDJOB_IMAGE=helloworldjob:latest
+          
+          az acr build --registry $ACR_NAME --resource-group $RESOURCE_GROUP --image $ACR_HELLOWORLDJOB_IMAGE .
+          
+          cd ../..
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=northcentralus
+          echo "Using 'northcentralus' region"
+          fi
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          
+          if [[ -z $ACR_NAME ]]; then
+          export ACR_NAME=acreg$RANDOM
+          fi
+          az acr create \
+          --name $ACR_NAME \
+          --resource-group $RESOURCE_GROUP \
+          --sku Basic \
+          --admin-enabled true
+          
+          cd acr/helloworldjob
+          
+          mvn package
+          export ACR_HELLOWORLDJOB_IMAGE=helloworldjob:latest
+          
+          az acr build --registry $ACR_NAME --resource-group $RESOURCE_GROUP --image $ACR_HELLOWORLDJOB_IMAGE .
+          
+          cd ../..
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=northcentralus
+          echo "Using 'northcentralus' region"
+          fi
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          az extension add --name containerapp --upgrade
+          az provider register --namespace Microsoft.App
+          az provider register --namespace Microsoft.OperationalInsights
+          
+          if [[ -z $ACA_ENVIRONMENT_NAME ]]; then
+          export ACA_ENVIRONMENT_NAME=aca$RANDOM
+          export ACA_REGION=westus
+          fi
+          
+          az containerapp env create \
+          --name $ACA_ENVIRONMENT_NAME \
+          --resource-group $RESOURCE_GROUP \
+          --location "$ACA_REGION"
+          if [[ -z $ACA_JOB_NAME ]]; then
+          export ACA_JOB_NAME=aca-job-$RANDOM
+          fi
+          az containerapp job create \
+          --name $ACA_JOB_NAME \
+          --resource-group $RESOURCE_GROUP \
+          --environment $ACA_ENVIRONMENT_NAME \
+          --trigger-type Manual \
+          --replica-timeout 1800 \
+          --replica-retry-limit 1 \
+          --replica-completion-count 1 \
+          --parallelism 1 \
+          --image $ACR_HELLOWORLDJOB_IMAGE
+          az containerapp job start \
+          --name $ACA_JOB_NAME \
+          --resource-group $RESOURCE_GROUP
+          
+          sleep 60
+          az group delete --name $RESOURCE_GROUP --yes || true

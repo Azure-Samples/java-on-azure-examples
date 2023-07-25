@@ -1,0 +1,53 @@
+on: 
+  schedule: 
+    - cron: '0 1 * * 1'
+  workflow_dispatch: 
+
+name: 'acr/helloworldjob/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          
+          if [[ -z $REGION ]]; then
+          export REGION=northcentralus
+          echo "Using 'northcentralus' region"
+          fi
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          
+          if [[ -z $ACR_NAME ]]; then
+          export ACR_NAME=acreg$RANDOM
+          fi
+          az acr create \
+          --name $ACR_NAME \
+          --resource-group $RESOURCE_GROUP \
+          --sku Basic \
+          --admin-enabled true
+          
+          cd acr/helloworldjob
+          
+          mvn package
+          export ACR_HELLOWORLDJOB_IMAGE=helloworldjob:latest
+          
+          az acr build --registry $ACR_NAME --resource-group $RESOURCE_GROUP --image $ACR_HELLOWORLDJOB_IMAGE .
+          
+          cd ../..
+          
+          
+          export RESULT=$(az acr repository show --name $ACR_NAME --image $ACR_HELLOWORLDJOB_IMAGE)
+          az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ -z $RESULT ]]; then
+          echo "Unable to find " $ACR_HELLOWORLDJOB_IMAGE " image"
+          exit 1
+          fi
