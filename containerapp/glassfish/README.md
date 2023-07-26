@@ -7,15 +7,15 @@
 <!-- 
 
   if [[ -z $REGION ]]; then
-    export REGION=westus
+    export REGION=eastus2
   fi
 
   -->
-<!-- workflow.cron(0 1 * * 5) -->
+<!-- workflow.cron(0 8 * * 1) -->
 <!-- workflow.include(../../acr/glassfish/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 
-This example assumes you have previously completed the following example:
+This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Create an Azure Container Registry](../../acr/create/README.md)

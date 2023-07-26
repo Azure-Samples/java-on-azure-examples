@@ -9,7 +9,7 @@
     </parent>
     <artifactId>aca-micronaut</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Container Apps :: Deploy a Micronaut application</name>
+    <name>ACA :: Deploy a Micronaut application</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

@@ -18,6 +18,7 @@
         <module>execute-manual-job</module>
         <module>glassfish</module>
         <module>helidon</module>
+        <module>list-job-executions</module>
         <module>micronaut</module>
         <module>piranha</module>
         <module>quarkus</module>

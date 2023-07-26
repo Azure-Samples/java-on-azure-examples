@@ -9,5 +9,5 @@
     </parent>
     <artifactId>create-manual-job</artifactId>
     <packaging>pom</packaging>
-    <name>ACA :: Create Manual Job</name>
+    <name>ACA :: Create a manual job</name>
 </project>

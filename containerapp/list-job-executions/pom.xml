@@ -7,10 +7,7 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>aca-dropwizard</artifactId>
+    <artifactId>list-job-executions</artifactId>
     <packaging>pom</packaging>
-    <name>ACA :: Deploy a Dropwizard application</name>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <name>ACA :: List job executions</name>
 </project>
