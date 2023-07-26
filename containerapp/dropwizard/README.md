@@ -4,15 +4,6 @@
 
 ## Prerequisites
 
-This example assumes you have previously completed the following examples:
-
-1. [Create an Azure Resource Group](../../group/create/README.md)
-1. [Create an Azure Container Registry](../../acr/create/README.md)
-1. [Build and push a Dropwizard application to ACR](../../acr/dropwizard/README.md)
-1. [Create an Azure Container Apps environment](../create-environment/README.md)
-
-## Deploy the Dropwizard application
-
 <!-- 
 
   if [[ -z $REGION ]]; then
@@ -23,6 +14,15 @@ This example assumes you have previously completed the following examples:
 <!-- workflow.cron(0 8 * * 1) -->
 <!-- workflow.include(../../acr/dropwizard/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
+
+This example assumes you have previously completed the following examples:
+
+1. [Create an Azure Resource Group](../../group/create/README.md)
+1. [Create an Azure Container Registry](../../acr/create/README.md)
+1. [Build and push a Dropwizard application to ACR](../../acr/dropwizard/README.md)
+1. [Create an Azure Container Apps environment](../create-environment/README.md)
+
+## Deploy the Dropwizard application
 
 To deploy the Dropwizard container image to Azure Container Apps use the
 command lines below.

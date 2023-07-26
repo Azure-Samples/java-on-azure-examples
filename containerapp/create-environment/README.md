@@ -4,12 +4,6 @@
 
 ## Prerequisites
 
-This example assumes you have previously completed the following examples:
-
-1. [Create an Azure Resource Group](../../group/create/README.md)
-
-## Setup the CLI extensions
-
 <!-- 
 
   if [[ -z $REGION ]]; then
@@ -19,6 +13,12 @@ This example assumes you have previously completed the following examples:
   -->
 <!-- workflow.cron(0 8 * * 1) -->
 <!-- workflow.include(../../group/create/README.md) -->
+
+This example assumes you have previously completed the following examples:
+
+1. [Create an Azure Resource Group](../../group/create/README.md)
+
+## Setup the CLI extensions
 
 Ensure you are running the latest Azure CLI and install the Azure Container
 Apps extensions for the CLI using the command lines below:
@@ -76,7 +76,14 @@ Do NOT forget to remove the resources once you are done running the example.
 
 ## Next steps
 
+* [Create a manual job](../create-manual-job/README.md)
+* [Deploy a Dropwizard application](../dropwizard/README.md)
+* [Deploy a Helidon application](../helidon/README.md)
+* [Deploy a Micronaut application](../micronaut/README.md)
+* [Deploy a Piranha Micro application](../piranha/README.md)
 * [Deploy a Quarkus application](../quarkus/README.md)
+* [Deploy a Spring Boot application](../springboot/README.md)
+* [Deploy Glassfish](../glassfish/README.md)
 * [Deploy Tomcat](../tomcat/README.md)
 * [Deploy WildFly](../wildfly/README.md)
 

@@ -7,7 +7,7 @@
 <!-- 
 
   if [[ -z $REGION ]]; then
-    export REGION=eastus2
+    export REGION=northcentralus
   fi
 
   -->

@@ -4,6 +4,17 @@
 
 ## Prerequisites
 
+<!-- 
+
+  if [[ -z $REGION ]]; then
+    export REGION=europe
+  fi
+
+  -->
+<!-- workflow.cron(0 8 * * 1) -->
+<!-- workflow.include(../../acr/tomcat/README.md) -->
+<!-- workflow.include(../create-environment/README.md) -->
+
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
@@ -12,17 +23,6 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Container Apps environment](../create-environment/README.md)
 
 ## Deploy Tomcat
-
-<!-- 
-
-  if [[ -z $REGION ]]; then
-    export REGION=brazilsouth
-  fi
-
-  -->
-<!-- workflow.cron(0 8 * * 1) -->
-<!-- workflow.include(../../acr/tomcat/README.md) -->
-<!-- workflow.include(../create-environment/README.md) -->
 
 To deploy the Tomcat container image to Azure Container Apps use the command 
 lines below.

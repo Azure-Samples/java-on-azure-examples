@@ -25,5 +25,6 @@
         <module>springboot</module>
         <module>tomcat</module>
         <module>wildfly</module>
+        <module>get-job-execution-log</module>
     </modules>
 </project>
