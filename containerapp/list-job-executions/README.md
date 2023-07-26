@@ -1,6 +1,6 @@
-# Execute a manual job
+# List job executions
 
-[![containerapp/execute-manual-job/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_execute-manual-job_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_execute-manual-job_README_md.yml)
+[![containerapp/list-job-executions/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_list-job-executions_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_list-job-executions_README_md.yml)
 
 ## Prerequisites
 
@@ -11,24 +11,25 @@ This example assumes you have previously completed the following examples:
 1. [Build and push a Hello World Job application to Azure Container Registry](../../acr/helloworldjob/README.md)
 1. [Create an Azure Container Apps environment](../create-environment/README.md)
 1. [Create a manual job](../create-manual-job/README.md)
+1. [Execute a manual job](../execute-manual-job/README.md)
 
-## Execute the manual job
+## List job executions
 
 <!-- 
 
   if [[ -z $REGION ]]; then
-    export REGION=eastus
+    export REGION=centralus
   fi
 
   -->
 <!-- workflow.cron(0 8 * * 1) -->
 <!-- workflow.include(../../acr/helloworldjob/README.md) -->
-<!-- workflow.include(../create-manual-job/README.md) -->
+<!-- workflow.include(../execute-manual-job/README.md) -->
 
-To execute the job manually use the command line below.
+To list executions for a job use the command line below.
 
 ```shell
-  az containerapp job start \
+  az containerapp job execution list \
     --name $ACA_JOB_NAME \
     --resource-group $RESOURCE_GROUP
 ```

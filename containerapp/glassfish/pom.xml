@@ -9,7 +9,7 @@
     </parent>
     <artifactId>aca-glassfish</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Container Apps :: Deploy Glassfish</name>
+    <name>ACA :: Deploy Glassfish</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

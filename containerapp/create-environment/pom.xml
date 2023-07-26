@@ -9,7 +9,7 @@
     </parent>
     <artifactId>aca-create-environment</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Container Apps :: Create an environment</name>
+    <name>ACA :: Create an environment</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>

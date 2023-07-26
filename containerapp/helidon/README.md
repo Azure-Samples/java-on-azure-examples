@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-This example assumes you have previously completed the following example:
+This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Create an Azure Container Registry](../../acr/create/README.md)
@@ -13,7 +13,14 @@ This example assumes you have previously completed the following example:
 
 ## Deploy the Helidon application
 
-<!-- workflow.cron(0 0 * * 6) -->
+<!-- 
+
+  if [[ -z $REGION ]]; then
+    export REGION=northcentralus
+  fi
+
+  -->
+<!-- workflow.cron(0 8 * * 1) -->
 <!-- workflow.include(../../acr/helidon/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 

@@ -4,13 +4,20 @@
 
 ## Prerequisites
 
-This example assumes you have previously completed the following example:
+This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 
 ## Setup the CLI extensions
 
-<!-- workflow.cron(0 0 * * 4) -->
+<!-- 
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 8 * * 1) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 Ensure you are running the latest Azure CLI and install the Azure Container

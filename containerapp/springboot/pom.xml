@@ -9,7 +9,7 @@
     </parent>
     <artifactId>aca-springboot</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Container Apps :: Deploy a Spring Boot application</name>
+    <name>ACA :: Deploy a Spring Boot application</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
