@@ -4,15 +4,6 @@
 
 ## Prerequisites
 
-This example assumes you have previously completed the following examples:
-
-1. [Create an Azure Resource Group](../../group/create/README.md)
-1. [Create an Azure Container Registry](../../acr/create/README.md)
-1. [Build and push a Hello World Job application to Azure Container Registry](../../acr/helloworldjob/README.md)
-1. [Create an Azure Container Apps environment](../create-environment/README.md)
-
-## Create the manual job
-
 <!-- 
 
   if [[ -z $REGION ]]; then
@@ -23,6 +14,15 @@ This example assumes you have previously completed the following examples:
 <!-- workflow.cron(0 8 * * 1) -->
 <!-- workflow.include(../../acr/helloworldjob/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
+
+This example assumes you have previously completed the following examples:
+
+1. [Create an Azure Resource Group](../../group/create/README.md)
+1. [Create an Azure Container Registry](../../acr/create/README.md)
+1. [Build and push a Hello World Job application to Azure Container Registry](../../acr/helloworldjob/README.md)
+1. [Create an Azure Container Apps environment](../create-environment/README.md)
+
+## Create the manual job
 
 <!-- workflow.skip() -->
 ```shell

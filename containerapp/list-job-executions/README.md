@@ -4,6 +4,17 @@
 
 ## Prerequisites
 
+<!-- 
+
+  if [[ -z $REGION ]]; then
+    export REGION=southcentralus
+  fi
+
+  -->
+<!-- workflow.cron(0 8 * * 1) -->
+<!-- workflow.include(../../acr/helloworldjob/README.md) -->
+<!-- workflow.include(../execute-manual-job/README.md) -->
+
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
@@ -14,17 +25,6 @@ This example assumes you have previously completed the following examples:
 1. [Execute a manual job](../execute-manual-job/README.md)
 
 ## List job executions
-
-<!-- 
-
-  if [[ -z $REGION ]]; then
-    export REGION=centralus
-  fi
-
-  -->
-<!-- workflow.cron(0 8 * * 1) -->
-<!-- workflow.include(../../acr/helloworldjob/README.md) -->
-<!-- workflow.include(../execute-manual-job/README.md) -->
 
 To list executions for a job use the command line below.
 

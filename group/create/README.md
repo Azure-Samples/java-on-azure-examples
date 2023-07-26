@@ -56,7 +56,7 @@ Do NOT forget to remove the resources once you are done running the example.
 
 ## Next steps
 
-* [Create an Azure Container Apps environment](../../containers/aca/create-environment/README.md)
+* [Create an Azure Container Apps environment](../../containerapp/create-environment/README.md)
 * [Create an Azure Kubernetes Service cluster](../../containers/aks/create/README.md)
 * [Create an Azure Spring Cloud](../../compute/spring-cloud/create/README.md)
 
