@@ -170,7 +170,7 @@ jobs:
           --replica-retry-limit 1 \
           --replica-completion-count 1 \
           --parallelism 1 \
-          --image $ACR_HELLOWORLDJOB_IMAGE
+          --image $ACR_NAME.azurecr.io/$ACR_HELLOWORLDJOB_IMAGE
           az containerapp job start \
           --name $ACA_JOB_NAME \
           --resource-group $RESOURCE_GROUP
@@ -178,7 +178,7 @@ jobs:
           --name $ACA_JOB_NAME \
           --resource-group $RESOURCE_GROUP
           export ACA_LOG_ANALYTICS_WORKSPACE_ID=`az containerapp env show \
-          --name $ACA_ENVIRONMENT \
+          --name $ACA_ENVIRONMENT_NAME \
           --resource-group $RESOURCE_GROUP \
           --query "properties.appLogsConfiguration.logAnalyticsConfiguration.customerId" \
           --output tsv`

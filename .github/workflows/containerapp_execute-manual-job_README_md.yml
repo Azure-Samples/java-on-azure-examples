@@ -110,7 +110,7 @@ jobs:
           --replica-retry-limit 1 \
           --replica-completion-count 1 \
           --parallelism 1 \
-          --image $ACR_HELLOWORLDJOB_IMAGE
+          --image $ACR_NAME.azurecr.io/$ACR_HELLOWORLDJOB_IMAGE
           az containerapp job start \
           --name $ACA_JOB_NAME \
           --resource-group $RESOURCE_GROUP
