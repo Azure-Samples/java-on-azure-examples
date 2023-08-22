@@ -5,23 +5,23 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>examples.azure.acr</groupId>
-        <artifactId>project</artifactId>
-        <version>1-SNAPSHOT</version>
-    </parent>
-    <packaging>jar</packaging>
+    <groupId>examples.azure.acr</groupId>
     <artifactId>acr-dropwizard</artifactId>
-    <name>Azure Container Registry :: Build and push a Dropwizard application to ACR</name>
+    <version>1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>Build and push a Dropwizard application to ACR</name>
     <properties>
-        <dropwizard.version>4.0.0</dropwizard.version>
+        <!-- dependencies -->
+        <dropwizard.version>4.0.1</dropwizard.version>
+        <!-- other -->
         <java.version>11</java.version>
         <mainClass>helloworld.HelloWorldApplication</mainClass>
-        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
-        <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
-        <maven-shade-plugin.version>3.4.1</maven-shade-plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- plugins -->
+        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+        <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
+        <maven-shade-plugin.version>3.5.0</maven-shade-plugin.version>
     </properties>
     <dependencyManagement>
         <dependencies>

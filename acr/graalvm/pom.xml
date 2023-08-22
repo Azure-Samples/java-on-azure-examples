@@ -2,17 +2,17 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>examples.azure.acr</groupId>
-        <artifactId>project</artifactId>
-        <version>1-SNAPSHOT</version>
-    </parent>
+    <groupId>examples.azure.acr</groupId>
     <artifactId>acr-graalvm</artifactId>
+    <version>1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>Azure Container Registry :: Build and push a GraalVM application to ACR</name>
+    <name>Build and push a GraalVM application to ACR</name>
     <properties>
-        <native-image-maven-plugin.version>21.2.0</native-image-maven-plugin.version>
+        <!-- other -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- plugins -->
+        <azure-webapp-maven-plugin.version>2.12.0</azure-webapp-maven-plugin.version>
+        <native-image-maven-plugin.version>21.2.0</native-image-maven-plugin.version>
     </properties>
     <build>
         <finalName>graalvm</finalName>
@@ -20,6 +20,7 @@
             <plugin>
                 <groupId>com.microsoft.azure</groupId>
                 <artifactId>azure-webapp-maven-plugin</artifactId>
+                <version>${azure-webapp-maven-plugin.version}</version>
                 <configuration>
                     <schemaVersion>V2</schemaVersion>
                     <resourceGroup>${resourceGroup}</resourceGroup>
@@ -31,12 +32,6 @@
                         <serverId>${serverId}</serverId>
                         <registryUrl>${registryUrl}</registryUrl>
                     </runtime>
-                    <appSettings>
-                        <property>
-                            <name>PORT</name>
-                            <value>8080</value>
-                        </property>
-                    </appSettings>
                 </configuration>
             </plugin>
         </plugins>

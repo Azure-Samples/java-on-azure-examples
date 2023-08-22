@@ -3,20 +3,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>examples.azure.acr</groupId>
-        <artifactId>project</artifactId>
-        <version>1-SNAPSHOT</version>
-    </parent>
+    <groupId>examples.azure.acr</groupId>
     <artifactId>acr-micronaut</artifactId>
+    <version>1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>Azure Container Registry :: Build and push a Micronaut application to ACR</name>
+    <name>Build and push a Micronaut application to ACR</name>
     <properties>
-        <java.version>11</java.version>
+        <!-- dependencies -->
         <micronaut.aot.version>1.1.0</micronaut.aot.version>
         <micronaut-maven-plugin.version>3.5.3</micronaut-maven-plugin.version>
         <micronaut.version>3.5.3</micronaut.version>
         <micronaut.runtime>netty</micronaut.runtime>
+        <!-- other -->
+        <java.version>11</java.version>
+        <!-- plugins -->
+        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+        <maven-shade-plugin.version>3.5.0</maven-shade-plugin.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -56,7 +58,6 @@
             <scope>runtime</scope>
         </dependency>
     </dependencies>
-
     <build>
         <finalName>acr-micronaut</finalName>
         <plugins>
@@ -88,6 +89,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <release>${java.version}</release>
                     <annotationProcessorPaths>
@@ -116,6 +118,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
+                <version>${maven-shade-plugin.version}</version>
                 <executions>
                     <execution>
                         <id>default-shade</id>
