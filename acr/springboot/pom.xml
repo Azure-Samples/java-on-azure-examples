@@ -8,11 +8,24 @@
     <packaging>jar</packaging>
     <name>Build and push a Spring Boot Application to ACR</name>
     <properties>
+        <!-- dependencies -->
         <spring-boot.version>2.7.0</spring-boot.version>
+        <!-- other -->
+        <java.version>11</java.version>
+        <!-- plugins -->
+        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
     </properties>
     <build>
         <finalName>acr-springboot</finalName>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <release>${java.version}</release>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

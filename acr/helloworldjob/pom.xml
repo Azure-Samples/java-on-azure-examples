@@ -7,12 +7,23 @@
     <artifactId>acr-helloworldjob</artifactId>
     <name>Build and push a Hello World Job application to ACR</name>
     <properties>
+        <!-- other -->
+        <java.version>11</java.version>
         <!-- plugins -->
+        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
         <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
     </properties>
     <build>
         <finalName>acr-helloworldjob</finalName>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <release>${java.version}</release>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>

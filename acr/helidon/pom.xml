@@ -11,9 +11,11 @@
         <!-- dependencies -->
         <helidon.version>2.6.0</helidon.version>
         <!-- other -->
+        <java.version>11</java.version>
         <mainClass>io.helidon.examples.quickstart.se.Main</mainClass>
         <!-- plugins -->
         <maven-dependency-plugin.version>3.5.0</maven-dependency-plugin.version>
+        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
         <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
     </properties>
     <dependencyManagement>
@@ -56,6 +58,14 @@
     <build>
         <finalName>acr-helidon</finalName>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <release>${java.version}</release>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
