@@ -2,32 +2,27 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>examples.azure.acr</groupId>
-        <artifactId>project</artifactId>
-        <version>1-SNAPSHOT</version>
-    </parent>
+    <groupId>examples.azure.acr</groupId>
     <artifactId>acr-quarkus</artifactId>
-    <name>Azure Container Registry :: Build and push a Quarkus application to ACR</name>
+    <version>1-SNAPSHOT</version>
+    <name>Build and push a Quarkus application to ACR</name>
     <properties>
-        <compiler-plugin.version>3.8.1</compiler-plugin.version>
-        <maven.compiler.parameters>true</maven.compiler.parameters>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <!-- dependencies -->
+        <quarkus.version>1.3.2.Final</quarkus.version>
+        <!-- other -->
+        <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <quarkus-plugin.version>1.3.2.Final</quarkus-plugin.version>
-        <quarkus.platform.artifact-id>quarkus-universe-bom</quarkus.platform.artifact-id>
-        <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
-        <quarkus.platform.version>1.3.2.Final</quarkus.platform.version>
+        <!-- plugins -->
+        <compiler-plugin.version>3.8.1</compiler-plugin.version>
         <surefire-plugin.version>2.22.1</surefire-plugin.version>
     </properties>
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>${quarkus.platform.group-id}</groupId>
-                <artifactId>${quarkus.platform.artifact-id}</artifactId>
-                <version>${quarkus.platform.version}</version>
+                <groupId>io.quarkus</groupId>
+                <artifactId>quarkus-universe-bom</artifactId>
+                <version>${quarkus.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -55,7 +50,7 @@
             <plugin>
                 <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-maven-plugin</artifactId>
-                <version>${quarkus-plugin.version}</version>
+                <version>${quarkus.version}</version>
                 <executions>
                     <execution>
                         <goals>
@@ -65,10 +60,15 @@
                 </executions>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${compiler-plugin.version}</version>
+                <configuration>
+                    <release>${java.version}</release>
+                </configuration>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${surefire-plugin.version}</version>
                 <configuration>

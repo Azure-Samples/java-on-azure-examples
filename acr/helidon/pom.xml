@@ -3,17 +3,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>examples.azure.acr</groupId>
-        <artifactId>project</artifactId>
-        <version>1-SNAPSHOT</version>
-    </parent>
+    <groupId>examples.azure.acr</groupId>
     <artifactId>acr-helidon</artifactId>
     <version>1-SNAPSHOT</version>
-    <name>Azure Container Registry :: Build and push a Helidon application to ACR</name>
+    <name>Build and push a Helidon application to ACR</name>
     <properties>
+        <!-- dependencies -->
         <helidon.version>2.6.0</helidon.version>
+        <!-- other -->
         <mainClass>io.helidon.examples.quickstart.se.Main</mainClass>
+        <!-- plugins -->
         <maven-dependency-plugin.version>3.5.0</maven-dependency-plugin.version>
         <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
     </properties>

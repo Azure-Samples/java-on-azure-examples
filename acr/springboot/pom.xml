@@ -2,14 +2,14 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>examples.azure.acr</groupId>
-        <artifactId>project</artifactId>
-        <version>1-SNAPSHOT</version>
-    </parent>
+    <groupId>examples.azure.acr</groupId>
     <artifactId>acr-springboot</artifactId>
+    <version>1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>Azure Container Registry :: Build and push a Spring Boot Application to ACR</name>
+    <name>Build and push a Spring Boot Application to ACR</name>
+    <properties>
+        <spring-boot.version>2.7.0</spring-boot.version>
+    </properties>
     <build>
         <finalName>acr-springboot</finalName>
         <plugins>
@@ -37,7 +37,4 @@
             <version>${spring-boot.version}</version>
         </dependency>
     </dependencies>
-    <properties>
-        <spring-boot.version>2.7.0</spring-boot.version>
-    </properties>
 </project>
