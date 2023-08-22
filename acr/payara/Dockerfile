@@ -19,7 +19,7 @@ RUN apt-get update && \
 #
 # Install Payara
 #
-RUN export PAYARA_VERSION=6.2023.4 && \
+RUN export PAYARA_VERSION=6.2023.7 && \
     cd /opt && \
     curl -L -o payara.zip https://repo1.maven.org/maven2/fish/payara/distributions/payara/${PAYARA_VERSION}/payara-${PAYARA_VERSION}.zip && \
     unzip payara.zip && \

@@ -20,6 +20,7 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Create an Azure Container Registry](../../acr/create/README.md)
 1. [Build and push a Hello World Job application to Azure Container Registry](../../acr/helloworldjob/README.md)
+1. [Create an 'acrpull' Service Principal](../../acr/create-acrpull-service-principal/README.md)
 1. [Create an Azure Container Apps environment](../create-environment/README.md)
 1. [Create a manual job](../create-manual-job/README.md)
 1. [Execute a manual job](../execute-manual-job/README.md)
@@ -31,7 +32,7 @@ Get the Log Analytics workspace ID by executing the command below:
 
 ```shell
   export ACA_LOG_ANALYTICS_WORKSPACE_ID=`az containerapp env show \
-    --name $ACA_ENVIRONMENT \
+    --name $ACA_ENVIRONMENT_NAME \
     --resource-group $RESOURCE_GROUP \
     --query "properties.appLogsConfiguration.logAnalyticsConfiguration.customerId" \
     --output tsv`

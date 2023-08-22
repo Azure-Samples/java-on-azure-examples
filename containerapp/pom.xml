@@ -12,19 +12,19 @@
     <packaging>pom</packaging>
     <name>Azure Container Apps</name>
     <modules>
-        <module>create-environment</module>
         <module>create-manual-job</module>
+        <module>create-environment</module>
         <module>dropwizard</module>
-        <module>execute-manual-job</module>
-        <module>glassfish</module>
         <module>helidon</module>
-        <module>list-job-executions</module>
         <module>micronaut</module>
         <module>piranha</module>
         <module>quarkus</module>
         <module>springboot</module>
+        <module>glassfish</module>
         <module>tomcat</module>
         <module>wildfly</module>
+        <module>execute-manual-job</module>
         <module>get-job-execution-log</module>
+        <module>list-job-executions</module>
     </modules>
 </project>

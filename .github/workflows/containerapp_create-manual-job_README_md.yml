@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 0 * * 4'
+    - cron: '0 8 * * 1'
   workflow_dispatch: 
 
 name: 'containerapp/create-manual-job/README.md'
@@ -80,7 +80,7 @@ jobs:
           --replica-retry-limit 1 \
           --replica-completion-count 1 \
           --parallelism 1 \
-          --image $ACR_HELLOWORLDJOB_IMAGE
+          --image $ACR_NAME.azurecr.io/$ACR_HELLOWORLDJOB_IMAGE
           
           sleep 60
           export RESULT=$(az containerapp job show --name $ACA_JOB_NAME --resource-group $RESOURCE_GROUP --output tsv --query properties.provisioningState)
