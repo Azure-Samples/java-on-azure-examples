@@ -16,7 +16,7 @@
         <module>delete-plan</module>
         <module>container-glassfish</module>
         <module>container-graalvm</module>
-        <module>container-payara</container-payara>
+        <module>container-payara</module>
         <module>create-deployment-slot</module>
         <module>delete-webapp</module>
         <module>deploy-to-deployment-slot</module>
