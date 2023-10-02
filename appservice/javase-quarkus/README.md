@@ -62,14 +62,14 @@ browser and going to the ```xxxxx.azurewebsites.net``` address the command echoe
 
 <!-- workflow.directOnly() 
 
-  sleep 60
+  sleep 120
   export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_JAVASE_QUARKUS --output tsv --query state)
   if [[ "$RESULT" != Running ]]; then
     echo 'Web application is NOT running'
     az group delete --name $RESOURCE_GROUP --yes || true
     exit 1
   fi
-  sleep 60
+  sleep 120
   export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_JAVASE_QUARKUS --output tsv --query defaultHostName)
   export RESULT=$(curl $URL)
   az group delete --name $RESOURCE_GROUP --yes || true
