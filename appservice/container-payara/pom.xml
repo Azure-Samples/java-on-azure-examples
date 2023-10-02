@@ -7,9 +7,9 @@
         <artifactId>project</artifactId>
         <version>1-SNAPSHOT</version>
     </parent>
-    <artifactId>appservice-docker-payara</artifactId>
+    <artifactId>appservice-container-payara</artifactId>
     <packaging>pom</packaging>
-    <name>AppService :: Deploy Payara using a Docker image</name>
+    <name>AppService :: Deploy Payara using a container image</name>
     <build>
         <plugins>
             <plugin>
@@ -38,7 +38,7 @@
         </plugins>
     </build>
     <properties>
-        <appName>appservice-docker-payara-${example.postfix}</appName>
+        <appName>appservice-container-payara-${example.postfix}</appName>
         <appServicePlan>appservice-plan</appServicePlan>
         <imageName>acr-payara:latest</imageName>
         <region>${env.REGION}</region>

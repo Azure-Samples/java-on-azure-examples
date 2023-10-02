@@ -1,7 +1,7 @@
 
-# Deploy Payara using a Docker image
+# Deploy Payara using a container image
 
-[![appservice/docker-payara/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_docker-payara_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_docker-payara_README_md.yml)
+[![appservice/container-payara/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_container-payara_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_container-payara_README_md.yml)
 
 ## Prerequisites
 
@@ -9,11 +9,11 @@ This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Create an Azure Container Registry](../../acr/create/README.md)
-1. [Push a Payara Docker image to Azure Container Registry](../../acr/payara/README.md)
+1. [Push a Payara container image to Azure Container Registry](../../acr/payara/README.md)
 1. [Create settings.xml using admin access keys](../../acr/create-settings-xml/README.md)
 1. [Create an Azure App Service Plan](../create-plan/README.md)
 
-## Deploy Payara using a Docker image
+## Deploy Payara using a container image
 
 <!-- workflow.cron(0 12 * * 5) -->
 <!-- workflow.include(../../acr/payara/README.md) -->
@@ -24,16 +24,16 @@ To deploy Payara use the following command lines:
 
 <!-- workflow.run() 
 
-  cd appservice/docker-payara
+  cd appservice/container-payara
 
   -->
 
 ```shell
-  export APPSERVICE_DOCKER_PAYARA=appservice-docker-payara-$RANDOM
+  export APPSERVICE_CONTAINER_PAYARA=appservice-container-payara-$RANDOM
 
   mvn azure-webapp:deploy \
     --settings=$SETTINGS_XML \
-    -DappName=$APPSERVICE_DOCKER_PAYARA \
+    -DappName=$APPSERVICE_CONTAINER_PAYARA \
     -DimageName=$ACR_PAYARA_IMAGE \
     -DappServicePlan=$APPSERVICE_PLAN \
     -DresourceGroup=$RESOURCE_GROUP \
@@ -41,7 +41,7 @@ To deploy Payara use the following command lines:
 
   az webapp show \
     --resource-group $RESOURCE_GROUP \
-    --name $APPSERVICE_DOCKER_PAYARA \
+    --name $APPSERVICE_CONTAINER_PAYARA \
     --query hostNames[0] \
     --output tsv
 ```
@@ -56,7 +56,7 @@ To deploy Payara use the following command lines:
 Then open your browser to the URL shown as output and you should see:
 
 ```text
-And this is served by a custom Payara using a Docker image coming from our 
+And this is served by a custom Payara using a container image coming from our 
 own Azure Container Registry.
 ```
 
@@ -69,7 +69,7 @@ to the Maven command line to customize your deployment.
 |------------------------|-----------------------------------|
 | `appName`              | the application name              |
 | `appServicePlan`       | the App Service plan to use       |
-| `imageName`            | the Docker image name             |
+| `imageName`            | the container image name          |
 | `serverId`             | the Maven server id               |
 | `registry`             | the Azure Container Registry name |
 | `registryUrl`          | the Azure Container Registry url  |
@@ -79,13 +79,13 @@ to the Maven command line to customize your deployment.
 
 <!-- workflow.directOnly()
 
-  export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_PAYARA --output tsv --query state)
+  export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_CONTAINER_PAYARA --output tsv --query state)
   if [[ "$RESULT" != Running ]]; then
     echo 'Web application is NOT running'
     az group delete --name $RESOURCE_GROUP --yes || true
     exit 1
   fi
-  export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_PAYARA --output tsv --query defaultHostName)
+  export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_CONTAINER_PAYARA --output tsv --query defaultHostName)
   export RESULT=$(curl $URL)
   sleep 180
   export RESULT=$(curl $URL)
