@@ -16,10 +16,10 @@
         <module>delete-plan</module>
         <module>container-glassfish</module>
         <module>container-graalvm</module>
+        <module>container-payara</container-payara>
         <module>create-deployment-slot</module>
         <module>delete-webapp</module>
         <module>deploy-to-deployment-slot</module>
-        <module>docker-payara</module>
         <module>docker-tomcat</module>
         <module>docker-wildfly</module>
         <module>javase-quarkus</module>

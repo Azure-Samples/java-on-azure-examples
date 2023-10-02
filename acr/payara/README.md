@@ -1,5 +1,5 @@
 
-# Push a Payara Docker image to Azure Container Registry
+# Push a Payara container image to Azure Container Registry
 
 [![acr/payara/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_payara_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_payara_README_md.yml)
 
@@ -34,9 +34,9 @@ To build the WAR file use the following command line:
   mvn package
 ```
 
-## Build and push the Docker image to your Azure Container Registry
+## Build and push the container image to your Azure Container Registry
 
-To build and push the Docker image to your ACR use the command line below:
+To build and push the container image to your ACR use the command line below:
 
 ```shell
   export ACR_PAYARA_IMAGE=payara:latest
