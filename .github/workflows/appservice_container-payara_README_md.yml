@@ -3,7 +3,7 @@ on:
     - cron: '0 12 * * 5'
   workflow_dispatch: 
 
-name: 'appservice/docker-payara/README.md'
+name: 'appservice/container-payara/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -104,13 +104,13 @@ jobs:
           --is-linux \
           --sku P1v3
           
-          cd appservice/docker-payara
+          cd appservice/container-payara
           
-          export APPSERVICE_DOCKER_PAYARA=appservice-docker-payara-$RANDOM
+          export APPSERVICE_CONTAINER_PAYARA=appservice-container-payara-$RANDOM
           
           mvn azure-webapp:deploy \
           --settings=$SETTINGS_XML \
-          -DappName=$APPSERVICE_DOCKER_PAYARA \
+          -DappName=$APPSERVICE_CONTAINER_PAYARA \
           -DimageName=$ACR_PAYARA_IMAGE \
           -DappServicePlan=$APPSERVICE_PLAN \
           -DresourceGroup=$RESOURCE_GROUP \
@@ -118,7 +118,7 @@ jobs:
           
           az webapp show \
           --resource-group $RESOURCE_GROUP \
-          --name $APPSERVICE_DOCKER_PAYARA \
+          --name $APPSERVICE_CONTAINER_PAYARA \
           --query hostNames[0] \
           --output tsv
           
@@ -126,13 +126,13 @@ jobs:
           cd ../..
           
           
-          export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_PAYARA --output tsv --query state)
+          export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_CONTAINER_PAYARA --output tsv --query state)
           if [[ "$RESULT" != Running ]]; then
           echo 'Web application is NOT running'
           az group delete --name $RESOURCE_GROUP --yes || true
           exit 1
           fi
-          export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_DOCKER_PAYARA --output tsv --query defaultHostName)
+          export URL=https://$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_CONTAINER_PAYARA --output tsv --query defaultHostName)
           export RESULT=$(curl $URL)
           sleep 180
           export RESULT=$(curl $URL)
