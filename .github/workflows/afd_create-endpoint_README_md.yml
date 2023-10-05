@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 2 * * 1'
+    - cron: '0 18 * * 1'
   workflow_dispatch: 
 
 name: 'afd/create-endpoint/README.md'
@@ -16,14 +16,12 @@ jobs:
       - run: | 
           
           if [[ -z $REGION ]]; then
-          export REGION=westus2
-          echo "Using 'westus2' region"
+          export REGION=westus
           fi
           
           
           if [[ -z $REGION ]]; then
           export REGION=westus
-          echo "Using 'westus' region"
           fi
           
           

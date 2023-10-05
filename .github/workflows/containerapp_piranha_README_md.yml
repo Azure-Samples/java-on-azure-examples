@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 8 * * 1'
+    - cron: '0 12 * * 3'
   workflow_dispatch: 
 
 name: 'containerapp/piranha/README.md'

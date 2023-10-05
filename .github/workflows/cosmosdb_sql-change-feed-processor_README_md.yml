@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 5 * * 4'
+    - cron: '0 22 * * 3'
   workflow_dispatch: 
 
 name: 'cosmosdb/sql-change-feed-processor/README.md'

@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 1 * * 1'
+    - cron: '0 1 * * 3'
   workflow_dispatch: 
 
 name: 'container/tomcat/README.md'
@@ -14,6 +14,11 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
           
           if [[ -z $REGION ]]; then
           export REGION=northcentralus

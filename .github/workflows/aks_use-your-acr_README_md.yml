@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 3 * * 1'
+    - cron: '0 2 * * 2'
   workflow_dispatch: 
 
 name: 'aks/use-your-acr/README.md'
@@ -16,14 +16,12 @@ jobs:
       - run: | 
           
           if [[ -z $REGION ]]; then
-          export REGION=westus3
-          echo "Using 'westus3' region"
+          export REGION=westus
           fi
           
           
           if [[ -z $REGION ]]; then
           export REGION=westus
-          echo "Using 'westus' region"
           fi
           
           
