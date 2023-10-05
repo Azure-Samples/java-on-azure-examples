@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 5 * * 1'
+    - cron: '0 14 * * 2'
   workflow_dispatch: 
 
 name: 'appservice/deploy-to-deployment-slot/README.md'
@@ -17,13 +17,21 @@ jobs:
           
           if [[ -z $REGION ]]; then
           export REGION=westus
-          echo "Using 'westus' region"
           fi
           
           
           if [[ -z $REGION ]]; then
-          export REGION=northcentralus
-          echo "Using 'northcentralus' region"
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
           fi
           
           

@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 5 * * 1'
+    - cron: '0 7 * * 2'
   workflow_dispatch: 
 
 name: 'appservice/container-graalvm/README.md'
@@ -16,8 +16,7 @@ jobs:
       - run: | 
           
           if [[ -z $REGION ]]; then
-          export REGION=westus2
-          echo "Using 'westus2' region"
+          export REGION=westus
           fi
           
           
@@ -85,8 +84,7 @@ jobs:
           
           
           if [[ -z $REGION ]]; then
-          export REGION=northcentralus
-          echo "Using 'northcentralus' region"
+          export REGION=westus
           fi
           
           

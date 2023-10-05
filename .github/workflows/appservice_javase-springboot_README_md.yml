@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 16 * * 5'
+    - cron: '0 18 * * 2'
   workflow_dispatch: 
 
 name: 'appservice/javase-springboot/README.md'
@@ -16,8 +16,12 @@ jobs:
       - run: | 
           
           if [[ -z $REGION ]]; then
-          export REGION=northcentralus
-          echo "Using 'northcentralus' region"
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
           fi
           
           

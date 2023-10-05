@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 2 * * 1'
+    - cron: '0 20 * * 1'
   workflow_dispatch: 
 
 name: 'afd/create-profile/README.md'
@@ -17,7 +17,6 @@ jobs:
           
           if [[ -z $REGION ]]; then
           export REGION=westus
-          echo "Using 'westus' region"
           fi
           
           

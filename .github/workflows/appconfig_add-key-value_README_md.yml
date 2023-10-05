@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 1 * * 2'
+    - cron: '0 4 * * 2'
   workflow_dispatch: 
 
 name: 'appconfig/add-key-value/README.md'

@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 2 * * 1'
+    - cron: '0 16 * * 1'
   workflow_dispatch: 
 
 name: 'afd/add-origins-to-origin-group/README.md'
@@ -16,26 +16,22 @@ jobs:
       - run: | 
           
           if [[ -z $REGION ]]; then
-          export REGION=eastus
-          echo "Using 'eastus' region"
-          fi
-          
-          
-          if [[ -z $REGION ]]; then
-          export REGION=westus3
-          echo "Using 'westus3' region"
-          fi
-          
-          
-          if [[ -z $REGION ]]; then
-          export REGION=westus2
-          echo "Using 'westus2' region"
+          export REGION=westus
           fi
           
           
           if [[ -z $REGION ]]; then
           export REGION=westus
-          echo "Using 'westus' region"
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
           fi
           
           
@@ -83,8 +79,12 @@ jobs:
           --additional-latency-in-milliseconds 50
           
           if [[ -z $REGION ]]; then
-          export REGION=northcentralus
-          echo "Using 'northcentralus' region"
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
           fi
           
           
@@ -125,8 +125,12 @@ jobs:
           
           
           if [[ -z $REGION ]]; then
-          export REGION=northcentralus
-          echo "Using 'northcentralus' region"
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
           fi
           
           
