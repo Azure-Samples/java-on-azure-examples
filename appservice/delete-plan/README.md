@@ -12,7 +12,14 @@ This example assumes you have previously completed the following examples:
 
 ## Delete an App Service Plan
 
-<!-- workflow.cron(0 0 * * 2) -->
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 12 * * 2) -->
 <!-- workflow.include(../create-plan/README.md) -->
 
 To delete the Azure App Service Plan use the following command line:

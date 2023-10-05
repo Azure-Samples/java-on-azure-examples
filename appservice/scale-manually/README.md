@@ -15,7 +15,14 @@ This example assumes you have previously completed the following examples:
 
 To scale the App Service Plan use the following command line:
 
-<!-- workflow.cron(0 8 * * 5) -->
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 21 * * 2) -->
 <!-- workflow.include(../tomcat-helloworld/README.md) -->
 
 ```shell

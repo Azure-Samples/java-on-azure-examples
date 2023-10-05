@@ -7,11 +7,11 @@
 <!-- 
 
   if [[ -z $REGION ]]; then
-    export REGION=eastus
+    export REGION=westus
   fi
 
   -->
-<!-- workflow.cron(0 8 * * 1) -->
+<!-- workflow.cron(0 6 * * 3) -->
 <!-- workflow.include(../../acr/helloworldjob/README.md) -->
 <!-- workflow.include(../create-manual-job/README.md) -->
 

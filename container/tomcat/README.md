@@ -14,7 +14,14 @@ This example assumes you have previously completed the following examples:
 
 ## Deploy Tomcat
 
-<!-- workflow.cron(0 1 * * 1) -->
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 1 * * 3) -->
 <!-- workflow.include(../../acr/create-acrpull-service-principal/README.md) -->
 <!-- workflow.include(../../acr/tomcat/README.md) -->
 

@@ -7,11 +7,11 @@
 <!-- 
 
   if [[ -z $REGION ]]; then
-    export REGION=centralus
+    export REGION=westus
   fi
 
   -->
-<!-- workflow.cron(0 8 * * 1) -->
+<!-- workflow.cron(0 9 * * 3) -->
 <!-- workflow.include(../../acr/helidon/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 

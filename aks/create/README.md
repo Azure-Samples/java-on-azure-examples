@@ -9,7 +9,6 @@
 
   if [[ -z $REGION ]]; then
     export REGION=westus
-    echo "Using 'westus' region"
   fi
 
   -->

@@ -13,6 +13,13 @@ This example assumes you have previously completed the following examples:
 
 ## Create a deployment slot
 
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
 <!-- workflow.cron(0 0 * * 6) -->
 <!-- workflow.include(../tomcat-helloworld/README.md) -->
 

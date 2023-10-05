@@ -7,11 +7,11 @@
 <!-- 
 
   if [[ -z $REGION ]]; then
-    export REGION=europe
+    export REGION=westus
   fi
 
   -->
-<!-- workflow.cron(0 8 * * 1) -->
+<!-- workflow.cron(0 15 * * 3) -->
 <!-- workflow.include(../../acr/tomcat/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 

@@ -15,7 +15,14 @@ This example assumes you have previously completed the following examples:
 
 ## Swap a deployment slot
 
-<!-- workflow.cron(0 7 * * 5) -->
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 22 * * 2) -->
 <!-- workflow.include(../deploy-to-deployment-slot/README.md) -->
 
 To swap deployment slot use the following command line:

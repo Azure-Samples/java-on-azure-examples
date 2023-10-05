@@ -7,11 +7,11 @@
 <!-- 
 
   if [[ -z $REGION ]]; then
-    export REGION=brazilsouth
+    export REGION=westus
   fi
 
   -->
-<!-- workflow.cron(0 8 * * 1) -->
+<!-- workflow.cron(0 14 * * 3) -->
 <!-- workflow.include(../../acr/springboot/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 

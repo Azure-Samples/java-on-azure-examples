@@ -12,7 +12,14 @@ This example assumes you have previously completed the following examples:
 
 ## Delete a web application
 
-<!-- workflow.cron(0 0 * * 1) -->
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 13 * * 2) -->
 <!-- workflow.include(../tomcat-helloworld/README.md) -->
 
 To delete the web application from Azure App Service use the following command line:

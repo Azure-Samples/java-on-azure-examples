@@ -5,6 +5,18 @@
 
 ## Prerequisites
 
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 6 * * 2) -->
+<!-- workflow.include(../../acr/glassfish/README.md) -->
+<!-- workflow.include(../../acr/create-settings-xml/README.md) -->
+<!-- workflow.include(../create-plan/README.md) -->
+
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
@@ -15,10 +27,6 @@ This example assumes you have previously completed the following examples:
 
 ## Deploy Glassfish using a container image
 
-<!-- workflow.cron(0 9 * * 5) -->
-<!-- workflow.include(../../acr/glassfish/README.md) -->
-<!-- workflow.include(../../acr/create-settings-xml/README.md) -->
-<!-- workflow.include(../create-plan/README.md) -->
 <!-- workflow.run() 
 
   cd appservice/container-glassfish

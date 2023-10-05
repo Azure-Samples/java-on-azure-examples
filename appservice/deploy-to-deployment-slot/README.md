@@ -9,11 +9,10 @@
 
   if [[ -z $REGION ]]; then
     export REGION=westus
-    echo "Using 'westus' region"
   fi
 
   -->
-<!-- workflow.cron(0 5 * * 1) -->
+<!-- workflow.cron(0 14 * * 2) -->
 <!-- workflow.include(../create-deployment-slot/README.md) -->
 
 This example assumes you have previously completed the following examples:

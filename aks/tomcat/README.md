@@ -8,12 +8,11 @@
 <!-- workflow.run()
 
   if [[ -z $REGION ]]; then
-    export REGION=northcentralus
-    echo "Using 'northcentralus' region"
+    export REGION=westus
   fi
 
   -->
-<!-- workflow.cron(0 2 * * 1) -->
+<!-- workflow.cron(0 1 * * 2) -->
 <!-- workflow.include(../../acr/tomcat/README.md) -->
 <!-- workflow.include(../create-kube-config/README.md) -->
 <!-- workflow.include(../use-your-acr/README.md) -->

@@ -10,7 +10,14 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Create an Azure Cosmos DB](../create/README.md)
 
-<!-- workflow.cron(0 1 * * 4) -->
+<!-- 
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 19 * * 3) -->
 <!-- workflow.include(../create/README.md) -->
 
 ## Create the SQL database

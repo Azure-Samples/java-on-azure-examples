@@ -8,12 +8,11 @@
 <!-- workflow.run()
 
   if [[ -z $REGION ]]; then
-    export REGION=westus2
-    echo "Using 'westus2' region"
+    export REGION=westus
   fi
 
   -->
-<!-- workflow.cron(0 5 * * 1) -->
+<!-- workflow.cron(0 7 * * 2) -->
 <!-- workflow.include(../../acr/graalvm/README.md) -->
 <!-- workflow.include(../../acr/create-settings-xml/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->

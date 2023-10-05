@@ -11,7 +11,14 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Cosmos DB](../create/README.md)
 1. [Create a database](../create-sql-database/README.md)
 
-<!-- workflow.cron(0 2 * * 4) -->
+<!-- 
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 18 * * 3) -->
 <!-- workflow.include(../create-sql-database/README.md) -->
 
 ## Create the SQL container

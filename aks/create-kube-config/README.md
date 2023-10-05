@@ -13,12 +13,11 @@ limit access to your Kubernetes cluster based on roles.
 <!-- workflow.run()
 
   if [[ -z $REGION ]]; then
-    export REGION=southcentralus
-    echo "Using 'southcentralus' region"
+    export REGION=westus
   fi
 
   -->
-<!-- workflow.cron(0 3 * * 1) -->
+<!-- workflow.cron(0 22 * * 1) -->
 <!-- workflow.include(../create/README.md) -->
 
 This example assumes you have previously completed the following examples:

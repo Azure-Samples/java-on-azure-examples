@@ -14,7 +14,14 @@ This example assumes you have previously completed the following examples:
 
 ## Deploy WildFly
 
-<!-- workflow.cron(0 0 * * 3) -->
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 2 * * 3) -->
 <!-- workflow.include(../../acr/create-acrpull-service-principal/README.md) -->
 <!-- workflow.include(../../acr/wildfly/README.md) -->
 

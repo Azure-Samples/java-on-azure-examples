@@ -15,7 +15,14 @@ This example assumes you have previously completed the following examples:
 
 ## Deploy Payara using a container image
 
-<!-- workflow.cron(0 12 * * 5) -->
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 9 * * 2) -->
 <!-- workflow.include(../../acr/payara/README.md) -->
 <!-- workflow.include(../../acr/create-settings-xml/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->

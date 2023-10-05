@@ -14,7 +14,14 @@ This example assumes you have previously completed the following examples:
 
 ## Deploy the Quarkus application
 
-<!-- workflow.cron(0 0 * * 2) -->
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 0 * * 3) -->
 <!-- workflow.include(../../acr/create-acrpull-service-principal/README.md) -->
 <!-- workflow.include(../../acr/quarkus/README.md) -->
 

@@ -8,7 +8,7 @@
 <!-- 
 
   if [[ -z $REGION ]]; then
-    export REGION=canadacentral
+    export REGION=westus
   fi
 
   -->

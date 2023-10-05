@@ -8,12 +8,11 @@
 <!-- workflow.run()
 
   if [[ -z $REGION ]]; then
-    export REGION=westus3
-    echo "Using 'westus3' region"
+    export REGION=westus
   fi
 
   -->
-<!-- workflow.cron(0 2 * * 1) -->
+<!-- workflow.cron(0 19 * * 1) -->
 <!-- workflow.include(../create-endpoint/README.md) -->
 
 This example assumes you have previously completed the following example:

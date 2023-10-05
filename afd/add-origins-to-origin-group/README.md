@@ -8,12 +8,11 @@
 <!-- workflow.run()
 
   if [[ -z $REGION ]]; then
-    export REGION=eastus
-    echo "Using 'eastus' region"
+    export REGION=westus
   fi
 
   -->
-<!-- workflow.cron(0 2 * * 1) -->
+<!-- workflow.cron(0 16 * * 1) -->
 <!-- workflow.include(../create-origin-group/README.md) -->
 <!-- workflow.include(../../appservice/javase-springboot/README.md) -->
 <!-- workflow.include(../../appservice/javase-quarkus/README.md) -->

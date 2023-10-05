@@ -15,7 +15,14 @@ This example assumes you have previously completed the following examples:
 
 ## Deploy Jetty using a Docker image
 
-<!-- workflow.cron(0 11 * * 5) -->
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 8 * * 2) -->
 <!-- workflow.include(../../acr/jetty/README.md) -->
 <!-- workflow.include(../../acr/create-settings-xml/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->

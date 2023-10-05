@@ -7,11 +7,11 @@
 <!-- 
 
   if [[ -z $REGION ]]; then
-    export REGION=westus3
+    export REGION=westus
   fi
 
   -->
-<!-- workflow.cron(0 8 * * 1) -->
+<!-- workflow.cron(0 5 * * 3) -->
 <!-- workflow.include(../../acr/dropwizard/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 

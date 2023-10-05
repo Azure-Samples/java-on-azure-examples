@@ -13,7 +13,14 @@ This example assumes you have previously completed the following examples:
 
 ## List your web applications
 
-<!-- workflow.cron(0 0 * * 4) -->
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 20 * * 2) -->
 <!-- workflow.include(../tomcat-helloworld/README.md) -->
 
 To list the web applications use the following command line:

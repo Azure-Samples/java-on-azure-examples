@@ -12,7 +12,14 @@ This example assumes you have previously completed the following examples:
 1. [Create a SQL database](../create-sql-database/README.md)
 1. [Create a SQL container](../create-sql-container/README.md)
 
-<!-- workflow.cron(0 4 * * 4) -->
+<!-- 
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 21 * * 3) -->
 <!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../create/README.md) -->
 <!-- workflow.include(../create-sql-database/README.md) -->

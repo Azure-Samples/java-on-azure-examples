@@ -13,11 +13,11 @@ This example assumes you have previously completed the following examples:
 <!-- 
 
   if [[ -z $REGION ]]; then
-    export REGION=brazil
+    export REGION=westus
   fi
 
   -->
-<!-- workflow.cron(0 1 * * 1) -->
+<!-- workflow.cron(0 12 * * 1) -->
 <!-- workflow.include(../create/README.md) -->
 
 ## Build the example
