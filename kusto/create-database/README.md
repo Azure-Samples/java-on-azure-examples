@@ -12,7 +12,14 @@ This example assumes you have previously completed the following examples:
 
 ## Create a database
 
-<!-- workflow.cron(0 1 * * 0) -->
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 12 * * 4) -->
 <!-- workflow.include(../create/README.md) -->
 
 Setup the environment variable for the database using the command

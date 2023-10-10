@@ -14,7 +14,14 @@ This example assumes you have previously completed the following examples:
 1. [Install mysql client](https://dev.mysql.com/downloads/README.md)
 1. [Load your MySQL database with your data](../load-your-mysqk-database-with-data/README.md)
 
-<!-- workflow.cron(0 3 * * 2) -->
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 15 * * 4) -->
 <!-- workflow.include(../load-your-mysql-database-with-data/README.md) -->
 
 ## JDBC command line client

@@ -13,6 +13,13 @@ This example assumes you have previously completed the following examples:
 1. [Open MySQL server firewall to your IP address](../open-firewall-to-your-ip/README.md)
 1. [Install mysql client](https://dev.mysql.com/downloads/README.md)
 
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
 <!-- workflow.cron(0 2 * * 2) -->
 <!-- workflow.include(../open-firewall-to-your-ip/README.md) -->
 
