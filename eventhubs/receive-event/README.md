@@ -12,7 +12,14 @@ This example assumes you have previously completed the following examples:
 1. [Create an event hub](../create-eventhub/README.md)
 1. [Send an event](../send-event/README.md)
 
-<!-- workflow.cron(0 3 * * 6) -->
+<!-- 
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 1 * * 4) -->
 <!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../create-namespace/README.md) -->
 <!-- workflow.include(../create-eventhub/README.md) -->

@@ -6,7 +6,14 @@
 Please go to [Install Azure Functions Core Tools](https://docs.microsoft.com/azure/azure-functions/functions-run-local#install-the-azure-functions-core-tools)
 to install the Azure Functions Core Tools applicable to your operating system.
 
-<!-- workflow.cron(0 0 * * 4) -->
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus3
+  fi
+
+  -->
+<!-- workflow.cron(0 5 * * 4) -->
 <!-- workflow.run()
 
     curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg

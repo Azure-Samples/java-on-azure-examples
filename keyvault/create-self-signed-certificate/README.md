@@ -10,7 +10,14 @@ This example assumes you have previously completed the following example:
 1. [Create an Azure Resource Group](../group/create/README.md)
 1. [Create an Azure Key Vault](../create/README.md)
 
-<!-- workflow.cron(0 3 * * 2) -->
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 10 * * 4) -->
 <!-- workflow.include(../create/README.md) -->
 
 ## Create the self-signed certificate

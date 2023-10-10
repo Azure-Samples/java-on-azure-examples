@@ -170,4 +170,43 @@ Azure Cosmos DB examples
   4. cosmosdb/create-sql-leases-container/README.md    - 0 20 * * 3 - westus
   5. cosmosdb/insert-item-into-sql-container/README.md - 0 21 * * 3 - westus
   6. cosmosdb/sql-change-feed-processor/README.md      - 0 22 * * 3 - westus
+
+Azure Event Hubs examples
+
+  1. eventhubs/create-eventhub/README.md                - 0 23 * * 3 - westus
+  2. eventhubs/create-namespace/README.md               - 0  0 * * 4 - westus
+  3. eventhubs/receive-event/README.md                  - 0  1 * * 4 - westus
+  4. eventhubs/send-event/README.md                     - 0  2 * * 4 - westus
+
+Azure Functions examples
+
+  1. functionapp/cosmosdb-output/README.md              - 0  3 * * 4 - westus3
+  2. functionapp/helloworld/README.md                   - 0  4 * * 4 - westus3
+  3. functionapp/install-tools/README.md                - 0  5 * * 4 - westus3
+
+Azure Resource Group examples
+
+  1. group/create/README.md                             - 0  6 * * 4 - westus
+  2. group/delete/README.md                             - 0  7 * * 4 - westus
+
+Azure Key Vault examples
+
+  1. keyvault/add-secret/README.md                      - 0  8 * * 4 - westus
+  2. keyvault/create/README.md                          - 0  9 * * 4 - westus
+  3. keyvault/create-self-signed-certificate/README.md  - 0 10 * * 4 - westus
+
+Azure Data Explorer examples
+
+  1. kusto/create/README.md                             - 0 11 * * 4 - westus
+  2. kusto/create-database/README.md                    - 0 12 * * 4 - westus
+
+Azure Monitor examples
+
+  1. monitor/create-log-analytics-workspace/README.md   - 0 13 * * 4 - westus
+
+Azure Database for MySQL examples
+
+  1. mysql/create/README.md                             - 0 14 * * 4 - westus
+  2. mysql/get-country/README.md                        - 0 15 * * 4 - westus
+  3. mysql/load-your-mysql-database-with-data/README.md - 0 16 * * 4 - westus
  -->

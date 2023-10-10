@@ -10,7 +10,14 @@ This example assumes you have previously completed the following examples:
 1. [Create a resource group](../../group/create/README.md)
 1. [Create a namespace](../create-namespace/README.md)
 
-<!-- workflow.cron(0 1 * * 6) -->
+<!-- 
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 23 * * 3) -->
 <!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../create-namespace/README.md) -->
 

@@ -9,7 +9,14 @@ This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 
-<!-- workflow.cron(0 0 * * 2) -->
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 14 * * 4) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 ## Create the Azure Database for MySQL

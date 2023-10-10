@@ -14,11 +14,18 @@ subscription, if you have NOT done so please go to our top-level
 To setup the environment variables needed to create the Resource Group execute
 the command lines below:
 
-<!-- workflow.cron(0 0 * * 6) -->
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 6 * * 4) -->
 <!-- workflow.skip() -->
 ```shell
   export RESOURCE_GROUP=java-on-azure
-  export REGION=westus2
+  export REGION=pick_your_closest_region
 ```
 
 <!-- workflow.run()

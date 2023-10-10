@@ -13,7 +13,14 @@ subscription, if you have NOT done so please go to our top-level
 
 To delete the Resource Group use the following command line:
 
-<!-- workflow.cron(0 1 * * 6) -->
+<!-- workflow.run()
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus
+  fi
+
+  -->
+<!-- workflow.cron(0 7 * * 4) -->
 <!-- workflow.include(../create/README.md) -->
 
 ```shell
