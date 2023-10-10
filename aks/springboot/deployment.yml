@@ -16,7 +16,7 @@ spec:
         app: springboot
     spec:
       nodeSelector:
-        "beta.kubernetes.io/os": linux
+        "kubernetes.io/os": linux
       containers:
       - name: springboot
         image: ACR.azurecr.io/springboot:latest
