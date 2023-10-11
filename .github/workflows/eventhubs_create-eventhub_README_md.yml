@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 1 * * 6'
+    - cron: '0 23 * * 3'
   workflow_dispatch: 
 
 name: 'eventhubs/create-eventhub/README.md'
@@ -16,6 +16,11 @@ jobs:
       - run: | 
           
           if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
           export REGION=northcentralus
           echo "Using 'northcentralus' region"
           fi
@@ -25,6 +30,11 @@ jobs:
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
           
           if [[ -z $REGION ]]; then
           export REGION=northcentralus

@@ -41,6 +41,11 @@ jobs:
           
           
           if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
           export REGION=northcentralus
           echo "Using 'northcentralus' region"
           fi
@@ -94,6 +99,11 @@ jobs:
           
           
           if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
           export REGION=northcentralus
           echo "Using 'northcentralus' region"
           fi
@@ -127,6 +137,11 @@ jobs:
           
           sleep 240
           cd ../..
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
           
           
           if [[ -z $REGION ]]; then

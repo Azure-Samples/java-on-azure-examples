@@ -16,6 +16,11 @@ jobs:
       - run: | 
           
           if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
           export REGION=northcentralus
           echo "Using 'northcentralus' region"
           fi
@@ -25,6 +30,11 @@ jobs:
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
           
           if [[ -z $REGION ]]; then
           export REGION=northcentralus
@@ -43,6 +53,11 @@ jobs:
           --name $COSMOSDB_ACCOUNT_NAME \
           --resource-group $RESOURCE_GROUP \
           --locations regionName=eastus failoverPriority=0
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
           fi
           
           
@@ -72,6 +87,11 @@ jobs:
           --resource-group $RESOURCE_GROUP \
           --account-name $COSMOSDB_ACCOUNT_NAME \
           --name $COSMOSDB_SQL_DATABASE
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
           fi
           
           

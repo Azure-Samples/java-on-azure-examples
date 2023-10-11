@@ -16,6 +16,11 @@ jobs:
       - run: | 
           
           if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
           export REGION=northcentralus
           echo "Using 'northcentralus' region"
           fi
@@ -43,6 +48,11 @@ jobs:
           az acr build --registry $ACR_NAME --resource-group $RESOURCE_GROUP --image $ACR_DROPWIZARD_IMAGE .
           
           cd ../..
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
           
           
           if [[ -z $REGION ]]; then

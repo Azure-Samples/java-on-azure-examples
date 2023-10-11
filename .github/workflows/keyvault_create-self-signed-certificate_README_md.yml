@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 3 * * 2'
+    - cron: '0 10 * * 4'
   workflow_dispatch: 
 
 name: 'keyvault/create-self-signed-certificate/README.md'
@@ -14,6 +14,21 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
           
           if [[ -z $REGION ]]; then
           export REGION=northcentralus

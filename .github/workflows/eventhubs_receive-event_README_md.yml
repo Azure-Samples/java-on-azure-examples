@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 3 * * 6'
+    - cron: '0 1 * * 4'
   workflow_dispatch: 
 
 name: 'eventhubs/receive-event/README.md'
@@ -16,6 +16,11 @@ jobs:
       - run: | 
           
           if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
           export REGION=northcentralus
           echo "Using 'northcentralus' region"
           fi
@@ -25,6 +30,11 @@ jobs:
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
           
           if [[ -z $REGION ]]; then
           export REGION=northcentralus
@@ -44,6 +54,11 @@ jobs:
           --location $REGION
           
           if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
           export REGION=northcentralus
           echo "Using 'northcentralus' region"
           fi
@@ -53,6 +68,11 @@ jobs:
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
           
           if [[ -z $REGION ]]; then
           export REGION=northcentralus
@@ -78,6 +98,11 @@ jobs:
           --namespace-name $EVENTHUBS_NAMESPACE
           
           if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
           export REGION=northcentralus
           echo "Using 'northcentralus' region"
           fi
@@ -87,6 +112,11 @@ jobs:
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
           
           if [[ -z $REGION ]]; then
           export REGION=northcentralus
@@ -106,6 +136,11 @@ jobs:
           --location $REGION
           
           if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
           export REGION=northcentralus
           echo "Using 'northcentralus' region"
           fi
@@ -115,6 +150,11 @@ jobs:
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
           
           if [[ -z $REGION ]]; then
           export REGION=northcentralus
