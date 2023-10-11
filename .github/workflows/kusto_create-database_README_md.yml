@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 1 * * 0'
+    - cron: '0 12 * * 4'
   workflow_dispatch: 
 
 name: 'kusto/create-database/README.md'
@@ -14,6 +14,21 @@ jobs:
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
       - uses: 'actions/checkout@v2'
       - run: | 
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
           
           if [[ -z $REGION ]]; then
           export REGION=northcentralus

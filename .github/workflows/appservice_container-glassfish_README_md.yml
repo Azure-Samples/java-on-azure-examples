@@ -21,6 +21,11 @@ jobs:
           
           
           if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
           export REGION=northcentralus
           echo "Using 'northcentralus' region"
           fi
@@ -52,6 +57,11 @@ jobs:
           
           
           if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
           export REGION=northcentralus
           echo "Using 'northcentralus' region"
           fi
@@ -80,6 +90,11 @@ jobs:
           export SETTINGS_XML=$PWD/settings.xml
           
           cd ../..
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
           
           
           if [[ -z $REGION ]]; then

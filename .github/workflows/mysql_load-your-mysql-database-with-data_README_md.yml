@@ -16,6 +16,21 @@ jobs:
       - run: | 
           
           if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
           export REGION=northcentralus
           echo "Using 'northcentralus' region"
           fi

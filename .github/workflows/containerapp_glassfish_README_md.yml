@@ -16,6 +16,11 @@ jobs:
       - run: | 
           
           if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
           export REGION=northcentralus
           echo "Using 'northcentralus' region"
           fi
@@ -44,6 +49,11 @@ jobs:
           az acr repository list --name $ACR_NAME --output table
           
           cd ../..
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
           
           
           if [[ -z $REGION ]]; then

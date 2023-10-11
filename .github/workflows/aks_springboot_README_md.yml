@@ -31,6 +31,11 @@ jobs:
           
           
           if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
           export REGION=northcentralus
           echo "Using 'northcentralus' region"
           fi
@@ -70,6 +75,11 @@ jobs:
           
           
           if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
           export REGION=northcentralus
           echo "Using 'northcentralus' region"
           fi
@@ -87,6 +97,11 @@ jobs:
           echo ---------------------------------------------------------------------
           az aks create --name $AKS --resource-group $RESOURCE_GROUP --generate-ssh-keys --verbose
           sleep 120
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
           fi
           
           

@@ -21,6 +21,11 @@ jobs:
           
           
           if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
           export REGION=northcentralus
           echo "Using 'northcentralus' region"
           fi
@@ -53,6 +58,11 @@ jobs:
           --display-name $ACR_PULL_SERVICE_PRINCIPAL_NAME \
           --query [].appId \
           --output tsv`
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
           fi
           
           
