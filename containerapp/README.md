@@ -1,18 +1,20 @@
 # Azure Container Apps examples
 
-1. [Create an environment](create-environment/README.md)
-1. [Create a manual job](create-manual-job/README.md)
-1. [Deploy a Dropwizard application](dropwizard/README.md)
-1. [Deploy a Helidon application](helidon/README.md) 
-1. [Deploy a Micronaut application](micronaut/README.md)
-1. [Deploy a Piranha Micro application](piranha/README.md)
-1. [Deploy a Quarkus application](quarkus/README.md)
-1. [Deploy a Spring Boot application](springboot/README.md)
-1. [Deploy Glassfish](glassfish/README.md)
-1. [Deploy Tomcat](tomcat/README.md)
-1. [Deploy WildFly](wildfly/README.md)
-1. [Execute a manual job](execute-manual-job/README.md)
-1. [List job executions](list-job-executions/README.md)
+| Name | Link | Status |
+| ---- | ---- | ------ |
+| 1. [Create an environment](create-environment/README.md) | [Workflow](../.github/workflows/containerapp_create-environment_README_md.yml) | [![containerapp/create-environment/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_create-environment_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_create-environment_README_md.yml) |
+| 2. [Create a manual job](create-manual-job/README.md) | [Workflow](../.github/workflows/containerapp_create-manual-job_README_md.yml) | [![containerapp/create-manual-job/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_create-manual-job_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_create-manual-job_README_md.yml) |
+| 3. [Deploy a Dropwizard application](dropwizard/README.md) | [Workflow](../.github/workflows/containerapp_dropwizard_README_md.yml) | [![containerapp/dropwizard/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_dropwizard_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_dropwizard_README_md.yml) |
+| 4. [Deploy a Helidon application](helidon/README.md) | [Workflow](../.github/workflows/containerapp_helidon_README_md.yml) | [![containerapp/helidon/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_helidon_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_helidon_README_md.yml) |
+| 5. [Deploy a Micronaut application](micronaut/README.md) | [Workflow](../.github/workflows/containerapp_micronaut_README_md.yml) | [![containerapp/micronaut/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_micronaut_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_micronaut_README_md.yml) |
+| 6. [Deploy a Piranha Micro application](piranha/README.md) | [Workflow](../.github/workflows/containerapp_piranha_README_md.yml) | [![containerapp/piranha/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_piranha_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_piranha_README_md.yml) |
+| 7. [Deploy a Quarkus application](quarkus/README.md) | [Workflow](../.github/workflows/containerapp_quarkus_README_md.yml) | [![containerapp/quarkus/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_quarkus_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_quarkus_README_md.yml) |
+| 8. [Deploy a Spring Boot application](springboot/README.md) | [Workflow](../.github/workflows/containerapp_springboot_README_md.yml) | [![containerapp/springboot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_springboot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_springboot_README_md.yml) |
+| 9. [Deploy Glassfish](glassfish/README.md) | [Workflow](../.github/workflows/containerapp_glassfish_README_md.yml) | [![containerapp/glassfish/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_glassfish_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_glassfish_README_md.yml) |
+| 10. [Deploy Tomcat](tomcat/README.md) | [Workflow](../.github/workflows/containerapp_tomcat_README_md.yml) | [![containerapp/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_tomcat_README_md.yml) |
+| 11. [Deploy WildFly](wildfly/README.md) | [Workflow](../.github/workflows/containerapp_tomcat_README_md.yml) | [![containerapp/wildfly/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_wildfly_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_wildfly_README_md.yml) |
+| 12. [Execute a manual job](execute-manual-job/README.md) | [Workflow](../.github/workflows/containerapp_execute-manual-job_README_md.yml) | [![containerapp/execute-manual-job/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_execute-manual-job_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_execute-manual-job_README_md.yml) |
+| 13. [List job executions](list-job-executions/README.md) | [Workflow](../.github/workflows/containerapp_list-job-executions_README_md.yml) | [![containerapp/list-job-executions/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_list-job-executions_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_list-job-executions_README_md.yml) |
 
 <!-- workflow.run() 
 
