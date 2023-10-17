@@ -11,6 +11,7 @@
 | 7. [JMS to Cosmos DB Spring Boot application #1](jms-to-cosmosdb-springboot-1/) | |
 | 8. [JMS to Cosmos DB Spring Boot application #2](jms-to-cosmosdb-springboot-2/) | |
 | 9. [JMS to Spring Data JPA with MSSQL Spring Boot application](jms-to-spring-data-jpa-sql-server/) | |
+| 10. [JMS to EventHubs Spring Boot application](jms-to-eventhubs-springboot/) | |
 
 <!-- workflow.run() 
 
