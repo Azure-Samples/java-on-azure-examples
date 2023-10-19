@@ -10,7 +10,7 @@
     <properties>
         <!-- dependencies -->
         <spring-boot.version>2.7.0</spring-boot.version>
-        <tomcat.version>9.0.27</tomcat.version>
+        <tomcat.version>9.0.63</tomcat.version>
         <!-- other -->
         <java.version>11</java.version>
         <!-- plugins -->
