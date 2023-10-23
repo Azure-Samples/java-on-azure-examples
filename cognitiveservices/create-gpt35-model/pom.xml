@@ -3,12 +3,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>examples.azure.cognitiveservices</groupId>
-    <artifactId>project</artifactId>
+    <artifactId>cog-create-gpt35-model</artifactId>
     <version>1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Azure Cognitive Services examples</name>
-    <modules>
-        <module>create-openai-account</module>
-        <module>create-gpt35-model</module>
-    </modules>
+    <name>Create a GPT 3.5 model</name>
 </project>
