@@ -209,4 +209,9 @@ Azure Database for MySQL examples
   1. mysql/create/README.md                             - 0 14 * * 4 - westus
   2. mysql/get-country/README.md                        - 0 15 * * 4 - westus
   3. mysql/load-your-mysql-database-with-data/README.md - 0 16 * * 4 - westus
+
+Azure Cognitive Services examples
+
+  1. cognitiveservices/create-openai-account/README.md  - 0 17 * * 4 - eastus
+
  -->
