@@ -213,5 +213,6 @@ Azure Database for MySQL examples
 Azure Cognitive Services examples
 
   1. cognitiveservices/create-openai-account/README.md  - 0 17 * * 4 - eastus
+  2. cognitiveservices/create-gpt35-model/README.md     - 0 18 * * 4 - eastus
 
  -->
