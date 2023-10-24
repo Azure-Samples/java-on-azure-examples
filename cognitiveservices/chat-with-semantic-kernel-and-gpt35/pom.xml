@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>examples.azure.cognitiveservices</groupId>
+    <artifactId>cog-chat-semantic-kernel-gpt35</artifactId>
+    <version>1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>Chat with Semantic Kernel and GPT 3.5</name>
+    <properties>
+        <!-- dependencies -->
+        <semantic-kernel.version>0.2.9-alpha</semantic-kernel.version>
+        <!-- other -->
+        <java.version>11</java.version>
+        <!-- plugins -->
+        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+        <maven-dependency-plugin.version>3.6.0</maven-dependency-plugin.version>
+        <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
+    </properties>
+    <build>
+        <finalName>chat</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <release>${java.version}</release>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>${maven-dependency-plugin.version}</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>target/lib</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>${maven-jar-plugin.version}</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <mainClass>chat.Chat</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>com.microsoft.semantic-kernel</groupId>
+            <artifactId>semantickernel-connectors-ai-openai</artifactId>
+            <version>${semantic-kernel.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.microsoft.semantic-kernel</groupId>
+            <artifactId>semantickernel-core</artifactId>
+            <version>${semantic-kernel.version}</version>
+        </dependency>
+    </dependencies>
+</project>

@@ -10,5 +10,6 @@
     <modules>
         <module>create-openai-account</module>
         <module>create-gpt35-model</module>
+        <module>chat-with-semantic-kernel-and-gpt35</module>
     </modules>
 </project>
