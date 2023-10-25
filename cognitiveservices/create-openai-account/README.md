@@ -7,6 +7,7 @@ This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 
+
 ## Create an Azure OpenAI account
 
 <!-- workflow.run()
@@ -18,6 +19,10 @@ This example assumes you have previously completed the following example:
   -->
 <!-- workflow.cron(0 17 * * 4) -->
 <!-- workflow.include(../../group/create/README.md) -->
+
+
+_Before you can create an Azure OpenAI account on Azure you have to be registered, please register [here](https://customervoice.microsoft.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR7en2Ais5pxKtso_Pz4b1_xUOFA5Qk1UWDRBMjg0WFhPMkIzTzhKQ1dWNyQlQCN0PWcu])._
+
 
 To create an Azure OpenAI account use the following command lines:
 
