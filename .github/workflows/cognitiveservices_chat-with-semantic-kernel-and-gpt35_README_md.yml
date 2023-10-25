@@ -1,0 +1,133 @@
+on: 
+  schedule: 
+    - cron: '0 18 * * 4'
+  workflow_dispatch: 
+
+name: 'cognitiveservices/chat-with-semantic-kernel-and-gpt35/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          allow-no-subscriptions: 'true'
+          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+      - uses: 'actions/checkout@v2'
+      - run: | 
+          
+          if [[ -z $REGION ]]; then
+          export REGION=eastus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=northcentralus
+          echo "Using 'northcentralus' region"
+          fi
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          
+          if [[ -z $REGION ]]; then
+          export REGION=eastus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=northcentralus
+          echo "Using 'northcentralus' region"
+          fi
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export COG_AZURE_OPENAI_NAME=cog-$RANDOM
+          
+          az cognitiveservices account create \
+          --name $COG_AZURE_OPENAI_NAME \
+          --resource-group $RESOURCE_GROUP \
+          --location eastus \
+          --kind OpenAI \
+          --sku S0 \
+          --yes
+          
+          if [[ -z $REGION ]]; then
+          export REGION=eastus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=northcentralus
+          echo "Using 'northcentralus' region"
+          fi
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          
+          if [[ -z $REGION ]]; then
+          export REGION=eastus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=northcentralus
+          echo "Using 'northcentralus' region"
+          fi
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export COG_AZURE_OPENAI_NAME=cog-$RANDOM
+          
+          az cognitiveservices account create \
+          --name $COG_AZURE_OPENAI_NAME \
+          --resource-group $RESOURCE_GROUP \
+          --location eastus \
+          --kind OpenAI \
+          --sku S0 \
+          --yes
+          az cognitiveservices account deployment create \
+          --name $COG_AZURE_OPENAI_NAME \
+          --resource-group  $RESOURCE_GROUP \
+          --deployment-name gpt-35-turbo \
+          --model-name gpt-35-turbo \
+          --model-version "0613" \
+          --model-format OpenAI \
+          --sku-capacity "1" \
+          --sku-name "Standard"
+          export OPENAI_CLIENT_TYPE=AZURE_OPEN_AI
+          export AZURE_OPEN_AI_KEY=$(az cognitiveservices account keys list --name $COG_AZURE_OPENAI_NAME --resource-group $RESOURCE_GROUP --output tsv --query key1)
+          export AZURE_OPEN_AI_ENDPOINT=$(az cognitiveservices account show --name $COG_AZURE_OPENAI_NAME --resource-group $RESOURCE_GROUP --output tsv --query properties.endpoint)
+          mvn clean package
+          
+          az group delete --name $RESOURCE_GROUP --yes || true
