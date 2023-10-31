@@ -77,6 +77,9 @@ How do I contribute? See [Contributing](CONTRIBUTING.md)
 
 <!-- 
 
+  See https://learn.microsoft.com/en-us/azure/developer/github/connect-from-azure?tabs=azure-portal%2Clinux#create-a-service-principal 
+  to associate use service principal with the GitHub actions mentioned below.
+
   Azure Container Registry examples
 
    1. acr/create/README.md                                                  - 0  0 * * 1 - westus

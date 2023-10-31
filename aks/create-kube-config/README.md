@@ -13,7 +13,7 @@ limit access to your Kubernetes cluster based on roles.
 <!-- workflow.run()
 
   if [[ -z $REGION ]]; then
-    export REGION=westus
+    export REGION=westus2
   fi
 
   -->
