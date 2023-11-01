@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 0 * * 3'
+    - cron: '0 20 * * 4'
   workflow_dispatch: 
 
 name: 'sql/create/README.md'
