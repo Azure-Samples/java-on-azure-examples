@@ -5,7 +5,7 @@
 
 ## Prerequisites
 
-<!-- 
+<!-- workflow.run()
 
   if [[ -z $REGION ]]; then
     export REGION=westus2
@@ -24,7 +24,7 @@ This example assumes you have previously completed the following example:
 
 To create the Azure SQL Database setup the environment variables:
 
-<!--workflow.skip() -->
+<!-- workflow.skip() -->
 ```shell
   export MSSQL_NAME=mssql-$RANDOM
   export MSSQL_USERNAME=mssql
