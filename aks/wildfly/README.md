@@ -5,16 +5,9 @@
 
 ## Prerequisites
 
-<!-- workflow.run()
-
-  if [[ -z $REGION ]]; then
-    export REGION=westus2
-  fi
-
-  -->
 <!-- workflow.cron(0 3 * * 2) -->
-<!-- workflow.include(../../acr/wildfly/README.md) -->
 <!-- workflow.include(../create-kube-config/README.md) -->
+<!-- workflow.include(../../acr/wildfly/README.md) -->
 <!-- workflow.include(../use-your-acr/README.md) -->
 
 This example assumes you have previously completed the following examples:

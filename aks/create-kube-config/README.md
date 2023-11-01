@@ -10,13 +10,6 @@ limit access to your Kubernetes cluster based on roles.
 
 ## Prerequisites
 
-<!-- workflow.run()
-
-  if [[ -z $REGION ]]; then
-    export REGION=westus2
-  fi
-
-  -->
 <!-- workflow.cron(0 22 * * 1) -->
 <!-- workflow.include(../create/README.md) -->
 
