@@ -220,4 +220,11 @@ Azure Cognitive Services examples
   2. cognitiveservices/create-gpt35-model/README.md                         - 0 18 * * 4 - eastus
   3. cognitiveservices/chat-with-semantic-kernel-and-gpt35/README.md        - 0 19 * * 4 - eastus
 
+Azure SQL Database examples
+
+  1. sql/create/README.md                                                   - 0 20 * * 4 - westus2
+  2. sql/get-country/README.md                                              - 0 21 * * 4 - westus2
+  3. sql/load-your-mssql-database-with-data/README.md                       - 0 22 * * 4 - westus2
+  4. sql/open-firewall-to-your-ip/README.md                                 - 0 23 * * 4 - westus2
+
  -->

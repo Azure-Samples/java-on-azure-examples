@@ -5,14 +5,21 @@
 
 ## Prerequisites
 
+<!-- 
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus2
+  fi
+
+  -->
+<!-- workflow.cron(0 23 * * 4) -->
+<!-- workflow.include(../create/README.md) -->
+
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Create an Azure SQL Database](../create/README.md)
 1. [Install curl](https://curl.haxx.se/download.html)
-
-<!-- workflow.cron(0 1 * * 3) -->
-<!-- workflow.include(../create/README.md) -->
 
 ## Open Azure SQL server firewall to your local IP address
 
