@@ -16,6 +16,16 @@ jobs:
       - run: | 
           
           if [[ -z $REGION ]]; then
+          export REGION=westus2
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus2
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
           export REGION=westus
           fi
           
@@ -30,9 +40,6 @@ jobs:
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
-          export MSSQL_NAME=mssql-$RANDOM
-          export MSSQL_USERNAME=mssql
-          export MSSQL_PASSWORD=p#ssw0rd-$RANDOM
           if [[ -z $MSSQL_NAME ]]; then
           export MSSQL_NAME=mssql-$RANDOM
           export MSSQL_USERNAME=mssql
