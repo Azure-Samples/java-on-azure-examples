@@ -5,13 +5,6 @@
 
 ## Prerequisites
 
-<!-- workflow.run()
-
-  if [[ -z $REGION ]]; then
-    export REGION=westus2
-  fi
-
-  -->
 <!-- workflow.cron(0 21 * * 4) -->
 <!-- workflow.include(../load-your-mssql-database-with-data/README.md) -->
 

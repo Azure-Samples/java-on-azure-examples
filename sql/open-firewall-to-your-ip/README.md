@@ -5,13 +5,6 @@
 
 ## Prerequisites
 
-<!-- workflow.run()
-
-  if [[ -z $REGION ]]; then
-    export REGION=westus2
-  fi
-
-  -->
 <!-- workflow.cron(0 23 * * 4) -->
 <!-- workflow.include(../create/README.md) -->
 
