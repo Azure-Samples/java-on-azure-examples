@@ -21,16 +21,6 @@ jobs:
           
           
           if [[ -z $REGION ]]; then
-          export REGION=westus2
-          fi
-          
-          
-          if [[ -z $REGION ]]; then
-          export REGION=westus2
-          fi
-          
-          
-          if [[ -z $REGION ]]; then
           export REGION=westus
           fi
           
