@@ -16,8 +16,42 @@ jobs:
       - run: | 
           
           if [[ -z $REGION ]]; then
-          export REGION=westus2
+          export REGION=westus3
           fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=northcentralus
+          echo "Using 'northcentralus' region"
+          fi
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          
+          if [[ -z $AKS ]]; then
+          export AKS=aks-$RANDOM
+          echo ---------------------------------------------------------------------
+          echo  Creating AKS cluster - $AKS
+          echo ---------------------------------------------------------------------
+          az aks create --name $AKS --resource-group $RESOURCE_GROUP --generate-ssh-keys --verbose
+          sleep 120
+          fi
+          
+          
+          cd aks/create-kube-config
+          
+          az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS --admin --file config
+          export KUBECONFIG=$PWD/config
+          
+          cd ../..
           
           
           if [[ -z $REGION ]]; then
@@ -58,56 +92,7 @@ jobs:
           
           
           if [[ -z $REGION ]]; then
-          export REGION=westus2
-          fi
-          
-          
-          if [[ -z $REGION ]]; then
-          export REGION=westus2
-          fi
-          
-          
-          if [[ -z $REGION ]]; then
-          export REGION=westus
-          fi
-          
-          
-          if [[ -z $REGION ]]; then
-          export REGION=northcentralus
-          echo "Using 'northcentralus' region"
-          fi
-          if [[ -z $RESOURCE_GROUP ]]; then
-          export RESOURCE_GROUP=java-on-azure-$RANDOM
-          echo "Using '"$RESOURCE_GROUP"' as resource group"
-          fi
-          
-          az group create --name $RESOURCE_GROUP --location $REGION
-          
-          if [[ -z $AKS ]]; then
-          export AKS=aks-$RANDOM
-          echo ---------------------------------------------------------------------
-          echo  Creating AKS cluster - $AKS
-          echo ---------------------------------------------------------------------
-          az aks create --name $AKS --resource-group $RESOURCE_GROUP --generate-ssh-keys --verbose
-          sleep 120
-          fi
-          
-          
-          cd aks/create-kube-config
-          
-          az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS --admin --file config
-          export KUBECONFIG=$PWD/config
-          
-          cd ../..
-          
-          
-          if [[ -z $REGION ]]; then
-          export REGION=westus2
-          fi
-          
-          
-          if [[ -z $REGION ]]; then
-          export REGION=westus2
+          export REGION=westus3
           fi
           
           

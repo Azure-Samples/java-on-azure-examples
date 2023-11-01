@@ -16,52 +16,7 @@ jobs:
       - run: | 
           
           if [[ -z $REGION ]]; then
-          export REGION=westus2
-          fi
-          
-          
-          if [[ -z $REGION ]]; then
-          export REGION=westus
-          fi
-          
-          
-          if [[ -z $REGION ]]; then
-          export REGION=northcentralus
-          echo "Using 'northcentralus' region"
-          fi
-          if [[ -z $RESOURCE_GROUP ]]; then
-          export RESOURCE_GROUP=java-on-azure-$RANDOM
-          echo "Using '"$RESOURCE_GROUP"' as resource group"
-          fi
-          
-          az group create --name $RESOURCE_GROUP --location $REGION
-          
-          if [[ -z $ACR_NAME ]]; then
-          export ACR_NAME=acreg$RANDOM
-          fi
-          az acr create \
-          --name $ACR_NAME \
-          --resource-group $RESOURCE_GROUP \
-          --sku Basic \
-          --admin-enabled true
-          
-          cd acr/tomcat
-          
-          mvn package
-          export ACR_TOMCAT_IMAGE=tomcat:latest
-          
-          az acr build --registry $ACR_NAME --image $ACR_TOMCAT_IMAGE .
-          
-          cd ../..
-          
-          
-          if [[ -z $REGION ]]; then
-          export REGION=westus2
-          fi
-          
-          
-          if [[ -z $REGION ]]; then
-          export REGION=westus2
+          export REGION=westus3
           fi
           
           
@@ -100,12 +55,42 @@ jobs:
           
           
           if [[ -z $REGION ]]; then
-          export REGION=westus2
+          export REGION=westus
           fi
           
           
           if [[ -z $REGION ]]; then
-          export REGION=westus2
+          export REGION=northcentralus
+          echo "Using 'northcentralus' region"
+          fi
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          
+          if [[ -z $ACR_NAME ]]; then
+          export ACR_NAME=acreg$RANDOM
+          fi
+          az acr create \
+          --name $ACR_NAME \
+          --resource-group $RESOURCE_GROUP \
+          --sku Basic \
+          --admin-enabled true
+          
+          cd acr/tomcat
+          
+          mvn package
+          export ACR_TOMCAT_IMAGE=tomcat:latest
+          
+          az acr build --registry $ACR_NAME --image $ACR_TOMCAT_IMAGE .
+          
+          cd ../..
+          
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus3
           fi
           
           
