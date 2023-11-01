@@ -5,6 +5,16 @@
 
 ## Prerequisites
 
+<!-- 
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus2
+  fi
+
+  -->
+<!-- workflow.cron(0 21 * * 4) -->
+<!-- workflow.include(../load-your-mssql-database-with-data/README.md) -->
+
 This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
@@ -13,9 +23,6 @@ This example assumes you have previously completed the following examples:
 1. [Open Azure SQL server firewall to your IP address](../open-firewall-to-your-ip/README.md)
 1. [Install mssql-cli client](https://docs.microsoft.com/en-us/sql/tools/mssql-cli?view=sql-server-ver15)
 1. [Load your Azure SQL database with your data](../load-your-mssql-database-with-data/README.md)
-
-<!-- workflow.cron(0 3 * * 3) -->
-<!-- workflow.include(../load-your-mssql-database-with-data/README.md) -->
 
 ## Get country information
 

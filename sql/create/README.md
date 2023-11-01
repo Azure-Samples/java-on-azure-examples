@@ -5,12 +5,20 @@
 
 ## Prerequisites
 
+<!-- 
+
+  if [[ -z $REGION ]]; then
+    export REGION=westus2
+  fi
+
+  -->
+<!-- workflow.cron(0 20 * * 4) -->
+<!-- workflow.include(../../group/create/README.md) -->
+
 This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 
-<!-- workflow.cron(0 0 * * 3) -->
-<!-- workflow.include(../../group/create/README.md) -->
 
 ## Create the Azure SQL Database
 
