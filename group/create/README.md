@@ -15,7 +15,6 @@ To setup the environment variables needed to create the Resource Group execute
 the command lines below:
 
 <!-- workflow.run()
-
   if [[ -z $REGION ]]; then
     export REGION=westus
   fi
@@ -29,11 +28,6 @@ the command lines below:
 ```
 
 <!-- workflow.run()
-
-  if [[ -z $REGION ]]; then
-    export REGION=northcentralus
-    echo "Using 'northcentralus' region"
-  fi
   if [[ -z $RESOURCE_GROUP ]]; then
     export RESOURCE_GROUP=java-on-azure-$RANDOM
     echo "Using '"$RESOURCE_GROUP"' as resource group"
@@ -48,7 +42,6 @@ To create the Resource Group use the following command line:
 ```
 
 <!-- workflow.directOnly()
-
   export RESULT=$(az group show --name $RESOURCE_GROUP --output tsv --query properties.provisioningState)
   az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != Succeeded ]]; then

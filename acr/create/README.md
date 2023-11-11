@@ -5,8 +5,7 @@
 
 ## Prerequisites
 
-<!-- 
-
+<!-- workflow.run()
   if [[ -z $REGION ]]; then
     export REGION=westus
   fi
@@ -30,10 +29,10 @@ line below:
 ```
 
 <!-- workflow.run()
+  if [[ -z $ACR_NAME ]]; then
+    export ACR_NAME=acreg$RANDOM
+  fi
 
-if [[ -z $ACR_NAME ]]; then
-  export ACR_NAME=acreg$RANDOM
-fi
   -->
 
 To create the Azure Container Registry use the following command line:
@@ -47,7 +46,6 @@ To create the Azure Container Registry use the following command line:
 ```
 
 <!-- workflow.directOnly()
-
   export RESULT=$(az acr show --name $ACR_NAME --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
   az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != Succeeded ]]; then

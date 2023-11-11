@@ -36,12 +36,11 @@ Execute the following command lines to create the 'acrpull' Service Principal:
     --output tsv`
   export ACR_PULL_SERVICE_PRINCIPAL_ID=`az ad sp list \
     --display-name $ACR_PULL_SERVICE_PRINCIPAL_NAME \
-    --query [].appId \
+    --query "[].appId" \
     --output tsv`
 ```
 
 <!-- workflow.run()
-
   if [[ -z $ACR_PULL_SERVICE_PRINCIPAL_NAME ]]; then
     export ACR_PULL_SERVICE_PRINCIPAL_NAME=acr-pull-$RANDOM
     export ACR_ID=`az acr show --name $ACR_NAME --query id --output tsv`
@@ -62,7 +61,6 @@ Execute the following command lines to create the 'acrpull' Service Principal:
   -->
 
 <!-- workflow.directOnly() 
-
   az group delete --name $RESOURCE_GROUP --yes || true
 
   if [[ -z $ACR_PULL_SERVICE_PRINCIPLE_KEEP ]]; then
