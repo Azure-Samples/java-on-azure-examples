@@ -56,6 +56,8 @@ fi
       --display-name $ACR_PULL_SERVICE_PRINCIPAL_NAME \
       --query [].appId \
       --output tsv`
+  elif
+    export ACR_PULL_SERVICE_PRINCIPLE_KEEP=true
   fi
 
   -->
@@ -63,7 +65,10 @@ fi
 <!-- workflow.directOnly() 
 
   az group delete --name $RESOURCE_GROUP --yes || true
-  az ad sp delete --id $ACR_PULL_SERVICE_PRINCIPAL_ID || true
+
+  if [[ -z $ACR_PULL_SERVICE_PRINCIPLE_KEEP ]]; then
+    az ad sp delete --id $ACR_PULL_SERVICE_PRINCIPAL_ID || true
+  fi
 
   if [[ -z $ACR_PULL_SERVICE_PRINCIPAL_PASSWORD ]]; then
     echo "ACR 'acrpull' service principal password was not found"
