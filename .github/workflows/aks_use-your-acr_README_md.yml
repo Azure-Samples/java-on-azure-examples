@@ -19,16 +19,10 @@ jobs:
           export REGION=westus3
           fi
           
-          
           if [[ -z $REGION ]]; then
           export REGION=westus
           fi
           
-          
-          if [[ -z $REGION ]]; then
-          export REGION=northcentralus
-          echo "Using 'northcentralus' region"
-          fi
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
           echo "Using '"$RESOURCE_GROUP"' as resource group"
@@ -45,26 +39,24 @@ jobs:
           sleep 120
           fi
           
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
           
           if [[ -z $REGION ]]; then
           export REGION=westus
           fi
           
-          
-          if [[ -z $REGION ]]; then
-          export REGION=northcentralus
-          echo "Using 'northcentralus' region"
-          fi
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
           echo "Using '"$RESOURCE_GROUP"' as resource group"
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
-          
           if [[ -z $ACR_NAME ]]; then
           export ACR_NAME=acreg$RANDOM
           fi
+          
           az acr create \
           --name $ACR_NAME \
           --resource-group $RESOURCE_GROUP \

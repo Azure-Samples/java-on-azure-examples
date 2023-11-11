@@ -34,16 +34,10 @@ jobs:
           export REGION=westus
           fi
           
-          
           if [[ -z $REGION ]]; then
           export REGION=westus
           fi
           
-          
-          if [[ -z $REGION ]]; then
-          export REGION=northcentralus
-          echo "Using 'northcentralus' region"
-          fi
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=java-on-azure-$RANDOM
           echo "Using '"$RESOURCE_GROUP"' as resource group"
