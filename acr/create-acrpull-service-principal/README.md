@@ -38,7 +38,6 @@ Execute the following command lines to create the 'acrpull' Service Principal:
     --display-name $ACR_PULL_SERVICE_PRINCIPAL_NAME \
     --query [].appId \
     --output tsv`
-fi
 ```
 
 <!-- workflow.run()
