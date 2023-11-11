@@ -54,7 +54,7 @@ Execute the following command lines to create the 'acrpull' Service Principal:
       --display-name $ACR_PULL_SERVICE_PRINCIPAL_NAME \
       --query [].appId \
       --output tsv`
-  elif
+  else
     export ACR_PULL_SERVICE_PRINCIPLE_KEEP=true
   fi
 
