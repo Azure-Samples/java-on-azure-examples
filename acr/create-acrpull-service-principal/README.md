@@ -5,7 +5,7 @@
 
 ## Prerequisites
 
-<!-- 
+<!-- workflow.run()
 
   if [[ -z $REGION ]]; then
     export REGION=westus
@@ -40,32 +40,8 @@ Execute the following command lines to create the 'acrpull' Service Principal:
     --output tsv`
 ```
 
-<!-- workflow.run()
-  if [[ -z $ACR_PULL_SERVICE_PRINCIPAL_NAME ]]; then
-    export ACR_PULL_SERVICE_PRINCIPAL_NAME=acr-pull-$RANDOM
-    export ACR_ID=`az acr show --name $ACR_NAME --query id --output tsv`
-    export ACR_PULL_SERVICE_PRINCIPAL_PASSWORD=`az ad sp create-for-rbac \
-      --name $ACR_PULL_SERVICE_PRINCIPAL_NAME \
-      --scopes $ACR_ID \
-      --role acrpull \
-      --query password \
-      --output tsv`
-    export ACR_PULL_SERVICE_PRINCIPAL_ID=`az ad sp list \
-      --display-name $ACR_PULL_SERVICE_PRINCIPAL_NAME \
-      --query [].appId \
-      --output tsv`
-  else
-    export ACR_PULL_SERVICE_PRINCIPLE_KEEP=true
-  fi
-
-  -->
-
 <!-- workflow.directOnly() 
   az group delete --name $RESOURCE_GROUP --yes || true
-
-  if [[ -z $ACR_PULL_SERVICE_PRINCIPLE_KEEP ]]; then
-    az ad sp delete --id $ACR_PULL_SERVICE_PRINCIPAL_ID || true
-  fi
 
   if [[ -z $ACR_PULL_SERVICE_PRINCIPAL_PASSWORD ]]; then
     echo "ACR 'acrpull' service principal password was not found"
