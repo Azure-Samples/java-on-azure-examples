@@ -10,7 +10,7 @@ jobs:
         with: 
           allow-no-subscriptions: 'true'
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
-      - uses: 'actions/checkout@v2'
-      - run: | 
+      - uses: 'actions/checkout@v3'
+      - run: |
           
           exit 0

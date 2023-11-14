@@ -12,8 +12,8 @@ jobs:
         with: 
           allow-no-subscriptions: 'true'
           creds: '${{ secrets.AZURE_CREDENTIALS }}'
-      - uses: 'actions/checkout@v2'
-      - run: | 
+      - uses: 'actions/checkout@v3'
+      - run: |
           
           if [[ -z $REGION ]]; then
           export REGION=westus
