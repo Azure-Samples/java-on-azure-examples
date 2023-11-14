@@ -26,7 +26,7 @@ To create the Azure Database for MySQL setup the following environment variables
 <!-- workflow.skip() -->
 ```shell
 
-  export MYSQL_NAME=mysql-$RANDOM
+  export MYSQL_NAME=joaz-mysql-$RANDOM
   export MYSQL_USERNAME=mysql
   export MYSQL_PASSWORD=p#ssw0rd-$RANDOM
 
@@ -35,7 +35,7 @@ To create the Azure Database for MySQL setup the following environment variables
 <!-- workflow.run()
 
   if [[ -z $MYSQL_NAME ]]; then
-    export MYSQL_NAME=mysql-$RANDOM
+    export MYSQL_NAME=joaz-mysql-$RANDOM
     export MYSQL_USERNAME=mysql
     export MYSQL_PASSWORD=p#ssw0rd-$RANDOM
   fi

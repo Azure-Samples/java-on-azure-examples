@@ -23,13 +23,13 @@ the command lines below:
 <!-- workflow.cron(0 6 * * 4) -->
 <!-- workflow.skip() -->
 ```shell
-  export RESOURCE_GROUP=java-on-azure
+  export RESOURCE_GROUP=joaz-rg
   export REGION=pick_your_closest_region
 ```
 
 <!-- workflow.run()
   if [[ -z $RESOURCE_GROUP ]]; then
-    export RESOURCE_GROUP=java-on-azure-$RANDOM
+    export RESOURCE_GROUP=joaz-rg-$RANDOM
     echo "Using '"$RESOURCE_GROUP"' as resource group"
   fi
 
