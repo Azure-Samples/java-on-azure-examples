@@ -24,24 +24,19 @@ jobs:
           export REGION=westus
           fi
           
-          
-          if [[ -z $REGION ]]; then
-          export REGION=westus
-          fi
-          
           if [[ -z $REGION ]]; then
           export REGION=westus
           fi
           
           if [[ -z $RESOURCE_GROUP ]]; then
-          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          export RESOURCE_GROUP=joaz-rg-$RANDOM
           echo "Using '"$RESOURCE_GROUP"' as resource group"
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
           
           if [[ -z $MYSQL_NAME ]]; then
-          export MYSQL_NAME=mysql-$RANDOM
+          export MYSQL_NAME=joaz-mysql-$RANDOM
           export MYSQL_USERNAME=mysql
           export MYSQL_PASSWORD=p#ssw0rd-$RANDOM
           fi

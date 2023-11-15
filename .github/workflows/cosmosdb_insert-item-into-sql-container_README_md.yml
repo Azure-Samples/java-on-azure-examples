@@ -19,7 +19,7 @@ jobs:
           fi
           
           if [[ -z $RESOURCE_GROUP ]]; then
-          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          export RESOURCE_GROUP=joaz-rg-$RANDOM
           echo "Using '"$RESOURCE_GROUP"' as resource group"
           fi
           
@@ -29,7 +29,7 @@ jobs:
           fi
           
           if [[ -z $RESOURCE_GROUP ]]; then
-          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          export RESOURCE_GROUP=joaz-rg-$RANDOM
           echo "Using '"$RESOURCE_GROUP"' as resource group"
           fi
           
@@ -48,7 +48,7 @@ jobs:
           fi
           
           if [[ -z $RESOURCE_GROUP ]]; then
-          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          export RESOURCE_GROUP=joaz-rg-$RANDOM
           echo "Using '"$RESOURCE_GROUP"' as resource group"
           fi
           
@@ -76,7 +76,7 @@ jobs:
           fi
           
           if [[ -z $RESOURCE_GROUP ]]; then
-          export RESOURCE_GROUP=java-on-azure-$RANDOM
+          export RESOURCE_GROUP=joaz-rg-$RANDOM
           echo "Using '"$RESOURCE_GROUP"' as resource group"
           fi
           
