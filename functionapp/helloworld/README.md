@@ -33,7 +33,7 @@ This example assumes you have previously completed the following examples:
 
 ```shell
 
-  export FUNCTIONAPP_HELLOWORLD=functionapp-helloworld-$RANDOM
+  export FUNCTIONAPP_HELLOWORLD=joaz-func-helloworld-$RANDOM
 
 ```
 

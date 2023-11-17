@@ -109,9 +109,9 @@
         </dependency>
     </dependencies>
     <properties>
-        <appName>functionapp-helloworld</appName>
-        <region>westus2</region>
-        <resourceGroup>java-on-azure</resourceGroup>
+        <appName>joaz-func-helloworld</appName>
+        <region>westus3</region>
+        <resourceGroup>joaz</resourceGroup>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <stagingDirectory>${project.build.directory}/azure-functions/${appName}</stagingDirectory>
     </properties>
