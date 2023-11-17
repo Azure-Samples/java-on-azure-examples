@@ -47,7 +47,7 @@ jobs:
           mkdir .mvn
           echo "-ntp" > .mvn/maven.config
           
-          export FUNCTIONAPP_HELLOWORLD=functionapp-helloworld-$RANDOM
+          export FUNCTIONAPP_HELLOWORLD=joaz-func-helloworld-$RANDOM
           mvn -DappName=$FUNCTIONAPP_HELLOWORLD \
           -DresourceGroup=$RESOURCE_GROUP \
           -Dregion=$REGION \
