@@ -6,7 +6,17 @@
     <artifactId>project</artifactId>
     <version>1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>Java on Azure Examples Project</name>    
+    <name>Java on Azure Examples Project</name>  
+    <properties>
+        <azure.bom.version>1.2.3</azure.bom.version>
+        <azure.spring.version>3.1.0</azure.spring.version>
+        <example.prefix>examples</example.prefix>
+        <example.postfix>${maven.build.timestamp}</example.postfix>
+        <java.version>17</java.version>
+        <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <springboot.version>2.7.17</springboot.version>
+    </properties>  
     <build>
         <pluginManagement>
             <plugins>
@@ -73,8 +83,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <inherited>true</inherited>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <release>${java.version}</release>
                 </configuration>
             </plugin>
             <plugin>
@@ -133,14 +142,4 @@
             </modules>
         </profile>
     </profiles>
-    <properties>
-        <azure.bom.version>1.2.3</azure.bom.version>
-        <azure.spring.version>3.1.0</azure.spring.version>
-        <example.prefix>examples</example.prefix>
-        <example.postfix>${maven.build.timestamp}</example.postfix>
-        <java.version>11</java.version>
-        <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <springboot.version>2.3.8.RELEASE</springboot.version>
-    </properties>
 </project>
