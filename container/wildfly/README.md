@@ -27,6 +27,11 @@ This example assumes you have previously completed the following examples:
 
 To deploy WildFly use the following command line:
 
+<!-- workflow.skip()
+
+  We are skipping this while working through issue #358
+
+  -->
 ```shell
   export ACI_WILDFLY=aci-wildfly-$RANDOM
 
@@ -60,7 +65,11 @@ And this is served by a custom WildFly using a Docker image coming from our
 own Azure Container Registry.
 ```
 
-<!-- workflow.directOnly()
+<!-- workflow.skip()
+
+  We are skipping this while working through issue #358
+  
+  workflow.directOnly()
 
   export URL=http://$(az container show --resource-group $RESOURCE_GROUP --name $ACI_WILDFLY --query ipAddress.fqdn --output tsv):8080
   export RESULT=$(curl $URL)
