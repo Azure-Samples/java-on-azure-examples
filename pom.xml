@@ -12,7 +12,7 @@
         <azure.spring.version>3.1.0</azure.spring.version>
         <example.prefix>examples</example.prefix>
         <example.postfix>${maven.build.timestamp}</example.postfix>
-        <java.version>17</java.version>
+        <java.version>11</java.version>
         <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <springboot.version>2.7.17</springboot.version>
