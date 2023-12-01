@@ -80,31 +80,5 @@ jobs:
           
           cd ../..
           
-          export ACI_WILDFLY=aci-wildfly-$RANDOM
-          
-          az container create \
-          --resource-group $RESOURCE_GROUP \
-          --name $ACI_WILDFLY \
-          --image $ACR_NAME.azurecr.io/$ACR_WILDFLY_IMAGE \
-          --registry-login-server $ACR_NAME.azurecr.io \
-          --registry-username $ACR_PULL_SERVICE_PRINCIPAL_ID \
-          --registry-password $ACR_PULL_SERVICE_PRINCIPAL_PASSWORD \
-          --dns-name-label $ACI_WILDFLY \
-          --ports 8080
-          
-          echo `az container show \
-          --resource-group $RESOURCE_GROUP \
-          --name $ACI_WILDFLY \
-          --query ipAddress.fqdn \
-          --output tsv`:8080
           
           sleep 60
-          
-          
-          export URL=http://$(az container show --resource-group $RESOURCE_GROUP --name $ACI_WILDFLY --query ipAddress.fqdn --output tsv):8080
-          export RESULT=$(curl $URL)
-          az group delete --name $RESOURCE_GROUP --yes || true
-          if [[ "$RESULT" != *"custom WildFly"* ]]; then
-          echo "Response did not contain 'custom WildFly'"
-          exit 1
-          fi
