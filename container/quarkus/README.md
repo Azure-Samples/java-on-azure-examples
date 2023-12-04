@@ -27,6 +27,7 @@ This example assumes you have previously completed the following examples:
 
 To deploy the application use the following command line:
 
+<!-- workflow.skip() -->
 ```shell
   export ACI_QUARKUS=aci-quarkus-$RANDOM
 
@@ -53,7 +54,9 @@ Then open your browser to the URL echoed above and you should see:
 hello
 ```
 
-<!-- workflow.directOnly()
+<!-- workflow.skip()
+
+  workflow.directOnly()
 
   export URL=http://$(az container show --resource-group $RESOURCE_GROUP --name $ACI_QUARKUS --query ipAddress.fqdn --output tsv):8080
   export RESULT=$(curl $URL)
