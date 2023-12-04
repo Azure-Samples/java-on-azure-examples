@@ -27,6 +27,7 @@ This example assumes you have previously completed the following examples:
 
 To deploy Tomcat the following command line:
 
+<!-- workflow.skip() -->
 ```shell
   export ACI_TOMCAT=aci-tomcat-$RANDOM
 
@@ -54,7 +55,9 @@ And this is served by a custom Tomcat using a Docker image coming from our
 own Azure Container Registry.
 ```
 
-<!-- workflow.directOnly()
+<!-- workflow.skip()
+
+  workflow.directOnly()
 
   export URL=http://$(az container show --resource-group $RESOURCE_GROUP --name $ACI_TOMCAT --query ipAddress.fqdn --output tsv):8080
   export RESULT=$(curl $URL)
