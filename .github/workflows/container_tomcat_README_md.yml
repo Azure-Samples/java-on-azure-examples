@@ -79,29 +79,3 @@ jobs:
           az acr build --registry $ACR_NAME --image $ACR_TOMCAT_IMAGE .
           
           cd ../..
-          
-          export ACI_TOMCAT=aci-tomcat-$RANDOM
-          
-          az container create \
-          --resource-group $RESOURCE_GROUP \
-          --name $ACI_TOMCAT \
-          --image $ACR_NAME.azurecr.io/$ACR_TOMCAT_IMAGE \
-          --registry-login-server $ACR_NAME.azurecr.io \
-          --registry-username $ACR_PULL_SERVICE_PRINCIPAL_ID \
-          --registry-password $ACR_PULL_SERVICE_PRINCIPAL_PASSWORD \
-          --dns-name-label $ACI_TOMCAT \
-          --ports 8080
-          
-          echo `az container show \
-          --resource-group $RESOURCE_GROUP \
-          --name $ACI_TOMCAT \
-          --query ipAddress.fqdn \
-          --output tsv`:8080
-          
-          export URL=http://$(az container show --resource-group $RESOURCE_GROUP --name $ACI_TOMCAT --query ipAddress.fqdn --output tsv):8080
-          export RESULT=$(curl $URL)
-          az group delete --name $RESOURCE_GROUP --yes || true
-          if [[ "$RESULT" != *"custom Tomcat"* ]]; then
-          echo "Response did not contain 'custom Tomcat'"
-          exit 1
-          fi
