@@ -5,7 +5,7 @@
 
 ## Prerequisites
 
-<!-- workflow.cron(0 22 * * 4) -->
+<!-- workflow.cron(0 5 * * 1) -->
 <!-- workflow.include(../open-firewall-to-your-ip/README.md) -->
 
 This example assumes you have previously completed the following examples:

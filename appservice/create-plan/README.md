@@ -12,7 +12,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 11 * * 2) -->
+<!-- workflow.cron(0 8 * * 4) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 This example assumes you have previously completed the following example:

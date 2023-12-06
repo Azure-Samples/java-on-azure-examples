@@ -19,7 +19,7 @@ This example assumes you have previously completed the following examples:
   fi
 
   -->
-<!-- workflow.cron(0 21 * * 3) -->
+<!-- workflow.cron(0 19 * * 2) -->
 <!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../create/README.md) -->
 <!-- workflow.include(../create-sql-database/README.md) -->

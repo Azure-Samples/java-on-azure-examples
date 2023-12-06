@@ -9,7 +9,7 @@ This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 
-<!-- workflow.cron(0 1 * * 1) -->
+<!-- workflow.cron(0 3 * * 1) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 ## Create the Azure Storage Account

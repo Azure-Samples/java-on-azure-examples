@@ -21,7 +21,7 @@ This example assumes you have previously completed the following examples:
   fi
 
   -->
-<!-- workflow.cron(0 0 * * 3) -->
+<!-- workflow.cron(0 16 * * 3) -->
 <!-- workflow.include(../../acr/create-acrpull-service-principal/README.md) -->
 <!-- workflow.include(../../acr/quarkus/README.md) -->
 

@@ -21,7 +21,7 @@ This example assumes you have previously completed the following examples:
   fi
 
   -->
-<!-- workflow.cron(0 15 * * 4) -->
+<!-- workflow.cron(0 2 * * 2) -->
 <!-- workflow.include(../load-your-mysql-database-with-data/README.md) -->
 
 ## JDBC command line client

@@ -11,7 +11,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 4 * * 3) -->
+<!-- workflow.cron(0 12 * * 3) -->
 <!-- workflow.include(../../acr/helloworldjob/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 

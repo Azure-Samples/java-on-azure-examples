@@ -5,7 +5,7 @@
 
 ## Prerequisites
 
-<!-- workflow.cron(0 21 * * 4) -->
+<!-- workflow.cron(0 6 * * 1) -->
 <!-- workflow.include(../load-your-mssql-database-with-data/README.md) -->
 
 This example assumes you have previously completed the following examples:

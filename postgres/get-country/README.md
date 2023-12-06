@@ -14,7 +14,7 @@ This example assumes you have previously completed the following examples:
 1. [Install psql client](https://www.postgresql.org/download/README.md)
 1. [Load your PostgreSQL database with your data](../load-your-postgresql-database-with-data/README.md)
 
-<!-- workflow.cron(0 3 * * 1) -->
+<!-- workflow.cron(0 21 * * 1) -->
 <!-- workflow.include(../load-your-postgresql-database-with-data/README.md) -->
 
 ## JDBC command line client

@@ -13,7 +13,7 @@ This example assumes you have previously completed the following examples:
 1. [Open PostgreSQL server firewall to your IP address](../open-firewall-to-your-ip/README.md)
 1. [Install psql client](https://www.postgresql.org/download/README.md)
 
-<!-- workflow.cron(0 2 * * 1) -->
+<!-- workflow.cron(0 20 * * 1) -->
 <!-- workflow.include(../open-firewall-to-your-ip/README.md) -->
 
 ## Load your PostgreSQL database with data

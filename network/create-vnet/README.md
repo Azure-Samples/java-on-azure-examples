@@ -10,7 +10,7 @@ This example assumes you have previously completed the following example:
 
 ## Create a VNet
 
-<!-- workflow.cron(0 0 * * 3) -->
+<!-- workflow.cron(0 23 * * 1) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 First, create the environment variable used for our VNet using the command line

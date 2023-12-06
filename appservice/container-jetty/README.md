@@ -22,7 +22,7 @@ This example assumes you have previously completed the following examples:
   fi
 
   -->
-<!-- workflow.cron(0 8 * * 2) -->
+<!-- workflow.cron(0 11 * * 4) -->
 <!-- workflow.include(../../acr/jetty/README.md) -->
 <!-- workflow.include(../../acr/create-settings-xml/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->

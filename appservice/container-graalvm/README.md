@@ -12,7 +12,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 7 * * 2) -->
+<!-- workflow.cron(0 12 * * 4) -->
 <!-- workflow.include(../../acr/graalvm/README.md) -->
 <!-- workflow.include(../../acr/create-settings-xml/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->

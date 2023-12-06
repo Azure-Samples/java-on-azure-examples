@@ -20,7 +20,7 @@ To delete the Resource Group use the following command line:
   fi
 
   -->
-<!-- workflow.cron(0 7 * * 4) -->
+<!-- workflow.cron(0 10 * * 2) -->
 <!-- workflow.include(../create/README.md) -->
 
 ```shell

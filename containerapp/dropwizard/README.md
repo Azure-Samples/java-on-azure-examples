@@ -11,7 +11,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 5 * * 3) -->
+<!-- workflow.cron(0 11 * * 3) -->
 <!-- workflow.include(../../acr/dropwizard/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 

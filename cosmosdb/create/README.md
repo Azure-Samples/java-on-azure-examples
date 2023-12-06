@@ -16,7 +16,7 @@ This example assumes you have previously completed the following example:
   fi
 
   -->
-<!-- workflow.cron(0 17 * * 3) -->
+<!-- workflow.cron(0 23 * * 2) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 ## Create the Azure Cosmos DB account

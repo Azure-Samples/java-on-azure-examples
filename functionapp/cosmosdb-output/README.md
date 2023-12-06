@@ -12,7 +12,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 3 * * 4) -->
+<!-- workflow.cron(0 13 * * 2) -->
 <!-- workflow.include(../install-tools/README.md) -->
 <!-- workflow.include(../../cosmosdb/create/README.md) -->
 

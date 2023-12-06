@@ -18,7 +18,7 @@ This example assumes you have previously completed the following example:
   fi
 
   -->
-<!-- workflow.cron(0 18 * * 4) -->
+<!-- workflow.cron(0 19 * * 3) -->
 <!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../create-openai-account/README.md) -->
 <!-- workflow.include(../create-gpt35-model/README.md) -->

@@ -12,7 +12,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 18 * * 1) -->
+<!-- workflow.cron(0 1 * * 5) -->
 <!-- workflow.include(../create-profile/README.md) -->
 
 This example assumes you have previously completed the following example:

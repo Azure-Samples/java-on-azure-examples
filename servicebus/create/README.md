@@ -11,7 +11,7 @@ This example assumes you have previously completed the following example:
 
 ## Create an Azure Service Bus
 
-<!-- workflow.cron(0 0 * * 5) -->
+<!-- workflow.cron(0 16 * * 1) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 First, create the environment variable used for our Service Bus

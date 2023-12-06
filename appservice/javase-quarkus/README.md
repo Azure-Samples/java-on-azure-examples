@@ -17,7 +17,7 @@ This example assumes you have previously completed the following examples:
   fi
 
   -->
-<!-- workflow.cron(0 17 * * 2) -->
+<!-- workflow.cron(0 2 * * 4) -->
 <!-- workflow.include(../create-plan/README.md) -->
 
 ## Build the example
