@@ -18,7 +18,7 @@ This example assumes you have previously completed the following example:
   fi
 
   -->
-<!-- workflow.cron(0 11 * * 4) -->
+<!-- workflow.cron(0 6 * * 2) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 Install the CLI extension using the following command line:

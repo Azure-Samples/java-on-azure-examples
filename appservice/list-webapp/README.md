@@ -20,7 +20,7 @@ This example assumes you have previously completed the following examples:
   fi
 
   -->
-<!-- workflow.cron(0 20 * * 2) -->
+<!-- workflow.cron(0 23 * * 3) -->
 <!-- workflow.include(../tomcat-helloworld/README.md) -->
 
 To list the web applications use the following command line:

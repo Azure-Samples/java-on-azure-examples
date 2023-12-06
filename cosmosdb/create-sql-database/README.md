@@ -17,7 +17,7 @@ This example assumes you have previously completed the following examples:
   fi
 
   -->
-<!-- workflow.cron(0 19 * * 3) -->
+<!-- workflow.cron(0 21 * * 2) -->
 <!-- workflow.include(../create/README.md) -->
 
 ## Create the SQL database

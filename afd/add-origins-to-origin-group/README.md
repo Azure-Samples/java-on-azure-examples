@@ -12,7 +12,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 16 * * 1) -->
+<!-- workflow.cron(0 3 * * 5) -->
 <!-- workflow.include(../create-origin-group/README.md) -->
 <!-- workflow.include(../../appservice/javase-springboot/README.md) -->
 <!-- workflow.include(../../appservice/javase-quarkus/README.md) -->

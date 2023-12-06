@@ -22,7 +22,7 @@ To scale the App Service Plan use the following command line:
   fi
 
   -->
-<!-- workflow.cron(0 21 * * 2) -->
+<!-- workflow.cron(0 22 * * 3) -->
 <!-- workflow.include(../tomcat-helloworld/README.md) -->
 
 ```shell

@@ -12,7 +12,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 6 * * 2) -->
+<!-- workflow.cron(0 13 * * 4) -->
 <!-- workflow.include(../../acr/glassfish/README.md) -->
 <!-- workflow.include(../../acr/create-settings-xml/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->

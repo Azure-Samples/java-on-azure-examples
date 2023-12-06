@@ -16,7 +16,7 @@ This example assumes you have previously completed the following example:
   fi
 
   -->
-<!-- workflow.cron(0 14 * * 4) -->
+<!-- workflow.cron(0 3 * * 2) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 ## Create the Azure Database for MySQL

@@ -5,7 +5,7 @@
 
 ## Prerequisites
 
-<!-- workflow.cron(0 1 * * 2) -->
+<!-- workflow.cron(0 18 * * 4) -->
 <!-- workflow.include(../create-kube-config/README.md) -->
 <!-- workflow.include(../../acr/tomcat/README.md) -->
 <!-- workflow.include(../use-your-acr/README.md) -->

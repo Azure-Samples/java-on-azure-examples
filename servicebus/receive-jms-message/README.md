@@ -13,7 +13,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 20 * * 1) -->
+<!-- workflow.cron(0 14 * * 1) -->
 <!-- workflow.include(../send-jms-message/README.md) -->
 
 This example assumes you have previously completed the following examples:

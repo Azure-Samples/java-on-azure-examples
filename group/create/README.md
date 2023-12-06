@@ -20,7 +20,7 @@ the command lines below:
   fi
 
   -->
-<!-- workflow.cron(0 6 * * 4) -->
+<!-- workflow.cron(0 11 * * 2) -->
 <!-- workflow.skip() -->
 ```shell
   export RESOURCE_GROUP=joaz-rg

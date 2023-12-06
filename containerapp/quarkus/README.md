@@ -11,7 +11,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 13 * * 3) -->
+<!-- workflow.cron(0 3 * * 3) -->
 <!-- workflow.include(../../acr/quarkus/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 

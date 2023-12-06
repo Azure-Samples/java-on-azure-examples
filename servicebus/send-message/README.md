@@ -13,7 +13,7 @@ This example assumes you have previously completed the following examples:
 
 ## Send an message to an Azure Service Bus Queue
 
-<!-- workflow.cron(0 2 * * 5) -->
+<!-- workflow.cron(0 11 * * 1) -->
 <!-- workflow.include(../create-queue/README.md) -->
 
 First, create the environment variables used to connect to our message queue

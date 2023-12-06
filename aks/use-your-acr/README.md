@@ -5,7 +5,7 @@
 
 ## Prerequisites
 
-<!-- workflow.cron(0 2 * * 2) -->
+<!-- workflow.cron(0 17 * * 4) -->
 <!-- workflow.include(../create/README.md) -->
 <!-- workflow.include(../../acr/create/README.md) -->
 

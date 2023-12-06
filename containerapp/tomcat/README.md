@@ -11,7 +11,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 15 * * 3) -->
+<!-- workflow.cron(0 1 * * 3) -->
 <!-- workflow.include(../../acr/tomcat/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 

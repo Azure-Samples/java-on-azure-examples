@@ -22,7 +22,7 @@ This example assumes you have previously completed the following examples:
   fi
 
   -->
-<!-- workflow.cron(0 9 * * 2) -->
+<!-- workflow.cron(0 10 * * 4) -->
 <!-- workflow.include(../../acr/payara/README.md) -->
 <!-- workflow.include(../../acr/create-settings-xml/README.md) -->
 <!-- workflow.include(../create-plan/README.md) -->

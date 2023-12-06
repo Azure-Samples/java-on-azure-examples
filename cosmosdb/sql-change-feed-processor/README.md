@@ -20,7 +20,7 @@ This example assumes you have previously completed the following examples:
   fi
 
   -->
-<!-- workflow.cron(0 22 * * 3) -->
+<!-- workflow.cron(0 18 * * 2) -->
 <!-- workflow.include(../create-sql-container/README.md) -->
 <!-- workflow.include(../create-sql-leases-container/README.md) -->
 

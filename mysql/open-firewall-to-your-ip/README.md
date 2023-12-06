@@ -11,7 +11,7 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Database for MySQL](../create/README.md)
 1. [Install curl](https://curl.haxx.se/download.html)
 
-<!-- workflow.cron(0 1 * * 2) -->
+<!-- workflow.cron(0 0 * * 2) -->
 <!-- workflow.include(../create/README.md) -->
 
 ## Open MySQL server firewall to your local IP address

@@ -10,7 +10,7 @@ This example assumes you have previously completed the following example:
 1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Create an Azure Cache for Redis](../create/README.md)
 
-<!-- workflow.cron(0 1 * * 0) -->
+<!-- workflow.cron(0 17 * * 1) -->
 <!-- workflow.include(../create/README.md) -->
 <!-- workflow.run()
 

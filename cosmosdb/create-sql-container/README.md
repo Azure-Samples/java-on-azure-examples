@@ -18,7 +18,7 @@ This example assumes you have previously completed the following examples:
   fi
 
   -->
-<!-- workflow.cron(0 18 * * 3) -->
+<!-- workflow.cron(0 22 * * 2) -->
 <!-- workflow.include(../create-sql-database/README.md) -->
 
 ## Create the SQL container
