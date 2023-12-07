@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 0 * * 3'
+    - cron: '0 16 * * 3'
   workflow_dispatch: 
 
 name: 'container/quarkus/README.md'

@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 21 * * 1'
+    - cron: '0 22 * * 4'
   workflow_dispatch: 
 
 name: 'aks/create/README.md'

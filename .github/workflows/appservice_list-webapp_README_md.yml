@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 20 * * 2'
+    - cron: '0 23 * * 3'
   workflow_dispatch: 
 
 name: 'appservice/list-webapp/README.md'

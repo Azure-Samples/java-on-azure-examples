@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 10 * * 3'
+    - cron: '0 6 * * 3'
   workflow_dispatch: 
 
 name: 'containerapp/list-job-executions/README.md'

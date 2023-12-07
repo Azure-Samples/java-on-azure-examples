@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 5 * * 1'
+    - cron: '0 14 * * 5'
   workflow_dispatch: 
 
 name: 'acr/graalvm/README.md'

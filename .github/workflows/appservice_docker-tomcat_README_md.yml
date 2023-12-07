@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 15 * * 2'
+    - cron: '0 4 * * 4'
   workflow_dispatch: 
 
 name: 'appservice/docker-tomcat/README.md'

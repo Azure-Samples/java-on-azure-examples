@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 6 * * 1'
+    - cron: '0 13 * * 5'
   workflow_dispatch: 
 
 name: 'acr/helidon/README.md'

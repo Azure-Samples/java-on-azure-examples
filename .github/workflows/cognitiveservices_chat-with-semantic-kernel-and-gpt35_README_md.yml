@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 18 * * 4'
+    - cron: '0 19 * * 3'
   workflow_dispatch: 
 
 name: 'cognitiveservices/chat-with-semantic-kernel-and-gpt35/README.md'

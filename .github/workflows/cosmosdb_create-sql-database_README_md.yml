@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 19 * * 3'
+    - cron: '0 21 * * 2'
   workflow_dispatch: 
 
 name: 'cosmosdb/create-sql-database/README.md'

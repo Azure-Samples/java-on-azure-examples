@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 22 * * 4'
+    - cron: '0 5 * * 1'
   workflow_dispatch: 
 
 name: 'sql/load-your-mssql-database-with-data/README.md'

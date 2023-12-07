@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 9 * * 4'
+    - cron: '0 8 * * 2'
   workflow_dispatch: 
 
 name: 'keyvault/create/README.md'

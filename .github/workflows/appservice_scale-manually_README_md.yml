@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 21 * * 2'
+    - cron: '0 22 * * 3'
   workflow_dispatch: 
 
 name: 'appservice/scale-manually/README.md'

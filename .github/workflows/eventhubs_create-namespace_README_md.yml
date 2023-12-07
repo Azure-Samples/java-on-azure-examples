@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 0 * * 4'
+    - cron: '0 16 * * 2'
   workflow_dispatch: 
 
 name: 'eventhubs/create-namespace/README.md'

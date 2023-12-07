@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 16 * * 1'
+    - cron: '0 3 * * 5'
   workflow_dispatch: 
 
 name: 'afd/add-origins-to-origin-group/README.md'

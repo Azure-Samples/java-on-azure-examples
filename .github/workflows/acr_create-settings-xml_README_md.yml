@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 2 * * 1'
+    - cron: '0 17 * * 5'
   workflow_dispatch: 
 
 name: 'acr/create-settings-xml/README.md'

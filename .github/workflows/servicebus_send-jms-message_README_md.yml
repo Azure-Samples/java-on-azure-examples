@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 4 * * 5'
+    - cron: '0 12 * * 1'
   workflow_dispatch: 
 
 name: 'servicebus/send-jms-message/README.md'

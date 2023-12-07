@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 3 * * 2'
+    - cron: '0 16 * * 4'
   workflow_dispatch: 
 
 name: 'aks/wildfly/README.md'

@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 0 * * 1'
+    - cron: '0 22 * * 1'
   workflow_dispatch: 
 
 name: 'postgres/create/README.md'

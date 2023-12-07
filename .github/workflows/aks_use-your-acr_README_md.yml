@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 2 * * 2'
+    - cron: '0 17 * * 4'
   workflow_dispatch: 
 
 name: 'aks/use-your-acr/README.md'

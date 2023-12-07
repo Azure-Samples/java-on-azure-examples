@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 10 * * 4'
+    - cron: '0 7 * * 2'
   workflow_dispatch: 
 
 name: 'keyvault/create-self-signed-certificate/README.md'

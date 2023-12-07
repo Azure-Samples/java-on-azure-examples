@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 0 * * 3'
+    - cron: '0 23 * * 1'
   workflow_dispatch: 
 
 name: 'network/create-vnet/README.md'
