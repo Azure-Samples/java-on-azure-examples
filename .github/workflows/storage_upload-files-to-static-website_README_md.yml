@@ -24,7 +24,7 @@ jobs:
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
-          export STORAGE_ACCOUNT_NAME=storage$RANDOM
+          export STORAGE_ACCOUNT_NAME=joazst$RANDOM
           
           az storage account create \
           --name $STORAGE_ACCOUNT_NAME \
