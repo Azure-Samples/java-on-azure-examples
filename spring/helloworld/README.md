@@ -44,10 +44,6 @@ To run the example locally use the following Maven command line.
   mvn spring-boot:run
 ```
 
-Note you will see exceptions occurring in the logs because you are not running
-the application within the Azure Spring Apps environment. Do not worry this
-expected and can be ignored.
-
 ## Deploy the Hello World Spring Boot application to Azure Spring Cloud
 
 ```shell
