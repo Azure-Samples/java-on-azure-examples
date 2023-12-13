@@ -30,7 +30,6 @@ This example assumes you have previously completed the following examples:
 
 Get the Log Analytics workspace ID by executing the command below:
 
-<!-- workflow.skip() -->
 ```shell
   export ACA_LOG_ANALYTICS_WORKSPACE_ID=`az containerapp env show \
     --name $ACA_ENVIRONMENT_NAME \
@@ -41,7 +40,6 @@ Get the Log Analytics workspace ID by executing the command below:
 
 Get the name of the latest job execution using the command line below:
 
-<!-- workflow.skip() -->
 ```shell
   export ACA_JOB_EXECUTION_NAME=`az containerapp job execution list \
     --name $ACA_JOB_NAME \
@@ -54,6 +52,7 @@ Use the command line below to get the job execution log:
 
 <!-- workflow.skip() -->
 ```shell
+  sleep 45
   az monitor log-analytics query \
     --workspace $ACA_LOG_ANALYTICS_WORKSPACE_ID \
     --analytics-query "ContainerAppConsoleLogs_CL | where ContainerGroupName_s startswith '$ACA_JOB_EXECUTION_NAME' | order by _timestamp_d asc" \
@@ -62,7 +61,6 @@ Use the command line below to get the job execution log:
 
 <!-- workflow.directOnly()
 
-  sleep 60
   az group delete --name $RESOURCE_GROUP --yes || true
 
   -->
