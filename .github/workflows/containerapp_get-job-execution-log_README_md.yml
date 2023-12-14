@@ -188,6 +188,15 @@ jobs:
           az containerapp job execution list \
           --name $ACA_JOB_NAME \
           --resource-group $RESOURCE_GROUP
+          export ACA_LOG_ANALYTICS_WORKSPACE_ID=`az containerapp env show \
+          --name $ACA_ENVIRONMENT_NAME \
+          --resource-group $RESOURCE_GROUP \
+          --query "properties.appLogsConfiguration.logAnalyticsConfiguration.customerId" \
+          --output tsv`
+          export ACA_JOB_EXECUTION_NAME=`az containerapp job execution list \
+          --name $ACA_JOB_NAME \
+          --resource-group $RESOURCE_GROUP \
+          --query "[0].name" \
+          --output tsv`
           
-          sleep 60
           az group delete --name $RESOURCE_GROUP --yes || true
