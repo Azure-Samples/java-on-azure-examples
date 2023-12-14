@@ -32,10 +32,6 @@ spring.redis.ssl=true
 - GET : /product/{id} : Gets the product by id from Azure Cache for Redis
 - GET : /products : Gets the list of the products stored in Azure Cache for Redis
 
-## Test From Postman
-
-To call the endpoitns bellow you can import the postman collection loocated in the folder /postman
-
 ## Configure Azure Cache for Redis with private endpoint 
 
 - [Azure Cache for Redis with Azure Private Link](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-private-link)
