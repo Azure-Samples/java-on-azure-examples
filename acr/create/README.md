@@ -25,12 +25,12 @@ line below:
 
 <!-- workflow.skip() -->
 ```shell
-  export ACR_NAME=acreg$RANDOM
+  export ACR_NAME=joazacr$RANDOM
 ```
 
 <!-- workflow.run()
   if [[ -z $ACR_NAME ]]; then
-    export ACR_NAME=acreg$RANDOM
+    export ACR_NAME=joazacr$RANDOM
   fi
 
   -->
