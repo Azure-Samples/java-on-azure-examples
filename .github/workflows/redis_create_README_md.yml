@@ -24,7 +24,7 @@ jobs:
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
-          export REDIS_NAME=redis-$RANDOM
+          export REDIS_NAME=joaz-redis-$RANDOM
           
           az redis create \
           --location $REGION \
