@@ -12,16 +12,16 @@
     <name>Build and push a Dropwizard application to ACR</name>
     <properties>
         <!-- dependencies -->
-        <dropwizard.version>4.0.1</dropwizard.version>
+        <dropwizard.version>4.0.5</dropwizard.version>
         <!-- other -->
         <java.version>11</java.version>
         <mainClass>helloworld.HelloWorldApplication</mainClass>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <!-- plugins -->
-        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
         <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
-        <maven-shade-plugin.version>3.5.0</maven-shade-plugin.version>
+        <maven-shade-plugin.version>3.5.1</maven-shade-plugin.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -57,7 +57,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>acr-dropwizard</finalName>
+        <finalName>dropwizard</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
