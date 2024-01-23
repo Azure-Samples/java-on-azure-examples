@@ -18,7 +18,7 @@ First, create the environment variable used for our Service Bus
 using the command line below:
 
 ```shell
-  export SERVICE_BUS=service-bus-$RANDOM
+  export SERVICE_BUS=joaz-sb-$RANDOM
 ```
 
 Then, create the Azure Service Bus using the following command line:
