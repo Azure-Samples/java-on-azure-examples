@@ -24,7 +24,7 @@ jobs:
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
-          export SERVICE_BUS=service-bus-$RANDOM
+          export SERVICE_BUS=joaz-sb-$RANDOM
           az servicebus namespace create \
           --resource-group $RESOURCE_GROUP \
           --name $SERVICE_BUS \
