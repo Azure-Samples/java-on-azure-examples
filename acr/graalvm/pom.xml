@@ -20,23 +20,6 @@
         <finalName>graalvm</finalName>
         <plugins>
             <plugin>
-                <groupId>com.microsoft.azure</groupId>
-                <artifactId>azure-webapp-maven-plugin</artifactId>
-                <version>${azure-webapp-maven-plugin.version}</version>
-                <configuration>
-                    <schemaVersion>V2</schemaVersion>
-                    <resourceGroup>${resourceGroup}</resourceGroup>
-                    <appName>${appName}</appName>
-                    <appServicePlanName>${appServicePlanName}</appServicePlanName>
-                    <runtime>
-                        <os>docker</os>
-                        <image>${image}</image>
-                        <serverId>${serverId}</serverId>
-                        <registryUrl>${registryUrl}</registryUrl>
-                    </runtime>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-plugin.version}</version>
