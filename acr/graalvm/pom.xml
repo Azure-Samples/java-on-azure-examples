@@ -9,10 +9,10 @@
     <name>Build and push a GraalVM application to ACR</name>
     <properties>
         <!-- other -->
-        <java.version>17</java.version>
+        <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- plugins -->
-        <azure-webapp-maven-plugin.version>2.12.0</azure-webapp-maven-plugin.version>
+        <azure-webapp-maven-plugin.version>2.13.0</azure-webapp-maven-plugin.version>
         <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
         <native-image-maven-plugin.version>21.2.0</native-image-maven-plugin.version>
     </properties>
