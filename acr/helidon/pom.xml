@@ -9,13 +9,13 @@
     <name>Build and push a Helidon application to ACR</name>
     <properties>
         <!-- dependencies -->
-        <helidon.version>2.6.0</helidon.version>
+        <helidon.version>2.6.5</helidon.version>
         <!-- other -->
         <java.version>11</java.version>
         <mainClass>io.helidon.examples.quickstart.se.Main</mainClass>
         <!-- plugins -->
-        <maven-dependency-plugin.version>3.5.0</maven-dependency-plugin.version>
-        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+        <maven-dependency-plugin.version>3.6.1</maven-dependency-plugin.version>
+        <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
         <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
     </properties>
     <dependencyManagement>
