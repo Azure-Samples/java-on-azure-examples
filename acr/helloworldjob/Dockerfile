@@ -8,7 +8,7 @@
 #
 # Microsoft OpenJDK 11
 #
-FROM mcr.microsoft.com/openjdk/jdk:11-ubuntu
+FROM mcr.microsoft.com/openjdk/jdk:17-ubuntu
 
 #
 # Create quarkus user
@@ -29,7 +29,7 @@ EXPOSE 8080
 #
 # Copy the JAR file.
 #
-COPY target/acr-helloworldjob.jar /opt/helloworldjob/acr-helloworldjob.jar
+COPY target/helloworldjob.jar /opt/helloworldjob/helloworldjob.jar
 
 #
 # Set file ownership
@@ -44,4 +44,4 @@ USER helloworldjob
 #
 # Startup command.
 #
-CMD ["java", "-jar", "/opt/helloworldjob/acr-helloworldjob.jar"]
+CMD ["java", "-jar", "/opt/helloworldjob/helloworldjob.jar"]

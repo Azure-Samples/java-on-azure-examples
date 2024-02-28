@@ -8,13 +8,13 @@
     <name>Build and push a Hello World Job application to ACR</name>
     <properties>
         <!-- other -->
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <!-- plugins -->
-        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
         <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
     </properties>
     <build>
-        <finalName>acr-helloworldjob</finalName>
+        <finalName>helloworldjob</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
