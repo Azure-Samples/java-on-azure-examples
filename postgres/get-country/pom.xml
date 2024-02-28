@@ -10,6 +10,9 @@
     <artifactId>postgresql-get-country</artifactId>
     <packaging>jar</packaging>
     <name>Azure Database for PostgreSQL :: JDBC command line client</name>
+    <properties>
+        <postgresql.version>42.7.2</postgresql.version>
+    </properties>
     <build>
         <finalName>get-country</finalName>
         <plugins>
@@ -50,7 +53,7 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>42.4.3</version>
+            <version>${postgresql.version}</version>
         </dependency>
     </dependencies>
 </project>
