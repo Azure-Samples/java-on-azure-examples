@@ -18,6 +18,7 @@ This example assumes you have previously completed the following examples:
 
   -->
 <!-- workflow.cron(0 12 * * 5) -->
+<!-- workflow.javaVersion(17) -->
 <!-- workflow.include(../create/README.md) -->
 
 ## Build the example
