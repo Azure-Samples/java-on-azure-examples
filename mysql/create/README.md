@@ -44,6 +44,7 @@ To create the Azure Database for MySQL setup the following environment variables
 
 And then create the MySQL database using the command line below:
 
+<!-- workflow.skip() -->
 ```shell
 
   az mysql server create \
@@ -55,6 +56,20 @@ And then create the MySQL database using the command line below:
     --ssl-enforcement Disabled
 
 ```
+
+<!-- workflow.run()
+
+  az mysql server create \
+    --admin-user $MYSQL_USERNAME \
+    --admin-password $MYSQL_PASSWORD \
+    --name $MYSQL_NAME \
+    --resource-group $RESOURCE_GROUP \
+    --sku B_Gen5_1 \
+    --ssl-enforcement Disabled  || true
+
+  sleep 60
+
+  -->
 
 ## Cleanup
 
