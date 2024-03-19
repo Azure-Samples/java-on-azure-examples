@@ -36,13 +36,17 @@ jobs:
           export MYSQL_PASSWORD=p#ssw0rd-$RANDOM
           fi
           
+          
           az mysql server create \
           --admin-user $MYSQL_USERNAME \
           --admin-password $MYSQL_PASSWORD \
           --name $MYSQL_NAME \
           --resource-group $RESOURCE_GROUP \
           --sku B_Gen5_1 \
-          --ssl-enforcement Disabled
+          --ssl-enforcement Disabled  || true
+          
+          sleep 60
+          
           
           export RESULT=$(az mysql server show --name $MYSQL_NAME --resource-group $RESOURCE_GROUP --output tsv --query userVisibleState)
           az group delete --name $RESOURCE_GROUP --yes || true
