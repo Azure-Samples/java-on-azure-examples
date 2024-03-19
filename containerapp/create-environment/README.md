@@ -51,12 +51,24 @@ region using the command lines below:
 
 To create the Azure Container Apps environment use the following command line:
 
+<!-- workflow.skip() -->
 ```shell
   az containerapp env create \
     --name $ACA_ENVIRONMENT_NAME \
     --resource-group $RESOURCE_GROUP \
     --location "$ACA_REGION"
 ```
+
+<!-- workflow.run() 
+
+  az containerapp env create \
+    --name $ACA_ENVIRONMENT_NAME \
+    --resource-group $RESOURCE_GROUP \
+    --location "$ACA_REGION" || true
+
+  sleep 60
+
+  -->
 
 <!-- workflow.directOnly()
 
