@@ -33,10 +33,14 @@ jobs:
           export ACA_REGION=westus
           fi
           
+          
           az containerapp env create \
           --name $ACA_ENVIRONMENT_NAME \
           --resource-group $RESOURCE_GROUP \
-          --location "$ACA_REGION"
+          --location "$ACA_REGION" || true
+          
+          sleep 60
+          
           
           sleep 60
           export RESULT=$(az containerapp env show --name $ACA_ENVIRONMENT_NAME --resource-group $RESOURCE_GROUP --output tsv --query properties.provisioningState)

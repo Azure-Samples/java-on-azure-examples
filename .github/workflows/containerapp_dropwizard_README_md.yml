@@ -66,10 +66,14 @@ jobs:
           export ACA_REGION=westus
           fi
           
+          
           az containerapp env create \
           --name $ACA_ENVIRONMENT_NAME \
           --resource-group $RESOURCE_GROUP \
-          --location "$ACA_REGION"
+          --location "$ACA_REGION" || true
+          
+          sleep 60
+          
           export ACA_DROPWIZARD=dropwizard
           
           az containerapp create \
