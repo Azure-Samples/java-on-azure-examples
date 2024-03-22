@@ -19,6 +19,7 @@ This example assumes you have previously completed the following example:
 
   -->
 <!-- workflow.cron(0 19 * * 3) -->
+<!-- workflow.javaVersion(17) -->
 <!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../create-openai-account/README.md) -->
 <!-- workflow.include(../create-gpt35-model/README.md) -->
