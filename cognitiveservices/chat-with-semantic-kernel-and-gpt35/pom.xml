@@ -11,7 +11,7 @@
         <!-- dependencies -->
         <semantic-kernel.version>0.2.9-alpha</semantic-kernel.version>
         <!-- other -->
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <!-- plugins -->
         <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
         <maven-dependency-plugin.version>3.6.0</maven-dependency-plugin.version>
