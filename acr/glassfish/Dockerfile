@@ -8,9 +8,9 @@
 FROM mcr.microsoft.com/openjdk/jdk:11-ubuntu
 RUN apt-get update && \
     apt-get install -y curl unzip
-RUN export GLASSFISH_VERSION=7.0.11 && \
+RUN export GLASSFISH_VERSION=7.0.13 && \
     cd /opt && \
-    curl -L -o glassfish.zip https://www.eclipse.org/downloads/download.php?file=/ee4j/glassfish/glassfish-${GLASSFISH_VERSION}.zip && \
+    curl -L -o glassfish.zip https://github.com/eclipse-ee4j/glassfish/releases/download/${GLASSFISH_VERSION}/glassfish-${GLASSFISH_VERSION}.zip && \
     unzip glassfish.zip && \
     rm glassfish.zip && \
     mv glassfish7 glassfish
