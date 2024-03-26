@@ -32,7 +32,7 @@ This example assumes you have previously completed the following examples:
 To build the JAR file use the following Maven command line:
 
 ```shell
-  mvn package
+  mvn -ntp package
 ```
 
 ## Build and push the container image to your Azure Container Registry
