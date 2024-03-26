@@ -47,6 +47,8 @@ To create the manual job use the command line below.
     --replica-retry-limit 1 \
     --replica-completion-count 1 \
     --parallelism 1 \
+    --registry-identity system \
+    --registry-server $ACR_NAME.azurecr.io \
     --image $ACR_NAME.azurecr.io/$ACR_HELLOWORLDJOB_IMAGE 
 ```
 
