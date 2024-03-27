@@ -44,7 +44,7 @@ jobs:
           
           cd acr/helloworldjob
           
-          mvn package
+          mvn -ntp package
           export ACR_HELLOWORLDJOB_IMAGE=helloworldjob:latest
           
           az acr build --registry $ACR_NAME --resource-group $RESOURCE_GROUP --image $ACR_HELLOWORLDJOB_IMAGE .

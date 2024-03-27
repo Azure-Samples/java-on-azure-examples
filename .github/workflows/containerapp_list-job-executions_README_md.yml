@@ -52,7 +52,7 @@ jobs:
           
           cd acr/helloworldjob
           
-          mvn package
+          mvn -ntp package
           export ACR_HELLOWORLDJOB_IMAGE=helloworldjob:latest
           
           az acr build --registry $ACR_NAME --resource-group $RESOURCE_GROUP --image $ACR_HELLOWORLDJOB_IMAGE .
@@ -85,7 +85,7 @@ jobs:
           
           cd acr/helloworldjob
           
-          mvn package
+          mvn -ntp package
           export ACR_HELLOWORLDJOB_IMAGE=helloworldjob:latest
           
           az acr build --registry $ACR_NAME --resource-group $RESOURCE_GROUP --image $ACR_HELLOWORLDJOB_IMAGE .
@@ -118,7 +118,7 @@ jobs:
           
           cd acr/helloworldjob
           
-          mvn package
+          mvn -ntp package
           export ACR_HELLOWORLDJOB_IMAGE=helloworldjob:latest
           
           az acr build --registry $ACR_NAME --resource-group $RESOURCE_GROUP --image $ACR_HELLOWORLDJOB_IMAGE .
@@ -164,6 +164,8 @@ jobs:
           --replica-retry-limit 1 \
           --replica-completion-count 1 \
           --parallelism 1 \
+          --registry-identity system \
+          --registry-server $ACR_NAME.azurecr.io \
           --image $ACR_NAME.azurecr.io/$ACR_HELLOWORLDJOB_IMAGE
           az containerapp job start \
           --name $ACA_JOB_NAME \
