@@ -76,6 +76,7 @@ You should see `We stored an item in Cosmos DB` in your brower.
 
 ## Deploy the example to Azure
 
+<!-- workflow.skip() -->
 ```shell
   mvn -DappName=$FUNCTIONS_COSMOSDB \
       -Dregion=$REGION \
@@ -83,6 +84,17 @@ You should see `We stored an item in Cosmos DB` in your brower.
       -DcosmosDBConnectionString="$FUNCTIONS_COSMOSDB_CONNECTION_STRING" \
       clean package azure-functions:deploy
 ```
+
+<!-- workflow.run() 
+
+  mvn -DappName=$FUNCTIONS_COSMOSDB \
+      -Dregion=$REGION \
+      -DresourceGroup=$RESOURCE_GROUP \
+      -DcosmosDBConnectionString="$FUNCTIONS_COSMOSDB_CONNECTION_STRING" \
+      -DpricingTier=P1V3
+      clean package azure-functions:deploy
+
+ -->
 
 To verify the function works open your browser to the URL echoed by the 
 following command line:
