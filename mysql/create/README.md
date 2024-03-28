@@ -67,7 +67,7 @@ And then create the MySQL database using the command line below:
     --sku B_Gen5_1 \
     --ssl-enforcement Disabled  || true
 
-  sleep 60
+  sleep 120
 
   -->
 
