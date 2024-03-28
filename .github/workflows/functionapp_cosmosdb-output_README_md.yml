@@ -61,11 +61,14 @@ jobs:
           -DappName=$FUNCTIONS_COSMOSDB \
           -Dregion=$REGION \
           package
+          
           mvn -DappName=$FUNCTIONS_COSMOSDB \
           -Dregion=$REGION \
           -DresourceGroup=$RESOURCE_GROUP \
           -DcosmosDBConnectionString="$FUNCTIONS_COSMOSDB_CONNECTION_STRING" \
+          -DpricingTier=P1V3
           clean package azure-functions:deploy
+          
           
           cd ../..
           
