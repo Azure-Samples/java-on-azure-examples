@@ -45,7 +45,7 @@ jobs:
           --sku B_Gen5_1 \
           --ssl-enforcement Disabled  || true
           
-          sleep 60
+          sleep 120
           
           export LOCAL_IP=`curl -s whatismyip.akamai.com`
           
