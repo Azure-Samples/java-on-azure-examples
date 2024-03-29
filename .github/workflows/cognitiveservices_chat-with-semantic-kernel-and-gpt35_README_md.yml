@@ -14,8 +14,9 @@ jobs:
           distribution: 'temurin'
       - uses: 'azure/login@v1'
         with: 
-          allow-no-subscriptions: 'true'
-          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+          subscription-id: '${{ secrets.AZURE_SUBSCRIPTION_ID }}'
+          client-id: '${{ secrets.AZURE_CLIENT_ID }}'
+          tenant-id: '${{ secrets.AZURE_TENANT_ID }}'
       - uses: 'actions/checkout@v3'
       - run: |
           
@@ -111,3 +112,6 @@ jobs:
           mvn clean package
           
           az group delete --name $RESOURCE_GROUP --yes || true
+permissions: 
+  contents: 'read'
+  id-token: 'write'

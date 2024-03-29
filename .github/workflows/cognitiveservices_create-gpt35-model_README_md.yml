@@ -10,8 +10,9 @@ jobs:
     steps: 
       - uses: 'azure/login@v1'
         with: 
-          allow-no-subscriptions: 'true'
-          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+          subscription-id: '${{ secrets.AZURE_SUBSCRIPTION_ID }}'
+          client-id: '${{ secrets.AZURE_CLIENT_ID }}'
+          tenant-id: '${{ secrets.AZURE_TENANT_ID }}'
       - uses: 'actions/checkout@v3'
       - run: |
           
@@ -69,3 +70,6 @@ jobs:
           echo "Azure OpenAI GPT 3.5 model was not created successfully"
           exit 1
           fi
+permissions: 
+  contents: 'read'
+  id-token: 'write'
