@@ -9,8 +9,9 @@ jobs:
     steps: 
       - uses: 'azure/login@v1'
         with: 
-          allow-no-subscriptions: 'true'
-          creds: '${{ secrets.AZURE_CREDENTIALS }}'
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
       - uses: 'actions/checkout@v3'
       - run: | 
           for resourceGroup in `az group list --query "[? contains(name,'java-on-azure-')][].{name:name}" -o tsv`; do
@@ -21,3 +22,6 @@ jobs:
             echo Deleting ${resourceGroup}
             az group delete -n ${resourceGroup} --yes --no-wait
           done
+permissions:
+  id-token: write
+  contents: read
