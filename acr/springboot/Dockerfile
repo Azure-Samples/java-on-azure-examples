@@ -6,9 +6,9 @@
 # -----------------------------------------------------------------------------
 
 #
-# Microsoft OpenJDK 11
+# Microsoft OpenJDK 17
 #
-FROM mcr.microsoft.com/openjdk/jdk:11-ubuntu
+FROM mcr.microsoft.com/openjdk/jdk:17-ubuntu
 
 #
 # Create quarkus user
