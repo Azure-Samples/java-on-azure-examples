@@ -6,9 +6,9 @@
 # -----------------------------------------------------------------------------
 
 #
-# Microsoft OpenJDK 11
+# Microsoft OpenJDK 17
 #
-FROM mcr.microsoft.com/openjdk/jdk:11-ubuntu
+FROM mcr.microsoft.com/openjdk/jdk:17-ubuntu
 
 #
 # Create quarkus user
@@ -29,7 +29,7 @@ EXPOSE 8080
 #
 # Copy the JAR file.
 #
-COPY target/acr-quarkus-runner.jar /opt/quarkus/acr-quarkus.jar
+COPY target/acr-quarkus.jar /opt/quarkus/acr-quarkus.jar
 
 #
 # Copy the lib directory
