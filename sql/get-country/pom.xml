@@ -8,13 +8,15 @@
     <packaging>jar</packaging>
     <name>MSSQL JDBC command line client</name>
     <properties>
+        <!-- dependencies -->
+        <mssql-jdbc.version>12.6.1.jre11</mssql-jdbc.version>
         <!-- other -->
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- plugins -->
-        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
         <maven-dependency-plugin.version>3.6.1</maven-dependency-plugin.version>
-        <maven-jar-plugin.version>3.2.0</maven-jar-plugin.version>
+        <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
     </properties>
     <build>
         <finalName>get-country</finalName>
@@ -64,7 +66,7 @@
         <dependency>
             <groupId>com.microsoft.sqlserver</groupId>
             <artifactId>mssql-jdbc</artifactId>
-            <version>9.2.1.jre8</version>
+            <version>${mssql-jdbc.version}</version>
         </dependency>
     </dependencies>
 </project>
