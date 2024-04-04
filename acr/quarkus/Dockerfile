@@ -19,7 +19,7 @@ RUN groupadd -r quarkus && \
 #
 # Create quarkus lib directory
 #
-RUN mkdir -p /opt/quarkus/lib
+RUN mkdir -p /opt/quarkus
 
 #
 # Expose port 8080.
@@ -27,14 +27,9 @@ RUN mkdir -p /opt/quarkus/lib
 EXPOSE 8080
 
 #
-# Copy the JAR file.
+# Copy the quarkus-app directory
 #
-COPY target/acr-quarkus.jar /opt/quarkus/acr-quarkus.jar
-
-#
-# Copy the lib directory
-#
-COPY target/lib/* /opt/quarkus/lib/
+COPY target/quarkus-app/ /opt/quarkus/
 
 #
 # Set file ownership
@@ -47,6 +42,11 @@ RUN chown -R quarkus /opt/quarkus
 USER quarkus
 
 #
+# Change work directory.
+#
+WORKDIR /opt/quarkus
+
+#
 # Startup command.
 #
-CMD ["java", "-jar", "/opt/quarkus/acr-quarkus.jar"]
+CMD ["java", "-jar", "/opt/quarkus/quarkus-run.jar"]
