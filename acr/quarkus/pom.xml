@@ -45,12 +45,13 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>acr-quarkus</finalName>
+        <finalName>quarkus</finalName>
         <plugins>
             <plugin>
                 <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-maven-plugin</artifactId>
                 <version>${quarkus.version}</version>
+                <extensions>true</extensions>
                 <executions>
                     <execution>
                         <goals>
