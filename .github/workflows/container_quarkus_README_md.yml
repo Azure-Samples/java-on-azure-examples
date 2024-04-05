@@ -74,7 +74,7 @@ jobs:
           
           cd acr/quarkus
           
-          mvn package
+          mvn -ntp package
           export ACR_QUARKUS_IMAGE=quarkus:latest
           
           az acr build --registry $ACR_NAME --resource-group $RESOURCE_GROUP --image $ACR_QUARKUS_IMAGE .
