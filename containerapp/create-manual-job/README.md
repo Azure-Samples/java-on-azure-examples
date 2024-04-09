@@ -32,6 +32,7 @@ This example assumes you have previously completed the following examples:
 <!-- workflow.run()
 if [[ -z $ACA_JOB_NAME ]]; then
   export ACA_JOB_NAME=aca-job-$RANDOM
+  sleep 60
 fi
  -->
 
@@ -54,7 +55,6 @@ To create the manual job use the command line below.
 
 <!-- workflow.directOnly()
 
-  sleep 60
   export RESULT=$(az containerapp job show --name $ACA_JOB_NAME --resource-group $RESOURCE_GROUP --output tsv --query properties.provisioningState)
   az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != Succeeded ]]; then
