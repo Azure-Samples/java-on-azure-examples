@@ -42,8 +42,7 @@ To create the Azure Database for PostgreSQL setup the environment variables:
     --admin-password $POSTGRESQL_PASSWORD \
     --name $POSTGRESQL_NAME \
     --resource-group $RESOURCE_GROUP \
-    --sku B_Gen5_1 \
-    --ssl-enforcement Disabled
+    --sku GP_Gen5_2
 
 ```
 
