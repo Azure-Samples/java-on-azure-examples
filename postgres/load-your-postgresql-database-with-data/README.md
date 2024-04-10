@@ -11,7 +11,7 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure Database for PostgreSQL](../create/README.md)
 1. [Install curl](https://curl.haxx.se/download.html)
 1. [Open PostgreSQL server firewall to your IP address](../open-firewall-to-your-ip/README.md)
-1. [Install psql client](https://www.postgresql.org/download/README.md)
+1. [Install psql client](https://www.postgresql.org/download/)
 
 <!-- workflow.cron(0 20 * * 1) -->
 <!-- workflow.include(../open-firewall-to-your-ip/README.md) -->

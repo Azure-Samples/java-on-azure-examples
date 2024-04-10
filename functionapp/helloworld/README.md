@@ -83,7 +83,7 @@ following command line:
 
 ```shell
 
-  echo `az functionapp show \
+  echo https://`az functionapp show \
     --resource-group $RESOURCE_GROUP \
     --name $FUNCTIONAPP_HELLOWORLD \
     --query hostNames \
