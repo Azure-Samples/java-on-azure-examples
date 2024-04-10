@@ -36,8 +36,9 @@ public class CosmosDBOutputFunction {
 
             @CosmosDBOutput(name = "cosmodDBOutput",
                     databaseName = "cosmosDBOutput",
-                    collectionName = "items",
-                    connectionStringSetting = "Cosmos_DB_Connection_String",
+                    containerName = "items",
+                    connection = "Cosmos_DB_Connection_String",
+                    partitionKey = "/id",
                     createIfNotExists = true)
             OutputBinding<String> outputItem,
             final ExecutionContext context) {

@@ -12,3 +12,5 @@ parrot.jar
 target/
 *.iml
 dependency-reduced-pom.xml
+host.json
+local.settings.json
