@@ -81,6 +81,7 @@ jobs:
           
           if [[ -z $ACA_JOB_NAME ]]; then
           export ACA_JOB_NAME=aca-job-$RANDOM
+          sleep 60
           fi
           az containerapp job create \
           --name $ACA_JOB_NAME \
@@ -95,7 +96,6 @@ jobs:
           --registry-server $ACR_NAME.azurecr.io \
           --image $ACR_NAME.azurecr.io/$ACR_HELLOWORLDJOB_IMAGE
           
-          sleep 60
           export RESULT=$(az containerapp job show --name $ACA_JOB_NAME --resource-group $RESOURCE_GROUP --output tsv --query properties.provisioningState)
           az group delete --name $RESOURCE_GROUP --yes || true
           if [[ "$RESULT" != Succeeded ]]; then
