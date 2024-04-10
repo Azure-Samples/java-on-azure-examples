@@ -9,12 +9,24 @@
     </parent>
     <artifactId>functions-cosmosdb-output</artifactId>
     <packaging>jar</packaging>
-    <name>Azure Functions :: Deploy a Java Function storing data in Cosmos DB</name>
+    <name>Deploy a Java Function storing data in Cosmos DB</name>
+    <properties>
+        <appName>functions-cosmosdb-output</appName>
+        <region>westus2</region>
+        <resourceGroup>azure-examples</resourceGroup>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <stagingDirectory>${project.build.directory}/azure-functions/${appName}</stagingDirectory>
+        <!-- dependencies -->
+        <azure-functions-java-library.version>3.1.0</azure-functions-java-library.version>
+        <!-- plugins -->
+        <azure-functions-maven-plugin.version>1.33.0</azure-functions-maven-plugin.version>
+    </properties>
     <build>
         <plugins>
             <plugin>
                 <groupId>com.microsoft.azure</groupId>
                 <artifactId>azure-functions-maven-plugin</artifactId>
+                <version>${azure-functions-maven-plugin.version}</version>
                 <configuration>
                     <appName>${appName}</appName>
                     <region>${region}</region>
@@ -29,7 +41,7 @@
                         </property>
                         <property>
                             <name>FUNCTIONS_EXTENSION_VERSION</name>
-                            <value>~2</value>
+                            <value>~4</value>
                         </property>
                         <property>
                             <name>Cosmos_DB_Connection_String</name>
@@ -113,6 +125,7 @@
         <dependency>
             <groupId>com.microsoft.azure.functions</groupId>
             <artifactId>azure-functions-java-library</artifactId>
+            <version>${azure-functions-java-library.version}</version>
         </dependency>
     </dependencies>
     <profiles>
@@ -147,11 +160,4 @@
             </build>
         </profile>
     </profiles>
-    <properties>
-        <appName>functions-cosmosdb-output</appName>
-        <region>westus2</region>
-        <resourceGroup>azure-examples</resourceGroup>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <stagingDirectory>${project.build.directory}/azure-functions/${appName}</stagingDirectory>
-    </properties>
 </project>

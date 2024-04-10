@@ -37,7 +37,7 @@ This example assumes you have previously completed the following examples:
 ## Set the Cosmos DB connection string environment variable
 
 ```shell
-  export FUNCTIONS_COSMOSDB_CONNECTION_STRING="$(az cosmosdb keys list --resource-group $RESOURCE_GROUP --name $COSMOSDB_ACCOUNT_NAME --type connection-strings --query connectionStrings[0].connectionString --output tsv)"
+  export FUNCTIONS_COSMOSDB_CONNECTION_STRING="$(az cosmosdb keys list --resource-group $RESOURCE_GROUP --name $COSMOSDB_ACCOUNT_NAME --type connection-strings --query 'connectionStrings[0].connectionString' --output tsv)"
 ```
 
 ## Setup the local environment
@@ -91,7 +91,7 @@ You should see `We stored an item in Cosmos DB` in your brower.
       -Dregion=$REGION \
       -DresourceGroup=$RESOURCE_GROUP \
       -DcosmosDBConnectionString="$FUNCTIONS_COSMOSDB_CONNECTION_STRING" \
-      -DpricingTier=P1V3
+      -DpricingTier=P1V3 \
       clean package azure-functions:deploy
 
  -->
@@ -101,7 +101,7 @@ following command line:
 
 <!-- workflow.skip() -->
 ```shell
-  echo `az functionapp show \
+  echo https://`az functionapp show \
     --resource-group $RESOURCE_GROUP \
     --name $FUNCTIONS_COSMOSDB \
     --query hostNames \
