@@ -8,7 +8,7 @@
 <!-- workflow.run()
 
   if [[ -z $REGION ]]; then
-    export REGION=westus3
+    export REGION=eastus
   fi
 
   -->
