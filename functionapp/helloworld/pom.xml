@@ -9,12 +9,24 @@
     </parent>
     <artifactId>functionapp-helloworld</artifactId>
     <packaging>jar</packaging>
-    <name>Azure Functions :: Deploy a HelloWorld Function</name>
+    <name>Deploy a HelloWorld Function</name>
+    <properties>
+        <appName>joaz-func-helloworld</appName>
+        <region>westus3</region>
+        <resourceGroup>joaz</resourceGroup>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <stagingDirectory>${project.build.directory}/azure-functions/${appName}</stagingDirectory>
+        <!-- dependencies -->
+        <azure-functions-java-library.version>3.1.0</azure-functions-java-library.version>
+        <!-- plugins -->
+        <azure-functions-maven-plugin.version>1.33.0</azure-functions-maven-plugin.version>
+    </properties>
     <build>
         <plugins>
             <plugin>
                 <groupId>com.microsoft.azure</groupId>
                 <artifactId>azure-functions-maven-plugin</artifactId>
+                <version>${azure-functions-maven-plugin.version}</version>
                 <configuration>
                     <appName>${appName}</appName>
                     <region>${region}</region>
@@ -106,13 +118,7 @@
         <dependency>
             <groupId>com.microsoft.azure.functions</groupId>
             <artifactId>azure-functions-java-library</artifactId>
+            <version>${azure-functions-java-library.version}</version>
         </dependency>
     </dependencies>
-    <properties>
-        <appName>joaz-func-helloworld</appName>
-        <region>westus3</region>
-        <resourceGroup>joaz</resourceGroup>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <stagingDirectory>${project.build.directory}/azure-functions/${appName}</stagingDirectory>
-    </properties>
 </project>
