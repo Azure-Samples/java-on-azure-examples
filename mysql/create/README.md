@@ -52,8 +52,7 @@ And then create the MySQL database using the command line below:
     --admin-password $MYSQL_PASSWORD \
     --name $MYSQL_NAME \
     --resource-group $RESOURCE_GROUP \
-    --sku B_Gen5_1 \
-    --ssl-enforcement Disabled
+    --sku GP_Gen5_2
 
 ```
 
@@ -64,10 +63,9 @@ And then create the MySQL database using the command line below:
     --admin-password $MYSQL_PASSWORD \
     --name $MYSQL_NAME \
     --resource-group $RESOURCE_GROUP \
-    --sku B_Gen5_1 \
-    --ssl-enforcement Disabled  || true
+    --sku GP_Gen5_2 || true
 
-  sleep 120
+  sleep 240
 
   -->
 
