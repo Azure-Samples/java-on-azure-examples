@@ -17,7 +17,7 @@ jobs:
       - run: |
           
           if [[ -z $REGION ]]; then
-          export REGION=westus3
+          export REGION=eastus
           fi
           
           
@@ -56,7 +56,7 @@ jobs:
           cd functionapp/cosmosdb-output
           
           export FUNCTIONS_COSMOSDB=functions-cosmosdb-$RANDOM
-          export FUNCTIONS_COSMOSDB_CONNECTION_STRING="$(az cosmosdb keys list --resource-group $RESOURCE_GROUP --name $COSMOSDB_ACCOUNT_NAME --type connection-strings --query connectionStrings[0].connectionString --output tsv)"
+          export FUNCTIONS_COSMOSDB_CONNECTION_STRING="$(az cosmosdb keys list --resource-group $RESOURCE_GROUP --name $COSMOSDB_ACCOUNT_NAME --type connection-strings --query 'connectionStrings[0].connectionString' --output tsv)"
           mvn -P local validate
           mvn -DresourceGroup=$RESOURCE_GROUP \
           -DappName=$FUNCTIONS_COSMOSDB \
@@ -67,7 +67,7 @@ jobs:
           -Dregion=$REGION \
           -DresourceGroup=$RESOURCE_GROUP \
           -DcosmosDBConnectionString="$FUNCTIONS_COSMOSDB_CONNECTION_STRING" \
-          -DpricingTier=P1V3
+          -DpricingTier=P1V3 \
           clean package azure-functions:deploy
           
           

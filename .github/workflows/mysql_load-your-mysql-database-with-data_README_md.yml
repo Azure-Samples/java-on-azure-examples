@@ -43,10 +43,9 @@ jobs:
           --admin-password $MYSQL_PASSWORD \
           --name $MYSQL_NAME \
           --resource-group $RESOURCE_GROUP \
-          --sku B_Gen5_1 \
-          --ssl-enforcement Disabled  || true
+          --sku GP_Gen5_2 || true
           
-          sleep 120
+          sleep 240
           
           export LOCAL_IP=`curl -s whatismyip.akamai.com`
           
