@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url:
+    username:
+    password:
+  jpa:
+    show-sql:
+    hibernate:
+      ddl-auto:
+      dialect :
+
+server:
+  port:
