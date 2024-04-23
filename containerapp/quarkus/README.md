@@ -12,6 +12,7 @@
 
   -->
 <!-- workflow.cron(0 3 * * 3) -->
+<!-- workflow.javaVersion(17) -->
 <!-- workflow.include(../../acr/quarkus/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 
