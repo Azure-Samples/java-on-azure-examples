@@ -8,6 +8,14 @@ jobs:
   validate: 
     runs-on: 'ubuntu-latest'
     steps: 
+      - uses: 'actions/setup-java@v4'
+        with: 
+          java-version: '17'
+          distribution: 'temurin'
+      - uses: 'actions/setup-java@v4'
+        with: 
+          java-version: '17'
+          distribution: 'temurin'
       - uses: 'azure/login@v1'
         with: 
           subscription-id: '${{ secrets.AZURE_SUBSCRIPTION_ID }}'
