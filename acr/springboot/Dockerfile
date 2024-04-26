@@ -11,7 +11,7 @@
 FROM mcr.microsoft.com/openjdk/jdk:17-ubuntu
 
 #
-# Create quarkus user
+# Create the springboot user
 #
 RUN groupadd -r springboot && \
     useradd -r -g springboot springboot
@@ -37,7 +37,7 @@ COPY target/acr-springboot.jar /opt/springboot/acr-springboot.jar
 RUN chown -R springboot /opt/springboot
 
 #
-# Change user
+# Change to springboot user
 #
 USER springboot
 
