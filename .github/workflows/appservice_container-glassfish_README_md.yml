@@ -35,7 +35,7 @@ jobs:
           
           az group create --name $RESOURCE_GROUP --location $REGION
           if [[ -z $ACR_NAME ]]; then
-          export ACR_NAME=joazacr$RANDOM
+          export ACR_NAME=joazcr$RANDOM
           fi
           
           az acr create \
@@ -69,7 +69,7 @@ jobs:
           
           az group create --name $RESOURCE_GROUP --location $REGION
           if [[ -z $ACR_NAME ]]; then
-          export ACR_NAME=joazacr$RANDOM
+          export ACR_NAME=joazcr$RANDOM
           fi
           
           az acr create \
