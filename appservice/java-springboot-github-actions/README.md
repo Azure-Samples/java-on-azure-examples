@@ -3,13 +3,17 @@
 
 ## Prerequisites
 
-Follow the below steps to create a resource group and App Service plan initially
+This example assumes you have previously completed the following examples:
+
+1. [Create an Azure Resource Group](../../group/create/README.md)
+1. [Create an Azure App Service Plan](../create-plan/README.md)
+
+After that, follow the below steps
 
 1. Click on Resource groups as in the below image
 
 Resource group - It is a container that holds the resources for any Azure solution and is a prerequisite for creating anything on Azure.
-
-https://github.com/karthirm/spring-azure/blob/efa91bd442337ce9b3f69c4cf0193b9837199284/2.%20ResourceGroup.png       
+![Resource Group](images/ResourceGroup.png)
 
 Click on create and provide a resource-group and then it would be created.
 2. Now, click on App Services -> Create -> Web App
@@ -19,8 +23,8 @@ Click on create and provide a resource-group and then it would be created.
     2. Then click on "Review+Create" at the bottom.
 
        This is how the newly created app service would look like
-   
- https://github.com/karthirm/spring-azure/blob/main/3.AppService.png
+
+![App Service](images/AppService.png)
 
 
 3. Create a Spring Boot application with help of https://start.spring.io
@@ -49,8 +53,8 @@ git commit -m "First commit"    (does the commit with a message)
 git push -u origin master     (push all the changes to github repository)
 ```
 6. Click on Deployment centre
+   ![Deployment Centre](images/DeploymentCentre.png)
 
-https://github.com/karthirm/spring-azure/blob/main/4.DeploymentCentre.png
 
 - In the source dropdown, select Github and Authorise which would ask for the username and password.
 
@@ -58,10 +62,9 @@ https://github.com/karthirm/spring-azure/blob/main/4.DeploymentCentre.png
 
 - You can click on the "Preview file" to see what steps would be performed as part of the build and deploy process
 
-https://github.com/karthirm/spring-azure/blob/main/5.PreviewFile.png
+![Preview File](images/PreviewFile.png)
 
-
-7. Click on save 
+7. Click on save
 
 
 8. The build will start & complete after which the deployment will start and succeed.

@@ -173,7 +173,7 @@ Follow the below steps to create an Azure App Service and deploy the Spring Boot
 
 <b>Resource group</b> - It is a container that holds the resources for any Azure solution and is a prerequisite for creating anything on Azure.
 
-https://github.com/karthirm/spring-azure/blob/efa91bd442337ce9b3f69c4cf0193b9837199284/2.%20ResourceGroup.png
+![Resource Group](images/ResourceGroup.png)
 
 Click on create and provide a resource-group and then it would be created.
 2. Now, click on App Services -> Create -> Web App
@@ -184,7 +184,7 @@ Click on create and provide a resource-group and then it would be created.
 
        This is how the newly created app service would look like
 
-https://github.com/karthirm/spring-azure/blob/main/3.AppService.png
+![App Service](images/AppService.png)
 
 3. Execute the below git commands and push local code to github branch
 ```
@@ -198,16 +198,14 @@ git push -u origin master     (push all the changes to github repository)
 ```
 
 4. Click on <b>Deployment centre</b> as like in the below image
-
-https://github.com/karthirm/spring-azure/blob/main/4.DeploymentCentre.png
+![Deployment Centre](images/DeploymentCentre.png)
 
 - In the source dropdown, select Github and Authorise which would ask for the username and password.
 
 - After that, select the organization, repository, branch as well in the dropdown.
 
 - You can click on the "Preview file" to see what steps would be performed as part of the build and deploy process
-
-https://github.com/karthirm/spring-azure/blob/main/5.PreviewFile.png
+  ![Preview File](images/PreviewFile.png)
 
 5. Click on save
 
