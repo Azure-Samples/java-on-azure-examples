@@ -8,7 +8,7 @@ jobs:
   validate: 
     runs-on: 'ubuntu-latest'
     steps: 
-      - uses: 'azure/login@v1'
+      - uses: 'azure/login@v2'
         with: 
           subscription-id: '${{ secrets.AZURE_SUBSCRIPTION_ID }}'
           client-id: '${{ secrets.AZURE_CLIENT_ID }}'
