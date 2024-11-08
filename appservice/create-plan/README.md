@@ -12,7 +12,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 8 * * 4) -->
+<!-- workflow.cron(0 0 * * 3) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 This example assumes you have previously completed the following example:
@@ -26,13 +26,13 @@ using the command line below:
 
 <!-- workflow.skip() -->
 ```shell
-  export APPSERVICE_PLAN=javazappsvcplan
+  export APPSERVICE_PLAN=joaz-asp
 ```
 
 <!-- workflow.run() 
 
   if [[ -z $APPSERVICE_PLAN ]]; then
-    export APPSERVICE_PLAN=javazappsvcplan-$RANDOM
+    export APPSERVICE_PLAN=joaz-asp-$RANDOM
   fi
 
 -->

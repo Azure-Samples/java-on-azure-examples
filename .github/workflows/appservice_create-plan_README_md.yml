@@ -1,9 +1,9 @@
 on: 
   schedule: 
-    - cron: '0 0 * * 1'
+    - cron: '0 0 * * 3'
   workflow_dispatch: 
 
-name: 'group/create/README.md'
+name: 'appservice/create-plan/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -15,6 +15,11 @@ jobs:
           tenant-id: '${{ secrets.AZURE_TENANT_ID }}'
       - uses: 'actions/checkout@v3'
       - run: |
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
           if [[ -z $REGION ]]; then
           export REGION=westus
           fi
@@ -25,7 +30,19 @@ jobs:
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
-          export RESULT=$(az group show --name $RESOURCE_GROUP --output tsv --query properties.provisioningState)
+          
+          if [[ -z $APPSERVICE_PLAN ]]; then
+          export APPSERVICE_PLAN=javazappsvcplan-$RANDOM
+          fi
+          
+          az appservice plan create \
+          --resource-group $RESOURCE_GROUP \
+          --location $REGION \
+          --name $APPSERVICE_PLAN \
+          --is-linux \
+          --sku P1v3
+          
+          export RESULT=$(az appservice plan show --resource-group $RESOURCE_GROUP --name $APPSERVICE_PLAN --query properties.provisioningState --output tsv)
           az group delete --name $RESOURCE_GROUP --yes || true
           if [[ "$RESULT" != Succeeded ]]; then
           exit 1

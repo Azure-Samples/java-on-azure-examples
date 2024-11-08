@@ -2,7 +2,8 @@
 
 | Example     | Workflow Status | Schedule | Refresh |
 | ----------- | --------------- | -------- | ------- | 
-| Create an Azure Resource Group | [![group/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/group_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/group_create_README_md.yml)| 0 0 * * 1 | Week 1 |
+| Create an Azure Resource Group | [![group/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/group_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/group_create_README_md.yml) | 0 0 * * 1 | Week 1 |
+| Delete an Azure Resource Group | [![group/delete/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/group_delete_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/group_delete_README_md.yml) | 0 0 * * 2 | Week 2 |
 
 <!--
 | Azure Storage examples | Upload files to static website | [![README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_upload-files-to-static-website_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_upload-files-to-static-website_README_md.yml) | 0 1 * * 1 |
