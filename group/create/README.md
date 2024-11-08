@@ -20,7 +20,7 @@ the command lines below:
   fi
 
   -->
-<!-- workflow.cron(0 11 * * 2) -->
+<!-- workflow.cron(0 0 * * 1) -->
 <!-- workflow.skip() -->
 ```shell
   export RESOURCE_GROUP=joaz-rg
@@ -63,5 +63,13 @@ Do NOT forget to remove the resources once you are done running the example.
 ## Reference documentation
 
 * [Manage resource groups and template deployments](https://docs.microsoft.com/cli/azure/group)
+
+## Terraform snippets
+
+If you want to use Terraform please see the snippets below:
+
+* [main.tf](main.tf)
+* [outputs.tf](outputs.tf)
+* [variables.tf](variables.tf)
 
 1m

@@ -14,3 +14,8 @@ target/
 dependency-reduced-pom.xml
 host.json
 local.settings.json
+providers.tf
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
+.terraform/
