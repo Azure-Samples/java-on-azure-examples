@@ -11,7 +11,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 2 * * 3) -->
+<!-- workflow.cron(0 0 * * 7) -->
 <!-- workflow.include(../../acr/springboot/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 
