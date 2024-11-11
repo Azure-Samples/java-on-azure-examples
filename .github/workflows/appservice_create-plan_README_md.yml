@@ -34,8 +34,6 @@ jobs:
           if [[ -z $APPSERVICE_PLAN ]]; then
           export APPSERVICE_PLAN=joaz-asp-$RANDOM
           fi
-
-          az version 
           
           az appservice plan create \
           --resource-group $RESOURCE_GROUP \
