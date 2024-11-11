@@ -1,9 +1,9 @@
 on: 
   schedule: 
-    - cron: '0 0 * * 1'
+    - cron: '0 0 * * 4'
   workflow_dispatch: 
 
-name: 'group/create/README.md'
+name: 'acr/create/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -19,15 +19,29 @@ jobs:
           export REGION=westus
           fi
           
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
           if [[ -z $RESOURCE_GROUP ]]; then
           export RESOURCE_GROUP=joaz-rg-$RANDOM
           echo "Using '"$RESOURCE_GROUP"' as resource group"
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
-          export RESULT=$(az group show --name $RESOURCE_GROUP --output tsv --query properties.provisioningState)
+          if [[ -z $ACR_NAME ]]; then
+          export ACR_NAME=joazcr$RANDOM
+          fi
+          
+          az acr create \
+          --name $ACR_NAME \
+          --resource-group $RESOURCE_GROUP \
+          --sku Basic \
+          --admin-enabled true
+          export RESULT=$(az acr show --name $ACR_NAME --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
           az group delete --name $RESOURCE_GROUP --yes || true
           if [[ "$RESULT" != Succeeded ]]; then
+          echo "Azure Container Registry $ACR_NAME was not provisioned properly"
           exit 1
           fi
 permissions: 

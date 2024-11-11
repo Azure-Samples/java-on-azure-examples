@@ -8,7 +8,7 @@ jobs:
   validate: 
     runs-on: 'ubuntu-latest'
     steps: 
-      - uses: 'azure/login@v2'
+      - uses: 'azure/login@v1'
         with: 
           subscription-id: '${{ secrets.AZURE_SUBSCRIPTION_ID }}'
           client-id: '${{ secrets.AZURE_CLIENT_ID }}'
@@ -32,7 +32,7 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           
           if [[ -z $APPSERVICE_PLAN ]]; then
-          export APPSERVICE_PLAN=javazappsvcplan-$RANDOM
+          export APPSERVICE_PLAN=joaz-asp-$RANDOM
           fi
 
           az version 

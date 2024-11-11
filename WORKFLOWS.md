@@ -1,9 +1,11 @@
 # Workflows
 
-| Example     | Workflow Status | Schedule | Refresh |
-| ----------- | --------------- | -------- | ------- | 
+| Example     | Workflow Status | Workflow Schedule | Content Refresh |
+| ----------- | --------------- | ----------------- | --------------- | 
 | Create an Azure Resource Group | [![group/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/group_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/group_create_README_md.yml) | 0 0 * * 1 | Week 1 |
 | Delete an Azure Resource Group | [![group/delete/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/group_delete_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/group_delete_README_md.yml) | 0 0 * * 2 | Week 2 |
+| Create an Azure App Service Plan | [![appservice/create-plan/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_create-plan_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/appservice_create-plan_README_md.yml) | 0 0 * * 3 | Week 3 |
+| Create an Azure Container Registry | [![acr/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_create_README_md.yml) | 0 0 * * 4 | Week 4 |
 
 <!--
 | Azure Storage examples | Upload files to static website | [![README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_upload-files-to-static-website_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_upload-files-to-static-website_README_md.yml) | 0 1 * * 1 |
