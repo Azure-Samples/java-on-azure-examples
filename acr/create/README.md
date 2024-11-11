@@ -59,4 +59,12 @@ To create the Azure Container Registry use the following command line:
 
 Do NOT forget to remove the resources once you are done running the example.
 
+## Terraform snippets
+
+If you want to use Terraform please see the snippets below:
+
+* [main.tf](main.tf)
+* [outputs.tf](outputs.tf)
+* [variables.tf](variables.tf)
+
 1m
