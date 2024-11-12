@@ -11,7 +11,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 0 * * 3) -->
+<!-- workflow.cron(0 5 * * 6) -->
 <!-- workflow.include(../../acr/wildfly/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 
