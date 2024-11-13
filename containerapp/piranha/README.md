@@ -1,4 +1,4 @@
-# Deploy a Piranha Micro application
+# Deploy a Piranha Web Profile application
 
 [![containerapp/piranha/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_piranha_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_piranha_README_md.yml)
 
@@ -19,12 +19,12 @@ This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Create an Azure Container Registry](../../acr/create/README.md)
-1. [Build and push a Piranha Micro application to ACR](../../acr/piranha/README.md)
+1. [Build and push a Piranha Web Profile application to ACR](../../acr/piranha/README.md)
 1. [Create an Azure Container Apps environment](../create-environment/README.md)
 
-## Deploy the Piranha Micro application
+## Deploy the Piranha Web Profile application
 
-To deploy the Piranha Micro container image to Azure Container Apps use the
+To deploy the Piranha Web Profile container image to Azure Container Apps use the
 command lines below.
 
 ```shell
