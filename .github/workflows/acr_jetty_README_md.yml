@@ -1,0 +1,60 @@
+on: 
+  schedule: 
+    - cron: '0 10 * * 3'
+  workflow_dispatch: 
+
+name: 'acr/jetty/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          subscription-id: '${{ secrets.AZURE_SUBSCRIPTION_ID }}'
+          client-id: '${{ secrets.AZURE_CLIENT_ID }}'
+          tenant-id: '${{ secrets.AZURE_TENANT_ID }}'
+      - uses: 'actions/checkout@v3'
+      - run: |
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=joaz-rg-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          if [[ -z $ACR_NAME ]]; then
+          export ACR_NAME=joazcr$RANDOM
+          fi
+          
+          az acr create \
+          --name $ACR_NAME \
+          --resource-group $RESOURCE_GROUP \
+          --sku Basic \
+          --admin-enabled true
+          
+          cd acr/jetty
+          
+          mvn package
+          export ACR_JETTY_IMAGE=jetty:latest
+          
+          az acr build --resource-group $RESOURCE_GROUP --registry $ACR_NAME --image $ACR_JETTY_IMAGE .
+          
+          cd ../..
+          
+          
+          export RESULT=$(az acr repository show --name $ACR_NAME --image $ACR_JETTY_IMAGE)
+          az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ -z $RESULT ]]; then
+          echo "Unable to find $ACR_JETTY_IMAGE image"
+          exit 1
+          fi
+permissions: 
+  contents: 'read'
+  id-token: 'write'
