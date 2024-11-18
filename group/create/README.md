@@ -23,13 +23,13 @@ the command lines below:
 <!-- workflow.cron(0 0 * * 1) -->
 <!-- workflow.skip() -->
 ```shell
-  export RESOURCE_GROUP=joaz-rg
+  export RESOURCE_GROUP=joazrg
   export REGION=pick_your_closest_region
 ```
 
 <!-- workflow.run()
   if [[ -z $RESOURCE_GROUP ]]; then
-    export RESOURCE_GROUP=joaz-rg-$RANDOM
+    export RESOURCE_GROUP=joazrg-$RANDOM
     echo "Using '"$RESOURCE_GROUP"' as resource group"
   fi
 
@@ -59,6 +59,7 @@ Do NOT forget to remove the resources once you are done running the example.
 * [Create an Azure Container Apps environment](../../containerapp/create-environment/README.md)
 * [Create an Azure Kubernetes Service cluster](../../containers/aks/create/README.md)
 * [Create an Azure Spring Cloud](../../compute/spring-cloud/create/README.md)
+* [Create an Azure Storage Account](../../storage/create/README.md)
 
 ## Reference documentation
 

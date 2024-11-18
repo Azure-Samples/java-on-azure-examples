@@ -22,6 +22,8 @@
 | Build and push a Jetty image to Azure Container Registry | [![acr/jetty/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_jetty_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_jetty_README_md.yml) | 0 10 * * 3 | Week 18 |
 | Build and push a Payara image to Azure Container Registry | [![acr/payara/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_payara_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_payara_README_md.yml) | 0 10 * * 4 | Week 19 |
 | Build and push a Glassfish image to Azure Container Registry | [![acr/glassfish/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_glassfish_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_glassfish_README_md.yml) | 0 10 * * 5 | Week 20 |
+| Create an Azure File Share | [![storage/create-file-share/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_create-file-share_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_create-file-share_README_md.yml) | 0 10 * * 6 | Week 21 |
+
 
 <!--
 | Azure Storage examples | Upload files to static website | [![README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_upload-files-to-static-website_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_upload-files-to-static-website_README_md.yml) | 0 1 * * 1 |
