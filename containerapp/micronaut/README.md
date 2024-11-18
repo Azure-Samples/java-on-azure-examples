@@ -11,7 +11,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 10 * * 2) -->
+<!-- workflow.cron(0 10 * * 3) -->
 <!-- workflow.include(../../acr/micronaut/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 

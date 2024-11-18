@@ -17,7 +17,7 @@ This example assumes you have previously completed the following examples:
   fi
 
   -->
-<!-- workflow.cron(0 10 * * 3) -->
+<!-- workflow.cron(0 10 * * 4) -->
 <!-- workflow.include(../create/README.md) -->
 
 ## Build the WAR file

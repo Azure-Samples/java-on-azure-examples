@@ -11,7 +11,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 5 * * 0) -->
+<!-- workflow.cron(0 10 * * 1) -->
 <!-- workflow.include(../../acr/piranha/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 

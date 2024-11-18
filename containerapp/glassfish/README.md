@@ -11,7 +11,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 8 * * 3) -->
+<!-- workflow.cron(0 15 * * 1) -->
 <!-- workflow.include(../../acr/glassfish/README.md) -->
 <!-- workflow.include(../create-environment/README.md) -->
 
