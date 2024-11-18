@@ -22,6 +22,10 @@ jobs:
             echo Deleting ${resourceGroup}
             az group delete -n ${resourceGroup} --yes --no-wait
           done
+          for resourceGroup in `az group list --query "[? contains(name,'joazrg-')][].{name:name}" -o tsv`; do
+            echo Deleting ${resourceGroup}
+            az group delete -n ${resourceGroup} --yes --no-wait
+          done
 permissions:
   id-token: write
   contents: read
