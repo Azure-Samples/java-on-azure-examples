@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 10 * * 2'
+    - cron: '0 10 * * 3'
   workflow_dispatch: 
 
 name: 'containerapp/micronaut/README.md'
