@@ -1,0 +1,27 @@
+name: 3_generate_workflows
+on: 
+    schedule:
+      - cron: '0 0 * * *'
+    workflow_dispatch:
+jobs:
+    validate:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Checkout sources
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GIT_PASSWORD }}
+      - uses: actions/setup-java@v1
+        with:
+          java-version: 21
+      - name: Run GitHub Workflow Generator
+        run: |
+          rm -rf .github/workflows/*_md.yml
+          rm -rf .script
+          curl -L https://repo1.maven.org/maven2/com/manorrock/parrot/parrot/24.3.0/parrot-24.3.0.jar -o parrot.jar
+          java -jar parrot.jar --baseDirectory . --outputDirectory .github/workflows
+          git config --global user.email "noreply@microsoft.com"
+          git config --global user.name "Automated workflow"
+          git add .
+          git commit -a -m "Committing workflows" || true
+          git push
