@@ -1,0 +1,50 @@
+on: 
+  schedule: 
+    - cron: '0 15 * * 4'
+  workflow_dispatch: 
+
+name: 'appconfig/add-key-value/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          subscription-id: '${{ secrets.AZURE_SUBSCRIPTION_ID }}'
+          client-id: '${{ secrets.AZURE_CLIENT_ID }}'
+          tenant-id: '${{ secrets.AZURE_TENANT_ID }}'
+      - uses: 'actions/checkout@v3'
+      - run: |
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=joazrg-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export APP_CONFIG_NAME=appconfig-$RANDOM
+          
+          az appconfig create \
+          --resource-group $RESOURCE_GROUP \
+          --location $REGION \
+          --name $APP_CONFIG_NAME \
+          --sku Free \
+          --enable-public-network true
+          az appconfig kv set \
+          --name $APP_CONFIG_NAME \
+          --key myKey \
+          --value "My value" \
+          --yes
+          
+          export RESULT=$(az appconfig kv show --name $APP_CONFIG_NAME --key myKey --query value --output tsv)
+          az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ "$RESULT" != "My value" ]]; then
+          echo 'Key/Value was not properly set'
+          exit 1
+          fi
+permissions: 
+  contents: 'read'
+  id-token: 'write'

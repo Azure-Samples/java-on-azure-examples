@@ -1,0 +1,164 @@
+on: 
+  schedule: 
+    - cron: '0 15 * * 2'
+  workflow_dispatch: 
+
+name: 'eventhubs/receive-event/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          subscription-id: '${{ secrets.AZURE_SUBSCRIPTION_ID }}'
+          client-id: '${{ secrets.AZURE_CLIENT_ID }}'
+          tenant-id: '${{ secrets.AZURE_TENANT_ID }}'
+      - uses: 'actions/checkout@v3'
+      - run: |
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=joazrg-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=joazrg-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export EVENTHUBS_NAMESPACE=eventhubs-$RANDOM
+          
+          az eventhubs namespace create \
+          --name $EVENTHUBS_NAMESPACE \
+          --resource-group $RESOURCE_GROUP \
+          --location $REGION
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=joazrg-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=joazrg-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export EVENTHUBS_NAMESPACE=eventhubs-$RANDOM
+          
+          az eventhubs namespace create \
+          --name $EVENTHUBS_NAMESPACE \
+          --resource-group $RESOURCE_GROUP \
+          --location $REGION
+          export EVENTHUBS_EVENTHUB=eventhubs-hub-$RANDOM
+          
+          az eventhubs eventhub create \
+          --name $EVENTHUBS_EVENTHUB \
+          --resource-group $RESOURCE_GROUP \
+          --namespace-name $EVENTHUBS_NAMESPACE
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=joazrg-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=joazrg-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export EVENTHUBS_NAMESPACE=eventhubs-$RANDOM
+          
+          az eventhubs namespace create \
+          --name $EVENTHUBS_NAMESPACE \
+          --resource-group $RESOURCE_GROUP \
+          --location $REGION
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=joazrg-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=joazrg-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export EVENTHUBS_NAMESPACE=eventhubs-$RANDOM
+          
+          az eventhubs namespace create \
+          --name $EVENTHUBS_NAMESPACE \
+          --resource-group $RESOURCE_GROUP \
+          --location $REGION
+          export EVENTHUBS_EVENTHUB=eventhubs-hub-$RANDOM
+          
+          az eventhubs eventhub create \
+          --name $EVENTHUBS_EVENTHUB \
+          --resource-group $RESOURCE_GROUP \
+          --namespace-name $EVENTHUBS_NAMESPACE
+          export EVENTHUBS_EVENTHUB_CONNECTION_STRING=$(az eventhubs namespace authorization-rule keys list \
+          --resource-group $RESOURCE_GROUP \
+          --namespace-name $EVENTHUBS_NAMESPACE \
+          --name RootManageSharedAccessKey \
+          --query primaryConnectionString \
+          --output tsv)
+          
+          cd eventhubs/send-event
+          
+          mvn clean install
+          
+          export RESULT=$(java -jar target/send-event.jar)
+          cd ../..
+          
+          
+          cd eventhubs/receive-event
+          
+          mvn clean install
+          
+          export RESULT=$(java -jar target/receive-event.jar)
+          cd ../..
+          
+          
+          az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ "$RESULT" != 'Received: this is an event' ]]; then
+          echo "Error when receiving event from EventHub"
+          exit 1
+          fi
+permissions: 
+  contents: 'read'
+  id-token: 'write'

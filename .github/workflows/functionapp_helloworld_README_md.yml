@@ -1,0 +1,72 @@
+on: 
+  schedule: 
+    - cron: '0 12 * * 2'
+  workflow_dispatch: 
+
+name: 'functionapp/helloworld/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          subscription-id: '${{ secrets.AZURE_SUBSCRIPTION_ID }}'
+          client-id: '${{ secrets.AZURE_CLIENT_ID }}'
+          tenant-id: '${{ secrets.AZURE_TENANT_ID }}'
+      - uses: 'actions/checkout@v3'
+      - run: |
+          
+          if [[ -z $REGION ]]; then
+          export REGION=eastus
+          fi
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=joazrg-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus3
+          fi
+          
+          
+          curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+          sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+          sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-$(lsb_release -cs)-prod $(lsb_release -cs) main" > /etc/apt/sources.list.d/dotnetdev.list'
+          sudo apt-get update
+          sudo apt-get install azure-functions-core-tools-4
+          func
+          
+          
+          cd functionapp/helloworld
+          mkdir .mvn
+          echo "-ntp" > .mvn/maven.config
+          
+          export FUNCTIONAPP_HELLOWORLD=joaz-func-helloworld-$RANDOM
+          mvn -DappName=$FUNCTIONAPP_HELLOWORLD \
+          -DresourceGroup=$RESOURCE_GROUP \
+          -Dregion=$REGION \
+          package
+          mvn -DappName=$FUNCTIONAPP_HELLOWORLD \
+          -DresourceGroup=$RESOURCE_GROUP \
+          -Dregion=$REGION \
+          clean package azure-functions:deploy
+          echo https://`az functionapp show \
+          --resource-group $RESOURCE_GROUP \
+          --name $FUNCTIONAPP_HELLOWORLD \
+          --query hostNames \
+          --output tsv`/api/helloworld
+          
+          cd ../..
+          
+          
+          az group delete --name $RESOURCE_GROUP --yes || true
+permissions: 
+  contents: 'read'
+  id-token: 'write'

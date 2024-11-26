@@ -1,0 +1,45 @@
+on: 
+  schedule: 
+    - cron: '0 3 * * 1'
+  workflow_dispatch: 
+
+name: 'storage/create/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          subscription-id: '${{ secrets.AZURE_SUBSCRIPTION_ID }}'
+          client-id: '${{ secrets.AZURE_CLIENT_ID }}'
+          tenant-id: '${{ secrets.AZURE_TENANT_ID }}'
+      - uses: 'actions/checkout@v3'
+      - run: |
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=joazrg-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export STORAGE_ACCOUNT_NAME=joazst$RANDOM
+          
+          az storage account create \
+          --name $STORAGE_ACCOUNT_NAME \
+          --resource-group $RESOURCE_GROUP \
+          --sku Standard_LRS \
+          --kind StorageV2
+          
+          export STORAGE_ACCOUNT_CONNECTION_STRING=$(az storage account show-connection-string --resource-group $RESOURCE_GROUP --name $STORAGE_ACCOUNT_NAME --output tsv)
+          
+          export RESULT=$(az storage account show --resource-group $RESOURCE_GROUP --name $STORAGE_ACCOUNT_NAME --query provisioningState --output tsv)
+          az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ "$RESULT" != Succeeded ]]; then
+          exit 1
+          fi
+permissions: 
+  contents: 'read'
+  id-token: 'write'

@@ -1,0 +1,59 @@
+on: 
+  schedule: 
+    - cron: '0 3 * * 2'
+  workflow_dispatch: 
+
+name: 'mysql/create/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          subscription-id: '${{ secrets.AZURE_SUBSCRIPTION_ID }}'
+          client-id: '${{ secrets.AZURE_CLIENT_ID }}'
+          tenant-id: '${{ secrets.AZURE_TENANT_ID }}'
+      - uses: 'actions/checkout@v3'
+      - run: |
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=joazrg-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          
+          if [[ -z $MYSQL_NAME ]]; then
+          export MYSQL_NAME=joaz-mysql-$RANDOM
+          export MYSQL_USERNAME=mysql
+          export MYSQL_PASSWORD=p#ssw0rd-$RANDOM
+          fi
+          
+          
+          az mysql server create \
+          --admin-user $MYSQL_USERNAME \
+          --admin-password $MYSQL_PASSWORD \
+          --name $MYSQL_NAME \
+          --resource-group $RESOURCE_GROUP \
+          --sku GP_Gen5_2 || true
+          
+          sleep 240
+          
+          
+          export RESULT=$(az mysql server show --name $MYSQL_NAME --resource-group $RESOURCE_GROUP --output tsv --query userVisibleState)
+          az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ "$RESULT" != Ready ]]; then
+          echo "Provisioning MySQL " $MYSQL_NAME " failed"
+          exit 1
+          fi
+permissions: 
+  contents: 'read'
+  id-token: 'write'

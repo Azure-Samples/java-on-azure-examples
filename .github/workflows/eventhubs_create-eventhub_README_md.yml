@@ -1,0 +1,59 @@
+on: 
+  schedule: 
+    - cron: '0 17 * * 2'
+  workflow_dispatch: 
+
+name: 'eventhubs/create-eventhub/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          subscription-id: '${{ secrets.AZURE_SUBSCRIPTION_ID }}'
+          client-id: '${{ secrets.AZURE_CLIENT_ID }}'
+          tenant-id: '${{ secrets.AZURE_TENANT_ID }}'
+      - uses: 'actions/checkout@v3'
+      - run: |
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=joazrg-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=joazrg-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          export EVENTHUBS_NAMESPACE=eventhubs-$RANDOM
+          
+          az eventhubs namespace create \
+          --name $EVENTHUBS_NAMESPACE \
+          --resource-group $RESOURCE_GROUP \
+          --location $REGION
+          export EVENTHUBS_EVENTHUB=eventhubs-hub-$RANDOM
+          
+          az eventhubs eventhub create \
+          --name $EVENTHUBS_EVENTHUB \
+          --resource-group $RESOURCE_GROUP \
+          --namespace-name $EVENTHUBS_NAMESPACE
+          
+          export RESULT=$(az eventhubs eventhub show --name $EVENTHUBS_EVENTHUB --namespace-name $EVENTHUBS_NAMESPACE --resource-group $RESOURCE_GROUP --output tsv --query status)
+          az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ "$RESULT" != Active ]]; then
+          echo "Azure Event Hubs EventHub - $EVENTHUBS_EVENTHUB - was not provisioned properly"
+          exit 1
+          fi
+permissions: 
+  contents: 'read'
+  id-token: 'write'

@@ -1,0 +1,69 @@
+on: 
+  schedule: 
+    - cron: '0 4 * * 2'
+  workflow_dispatch: 
+
+name: 'monitor/create-log-analytics-workspace/README.md'
+jobs: 
+  validate: 
+    runs-on: 'ubuntu-latest'
+    steps: 
+      - uses: 'azure/login@v1'
+        with: 
+          subscription-id: '${{ secrets.AZURE_SUBSCRIPTION_ID }}'
+          client-id: '${{ secrets.AZURE_CLIENT_ID }}'
+          tenant-id: '${{ secrets.AZURE_TENANT_ID }}'
+      - uses: 'actions/checkout@v3'
+      - run: |
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          if [[ -z $REGION ]]; then
+          export REGION=westus
+          fi
+          
+          if [[ -z $RESOURCE_GROUP ]]; then
+          export RESOURCE_GROUP=joazrg-$RANDOM
+          echo "Using '"$RESOURCE_GROUP"' as resource group"
+          fi
+          
+          az group create --name $RESOURCE_GROUP --location $REGION
+          
+          if [[ -z $MONITOR_LOG_ANALYTICS_WORKSPACE ]]; then
+          export MONITOR_LOG_ANALYTICS_WORKSPACE=log-analytics-workspace-$RANDOM
+          az monitor log-analytics workspace create \
+          --resource-group $RESOURCE_GROUP \
+          --location $REGION \
+          --workspace-name $MONITOR_LOG_ANALYTICS_WORKSPACE
+          fi
+          
+          export MONITOR_LOG_ANALYTICS_WORKSPACE_CLIENT_ID=`az monitor log-analytics workspace show  \
+          --resource-group $RESOURCE_GROUP \
+          --workspace-name $MONITOR_LOG_ANALYTICS_WORKSPACE \
+          --query customerId  \
+          --output tsv`
+          
+          echo $MONITOR_LOG_ANALYTICS_WORKSPACE_CLIENT_ID
+          
+          export MONITOR_LOG_ANALYTICS_WORKSPACE_CLIENT_SECRET=`az monitor log-analytics workspace get-shared-keys \
+          --resource-group $RESOURCE_GROUP \
+          --workspace-name $MONITOR_LOG_ANALYTICS_WORKSPACE \
+          --query primarySharedKey \
+          --output tsv`
+          
+          echo $MONITOR_LOG_ANALYTICS_WORKSPACE_CLIENT_SECRET
+          
+          export RESULT=`az monitor log-analytics workspace show  \
+          --resource-group $RESOURCE_GROUP \
+          --workspace-name $MONITOR_LOG_ANALYTICS_WORKSPACE \
+          --query provisioningState \
+          --output tsv`
+          az group delete --name $RESOURCE_GROUP --yes || true
+          if [[ "$RESULT" != Succeeded ]]; then
+          exit 1
+          fi
+permissions: 
+  contents: 'read'
+  id-token: 'write'
