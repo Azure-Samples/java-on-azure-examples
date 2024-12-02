@@ -8,7 +8,6 @@
 | Create an Azure Container Registry | [![acr/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_create_README_md.yml) | 0 0 * * 4 | Week 4 |
 | Build and push a Spring Boot application to Azure Container Registry| [![acr/springboot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_springboot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_springboot_README_md.yml) | 0 0 * * 5 | Week 5 |
 | Create an Azure Container Apps Environment| [![containerapp/create-environment/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_create-environment_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_create-environment_README_md.yml) | 0 0 * * 6 | Week 6 |
-| Deploy a Spring Boot application to Azure Container Apps | [![containerapp/springboot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_springboot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_springboot_README_md.yml) | 0 0 * * 0 | Week 7 |
 | Build and push a Quarkus application to Azure Container Registry | [![acr/quarkus/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_quarkus_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_quarkus_README_md.yml) | 0 5 * * 1 | Week 8 |
 | Deploy a Quarkus application to Azure Container Apps | [![containerapp/quarkus/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_quarkus_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_quarkus_README_md.yml) | 0 5 * * 2 | Week 9 |
 | Build and push a Tomcat image to Azure Container Registry | [![acr/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_tomcat_README_md.yml) | 0 5 * * 3 | Week 10 |
@@ -35,7 +34,6 @@
 | Azure SQL Database examples | Open Azure SQL server firewall to your IP | [![sql/open-firewall-to-your-ip/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/sql_open-firewall-to-your-ip_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/sql_open-firewall-to-your-ip_README_md.yml) | 0 4 * * 1 |
 | | Load your Azure SQL database with data | [![sql/load-your-mssql-database-with-data/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/sql_load-your-mssql-database-with-data_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/sql_load-your-mssql-database-with-data_README_md.yml) | 0 5 * * 1 |
 | | JDBC command line client | [![sql/get-country/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/sql_get-country_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/sql_get-country_README_md.yml) | 0 6 * * 1 |
-| | Create an Azure SQL database | [![sql/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/sql_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/sql_create_README_md.yml) | 0 7 * * 1 |
 | Azure Spring Apps examples | Deploy a Hello World Spring Boot application | [![spring/helloworld/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring_helloworld_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring_helloworld_README_md.yml) | 0 8 * * 1 |
 | | Create an Azure Spring Apps environment | [![spring/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring_create_README_md.yml) | 0 9 * * 1 |
 | | Configure the Azure Spring Apps Config Server | [![spring/config-server/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring_config-server_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/spring_config-server_README_md.yml) | 0 10 * * 1 |
@@ -127,4 +125,16 @@
 
 | Example     | Workflow Status | Workflow Schedule | 
 | ----------- | --------------- | ----------------- | 
-| Create a Kubernetes cluster | [![aks/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create_README_md.yml) | 0 0 * * 2 |
+| [Create a Kubernetes cluster](aks/create/README.md)| [![aks/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create_README_md.yml) | 0 0 * * 2 |
+
+# Azure Container Apps examples
+
+| Example     | Workflow Status | Workflow Schedule | 
+| ----------- | --------------- | ----------------- | 
+| [Deploy a Spring Boot application to Azure Container Apps](containerapp/springboot/README.md) | [![containerapp/springboot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_springboot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_springboot_README_md.yml) | 0 1 * * 1 |
+
+# Azure SQL Database examples
+
+| Example     | Workflow Status | Workflow Schedule | 
+| ----------- | --------------- | ----------------- | 
+| [Create an Azure SQL database](sql/create/README.md) | [![sql/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/sql_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/sql_create_README_md.yml) | 0 0 * * 1 |
