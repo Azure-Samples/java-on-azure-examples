@@ -110,7 +110,6 @@
 | | Deploy a Spring Boot application | [![aks/springboot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_springboot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_springboot_README_md.yml) | 0 19 * * 4 |
 | | Deploy a GraalVM application | [![aks/graalvm/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_graalvm_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_graalvm_README_md.yml) | 0 20 * * 4 |
 | | Create a Kubeconfig using admin access | [![aks/create-kube-config/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create-kube-config_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create-kube-config_README_md.yml) | 0 21 * * 4 |
-| | Create a Kubernetes cluster | [![aks/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create_README_md.yml) | 0 22 * * 4 |
 | Azure Front Door examples | Create an Azure Front Door Profile | [![afd/create-profile/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/afd_create-profile_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/afd_create-profile_README_md.yml) | 0 23 * * 4 |
 | | Create an Azure Front Door Origin Group | [![afd/create-origin-group/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/afd_create-origin-group_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/afd_create-origin-group_README_md.yml) | 0 0 * * 5 |
 | | Create an Azure Front Door Endpoint | [![afd/create-endpoint/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/afd_create-endpoint_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/afd_create-endpoint_README_md.yml) | 0 1 * * 5 |
@@ -123,3 +122,9 @@
 | | Create a Service Principal | [![acr/create-acrpull-service-principal/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_create-acrpull-service-principal_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/acr_create-acrpull-service-principal_README_md.yml) | 0 18 * * 5 |
 
 -->
+
+# Azure Kubernetes Service examples
+
+| Example     | Workflow Status | Workflow Schedule | 
+| ----------- | --------------- | ----------------- | 
+| Create a Kubernetes cluster | [![aks/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create_README_md.yml) | 0 0 * * 2 |
