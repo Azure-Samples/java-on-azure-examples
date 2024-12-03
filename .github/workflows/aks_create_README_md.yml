@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 22 * * 4'
+    - cron: '0 0 * * 2'
   workflow_dispatch: 
 
 name: 'aks/create/README.md'
@@ -17,7 +17,7 @@ jobs:
       - run: |
           
           if [[ -z $REGION ]]; then
-          export REGION=westus3
+          export REGION=westus2
           fi
           
           if [[ -z $REGION ]]; then

@@ -17,7 +17,7 @@ jobs:
       - run: |
           
           if [[ -z $REGION ]]; then
-          export REGION=westus3
+          export REGION=westus2
           fi
           
           if [[ -z $REGION ]]; then
@@ -50,7 +50,7 @@ jobs:
           
           
           if [[ -z $REGION ]]; then
-          export REGION=westus3
+          export REGION=westus2
           fi
           
           if [[ -z $REGION ]]; then
