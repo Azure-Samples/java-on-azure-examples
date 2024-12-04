@@ -12,7 +12,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 13 * * 5) -->
+<!-- workflow.cron(0 6 * * 0) -->
 <!-- workflow.include(../create/README.md) -->
 
 This example assumes you have previously completed the following examples:
