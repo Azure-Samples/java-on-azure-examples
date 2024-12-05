@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 13 * * 2'
+    - cron: '0 1 * * 4'
   workflow_dispatch: 
 
 name: 'functionapp/cosmosdb-output/README.md'
@@ -17,7 +17,7 @@ jobs:
       - run: |
           
           if [[ -z $REGION ]]; then
-          export REGION=eastus
+          export REGION=westus
           fi
           
           
