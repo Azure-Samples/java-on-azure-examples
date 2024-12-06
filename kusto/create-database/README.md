@@ -19,7 +19,7 @@ This example assumes you have previously completed the following examples:
   fi
 
   -->
-<!-- workflow.cron(0 5 * * 2) -->
+<!-- workflow.cron(0 1 * * 0) -->
 <!-- workflow.include(../create/README.md) -->
 
 Setup the environment variable for the database using the command

@@ -17,7 +17,7 @@ a service principal instead of using admin access keys
   fi
 
   -->
-<!-- workflow.cron(0 17 * * 5) -->
+<!-- workflow.cron(0 2 * * 0) -->
 <!-- workflow.include(../create/README.md) -->
 
 This example assumes you have previously completed the following examples:

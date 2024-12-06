@@ -17,7 +17,7 @@ This example assumes you have previously completed the following example:
   fi
 
   -->
-<!-- workflow.cron(0 7 * * 2) -->
+<!-- workflow.cron(0 2 * * 6) -->
 <!-- workflow.include(../create/README.md) -->
 
 ## Create the self-signed certificate

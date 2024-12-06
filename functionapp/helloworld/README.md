@@ -8,11 +8,11 @@
 <!-- workflow.run()
 
   if [[ -z $REGION ]]; then
-    export REGION=eastus
+    export REGION=westus
   fi
 
   -->
-<!-- workflow.cron(0 12 * * 2) -->
+<!-- workflow.cron(0 2 * * 4) -->
 <!-- workflow.include(../../group/create/README.md) -->
 <!-- workflow.include(../install-tools/README.md) -->
 

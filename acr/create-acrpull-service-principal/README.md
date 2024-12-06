@@ -12,7 +12,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 18 * * 5) -->
+<!-- workflow.cron(0 1 * * 0) -->
 <!-- workflow.include(../create/README.md) -->
 
 This example assumes you have previously completed the following examples:
@@ -44,7 +44,7 @@ Execute the following command lines to create the 'acrpull' Service Principal:
 
   workflow.directOnly() 
   
-az group delete --name $RESOURCE_GROUP --yes || true
+  az group delete --name $RESOURCE_GROUP --yes || true
 
   if [[ -z $ACR_PULL_SERVICE_PRINCIPAL_PASSWORD ]]; then
     echo "ACR 'acrpull' service principal password was not found"
