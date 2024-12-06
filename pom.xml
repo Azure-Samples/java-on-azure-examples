@@ -8,7 +8,7 @@
     <packaging>pom</packaging>
     <name>Java on Azure Examples Project</name>  
     <properties>
-        <azure.bom.version>1.2.3</azure.bom.version>
+        <azure.bom.version>1.2.30</azure.bom.version>
         <azure.spring.version>3.1.0</azure.spring.version>
         <example.prefix>examples</example.prefix>
         <example.postfix>${maven.build.timestamp}</example.postfix>
