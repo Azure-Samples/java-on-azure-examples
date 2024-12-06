@@ -24,10 +24,11 @@ This example assumes you have previously completed the following example:
 To create the Azure Key Vault use the following command lines:
 
 ```shell
-  export KEYVAULT_NAME=keyvault-$RANDOM
+  export KEYVAULT_NAME=joazkv-$RANDOM
 
   az keyvault create \
     --resource-group $RESOURCE_GROUP \
+    --enable-rbac-authorization false \
     --name $KEYVAULT_NAME
 ```
 

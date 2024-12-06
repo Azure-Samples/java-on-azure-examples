@@ -16,7 +16,7 @@ This example assumes you have previously completed the following example:
   fi
 
   -->
-<!-- workflow.cron(0 3 * * 2) -->
+<!-- workflow.cron(0 0 * * 2) -->
 <!-- workflow.include(../../group/create/README.md) -->
 
 ## Create the Azure Database for MySQL
@@ -52,7 +52,7 @@ And then create the MySQL database using the command line below:
     --admin-password $MYSQL_PASSWORD \
     --name $MYSQL_NAME \
     --resource-group $RESOURCE_GROUP \
-    --sku GP_Gen5_2
+    --sku Standard_D2ads_v5
 
 ```
 
