@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 18 * * 5'
+    - cron: '0 1 * * 0'
   workflow_dispatch: 
 
 name: 'acr/create-acrpull-service-principal/README.md'

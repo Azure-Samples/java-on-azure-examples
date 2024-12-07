@@ -30,10 +30,11 @@ jobs:
           fi
           
           az group create --name $RESOURCE_GROUP --location $REGION
-          export KEYVAULT_NAME=keyvault-$RANDOM
+          export KEYVAULT_NAME=joazkv-$RANDOM
           
           az keyvault create \
           --resource-group $RESOURCE_GROUP \
+          --enable-rbac-authorization false \
           --name $KEYVAULT_NAME
           
           export RESULT=$(az keyvault show --resource-group $RESOURCE_GROUP --name $KEYVAULT_NAME --output tsv --query properties.provisioningState)
