@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>examples.azure.acr</groupId>
     <version>1-SNAPSHOT</version>
-    <artifactId>acr-glassfish</artifactId>
+    <artifactId>glassfish</artifactId>
     <packaging>war</packaging>
     <name>Build and push a Glassfish application to ACR</name>
     <properties>
