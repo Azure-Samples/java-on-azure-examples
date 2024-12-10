@@ -1,4 +1,3 @@
-
 # Create an Azure File Share
 
 [![README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_create-file-share_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/storage_create-file-share_README_md.yml)
@@ -8,6 +7,7 @@
 This example assumes you have previously completed the following example:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
+2. [Create an Azure Storage Account](../create/README.md)
 
 <!-- workflow.cron(0 10 * * 0) -->
 <!-- workflow.include(../create/README.md) -->
