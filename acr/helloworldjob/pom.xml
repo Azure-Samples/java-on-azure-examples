@@ -4,14 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>examples.azure.acr</groupId>
     <version>1-SNAPSHOT</version>
-    <artifactId>acr-helloworldjob</artifactId>
+    <artifactId>helloworldjob</artifactId>
     <name>Build and push a Hello World Job application to ACR</name>
     <properties>
         <!-- other -->
         <java.version>17</java.version>
         <!-- plugins -->
-        <maven-compiler-plugin.version>3.12.1</maven-compiler-plugin.version>
-        <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
+        <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
+        <maven-jar-plugin.version>3.4.2</maven-jar-plugin.version>
     </properties>
     <build>
         <finalName>helloworldjob</finalName>

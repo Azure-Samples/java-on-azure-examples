@@ -36,9 +36,27 @@ if [[ -z $ACA_JOB_NAME ]]; then
 fi
  -->
 
-To create the manual job use the command line below.
+To create the manual job use the command lines below.
 
 ```shell
+  az containerapp job create \
+    --name $ACA_JOB_NAME \
+    --resource-group $RESOURCE_GROUP \
+    --environment $ACA_ENVIRONMENT_NAME \
+    --trigger-type Manual \
+    --replica-timeout 1800 \
+    --replica-retry-limit 1 \
+    --replica-completion-count 1 \
+    --parallelism 1 \
+    --registry-identity system \
+    --registry-server $ACR_NAME.azurecr.io \
+    --image $ACR_NAME.azurecr.io/$ACR_HELLOWORLDJOB_IMAGE || true
+
+  az role assignment create \
+    --assignee $(az containerapp job identity show --name $ACA_JOB_NAME --resource-group $RESOURCE_GROUP --query principalId --output tsv) \
+    --role acrpull \
+    --scope $(az acr show --name $ACR_NAME --query id --output tsv)
+
   az containerapp job create \
     --name $ACA_JOB_NAME \
     --resource-group $RESOURCE_GROUP \
