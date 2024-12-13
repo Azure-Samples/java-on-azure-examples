@@ -47,23 +47,27 @@ And then create the MySQL database using the command line below:
 <!-- workflow.skip() -->
 ```shell
 
-  az mysql server create \
+  az mysql flexible-server create \
     --admin-user $MYSQL_USERNAME \
     --admin-password $MYSQL_PASSWORD \
     --name $MYSQL_NAME \
     --resource-group $RESOURCE_GROUP \
-    --sku Standard_D2ads_v5
+    --sku-name Standard_B1ms \
+    --tier Burstable \
+    --public-access 0.0.0.0
 
 ```
 
 <!-- workflow.run()
 
-  az mysql server create \
+  az mysql flexible-server create \
     --admin-user $MYSQL_USERNAME \
     --admin-password $MYSQL_PASSWORD \
     --name $MYSQL_NAME \
     --resource-group $RESOURCE_GROUP \
-    --sku GP_Gen5_2 || true
+    --sku-name Standard_B1ms \
+    --tier Burstable \
+    --public-access 0.0.0.0 || true
 
   sleep 240
 
