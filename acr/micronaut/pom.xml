@@ -7,7 +7,7 @@
     <artifactId>acr-micronaut</artifactId>
     <version>1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>Build and push a Micronaut application to ACR</name>
+    <name>Build and push a Micronaut application to Azure Container Registry</name>
     <properties>
         <!-- dependencies -->
         <micronaut.aot.version>1.1.0</micronaut.aot.version>

@@ -3,7 +3,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>examples.azure.acr</groupId>
-    <artifactId>acr-piranha</artifactId>
+    <artifactId>piranha</artifactId>
     <version>1-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>Build and push a Piranha Micro application to ACR</name>
@@ -14,7 +14,7 @@
         <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
     </properties>
     <build>
-        <finalName>acr-piranha</finalName>
+        <finalName>piranha</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

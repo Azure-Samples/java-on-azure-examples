@@ -29,7 +29,7 @@ EXPOSE 8080
 #
 # Copy the JAR file.
 #
-COPY target/acr-springboot.jar /opt/springboot/acr-springboot.jar
+COPY target/springboot.jar /opt/springboot/springboot.jar
 
 #
 # Set file ownership
@@ -44,4 +44,4 @@ USER springboot
 #
 # Startup command.
 #
-CMD ["java", "-jar", "/opt/springboot/acr-springboot.jar"]
+CMD ["java", "-jar", "/opt/springboot/springboot.jar"]

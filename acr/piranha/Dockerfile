@@ -6,7 +6,7 @@
 # -----------------------------------------------------------------------------
 
 FROM mcr.microsoft.com/openjdk/jdk:17-ubuntu
-COPY target/acr-piranha.war /opt/piranha/ROOT.war
+COPY target/piranha.war /opt/piranha/ROOT.war
 RUN apt update -y && \
     apt-get -y install curl && \
     mkdir -p /opt/piranha && \

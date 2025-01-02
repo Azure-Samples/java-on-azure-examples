@@ -1,21 +1,2 @@
-.DS_Store
-.classpath
-.DS_Store
-.factorypath
-.idea/
-.project
-.settings/
-.vscode/
-nbactions.xml
-nb-configuration.xml
-parrot.jar
-target/
-*.iml
-dependency-reduced-pom.xml
-host.json
-local.settings.json
-providers.tf
-terraform.tfstate
-terraform.tfstate.backup
-.terraform.lock.hcl
-.terraform/
+# Created by venv; see https://docs.python.org/3/library/venv.html
+*

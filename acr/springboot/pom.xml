@@ -3,7 +3,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>examples.azure.acr</groupId>
-    <artifactId>acr-springboot</artifactId>
+    <artifactId>springboot</artifactId>
     <version>1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>Build and push a Spring Boot Application to ACR</name>
@@ -16,7 +16,7 @@
         <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
     </properties>
     <build>
-        <finalName>acr-springboot</finalName>
+        <finalName>springboot</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
