@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 10 * * 5'
+    - cron: '0 10 * * 0'
   workflow_dispatch: 
 
 name: 'acr/payara/README.md'
