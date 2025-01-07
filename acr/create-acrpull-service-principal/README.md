@@ -24,7 +24,6 @@ This example assumes you have previously completed the following examples:
 
 Execute the following command lines to create the 'acrpull' Service Principal:
 
-<!-- workflow.skip() -->
 ```shell
   export ACR_PULL_SERVICE_PRINCIPAL_NAME=acr-pull-$RANDOM
   export ACR_ID=`az acr show --name $ACR_NAME --resource-group $RESOURCE_GROUP --query id --output tsv`
@@ -40,17 +39,13 @@ Execute the following command lines to create the 'acrpull' Service Principal:
     --output tsv`
 ```
 
-<!-- workflow.skip()
-
-  workflow.directOnly() 
+<!-- workflow.directOnly() 
   
   az group delete --name $RESOURCE_GROUP --yes || true
-
   if [[ -z $ACR_PULL_SERVICE_PRINCIPAL_PASSWORD ]]; then
     echo "ACR 'acrpull' service principal password was not found"
     exit 1
   fi
-
   if [[ -z $ACR_PULL_SERVICE_PRINCIPAL_ID ]]; then
     echo "ACR 'acrpull' service principal id was not found"
     exit 1
