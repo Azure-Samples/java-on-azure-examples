@@ -12,7 +12,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 0 * * 5) -->
+<!-- workflow.cron(0 3 * * 1) -->
 <!-- workflow.include(../create-endpoint/README.md) -->
 
 This example assumes you have previously completed the following example:
@@ -28,13 +28,13 @@ line below:
 
 <!-- workflow.skip() -->
 ```shell
-  export AFD_ORIGIN_GROUP_NAME=javazafdogrp$RANDOM
+  export AFD_ORIGIN_GROUP_NAME=joazafdogrp$RANDOM
 ```
 
 <!-- workflow.run()
 
 if [[ -z $AFD_ORIGIN_GROUP_NAME ]]; then
-  export AFD_ORIGIN_GROUP_NAME=javazafdogrp$RANDOM
+  export AFD_ORIGIN_GROUP_NAME=joazafdogrp$RANDOM
 fi
   -->
 
