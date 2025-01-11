@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 3 * * 5'
+    - cron: '0 3 * * 1'
   workflow_dispatch: 
 
 name: 'afd/add-origins-to-origin-group/README.md'
@@ -64,7 +64,7 @@ jobs:
           --enabled-state Enabled
           
           if [[ -z $AFD_ORIGIN_GROUP_NAME ]]; then
-          export AFD_ORIGIN_GROUP_NAME=javazafdogrp$RANDOM
+          export AFD_ORIGIN_GROUP_NAME=joazafdogrp$RANDOM
           fi
           az afd origin-group create \
           --resource-group $RESOURCE_GROUP \
