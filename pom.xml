@@ -117,6 +117,7 @@
         <module>appservice</module>
         <module>aro</module>
         <module>cognitiveservices</module>
+        <module>communication</module>
         <module>container</module>
         <module>containerapp</module>
         <module>cosmosdb</module>
