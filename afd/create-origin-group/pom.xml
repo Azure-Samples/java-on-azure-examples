@@ -9,5 +9,5 @@
     </parent>
     <artifactId>afd-create-origin-group</artifactId>
     <packaging>pom</packaging>
-    <name>Azure Front Door :: Create an Azure Front Door Origin Group</name>
+    <name>Create an Azure Front Door Origin Group</name>
 </project>
