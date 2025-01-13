@@ -11,7 +11,7 @@
         <!-- dependencies -->
         <helidon.version>2.6.5</helidon.version>
         <!-- other -->
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <mainClass>io.helidon.examples.quickstart.se.Main</mainClass>
         <!-- plugins -->
         <maven-dependency-plugin.version>3.6.1</maven-dependency-plugin.version>

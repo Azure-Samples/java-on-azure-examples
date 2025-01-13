@@ -15,7 +15,7 @@
         <micronaut.version>3.5.3</micronaut.version>
         <micronaut.runtime>netty</micronaut.runtime>
         <!-- other -->
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <!-- plugins -->
         <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
         <maven-shade-plugin.version>3.5.0</maven-shade-plugin.version>

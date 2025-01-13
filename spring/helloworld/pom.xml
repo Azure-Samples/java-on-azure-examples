@@ -20,7 +20,7 @@
         <junit.version>5.8.1</junit.version>
         <playwright.version>1.49.0</playwright.version>
         <!-- other -->
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <!-- plugins -->
         <maven-compiler-plugin.version>3.13.0</maven-compiler-plugin.version>
         <maven-failsafe-plugin.version>3.5.2</maven-failsafe-plugin.version>

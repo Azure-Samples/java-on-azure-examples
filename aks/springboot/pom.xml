@@ -12,7 +12,7 @@
         <spring-boot.version>2.7.0</spring-boot.version>
         <tomcat.version>9.0.63</tomcat.version>
         <!-- other -->
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <!-- plugins -->
         <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
     </properties>

@@ -9,7 +9,7 @@
     <name>Build and push a GraalVM application to ACR</name>
     <properties>
         <!-- other -->
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- plugins -->
         <azure-webapp-maven-plugin.version>2.13.0</azure-webapp-maven-plugin.version>

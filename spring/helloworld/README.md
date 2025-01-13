@@ -52,7 +52,7 @@ To run the example locally use the following Maven command line.
     --service ${SPRING_NAME} \
     --resource-group ${RESOURCE_GROUP} \
     --assign-endpoint \
-    --runtime-version Java_11 \
+    --runtime-version Java_17 \
     --verbose
 
   az spring app deploy \

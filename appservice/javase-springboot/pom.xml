@@ -76,7 +76,7 @@
     <properties>
         <appName>${env.APPSERVICE_JAVASE_SPRINGBOOT}</appName>
         <appServicePlan>${env.APPSERVICE_PLAN}</appServicePlan>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <resourceGroup>${env.RESOURCE_GROUP}</resourceGroup>
         <region>${env.REGION}</region>
     </properties>
