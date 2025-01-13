@@ -10,4 +10,7 @@
     <artifactId>sql-load-your-mssql-database-with-data</artifactId>
     <packaging>pom</packaging>
     <name>Azure SQL Database :: Load your Azure SQL database with data</name>
+    <properties>
+        <maven.compiler.release>17</maven.compiler.release>
+    </properties>
 </project>

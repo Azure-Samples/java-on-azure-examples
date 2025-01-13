@@ -10,4 +10,7 @@
     <artifactId>sql-create</artifactId>
     <packaging>pom</packaging>
     <name>Azure SQL Database :: Create an Azure SQL Database</name>
+    <properties>
+        <maven.compiler.release>17</maven.compiler.release>
+    </properties>
 </project>

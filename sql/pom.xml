@@ -17,4 +17,7 @@
         <module>load-your-mssql-database-with-data</module>
         <module>open-firewall-to-your-ip</module>
     </modules>
+    <properties>
+        <maven.compiler.release>17</maven.compiler.release>
+    </properties>
 </project>

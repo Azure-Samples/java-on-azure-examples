@@ -10,4 +10,7 @@
     <artifactId>sql-open-firewall-to-your-ip</artifactId>
     <packaging>pom</packaging>
     <name>Azure SQL Database :: Open Azure SQL server firewall to your IP address</name>
+    <properties>
+        <maven.compiler.release>17</maven.compiler.release>
+    </properties>
 </project>
