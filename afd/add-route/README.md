@@ -12,7 +12,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 2 * * 5) -->
+<!-- workflow.cron(0 4 * * 1) -->
 <!-- workflow.include(../add-origins-to-origin-group/README.md) -->
 
 This example assumes you have previously completed the following examples:
