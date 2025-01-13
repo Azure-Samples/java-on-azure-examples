@@ -35,7 +35,7 @@ To create an Azure Communication Service use the following command lines:
 
 <!-- workflow.directOnly()
 
-  export RESULT=$(az communication show --name $AZURE_COMMUNICATION_NAME --resource-group $RESOURCE_GROUP --output tsv --query properties.provisioningState)
+  export RESULT=$(az communication show --name $AZURE_COMMUNICATION_NAME --resource-group $RESOURCE_GROUP --output tsv --query provisioningState)
   az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != Succeeded ]]; then
     echo "Azure Communication Service '" $AZURE_COMMUNICATION_NAME "' was not created successfully"
