@@ -92,7 +92,6 @@
 | | Deploy Tomcat | [![aks/tomcat/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_tomcat_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_tomcat_README_md.yml) | 0 18 * * 4 |
 | | Deploy a Spring Boot application | [![aks/springboot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_springboot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_springboot_README_md.yml) | 0 19 * * 4 |
 | | Deploy a GraalVM application | [![aks/graalvm/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_graalvm_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_graalvm_README_md.yml) | 0 20 * * 4 |
-| | Create a Kubeconfig using admin access | [![aks/create-kube-config/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create-kube-config_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create-kube-config_README_md.yml) | 0 21 * * 4 |
 -->
 
 | Example     | Workflow Status | Workflow Schedule | Update schedule |
@@ -122,6 +121,7 @@
 | [Add a route](afd/add-route/README.md) | [![afd/add-route/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/afd_add-route_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/afd_add-route_README_md.yml) | 0 4 * * 1 | Week 5 |
 | Azure Kubernetes Service examples
 | [Create a Kubernetes cluster](aks/create/README.md)| [![aks/create/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create_README_md.yml) | 0 0 * * 2 | Week 1 |
+| [Create a Kubeconfig using admin access](aks/create-kube-config/README.md) | [![aks/create-kube-config/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create-kube-config_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/aks_create-kube-config_README_md.yml) | 0 1 * * 2 | Week 2 |
 | Azure Container Apps examples
 | [Deploy a Spring Boot application](containerapp/springboot/README.md) | [![containerapp/springboot/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_springboot_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/containerapp_springboot_README_md.yml) | 0 1 * * 1 |
 | Azure Functions examples 

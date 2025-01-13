@@ -10,7 +10,7 @@ limit access to your Kubernetes cluster based on roles.
 
 ## Prerequisites
 
-<!-- workflow.cron(0 21 * * 4) -->
+<!-- workflow.cron(0 1 * * 2) -->
 <!-- workflow.include(../create/README.md) -->
 
 This example assumes you have previously completed the following examples:
