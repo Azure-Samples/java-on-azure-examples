@@ -38,7 +38,7 @@ To create the cluster use the following command line:
 
 <!-- workflow.skip() -->
 ```shell
-  export AKS=aks-$RANDOM
+  export AKS=joazaks-$RANDOM
 
   az aks create --name $AKS --resource-group $RESOURCE_GROUP --generate-ssh-keys --verbose 
 ```

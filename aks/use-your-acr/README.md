@@ -5,7 +5,7 @@
 
 ## Prerequisites
 
-<!-- workflow.cron(0 17 * * 4) -->
+<!-- workflow.cron(0 2 * * 2) -->
 <!-- workflow.include(../create/README.md) -->
 <!-- workflow.include(../../acr/create/README.md) -->
 
@@ -13,7 +13,7 @@ This example assumes you have previously completed the following examples:
 
 1. [Create an Azure Resource Group](../../group/create/README.md)
 1. [Deploy an Azure Kubernetes Service cluster](../create/README.md)
-1. [Create an Azure Container Registry](../../create/README.md)
+1. [Create an Azure Container Registry](../../acr/create/README.md)
 
 ## Update your AKS cluster to use your Azure Container Registry
 
