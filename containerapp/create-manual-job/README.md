@@ -30,13 +30,15 @@ This example assumes you have previously completed the following examples:
 ```
 
 <!-- workflow.run()
+
 if [[ -z $ACA_JOB_NAME ]]; then
   export ACA_JOB_NAME=aca-job-$RANDOM
   sleep 60
 fi
- -->
 
-To create the manual job use the command lines below.
+-->
+
+To create the manual job use the command line below to create the job.
 
 ```shell
   az containerapp job create \
@@ -51,12 +53,32 @@ To create the manual job use the command lines below.
     --registry-identity system \
     --registry-server $ACR_NAME.azurecr.io \
     --image $ACR_NAME.azurecr.io/$ACR_HELLOWORLDJOB_IMAGE || true
+```
 
+<!-- workflow.run()
+
+  sleep 60
+
+ -->
+
+Then create a role assigment so the job can be pulled from your Azure Container Registry:
+
+```shell
   az role assignment create \
     --assignee $(az containerapp job identity show --name $ACA_JOB_NAME --resource-group $RESOURCE_GROUP --query principalId --output tsv) \
     --role acrpull \
     --scope $(az acr show --name $ACR_NAME --query id --output tsv)
+```
 
+<!-- workflow.run()
+
+  sleep 60
+
+ -->
+
+And then issue the create command again so the job can be successfully created:
+
+```shell
   az containerapp job create \
     --name $ACA_JOB_NAME \
     --resource-group $RESOURCE_GROUP \
