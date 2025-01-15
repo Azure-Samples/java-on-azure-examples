@@ -5,7 +5,7 @@
 
 ## Prerequisites
 
-<!-- workflow.cron(0 20 * * 4) -->
+<!-- workflow.cron(0 3 * * 2) -->
 <!-- workflow.include(../create-kube-config/README.md) -->
 <!-- workflow.include(../../acr/graalvm/README.md) -->
 <!-- workflow.include(../use-your-acr/README.md) -->
