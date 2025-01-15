@@ -19,7 +19,7 @@
         <!-- dependencies -->
         <azure-functions-java-library.version>3.1.0</azure-functions-java-library.version>
         <!-- plugins -->
-        <azure-functions-maven-plugin.version>1.33.0</azure-functions-maven-plugin.version>
+        <azure-functions-maven-plugin.version>1.36.0</azure-functions-maven-plugin.version>
     </properties>
     <build>
         <plugins>
