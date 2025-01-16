@@ -24,7 +24,7 @@ This example assumes you have previously completed the following example:
 <!-- workflow.run()
 
   if [[ -z $AKS ]]; then
-    export AKS=aks-$RANDOM
+    export AKS=joazaks$RANDOM
     echo ---------------------------------------------------------------------
     echo  Creating AKS cluster - $AKS
     echo ---------------------------------------------------------------------
