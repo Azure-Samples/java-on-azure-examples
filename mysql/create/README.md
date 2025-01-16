@@ -26,7 +26,7 @@ To create the Azure Database for MySQL setup the following environment variables
 <!-- workflow.skip() -->
 ```shell
 
-  export MYSQL_NAME=joaz-mysql-$RANDOM
+  export MYSQL_NAME=joazmysql$RANDOM
   export MYSQL_USERNAME=mysql
   export MYSQL_PASSWORD=p#ssw0rd-$RANDOM
 
@@ -35,7 +35,7 @@ To create the Azure Database for MySQL setup the following environment variables
 <!-- workflow.run()
 
   if [[ -z $MYSQL_NAME ]]; then
-    export MYSQL_NAME=joaz-mysql-$RANDOM
+    export MYSQL_NAME=joazmysql$RANDOM
     export MYSQL_USERNAME=mysql
     export MYSQL_PASSWORD=p#ssw0rd-$RANDOM
   fi
@@ -79,7 +79,7 @@ Do NOT forget to remove the resources once you are done running the example.
 
 <!-- workflow.directOnly()
 
-  export RESULT=$(az mysql server show --name $MYSQL_NAME --resource-group $RESOURCE_GROUP --output tsv --query userVisibleState)
+  export RESULT=$(az mysql flexible-server show --name $MYSQL_NAME --resource-group $RESOURCE_GROUP --output tsv --query state)
   az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != Ready ]]; then
     echo "Provisioning MySQL " $MYSQL_NAME " failed"
