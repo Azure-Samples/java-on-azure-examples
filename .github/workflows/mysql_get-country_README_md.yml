@@ -37,7 +37,7 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           
           if [[ -z $MYSQL_NAME ]]; then
-          export MYSQL_NAME=joaz-mysql-$RANDOM
+          export MYSQL_NAME=joazmysql$RANDOM
           export MYSQL_USERNAME=mysql
           export MYSQL_PASSWORD=p#ssw0rd-$RANDOM
           fi

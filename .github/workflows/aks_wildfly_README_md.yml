@@ -32,7 +32,7 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           
           if [[ -z $AKS ]]; then
-          export AKS=aks-$RANDOM
+          export AKS=joazaks$RANDOM
           echo ---------------------------------------------------------------------
           echo  Creating AKS cluster - $AKS
           echo ---------------------------------------------------------------------
@@ -98,7 +98,7 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           
           if [[ -z $AKS ]]; then
-          export AKS=aks-$RANDOM
+          export AKS=joazaks$RANDOM
           echo ---------------------------------------------------------------------
           echo  Creating AKS cluster - $AKS
           echo ---------------------------------------------------------------------
