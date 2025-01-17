@@ -26,14 +26,14 @@ To create the Azure SQL Database setup the environment variables:
 
 <!-- workflow.skip() -->
 ```shell
-  export MSSQL_NAME=mssql-$RANDOM
+  export MSSQL_NAME=joazmssql$RANDOM
   export MSSQL_USERNAME=mssql
   export MSSQL_PASSWORD=p#ssw0rd-$RANDOM
 ```
 
 <!-- workflow.run()
 if [[ -z $MSSQL_NAME ]]; then
-  export MSSQL_NAME=mssql-$RANDOM
+  export MSSQL_NAME=joazmssql$RANDOM
   export MSSQL_USERNAME=mssql
   export MSSQL_PASSWORD=p#ssw0rd-$RANDOM
 fi

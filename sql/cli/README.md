@@ -1,12 +1,12 @@
 
-# Get country information (JDBC client)
+# SQL Database JDBC CLI
 
 [![sql/get-country/README.md](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/sql_get-country_README_md.yml/badge.svg)](https://github.com/Azure-Samples/java-on-azure-examples/actions/workflows/sql_get-country_README_md.yml)
 
 ## Prerequisites
 
 <!-- workflow.cron(0 6 * * 1) -->
-<!-- workflow.include(../load-your-mssql-database-with-data/README.md) -->
+<!-- workflow.include(../open-firewall-to-your-ip/README.md) -->
 
 This example assumes you have previously completed the following examples:
 
@@ -14,16 +14,14 @@ This example assumes you have previously completed the following examples:
 1. [Create an Azure SQL Database](../create/README.md)
 1. [Install curl](https://curl.haxx.se/download.html)
 1. [Open Azure SQL server firewall to your IP address](../open-firewall-to-your-ip/README.md)
-1. [Install mssql-cli client](https://docs.microsoft.com/en-us/sql/tools/mssql-cli?view=sql-server-ver15)
-1. [Load your Azure SQL database with your data](../load-your-mssql-database-with-data/README.md)
 
-## Get country information
+## SQL Database JDBC CLI
 
-This example will get country information from the database.
+This example will send a SQL statement to the database.
 
 <!-- workflow.run()
 
-cd sql/get-country
+cd sql/cli
 
   -->
 
@@ -33,11 +31,22 @@ First lets build the example.
   mvn package
 ```
 
-The command line below will get the country information for the country with
-the abbreviation 'USA'.
+Setup the correct environment variables.
 
 ```shell
-  java -jar target/get-country.jar "jdbc:sqlserver://$MSSQL_DNS_NAME:1433;databaseName=demo;encrypt=true;trustServerCertificate=true" $MSSQL_CLIENT_USERNAME $MSSQL_PASSWORD USA
+export MSSQL_DNS_NAME=`az sql server show \
+    --resource-group $RESOURCE_GROUP \
+    --name $MSSQL_NAME \
+    --query fullyQualifiedDomainName \
+    --output tsv`
+
+  export MSSQL_CLIENT_USERNAME="$MSSQL_USERNAME@$MSSQL_NAME"
+```
+
+The command line below will send the "SELECT 1" statement to the database.
+
+```shell
+  java -jar target/cli.jar "jdbc:sqlserver://$MSSQL_DNS_NAME:1433;encrypt=true;trustServerCertificate=true" $MSSQL_CLIENT_USERNAME $MSSQL_PASSWORD "SELECT 1"
 ```
 
 <!-- workflow.run()
