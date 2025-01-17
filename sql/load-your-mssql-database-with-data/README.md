@@ -25,7 +25,7 @@ connect to the database:
 ```shell
   export MSSQL_DNS_NAME=`az sql server show \
     --resource-group $RESOURCE_GROUP \
-    --name $MYSQL_NAME \
+    --name $MSSQL_NAME \
     --query fullyQualifiedDomainName \
     --output tsv`
 

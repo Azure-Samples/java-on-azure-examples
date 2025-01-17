@@ -12,8 +12,8 @@
     <packaging>pom</packaging>
     <name>Azure SQL Database</name>
     <modules>
+        <module>cli</module>
         <module>create</module>
-        <module>get-country</module>
         <module>load-your-mssql-database-with-data</module>
         <module>open-firewall-to-your-ip</module>
     </modules>
