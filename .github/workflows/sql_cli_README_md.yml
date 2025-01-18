@@ -3,7 +3,7 @@ on:
     - cron: '0 6 * * 1'
   workflow_dispatch: 
 
-name: 'sql/get-country/README.md'
+name: 'sql/cli/README.md'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
@@ -31,7 +31,7 @@ jobs:
           
           az group create --name $RESOURCE_GROUP --location $REGION
           if [[ -z $MSSQL_NAME ]]; then
-          export MSSQL_NAME=mssql-$RANDOM
+          export MSSQL_NAME=joazmssql$RANDOM
           export MSSQL_USERNAME=mssql
           export MSSQL_PASSWORD=p#ssw0rd-$RANDOM
           fi
@@ -49,26 +49,17 @@ jobs:
           --start-ip-address $LOCAL_IP \
           --end-ip-address $LOCAL_IP
           
-          cd sql/load-your-mssql-database-with-data
-          sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 1
-          python -m pip install --upgrade pip
-          sudo pip install mssql-cli
-          sudo pip install cli-helpers --upgrade --force
+          cd sql/cli
+          
+          mvn package
           export MSSQL_DNS_NAME=`az sql server show \
           --resource-group $RESOURCE_GROUP \
           --name $MSSQL_NAME \
           --query fullyQualifiedDomainName \
           --output tsv`
+          
           export MSSQL_CLIENT_USERNAME="$MSSQL_USERNAME@$MSSQL_NAME"
-          mssql-cli -S $MSSQL_DNS_NAME -U $MSSQL_CLIENT_USERNAME -P $MSSQL_PASSWORD -i create.sql
-          mssql-cli -S $MSSQL_DNS_NAME -U $MSSQL_CLIENT_USERNAME -P $MSSQL_PASSWORD -d demo -i load.sql
-          cd ../..
-          
-          
-          cd sql/get-country
-          
-          mvn package
-          java -jar target/get-country.jar "jdbc:sqlserver://$MSSQL_DNS_NAME:1433;databaseName=demo;encrypt=true;trustServerCertificate=true" $MSSQL_CLIENT_USERNAME $MSSQL_PASSWORD USA
+          java -jar target/cli.jar "jdbc:sqlserver://$MSSQL_DNS_NAME:1433;encrypt=true;trustServerCertificate=true" $MSSQL_CLIENT_USERNAME $MSSQL_PASSWORD "SELECT 1"
           
           cd ../..
           
