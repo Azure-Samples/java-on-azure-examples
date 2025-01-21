@@ -50,7 +50,7 @@ To deploy the example use the following Maven command line:
 
 <!-- workflow.run()
 
-  sleep 60
+  sleep 120
   cd ../..
 
   -->
