@@ -9,7 +9,7 @@
     </parent>
     <artifactId>appservice-javase-springboot</artifactId>
     <packaging>jar</packaging>
-    <name>Azure App Service :: Deploy a Spring Boot Application on managed JavaSE</name>
+    <name>Deploy a Spring Boot Application on managed JavaSE</name>
     <build>
         <plugins>
             <plugin>
@@ -23,7 +23,7 @@
                     <region>${region}</region>
                     <runtime>
                         <os>linux</os>
-                        <javaVersion>Java 11</javaVersion>
+                        <javaVersion>Java 17</javaVersion>
                     </runtime>
                     <deployment>
                         <resources>
