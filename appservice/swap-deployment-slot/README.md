@@ -36,6 +36,7 @@ To swap deployment slot use the following command line:
 
 <!-- workflow.directOnly() 
 
+  sleep 120
   export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD --output tsv --query state)
   if [[ "$RESULT" != Running ]]; then
     echo 'Web application is NOT running'
