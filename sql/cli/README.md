@@ -46,7 +46,7 @@ export MSSQL_DNS_NAME=`az sql server show \
 The command line below will send the "SELECT 1" statement to the database.
 
 ```shell
-  java -jar target/cli.jar "jdbc:sqlserver://$MSSQL_DNS_NAME:1433;encrypt=true;trustServerCertificate=true" $MSSQL_CLIENT_USERNAME $MSSQL_PASSWORD "SELECT 1"
+  java -jar target/cli.jar --url "jdbc:sqlserver://$MSSQL_DNS_NAME:1433;encrypt=true;trustServerCertificate=true" --username $MSSQL_CLIENT_USERNAME --password $MSSQL_PASSWORD --sql "SELECT 1"
 ```
 
 <!-- workflow.run()

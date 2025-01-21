@@ -10,31 +10,45 @@ import java.sql.Statement;
 
 public class Cli {
 
+    private String url;
+    private String username;
+    private String password;
+    private String sql;
     private Connection connection;
-    private String[] arguments;
+    
+    public static void main(String[] arguments) throws Exception {
+        Cli cli = new Cli();
+        cli.parseArguments(arguments);
+        cli.run();
+    }
 
-    public Cli(String[] arguments) throws SQLException {
+    public void parseArguments(String[] arguments) {
+        for(int i=0; i<arguments.length; i++) {
+            if (arguments[i].equals("--url")) {
+                this.url = arguments[++i];
+            } else if (arguments[i].equals("--username")) {
+                this.username = arguments[++i];
+            } else if (arguments[i].equals("--password")) {
+                this.password = arguments[++i];
+            } else if (arguments[i].equals("--sql")) {
+                this.sql = arguments[++i];
+            }
+        }
+    }
+
+    public void run() throws Exception {
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
         } catch (ClassNotFoundException e) {
             throw new SQLException("SQLServerDriver not found", e);
         }
-        String url = arguments[0];
         if (!url.startsWith("jdbc:")) {
             url = "jdbc:sqlserver://" + url;
         }
-        this.connection = DriverManager.getConnection(url, arguments[1], arguments[2]);
-        this.arguments = arguments;
-    }
+        this.connection = DriverManager.getConnection(url, username, password);
 
-    public static void main(String[] arguments) throws Exception {
-        Cli cli = new Cli(arguments);
-        cli.run();
-    }
-
-    public void run() throws Exception {
-        if (arguments.length > 3) {
-            executeSql(arguments[3]);
+        if (sql != null) {
+            executeSql(sql);
         } else {
             boolean interactive = true;
             if (interactive) {
@@ -52,7 +66,7 @@ public class Cli {
             }
         }
     }
-
+   
     private void executeSql(String sql) {
         try {
             Statement statement = connection.createStatement();
