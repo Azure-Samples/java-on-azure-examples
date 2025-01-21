@@ -55,7 +55,7 @@ Then open your browser to the URL echoed above and you should see:
 
 <!-- workflow.directOnly()
 
-  sleep 60
+  sleep 120
   export URL=https://$(az containerapp show --resource-group $RESOURCE_GROUP --name $ACA_HELIDON --query properties.configuration.ingress.fqdn --output tsv)/greet
   export RESULT=$(curl $URL)
   az group delete --name $RESOURCE_GROUP --yes || true
