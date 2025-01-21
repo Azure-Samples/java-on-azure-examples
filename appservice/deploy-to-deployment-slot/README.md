@@ -46,7 +46,7 @@ This example assumes you have previously completed the following examples:
 
 <!-- workflow.run()
 
-  sleep 60
+  sleep 120
   cd ../..
 
   -->
