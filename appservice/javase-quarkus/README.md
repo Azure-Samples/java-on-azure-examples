@@ -60,6 +60,7 @@ To deploy the application use the following command lines:
 
 <!-- workflow.run()
 
+  sleep 120
   cd ../..
 
   -->
