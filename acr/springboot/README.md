@@ -67,12 +67,4 @@ To build and push the container image to your ACR use the command lines below:
 Do NOT forget to remove the resources you created once you are done running the
 example.
 
-## Terraform snippets
-
-If you want to use Terraform please see the snippets below:
-
-* [main.tf](main.tf)
-* [outputs.tf](outputs.tf)
-* [variables.tf](variables.tf)
-
 4m
