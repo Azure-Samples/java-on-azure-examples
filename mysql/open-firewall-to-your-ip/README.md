@@ -22,10 +22,10 @@ address execute the following command lines:
 ```shell
   export LOCAL_IP=`curl -s whatismyip.akamai.com`
 
-  az mysql server firewall-rule create \
+  az mysql flexible-server firewall-rule create \
     --resource-group $RESOURCE_GROUP \
-    --server $MYSQL_NAME \
-    --name AllowMyLocalIP \
+    --name $MYSQL_NAME \
+    --rule-name AllowMyLocalIP \
     --start-ip-address $LOCAL_IP \
     --end-ip-address $LOCAL_IP
 ```
@@ -36,7 +36,7 @@ Do NOT forget to remove the resources once you are done running the example.
 
 <!-- workflow.directOnly()
 
-  export RESULT=$(az mysql server firewall-rule show --resource-group $RESOURCE_GROUP --server $MYSQL_NAME --name AllowMyLocalIP --query name --output tsv)
+  export RESULT=$(az mysql flexible-server firewall-rule show --resource-group $RESOURCE_GROUP --name $MYSQL_NAME --rule-name AllowMyLocalIP --query name --output tsv)
   az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != AllowMyLocalIP ]]; then
     echo "MySQL firewall was NOT configured to allow access from " $LOCAL_IP
