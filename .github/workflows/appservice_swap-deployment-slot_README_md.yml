@@ -71,7 +71,7 @@ jobs:
           -DappServicePlan=$APPSERVICE_PLAN \
           -DresourceGroup=$RESOURCE_GROUP
           
-          sleep 60
+          sleep 120
           cd ../..
           
           az webapp deployment slot create \
@@ -94,7 +94,7 @@ jobs:
           -DresourceGroup=$RESOURCE_GROUP \
           -DdeploymentSlotName=staging
           
-          sleep 60
+          sleep 120
           cd ../..
           
           az webapp deployment slot swap \
@@ -102,6 +102,7 @@ jobs:
           --name $APPSERVICE_TOMCAT_HELLOWORLD \
           --slot staging
           
+          sleep 120
           export RESULT=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_TOMCAT_HELLOWORLD --output tsv --query state)
           if [[ "$RESULT" != Running ]]; then
           echo 'Web application is NOT running'

@@ -59,7 +59,7 @@ jobs:
           --output tsv`
           
           export MSSQL_CLIENT_USERNAME="$MSSQL_USERNAME@$MSSQL_NAME"
-          java -jar target/cli.jar "jdbc:sqlserver://$MSSQL_DNS_NAME:1433;encrypt=true;trustServerCertificate=true" $MSSQL_CLIENT_USERNAME $MSSQL_PASSWORD "SELECT 1"
+          java -jar target/cli.jar --url "jdbc:sqlserver://$MSSQL_DNS_NAME:1433;encrypt=true;trustServerCertificate=true" --username $MSSQL_CLIENT_USERNAME --password $MSSQL_PASSWORD --sql "SELECT 1"
           
           cd ../..
           

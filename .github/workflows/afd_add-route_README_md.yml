@@ -117,7 +117,7 @@ jobs:
           cd appservice/javase-springboot
           
           mvn package
-          export APPSERVICE_JAVASE_SPRINGBOOT=javazappsvc-javase-springboot-$RANDOM
+          export APPSERVICE_JAVASE_SPRINGBOOT=joazappsvc-javase-springboot-$RANDOM
           
           mvn azure-webapp:deploy \
           -DappName=$APPSERVICE_JAVASE_SPRINGBOOT \
@@ -169,6 +169,7 @@ jobs:
           -DappServicePlan=$APPSERVICE_PLAN \
           -DresourceGroup=$RESOURCE_GROUP
           
+          sleep 120
           cd ../..
           
           export AFD_PRIMARY_HOST_NAME=$(az webapp show --resource-group $RESOURCE_GROUP --name $APPSERVICE_JAVASE_SPRINGBOOT --output tsv --query defaultHostName)
