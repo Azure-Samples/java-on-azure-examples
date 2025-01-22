@@ -13,6 +13,12 @@ This example assumes you have previously completed the following example:
 2. [Create an Azure Storage Account](../create/README.md)
 3. [Create an Azure File Share](../create-file-share/README.md)
 
+<!-- workflow.run()
+
+  cd storage/list-file-share 
+
+  -->
+
 ## Compile the example
 
 To compile the example, navigate to the directory containing the `pom.xml` file and run the following command:
@@ -33,14 +39,14 @@ To list the files, use the following command:
 
 <!-- workflow.directOnly() 
 
-  cd storage/list-file-share
-  export RESULT=$(java -jar target/list-file-share.jar
-  cd ../..
+  export RESULT=$(java -jar target/list-file-share.jar)
   az group delete --name $RESOURCE_GROUP --yes || true
   if [[ "$RESULT" != *""* ]]; then
     echo "There are already files in your Azure File Share"
     exit 1
   fi
+
+  cd ../..
 
   -->
 
