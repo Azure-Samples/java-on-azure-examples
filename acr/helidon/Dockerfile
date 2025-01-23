@@ -5,7 +5,7 @@
 #
 # -----------------------------------------------------------------------------
 
-FROM mcr.microsoft.com/openjdk/jdk:11-ubuntu
+FROM mcr.microsoft.com/openjdk/jdk:17-ubuntu
 COPY target/acr-helidon.jar /opt/helidon/acr-helidon.jar
 COPY target/libs/* /opt/helidon/libs/
 RUN groupadd -r helidon && \
