@@ -5,7 +5,7 @@
 #
 # -----------------------------------------------------------------------------
 
-FROM mcr.microsoft.com/openjdk/jdk:11-ubuntu
+FROM mcr.microsoft.com/openjdk/jdk:17-ubuntu
 COPY target/acr-micronaut.jar /opt/micronaut/acr-micronaut.jar
 RUN groupadd -r micronaut && \
     useradd -r -g micronaut micronaut && \
