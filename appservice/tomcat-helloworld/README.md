@@ -36,7 +36,7 @@ This example assumes you have previously completed the following examples:
 Setup the application name environment variable using the command line below:
 
 ```shell
-  export APPSERVICE_TOMCAT_HELLOWORLD=appservice-tomcat-helloworld-$RANDOM
+  export APPSERVICE_TOMCAT_HELLOWORLD=joazasp-tomcat-helloworld-$RANDOM
 ```
 
 To deploy the example use the following Maven command line:

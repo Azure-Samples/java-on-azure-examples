@@ -26,13 +26,13 @@ using the command line below:
 
 <!-- workflow.skip() -->
 ```shell
-  export APPSERVICE_PLAN=joaz-asp
+  export APPSERVICE_PLAN=joazasp
 ```
 
 <!-- workflow.run() 
 
   if [[ -z $APPSERVICE_PLAN ]]; then
-    export APPSERVICE_PLAN=joaz-asp-$RANDOM
+    export APPSERVICE_PLAN=joazasp-$RANDOM
   fi
 
 -->

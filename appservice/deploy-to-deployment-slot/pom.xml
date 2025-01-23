@@ -2,19 +2,17 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>examples.azure.appservice</groupId>
-        <artifactId>project</artifactId>
-        <version>1-SNAPSHOT</version>
-    </parent>
+    <groupId>examples.azure.appservice</groupId>
     <artifactId>appservice-deploy-to-deployment-slot</artifactId>
+    <version>1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>Azure App Service :: Deploy to a deployment slot</name>
+    <name>Deploy to a deployment slot</name>
     <build>
         <plugins>
             <plugin>
                 <groupId>com.microsoft.azure</groupId>
                 <artifactId>azure-webapp-maven-plugin</artifactId>
+                <version>2.12.0</version>
                 <configuration>
                     <schemaVersion>v2</schemaVersion>
                     <appName>${appName}</appName>
@@ -24,8 +22,8 @@
                     </deploymentSlot>
                     <runtime>
                         <os>linux</os>
-                        <javaVersion>${java.version}</javaVersion>
-                        <webContainer>${webContainer}</webContainer>
+                        <javaVersion>Java 17</javaVersion>
+                        <webContainer>Tomcat 10.0</webContainer>
                     </runtime>
                     <deployment>
                         <resources>
@@ -39,20 +37,20 @@
                     </deployment>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.4.0</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>            
         </plugins>
     </build>
-    <dependencies>
-        <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-web-api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
     <properties>
-        <appName>appservice-tomcat-helloworld-${example.postfix}</appName>
-        <appServicePlan>appservice-plan</appServicePlan>
+        <appName>helloworld</appName>
+        <appServicePlan>joazasp</appServicePlan>
         <deploymentSlotName>staging</deploymentSlotName>
-        <webContainer>tomcat 8.5</webContainer>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>
