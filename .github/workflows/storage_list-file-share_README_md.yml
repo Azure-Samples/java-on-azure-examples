@@ -39,13 +39,16 @@ jobs:
           az storage share create --name $STORAGE_SHARE_NAME --account-name $STORAGE_ACCOUNT_NAME
           
           cd storage/list-file-share
-          export RESULT=$(java -jar target/list-file-share.jar
-          cd ../..
+          
+          
+          export RESULT=$(java -jar target/list-file-share.jar)
           az group delete --name $RESOURCE_GROUP --yes || true
           if [[ "$RESULT" != *""* ]]; then
           echo "There are already files in your Azure File Share"
           exit 1
           fi
+          
+          cd ../..
 permissions: 
   contents: 'read'
   id-token: 'write'

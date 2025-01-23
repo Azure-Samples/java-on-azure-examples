@@ -51,10 +51,10 @@ jobs:
           
           export LOCAL_IP=`curl -s whatismyip.akamai.com`
           
-          az mysql server firewall-rule create \
+          az mysql flexible-server firewall-rule create \
           --resource-group $RESOURCE_GROUP \
-          --server $MYSQL_NAME \
-          --name AllowMyLocalIP \
+          --name $MYSQL_NAME \
+          --rule-name AllowMyLocalIP \
           --start-ip-address $LOCAL_IP \
           --end-ip-address $LOCAL_IP
           
