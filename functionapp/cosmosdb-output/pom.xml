@@ -19,7 +19,7 @@
         <!-- dependencies -->
         <azure-functions-java-library.version>3.1.0</azure-functions-java-library.version>
         <!-- plugins -->
-        <azure-functions-maven-plugin.version>1.36.0</azure-functions-maven-plugin.version>
+        <azure-functions-maven-plugin.version>1.37.0</azure-functions-maven-plugin.version>
     </properties>
     <build>
         <plugins>
@@ -32,7 +32,7 @@
                     <region>${region}</region>
                     <resourceGroup>${resourceGroup}</resourceGroup>
                     <runtime>
-                        <javaVersion>${java.version}</javaVersion>
+                        <javaVersion>Java 17</javaVersion>
                     </runtime>
                     <appSettings>
                         <property>
@@ -61,7 +61,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.3.1</version>
                 <executions>
                     <execution>
                         <id>copy-resources</id>
@@ -88,7 +88,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.1.1</version>
+                <version>3.8.1</version>
                 <executions>
                     <execution>
                         <id>copy-dependencies</id>
@@ -110,7 +110,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-clean-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>3.4.0</version>
                 <configuration>
                     <filesets>
                         <fileset>
@@ -136,7 +136,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-resources-plugin</artifactId>
-                        <version>3.2.0</version>
+                        <version>3.3.1</version>
                         <executions>
                             <execution>
                                 <id>copy-resources</id>
