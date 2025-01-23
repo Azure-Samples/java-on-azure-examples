@@ -2,28 +2,25 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>examples.azure.appservice</groupId>
-        <artifactId>project</artifactId>
-        <version>1-SNAPSHOT</version>
-    </parent>
+    <groupId>examples.azure.appservice</groupId>
     <artifactId>appservice-javase-quarkus</artifactId>
-    <name>Azure App Service :: Deploy a managed JavaSE Quarkus application</name>
+    <version>1-SNAPSHOT</version>
+    <name>Deploy a Quarkus application to managed JavaSE</name>
     <packaging>jar</packaging>
     <properties>
         <compiler-plugin.version>3.8.1</compiler-plugin.version>
         <maven.compiler.parameters>true</maven.compiler.parameters>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <quarkus.platform.artifact-id>quarkus-universe-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
         <quarkus.platform.version>2.0.2.Final</quarkus.platform.version>
         <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
-        <appName>javase-quarkus-${example.postfix}</appName>
-        <appServicePlan>azure-examples-appserviceplan</appServicePlan>
-        <resourceGroup>azure-examples</resourceGroup>
+        <appName>quarkus</appName>
+        <appServicePlan>joazasp</appServicePlan>
+        <resourceGroup>joazrg</resourceGroup>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -107,7 +104,7 @@
                     <appServicePlanName>${appServicePlan}</appServicePlanName>
                     <runtime>
                         <os>linux</os>
-                        <javaVersion>jre11</javaVersion>
+                        <javaVersion>Java 17</javaVersion>
                     </runtime>
                     <appSettings>
                         <property>
