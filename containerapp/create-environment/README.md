@@ -36,7 +36,7 @@ region using the command lines below:
 
 <!-- workflow.skip() -->
 ```shell
-  export ACA_ENVIRONMENT_NAME=joazaca$RANDOM
+  export ACA_ENVIRONMENT_NAME=joazacae$RANDOM
   export ACA_REGION=$REGION
 ```
 

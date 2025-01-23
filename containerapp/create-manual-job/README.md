@@ -26,7 +26,7 @@ This example assumes you have previously completed the following examples:
 
 <!-- workflow.skip() -->
 ```shell
-  export ACA_JOB_NAME=aca-job-$RANDOM
+  export ACA_JOB_NAME=joazca-job-$RANDOM
 ```
 
 <!-- workflow.run()
@@ -72,7 +72,7 @@ Then create a role assigment so the job can be pulled from your Azure Container 
 
 <!-- workflow.run()
 
-  sleep 60
+  sleep 240
 
  -->
 
