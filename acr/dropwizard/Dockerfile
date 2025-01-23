@@ -5,7 +5,7 @@
 #
 # -----------------------------------------------------------------------------
 
-FROM mcr.microsoft.com/openjdk/jdk:11-ubuntu
+FROM mcr.microsoft.com/openjdk/jdk:17-ubuntu
 RUN groupadd -r dropwizard && \
     useradd -r -g dropwizard dropwizard
 RUN mkdir -p /opt/dropwizard
