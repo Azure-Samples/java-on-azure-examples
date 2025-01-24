@@ -104,7 +104,7 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           
           if [[ -z $APPSERVICE_PLAN ]]; then
-          export APPSERVICE_PLAN=joaz-asp-$RANDOM
+          export APPSERVICE_PLAN=joazasp-$RANDOM
           fi
           
           az appservice plan create \

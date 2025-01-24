@@ -37,7 +37,7 @@ jobs:
           az group create --name $RESOURCE_GROUP --location $REGION
           
           if [[ -z $APPSERVICE_PLAN ]]; then
-          export APPSERVICE_PLAN=joaz-asp-$RANDOM
+          export APPSERVICE_PLAN=joazasp-$RANDOM
           fi
           
           az appservice plan create \
@@ -50,7 +50,7 @@ jobs:
           cd appservice/tomcat-helloworld
           
           mvn clean install
-          export APPSERVICE_TOMCAT_HELLOWORLD=appservice-tomcat-helloworld-$RANDOM
+          export APPSERVICE_TOMCAT_HELLOWORLD=joazasp-tomcat-helloworld-$RANDOM
           mvn azure-webapp:deploy \
           -DappName=$APPSERVICE_TOMCAT_HELLOWORLD \
           -DappServicePlan=$APPSERVICE_PLAN \
