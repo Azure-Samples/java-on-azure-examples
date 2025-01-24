@@ -8,7 +8,7 @@
         "ghcr.io/devcontainers/features/docker-in-docker:2": {},
         "ghcr.io/devcontainers/features/git:1": {},
         "ghcr.io/devcontainers/features/java:1": {
-            "version": "21",
+            "version": "17",
             "installMaven": "true"
         }
     }
