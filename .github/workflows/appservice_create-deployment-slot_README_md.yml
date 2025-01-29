@@ -1,6 +1,6 @@
 on: 
   schedule: 
-    - cron: '0 9 * * 4'
+    - cron: '0 2 * * 3'
   workflow_dispatch: 
 
 name: 'appservice/create-deployment-slot/README.md'
