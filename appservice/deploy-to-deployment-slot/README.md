@@ -12,7 +12,7 @@
   fi
 
   -->
-<!-- workflow.cron(0 5 * * 4) -->
+<!-- workflow.cron(0 3 * * 3) -->
 <!-- workflow.include(../create-deployment-slot/README.md) -->
 
 This example assumes you have previously completed the following examples:
