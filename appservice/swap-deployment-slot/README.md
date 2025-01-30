@@ -22,7 +22,7 @@ This example assumes you have previously completed the following examples:
   fi
 
   -->
-<!-- workflow.cron(0 21 * * 3) -->
+<!-- workflow.cron(0 4 * * 3) -->
 <!-- workflow.include(../deploy-to-deployment-slot/README.md) -->
 
 To swap deployment slot use the following command line:

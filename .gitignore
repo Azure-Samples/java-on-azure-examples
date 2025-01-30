@@ -1,6 +1,5 @@
 .terraform*
 .vscode/
 dependency-reduced-pom.xml
+parrot.jar
 target/
-
-

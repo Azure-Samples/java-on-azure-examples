@@ -1,8 +1,8 @@
+name: '2_cleanup'
 on: 
-  schedule: 
-    - cron: '50 * * * *'
+#  schedule: 
+#    - cron: '50 * * * *'
   workflow_dispatch:
-name: '_cleanup'
 jobs: 
   validate: 
     runs-on: 'ubuntu-latest'
