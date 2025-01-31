@@ -19,7 +19,7 @@ This example assumes you have previously completed the following examples:
   fi
 
   -->
-<!-- workflow.cron(0 7 * * 4) -->
+<!-- workflow.cron(0 5 * * 3) -->
 <!-- workflow.include(../create-plan/README.md) -->
 
 To delete the Azure App Service Plan use the following command line:
