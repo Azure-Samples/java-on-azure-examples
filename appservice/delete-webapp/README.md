@@ -19,7 +19,7 @@ This example assumes you have previously completed the following examples:
   fi
 
   -->
-<!-- workflow.cron(0 6 * * 4) -->
+<!-- workflow.cron(0 6 * * 3) -->
 <!-- workflow.include(../tomcat-helloworld/README.md) -->
 
 To delete the web application from Azure App Service use the following command line:
