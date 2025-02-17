@@ -15,6 +15,7 @@
     <modules>
         <module>create</module>
         <module>create-queue</module>
+        <module>emulator</module>
         <module>jms-to-cosmosdb-springboot-1</module>
         <module>jms-to-cosmosdb-springboot-2</module>
         <module>jms-to-eventhubs-springboot</module>

@@ -15,5 +15,5 @@ max_line_length = 1000
 [{*.md,*.asciidoc}]
 max_line_length = 1000
 
-[{*.yaml,*.yml}]
+[{*.json,*.yaml,*.yml}]
 indent_size = 2
